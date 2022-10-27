@@ -3,7 +3,7 @@ $(function() {
 	$("body").ready(function(){
 		var width_brower = $(window).width();
 
-		if (width_brower < 1024) {
+		if (width_brower <= 1024) {
 			$(".header-top").css("display", "none");
 			$(".header-top-mobile").css("display", "block");
 		}else{
