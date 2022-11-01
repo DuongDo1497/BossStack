@@ -158,6 +158,11 @@ class HomeController extends Controller
         return $this->view('course.MultiCashGrowth');
     }
 
+    public function cashFlowDissection()
+    {
+        return $this->view('CashFlowDissection');
+    }
+
     public function store(ReportStoreRequest $request)
     {
         $courseview = [ 

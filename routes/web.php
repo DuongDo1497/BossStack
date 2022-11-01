@@ -47,6 +47,8 @@ Route::get('payment-method', 'HomeController@paymentMethod')->name('payment-meth
 Route::get('information', 'HomeController@information')->name('information');
 // endfooter
 
+Route::get('boctachdongtien', 'HomeController@cashFlowDissection')->name('boctachdongtien');
+
 
 // course
 Route::get('bossstack-startup', 'HomeController@startup')->name('bossstack-startup');

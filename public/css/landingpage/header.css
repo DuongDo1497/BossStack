@@ -1,0 +1,43 @@
+.header{
+  background-color: var(--white-cl);
+}
+
+.header .wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.9rem 0;
+}
+
+.header .logo{
+  width: 21.5rem;
+  display: inline-block;
+}
+
+.course-info {
+  width: 95.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-info li{
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.course-info .course-info__content span{
+  font-size: 1.6rem;
+  display: block;
+}
+
+.course-info__content .title{
+  color: var(--gray-cl);
+  margin-bottom: 4px;
+}
+
+.course-info__content .text{
+  font-family: hm;
+  color: var(--primary-cl);
+}
