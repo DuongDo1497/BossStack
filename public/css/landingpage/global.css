@@ -85,7 +85,8 @@ ul{
 }
 
 .dots-circle-img,
-.circle-line-img{
+.circle-line-img,
+.circle-line-blue{
   position: absolute;
   z-index: 1;
 }
