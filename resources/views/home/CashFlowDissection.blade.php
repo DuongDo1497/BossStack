@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bóc Tách Dòng Tiền</title>
+  <title>BossStack Coaching - Bóc Tách Dòng Tiền</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -17,6 +17,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
 
@@ -58,11 +59,11 @@
               src="{{ asset('img/landing-page/icon-calendar.svg') }}" />
             <div class="course-info__content">
               <span class="title">Lịch khai giảng</span>
-              <span class="text">30/10/2022</span>
+              <span class="text">30/11/2022</span>
             </div>
           </li>
           <li>
-            <a href="#" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
+            <a href="#solution" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
           </li>
         </ul>
       </div>
@@ -72,15 +73,17 @@
   <div class="banner">
     <div class="container">
       <div class="wrap">
-        <div class="banner-content">
+        <div class="banner-content" data-aos="fade-right" data-aos-delay="500"
+          data-aos-duration="1000" data-aos-easing="ease-in-out">
           <h1>BÓC TÁCH <span>DÒNG TIỀN</span></h1>
           <p>Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, dòng tiền kinh doanh bằng phần
             mềm
             BossStack</p>
-          <a href="#" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
+          <a href="#solution" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
         </div>
         <img class="banner-img img-fluid" src="{{ asset('img/landing-page/banner-img.png') }}"
-          alt="">
+          alt="" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
+          data-aos-easing="ease-in-out">
       </div>
     </div>
   </div>
@@ -89,24 +92,28 @@
     <div class="section section-who">
       <div class="container">
         <div class="wrap">
-          <h4>Bạn là?</h4>
+          <h4 data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out">Bạn là?</h4>
           <div class="who-list">
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000"
+              data-aos-easing="ease-in-out">
               <img class="card-img-top img-fluid" src="{{ asset('img/landing-page/who-img.png') }}"
                 alt="">
               <p class="card-title">Nhân viên, cấp quản lý văn phòng</p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000"
+              data-aos-easing="ease-in-out">
               <img class="card-img-top img-fluid"
                 src="{{ asset('img/landing-page/who-img-1.png') }}" alt="">
               <p class="card-title">Nhà đầu tư, kinh doanh tự do </p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-delay="1500"
+              data-aos-duration="1000" data-aos-easing="ease-in-out">
               <img class="card-img-top img-fluid"
                 src="{{ asset('img/landing-page/who-img-2.png') }}" alt="">
               <p class="card-title">Chủ doanh nghiệp</p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-delay="2000"
+              data-aos-duration="1000" data-aos-easing="ease-in-out">
               <img class="card-img-top img-fluid"
                 src="{{ asset('img/landing-page/who-img-3.png') }}" alt="">
               <p class="card-title">Khách hàng có nhu cầu</p>
@@ -121,7 +128,8 @@
     <div class="section section-difficult">
       <div class="container">
         <div class="wrap">
-          <div class="difficult-left">
+          <div class="difficult-left" data-aos="fade-right" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
             <div class="difficult-list">
               <div class="difficult-item blue-gradient">
                 <img class="img-fluid icon"
@@ -164,7 +172,8 @@
             </div>
           </div>
           <img class="img-fluid difficult-img"
-            src="{{ asset('img/landing-page/difficult-img.png') }}" alt="">
+            src="{{ asset('img/landing-page/difficult-img.png') }}" alt=""
+            data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
           <img src="{{ asset('img/landing-page/dots-circle.png') }}" alt=""
             class="img-fluid dots-circle-img">
           <img src="{{ asset('img/landing-page/circle-line.png') }}" alt=""
@@ -184,19 +193,24 @@
 
           <div class="advantages-content">
             <div class="advantages-content__left">
-              <div class="advantages-content__item">
+              <div class="advantages-content__item" data-aos="flip-left" data-aos-delay="0"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <span>80%</span> thời gian được tiết kiệm khi quản lý thu,<br />chi và đầu tư dòng
                 tiền
               </div>
-              <div class="advantages-content__item">
+              <div class="advantages-content__item" data-aos="flip-left" data-aos-delay="500"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <span>TÙY CHỈNH</span> phù hợp với từng nhu cầu<br />của khách hàng
               </div>
-              <div class="advantages-content__item">
+              <div class="advantages-content__item" data-aos="flip-left" data-aos-delay="1000"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 Tích hợp công nghệ hiện đại<br /><span>BẢO MẬT DỮ LIỆU</span> khách hàng tuyệt đối
               </div>
             </div>
             <img class="advantages-content__img img-fluid"
-              src="{{ asset('img/landing-page/advantages-img.png') }}" alt="">
+              src="{{ asset('img/landing-page/advantages-img.png') }}" alt=""
+              data-aos="fade-left" data-aos-delay="2000" data-aos-duration="1000"
+              data-aos-easing="ease-in-out">
           </div>
 
           <img src="{{ asset('img/landing-page/dots-circle.png') }}" alt=""
@@ -231,7 +245,8 @@
         <div class="container">
           <div class="wrap">
             <div class="solution-timeline__all">
-              <div class="solution-timeline__item">
+              <div class="solution-timeline__item" data-aos="fade-down" data-aos-delay="0"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="solution-timeline__content">
                   <h3 class="solution-timeline__header">Buổi 1</h3>
                   <div class="solution-timeline__body">
@@ -259,7 +274,8 @@
                   </div>
                 </div>
               </div>
-              <div class="solution-timeline__item">
+              <div class="solution-timeline__item" data-aos="fade-down" data-aos-delay="500"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="solution-timeline__content">
                   <h3 class="solution-timeline__header">Buổi 2</h3>
                   <div class="solution-timeline__body">
@@ -287,7 +303,8 @@
                   </div>
                 </div>
               </div>
-              <div class="solution-timeline__item">
+              <div class="solution-timeline__item" data-aos="fade-down" data-aos-delay="1000"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="solution-timeline__content">
                   <h3 class="solution-timeline__header">Buổi 3</h3>
                   <div class="solution-timeline__body">
@@ -318,7 +335,7 @@
             </div>
 
             <div class="solution-timeline__btn">
-              <a href="#" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
+              <a href="#solution" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
             </div>
 
             <img src="{{ asset('img/landing-page/dots-circle.png') }}" alt=""
@@ -330,33 +347,38 @@
       <div class="solution-review">
         <div class="container">
           <div class="wrap">
-            <h4 class="solution-review__title">Khách hàng của chúng tôi khi nói về BossStack</h4>
-            <div class="solution-review__carousel owl-carousel owl-theme">
+            <h4 class="solution-review__title" data-aos="fade-right" data-aos-delay="0"
+              data-aos-duration="1000" data-aos-easing="ease-in-out">Khách hàng của chúng tôi khi
+              nói về BossStack</h4>
+            <div class="solution-review__carousel owl-carousel owl-theme" data-aos="zoom-in"
+              data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
               <div class="item">
                 <div class="solution-review__top">
-                  <img src="{{ asset('img/user-2.jpg') }}" alt=""
+                  <img src="{{ asset('img/user.jpg') }}" alt=""
                     class="img-fluid solution-review__avatar">
-                  <p class="solution-review__content">Phần mềm BossStack giúp tôi phân bổ tài sản
-                    và dòng tiền vào các ví mục tiêu tài chính khác nhau. Tôi có thể theo dõi từng
-                    mục thu chi, từng mục tiêu tài chính đã tối ưu chưa. Từ đó, tôi phân bổ dòng
-                    tiền một cách hợp lý và cắt giảm những chi phí không cần thiết.</p>
+                  <p class="solution-review__content">Sử dụng phần mềm BossStack cuối tháng tôi
+                    không cần ngồi ghi chép hay nhập bảng tính Excel. Phần mềm BossStack giúp tôi
+                    quản lý mọi thu chi của cá nhân, gia đình và bóc tách hoàn toàn với dòng tiền
+                    kinh doanh tại doanh nghiệp của tôi. Tính năng mà tôi đặc biệt quan tâm đó chính
+                    là tính toán số tiền nghỉ hưu giúp tôi có những kế hoạch dài hạn về tài chính
+                    của mình.</p>
                 </div>
-                <p class="solution-review__info"><span>Huỳnh Thu Ái</span> - Cố vấn, đào tạo hệ
-                  thống quản lý doanh nghiệp AMS
+                <p class="solution-review__info"><span>Nguyễn Đỗ Cẩm Bình</span> - Trưởng phòng
+                  kinh doanh công ty BĐS Him Lam
                 </p>
               </div>
               <div class="item">
                 <div class="solution-review__top">
-                  <img src="{{ asset('img/user-2.jpg') }}" alt=""
+                  <img src="{{ asset('img/user-1.jpg') }}" alt=""
                     class="img-fluid solution-review__avatar">
-                  <p class="solution-review__content">Phần mềm BossStack giúp tôi phân bổ tài sản
-                    và dòng tiền vào các ví mục tiêu tài chính khác nhau. Tôi có thể theo dõi từng
-                    mục thu chi, từng mục tiêu tài chính đã tối ưu chưa. Từ đó, tôi phân bổ dòng
-                    tiền một cách hợp lý và cắt giảm những chi phí không cần thiết.</p>
+                  <p class="solution-review__content">Phần mềm BossStack giúp bạn theo dõi và kiểm
+                    soát các dòng tiền giúp chúng luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá
+                    nhân và dòng tiền đầu tư kinh doanh của bạn được tách bạch hoàn toàn. Việc này
+                    giúp các dòng tiền được kiểm soát và tăng trưởng hiệu quả.</p>
                 </div>
-                <p class="solution-review__info"><span>Huỳnh Thu Ái</span> - Cố vấn, đào tạo hệ
-                  thống quản lý doanh nghiệp AMS
-                </p>
+                <p class="solution-review__info"><span>Lê Hoài Ân - CFA</span> - CFA, tác giả cuốn
+                  sách
+                  bán chạy số 1 thị trường "20 năm lịch sử Thị trường Chứng khoán Việt Nam"</p>
               </div>
               <div class="item">
                 <div class="solution-review__top">
@@ -378,10 +400,12 @@
         </div>
       </div>
 
-      <div class="solution-register">
+      <div class="solution-register" id="solution">
         <div class="container">
           <div class="wrap">
-            <form class="solution-register__form" action="" method="post">
+            <form class="solution-register__form" action="" method="post"
+              data-aos="fade-right" data-aos-delay="0" data-aos-duration="1000"
+              data-aos-easing="ease-in-out">
               <h6>Đăng ký<br />thông tin tư vấn</h6>
               <div class="form-info">
                 <input type="text" class="form-control" name="fullName"
@@ -396,7 +420,8 @@
               </div>
               <button type="submit" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</button>
             </form>
-            <div class="solution-register__voucher">
+            <div class="solution-register__voucher" data-aos="fade-left" data-aos-delay="0"
+              data-aos-duration="1000" data-aos-easing="ease-in-out">
               <div class="voucher-title">
                 <h4>BÓC TÁCH DÒNG TIỀN</h4>
                 <p>Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, dòng tiền kinh doanh bằng
@@ -406,13 +431,13 @@
               <div class="voucher-qr">
                 <p class="voucher-qr__text">Quét mã QR<br />để tìm hiểu thêm</p>
                 <div class="voucher-qr__img">
-                  <img class="img-fluid" src="{{ asset('img/landing-page/qr-scan.png') }}"
-                    alt="">
+                  <img class="img-fluid"
+                    src="{{ asset('img/landing-page/qr-code-boctach.png') }}" alt="">
                 </div>
               </div>
               <div class="voucher-countdown">
                 <p class="voucher-countdown__text">Khuyến mãi kết thúc sau</p>
-                <div class="voucher-countdown__content">
+                <div class="voucher-countdown__content countdown-wrap gray-cl">
                   <div class="item days">
                     <span class="number">00</span>
                     <span class="text">Ngày</span>
@@ -460,13 +485,14 @@
           </div>
           <div class="footer-content__item">
             <div class="footer-content__social">
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/company/bossstack/posts/?feedView=all&viewAsMember=true">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-linkedin.svg') }}"
                   alt="">
               </a>
             </div>
             <div class="footer-content__social">
-              <a href="#">
+              <a href="https://www.facebook.com/bossstack.vn">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-fb.svg') }}"
                   alt="">
               </a>
@@ -483,28 +509,63 @@
     </div>
   </footer>
 
+  <div class="backtotop">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
+
+  <div class="popup-register hide">
+    <div class="popup-register__box">
+      <button class="close-popup">
+        <img class="img-fluid" src="{{ asset('img/landing-page/icon-close.svg') }}"
+          alt="">
+      </button>
+      <div class="popup-register__header">
+        <div class="popup-register__left">
+          <p class="title">Đăng ký<br />thông tin tư vấn</p>
+          <div class="register-countdown countdown-wrap white-cl">
+            <div class="item days">
+              <span class="number">00</span>
+              <span class="text">Ngày</span>
+            </div>
+            <div class="item hours">
+              <span class="number">00</span>
+              <span class="text">Giờ</span>
+            </div>
+            <div class="item minutes">
+              <span class="number">00</span>
+              <span class="text">Phút</span>
+            </div>
+            <div class="item seconds">
+              <span class="number">00</span>
+              <span class="text">Giây</span>
+            </div>
+          </div>
+        </div>
+        <img class="img-fluid popup-register__image"
+          src="{{ asset('img/landing-page/popup-img.png') }}" alt="">
+      </div>
+      <div class="popup-register__body">
+        <form action="#" method="POST">
+          <div class="popup-register__form">
+            <input type="text" class="form-control" name="fullName" placeholder="Họ và tên *"
+              required>
+            <input type="text" class="form-control" name="phone"
+              placeholder="Số điện thoại *" pattern="(84|0[3|5|7|8|9])+([0-9]{8})" required>
+            <input type="email" class="form-control" name="email" placeholder="Email *"
+              required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-  <script>
-    $('.solution-review__carousel').owlCarousel({
-      animateOut: 'animate__fadeOutDown',
-      animateIn: 'animate__fadeInUp',
-      autoplay: false,
-      loop: true,
-      items: 1,
-      margin: 30,
-      nav: true,
-      dots: true,
-      smartSpeed: 1000,
-      autoplaySpeed: 1000,
-      mouseDrag: false,
-      navText: ["<i class='fa-solid fa-angle-left'></i>",
-        "<i class='fa-solid fa-angle-right'></i>"
-      ]
-    })
-  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="{{ asset('js/landingpage/main.js') }}"></script>
 </body>
 
 </html>
