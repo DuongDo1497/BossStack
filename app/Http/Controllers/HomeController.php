@@ -160,7 +160,12 @@ class HomeController extends Controller
 
     public function cashFlowDissection()
     {
-        return $this->view('CashFlowDissection');
+        return $this->view('landing-page.CashFlowDissection');
+    }
+
+    public function digitalData()
+    {
+        return $this->view('landing-page.DigitalData');
     }
 
     public function store(ReportStoreRequest $request)

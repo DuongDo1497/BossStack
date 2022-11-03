@@ -1,0 +1,73 @@
+/* Banner */
+
+.banner{
+  background: url('../../img/landing-page/banner-bg-1.jpg') center bottom/cover no-repeat;
+}
+
+.banner .wrap{
+  padding: 6rem 0;
+}
+
+.banner .banner-content{
+  max-width: 72rem;
+}
+
+.banner-content h1{
+  font-family: mr;
+  font-size: 5.2rem;
+  line-height: 8.6rem;
+  color: var(--primary-cl);
+}
+
+.banner-content h1 span{
+  font-family: mb;
+  font-size: 6rem;
+  display: block;
+}
+
+.banner-content h1 span:last-child{
+  color: var(--second-cl);
+}
+
+.banner-content p{
+  color: var(--primary-cl);
+}
+
+.banner .banner-img {
+  max-width: 55rem;
+}
+
+/* End Banner */
+
+/* Section Who */
+
+.who-list .card:first-child{
+  background: linear-gradient(180deg, #DBF6FF 0%, rgba(219, 246, 255, 0) 100%);
+}
+
+.who-list .card:nth-child(2){
+  background: linear-gradient(180deg, #FFF8E8 0%, rgba(255, 248, 232, 0) 100%);
+}
+
+.who-list .card:nth-child(3){
+  background: linear-gradient(180deg, #D7E8FF 0%, rgba(215, 232, 255, 0) 100%);
+}
+
+.who-list .card:last-child{
+  background: linear-gradient(180deg, #E7ECEE 0%, #FEFEFE 100%);
+}
+
+/* End Section Who */
+
+/* Section Solution */
+
+.solution-register__voucher{
+  padding: 2.4rem 1.7rem 0;
+}
+
+.solution-register__voucher h4{
+  font-size: 4.2rem;
+  line-height: 5.2rem;
+}
+
+/* End Section Solution */

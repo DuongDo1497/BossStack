@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>BossStack Coaching - Bóc Tách Dòng Tiền</title>
+  <link rel="shortcut icon" href="{{ asset('img/landing-page/favicon.ico') }}" type="image/x-icon">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -24,6 +25,7 @@
   <link rel="stylesheet" href="{{ asset('css/landingpage/reset.css') }}">
   <link rel="stylesheet" href="{{ asset('css/landingpage/font.css') }}">
   <link rel="stylesheet" href="{{ asset('css/landingpage/global.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/landingpage/component.css') }}">
 
   <link rel="stylesheet" href="{{ asset('css/landingpage/header.css') }}">
   <link rel="stylesheet" href="{{ asset('css/landingpage/footer.css') }}">
@@ -100,8 +102,8 @@
                 alt="">
               <p class="card-title">Nhân viên, cấp quản lý văn phòng</p>
             </div>
-            <div class="card" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000"
-              data-aos-easing="ease-in-out">
+            <div class="card" data-aos="fade-down" data-aos-delay="1000"
+              data-aos-duration="1000" data-aos-easing="ease-in-out">
               <img class="card-img-top img-fluid"
                 src="{{ asset('img/landing-page/who-img-1.png') }}" alt="">
               <p class="card-title">Nhà đầu tư, kinh doanh tự do </p>
@@ -354,7 +356,7 @@
               data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
               <div class="item">
                 <div class="solution-review__top">
-                  <img src="{{ asset('img/user.jpg') }}" alt=""
+                  <img src="{{ asset('img/user-2.jpg') }}" alt=""
                     class="img-fluid solution-review__avatar">
                   <p class="solution-review__content">Sử dụng phần mềm BossStack cuối tháng tôi
                     không cần ngồi ghi chép hay nhập bảng tính Excel. Phần mềm BossStack giúp tôi
@@ -382,7 +384,7 @@
               </div>
               <div class="item">
                 <div class="solution-review__top">
-                  <img src="{{ asset('img/user-2.jpg') }}" alt=""
+                  <img src="{{ asset('img/user.jpg') }}" alt=""
                     class="img-fluid solution-review__avatar">
                   <p class="solution-review__content">Phần mềm BossStack giúp tôi phân bổ tài sản
                     và dòng tiền vào các ví mục tiêu tài chính khác nhau. Tôi có thể theo dõi từng

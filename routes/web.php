@@ -48,6 +48,7 @@ Route::get('information', 'HomeController@information')->name('information');
 // endfooter
 
 Route::get('boctachdongtien', 'HomeController@cashFlowDissection')->name('boctachdongtien');
+Route::get('dulieuso', 'HomeController@digitalData')->name('dulieuso');
 
 
 // course
