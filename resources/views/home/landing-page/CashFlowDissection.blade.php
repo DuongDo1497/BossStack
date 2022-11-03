@@ -583,6 +583,9 @@
               <span class="text-danger">{{ $errors->first('email') }}</span>
             @endif
           </div>
+            <input type="hidden" class="form-control" name="content" value="" placeholder="Công ty">
+            <input type="hidden" class="form-control" name="title" value="" placeholder="Chức vụ">
+
           <button type="submit" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</button>
         </form>
       </div>
