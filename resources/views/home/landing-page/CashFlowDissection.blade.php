@@ -567,7 +567,7 @@
           {{ csrf_field() }}
           <input type='hidden' name='course' value='7'>
           <div class="popup-register__form">
-            <input type="text" class="form-control" name="fullName" placeholder="Họ và tên *"
+            <input type="text" class="form-control" name="fullname" placeholder="Họ và tên *"
               required>
             @if ($errors->has('fullname'))
               <span class="text-danger">{{ $errors->first('fullname') }}</span>
