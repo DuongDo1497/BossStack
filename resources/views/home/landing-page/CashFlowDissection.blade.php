@@ -405,24 +405,35 @@
       <div class="solution-register" id="solution">
         <div class="container">
           <div class="wrap">
-            <form role="form" action="{{ route('coaching-store') }}?continue=true" method="post" id="frm">
-            {{ csrf_field() }}
+            <form class="solution-register__form" data-aos="fade-right" data-aos-delay="0"
+              data-aos-duration="1000" data-aos-easing="ease-in-out" role="form"
+              action="{{ route('coaching-store') }}?continue=true" method="post"
+              id="frm">
+              {{ csrf_field() }}
               <input type='hidden' name='course' value='7'>
 
               <h6>Đăng ký<br />thông tin tư vấn</h6>
               <div class="form-info">
                 <input type="text" class="form-control" name="fullname"
                   placeholder="Họ và tên *" required>
-                @if($errors->has('fullname'))<span class="text-danger">{{ $errors->first('fullname') }}</span>@endif                  
+                @if ($errors->has('fullname'))
+                  <span class="text-danger">{{ $errors->first('fullname') }}</span>
+                @endif
+
                 <input type="text" class="form-control" name="phone"
                   placeholder="Số điện thoại *" required>
-                @if($errors->has('phone'))<span class="text-danger">{{ $errors->first('phone') }}</span>@endif                  
+                @if ($errors->has('phone'))
+                  <span class="text-danger">{{ $errors->first('phone') }}</span>
+                @endif
+
                 <input type="email" class="form-control" name="email" placeholder="Email *"
                   required>
-                @if($errors->has('email'))<span class="text-danger">{{ $errors->first('email') }}</span>@endif                  
+                @if ($errors->has('email'))
+                  <span class="text-danger">{{ $errors->first('email') }}</span>
+                @endif
+
                 <input type="text" class="form-control" name="content" placeholder="Công ty">
-                <input type="text" class="form-control" name="title"
-                  placeholder="Chức vụ">
+                <input type="text" class="form-control" name="title" placeholder="Chức vụ">
               </div>
               <button type="submit" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</button>
             </form>
@@ -551,19 +562,26 @@
           src="{{ asset('img/landing-page/popup-img.png') }}" alt="">
       </div>
       <div class="popup-register__body">
-        <form role="form" action="{{ route('coaching-store') }}?continue=true" method="post" id="frm">
-        {{ csrf_field() }}
+        <form role="form" action="{{ route('coaching-store') }}?continue=true" method="post"
+          id="frm">
+          {{ csrf_field() }}
           <input type='hidden' name='course' value='7'>
           <div class="popup-register__form">
             <input type="text" class="form-control" name="fullName" placeholder="Họ và tên *"
               required>
-            @if($errors->has('fullname'))<span class="text-danger">{{ $errors->first('fullname') }}</span>@endif              
+            @if ($errors->has('fullname'))
+              <span class="text-danger">{{ $errors->first('fullname') }}</span>
+            @endif
             <input type="text" class="form-control" name="phone"
               placeholder="Số điện thoại *" required>
-            @if($errors->has('phone'))<span class="text-danger">{{ $errors->first('phone') }}</span>@endif
+            @if ($errors->has('phone'))
+              <span class="text-danger">{{ $errors->first('phone') }}</span>
+            @endif
             <input type="email" class="form-control" name="email" placeholder="Email *"
               required>
-            @if($errors->has('email'))<span class="text-danger">{{ $errors->first('email') }}</span>@endif              
+            @if ($errors->has('email'))
+              <span class="text-danger">{{ $errors->first('email') }}</span>
+            @endif
           </div>
           <button type="submit" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</button>
         </form>
