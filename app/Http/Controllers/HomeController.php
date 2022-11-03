@@ -172,6 +172,7 @@ class HomeController extends Controller
                 '4'=> 'course.CashFlowHandling',
                 '5'=> 'course.MoneyBegetsMoney',
                 '6'=> 'course.MultiCashGrowth',
+                '7'=> 'course.MultiCashGrowth',
               ];
         
         $course = $request->course;

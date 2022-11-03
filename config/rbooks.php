@@ -216,5 +216,6 @@ return [
             '4'=>_('Xử Lý Dòng Tiền'),
             '5'=>_('Tiền Đẻ Ra Tiền'),
             '6'=>_('Tăng Trưởng Đa Dòng Tiền'),
+            '7'=>_('Bóc tách Dòng Tiền'),
           ],
 ];
