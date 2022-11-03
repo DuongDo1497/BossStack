@@ -144,22 +144,15 @@
                     <ul>
                       <li>
                         <i class="fa-solid fa-circle"></i>
-                        <p>Nỗi ám ảnh về Tiền</p>
+                        <p>Sản phẩm lõi</p>
                       </li>
                       <li>
                         <i class="fa-solid fa-circle"></i>
-                        <p>Xác định mục tiêu cuộc đời</p>
+                        <p>Mô hình kinh doanh</p>
                       </li>
                       <li>
                         <i class="fa-solid fa-circle"></i>
-                        <p>Xác định bức tranh tài chính hiện tại</p>
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-circle"></i>
-                        <p>
-                          Sử dụng <span>phần mềm BossStack</span> để thiết lập
-                          các mục tiêu tài chính cá nhân
-                        </p>
+                        <p>Xây dựng luồng cơ bản vận hành</p>
                       </li>
                     </ul>
                   </div>
@@ -173,22 +166,15 @@
                     <ul>
                       <li>
                         <i class="fa-solid fa-circle"></i>
-                        <p>Phân tích dòng tiền cơ bản</p>
+                        <p>Thiết lập nội dung chi tiết cho hệ thống vận hành</p>
                       </li>
                       <li>
                         <i class="fa-solid fa-circle"></i>
-                        <p>Làm sạch tài chính cá nhân chuyên sâu</p>
+                        <p>Hệ thống hoá dữ liệu bằng quy trình và bộ tài liệu hỗ trợ</p>
                       </li>
                       <li>
                         <i class="fa-solid fa-circle"></i>
-                        <p>Cách phân bổ dòng tiền sau chi tiêu bằng <span>phần mềm BossStack</span>
-                        </p>
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-circle"></i>
-                        <p><span>Bóc tách</span> dòng tiền cá nhân ra khỏi dòng tiền đầu tư kinh
-                          doanh
-                        </p>
+                        <p>Quản trị hệ thống vận hành bằng Microsoft 365 Business</p>
                       </li>
                     </ul>
                   </div>
@@ -206,14 +192,8 @@
                       </li>
                       <li>
                         <i class="fa-solid fa-circle"></i>
-                        <p>Bài tập tình huống</p>
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-circle"></i>
-                        <p>
-                          Sửa bài và thảo luận phân tích việc bóc tách dòng tiền bằng <span>phần mềm
-                            BossStack</span>
-                        </p>
+                        <p>Bài tập tình huống, sửa bài và thảo luận phân tích thực thi vận hành bằng
+                          Microsoft 365 Business</p>
                       </li>
                       <li>
                         <i class="fa-solid fa-circle"></i>
@@ -243,7 +223,7 @@
               data-aos-easing="ease-in-out">
               <h6>Đăng ký<br />thông tin tư vấn</h6>
               <div class="form-info">
-                <input type="text" class="form-control" name="fullName"
+                <input type="text" class="form-control" name="fullname"
                   placeholder="Họ và tên *" required>
                 <input type="text" class="form-control" name="phone"
                   placeholder="Số điện thoại *" pattern="(84|0[3|5|7|8|9])+([0-9]{8})" required>
