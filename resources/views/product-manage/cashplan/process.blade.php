@@ -343,6 +343,10 @@
                                   $savingamountplanmonth = round($savingamountplan / 12, 0);
                                   $totalsavingamountplan = $model->totalcurrentamount;
                                   $plandate = $model->plandate == '' ? getCurrentDate('d') : ConvertSQLDate($model->plandate);
+                                  $dateArray = explode('/', $plandate);
+                                  $day = "25"; $month = $dateArray[1]; $year = $dateArray[2];
+                                  $plandate = "$day/$month/$year";
+
                                 @endphp
                                 @for ($item = 1; $item <= $timeplan * 12; $item++)
                                   @php
@@ -354,7 +358,7 @@
                                     <td style="text-align: center;" class="text-nowrap">
                                       {{ $i++ }}</td>
                                     <td style="text-align: center;" class="text-nowrap">
-                                      {{ $planmonth }}</td>
+                                      {{ substr($planmonth,3) }}</td>
                                     <td style="text-align: center;" class="text-nowrap">
                                       {{ formatNumber($savingamountplanmonth, 1, 0, 0) }}</td>
                                     <td style="text-align: center;" class="text-nowrap">

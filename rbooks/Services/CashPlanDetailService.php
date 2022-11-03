@@ -42,7 +42,10 @@ class CashPlanDetailService extends BaseService
 
         $savingamountplanmonth = round($savingamountplan/12, 0);
         $totalsavingamountplan = $model->totalcurrentamount;
-        $plandate = ($model->plandate == "" ? getCurrentDate('d') : ConvertSQLDate($model->plandate)); 
+        $plandate = ($model->plandate == "" ? getCurrentDate('d') : ConvertSQLDate($model->plandate));
+        $dateArray = explode('/', $plandate);
+        $day = "25"; $month = $dateArray[1]; $year = $dateArray[2];
+        $plandate = "$day/$month/$year";
         for($item=1; $item <= $timeplan*12; $item++){
             $totalsavingamountplan += $savingamountplanmonth; 
             $totalsavingamountplan = ($totalsavingamountplan>$requireamount ? $requireamount : $totalsavingamountplan);
