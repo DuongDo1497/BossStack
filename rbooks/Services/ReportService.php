@@ -82,7 +82,8 @@ class ReportService extends BaseService
                             ->where('content', 'LIKE', "%$searchValue%")
                             ->where('deleted_at', '=', null)
                             ->orderBy('registerdate', 'desc')
-                            ->orderBy('course', 'desc');
+                            ->orderBy('course', 'desc')
+                            ->orderBy('created_at', 'desc');
                                         
         return $listData;    
     }  
