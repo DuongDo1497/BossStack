@@ -27,8 +27,6 @@ class ReportStoreRequest extends FormRequest
             'fullname' => 'required|max:255',
             'email' => 'required|email',
             'phone' => 'required|numeric',
-            'title' => '',
-            'content' => '',
         ];
     }
     

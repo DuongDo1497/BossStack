@@ -39,8 +39,8 @@ class ReportService extends BaseService
             'email' => $email,
             'phone' => $phone,
             'address' => $address,
-            'title' => $title,
-            'content' => $content,
+            'title' => "$title",
+            'content' => "$content",
             'created_user_id' => $created_user_id,
             'updated_user_id' => $updated_user_id,
         ];
@@ -67,8 +67,8 @@ class ReportService extends BaseService
             'email' => $email,
             'phone' => $phone,
             'address' => $address,
-            'title' => $title,
-            'content' => $content,
+            'title' => "$title",
+            'content' => "$content",
             'updated_user_id' => $updated_user_id,
         ];
 
@@ -81,7 +81,8 @@ class ReportService extends BaseService
                             ->where('title', 'like', "%$searchField%")
                             ->where('content', 'LIKE', "%$searchValue%")
                             ->where('deleted_at', '=', null)
-                            ->orderBy('registerdate', 'desc');
+                            ->orderBy('registerdate', 'desc')
+                            ->orderBy('course', 'desc');
                                         
         return $listData;    
     }  
