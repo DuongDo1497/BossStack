@@ -125,6 +125,135 @@
       </div>
     </div>
 
+    <div class="section section-difficult">
+      <div class="container">
+        <div class="wrap">
+          <div class="difficult-list">
+            <div class="difficult-item blue-gradient">
+              <img class="img-fluid icon"
+                src="{{ asset('img/landing-page/icon-difficult-1.svg') }}" alt="">
+              <span class="text">Làm nhưng không dư, không biết tiền đã chi tiêu như thế
+                nào</span>
+            </div>
+            <div class="difficult-item yellow-gradient">
+              <img class="img-fluid icon"
+                src="{{ asset('img/landing-page/icon-difficult-2.svg') }}" alt="">
+              <span class="text">Lẫn lộn tiền bạc gia đình, cá nhân và đầu tư kinh doanh</span>
+            </div>
+            <div class="difficult-item yellow-gradient">
+              <img class="img-fluid icon"
+                src="{{ asset('img/landing-page/icon-difficult-3.svg') }}" alt="">
+              <span class="text">Luôn lo lắng, bất an về tương lai tiền bạc của bản thân</span>
+            </div>
+            <div class="difficult-item blue-gradient">
+              <img class="img-fluid icon"
+                src="{{ asset('img/landing-page/icon-difficult-4.svg') }}" alt="">
+              <span class="text">Không phân định rõ ràng các dòng tiền hiện tại</span>
+            </div>
+            <div class="difficult-item blue-gradient">
+              <img class="img-fluid icon"
+                src="{{ asset('img/landing-page/icon-difficult-5.svg') }}" alt="">
+              <span class="text">Không có công cụ để quản lý tiền bạc một cách hiệu quả xuyên
+                suốt</span>
+            </div>
+            <div class="difficult-item yellow-gradient">
+              <img class="img-fluid icon"
+                src="{{ asset('img/landing-page/icon-difficult-6.svg') }}" alt="">
+              <span class="text">Không có kế hoạch giảm dần nợ vay, thẻ tín dụng</span>
+            </div>
+            <div class="difficult-item yellow-gradient">
+              <img class="img-fluid icon"
+                src="{{ asset('img/landing-page/icon-difficult-7.svg') }}" alt="">
+              <span class="text">Thiếu kiến thức nền tảng về dòng tiền, tăng mức độ rủi ro
+                trong kinh doanh và đầu tư</span>
+            </div>
+          </div>
+          <img src="{{ asset('img/landing-page/circle-line.png') }}" alt=""
+            class="img-fluid circle-line-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-advantages">
+      <div class="advantages-header">
+        <div class="advantages-header__line"></div>
+        <h5 class="advantages-title">
+          Điểm <span>KHÁC BIỆT</span> của BossStack
+          <img src="{{ asset('img/landing-page/dots-circle-blue.png') }}" alt=""
+            class="img-fluid dots-circle-img">
+        </h5>
+      </div>
+
+      <div class="advantages-body">
+        <div class="container">
+          <div class="wrap">
+            <div class="advantages-content">
+              <div class="advantages-content__left">
+                <div class="advantages-content__item" data-aos="flip-left" data-aos-delay="0"
+                  data-aos-duration="1000" data-aos-easing="ease-in-out">
+                  <img class="img-fluid icon"
+                    src="{{ asset('img/landing-page/icon-advantages-1.svg') }}" />
+                  <div class="text">
+                    <div class="index">
+                      <div class="number">
+                        <span>Giảm</span>
+                        <span>90</span>
+                      </div>
+                      %
+                    </div>
+                    <p>thời gian quản lý hệ thống dữ liệu doanh nghiệp</p>
+                  </div>
+                </div>
+                <div class="advantages-content__item" data-aos="flip-left" data-aos-delay="500"
+                  data-aos-duration="1000" data-aos-easing="ease-in-out">
+                  <img class="img-fluid icon"
+                    src="{{ asset('img/landing-page/icon-advantages-2.svg') }}" />
+                  <div class="text">
+                    <div class="index">
+                      <div class="number">
+                        <span>Tăng</span>
+                        <span>95</span>
+                      </div>
+                      %
+                    </div>
+                    <p>hiệu suất công việc nhờ hệ thống dữ liệu số</p>
+                  </div>
+                </div>
+                <div class="advantages-content__item" data-aos="flip-left" data-aos-delay="1000"
+                  data-aos-duration="1000" data-aos-easing="ease-in-out">
+                  <img class="img-fluid icon"
+                    src="{{ asset('img/landing-page/icon-advantages-3.svg') }}" />
+                  <div class="text"><span>TÙY CHỈNH</span> thiết lập hệ thống dữ liệu số phù hợp
+                    với từng doanh nghiệp</div>
+                </div>
+              </div>
+              <img class="advantages-content__img img-fluid"
+                src="{{ asset('img/landing-page/advantages-img.png') }}" alt=""
+                data-aos="fade-left" data-aos-delay="2000" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
+            </div>
+            <img src="{{ asset('img/landing-page/dots-circle.png') }}" alt=""
+              class="img-fluid dots-circle-img">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-quote">
+      <div class="container">
+        <div class="wrap">
+          <div class="quote-content">
+            <img class="img-fluid icon-quote quote-1"
+              src="{{ asset('img/landing-page/icon-quote-1.svg') }}" alt="">
+            Xây dựng <span>Chiến lược Quản lý Tài chính</span> và <span>Kế hoạch Gia tăng Lợi nhuận
+              lâu dài</span> ngay bây giờ!
+            <img class="img-fluid icon-quote quote-2"
+              src="{{ asset('img/landing-page/icon-quote-2.svg') }}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="section section-solution">
       <h3 class="solution-title">
         Giải pháp thiết lập<br /><span>HỆ THỐNG DỮ LIỆU SỐ</span><br />doanh nghiệp
@@ -221,7 +350,7 @@
             <h4 class="solution-review__title" data-aos="fade-right" data-aos-delay="0"
               data-aos-duration="1000" data-aos-easing="ease-in-out">Khách hàng của chúng tôi khi
               nói về BossStack</h4>
-            {{-- <div class="solution-review__carousel owl-carousel owl-theme" data-aos="zoom-in"
+            <div class="solution-review__carousel owl-carousel owl-theme" data-aos="zoom-in"
               data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
               <div class="item">
                 <div class="solution-review__top">
@@ -264,7 +393,7 @@
                   thống quản lý doanh nghiệp AMS
                 </p>
               </div>
-            </div> --}}
+            </div>
             <img src="{{ asset('img/landing-page/circle-line.png') }}" alt=""
               class="img-fluid circle-line-img">
           </div>
@@ -332,6 +461,9 @@
         </div>
       </div>
     </div>
+
+    <img class="img-fluid circle-line-blue"
+      src="{{ asset('img/landing-page/circle-line-blue.png') }}" alt="">
   </div>
 
   <footer class="footer">

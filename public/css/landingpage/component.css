@@ -1,3 +1,9 @@
+.main .circle-line-blue{
+  max-width: 92.1rem;
+  top: 186rem;
+  right: -50rem;
+}
+
 /* Button Style */
 .btn{
   font-family: hm;
@@ -263,6 +269,99 @@
   color: var(--primary-cl);
   margin: 0 auto;
   text-align: center;
+}
+
+/* Section Difficult */
+.section-difficult{
+  overflow: hidden;
+  background-color: #F6F9FF;
+}
+
+.section-difficult .wrap{
+  position: relative;
+}
+
+/* Section Advantages */
+.section-advantages .wrap{
+  position: relative;
+}
+
+.advantages-title{
+  margin-bottom: 7.7rem;
+}
+
+.advantages-title span{
+  font-family: mb;
+}
+
+.advantages-content {
+  display: flex;
+  justify-content: center;
+  column-gap: 7rem;
+}
+
+.advantages-content__left{
+  position: relative;
+  z-index: 2;
+}
+
+.advantages-content .advantages-content__item{
+  font-family: hm;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: var(--primary-cl);
+  margin-bottom: 3rem;
+}
+
+.advantages-content__item:nth-child(2){
+  margin-left: 3.5rem;
+}
+
+.advantages-content__item:last-child{
+  margin-left: 7rem;
+  margin-bottom: 0;
+}
+
+.section-advantages .dots-circle-img{
+  max-width: 26.7rem;
+  left: 5.7rem;
+  bottom: 14rem;
+}
+
+/* Section Quote */
+.section-quote{
+  padding: 16.8rem 0;
+  background-color: var(--primary-cl);
+}
+
+.quote-content{
+  max-width: 114.8rem;
+  font-family: mr;
+  font-size: 5.8rem;
+  line-height: 8.8rem;
+  color: #75A3DF;
+  position: relative;
+  padding: 0 11rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote-content span{
+  color: var(--white-cl);
+}
+
+.quote-content .icon-quote{
+  position: absolute;
+}
+
+.quote-content .icon-quote.quote-1{
+  top: 0;
+  left: 0;
+}
+
+.quote-content .icon-quote.quote-2{
+  bottom: 0;
+  right: 0;
 }
 
 /* Section Solution */

@@ -59,6 +59,98 @@
 
 /* End Section Who */
 
+/* Section Difficult */
+
+
+
+/* End Section Difficult */
+
+/* Section Advantages */
+
+.advantages-header{
+  position: relative;
+  width: 117.7rem;
+  margin-left: auto;
+}
+
+.advantages-header .advantages-header__line{
+  width: 98.6rem;
+  height: 1rem;
+  margin-left: auto;
+  margin-bottom: 5px;
+  background-color: var(--primary-cl);
+  clip-path: polygon(1% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.advantages-title{
+  position: relative;
+  color: var(--primary-cl);
+  background-color: #C6E8F3;
+  padding: 6.5rem 11.4rem;
+  clip-path: polygon(6% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.advantages-title .dots-circle-img{
+  max-width: 10.6rem;
+  left: 6.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.advantages-content__left{
+  width: 73rem;
+}
+
+.advantages-content__item{
+  max-width: 62.4rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+}
+
+.advantages-content__item .text,
+.advantages-content__item .index{
+  display: flex;
+  align-items: flex-end;
+}
+
+.advantages-content__item .text{
+  column-gap: 8px;
+}
+
+.advantages-content__item:last-child .text{
+  display: block;
+}
+
+.advantages-content__item .index{
+  font-size: 3.5rem;
+}
+
+.advantages-content__item .number{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages-content__item .number span:first-child{
+  font-size: 2rem;
+  color: #FDB913;
+}
+
+.advantages-content__item .number span:last-child{
+  font-size: 6rem;
+  line-height: 1;
+  font-family: hb;
+}
+
+.advantages-content__item:last-child .text span{
+  font-size: 2.4rem;
+  color: #FDB913;
+}
+
+/* End Section Advantages */
+
 /* Section Solution */
 
 .solution-register__voucher{
