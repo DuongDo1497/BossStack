@@ -52,3 +52,26 @@
   font-family: hm;
   color: var(--primary-cl);
 }
+
+@media (max-width: 575.98px){
+  .header .wrap{
+    padding: 1.5rem 0;
+  }
+
+  .header .logo{
+    width: 14rem;
+  }
+
+  .course-info{
+    width: 18.5rem;
+    justify-content: flex-end;
+  }
+
+  .course-info li{
+    display: none;
+  }
+
+  .course-info li:last-child{
+    display: flex;
+  }
+}
