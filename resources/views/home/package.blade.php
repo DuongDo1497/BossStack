@@ -2,7 +2,7 @@
   {{ csrf_field() }}
   <input type='hidden' name='typereport' value=''>
   <div class="row">
-    <div class="col-xl-4 col-md-4 col-12 mb-md-3">
+    <div class="col-xl-3 col-md-3 col-12 mb-md-3">
       <div class="card card-price-list">
         <div class="card-header">
           <p class="name"><b>Mở Tài khoản</b></p>
@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-4 col-md-4 col-12 mb-md-3">
+    <div class="col-xl-3 col-md-3 col-12 mb-md-3">
       <div class="card card-price-list">
         <div class="card-header">
           <p class="name"><b>Gói Basic</b></p>
@@ -58,11 +58,11 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-4 col-md-6 col-12" style="display: none;">
+    <div class="col-xl-3 col-md-3 col-12">
       <div class="card card-price-list">
         <div class="card-header">
-          <p class="name"><b>Gói Doanh nghiệp</b></p>
-          <p class="percent"><span>99.000</span><br>đồng/tháng/user</p>
+          <p class="name"><b>Gói Standard</b></p>
+          <p class="percent"><span>299.000</span><br>đồng/tháng</p>
           <!-- <p class="discount">
                     <span><small>715.000</small></span>
                     <span><small style="padding-left: 10px;"><font color="red"><b>-30%</b></font></small></span>
@@ -72,8 +72,8 @@
           <ul>
             <li>Dùng Gói Mở tài khoản Miễn phí ++</li>
             <li>Sử dụng các tính năng Gói Cá nhân ++</li>
-            <li>Thực hiện coaching doanh nghiệp (4 giờ)</li>
-            <li>Tặng 3 user VIP cho Doanh nghiệp đăng ký từ 100+ user</li>
+            <li>Cập nhật Kiến thức Đầu tư</li>
+            <li>Nhận định chứng khoán dài hạn</li>
             <li>Giảm 50% khi đăng ký mua gói 12 tháng</li>
           </ul>
         </div>
@@ -96,7 +96,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-4 col-md-4 col-12">
+    <div class="col-xl-3 col-md-3 col-12">
       <div class="card card-price-list">
         <div class="card-header">
           <p class="name"><b>Gói Premium</b></p>

@@ -54,7 +54,7 @@
           <div class="box-body">
 
             <div class="row">
-              <div class="col-md-6 col-12">
+              <div class="col-md-4 col-12">
                 <div class="panel panel-default card-price-list">
                   <div class="panel-heading">
                     <p class="name"><b>Gói Basic</b></p>
@@ -76,7 +76,8 @@
                         @if ($key > 0)
                           @if ($key == old('producttypes_1'))
                             <option value="{{ $key }}" selected>{{ $value['month'] }} tháng
-                              (giảm {{ $value['discount'] }}%)</option>
+                              (giảm {{ $value['discount'] }}%)
+                            </option>
                           @else
                             <option value="{{ $key }}">{{ $value['month'] }} tháng (giảm
                               {{ $value['discount'] }}%)</option>
@@ -89,22 +90,22 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-12" style="display: none;">
+              <div class="col-md-4 col-12">
                 <div class="panel panel-default card-price-list">
                   <div class="panel-heading">
-                    <p class="name"><b>Gói Doanh nghiệp</b></p>
-                    <p class="percent"><span>99.000</span><br>đồng/tháng/user</p>
+                    <p class="name"><b>Gói Standard</b></p>
+                    <p class="percent"><span>299.000</span><br>đồng/tháng</p>
                     <!-- <p class="discount">
-                                          <span><small>715.000</small></span>
-                                          <span><small style="padding-left: 10px;"><font color="red"><b>-30%</b></font></small></span>
-                                      </p> -->
+                                            <span><small>715.000</small></span>
+                                            <span><small style="padding-left: 10px;"><font color="red"><b>-30%</b></font></small></span>
+                                        </p> -->
                   </div>
                   <div class="panel-body">
                     <ul>
                       <li>Dùng Gói Mở tài khoản Miễn phí ++</li>
                       <li>Sử dụng các tính năng Gói Cá nhân ++</li>
-                      <li>Thực hiện coaching doanh nghiệp (4 giờ)</li>
-                      <li>Tặng 3 user VIP cho Doanh nghiệp đăng ký từ 100+ user</li>
+                      <li>Thiết lập nhiều Ví đầu tư</li>
+                      <li>Nhận định chứng khoán dài hạn</li>
                       <li>Giảm 50% khi đăng ký mua gói 12 tháng</li>
                     </ul>
                   </div>
@@ -115,7 +116,8 @@
                         @if ($key > 0)
                           @if ($key == old('producttypes_2'))
                             <option value="{{ $key }}" selected>{{ $value['month'] }} tháng
-                              (giảm {{ $value['discount'] }}%)</option>
+                              (giảm {{ $value['discount'] }}%)
+                            </option>
                           @else
                             <option value="{{ $key }}">{{ $value['month'] }} tháng (giảm
                               {{ $value['discount'] }}%)</option>
@@ -128,15 +130,15 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-12">
+              <div class="col-md-4 col-12">
                 <div class="panel panel-default card-price-list">
                   <div class="panel-heading">
                     <p class="name"><b>Gói Premium</b></p>
                     <p class="percent"><span>499.000</span><br>đồng/tháng</p>
                     <!-- <p class="discount">
-                                          <span><small>8.580.000</small></span>
-                                          <span><small style="padding-left: 10px;"><font color="red"><b>-43%</b></font></small></span>
-                                      </p> -->
+                                            <span><small>8.580.000</small></span>
+                                            <span><small style="padding-left: 10px;"><font color="red"><b>-43%</b></font></small></span>
+                                        </p> -->
                   </div>
                   <div class="panel-body">
                     <ul>
@@ -154,7 +156,8 @@
                         @if ($key > 0)
                           @if ($key == old('producttypes_3'))
                             <option value="{{ $key }}" selected>{{ $value['month'] }} tháng
-                              (giảm {{ $value['discount'] }}%)</option>
+                              (giảm {{ $value['discount'] }}%)
+                            </option>
                           @else
                             <option value="{{ $key }}">{{ $value['month'] }} tháng (giảm
                               {{ $value['discount'] }}%)</option>
