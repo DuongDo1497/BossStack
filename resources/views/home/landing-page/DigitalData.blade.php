@@ -215,6 +215,62 @@
         </div>
       </div>
 
+      <div class="solution-review">
+        <div class="container">
+          <div class="wrap">
+            <h4 class="solution-review__title" data-aos="fade-right" data-aos-delay="0"
+              data-aos-duration="1000" data-aos-easing="ease-in-out">Khách hàng của chúng tôi khi
+              nói về BossStack</h4>
+            {{-- <div class="solution-review__carousel owl-carousel owl-theme" data-aos="zoom-in"
+              data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              <div class="item">
+                <div class="solution-review__top">
+                  <img src="{{ asset('img/user-2.jpg') }}" alt=""
+                    class="img-fluid solution-review__avatar">
+                  <p class="solution-review__content">Sử dụng phần mềm BossStack cuối tháng tôi
+                    không cần ngồi ghi chép hay nhập bảng tính Excel. Phần mềm BossStack giúp tôi
+                    quản lý mọi thu chi của cá nhân, gia đình và bóc tách hoàn toàn với dòng tiền
+                    kinh doanh tại doanh nghiệp của tôi. Tính năng mà tôi đặc biệt quan tâm đó chính
+                    là tính toán số tiền nghỉ hưu giúp tôi có những kế hoạch dài hạn về tài chính
+                    của mình.</p>
+                </div>
+                <p class="solution-review__info"><span>Nguyễn Đỗ Cẩm Bình</span> - Trưởng phòng
+                  kinh doanh công ty BĐS Him Lam
+                </p>
+              </div>
+              <div class="item">
+                <div class="solution-review__top">
+                  <img src="{{ asset('img/user-1.jpg') }}" alt=""
+                    class="img-fluid solution-review__avatar">
+                  <p class="solution-review__content">Phần mềm BossStack giúp bạn theo dõi và kiểm
+                    soát các dòng tiền giúp chúng luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá
+                    nhân và dòng tiền đầu tư kinh doanh của bạn được tách bạch hoàn toàn. Việc này
+                    giúp các dòng tiền được kiểm soát và tăng trưởng hiệu quả.</p>
+                </div>
+                <p class="solution-review__info"><span>Lê Hoài Ân - CFA</span> - CFA, tác giả cuốn
+                  sách
+                  bán chạy số 1 thị trường "20 năm lịch sử Thị trường Chứng khoán Việt Nam"</p>
+              </div>
+              <div class="item">
+                <div class="solution-review__top">
+                  <img src="{{ asset('img/user.jpg') }}" alt=""
+                    class="img-fluid solution-review__avatar">
+                  <p class="solution-review__content">Phần mềm BossStack giúp tôi phân bổ tài sản
+                    và dòng tiền vào các ví mục tiêu tài chính khác nhau. Tôi có thể theo dõi từng
+                    mục thu chi, từng mục tiêu tài chính đã tối ưu chưa. Từ đó, tôi phân bổ dòng
+                    tiền một cách hợp lý và cắt giảm những chi phí không cần thiết.</p>
+                </div>
+                <p class="solution-review__info"><span>Huỳnh Thu Ái</span> - Cố vấn, đào tạo hệ
+                  thống quản lý doanh nghiệp AMS
+                </p>
+              </div>
+            </div> --}}
+            <img src="{{ asset('img/landing-page/circle-line.png') }}" alt=""
+              class="img-fluid circle-line-img">
+          </div>
+        </div>
+      </div>
+
       <div class="solution-register" id="solution">
         <div class="container">
           <div class="wrap">
