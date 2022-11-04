@@ -140,7 +140,8 @@
                 nghiệm sâu sắc và chuyên môn cao trong lĩnh vực quản lý tài chính, công nghệ,
                 <b>BossStack</b> đã phát triển hệ thống <b>“BossStack Coaching”</b>, một giải pháp
                 giúp doanh nghiệp và cá nhân kiểm soát tình hình tài chính của hệ thống, tách bạch
-                các dòng tiền và tăng trưởng bền vững.</p>
+                các dòng tiền và tăng trưởng bền vững.
+              </p>
               <!-- <a href="{{ route('about-us') }}">Tìm hiểu thêm <i class="fa fa-arrow-right"></i></a> -->
             </div>
             <!-- <div class="col-md-6">
@@ -263,7 +264,7 @@
     <!-- Bảng giá phần mềm -->
     <section class="element-section element-price-list">
       <div class="container">
-        <h2 class="title">Giải pháp BossStack dành cho CÁ NHÂN </h2>
+        <h2 class="title">Giải pháp phần mềm BossStack</h2>
         @include('home.package')
       </div>
     </section>
