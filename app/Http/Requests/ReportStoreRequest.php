@@ -27,8 +27,8 @@ class ReportStoreRequest extends FormRequest
             'fullname' => 'required|max:255',
             'email' => 'required|email',
             'phone' => 'required|numeric',
-            'title' => 'required',
-            'content' => 'required',
+            'title' => '',
+            'content' => '',
         ];
     }
     
@@ -40,8 +40,6 @@ class ReportStoreRequest extends FormRequest
             'email.email' => "Địa chỉ email không hợp lệ.",
             'phone.required' => "Bạn chưa nhập số điện thoại.",
             'phone.numeric' => "Số điện thoại không hợp lệ.",
-            'title.required' => "Bạn chưa nhập tiêu đề yêu cầu.",
-            'content.required' => "Bạn chưa nhập nội dung yêu cầu.",
         ];
     }      
 }

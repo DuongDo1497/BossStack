@@ -179,9 +179,9 @@ class HomeController extends Controller
                 '6'=> 'course.MultiCashGrowth',
                 '7'=> 'course.MultiCashGrowth',
               ];
-        
+       
         $course = $request->course;
-        
+       
         $result = app(ReportService::class)->create($request);
         $message = "";
         if ($result){

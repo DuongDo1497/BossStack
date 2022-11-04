@@ -563,7 +563,7 @@
       </div>
       <div class="popup-register__body">
         <form role="form" action="{{ route('coaching-store') }}?continue=true" method="post"
-          id="frm">
+          id="frms">
           {{ csrf_field() }}
           <input type='hidden' name='course' value='7'>
           <div class="popup-register__form">
