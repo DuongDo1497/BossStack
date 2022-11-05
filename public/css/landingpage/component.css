@@ -289,6 +289,17 @@
   text-align: center;
 }
 
+@media (max-width: 575.98px){
+  .section-who .who-list{
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  .who-list .card{
+    width: 100%;
+  }
+}
+
 /* Section Difficult */
 .section-difficult{
   overflow: hidden;
@@ -344,6 +355,14 @@
   max-width: 26.7rem;
   left: 5.7rem;
   bottom: 14rem;
+}
+
+@media (max-width: 575.98px){
+  .advantages-content{
+    align-items: center;
+    flex-direction: column-reverse;
+    row-gap: 3rem;
+  }
 }
 
 /* Section Quote */
