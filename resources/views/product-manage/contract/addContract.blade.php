@@ -62,11 +62,13 @@
                   </div>
                   <div class="panel-body">
                     <ul>
-                      <li>Dùng Gói Mở tài khoản Miễn phí ++</li>
-                      <li>Thiết lập ví tài chính</li>
-                      <li>Thiết lập ví đầu tư</li>
-                      <li>Quản lý và phát triển Dòng tiền cá nhân</li>
-                      <li>Giảm 50% khi đăng ký mua gói 12 tháng</li>
+                      <li>Sử dụng toàn bộ tính năng sản phẩm Miễn phí</li>
+                      <li>Xây dựng mục tiêu dòng tiền xuyên suốt</li>
+                      <li>Triển khai việc quản lý tiền và dòng tiền</li>
+                      <li>Bóc tách dòng tiền cá nhân và đầu tư kinh doanh</li>
+                      <li>Theo dõi, đánh giá dòng tiền sau bóc tách</li>
+                      <li>Hỗ trợ trong giờ hành chính</li>
+                      <li>Miễn phí cập nhật tính năng mới</li>
                     </ul>
                   </div>
                   <div class="panel-footer">
@@ -96,17 +98,19 @@
                     <p class="name"><b>Gói Standard</b></p>
                     <p class="percent"><span>299.000</span><br>đồng/tháng</p>
                     <!-- <p class="discount">
-                                            <span><small>715.000</small></span>
-                                            <span><small style="padding-left: 10px;"><font color="red"><b>-30%</b></font></small></span>
-                                        </p> -->
+                                                  <span><small>715.000</small></span>
+                                                  <span><small style="padding-left: 10px;"><font color="red"><b>-30%</b></font></small></span>
+                                              </p> -->
                   </div>
                   <div class="panel-body">
                     <ul>
-                      <li>Dùng Gói Mở tài khoản Miễn phí ++</li>
-                      <li>Sử dụng các tính năng Gói Cá nhân ++</li>
-                      <li>Thiết lập nhiều Ví đầu tư</li>
-                      <li>Nhận định chứng khoán dài hạn</li>
-                      <li>Giảm 50% khi đăng ký mua gói 12 tháng</li>
+                      <li>Sử dụng toàn bộ tính năng sản phẩm Basic</li>
+                      <li>Quyền admin và tạo các user con cho các thành viên</li>
+                      <li>Phân bổ các tính năng phần mềm cho các thành viên</li>
+                      <li>Theo dõi, đánh giá việc quản lý tiền và dòng tiền các thành viên</li>
+                      <li>Điều chỉnh theo biến động các dòng tiền của các thành viên linh hoạt</li>
+                      <li>Hỗ trợ trong giờ hành chính</li>
+                      <li>Miễn phí cập nhật tính năng mới</li>
                     </ul>
                   </div>
                   <div class="panel-footer">
@@ -136,17 +140,19 @@
                     <p class="name"><b>Gói Premium</b></p>
                     <p class="percent"><span>499.000</span><br>đồng/tháng</p>
                     <!-- <p class="discount">
-                                            <span><small>8.580.000</small></span>
-                                            <span><small style="padding-left: 10px;"><font color="red"><b>-43%</b></font></small></span>
-                                        </p> -->
+                                                  <span><small>8.580.000</small></span>
+                                                  <span><small style="padding-left: 10px;"><font color="red"><b>-43%</b></font></small></span>
+                                              </p> -->
                   </div>
                   <div class="panel-body">
                     <ul>
-                      <li>Dùng Gói Mở tài khoản Miễn phí ++</li>
-                      <li>Sử dụng các tính năng Gói Cá nhân ++</li>
-                      <li>Thiết lập nhiều Ví đầu tư</li>
-                      <li>Nhận định chứng khoán dài hạn</li>
-                      <li>Giảm 50% khi đăng ký mua gói 12 tháng</li>
+                      <li>Sử dụng toàn bộ tính năng sản phẩm Basic</li>
+                      <li>Sử dụng toàn bộ tính năng sản phẩm Standard</li>
+                      <li>Phân bổ dòng tiền đầu tư hằng tháng theo phần mềm</li>
+                      <li>Theo dõi khuyến nghị đầu tư chứng khoán Việt Nam</li>
+                      <li>Giảm 50% khi đăng ký gói thời gian 12 tháng</li>
+                      <li>Hỗ trợ trong giờ hành chính</li>
+                      <li>Miễn phí cập nhật tính năng mới</li>
                     </ul>
                   </div>
                   <div class="panel-footer">

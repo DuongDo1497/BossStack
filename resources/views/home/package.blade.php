@@ -10,12 +10,13 @@
         </div>
         <div class="card-body">
           <ul>
-            <li>Bảo mật an toàn</li>
-            <li>Quản lý ví tài chính từ<br>1.000 đồng</li>
             <li>Tính số tiền nghỉ hưu</li>
-            <li>Cập nhật thu chi ví tổng</li>
-            <li>Theo dõi danh mục tài sản</li>
-            <li>Dịch vụ hỗ trợ 24/7</li>
+            <li>Quản lý chi tiêu hằng ngày</li>
+            <li>Quản lý thu nhập hằng ngày</li>
+            <li>Theo dõi các khoản nợ</li>
+            <li>Quản lý tài sản hiện có</li>
+            <li>Hỗ trợ trong giờ hành chính</li>
+            <li>Miễn phí cập nhật tính năng mới</li>
           </ul>
         </div>
         <div class="card-footer">
@@ -32,11 +33,13 @@
         </div>
         <div class="card-body">
           <ul>
-            <li>Dùng Gói Mở tài khoản Miễn phí ++</li>
-            <li>Thiết lập ví tài chính</li>
-            <li>Thiết lập ví đầu tư</li>
-            <li>Quản lý và phát triển Dòng tiền cá nhân</li>
-            <li>Giảm 50% khi đăng ký mua gói 12 tháng</li>
+            <li>Sử dụng toàn bộ tính năng sản phẩm Miễn phí</li>
+            <li>Xây dựng mục tiêu dòng tiền xuyên suốt</li>
+            <li>Triển khai việc quản lý tiền và dòng tiền</li>
+            <li>Bóc tách dòng tiền cá nhân và đầu tư kinh doanh</li>
+            <li>Theo dõi, đánh giá dòng tiền sau bóc tách</li>
+            <li>Hỗ trợ trong giờ hành chính</li>
+            <li>Miễn phí cập nhật tính năng mới</li>
           </ul>
         </div>
         <div class="card-footer">
@@ -70,11 +73,13 @@
         </div>
         <div class="card-body">
           <ul>
-            <li>Dùng Gói Mở tài khoản Miễn phí ++</li>
-            <li>Sử dụng các tính năng Gói Cá nhân ++</li>
-            <li>Cập nhật Kiến thức Đầu tư</li>
-            <li>Nhận định chứng khoán dài hạn</li>
-            <li>Giảm 50% khi đăng ký mua gói 12 tháng</li>
+            <li>Sử dụng toàn bộ tính năng sản phẩm Basic</li>
+            <li>Quyền admin và tạo các user con cho các thành viên</li>
+            <li>Phân bổ các tính năng phần mềm cho các thành viên</li>
+            <li>Theo dõi, đánh giá việc quản lý tiền và dòng tiền các thành viên</li>
+            <li>Điều chỉnh theo biến động các dòng tiền của các thành viên linh hoạt</li>
+            <li>Hỗ trợ trong giờ hành chính</li>
+            <li>Miễn phí cập nhật tính năng mới</li>
           </ul>
         </div>
         <div class="card-footer">
@@ -108,11 +113,13 @@
         </div>
         <div class="card-body">
           <ul>
-            <li>Dùng Gói Mở tài khoản Miễn phí ++</li>
-            <li>Sử dụng các tính năng Gói Cá nhân ++</li>
-            <li>Cập nhật Kiến thức Đầu tư</li>
-            <li>Nhận định chứng khoán dài hạn</li>
-            <li>Giảm 50% khi đăng ký mua gói 12 tháng</li>
+            <li>Sử dụng toàn bộ tính năng sản phẩm Basic</li>
+            <li>Sử dụng toàn bộ tính năng sản phẩm Standard</li>
+            <li>Phân bổ dòng tiền đầu tư hằng tháng theo phần mềm</li>
+            <li>Theo dõi khuyến nghị đầu tư chứng khoán Việt Nam</li>
+            <li>Giảm 50% khi đăng ký gói thời gian 12 tháng</li>
+            <li>Hỗ trợ trong giờ hành chính</li>
+            <li>Miễn phí cập nhật tính năng mới</li>
           </ul>
         </div>
         <div class="card-footer">
