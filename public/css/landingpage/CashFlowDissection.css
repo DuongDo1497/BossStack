@@ -30,18 +30,27 @@
   max-width: 64.3rem;
 }
 
-@media (max-width: 575.98px){
-  .banner .banner-content,
-  .banner .banner-img{
+@media (max-width: 767.98px){
+  .banner .wrap{
+    padding: 7rem 0;
+  }
+
+  .banner .banner-content{
     max-width: 100%;
   }
 
   .banner-content h1{
     font-size: 4rem;
+    line-height: 1.5;
   }
 
   .banner-content h1 span{
+    display: block;
     font-size: 5rem;
+  }
+
+  .banner .banner-img{
+    max-width: 80%;
   }
 }
 
@@ -133,7 +142,7 @@
   transform: translateY(-50%);
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 767.98px){
   .section-difficult .wrap,
   .difficult-list{
     flex-direction: column;
@@ -200,7 +209,12 @@
   font-size: 2.8rem;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 767.98px){
+  .advantages-title{
+    z-index: 2;
+    padding: 2.5rem 1rem 2.5rem 7rem;
+  }
+
   .advantages-title .icon-question-img{
     width: 5rem;
     top: 50%;
@@ -221,6 +235,10 @@
     margin-left: 0;
   }
 
+  .advantages-content__item br{
+    display: none;
+  }
+
   .advantages-content__img{
     width: 75%;
   }
@@ -232,6 +250,14 @@
 
 .solution-register__voucher{
   padding: 5.6rem 4.6rem 1rem;
+}
+
+@media (max-width: 767.98px){
+  .solution-register__voucher{
+    position: relative;
+    padding: 2rem;
+    z-index: 2;
+  }
 }
 
 /* End Section Solution */

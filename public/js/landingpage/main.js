@@ -1,18 +1,27 @@
 $('.solution-review__carousel').owlCarousel({
-  animateOut: 'animate__fadeOutDown',
-  animateIn: 'animate__fadeInUp',
-  autoplay: false,
-  loop: true,
   items: 1,
-  margin: 30,
-  nav: true,
   dots: true,
+  loop: true,
+  margin: 30,
   smartSpeed: 1000,
-  autoplaySpeed: 1000,
-  mouseDrag: false,
-  navText: ["<i class='fa-solid fa-angle-left'></i>",
-    "<i class='fa-solid fa-angle-right'></i>"
-  ]
+  responsive:{
+    0:{
+      items:1,
+      nav: false,
+      autoplay: true,
+      autoplaySpeed: 1500,
+    },
+    768:{
+      nav: true,
+      autoplay: false,
+      mouseDrag: false,
+      animateOut: 'animate__fadeOutDown',
+      animateIn: 'animate__fadeInUp',
+      navText: ["<i class='fa-solid fa-angle-left'></i>",
+        "<i class='fa-solid fa-angle-right'></i>"
+      ],
+    }
+  }
 })
 
 AOS.init();

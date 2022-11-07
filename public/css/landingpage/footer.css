@@ -43,3 +43,14 @@
 .footer-content__item:last-child a{
   display: inline-block;
 }
+
+@media (max-width: 767.98px){
+  .footer-content{
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .footer-content__item{
+    width: 100% !important;
+  }
+}

@@ -197,16 +197,16 @@
             <div class="advantages-content__left">
               <div class="advantages-content__item" data-aos="flip-left" data-aos-delay="0"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <span>80%</span> thời gian được tiết kiệm khi quản lý thu,<br />chi và đầu tư dòng
+                <span>80%</span> thời gian được tiết kiệm khi quản lý thu, <br />chi và đầu tư dòng
                 tiền
               </div>
               <div class="advantages-content__item" data-aos="flip-left" data-aos-delay="500"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <span>TÙY CHỈNH</span> phù hợp với từng nhu cầu<br />của khách hàng
+                <span>TÙY CHỈNH</span> phù hợp với từng nhu cầu <br />của khách hàng
               </div>
               <div class="advantages-content__item" data-aos="flip-left" data-aos-delay="1000"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
-                Tích hợp công nghệ hiện đại<br /><span>BẢO MẬT DỮ LIỆU</span> khách hàng tuyệt đối
+                Tích hợp công nghệ hiện đại <br /><span>BẢO MẬT DỮ LIỆU</span> khách hàng tuyệt đối
               </div>
             </div>
             <img class="advantages-content__img img-fluid"

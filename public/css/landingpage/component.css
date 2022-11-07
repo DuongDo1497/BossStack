@@ -4,6 +4,12 @@
   right: -50rem;
 }
 
+@media (max-width: 767.98px){
+  .main .circle-line-blue{
+    top: 398rem;
+  }
+}
+
 /* Button Style */
 .btn{
   font-family: hm;
@@ -24,7 +30,7 @@
   background-color: transparent;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 767.98px){
   .btn{
     font-size: 1.6rem;
     padding: 1.3rem 1.5rem;
@@ -211,6 +217,27 @@
   width: 100%;
 }
 
+@media (max-width: 767.98px){
+  .popup-register__form input{
+    padding: .9rem 2rem;
+  }
+}
+
+@media (max-width: 575.98px){
+  .popup-register{
+    padding: 0 1rem;
+  }
+  
+  .popup-register .popup-register__box,
+  .popup-register .popup-register__left{
+    width: 100%;
+  }
+
+  .popup-register .popup-register__image{
+    display: none;
+  }
+}
+
 /* Banner */
 .banner{
   overflow: hidden;
@@ -232,7 +259,7 @@
   margin-bottom: 4.8rem;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 767.98px){
   .banner .wrap{
     row-gap: 3rem;
     flex-direction: column;
@@ -289,7 +316,7 @@
   text-align: center;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 767.98px){
   .section-who .who-list{
     flex-direction: column;
     row-gap: 3rem;
@@ -357,7 +384,7 @@
   bottom: 14rem;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 767.98px){
   .advantages-content{
     align-items: center;
     flex-direction: column-reverse;
@@ -399,6 +426,24 @@
 .quote-content .icon-quote.quote-2{
   bottom: 0;
   right: 0;
+}
+
+@media (max-width: 767.98px){
+  .section-quote{
+    padding: 7rem 0;
+  }
+
+  .quote-content{
+    max-width: 100%;
+    font-size: 3rem;
+    line-height: 1.5;
+    padding: 5rem 0;
+    z-index: 2;
+  }
+
+  .quote-content .icon-quote{
+    width: 15%;
+  }
 }
 
 /* Section Solution */
@@ -778,4 +823,90 @@
   font-family: mr;
   text-align: center;
   margin-bottom: 1.6rem;
+}
+
+@media (max-width: 767.98px){
+  .solution-title{
+    width: 100%;
+    padding: 15px 15px 15px 10px;
+  }
+
+  .solution-title span{
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+  }
+
+  .solution-title .dots-circle-img{
+    max-width: 11.6rem;
+    left: -4rem;
+  }
+
+  .solution-timeline,
+  .solution-review{
+    margin-bottom: 7rem;
+  }
+
+  .solution-timeline .solution-timeline__all{
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  .solution-timeline .solution-timeline__item{
+    width: 100%;
+    height: auto;
+  }
+
+  .solution-review .wrap{
+    flex-direction: column;
+  }
+
+  .solution-review__carousel .item{
+    margin: 0 0 7.5rem 0;
+  }
+
+  .solution-review__carousel .solution-review__top{
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .solution-review__carousel .solution-review__content{
+    width: 100%;
+  }
+
+  .solution-review__carousel .owl-dots{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .solution-review .circle-line-img{
+    width: 100%;
+    top: 70%;
+    right: -11rem;
+  }
+
+  .solution-register .wrap{
+    flex-direction: column-reverse;
+    row-gap: 3rem;
+    padding: 0;
+  }
+
+  .solution-register__form{
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .solution-register__voucher h4{
+    font-size: 2.5rem;
+  }
+
+  .solution-register__form .form-info input{
+    padding: 1rem 1.5rem;
+  }
+
+  .solution-register__voucher,
+  .solution-register__voucher .line{
+    width: 100%;
+  }
 }
