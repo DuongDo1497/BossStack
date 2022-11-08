@@ -262,12 +262,12 @@
             <font size="2" style="text-align: justify;"><b>Nếu bạn cần tư vấn để gia tăng thu
                 nhập và hoàn thành mục tiêu tài chính, xin hãy liên hệ với chúng tôi để nhận được
                 những lời khuyên tốt nhất. Hotline: 0918.905.500 (Zalo/Viber/Skype) hoặc Email:
-                info@bossstack.edu.vn.</b></font>
+                info@bossstack.vn.</b></font>
 
             <div class="help">
               <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-4" style="text-align: center;">
-                  <a href="https://bossstack.edu.vn/public/advisorys/formAdvisory">
+                  <a href="https://bossstack.vn/public/advisorys/formAdvisory">
                     <div class="icon" style="margin-bottom: 10px;">
                       <img src="{{ asset('img/icon-10.png') }}">
                     </div>
@@ -277,7 +277,7 @@
                   </a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4" style="text-align: center;">
-                  <a href="https://bossstack.edu.vn/public/invests">
+                  <a href="https://bossstack.vn/public/invests">
                     <div class="icon" style="margin-bottom: 10px;">
                       <img src="{{ asset('img/icon-11.png') }}">
                     </div>
@@ -287,7 +287,7 @@
                   </a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4" style="text-align: center;">
-                  <a href="https://bossstack.edu.vn/public/cashs/process">
+                  <a href="https://bossstack.vn/public/cashs/process">
                     <div class="icon" style="margin-bottom: 10px;">
                       <img src="{{ asset('img/icon-12.png') }}">
                     </div>

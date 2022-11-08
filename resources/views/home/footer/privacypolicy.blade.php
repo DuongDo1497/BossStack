@@ -144,7 +144,7 @@
                   <p class="mb-0">Chúng tôi sẵn sàng giải đáp bất kỳ thắc mắc nào của khách hàng về
                     chính sách của chúng tôi và hỗ trợ khách hàng quản lý thông tin cá nhân trên hệ
                     thống. <br>Vui lòng liên hệ hotline: 028.3636.0440 / 0918.905.500 hoặc gửi Email
-                    đến địa chỉ: info@bossstack.edu.vn</p>
+                    đến địa chỉ: info@bossstack.vn</p>
                 </li>
               </ul>
             </div>

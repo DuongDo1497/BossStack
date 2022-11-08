@@ -74,7 +74,7 @@
 
       <div class="row d-flex">
         <div class="col-md-5 col-12">
-          <img src="https://bossstack.edu.vn/public/img/saving-5.png" width="100%">
+          <img src="https://bossstack.vn/public/img/saving-5.png" width="100%">
         </div>
         <div class="col-md-7 col-12 align-self-center">
           <div class="saving-3-right">

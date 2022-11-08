@@ -277,7 +277,8 @@
                                   {{ formatNumber($model->requireamount, 1, 0, 0) }} VND</font>
                               </b>, bạn cần tích lũy <b>
                                 <font color="red">
-                                  {{ formatNumber($savingamountplan / 12, 1, 0, 1) }} VND/tháng</font>
+                                  {{ formatNumber($savingamountplan / 12, 1, 0, 1) }} VND/tháng
+                                </font>
                               </b> trong <b>
                                 <font color="red">{{ $timeplan }} Năm</font>
                               </b></font><br><br>
@@ -306,7 +307,8 @@
                                   {{ formatNumber($model->requireamount, 1, 0, 0) }} VND</font>
                               </b>, bạn cần tích lũy <b>
                                 <font color="red">
-                                  {{ formatNumber($savingamountplan / 12, 1, 0, 1) }} VND/tháng </font>
+                                  {{ formatNumber($savingamountplan / 12, 1, 0, 1) }} VND/tháng
+                                </font>
                               </b> trong <b>
                                 <font color="red">{{ $timeplan }} Năm</font>
                               </b></font><br><br>
@@ -344,9 +346,11 @@
                                   $totalsavingamountplan = $model->totalcurrentamount;
                                   $plandate = $model->plandate == '' ? getCurrentDate('d') : ConvertSQLDate($model->plandate);
                                   $dateArray = explode('/', $plandate);
-                                  $day = "25"; $month = $dateArray[1]; $year = $dateArray[2];
+                                  $day = '25';
+                                  $month = $dateArray[1];
+                                  $year = $dateArray[2];
                                   $plandate = "$day/$month/$year";
-
+                                  
                                 @endphp
                                 @for ($item = 1; $item <= $timeplan * 12; $item++)
                                   @php
@@ -358,7 +362,7 @@
                                     <td style="text-align: center;" class="text-nowrap">
                                       {{ $i++ }}</td>
                                     <td style="text-align: center;" class="text-nowrap">
-                                      {{ substr($planmonth,3) }}</td>
+                                      {{ substr($planmonth, 3) }}</td>
                                     <td style="text-align: center;" class="text-nowrap">
                                       {{ formatNumber($savingamountplanmonth, 1, 0, 0) }}</td>
                                     <td style="text-align: center;" class="text-nowrap">
@@ -381,7 +385,8 @@
                                   {{ formatNumber($model->requireamount, 1, 0, 0) }} VND</font>
                               </b>, bạn cần tích lũy <b>
                                 <font color="red">
-                                  {{ formatNumber($savingamountplan / 12, 1, 0, 1) }} VND/tháng</font>
+                                  {{ formatNumber($savingamountplan / 12, 1, 0, 1) }} VND/tháng
+                                </font>
                               </b> trong <b>
                                 <font color="red">{{ $timeplan }} Năm</font>
                               </b></font><br><br>
@@ -458,13 +463,13 @@
               <font size="2" style="text-align: justify;"><b>Nếu bạn cần tư vấn để gia tăng
                   thu nhập và hoàn thành mục tiêu tài chính, xin hãy liên hệ với chúng tôi để nhận
                   được những lời khuyên tốt nhất. Hotline: 0918.905.500 (Zalo/Viber/Skype) hoặc Email:
-                  info@bossstack.edu.vn.</b></font>
+                  info@bossstack.vn.</b></font>
             </div>
 
             <div class="help">
               <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-4" style="text-align: center;">
-                  <a href="https://bossstack.edu.vn/public/advisorys/formAdvisory">
+                  <a href="https://bossstack.vn/public/advisorys/formAdvisory">
                     <div class="icon" style="margin-bottom: 10px;">
                       <img src="{{ asset('img/icon-10.png') }}">
                     </div>
@@ -474,7 +479,7 @@
                   </a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4" style="text-align: center;">
-                  <a href="https://bossstack.edu.vn/public/invests">
+                  <a href="https://bossstack.vn/public/invests">
                     <div class="icon" style="margin-bottom: 10px;">
                       <img src="{{ asset('img/icon-11.png') }}">
                     </div>
@@ -484,7 +489,7 @@
                   </a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4" style="text-align: center;">
-                  <a href="https://bossstack.edu.vn/public/cashs/process">
+                  <a href="https://bossstack.vn/public/cashs/process">
                     <div class="icon" style="margin-bottom: 10px;">
                       <img src="{{ asset('img/icon-12.png') }}">
                     </div>

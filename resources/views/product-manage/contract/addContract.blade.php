@@ -93,14 +93,15 @@
                 </div>
               </div>
               <div class="col-md-4 col-12">
-                <div class="panel panel-default card-price-list">
+                <div class="panel panel-default card-price-list package-standard">
                   <div class="panel-heading">
                     <p class="name"><b>Gói Standard</b></p>
-                    <p class="percent"><span>299.000</span><br>đồng/tháng</p>
+                    <p class="percent">User chủ: <span>299.000</span> đồng/tháng</p>
+                    <p class="percent">User con: <span>69.000</span> đồng/tháng</p>
                     <!-- <p class="discount">
-                                                  <span><small>715.000</small></span>
-                                                  <span><small style="padding-left: 10px;"><font color="red"><b>-30%</b></font></small></span>
-                                              </p> -->
+                                                          <span><small>715.000</small></span>
+                                                          <span><small style="padding-left: 10px;"><font color="red"><b>-30%</b></font></small></span>
+                                                      </p> -->
                   </div>
                   <div class="panel-body">
                     <ul>
@@ -111,9 +112,12 @@
                       <li>Điều chỉnh theo biến động các dòng tiền của các thành viên linh hoạt</li>
                       <li>Hỗ trợ trong giờ hành chính</li>
                       <li>Miễn phí cập nhật tính năng mới</li>
+                      <li>Tạo user con không giới hạn</li>
                     </ul>
                   </div>
                   <div class="panel-footer">
+                    <input type="text" class="form-control count-user" name="countUser"
+                      placeholder="Nhập số lượng user con...">
                     <select class="form-control" name="producttypes_2">
                       <option value="0">Chọn gói thời gian</option>
                       @foreach ($producttypes as $key => $value)
@@ -140,9 +144,9 @@
                     <p class="name"><b>Gói Premium</b></p>
                     <p class="percent"><span>499.000</span><br>đồng/tháng</p>
                     <!-- <p class="discount">
-                                                  <span><small>8.580.000</small></span>
-                                                  <span><small style="padding-left: 10px;"><font color="red"><b>-43%</b></font></small></span>
-                                              </p> -->
+                                                          <span><small>8.580.000</small></span>
+                                                          <span><small style="padding-left: 10px;"><font color="red"><b>-43%</b></font></small></span>
+                                                      </p> -->
                   </div>
                   <div class="panel-body">
                     <ul>

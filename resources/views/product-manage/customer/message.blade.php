@@ -89,7 +89,7 @@
             <p class="mb-5"><b>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi. Chúc bạn một ngày
                 vui!</b></p>
 
-            <a class="btn btn-primary" href="https://bossstack.edu.vn/public/">Quay về trang chủ</a>
+            <a class="btn btn-primary" href="https://bossstack.vn/public/">Quay về trang chủ</a>
           </div>
         @elseif($errorCode == '2')
           <!-- Kich hoạt mã ưu đãi -->
@@ -103,7 +103,7 @@
             <p class="mb-5"><b>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi. Chúc bạn một ngày
                 vui!</b></p>
 
-            <a class="btn btn-primary" href="https://bossstack.edu.vn/public/">Quay về trang chủ</a>
+            <a class="btn btn-primary" href="https://bossstack.vn/public/">Quay về trang chủ</a>
           </div>
         @elseif($errorCode == '0')
           <!-- Đăng ký thông tin khách hàng thành công, thanh toán qua vi momo thành công -->
@@ -119,7 +119,7 @@
             <p class="mb-5"><b>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi. Chúc bạn một ngày
                 vui!</b></p>
 
-            <a class="btn btn-primary" href="https://bossstack.edu.vn/public/">Quay về trang chủ</a>
+            <a class="btn btn-primary" href="https://bossstack.vn/public/">Quay về trang chủ</a>
           </div>
         @else
           <!-- Đăng ký thông tin khách hàng thành công, thanh toán qua vi momo bị lỗi -->
@@ -135,7 +135,7 @@
             <p class="mb-5"><b>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi. Chúc bạn một ngày
                 vui!</b></p>
 
-            <a class="btn btn-primary" href="https://bossstack.edu.vn/public/">Quay về trang chủ</a>
+            <a class="btn btn-primary" href="https://bossstack.vn/public/">Quay về trang chủ</a>
           </div>
         @endif
 

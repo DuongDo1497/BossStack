@@ -20,8 +20,7 @@
           </ul>
         </div>
         <div class="card-footer">
-          <a onclick="processReports('frm', '4')" class="btn btn-primary btn-buy"
-            style="transform: translate(0, calc(100% - 4px));">Mở tài khoản</a>
+          <a onclick="processReports('frm', '4')" class="btn btn-primary btn-buy">Mở tài khoản</a>
         </div>
       </div>
     </div>
@@ -62,10 +61,11 @@
       </div>
     </div>
     <div class="col-xl-3 col-md-3 col-12">
-      <div class="card card-price-list">
+      <div class="card card-price-list package-standard">
         <div class="card-header">
           <p class="name"><b>Gói Standard</b></p>
-          <p class="percent"><span>299.000</span><br>đồng/tháng</p>
+          <p class="percent">User chủ: <span>299.000</span> đồng/tháng</p>
+          <p class="percent">User con: <span>69.000</span> đồng/tháng</p>
           <!-- <p class="discount">
                     <span><small>715.000</small></span>
                     <span><small style="padding-left: 10px;"><font color="red"><b>-30%</b></font></small></span>
@@ -80,9 +80,12 @@
             <li>Điều chỉnh theo biến động các dòng tiền của các thành viên linh hoạt</li>
             <li>Hỗ trợ trong giờ hành chính</li>
             <li>Miễn phí cập nhật tính năng mới</li>
+            <li>Tạo user con không giới hạn</li>
           </ul>
         </div>
         <div class="card-footer">
+          <input type="text" class="form-control count-user" name="countUser"
+            placeholder="Nhập số lượng user con...">
           <select class="form-control select2" name="producttypes_2">
             <option value="0">Chọn gói thời gian</option>
             @foreach ($producttypes as $key => $value)

@@ -53,7 +53,7 @@
                 @else
                   <div class="image">
                     <img
-                      src="https://bossstack.edu.vn/public/funds_manage/public/newfiles/files/No_Image_Available.jpg"
+                      src="https://bossstack.vn/public/funds_manage/public/newfiles/files/No_Image_Available.jpg"
                       width="100%">
                   </div>
                   <div class="info">
@@ -103,7 +103,7 @@
                 @else
                   <div class="image">
                     <img
-                      src="https://bossstack.edu.vn/public/funds_manage/public/newfiles/files/No_Image_Available.jpg"
+                      src="https://bossstack.vn/public/funds_manage/public/newfiles/files/No_Image_Available.jpg"
                       width="100%">
                   </div>
                   <div class="info">
@@ -152,7 +152,7 @@
             @else
               <div class="image">
                 <img
-                  src="https://bossstack.edu.vn/public/funds_manage/public/newfiles/files/No_Image_Available.jpg"
+                  src="https://bossstack.vn/public/funds_manage/public/newfiles/files/No_Image_Available.jpg"
                   width="100%">
               </div>
               <div class="info">

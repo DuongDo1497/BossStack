@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="{{ $config['status_bar'] }}">
 <meta name="apple-mobile-web-app-title" content="{{ $config['short_name'] }}">
 <!-- <link rel="apple-touch-icon" href="{{ data_get(end($config['icons']), 'src') }}"> -->
-<link rel="apple-touch-icon" href="https://bossstack.edu.vn/public/images/icons/icon-512x512.png">
+<link rel="apple-touch-icon" href="https://bossstack.vn/public/images/icons/icon-512x512.png">
 
 
 <link href="{{ $config['splash']['640x1136'] }}"
