@@ -36,7 +36,7 @@
   <header class="header">
     <div class="container">
       <div class="wrap">
-        <a class="logo" href="{{ asset('boctachdongtien') }}"><img class="img-fluid"
+        <a class="logo" href="{{ asset('dulieuso') }}"><img class="img-fluid"
             src="{{ asset('img/logo-bossstack.png') }}"></a>
         <ul class="course-info">
           <li>
@@ -92,28 +92,24 @@
     <div class="section section-who">
       <div class="container">
         <div class="wrap">
-          <h4 data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out">Bạn là?</h4>
+          <h4>Bạn là?</h4>
           <div class="who-list">
-            <div class="card" data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000"
-              data-aos-easing="ease-in-out">
+            <div class="card">
               <img class="card-img-top img-fluid"
                 src="{{ asset('img/landing-page/who-img-2.png') }}" alt="">
               <p class="card-title">Doanh nghiệp<br />nhỏ và vừa</p>
             </div>
-            <div class="card" data-aos="fade-down" data-aos-delay="1000"
-              data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="card">
               <img class="card-img-top img-fluid"
                 src="{{ asset('img/landing-page/who-img-4.png') }}" alt="">
               <p class="card-title">Cửa hàng<br />kinh doanh tự do</p>
             </div>
-            <div class="card" data-aos="fade-down" data-aos-delay="1500"
-              data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="card">
               <img class="card-img-top img-fluid"
                 src="{{ asset('img/landing-page/who-img-5.png') }}" alt="">
               <p class="card-title">Startup</p>
             </div>
-            <div class="card" data-aos="fade-down" data-aos-delay="2000"
-              data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="card">
               <img class="card-img-top img-fluid"
                 src="{{ asset('img/landing-page/who-img-3.png') }}" alt="">
               <p class="card-title">Khách hàng có nhu cầu</p>
@@ -129,47 +125,77 @@
       <div class="container">
         <div class="wrap">
           <div class="difficult-list">
-            <div class="difficult-item blue-gradient">
-              <img class="img-fluid icon"
-                src="{{ asset('img/landing-page/icon-difficult-1.svg') }}" alt="">
-              <span class="text">Làm nhưng không dư, không biết tiền đã chi tiêu như thế
-                nào</span>
+            <div class="difficult-item" data-aos="flip-left" data-aos-duration="1000"
+              data-aos-easing="ease-in-out">
+              <div class="difficult-item__right">
+                <span class="number">01</span>
+                <img class="img-fluid icon"
+                  src="{{ asset('img/landing-page/icon-difficult-8.svg') }}" alt="">
+              </div>
+              <p class="difficult-item__text">Dữ liệu, <br />thông tin không đồng bộ</p>
             </div>
-            <div class="difficult-item yellow-gradient">
-              <img class="img-fluid icon"
-                src="{{ asset('img/landing-page/icon-difficult-2.svg') }}" alt="">
-              <span class="text">Lẫn lộn tiền bạc gia đình, cá nhân và đầu tư kinh doanh</span>
+
+            <div class="difficult-item" data-aos="flip-left" data-aos-duration="1000"
+              data-aos-easing="ease-in-out">
+              <div class="difficult-item__right">
+                <span class="number">02</span>
+                <img class="img-fluid icon"
+                  src="{{ asset('img/landing-page/icon-difficult-9.svg') }}" alt="">
+              </div>
+              <p class="difficult-item__text">Thất thoát dữ liệu khi thay <br />đổi nhân sự</p>
             </div>
-            <div class="difficult-item yellow-gradient">
-              <img class="img-fluid icon"
-                src="{{ asset('img/landing-page/icon-difficult-3.svg') }}" alt="">
-              <span class="text">Luôn lo lắng, bất an về tương lai tiền bạc của bản thân</span>
+
+            <div class="difficult-item" data-aos="flip-left" data-aos-duration="1000"
+              data-aos-easing="ease-in-out">
+              <div class="difficult-item__right">
+                <span class="number">03</span>
+                <img class="img-fluid icon"
+                  src="{{ asset('img/landing-page/icon-difficult-10.svg') }}" alt="">
+              </div>
+              <p class="difficult-item__text">Không có dữ liệu kịp thời cho các <br />cuộc họp quan
+                trọng, làm
+                việc với
+                <br />đối tác và khách hàng
+              </p>
             </div>
-            <div class="difficult-item blue-gradient">
-              <img class="img-fluid icon"
-                src="{{ asset('img/landing-page/icon-difficult-4.svg') }}" alt="">
-              <span class="text">Không phân định rõ ràng các dòng tiền hiện tại</span>
+
+            <div class="difficult-item" data-aos="flip-left" data-aos-duration="1000"
+              data-aos-easing="ease-in-out">
+              <div class="difficult-item__right">
+                <span class="number">04</span>
+                <img class="img-fluid icon"
+                  src="{{ asset('img/landing-page/icon-difficult-11.svg') }}" alt="">
+              </div>
+              <p class="difficult-item__text">Trùng lặp dữ liệu</p>
             </div>
-            <div class="difficult-item blue-gradient">
-              <img class="img-fluid icon"
-                src="{{ asset('img/landing-page/icon-difficult-5.svg') }}" alt="">
-              <span class="text">Không có công cụ để quản lý tiền bạc một cách hiệu quả xuyên
-                suốt</span>
+
+            <div class="difficult-item" data-aos="flip-left" data-aos-duration="1000"
+              data-aos-easing="ease-in-out">
+              <div class="difficult-item__right">
+                <span class="number">05</span>
+                <img class="img-fluid icon"
+                  src="{{ asset('img/landing-page/icon-difficult-12.svg') }}" alt="">
+              </div>
+              <p class="difficult-item__text">Khó khăn bảo mật thông <br />tin tài liệu</p>
             </div>
-            <div class="difficult-item yellow-gradient">
-              <img class="img-fluid icon"
-                src="{{ asset('img/landing-page/icon-difficult-6.svg') }}" alt="">
-              <span class="text">Không có kế hoạch giảm dần nợ vay, thẻ tín dụng</span>
-            </div>
-            <div class="difficult-item yellow-gradient">
-              <img class="img-fluid icon"
-                src="{{ asset('img/landing-page/icon-difficult-7.svg') }}" alt="">
-              <span class="text">Thiếu kiến thức nền tảng về dòng tiền, tăng mức độ rủi ro
-                trong kinh doanh và đầu tư</span>
+
+            <div class="difficult-item" data-aos="flip-left" data-aos-duration="1000"
+              data-aos-easing="ease-in-out">
+              <div class="difficult-item__right">
+                <span class="number">06</span>
+                <img class="img-fluid icon"
+                  src="{{ asset('img/landing-page/icon-difficult-13.svg') }}" alt="">
+              </div>
+              <p class="difficult-item__text">Khó khăn theo dõi và đánh <br />giá công việc của
+                nhân viên</p>
             </div>
           </div>
+          <img src="{{ asset('img/landing-page/difficult-img-1.png') }}" alt=""
+            class="img-fluid difficult-img">
           <img src="{{ asset('img/landing-page/circle-line.png') }}" alt=""
-            class="img-fluid circle-line-img">
+            class="img-fluid circle-line-img circle-line-img-1">
+          <img src="{{ asset('img/landing-page/circle-line.png') }}" alt=""
+            class="img-fluid circle-line-img circle-line-img-2">
         </div>
       </div>
     </div>
@@ -469,7 +495,7 @@
   <footer class="footer">
     <div class="container">
       <div class="wrap">
-        <a class="logo" href="{{ asset('boctachdongtien') }}"><img class="img-fluid"
+        <a class="logo" href="{{ asset('dulieuso') }}"><img class="img-fluid"
             src="{{ asset('img/logo-bossstack.png') }}"></a>
         <div class="footer-content">
           <div class="footer-content__item">

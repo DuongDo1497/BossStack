@@ -49,6 +49,8 @@ Route::get('information', 'HomeController@information')->name('information');
 
 Route::get('boctachdongtien', 'HomeController@cashFlowDissection')->name('boctachdongtien');
 Route::get('dulieuso', 'HomeController@digitalData')->name('dulieuso');
+Route::get('chuyendoidongtien', 'HomeController@cashConvert')->name('chuyendoidongtien');
+Route::get('chuyendoivanhanh', 'HomeController@operateConvert')->name('chuyendoivanhanh');
 
 
 // course

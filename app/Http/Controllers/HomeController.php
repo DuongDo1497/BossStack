@@ -168,6 +168,16 @@ class HomeController extends Controller
         return $this->view('landing-page.DigitalData');
     }
 
+    public function cashConvert()
+    {
+        return $this->view('landing-page.CashConvert');
+    }
+
+    public function operateConvert()
+    {
+        return $this->view('landing-page.OperateConvert');
+    }
+
     public function store(ReportStoreRequest $request)
     {
         $courseview = [ 
