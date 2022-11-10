@@ -1,4 +1,4 @@
-$('.solution-review__carousel').owlCarousel({
+$('.review__carousel').owlCarousel({
   items: 1,
   dots: true,
   margin: 30,

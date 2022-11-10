@@ -6,7 +6,7 @@
 
 @media (max-width: 767.98px){
   .main .circle-line-blue{
-    top: 398rem;
+    display: none;
   }
 }
 
@@ -47,7 +47,7 @@
 .circle-line-img,
 .circle-line-blue{
   position: absolute;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* Back to top Style */
@@ -318,11 +318,15 @@
 
 @media (max-width: 767.98px){
   .section-who .who-list{
-    flex-direction: column;
-    row-gap: 3rem;
+    flex-wrap: wrap;
+    row-gap: 1rem;
   }
 
   .who-list .card{
+    width: calc(50% - 5px);
+  }
+
+  .who-list .card .card-title{
     width: 100%;
   }
 }
@@ -447,12 +451,14 @@
   }
 }
 
-/* Section Solution */
-.section-solution{
-  padding-top: 1.8rem;
+/* Section Timeline */
+
+.section-timeline{
+  padding-top: 0;
+  padding-bottom: 5rem;
 }
 
-.solution-title{
+.timeline-title{
   position: relative;
   z-index: 2;
   display: inline-block;
@@ -463,13 +469,13 @@
   clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
 }
 
-.solution-title span{
+.timeline-title span{
   font-family: mb;
   font-size: 6.2rem;
   line-height: 6.8rem;
 }
 
-.solution-title .dots-circle-img{
+.timeline-title .dots-circle-img{
   max-width: 15.6rem;
   left: 15.9rem;
   top: 50%;
@@ -477,27 +483,23 @@
   transform: translateY(-50%);
 }
 
-.solution-timeline{
-  margin-bottom: 11.7rem;
-}
-
-.solution-timeline .wrap{
+.timeline{
   position: relative;
 }
 
-.solution-timeline .dots-circle-img{
+.timeline .dots-circle-img{
   width: 31.6rem;
   top: -15.8rem;
   right: -15.8rem;
 }
 
-.solution-timeline .solution-timeline__all{
+.timeline .timeline__all{
   display: flex;
   justify-content: space-between;
   margin-bottom: 4.8rem;
 }
 
-.solution-timeline .solution-timeline__item{
+.timeline .timeline__item{
   width: calc((100% / 3) - 8px);
   height: 44.6rem;
   position: relative;
@@ -507,7 +509,7 @@
   overflow: hidden;
 }
 
-.solution-timeline .solution-timeline__item::before{
+.timeline .timeline__item::before{
   content: '';
   width: 100%;
   height: 100%;
@@ -519,7 +521,7 @@
   background-color: #FEB423;
 }
 
-.solution-timeline .solution-timeline__item::after{
+.timeline .timeline__item::after{
   content: '';
   width: 100%;
   height: 100%;
@@ -532,7 +534,7 @@
   clip-path: polygon(0 62%, 100% 30%, 100% 100%, 0% 100%);
 }
 
-.solution-timeline .solution-timeline__content{
+.timeline .timeline__content{
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -540,7 +542,7 @@
   background-color: var(--white-cl);
 }
 
-.solution-timeline .solution-timeline__header{
+.timeline .timeline__header{
   font-family: mb;
   color: var(--primary-cl);
   background-color: #E7F4F8;
@@ -549,11 +551,11 @@
   text-align: center;
 }
 
-.solution-timeline .solution-timeline__body{
+.timeline .timeline__body{
   padding: 3.2rem 1.2rem;
 }
 
-.solution-timeline__body ul li{
+.timeline__body ul li{
   display: flex;
   align-items: flex-start;
   color: var(--gray-cl-7);
@@ -564,51 +566,82 @@
   margin-bottom: 8px;
 }
 
-.solution-timeline__body ul li:last-child{
+.timeline__body ul li:last-child{
   margin-bottom: 0;
 }
 
-.solution-timeline__body ul i{
+.timeline__body ul i{
   font-size: 8px;
   color: var(--primary-cl);
   margin-top: 1.2rem;
 }
 
-.solution-timeline__body ul p{
+.timeline__body ul p{
   margin-bottom: 0;
 }
 
-.solution-timeline__body ul span{
+.timeline__body ul span{
   color: var(--primary-cl);
 }
 
-.solution-timeline__btn{
+.timeline__btn{
   display: flex;
   justify-content: center;
 }
 
-.solution-review{
+@media (max-width: 767.98px){
+  .timeline-title{
+    width: 100%;
+    padding: 15px 15px 15px 10px;
+  }
+
+  .timeline-title span{
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+  }
+
+  .timeline-title .dots-circle-img{
+    max-width: 11.6rem;
+    left: -4rem;
+  }
+
+  .timeline .timeline__all{
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  .timeline .timeline__item{
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Section Review */
+
+.section-review{
+  padding-top: 5rem;
+  padding-bottom: 0;
   margin-bottom: 18rem;
 }
 
-.solution-review .wrap{
+.section-review .wrap{
   display: flex;
   justify-content: space-between;
   position: relative;
 }
 
-.solution-review__title{
+.review__title{
   max-width: 47.6rem;
   color: var(--primary-cl);
 }
 
-.solution-review__carousel{
+.review__carousel{
   max-width: 75rem;
   margin-top: 7rem;
   z-index: 2;
 }
 
-.solution-review__carousel .item{
+.review__carousel .item{
   margin: 1rem 10rem 1rem 1rem;
   padding: 4.4rem 3.2rem;
   border-radius: 5px;
@@ -616,13 +649,13 @@
   box-shadow: 10px 10px 20px rgba(42, 92, 170, 0.08);
 }
 
-.solution-review__carousel .solution-review__top{
+.review__carousel .review__top{
   display: flex;
   justify-content: space-between;
   margin-bottom: 4.4rem;
 }
 
-.solution-review__carousel .solution-review__avatar{
+.review__carousel .review__avatar{
   width: 9rem !important;
   height: 9rem;
   object-fit: cover;
@@ -630,20 +663,20 @@
   display: inline-block;
 }
 
-.solution-review__carousel .solution-review__content{
+.review__carousel .review__content{
   width: 46rem;
   color: var(--gray-cl-7);
 }
 
-.solution-review__carousel .solution-review__info{
+.review__carousel .review__info{
   color: var(--primary-cl);
 }
 
-.solution-review__carousel .solution-review__info span{
+.review__carousel .review__info span{
   font-family: hb;
 }
 
-.solution-review__carousel .owl-nav{
+.review__carousel .owl-nav{
   width: 11.2rem;
   height: 3.2rem;
   margin-top: 0;
@@ -656,64 +689,113 @@
   transform: translateY(-50%) rotate(90deg);
 }
 
-.solution-review__carousel .owl-nav button{
+.review__carousel .owl-nav button{
   width: 3.2rem;
   height: 3.2rem;
   color: var(--gray-cl-7) !important;
   margin: 0 !important;
 }
 
-.solution-review__carousel .owl-nav button:hover{
+.review__carousel .owl-nav button:hover{
   color: var(--primary-cl) !important;
   background-color: transparent !important;
 }
 
-.solution-review__carousel .owl-dots{
+.review__carousel .owl-dots{
   position: absolute;
   left: -56rem;
   bottom: 0;
 }
 
-.solution-review__carousel .owl-dot span{
+.review__carousel .owl-dot span{
   background-color: #D9D9D9 !important;
 }
 
-.solution-review__carousel .owl-dot.active span{
+.review__carousel .owl-dot.active span{
   background-color: var(--primary-cl) !important;
 }
 
-.solution-review .circle-line-img{
+.section-review .circle-line-img{
   width: 70rem;
   top: -13.4rem;
   right: -1.8rem;
 }
 
-.solution-register .wrap{
+@media (max-width: 767.98px){
+  .section-review{
+    margin-bottom: 0;
+  }
+  
+  .section-review .wrap{
+    flex-direction: column;
+  }
+
+  .review__title{
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .review__carousel .item{
+    margin: 0 0 7.5rem 0;
+  }
+
+  .review__carousel .review__top{
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .review__carousel .review__content{
+    width: 100%;
+  }
+
+  .review__carousel .owl-dots{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .section-review .circle-line-img{
+    width: 100%;
+    top: 70%;
+    right: -11rem;
+  }
+}
+
+/* Section Register */
+
+.section-register{
+  padding-top: 0;
+}
+
+.section-register .wrap{
   display: flex;
   justify-content: space-between;
   padding: 7.5rem 0 1.8rem;
   border-top: 3px dashed #D9D9D9;
 }
 
-.solution-register__form{
+.register__form{
   width: 57.8rem;
   padding: 5.2rem 5.8rem;
   border-radius: 5px;
   background-color: #326EBD;
 }
 
-.solution-register__form h6,
-.solution-register__form .form-info{
+.register__form h6,
+.register__form .form-info{
   margin-bottom: 4.8rem;
 }
 
-.solution-register__form h6{
+.register__form h6{
   font-family: mb;
   color: var(--white-cl);
   text-align: center;
 }
 
-.solution-register__form .form-info input{
+.register__form .form-info input{
   font-size: 1.8rem;
   line-height: 3rem;
   color: var(--gray-cl-7);
@@ -723,29 +805,29 @@
   margin-bottom: 1.2rem;
 }
 
-.solution-register__form .form-info input:last-child{
+.register__form .form-info input:last-child{
   margin-bottom: 0;
 }
 
-.solution-register__form .btn-register{
+.register__form .btn-register{
   display: block;
   margin: 0 auto;
 }
 
-.solution-register__voucher{
+.register__voucher{
   width: 65.7rem;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.solution-register__voucher .voucher-title{
+.register__voucher .voucher-title{
   text-align: center;
   color: var(--primary-cl);
   margin-bottom: 2.8rem;
 }
 
-.solution-register__voucher h4{
+.register__voucher h4{
   font-family: mb;
 }
 
@@ -755,13 +837,13 @@
   margin: 0 auto;
 }
 
-.solution-register__voucher .line{
+.register__voucher .line{
   width: 43.4rem;
   height: 1px;
   background-color: #FDB913;
 }
 
-.solution-register__voucher .voucher-qr{
+.register__voucher .voucher-qr{
   width: 24rem;
   margin-top: 4.8rem;
   margin-bottom: 3.2rem;
@@ -827,87 +909,26 @@
 }
 
 @media (max-width: 767.98px){
-  .solution-title{
-    width: 100%;
-    padding: 15px 15px 15px 10px;
-  }
-
-  .solution-title span{
-    font-size: 3.2rem;
-    line-height: 4.8rem;
-  }
-
-  .solution-title .dots-circle-img{
-    max-width: 11.6rem;
-    left: -4rem;
-  }
-
-  .solution-timeline,
-  .solution-review{
-    margin-bottom: 7rem;
-  }
-
-  .solution-timeline .solution-timeline__all{
-    flex-direction: column;
-    row-gap: 3rem;
-  }
-
-  .solution-timeline .solution-timeline__item{
-    width: 100%;
-    height: auto;
-  }
-
-  .solution-review .wrap{
-    flex-direction: column;
-  }
-
-  .solution-review__carousel .item{
-    margin: 0 0 7.5rem 0;
-  }
-
-  .solution-review__carousel .solution-review__top{
-    align-items: center;
-    flex-direction: column;
-    row-gap: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .solution-review__carousel .solution-review__content{
-    width: 100%;
-  }
-
-  .solution-review__carousel .owl-dots{
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .solution-review .circle-line-img{
-    width: 100%;
-    top: 70%;
-    right: -11rem;
-  }
-
-  .solution-register .wrap{
+  .section-register .wrap{
     flex-direction: column-reverse;
     row-gap: 3rem;
-    padding: 0;
   }
 
-  .solution-register__form{
+  .register__form{
     width: 100%;
     padding: 2rem;
   }
 
-  .solution-register__voucher h4{
+  .register__voucher h4{
     font-size: 2.5rem;
   }
 
-  .solution-register__form .form-info input{
+  .register__form .form-info input{
     padding: 1rem 1.5rem;
   }
 
-  .solution-register__voucher,
-  .solution-register__voucher .line{
+  .register__voucher,
+  .register__voucher .line{
     width: 100%;
   }
 }

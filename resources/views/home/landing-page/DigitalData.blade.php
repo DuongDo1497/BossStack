@@ -64,7 +64,7 @@
             </div>
           </li>
           <li>
-            <a href="#solution" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
+            <a href="#register-now" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
           </li>
         </ul>
       </div>
@@ -79,7 +79,7 @@
           <h1>THIẾT LẬP<span>HỆ THỐNG DỮ LIỆU SỐ</span><span>DOANH NGHIỆP</span></h1>
           <p>Số hóa dữ liệu doanh nghiệp giúp nâng cao hiệu quả kinh doanh và gia tăng lợi nhuận
             doanh nghiệp</p>
-          <a href="#solution" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
+          <a href="#register-now" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
         </div>
         <img class="banner-img img-fluid" src="{{ asset('img/landing-page/banner-img-1.png') }}"
           alt="" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
@@ -280,22 +280,22 @@
       </div>
     </div>
 
-    <div class="section section-solution">
-      <h3 class="solution-title">
+    <div class="section section-timeline">
+      <h3 class="timeline-title">
         Giải pháp thiết lập<br /><span>HỆ THỐNG DỮ LIỆU SỐ</span><br />doanh nghiệp
         <img src="{{ asset('img/landing-page/dots-circle-blue.png') }}" alt=""
           class="img-fluid dots-circle-img">
       </h3>
 
-      <div class="solution-timeline">
-        <div class="container">
-          <div class="wrap">
-            <div class="solution-timeline__all">
-              <div class="solution-timeline__item" data-aos="fade-down" data-aos-delay="0"
+      <div class="container">
+        <div class="wrap">
+          <div class="timeline">
+            <div class="timeline__all">
+              <div class="timeline__item" data-aos="fade-down" data-aos-delay="0"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="solution-timeline__content">
-                  <h3 class="solution-timeline__header">Buổi 1</h3>
-                  <div class="solution-timeline__body">
+                <div class="timeline__content">
+                  <h3 class="timeline__header">Buổi 1</h3>
+                  <div class="timeline__body">
                     <ul>
                       <li>
                         <i class="fa-solid fa-circle"></i>
@@ -313,11 +313,11 @@
                   </div>
                 </div>
               </div>
-              <div class="solution-timeline__item" data-aos="fade-down" data-aos-delay="500"
+              <div class="timeline__item" data-aos="fade-down" data-aos-delay="500"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="solution-timeline__content">
-                  <h3 class="solution-timeline__header">Buổi 2</h3>
-                  <div class="solution-timeline__body">
+                <div class="timeline__content">
+                  <h3 class="timeline__header">Buổi 2</h3>
+                  <div class="timeline__body">
                     <ul>
                       <li>
                         <i class="fa-solid fa-circle"></i>
@@ -335,11 +335,11 @@
                   </div>
                 </div>
               </div>
-              <div class="solution-timeline__item" data-aos="fade-down" data-aos-delay="1000"
+              <div class="timeline__item" data-aos="fade-down" data-aos-delay="1000"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="solution-timeline__content">
-                  <h3 class="solution-timeline__header">Buổi 3</h3>
-                  <div class="solution-timeline__body">
+                <div class="timeline__content">
+                  <h3 class="timeline__header">Buổi 3</h3>
+                  <div class="timeline__body">
                     <ul>
                       <li>
                         <i class="fa-solid fa-circle"></i>
@@ -359,127 +359,123 @@
                 </div>
               </div>
             </div>
-
-            <div class="solution-timeline__btn">
-              <a href="#solution" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
+            <div class="timeline__btn">
+              <a href="#register-now" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
             </div>
-
             <img src="{{ asset('img/landing-page/dots-circle.png') }}" alt=""
               class="img-fluid dots-circle-img">
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="solution-review">
-        <div class="container">
-          <div class="wrap">
-            <h4 class="solution-review__title" data-aos="fade-right" data-aos-delay="0"
-              data-aos-duration="1000" data-aos-easing="ease-in-out">Khách hàng của chúng tôi khi
-              nói về BossStack</h4>
-            <div class="solution-review__carousel owl-carousel owl-theme" data-aos="zoom-in"
-              data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
-              <div class="item">
-                <div class="solution-review__top">
-                  <img src="{{ asset('img/user-2.jpg') }}" alt=""
-                    class="img-fluid solution-review__avatar">
-                  <p class="solution-review__content">Sử dụng phần mềm BossStack cuối tháng tôi
-                    không cần ngồi ghi chép hay nhập bảng tính Excel. Phần mềm BossStack giúp tôi
-                    quản lý mọi thu chi của cá nhân, gia đình và bóc tách hoàn toàn với dòng tiền
-                    kinh doanh tại doanh nghiệp của tôi. Tính năng mà tôi đặc biệt quan tâm đó chính
-                    là tính toán số tiền nghỉ hưu giúp tôi có những kế hoạch dài hạn về tài chính
-                    của mình.</p>
-                </div>
-                <p class="solution-review__info"><span>Nguyễn Đỗ Cẩm Bình</span> - Trưởng phòng
-                  kinh doanh công ty BĐS Him Lam
-                </p>
+    <div class="section section-review">
+      <div class="container">
+        <div class="wrap">
+          <h4 class="review__title" data-aos="fade-right" data-aos-delay="0"
+            data-aos-duration="1000" data-aos-easing="ease-in-out">Khách hàng của chúng tôi khi
+            nói về BossStack</h4>
+          <div class="review__carousel owl-carousel owl-theme" data-aos="zoom-in"
+            data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="item">
+              <div class="review__top">
+                <img src="{{ asset('img/user-2.jpg') }}" alt=""
+                  class="img-fluid review__avatar">
+                <p class="review__content">Sử dụng phần mềm BossStack cuối tháng tôi
+                  không cần ngồi ghi chép hay nhập bảng tính Excel. Phần mềm BossStack giúp tôi
+                  quản lý mọi thu chi của cá nhân, gia đình và bóc tách hoàn toàn với dòng tiền
+                  kinh doanh tại doanh nghiệp của tôi. Tính năng mà tôi đặc biệt quan tâm đó chính
+                  là tính toán số tiền nghỉ hưu giúp tôi có những kế hoạch dài hạn về tài chính
+                  của mình.</p>
               </div>
-              <div class="item">
-                <div class="solution-review__top">
-                  <img src="{{ asset('img/user-1.jpg') }}" alt=""
-                    class="img-fluid solution-review__avatar">
-                  <p class="solution-review__content">Phần mềm BossStack giúp bạn theo dõi và kiểm
-                    soát các dòng tiền giúp chúng luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá
-                    nhân và dòng tiền đầu tư kinh doanh của bạn được tách bạch hoàn toàn. Việc này
-                    giúp các dòng tiền được kiểm soát và tăng trưởng hiệu quả.</p>
-                </div>
-                <p class="solution-review__info"><span>Lê Hoài Ân - CFA</span> - CFA, tác giả cuốn
-                  sách
-                  bán chạy số 1 thị trường "20 năm lịch sử Thị trường Chứng khoán Việt Nam"</p>
-              </div>
-              <div class="item">
-                <div class="solution-review__top">
-                  <img src="{{ asset('img/user.jpg') }}" alt=""
-                    class="img-fluid solution-review__avatar">
-                  <p class="solution-review__content">Phần mềm BossStack giúp tôi phân bổ tài sản
-                    và dòng tiền vào các ví mục tiêu tài chính khác nhau. Tôi có thể theo dõi từng
-                    mục thu chi, từng mục tiêu tài chính đã tối ưu chưa. Từ đó, tôi phân bổ dòng
-                    tiền một cách hợp lý và cắt giảm những chi phí không cần thiết.</p>
-                </div>
-                <p class="solution-review__info"><span>Huỳnh Thu Ái</span> - Cố vấn, đào tạo hệ
-                  thống quản lý doanh nghiệp AMS
-                </p>
-              </div>
+              <p class="review__info"><span>Nguyễn Đỗ Cẩm Bình</span> - Trưởng phòng
+                kinh doanh công ty BĐS Him Lam
+              </p>
             </div>
-            <img src="{{ asset('img/landing-page/circle-line.png') }}" alt=""
-              class="img-fluid circle-line-img">
+            <div class="item">
+              <div class="review__top">
+                <img src="{{ asset('img/user-1.jpg') }}" alt=""
+                  class="img-fluid review__avatar">
+                <p class="review__content">Phần mềm BossStack giúp bạn theo dõi và kiểm
+                  soát các dòng tiền giúp chúng luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá
+                  nhân và dòng tiền đầu tư kinh doanh của bạn được tách bạch hoàn toàn. Việc này
+                  giúp các dòng tiền được kiểm soát và tăng trưởng hiệu quả.</p>
+              </div>
+              <p class="review__info"><span>Lê Hoài Ân - CFA</span> - CFA, tác giả cuốn
+                sách
+                bán chạy số 1 thị trường "20 năm lịch sử Thị trường Chứng khoán Việt Nam"</p>
+            </div>
+            <div class="item">
+              <div class="review__top">
+                <img src="{{ asset('img/user.jpg') }}" alt=""
+                  class="img-fluid review__avatar">
+                <p class="review__content">Phần mềm BossStack giúp tôi phân bổ tài sản
+                  và dòng tiền vào các ví mục tiêu tài chính khác nhau. Tôi có thể theo dõi từng
+                  mục thu chi, từng mục tiêu tài chính đã tối ưu chưa. Từ đó, tôi phân bổ dòng
+                  tiền một cách hợp lý và cắt giảm những chi phí không cần thiết.</p>
+              </div>
+              <p class="review__info"><span>Huỳnh Thu Ái</span> - Cố vấn, đào tạo hệ
+                thống quản lý doanh nghiệp AMS
+              </p>
+            </div>
           </div>
+          <img src="{{ asset('img/landing-page/circle-line.png') }}" alt=""
+            class="img-fluid circle-line-img">
         </div>
       </div>
+    </div>
 
-      <div class="solution-register" id="solution">
-        <div class="container">
-          <div class="wrap">
-            <form class="solution-register__form" action="" method="post"
-              data-aos="fade-right" data-aos-delay="0" data-aos-duration="1000"
-              data-aos-easing="ease-in-out">
-              <h6>Đăng ký<br />thông tin tư vấn</h6>
-              <div class="form-info">
-                <input type="text" class="form-control" name="fullname"
-                  placeholder="Họ và tên *" required>
-                <input type="text" class="form-control" name="phone"
-                  placeholder="Số điện thoại *" pattern="(84|0[3|5|7|8|9])+([0-9]{8})" required>
-                <input type="email" class="form-control" name="email" placeholder="Email *"
-                  required>
-                <input type="text" class="form-control" name="company" placeholder="Công ty">
-                <input type="text" class="form-control" name="position"
-                  placeholder="Chức vụ">
+    <div class="section section-register" id="register-now">
+      <div class="container">
+        <div class="wrap">
+          <form class="register__form" action="" method="post" data-aos="fade-right"
+            data-aos-delay="0" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <h6>Đăng ký<br />thông tin tư vấn</h6>
+            <div class="form-info">
+              <input type="text" class="form-control" name="fullname"
+                placeholder="Họ và tên *" required>
+              <input type="text" class="form-control" name="phone"
+                placeholder="Số điện thoại *" pattern="(84|0[3|5|7|8|9])+([0-9]{8})" required>
+              <input type="email" class="form-control" name="email" placeholder="Email *"
+                required>
+              <input type="text" class="form-control" name="company" placeholder="Công ty">
+              <input type="text" class="form-control" name="position" placeholder="Chức vụ">
+            </div>
+            <button type="submit" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</button>
+          </form>
+          <div class="register__voucher" data-aos="fade-left" data-aos-delay="0"
+            data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="voucher-title">
+              <h4>THIẾT LẬP HỆ THỐNG<br />DỮ LIỆU SỐ DOANH NGHIỆP </h4>
+              <p>Số hóa dữ liệu doanh nghiệp giúp nâng cao hiệu quả kinh doanh và gia tăng lợi
+                nhuận doanh nghiệp</p>
+            </div>
+            <div class="line"></div>
+            <div class="voucher-qr">
+              <p class="voucher-qr__text">Quét mã QR<br />để tìm hiểu thêm</p>
+              <div class="voucher-qr__img">
+                <img class="img-fluid" src="{{ asset('img/landing-page/qr-code-dulieu.png') }}"
+                  alt="">
               </div>
-              <button type="submit" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</button>
-            </form>
-            <div class="solution-register__voucher" data-aos="fade-left" data-aos-delay="0"
-              data-aos-duration="1000" data-aos-easing="ease-in-out">
-              <div class="voucher-title">
-                <h4>THIẾT LẬP HỆ THỐNG<br />DỮ LIỆU SỐ DOANH NGHIỆP </h4>
-                <p>Số hóa dữ liệu doanh nghiệp giúp nâng cao hiệu quả kinh doanh và gia tăng lợi
-                  nhuận doanh nghiệp</p>
-              </div>
-              <div class="line"></div>
-              <div class="voucher-qr">
-                <p class="voucher-qr__text">Quét mã QR<br />để tìm hiểu thêm</p>
-                <div class="voucher-qr__img">
-                  <img class="img-fluid" src="{{ asset('img/landing-page/qr-code-dulieu.png') }}"
-                    alt="">
+            </div>
+            <div class="voucher-countdown">
+              <p class="voucher-countdown__text">Khuyến mãi kết thúc sau</p>
+              <div class="voucher-countdown__content countdown-wrap gray-cl">
+                <div class="item days">
+                  <span class="number">00</span>
+                  <span class="text">Ngày</span>
                 </div>
-              </div>
-              <div class="voucher-countdown">
-                <p class="voucher-countdown__text">Khuyến mãi kết thúc sau</p>
-                <div class="voucher-countdown__content countdown-wrap gray-cl">
-                  <div class="item days">
-                    <span class="number">00</span>
-                    <span class="text">Ngày</span>
-                  </div>
-                  <div class="item hours">
-                    <span class="number">00</span>
-                    <span class="text">Giờ</span>
-                  </div>
-                  <div class="item minutes">
-                    <span class="number">00</span>
-                    <span class="text">Phút</span>
-                  </div>
-                  <div class="item seconds">
-                    <span class="number">00</span>
-                    <span class="text">Giây</span>
-                  </div>
+                <div class="item hours">
+                  <span class="number">00</span>
+                  <span class="text">Giờ</span>
+                </div>
+                <div class="item minutes">
+                  <span class="number">00</span>
+                  <span class="text">Phút</span>
+                </div>
+                <div class="item seconds">
+                  <span class="number">00</span>
+                  <span class="text">Giây</span>
                 </div>
               </div>
             </div>

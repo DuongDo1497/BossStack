@@ -37,6 +37,30 @@
   max-width: 55rem;
 }
 
+@media (max-width: 767.98px){
+  .banner .wrap{
+    padding: 7rem 0;
+  }
+
+  .banner .banner-content{
+    max-width: 100%;
+  }
+
+  .banner-content h1{
+    font-size: 4rem;
+    line-height: 1.5;
+  }
+
+  .banner-content h1 span{
+    display: block;
+    font-size: 5rem;
+  }
+
+  .banner .banner-img{
+    max-width: 80%;
+  }
+}
+
 /* End Banner */
 
 /* Section Who */
@@ -171,6 +195,7 @@
 .section-difficult .circle-line-img-1{
   top: 50%;
   left: -40rem;
+  transform: translateY(-50%);
 }
 
 .section-difficult .circle-line-img-2{
@@ -178,9 +203,33 @@
   right: -50rem;
 }
 
+@media (max-width: 767.98px){
+  .section-difficult .wrap{
+    --h-difficult-wrap: auto;
+  }
+
+  .difficult-item{
+    width: 100%;
+    position: initial;
+    margin-bottom: 2rem;
+  }
+
+  .difficult-item:last-child{
+    margin-bottom: 0;
+  }
+
+  .difficult-img{
+    display: none;
+  }
+}
+
 /* End Section Difficult */
 
 /* Section Advantages */
+
+.section-advantages{
+  padding-top: 0;
+}
 
 .advantages-header{
   position: relative;
@@ -264,6 +313,37 @@
   color: #FDB913;
 }
 
+@media (max-width: 767.98px){
+  .advantages-header{
+    width: 100%;
+  }
+
+  .advantages-title{
+    padding: 3rem 7rem;
+  }
+
+  .advantages-title .dots-circle-img{
+    left: 2rem;
+  }
+
+  .advantages-header .advantages-header__line{
+    width: 30rem;
+  }
+
+  .advantages-content__left{
+    width: 100%;
+  }
+
+  .advantages-content__item{
+    max-width: 100%;
+  }
+
+  .advantages-content__item:nth-child(2),
+  .advantages-content__item:last-child{
+    margin-left: 0;
+  }
+}
+
 /* End Section Advantages */
 
 /* Section Solution */
@@ -275,6 +355,13 @@
 .solution-register__voucher h4{
   font-size: 4.2rem;
   line-height: 5.2rem;
+}
+
+@media (max-width: 767.98px){
+  .solution-register__voucher h4{
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
 }
 
 /* End Section Solution */

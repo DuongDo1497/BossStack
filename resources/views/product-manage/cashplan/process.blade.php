@@ -286,7 +286,7 @@
                         </div>
                         <div class="row">
                           <div class="col-md-10 text-left">
-                            &nbsp;&nbsp;&nbsp;&nbsp;<font color="#000">Đơn vị tính: VNĐ</font>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<font color="#000">Đơn vị tính: ngàn VNĐ</font>
                             <br><br>
                           </div>
                         </div>
