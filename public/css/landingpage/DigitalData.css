@@ -37,6 +37,43 @@
   max-width: 55rem;
 }
 
+@media (max-width: 1399.98px){
+  .banner .banner-content{
+    max-width: 60rem;
+  }
+
+  .banner-content h1{
+    font-size: 4.2rem;
+    line-height: 1.5;
+  }
+
+  .banner-content h1 span{
+    font-size: 4.5rem;
+  }
+
+  .banner .banner-img{
+    max-width: 45rem;
+  }
+}
+
+@media (max-width: 1199.98px){
+  .banner .banner-content{
+    max-width: 50rem;
+  }
+
+  .banner-content h1{
+    font-size: 3.8rem;
+  }
+
+  .banner-content h1 span{
+    font-size: 4rem;
+  }
+
+  .banner .banner-img{
+    max-width: 39rem;
+  }
+}
+
 @media (max-width: 767.98px){
   .banner .wrap{
     padding: 7rem 0;
@@ -203,9 +240,48 @@
   right: -50rem;
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 1399.98px){
+  .difficult-item{
+    width: 36rem;
+  }
+
+  .difficult-item__text{
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+}
+
+@media (max-width: 1199.98px){
+  .section-difficult .wrap{
+    --h-difficult-wrap: 43rem;
+  }
+
+  .difficult-item{
+    width: 32rem;
+  }
+
+  .difficult-item__text br{
+    display: none;
+  }
+
+  .difficult-img{
+    width: 31%;
+  }
+
+  .section-difficult .circle-line-img-2{
+    bottom: -34rem;
+    right: -35rem;
+  }
+}
+
+@media (max-width: 991.98px){
   .section-difficult .wrap{
     --h-difficult-wrap: auto;
+  }
+
+  .difficult-list{
+    position: relative;
+    z-index: 2;
   }
 
   .difficult-item{
@@ -313,7 +389,26 @@
   color: #FDB913;
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 1399.98px){
+  .advantages-header{
+    width: 92rem;
+  }
+
+  .advantages-header .advantages-header__line{
+    width: 72rem;
+  }
+
+  .advantages-title{
+    padding: 4rem 11.4rem;
+  }
+
+  .advantages-content__img{
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 991.98px){
   .advantages-header{
     width: 100%;
   }

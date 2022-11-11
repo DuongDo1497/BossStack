@@ -71,6 +71,53 @@
     </div>
   </header>
 
+  <footer class="footer footer-bg-img">
+    <div class="container">
+      <div class="wrap">
+        <a class="logo" href="{{ asset('boctachdongtien') }}">
+          <img class="img-fluid logo-img-cl"
+            src="{{ asset('img/landing-page/logo-bs-color.svg') }}">
+          <img class="img-fluid logo-img-white"
+            src="{{ asset('img/landing-page/logo-bs-white.svg') }}">
+        </a>
+        <div class="footer-content">
+          <div class="footer-content__item">
+            <p>
+              <span>Address:</span> LM81- 42.OT04 (Officetel), Landmark 81 Vinhomes Central Park,
+              720A Điện Biên
+              Phủ, Phường 22, Quận Bình Thạnh, Tp Hồ Chí Minh.
+            </p>
+          </div>
+          <div class="footer-content__item">
+            <p><span>Hotline:</span> +84 918 90 55 00</p>
+            <p><span>Email:</span> info@bossstack.vn</p>
+          </div>
+          <div class="footer-content__item">
+            <div class="footer-content__social">
+              <a
+                href="https://www.linkedin.com/company/bossstack/posts/?feedView=all&viewAsMember=true">
+                <img class="img-fluid" src="{{ asset('img/landing-page/icon-linkedin.svg') }}"
+                  alt="">
+              </a>
+            </div>
+            <div class="footer-content__social">
+              <a href="https://www.facebook.com/bossstack.vn">
+                <img class="img-fluid" src="{{ asset('img/landing-page/icon-fb.svg') }}"
+                  alt="">
+              </a>
+            </div>
+            <div class="footer-content__social">
+              <a href="#">
+                <img class="img-fluid" src="{{ asset('img/landing-page/icon-zalo.svg') }}"
+                  alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>

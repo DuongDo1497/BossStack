@@ -18,7 +18,7 @@ $('.review__carousel').owlCarousel({
       mouseDrag: true,
       autoplaySpeed: 1500,
     },
-    992: {
+    1200: {
       nav: true,
       autoplay: false,
       mouseDrag: false,

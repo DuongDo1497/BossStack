@@ -479,11 +479,15 @@
       src="{{ asset('img/landing-page/circle-line-blue.png') }}" alt="">
   </div>
 
-  <footer class="footer">
+  <footer class="footer footer-bg-gray">
     <div class="container">
       <div class="wrap">
-        <a class="logo" href="{{ asset('boctachdongtien') }}"><img class="img-fluid"
-            src="{{ asset('img/logo-bossstack.png') }}"></a>
+        <a class="logo" href="{{ asset('boctachdongtien') }}">
+          <img class="img-fluid logo-img-cl"
+            src="{{ asset('img/landing-page/logo-bs-color.svg') }}">
+          <img class="img-fluid logo-img-white"
+            src="{{ asset('img/landing-page/logo-bs-white.svg') }}">
+        </a>
         <div class="footer-content">
           <div class="footer-content__item">
             <p>

@@ -20,6 +20,7 @@
 .banner-content h1 span{
   font-size: 6.8rem;
   color: #FFCD53;
+  display: block;
 }
 
 .banner-content p{
@@ -28,6 +29,35 @@
 
 .banner .banner-img {
   max-width: 64.3rem;
+}
+
+@media (max-width: 1399.98px){
+  .banner .banner-content{
+    max-width: 60rem;
+  }
+
+  .banner-content h1{
+    font-size: 5rem;
+    line-height: 1.5;
+  }
+
+  .banner-content h1 span{
+    font-size: 6rem;
+  }
+
+  .banner .banner-img{
+    max-width: 45rem;
+  }
+}
+
+@media (max-width: 1199.98px){
+  .banner .banner-content{
+    max-width: 50rem;
+  }
+
+  .banner .banner-img{
+    max-width: 39rem;
+  }
 }
 
 @media (max-width: 767.98px){
@@ -142,6 +172,31 @@
   transform: translateY(-50%);
 }
 
+@media (max-width: 1399.98px){
+  .difficult-left{
+    width: 64rem;
+  }
+
+  .difficult-item .text{
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  .difficult-img{
+    width: 48rem;
+  }
+}
+
+@media (max-width: 1199.98px){
+  .difficult-left{
+    width: 54rem;
+  }
+
+  .difficult-img{
+    width: 40rem;
+  }
+}
+
 @media (max-width: 767.98px){
   .section-difficult .wrap,
   .difficult-list{
@@ -207,6 +262,32 @@
 .advantages-content__item:nth-child(2) span,
 .advantages-content__item:last-child span{
   font-size: 2.8rem;
+}
+
+@media (max-width: 1399.98px){
+  .advantages-title{
+    width: 80%;
+    font-size: 3.8rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .advantages-content__img {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1199.98px){
+  .advantages-title{
+    padding: 2.2rem 6.3rem;
+  }
+
+  .advantages-title .icon-question-img{
+    width: 15%;
+    top: -5px;
+    left: -82px;
+  }
 }
 
 @media (max-width: 767.98px){
