@@ -204,7 +204,7 @@ class CashPlanService extends BaseService
 
     public function getListCashPlanFromCustomerId($customer_id)
     {
-        $search = array('customer_id'=>$customer_id);
+        $search = array('customer_id'=>$customer_id, 'finish'=>0);
         $listData = app(CashPlanRepository::class)->orderBy('plandate', 'ASC')->findWhere($search);
 
         return $listData;    

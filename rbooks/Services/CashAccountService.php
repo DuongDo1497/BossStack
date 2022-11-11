@@ -106,6 +106,7 @@ class CashAccountService extends BaseService
         $listData = DB::table('cash_accounts')->leftjoin('customers', 'customers.id', '=', 'cash_accounts.customer_id')
                         ->select('cash_accounts.id','fullname','accountno','accountname','accountdate','amount','accountstatustype')
                         ->where('cash_accounts.customer_id', '=', "$customer_id")
+                        ->where('cash_accounts.finish', '=', null)
                         ->where('cash_accounts.deleted_at', '=', null)
                         ->where($searchField, 'like', "%$searchValue%");
 
@@ -121,6 +122,7 @@ class CashAccountService extends BaseService
                         ->leftjoin('cash_plans', 'cash_plans.accountno', '=', 'cash_accounts.accountno')
                         ->select('cash_accounts.id','cash_accounts.customer_id','plantype','planname','plandate','cash_plans.currency','currentage','planage','planamount','currentamount','requireamount','planamountunittype','currentamountunittype','requireamountunittype','cash_plans.description','document','cash_accounts.accountno','cash_accounts.accountname','cash_accounts.accountdate','cash_accounts.amount')
                         ->where('cash_accounts.customer_id', '=', "$customer_id")
+                        ->where('cash_accounts.finish', '=', null)
                         ->where('cash_accounts.deleted_at', '=', null)
                         ->orderBy('cash_accounts.accountno', 'ASC')
                         ->orderBy('plandate', 'ASC');

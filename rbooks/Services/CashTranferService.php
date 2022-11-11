@@ -74,6 +74,7 @@ class CashTranferService extends BaseService
                     'finishdate' => $tranferdate,
                 ];
                 $retCashPlan = app(CashPlanRepository::class)->update($dataCashPlan, $cashplanid);
+                $retCashAccount = app(CashAccountRepository::class)->update($dataCashPlan, $cashaccount_id_send);                
             }
             //Kiem tra vi nhan tien co phai vi tong ko ->1: neu la vi tong thi se khong cap nhat vao ke hoach muc tieu, 2: vi con thi cap nhat so tien thuc hien vao muc tieu 
             if ($accountno_primary != $cashaccount_id_receive){
