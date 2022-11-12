@@ -60,7 +60,7 @@
   }
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 991.98px){
   .banner .wrap{
     padding: 7rem 0;
   }
@@ -197,8 +197,21 @@
   }
 }
 
+@media (max-width: 991.98px){
+  .section-difficult .wrap{
+    flex-direction: column;
+  }
+
+  .difficult-left{
+    width: 100%;
+  }
+
+  .difficult-list .difficult-item{
+    width: calc(50% - 1rem);
+  }
+}
+
 @media (max-width: 767.98px){
-  .section-difficult .wrap,
   .difficult-list{
     flex-direction: column;
   }
@@ -207,7 +220,6 @@
     column-gap: 3rem;
   }
 
-  .difficult-left,
   .difficult-list .difficult-item{
     width: 100%;
   }
@@ -290,7 +302,7 @@
   }
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 991.98px){
   .advantages-title{
     z-index: 2;
     padding: 2.5rem 1rem 2.5rem 7rem;
@@ -333,7 +345,7 @@
   padding: 5.6rem 4.6rem 1rem;
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 991.98px){
   .solution-register__voucher{
     position: relative;
     padding: 2rem;

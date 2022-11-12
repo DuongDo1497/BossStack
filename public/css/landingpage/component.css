@@ -657,7 +657,8 @@
 
 @media (max-width: 991.98px){
   .timeline-title{
-    width: 100%;
+    width: 75%;
+    font-size: 3rem;
     padding: 15px 15px 15px 10px;
   }
 
@@ -679,6 +680,12 @@
   .timeline .timeline__item{
     width: 100%;
     height: auto;
+  }
+}
+
+@media (max-width: 767.98px){
+  .timeline-title{
+    width: 100%;
   }
 }
 
@@ -949,6 +956,9 @@
   width: 24rem;
   margin-top: 4.8rem;
   margin-bottom: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .voucher-qr p{
@@ -959,7 +969,7 @@
 }
 
 .voucher-qr .voucher-qr__img{
-  width: 100%;
+  width: 24rem;
   height: 24rem;
   position: relative;
   z-index: 2;
@@ -1029,6 +1039,42 @@
 }
 
 @media (max-width: 991.98px){
+  .register__form{
+    width: calc(50% - 5px);
+    padding: 2rem;
+  }
+
+  .register__form .form-info input{
+    padding: 1rem 1.5rem;
+  }
+
+  .register__voucher{
+    width: calc(50% - 5px);
+  }
+
+  .register__voucher h4{
+    font-size: 2.8rem;
+  }
+
+  .voucher-title p{
+    font-size: 1.5rem;
+  }
+  
+  .register__voucher .line{
+    width: 100%;
+  }
+
+  .register__voucher .voucher-qr{
+    margin: 3.2rem 0;
+  }
+
+  .voucher-qr .voucher-qr__img{
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+@media (max-width: 767.98px){
   .section-register .wrap{
     flex-direction: column-reverse;
     row-gap: 3rem;
@@ -1043,12 +1089,7 @@
     font-size: 2.5rem;
   }
 
-  .register__form .form-info input{
-    padding: 1rem 1.5rem;
-  }
-
-  .register__voucher,
-  .register__voucher .line{
+  .register__voucher{
     width: 100%;
   }
 }
