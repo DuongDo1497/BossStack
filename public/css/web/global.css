@@ -3,6 +3,7 @@
   --second-cl: #FDB813;
   --text-btn-cl: #FDB813;
   --gray-cl: #808080;
+  --gray-cl-1: #FAFAFA;
   --gray-cl-5: #2D2D2D;
   --white-cl: #ffffff;
   --black-cl: #000000;
@@ -23,10 +24,11 @@ body{
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   margin: 0;
   font-family: mr;
   line-height: 1.5;
+  color: var(--primary-cl);
 }
 
 h1 {

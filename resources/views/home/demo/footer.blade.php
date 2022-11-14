@@ -13,6 +13,7 @@
           <p><span>Email:</span> info@bossstack.vn</p>
         </div>
       </div>
+
       <div class="footer-item">
         <p class="footer-item__title">Bóc tách dòng tiền</p>
         <div class="footer-item__content">
@@ -22,6 +23,7 @@
           </ul>
         </div>
       </div>
+
       <div class="footer-item">
         <p class="footer-item__title">Chuyển đổi vận hành</p>
         <div class="footer-item__content">
@@ -31,6 +33,7 @@
           </ul>
         </div>
       </div>
+
       <div class="footer-item">
         <p class="footer-item__title">Kiểm soát thất thoát doanh nghiệp</p>
         <div class="footer-item__content">
@@ -40,6 +43,7 @@
           </ul>
         </div>
       </div>
+
       <div class="footer-item">
         <p class="footer-item__title">Về chúng tôi</p>
         <div class="footer-item__content">
