@@ -1,0 +1,41 @@
+.header{
+  padding: 18.5px 0;
+  background-color: var(--white-cl);
+}
+
+.header .wrap{
+  display: flex;
+  align-items: center;
+}
+
+.menu-main{
+  width: 728px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 56px;
+}
+
+.menu-main .menu-main__item{
+  padding: 12.5px 0;
+}
+
+.menu-main .menu-main__item a{
+  font-size: 16px;
+  font-family: hm;
+  color: var(--primary-cl);
+}
+
+.header .button-control{
+  width: 296px;
+  margin-left: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-control .btn-register{
+  color: var(--primary-cl);
+  background-color: transparent;
+  border: 1px solid var(--primary-cl);
+}

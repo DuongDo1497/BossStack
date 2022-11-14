@@ -63,6 +63,8 @@ Route::get('multi-cash-growth', 'HomeController@multiCashGrowth')->name('multi-c
 Route::post('/store', 'HomeController@store')->name('coaching-store');
 // endcourse
 
+Route::get('demo/index', 'HomeController@demoIndex')->name('demo-index');
+
 Route::group(['middleware' => ['auth','web','checkauth']], function() {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('/customer', 'DashboardController@customer')->name('dashboard-customer');

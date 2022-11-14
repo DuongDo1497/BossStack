@@ -178,6 +178,11 @@ class HomeController extends Controller
         return $this->view('landing-page.OperateConvert');
     }
 
+    public function demoIndex()
+    {
+        return $this->view('demo.index');
+    }
+
     public function store(ReportStoreRequest $request)
     {
         $courseview = [ 
