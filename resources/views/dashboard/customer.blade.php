@@ -153,7 +153,7 @@
                                             </tr>
                                             <tr>
                                                 <th>Vốn hiện tại</th>
-                                                <td class="text-right"><font color='#1eb40f'>{{ formatNumber($item->totalcurrentamount, 1, 0, 0) }}</font></td>
+                                                <td class="text-right"><font color='#1eb40f'>{{ formatNumber($item->totalcurrentamount, 1, 0, 1) }}</font></td>
                                             </tr>
                                             <tr>
                                                 <th>Số tiền còn thiếu</th>

@@ -239,7 +239,7 @@ class ContractService extends BaseService
                         ->where('contracts.deleted_at', '=', null)
                         ->where($searchField, 'like', "%$searchValue%")
                         ->where('contractstatustype', 'like', "%$searchContractStatusType%")
-                        ->orderBy('contractdate', 'desc');
+                        ->orderBy('created_at', 'desc');
                         ;
                         
         return $listContract;    
