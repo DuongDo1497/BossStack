@@ -1,14 +1,43 @@
-<ul class="menu-main">
+<ul class="menu-main menu-main__parent">
   <li class="menu-main__item">
-    <a href="#">Bóc tách dòng tiền</a>
+    <a class="menu-main__link" href="#">
+      <span class="text">Sản phẩm</span>
+      <img class="icon img-fluid" src="{{ asset('img/web/icon-down.svg') }}" alt="">
+    </a>
+    <ul class="menu-main__child animate__animated">
+      <li>
+        <a href="#">Giải pháp bóc tách dòng tiền</a>
+      </li>
+      <li>
+        <a href="#">Giải pháp dòng tiền số</a>
+      </li>
+      <li>
+        <a href="#">Kiểm soát thất thoát doanh nghiệp</a>
+      </li>
+    </ul>
   </li>
   <li class="menu-main__item">
-    <a href="#">Chuyển đổi vận hành</a>
+    <a class="menu-main__link" href="#">
+      <span class="text">Dịch vụ</span>
+      <img class="icon img-fluid" src="{{ asset('img/web/icon-down.svg') }}" alt="">
+    </a>
+    <ul class="menu-main__child animate__animated">
+      <li>
+        <a href="#">Chuyển đổi dữ liệu</a>
+      </li>
+      <li>
+        <a href="#">Vận hành số chuyên sâu</a>
+      </li>
+    </ul>
   </li>
   <li class="menu-main__item">
-    <a href="#">Kiểm soát thất thoát DN</a>
+    <a class="menu-main__link" href="#">
+      <span class="text">Gói giải pháp</span>
+    </a>
   </li>
   <li class="menu-main__item">
-    <a href="#">Về chúng tôi</a>
+    <a class="menu-main__link" href="#">
+      <span class="text">Về chúng tôi</span>
+    </a>
   </li>
 </ul>

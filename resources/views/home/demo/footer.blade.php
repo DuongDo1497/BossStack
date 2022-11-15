@@ -3,7 +3,7 @@
     <div class="wrap">
       <div class="footer-item">
         <a href="#" class="logo">
-          <img class="img-fluid" src="{{ asset('img/logo-bossstack.png') }}" alt="">
+          <img class="img-fluid" src="{{ asset('img/web/logo.svg') }}" alt="">
         </a>
         <div class="footer-item__content">
           <p><span>Địa chỉ:</span> LM81- 42.OT04 (Officetel), Landmark 81 Vinhomes Central Park,
@@ -15,7 +15,7 @@
       </div>
 
       <div class="footer-item">
-        <p class="footer-item__title">Bóc tách dòng tiền</p>
+        <p class="footer-item__title">Sản phẩm</p>
         <div class="footer-item__content">
           <ul>
             <li><a href="#">Giải pháp bóc tách dòng tiền</a></li>
@@ -25,7 +25,7 @@
       </div>
 
       <div class="footer-item">
-        <p class="footer-item__title">Chuyển đổi vận hành</p>
+        <p class="footer-item__title">Dịch vụ</p>
         <div class="footer-item__content">
           <ul>
             <li><a href="#">Giải pháp chuyển đổi dữ liệu</a></li>
@@ -35,7 +35,7 @@
       </div>
 
       <div class="footer-item">
-        <p class="footer-item__title">Kiểm soát thất thoát doanh nghiệp</p>
+        <p class="footer-item__title">Gói giải pháp</p>
         <div class="footer-item__content">
           <ul>
             <li><a href="#">Giải pháp chuyển đổi dữ liệu</a></li>

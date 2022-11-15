@@ -6,24 +6,69 @@
 .header .wrap{
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.menu-main{
-  width: 728px;
+.header-right{
+  width: 1056px;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+.menu-main__parent{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-left: 56px;
+  column-gap: 16px;
 }
 
-.menu-main .menu-main__item{
-  padding: 12.5px 0;
+.menu-main__parent .menu-main__item{
+  height: 100%;
+  position: relative;
 }
 
-.menu-main .menu-main__item a{
-  font-size: 16px;
+.menu-main__parent .menu-main__link,
+.menu-main__child li a{
   font-family: hm;
+  font-size: 16px;
   color: var(--primary-cl);
+}
+
+.menu-main__parent .menu-main__link{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+
+.menu-main__link .icon{
+  transition: transform .5s ease;
+}
+
+.menu-main__link.active .icon{
+  transform: rotate(-180deg);
+}
+
+.menu-main__child{
+  position: absolute;
+  top: calc(100% + 18.5px);
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: var(--white-cl);
+}
+
+.menu-main__child li a{
+  padding: 15px 20px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.menu-main__link.active + .menu-main__child{
+  opacity: 1;
 }
 
 .header .button-control{
@@ -32,10 +77,4 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.button-control .btn-register{
-  color: var(--primary-cl);
-  background-color: transparent;
-  border: 1px solid var(--primary-cl);
 }
