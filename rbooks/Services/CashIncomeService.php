@@ -595,6 +595,40 @@ class CashIncomeService extends BaseService
 
     /**
      * 
+     * Lay chi phi (loai chi phí tra no) cua khach hang theo thang / nam
+     * 
+     * @author  linh
+     * @return  string
+     * @access  public
+     * @date    03 14, 2020 5:18:52 PM
+     */
+    public function getSumIncomeExpenseNoBankFromCustomerIdByMonth($customer_id, $searchdate, $incomestatustype, $incometype)
+    {
+        $total = 0;
+ 
+        $dateArray = explode('-', $searchdate);
+        $year = $dateArray[0]; $month = $dateArray[1]; $day = $dateArray[2];
+                
+        $result = DB::table('cash_incomes')
+                        ->select(DB::raw('sum(amount) as amount'))
+                        ->where('customer_id', '=', $customer_id)
+                        ->where('incomestatustype', '=', $incomestatustype)
+                        ->where('incometype', '!=', $incometype)
+                        ->whereMonth('incomedate', '=', $month)
+                        ->whereYear('incomedate', '=', $year)
+                        ->where('deleted_at', '=', null)
+                        ->groupBy('incomestatustype')
+                        ->get();
+
+        if ($result->count() > 0) {
+            $total = $result->first()->amount;
+        }
+
+        return $total;    
+    }
+    
+    /**
+     * 
      * Lay chi phi tra no cua khach hang theo thang / nam
      * 
      * @author  linh
