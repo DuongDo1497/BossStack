@@ -29,6 +29,7 @@
 
   <link rel="stylesheet" href="{{ asset('css/web/header.css') }}">
   <link rel="stylesheet" href="{{ asset('css/web/footer.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/web/banner.css') }}">
   @yield('head')
 </head>
 
@@ -46,7 +47,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  {{-- <script src="{{ asset('js/landingpage/main.js') }}"></script> --}}
+  <script src="{{ asset('js/web/main.js') }}"></script>
+  <script src="{{ asset('js/web/carousel.js') }}"></script>
   @yield('scripts')
 </body>
 

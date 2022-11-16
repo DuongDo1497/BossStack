@@ -1,14 +1,30 @@
+/* Logo Style */
+.logo{
+  width: 207px;
+  display: inline-block;
+}
+
+/* Button Style */
 .btn{
-  --w-btn: 144px;
-  --h-btn: 48px;
+  width: var(--w-btn);
+  height: var(--h-btn);
   font-size: 16px;
   font-family: hm;
   border-radius: 5px;
-  width: var(--w-btn);
-  height: var(--h-btn);
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn.btn-size-md{
+  --w-btn: 142px;
+  --h-btn: 46px;
+}
+
+.btn.btn-size-full{
+  --w-btn: 100%;
+  --h-btn: 48px;
 }
 
 .btn.btn-primary{
@@ -17,7 +33,24 @@
   border: 1px solid transparent;
 }
 
-.logo{
-  width: 207px;
-  display: inline-block;
+.btn.btn-second{
+  color: var(--primary-cl);
+  background-color: var(--second-cl);
+  border: 1px solid transparent;
+}
+
+.btn.btn-stroke{
+  color: var(--primary-cl);
+  background-color: transparent;
+  border: 1px solid var(--primary-cl);
+}
+
+/* Section Style */
+.section{
+  padding: 80px 0;
+}
+
+.section-title{
+  font-family: mb;
+  text-align: center;
 }

@@ -14,7 +14,7 @@
 
 .footer-item:first-child{
   width: 374px;
-  margin-right: 68px;
+  margin-right: 38px;
 }
 
 .footer-item:last-child{
@@ -23,8 +23,8 @@
 
 .footer-item .logo,
 .footer-item .footer-item__title{
-  height: 60px;
-  margin-bottom: 60px;
+  height: 32px;
+  margin-bottom: 24px;
 }
 
 .footer-item__content p,

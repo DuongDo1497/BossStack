@@ -1,0 +1,32 @@
+.banner-home{
+  padding: 63px 0 103px;
+  background:  url('../../img/web/banner-bg.jpg') center bottom/cover no-repeat;
+}
+
+.banner-home .wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner-home .banner-home__left{
+  max-width: 614px;
+  color: var(--white-cl);
+}
+
+.banner-home__left .banner-home__title{
+  font-size: 72px;
+  line-height: 1.2;
+  font-family: mb;
+  color: var(--white-cl);
+  margin-bottom: 40px;
+}
+
+.banner-home__left .banner-home__text{
+  max-width: 529px;
+  margin-bottom: 48px;
+}
+
+.banner-home .banner-home__right{
+  max-width: calc(100% - 614px);
+}
