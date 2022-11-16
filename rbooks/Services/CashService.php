@@ -80,7 +80,7 @@ class CashService extends BaseService
 
             //Lay thong tin thu nhap chi phi theo thang
             $amountIncome = app(CashIncomeService::class)->getSumIncomeExpenseFromCustomerIdByMonth($customer_id, $searchdateSQL, "0");
-            $amountExpense = app(CashIncomeService::class)->getSumIncomeExpenseFromCustomerIdByMonth($customer_id, $searchdateSQL, "1");
+            $amountExpense = app(CashIncomeService::class)->getSumIncomeExpenseNoBankFromCustomerIdByMonth($customer_id, $searchdateSQL, "1", "9");
             $amountBank = app(CashIncomeService::class)->getSumIncomeExpenseBankFromCustomerIdByMonth($customer_id, $searchdateSQL, "1", "9"); //Chi phi $incomestatustype=1, Loai chi tra no $incometype=0
 
             $process_planamount = 0; $process_realamount = 0;
