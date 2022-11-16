@@ -116,30 +116,6 @@
                             @endphp  
                             @foreach($listcashplans as $item)
                                 <div class="financial-planning-item">
-                                    <table width="100%" style="display: none;">
-                                        <tbody>
-                                            <tr style="border-top: 0; border-bottom: 0;">
-                                                <th colspan="2" width="100%"><h4><b>VÍ {{ mb_strtoupper($plantypes[$item->plantype]) }}</b></h6></th>
-                                            </tr>
-                                            <tr style="border-top: 0;">
-                                                <th width="50%"><b><font size='3' color='red'>{{ $item->planage }}</font> TUỔI</b></th>
-                                                <td width="50%" class="text-right"><b><font size='3' color='#ff423e'>{{ formatNumber($item->requireamount * $item->requireamountunittype, 1, 0, 0) }}</font></b></td>
-                                            </tr>
-                                            <tr>
-                                                <th width="50%"><b><font size='3'>Vốn hiện tại</font></b></th>
-                                                <td width="50%" class="text-right"><font size='3' color='#1eb40f'>{{ formatNumber($item->totalcurrentamount, 1, 0, 0) }}</font> </td>
-                                            </tr>
-                                            <tr>
-                                                <th width="50%"><b><font size='3'>Số tiền còn thiếu</font></b></th>
-                                                <td width="50%" class="text-right"><font size='3' color='#ff423e'>{{ formatNumber(($item->requireamount*intval($item->requireamountunittype) - $item->totalcurrentamount), 1, 0, 0) }}</font> </td>
-                                            </tr>
-                                            <tr>
-                                                <th width="50%"><b><font size='3'>Thời gian hoàn thiện</font></b></th>
-                                                <td width="50%" class="text-right"><b><font color='red'>{{ $item->planage - $item->currentage }}</font>&nbsp; NĂM</b></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-
                                     <h4>Ví {{ $plantypes[$item->plantype] }}</h4>
                                     <table width="100%">
                                         <tbody>
@@ -152,12 +128,12 @@
                                                 <td class="text-right"><font color='#F52020'>{{ formatNumber($item->requireamount * $item->requireamountunittype, 1, 0, 0) }}</font></td>
                                             </tr>
                                             <tr>
-                                                <th>Vốn hiện tại</th>
-                                                <td class="text-right"><font color='#1eb40f'>{{ formatNumber($item->totalcurrentamount, 1, 0, 1) }}</font></td>
+                                                <th>Số tiền đã thực hiện</th>
+                                                <td class="text-right"><font color='#1eb40f'>{{ formatNumber($item->amount, 1, 0, 1) }}</font></td>
                                             </tr>
                                             <tr>
                                                 <th>Số tiền còn thiếu</th>
-                                                <td class="text-right"><font color='#F52020'>{{ formatNumber(($item->requireamount*intval($item->requireamountunittype) - $item->totalcurrentamount), 1, 0, 0) }}</font></td>
+                                                <td class="text-right"><font color='#F52020'>{{ formatNumber(($item->requireamount*intval($item->requireamountunittype) - $item->amount), 1, 0, 0) }}</font></td>
                                             </tr>
                                             <tr>
                                                 <th>Thời gian hoàn thiện</th>

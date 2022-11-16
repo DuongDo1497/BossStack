@@ -72,7 +72,7 @@ class DashboardController extends Controller
         $this->view->listaccounts = $listaccounts;
 
         //danh sach muc tieu tai chinh
-        $listcashplans = app(CashPlanService::class)->getListCashPlanFromCustomerId($customer_id);
+        $listcashplans = app(CashPlanService::class)->getListAccountPlanFromCustomer($customer_id, $request)->paginate($this->view->filter['limit']);
         $this->view->listcashplans = $listcashplans;
 
         $listmonth = array(); $formatchart_x = "";
