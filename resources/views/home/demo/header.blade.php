@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header animate__animated">
   <div class="container">
     <div class="wrap">
       <a href="#" class="logo">

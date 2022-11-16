@@ -29,6 +29,7 @@
 
 .footer-item__content p,
 .footer-item__content ul li{
+  font-size: 16px;
   margin-bottom: 16px;
 }
 
@@ -45,6 +46,5 @@
 }
 
 .footer-item__content li a{
-  font-size: 18px;
   color: var(--gray-cl-5);
 }

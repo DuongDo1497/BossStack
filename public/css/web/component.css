@@ -8,7 +8,7 @@
 .btn{
   width: var(--w-btn);
   height: var(--h-btn);
-  font-size: 16px;
+  font-size: var(--fz-btn);
   font-family: hm;
   border-radius: 5px;
   padding: 0;
@@ -20,6 +20,13 @@
 .btn.btn-size-md{
   --w-btn: 142px;
   --h-btn: 46px;
+  --fz-btn: 16px;
+}
+
+.btn.btn-size-lg{
+  --w-btn: 202px;
+  --h-btn: 56px;
+  --fz-btn: 20px;
 }
 
 .btn.btn-size-full{
@@ -53,4 +60,23 @@
 .section-title{
   font-family: mb;
   text-align: center;
+}
+
+/* Back to top Style */
+
+.backtotop{
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--primary-cl);
+  border: 1px solid var(--primary-cl);
+  background-color: var(--white-cl);
 }

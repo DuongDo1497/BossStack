@@ -10,9 +10,10 @@
       <div class="wrap">
         <div class="banner-home__left">
           <h1 class="banner-home__title">CHUYỂN ĐỔI SỐ DOANH NGHIỆP</h1>
-          <p class="banner-home__text">Cung cấp giải pháp chuyển đổi số doanh nghiệp đem lại <b>LỢI
-              NHUẬN TỨC THÌ</b> và xây dựng kế hoạch <b>GIA TĂNG LỢI NHUẬN</b> lâu dài!</p>
-          <a class="btn btn-second btn-size-md btn-contact" href="#">Liên hệ</a>
+          <p class="banner-home__text">Cung cấp giải pháp chuyển đổi số doanh nghiệp đem lại <span
+              class="text-bold">LỢI NHUẬN TỨC THÌ</span> và xây dựng kế hoạch <span
+              class="text-bold">GIA TĂNG LỢI NHUẬN</span> lâu dài!</p>
+          <a class="btn btn-second btn-size-lg btn-contact" href="#">Liên hệ</a>
         </div>
         <div class="banner-home__right">
           <img class="img-fluid" src="{{ asset('img/web/banner-img.png') }}" alt="">
@@ -128,13 +129,14 @@
             </div>
             <div class="review-body">
               <h2 class="name">Nguyễn Đỗ Cẩm Bình</h2>
-              <h3 class="position">Trưởng phòng kinh doanh công ty BĐS Him Lam</h3>
+              <h5 class="position">Trưởng phòng kinh doanh công ty BĐS Him Lam</h5>
               <div class="line"></div>
-              <p class="content">Sử dụng <b>phần mềm BossStack</b> cuối tháng tôi không cần ngồi ghi
-                chép
-                hay nhập bảng tính Excel. <b>Phần mềm BossStack</b> giúp tôi quản lý mọi thu chi của
-                cá nhân,
-                gia đình và bóc tách hoàn toàn với dòng tiền kinh doanh tại doanh nghiệp của tôi. Tính
+              <p class="content">Sử dụng <span class="text-bold">phần mềm BossStack</span> cuối
+                tháng tôi không cần ngồi ghi
+                chép hay nhập bảng tính Excel. <span class="text-bold">Phần mềm BossStack</span> giúp
+                tôi quản lý mọi thu chi của
+                cá nhân, gia đình và bóc tách hoàn toàn với dòng tiền kinh doanh tại doanh nghiệp của
+                tôi. Tính
                 năng mà tôi đặc biệt quan tâm đó chính là tính toán số tiền nghỉ hưu giúp tôi có những
                 kế hoạch dài hạn về tài chính của mình.</p>
             </div>
@@ -145,13 +147,14 @@
             </div>
             <div class="review-body">
               <h2 class="name">Nguyễn Đỗ Cẩm Bình</h2>
-              <h3 class="position">Trưởng phòng kinh doanh công ty BĐS Him Lam</h3>
+              <h5 class="position">Trưởng phòng kinh doanh công ty BĐS Him Lam</h5>
               <div class="line"></div>
-              <p class="content">Sử dụng <b>phần mềm BossStack</b> cuối tháng tôi không cần ngồi ghi
-                chép
-                hay nhập bảng tính Excel. <b>Phần mềm BossStack</b> giúp tôi quản lý mọi thu chi của
-                cá nhân,
-                gia đình và bóc tách hoàn toàn với dòng tiền kinh doanh tại doanh nghiệp của tôi. Tính
+              <p class="content">Sử dụng <span class="text-bold">phần mềm BossStack</span> cuối
+                tháng tôi không cần ngồi ghi
+                chép hay nhập bảng tính Excel. <span class="text-bold">Phần mềm BossStack</span> giúp
+                tôi quản lý mọi thu chi của
+                cá nhân, gia đình và bóc tách hoàn toàn với dòng tiền kinh doanh tại doanh nghiệp của
+                tôi. Tính
                 năng mà tôi đặc biệt quan tâm đó chính là tính toán số tiền nghỉ hưu giúp tôi có những
                 kế hoạch dài hạn về tài chính của mình.</p>
             </div>
@@ -162,18 +165,72 @@
             </div>
             <div class="review-body">
               <h2 class="name">Nguyễn Đỗ Cẩm Bình</h2>
-              <h3 class="position">Trưởng phòng kinh doanh công ty BĐS Him Lam</h3>
+              <h5 class="position">Trưởng phòng kinh doanh công ty BĐS Him Lam</h5>
               <div class="line"></div>
-              <p class="content">Sử dụng <b>phần mềm BossStack</b> cuối tháng tôi không cần ngồi ghi
-                chép
-                hay nhập bảng tính Excel. <b>Phần mềm BossStack</b> giúp tôi quản lý mọi thu chi của
-                cá nhân,
-                gia đình và bóc tách hoàn toàn với dòng tiền kinh doanh tại doanh nghiệp của tôi. Tính
+              <p class="content">Sử dụng <span class="text-bold">phần mềm BossStack</span> cuối
+                tháng tôi không cần ngồi ghi
+                chép hay nhập bảng tính Excel. <span class="text-bold">Phần mềm BossStack</span> giúp
+                tôi quản lý mọi thu chi của
+                cá nhân, gia đình và bóc tách hoàn toàn với dòng tiền kinh doanh tại doanh nghiệp của
+                tôi. Tính
                 năng mà tôi đặc biệt quan tâm đó chính là tính toán số tiền nghỉ hưu giúp tôi có những
                 kế hoạch dài hạn về tài chính của mình.</p>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-partner partner">
+    <div class="container">
+      <div class="wrap">
+        <h3 class="section-title">Đối tác</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-contact-us contact-us">
+    <div class="container">
+      <div class="wrap">
+        <h3 class="section-title">Liên hệ với chúng tôi</h3>
+        <form class="contact-us__form" action="" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="fullname" name="fullname"
+              placeholder=" " required>
+            <label class="form-label">Họ và tên <span>*</span></label>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" name="email"
+                placeholder=" " required>
+              <label class="form-label">Email <span>*</span></label>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="phone" name="phone"
+                placeholder=" " required>
+              <label class="form-label">Số điện thoại <span>*</span></label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" class="form-control" id="company" name="company"
+                placeholder=" ">
+              <label class="form-label">Công ty</label>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="position" name="position"
+                placeholder=" ">
+              <label class="form-label">Vị trí</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea name="message" class="form-control" id="message" placeholder=" "></textarea>
+            <label class="form-label">Chúng tôi có thể giúp gì cho bạn?</label>
+          </div>
+          <button type="submit" class="btn btn-second btn-size-lg btn-send">Gửi ngay</button>
+        </form>
+        <div class="trapezoid"></div>
       </div>
     </div>
   </div>
