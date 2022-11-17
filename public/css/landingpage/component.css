@@ -129,7 +129,7 @@
 }
 
 .countdown-wrap.white-cl .item .number{
-  color: var(--primary-cl);
+  color: var(--second-cl);
   background-color: var(--white-cl);
 }
 
@@ -904,7 +904,8 @@
   text-align: center;
 }
 
-.register__form .form-info input{
+.register__form .form-info input,
+.register__form .form-info select{
   font-size: 1.8rem;
   line-height: 3rem;
   color: var(--gray-cl-7);
@@ -1044,7 +1045,8 @@
     padding: 2rem;
   }
 
-  .register__form .form-info input{
+  .register__form .form-info input,
+  .register__form .form-info select{
     padding: 1rem 1.5rem;
   }
 

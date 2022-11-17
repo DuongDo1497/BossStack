@@ -26,6 +26,27 @@ $('.review__carousel').owlCarousel({
   },
 })
 
+$('.review__carousel-2').owlCarousel({
+  dots: false,
+  nav: false,
+  margin: 18,
+  loop: true,
+  autoplay: true,
+  mouseDrag: true,
+  autoplaySpeed: 1500,
+  responsive:{
+    0:{
+      items: 1,
+    },
+    992:{
+      items: 2,
+    },
+    1400:{
+      items: 3,
+    },
+  },
+})
+
 AOS.init();
 
 let getHeader = document.querySelector('.header');
