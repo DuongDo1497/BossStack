@@ -36,7 +36,7 @@
   <header class="header">
     <div class="container">
       <div class="wrap">
-        <a class="logo" href="{{ asset('dulieuso') }}"><img class="img-fluid"
+        <a class="logo" href="{{ asset('chuyendoidongtien') }}"><img class="img-fluid"
             src="{{ asset('img/logo-bossstack.png') }}"></a>
         <ul class="course-info">
           <li>
@@ -76,7 +76,7 @@
       <div class="wrap">
         <div class="banner-content" data-aos="fade-right" data-aos-delay="500"
           data-aos-duration="1000" data-aos-easing="ease-in-out">
-          <h1>CHUYỂN ĐỔI <span>DÒNG TIỀN</span></h1>
+          <h1>BÓC TÁCH <span>DÒNG TIỀN</span></h1>
           <ul>
             <li><span>XỬ LÝ</span> và <span>BÓC TÁCH</span> các mảnh ghép trong dòng tiền tổng quan
               cá nhân.</li>
@@ -471,10 +471,11 @@
               <p class="review__content">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
                   alt="">
-                <b>Phần mềm BossStack</b> giúp bạn theo dõi và kiểm
-                soát các dòng tiền giúp chúng luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá
-                nhân và dòng tiền đầu tư kinh doanh của bạn được tách bạch hoàn toàn. Việc này
-                giúp các dòng tiền được kiểm soát và tăng trưởng hiệu quả.
+                <b>Phần mềm BossStack</b> giúp bạn theo dõi, kiểm soát các dòng tiền và giúp chúng
+                luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá nhân và dòng tiền đầu tư kinh doanh
+                của bạn được tách bạch hoàn toàn. Khi dòng tiền cá nhân và doanh nghiệp được bóc
+                tách, bạn sẽ chủ động hơn trong việc lập kế hoạch tài chính gia đình và các dự án
+                kinh doanh.
               </p>
             </div>
             <div class="item">
@@ -588,7 +589,7 @@
   <footer class="footer footer-bg-img">
     <div class="container">
       <div class="wrap">
-        <a class="logo" href="{{ asset('boctachdongtien') }}">
+        <a class="logo" href="{{ asset('chuyendoidongtien') }}">
           <img class="img-fluid logo-img-cl"
             src="{{ asset('img/landing-page/logo-bs-color.svg') }}">
           <img class="img-fluid logo-img-white"
@@ -692,6 +693,12 @@
               placeholder="Công ty">
             <input type="hidden" class="form-control" name="title" value=""
               placeholder="Chức vụ">
+            <select class="form-select" name="solution">
+              <option selected>Giải pháp</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
           </div>
 
           <button type="submit" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</button>
