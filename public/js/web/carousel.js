@@ -4,9 +4,10 @@ $('.review-carousel').owlCarousel({
   nav: true,
   loop: true,
   dots: false,
+  margin: 66,
   autoplay: true,
   mouseDrag: false,
-  autoplaySpeed: 1000,
+  autoplaySpeed: 1500,
   navText: [
     "<i class='fa-solid fa-angle-left'></i>",
     "<i class='fa-solid fa-angle-right'></i>"

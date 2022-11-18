@@ -1,33 +1,43 @@
 .header{
-  padding: 18.5px 0;
-  background-color: var(--white-cl);
-}
-
-.header.fixed{
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 222;
+  padding: 18.5px 0;
+  background-color: transparent;
+}
+
+.header.fixed{
+  position: fixed;
+  background-color: var(--white-cl);
 }
 
 .header .wrap{
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
-.header-right{
-  width: 1056px;
-  display: flex;
-  align-items: stretch;
-  justify-content: flex-end;
+.header .logo img:first-child{
+  display: block;
+}
+
+.header .logo img:last-child{
+  display: none;
+}
+
+.header.fixed .logo img:first-child{
+  display: none;
+}
+
+.header.fixed .logo img:last-child{
+  display: block;
 }
 
 .menu-main__parent{
   display: flex;
   align-items: center;
-  column-gap: 16px;
+  column-gap: 32px;
 }
 
 .menu-main__parent .menu-main__item{
@@ -38,8 +48,6 @@
 .menu-main__parent .menu-main__link,
 .menu-main__child li a{
   font-family: hm;
-  font-size: 16px;
-  color: var(--primary-cl);
 }
 
 .menu-main__parent .menu-main__link{
@@ -47,14 +55,37 @@
   display: flex;
   align-items: center;
   column-gap: 4px;
+  color: var(--white-cl);
 }
 
-.menu-main__link .icon{
+.header.fixed .menu-main__parent .menu-main__link{
+  color: var(--primary-cl-6);
+}
+
+.menu-main__link .icon,
+.menu-main__link .icon-w{
   transition: transform .5s ease;
 }
 
-.menu-main__link.active .icon{
+.menu-main__link.active .icon,
+.menu-main__link.active .icon-w{
   transform: rotate(-180deg);
+}
+
+.header .menu-main__link .icon{
+  display: none;
+}
+
+.header .menu-main__link .icon-w{
+  display: block;
+}
+
+.header.fixed .menu-main__link .icon{
+  display: block;
+}
+
+.header.fixed .menu-main__link .icon-w{
+  display: none;
 }
 
 .menu-main__child{
@@ -73,16 +104,40 @@
   padding: 15px 20px;
   display: inline-block;
   white-space: nowrap;
+  color: var(--primary-cl);
 }
 
 .menu-main__link.active + .menu-main__child{
   opacity: 1;
 }
 
-.header .button-control{
+.button-control{
   width: 296px;
-  margin-left: 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.button-control .btn.btn-stroke{
+  color: var(--white-cl);
+  background-color: transparent;
+  border: 1px solid var(--white-cl);
+}
+
+.button-control .btn.btn-primary{
+  color: var(--primary-cl-6);
+  background-color: var(--white-cl);
+  border: 1px solid transparent;
+}
+
+.header.fixed .button-control .btn.btn-stroke{
+  color: var(--primary-cl);
+  background-color: transparent;
+  border: 1px solid var(--primary-cl);
+}
+
+.header.fixed .button-control .btn.btn-primary{
+  color: var(--white-cl);
+  background-color: var(--primary-cl);
+  border: 1px solid transparent;
 }

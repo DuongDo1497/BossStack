@@ -3,8 +3,9 @@
     <a class="menu-main__link" href="#">
       <span class="text">Sản phẩm</span>
       <img class="icon img-fluid" src="{{ asset('img/web/icon-down.svg') }}" alt="">
+      <img class="icon-w img-fluid" src="{{ asset('img/web/icon-down-w.svg') }}" alt="">
     </a>
-    <ul class="menu-main__child animate__animated">
+    <ul class="menu-main__child animate__animated" style="visibility: hidden">
       <li>
         <a href="#">Giải pháp bóc tách dòng tiền</a>
       </li>
@@ -20,8 +21,9 @@
     <a class="menu-main__link" href="#">
       <span class="text">Dịch vụ</span>
       <img class="icon img-fluid" src="{{ asset('img/web/icon-down.svg') }}" alt="">
+      <img class="icon-w img-fluid" src="{{ asset('img/web/icon-down-w.svg') }}" alt="">
     </a>
-    <ul class="menu-main__child animate__animated">
+    <ul class="menu-main__child animate__animated" style="visibility: hidden">
       <li>
         <a href="#">Chuyển đổi dữ liệu</a>
       </li>

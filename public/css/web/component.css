@@ -1,7 +1,8 @@
 /* Logo Style */
 .logo{
   width: 207px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 /* Button Style */
@@ -54,12 +55,12 @@
 
 /* Section Style */
 .section{
-  padding: 80px 0;
+  padding: 120px 0;
 }
 
 .section-title{
-  font-family: mb;
-  text-align: center;
+  font-family: mm;
+  text-transform: uppercase;
 }
 
 /* Back to top Style */
