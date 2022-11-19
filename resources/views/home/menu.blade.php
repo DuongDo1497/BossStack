@@ -38,7 +38,7 @@
     </a>
   </li>
   <li class="menu-main__item">
-    <a class="menu-main__link" href="#">
+    <a class="menu-main__link" href="{{ asset('about-us') }}">
       <span class="text">Về chúng tôi</span>
     </a>
   </li>
