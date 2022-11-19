@@ -1,0 +1,195 @@
+.banner-default{
+  padding: 245px 0 323px;
+}
+
+/* Introduction General */
+
+.introduction .wrap{
+  overflow: hidden;
+  margin-top: -270px;
+  border-radius: 16px;
+  filter: drop-shadow(0px 5px 10px rgba(53, 99, 172, 0.3));
+}
+
+.introduction h3{
+  font-family: hr;
+  text-align: left;
+  color: var(--gray-cl-8);
+}
+
+.introduction-bs{
+  display: flex;
+}
+
+.introduction-bs__left,
+.introduction-slogan__item{
+  padding: 48px;
+}
+
+.introduction-bs__left{
+  width: 896px;
+  flex-shrink: 0;
+  background-color: var(--gray-cl-2);
+}
+
+.introduction-bs__left h3{
+  margin-bottom: 48px;
+}
+
+.introduction-bs__content p{
+  color: #2D2D2D;
+  margin-bottom: 18px;
+}
+
+.introduction-bs__content p:last-child{
+  margin-bottom: 0;
+}
+
+.introduction-slogan{
+  display: flex;
+  background-color: var(--gray-cl-1);
+}
+
+.introduction-slogan__item{
+  width: 50%;
+}
+
+.introduction-slogan__item .title{
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  margin-bottom: 24px;
+}
+
+.introduction-slogan__item .text{
+  color: var(--gray-cl-7);
+}
+
+/* Leadership */
+
+.leadership{
+  background-color: var(--gray-cl-2);
+}
+
+.leadership .section-title{
+  margin-bottom: 60px;
+}
+
+.leadership-item{
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 60px;
+  background-color: var(--white-cl);
+}
+
+.leadership-item:last-child{
+  margin-bottom: 0;
+}
+
+.leadership-avt{
+  width: 427px;
+}
+
+.leadership-info{
+  width: calc(100% - 427px);
+  padding: 24px;
+}
+
+.leadership-info .name{
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.leadership-info .name a{
+  display: inline-block;
+}
+
+.leadership-info .position{
+  text-align: left;
+  color: var(--gray-cl-5);
+  margin-bottom: 16px;
+}
+
+.leadership-info .exp ul{
+  list-style: disc;
+  padding-left: 25px;
+}
+
+.leadership-info .exp li,
+.leadership-info .exp p{
+  color: var(--gray-cl-7);
+}
+
+.section-about-history .wrap {
+  position: relative;
+  height: 1700px;
+}
+
+.section-about-history .history-tree {
+  position: absolute;
+  top: 140px;
+  left: -680px;
+  z-index: 0;
+}
+
+.section-about-history h3 {
+  text-align: center;
+}
+
+.section-about-history .history-list {
+  position: relative;
+  height: 100%;
+}
+
+.section-about-history .history-item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-about-history .history-item:first-child {
+  top: 135px;
+  left: 600px;
+}
+
+.section-about-history .history-item:nth-child(2) {
+  top: 550px;
+  left: 660px;
+}
+
+.section-about-history .history-item:nth-child(3) {
+  top: 960px;
+  left: 500px;
+}
+
+.section-about-history .history-item:last-child {
+  top: 1170px;
+  left: 90px;
+  z-index: 1;
+}
+
+.section-about-history .history-item .year {
+  color: var(--gray-cl-7);
+  margin-bottom: 8px;
+}
+
+.section-about-history .history-item .icon {
+  margin-bottom: 18px;
+}
+
+.section-about-history .history-item .feature,
+.section-about-history .history-item .feature h6{
+  color: #2D2D2D;
+}
+
+.section-about-history .history-item .feature h6{
+  font-family: hr;
+  text-align: left;
+}
+
+@media (max-width: 575.98px){
+  
+}

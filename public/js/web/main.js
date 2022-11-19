@@ -12,10 +12,10 @@ navBar.addEventListener('click', function (e) {
 
 menuMainLink.forEach(element => {
   element.addEventListener('click', function(e){
-    e.preventDefault();
     let menuMainChild = e.currentTarget.parentElement.querySelector('.menu-main__child');
     if (window.outerWidth >= 992) {
       if (menuMainChild) {
+        e.preventDefault();
         if(!element.matches('.active')){
           element.classList.add('active');
           menuMainChild.style.visibility = 'visible';
@@ -33,6 +33,7 @@ menuMainLink.forEach(element => {
     } else if (window.outerWidth < 992) {
       menuMainChild.classList.remove('animate__animated');
       if (menuMainChild) {
+        e.preventDefault();
         if(!element.matches('.active')){
           element.classList.add('active');
           menuMainChild.style.visibility = 'visible';
