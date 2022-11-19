@@ -63,6 +63,12 @@
   text-transform: uppercase;
 }
 
+@media (max-width: 991.98px){
+  .section{
+    padding: 70px 0;
+  }
+}
+
 /* Back to top Style */
 
 .backtotop{

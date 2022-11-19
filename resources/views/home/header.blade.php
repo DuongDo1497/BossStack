@@ -5,11 +5,14 @@
         <img class="img-fluid" src="{{ asset('img/web/logo-w.svg') }}" alt="">
         <img class="img-fluid" src="{{ asset('img/web/logo.svg') }}" alt="">
       </a>
-      @include('home.demo.menu')
+      @include('home.menu')
       <div class="button-control">
         <a href="#" class="btn btn-stroke btn-size-md btn-register">Đăng ký</a>
         <a href="#" class="btn btn-primary btn-size-md btn-login">Đăng nhập</a>
       </div>
+      <button type="button" class="nav-bars">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
   </div>
 </header>

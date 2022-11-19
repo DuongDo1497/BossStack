@@ -11,7 +11,7 @@
 
 .solution-body .card{
   width: calc((100% / 3) - 7.5px);
-  padding: 48px;
+  padding: 40px;
   border: 0;
   border-radius: 16px;
   display:flex;
@@ -79,6 +79,52 @@
   color: var(--primary-cl);
 }
 
+@media (max-width: 1199.98px){
+  .solution-body .card-body__title{
+    height: 108px;
+  }
+}
+
+@media (max-width: 991.98px){
+  .solution-body .card{
+    padding: 20px;
+  }
+
+  .solution-body .card-img-top{
+    width: 68px;
+  }
+
+  .solution-body .card-body__title{
+    height: 81px;
+    font-size: 18px;
+  }
+
+  .solution-body .card-body__content p, 
+  .solution-body .card-body__content li{
+    font-size: 16px;
+  }
+
+  .solution-body .card-link .btn{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767.98px){
+  .solution-body{
+    flex-direction: column;
+  }
+
+  .solution-body .card{
+    width: 100%;
+    padding: 28px;
+    margin-bottom: 16px;
+  }
+
+  .solution-body .card:last-child{
+    margin-bottom: 0;
+  }
+}
+
 /* End Solution */
 
 /* Why BossStack */
@@ -93,7 +139,7 @@
 }
 
 .why-bs__left{
-  max-width: 652px;
+  max-width: 660px;
   position: relative;
   z-index: 2;
 }
@@ -111,11 +157,14 @@
 }
 
 .why-bs__item{
-  width: calc(50% - 10px);
+  width: calc(50% - 20px);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   column-gap: 16px;
+  padding: 16px;
   margin-bottom: 40px;
+  border-radius: 8px;
+  background-color: var(--primary-cl-4);
 }
 
 .why-bs__item .text{
@@ -123,10 +172,31 @@
 }
 
 .why-bs__img{
+  width: 727px;
   position: absolute;
-  top: -148px;
-  right: -192px;
+  top: -30px;
+  right: -141px;
   z-index: 1;
+}
+
+@media (max-width: 991.98px){
+  .why-bs__img{
+    position: static;
+  }
+}
+
+@media (max-width: 767.98px){
+  .why-bs__list{
+    flex-direction: column;
+  }
+
+  .why-bs__item{
+    width: 100%;
+  }
+
+  .why-bs__img{
+    display: none;
+  }
 }
 
 /* End Why BossStack */
@@ -137,10 +207,24 @@
   padding: 60px 0;
 }
 
-.partner-list{
+.partner-carousel .owl-stage{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+.partner-carousel .owl-item{
+  margin: 0 40px;
+}
+
+@media (max-width: 767.98px){
+  .partner-carousel .owl-item{
+    margin-right: 0;
+  }
+
+  .partner-carousel .owl-item img{
+    width: 68%;
+    margin: 0 auto;
+  }
 }
 
 /* End Partner */
@@ -149,7 +233,7 @@
 
 .review{
   padding: 80px 0;
-  background: var(--bg-cyan-cl) url('../../img/web/review-bg.png') center bottom/cover no-repeat;
+  background: var(--bg-cyan-cl) url('../../img/web/review-bg.jpg') center bottom/cover no-repeat;
 }
 
 .review .wrap{
@@ -269,6 +353,48 @@
   right: 38px;
 }
 
+@media (max-width: 767.98px){
+  .review-carousel{
+    padding: 36px 26px;
+  }
+
+  .review-rate,
+  .review-content{
+    margin-bottom: 32px;
+  }
+
+  .review-rate__item{
+    width: calc(100% / 3);
+    padding: 0 15px;
+  }
+
+  .review-rate__item .title{
+    font-size: 14px;
+    height: 63px;
+  }
+
+  .review-rate__item .start img{
+    width: 13px;
+  }
+
+  .review-content{
+    font-size: 16px;
+  }
+
+  .review-footer {
+    width: 100%;
+  }
+
+  .review-footer .review-footer__avt{
+    width: 70px !important;
+    height: 70px;
+  }
+
+  .review-footer .review-footer__info{
+    width: calc(100% - 85px);
+  }
+}
+
 /* End Review */
 
 /* Contact Us */
@@ -285,6 +411,7 @@
 
 .contact-us__content .section-title{
   font-family: hb;
+  font-size: 32px;
   text-align: left;
   color: var(--gray-cl-7);
   text-transform: none;
@@ -303,11 +430,15 @@
   padding: 24px;
   border-radius: 8px;
   margin-bottom: 16px;
-  background-color: var(--bg-cyan-cl-2);
+  background-color: var(--bg-cyan-cl-3);
 }
 
 .contact-us__item:last-child{
   margin-bottom: 0;
+}
+
+.contact-us__item .text{
+  color: var(--gray-cl-8);
 }
 
 .contact-us__form{
@@ -318,7 +449,7 @@
 }
 
 .contact-us__form .form-group{
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .contact-us__form .form-label{
@@ -335,6 +466,7 @@
 
 .contact-us__form .form-control:focus{
   box-shadow: none;
+  border: 1px solid var(--gray-cl-7);
 }
 
 .contact-us__form .form-control::placeholder{
@@ -348,6 +480,45 @@
 
 .contact-us__form .btn-send{
   margin: 0 auto;
+}
+
+@media (max-width: 1399.98px){
+  .contact-us__content,
+  .contact-us__form{
+    width: calc(50% - 30px);
+  }
+
+  .contact-us__form{
+    padding: 40px;
+  }
+}
+
+@media (max-width: 991.98px){
+  .contact-us{
+    padding: 140px 0 80px;
+  }
+
+  .contact-us .wrap{
+    row-gap: 30px;
+    flex-direction: column;
+  }
+
+  .contact-us__content,
+  .contact-us__form{
+    width: 100%;
+  }
+
+  .contact-us__form{
+    padding: 25px;
+  }
+
+  .contact-us__form .form-label{
+    font-size: 16px;
+  }
+
+  .contact-us__form .form-control{
+    padding: 8px 20px;
+  }
 }
 
 /* End Contact Us */

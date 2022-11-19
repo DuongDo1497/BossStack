@@ -1,23 +1,47 @@
 let menuMainParent = document.querySelector('.menu-main__parent');
 let menuMainLink = document.querySelectorAll('.menu-main__link');
+let navBar = document.querySelector('.nav-bars');
+
+navBar.addEventListener('click', function (e) {
+  if(!menuMainParent.classList.contains('checked')){
+    menuMainParent.classList.add('checked');
+  }else{
+    menuMainParent.classList.remove('checked');
+  }
+})
 
 menuMainLink.forEach(element => {
   element.addEventListener('click', function(e){
     e.preventDefault();
     let menuMainChild = e.currentTarget.parentElement.querySelector('.menu-main__child');
-    if (menuMainChild) {
-      if(!element.matches('.active')){
-        element.classList.add('active');
-        menuMainChild.style.visibility = 'visible';
-        menuMainChild.classList.add('animate__slideInUp');
-        menuMainChild.classList.remove('animate__slideOutDown');
-      }else{
-        element.classList.remove('active');
-        setTimeout(() => {
+    if (window.outerWidth >= 992) {
+      if (menuMainChild) {
+        if(!element.matches('.active')){
+          element.classList.add('active');
+          menuMainChild.style.visibility = 'visible';
+          menuMainChild.classList.add('animate__slideInUp');
+          menuMainChild.classList.remove('animate__slideOutDown');
+        }else{
+          element.classList.remove('active');
+          setTimeout(() => {
+            menuMainChild.style.visibility = 'hidden';
+          }, 1500);
+          menuMainChild.classList.add('animate__slideOutDown');
+          menuMainChild.classList.remove('animate__slideInUp');
+        }
+      }
+    } else if (window.outerWidth < 992) {
+      menuMainChild.classList.remove('animate__animated');
+      if (menuMainChild) {
+        if(!element.matches('.active')){
+          element.classList.add('active');
+          menuMainChild.style.visibility = 'visible';
+          menuMainChild.style.maxHeight = menuMainChild.scrollHeight + "px";
+        }else{
+          element.classList.remove('active');
           menuMainChild.style.visibility = 'hidden';
-        }, 1500);
-        menuMainChild.classList.add('animate__slideOutDown');
-        menuMainChild.classList.remove('animate__slideInUp');
+          menuMainChild.style.maxHeight = null;
+        }
       }
     }
   })

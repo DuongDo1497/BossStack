@@ -1,7 +1,25 @@
+$('.partner-carousel').owlCarousel({
+  nav: false,
+  loop: true,
+  dots: false,
+  autoplay: true,
+  mouseDrag: false,
+  autoplaySpeed: 1500,
+  responsive:{
+    0:{
+        items: 1,
+    },
+    576:{
+      items: 3,
+    },
+    1400:{
+      items: 5,
+    }
+  }
+})
+
 $('.review-carousel').owlCarousel({
   items: 1,
-  margin: 0,
-  nav: true,
   loop: true,
   dots: false,
   margin: 66,
@@ -12,4 +30,12 @@ $('.review-carousel').owlCarousel({
     "<i class='fa-solid fa-angle-left'></i>",
     "<i class='fa-solid fa-angle-right'></i>"
   ],
+  responsive:{
+    0:{
+      nav: false,
+    },
+    576:{
+      nav: true,
+    },
+  }
 })

@@ -1,423 +1,374 @@
-<!DOCTYPE html>
-<html>
+@extends('home.layout')
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>BossStack Coaching</title>
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-    name="viewport">
-  <meta name="route" content="{{ request()->route()->getName() }}">
+@section('head')
+  <link rel="stylesheet" href="{{ asset('css/web/main.css') }}">
+@endsection
 
-  <link rel="icon" type="image/png" href="{{ asset('img/fiinves-f-logo-tab.png') }}"
-    sizes="32x32" />
-
-  <link rel="stylesheet"
-    href="{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ asset('bower_components/Ionicons/css/ionicons.min.css') }}">
-  <link rel="stylesheet"
-    href="{{ asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/common.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/pages/style_fund.css') }}">
-
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  <link
-    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-    crossorigin="anonymous">
-
-  <!-- Carousel CSS -->
-  <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
-
-  @laravelPWA
-  <!-- Carousel CSS -->
-
-  @yield('head')
-
-</head>
-
-<body>
-
-  <div id="header-fund">
-
-    <!-- Menu -->
-
-    @include('home.menu')
-
-    <!-- End Menu -->
-
-    <!-- Banner -->
-    <div class="banner-home-fund">
+@section('content')
+  <div class="section section-banner banner-home">
+    <div class="banner-body">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-xl-5 col-12">
-            <div class="banner-home-fund-left">
-              <div class="align-self-center">
-                <!-- <img src="{{ asset('img/text-1-w.png') }}"> -->
-                <h1>BossStack Coaching</h1>
-                <h4 style="color: #fff; font-size: 23px; font-weight: bold;">TƯ VẤN CHUYỂN ĐỔI SỐ
-                  TÀI CHÍNH</h4>
-                <p>Xây dựng Chiến lược Quản lý Tài chính và Kế hoạch <br />Gia tăng Lợi nhuận lâu
-                  dài ngay bây giờ!</p>
-                <div class="button-banner">
-                  <!-- <a class="btn btn-primary btn-banner" href="{{ route('personalcash') }}">Tìm hiểu ngay</a> -->
-                  <a class="btn btn-primary btn-banner" href="{{ route('contact') }}">Liên Hệ
-                    BossStack</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-xl-7 col-12 mt-5 mt-sm-0">
-            <img src="{{ asset('img/home-banner-right.png') }}" width="100%">
+        <div class="wrap">
+          <div class="banner-home__left">
+            <h1 class="banner-home__title">CHUYỂN ĐỔI SỐ <br />DOANH NGHIỆP</h1>
+            <p class="banner-home__text">Cung cấp giải pháp chuyển đổi số doanh nghiệp đem lại
+              <br /><span class="text-bold">CẮT GIẢM CHI PHÍ</span> tức thì và xây dựng kế hoạch
+              <br /><span class="text-bold">GIA TĂNG LỢI NHUẬN</span> lâu dài!
+            </p>
+            <a class="btn btn-second btn-size-lg btn-contact" href="#">Liên hệ</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- End Banner -->
-
+    <div class="banner-video">
+      <video autoplay muted loop>
+        <source src="{{ asset('img/web/video-banner.mp4') }}" type="video/mp4">
+      </video>
+      <div class="banner-video__bg"></div>
+    </div>
   </div>
 
-  <div id="main-fund">
-
-    <!-- Về LAMs -->
-    <section class="element-section element-bg-16 element-about-lams">
-      <div class="container">
-
-        <div class="about-lams-1">
-          <div class="row">
-            <div class="col-md-4 col-12">
-              <div class="box-1 mb-4 mb-sm-0 clearfix">
-                <div class="box-left align-self-center">
-                  <img src="{{ asset('img/icon-1.png') }}">
-                </div>
-                <div class="box-right align-self-center">
-                  <h1>Xác định <br>bức tranh <br>tài chính doanh nghiệp</h1>
-                </div>
+  <div class="section section-solution solution">
+    <div class="container">
+      <div class="wrap">
+        <h4 class="section-title">Giải pháp của BossStack</h4>
+        <div class="solution-body">
+          <div class="card">
+            <img class="card-img-top img-fluid" src="{{ asset('img/web/solution-icon-1.svg') }}" />
+            <div class="card-body">
+              <h6 class="card-body__title">BÓC TÁCH DÒNG TIỀN</h6>
+              <div class="card-body__content">
+                <p>Sử dụng công cụ thực thi phần mềm BossStack nhằm:</p>
+                <ul>
+                  <li>
+                    <img class="icon img-fluid" src="{{ asset('img/web/icon-right.svg') }}"
+                      alt="">
+                    Xử lý và bóc tách các mảnh ghép trong dòng tiền tổng quan cá nhân
+                  </li>
+                  <li>
+                    <img class="icon img-fluid" src="{{ asset('img/web/icon-right.svg') }}"
+                      alt="">
+                    Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, tự doanh, dòng tiền doanh
+                    nghiệp
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="col-md-4 col-12">
-              <div class="box-2 mb-4 mb-sm-0 clearfix">
-                <div class="box-left align-self-center">
-                  <img src="{{ asset('img/icon-2.png') }}">
-                </div>
-                <div class="box-right align-self-center">
-                  <h1>Kiểm toán vốn <br>mở rộng <br>sản xuất kinh doanh</h1>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-12">
-              <div class="box-3 mb-4 mb-sm-0 clearfix">
-                <div class="box-left align-self-center">
-                  <img src="{{ asset('img/icon-3.png') }}">
-                </div>
-                <div class="box-right align-self-center">
-                  <h1>Kiểm soát <br>dòng vốn <br>đầu tư chủ sở hữu</h1>
-                </div>
-              </div>
+            <div class="card-link">
+              <a class="btn btn-size-full" href="#">Xem thêm</a>
             </div>
           </div>
-        </div>
 
-        <div class="about-lams-2">
-          <div class="row">
-            <div class="col-md-6 col-12">
-              <div class="logo mb-4">
-                <!-- <img src="{{ asset('img/text-3.png') }}"> -->
-                <h2>Về BossStack Coaching</h2>
+          <div class="card">
+            <img class="card-img-top img-fluid" src="{{ asset('img/web/solution-icon-2.svg') }}" />
+            <div class="card-body">
+              <h6 class="card-body__title">CHUYỂN ĐỔI VẬN HÀNH</h6>
+              <div class="card-body__content">
+                <p>Số hóa dữ liệu doanh nghiệp và chuyển đổi vận hành số giúp nâng cao hiệu quả kinh
+                  doanh và gia tăng lợi nhuận doanh nghiệp</p>
               </div>
-              <p>Được thành lập năm 2015, <b>BossStack</b> là một trong những công ty uy tín trong
-                việc cung cấp các giải pháp cố vấn và công nghệ hỗ trợ khách hàng quản lý và gia
-                tăng dòng tiền cá nhân và doanh nghiệp. Với đội ngũ lãnh đạo, nhân viên có kinh
-                nghiệm sâu sắc và chuyên môn cao trong lĩnh vực quản lý tài chính, công nghệ,
-                <b>BossStack</b> đã phát triển hệ thống <b>“BossStack Coaching”</b>, một giải pháp
-                giúp doanh nghiệp và cá nhân kiểm soát tình hình tài chính của hệ thống, tách bạch
-                các dòng tiền và tăng trưởng bền vững.
-              </p>
-              <!-- <a href="{{ route('about-us') }}">Tìm hiểu thêm <i class="fa fa-arrow-right"></i></a> -->
             </div>
-            <!-- <div class="col-md-6">
-                            <img src="{{ asset('img/about-lams.jpg') }}" width="100%">
-                        </div> -->
+            <div class="card-link">
+              <a class="btn btn-size-full" href="#">Xem thêm</a>
+            </div>
           </div>
-        </div>
 
-      </div>
-    </section>
-    <!-- End Về LAMs -->
-
-    <!-- TẠI SAO BẠN NÊN CHỌN CHÚNG TÔI? -->
-    <section class="element-section element-why-choose-us">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 col-12">
-            <img class="mb-5 mb-sm-0" src="{{ asset('img/why-choose-us.png') }}" width="100%">
-          </div>
-          <div class="col-md-6 col-12">
-            <div class="why-choose-us-right">
-              <!-- <img src="{{ asset('img/text-2.png') }}"> -->
-              <h3>Tại sao doanh nghiệp cần BossStack Coaching?</h3>
-              <h4>Khó khăn trong Quản lý Dòng tiền của doanh nghiệp</h4>
-              <ul style="margin-bottom: 20px;">
-                <li>
-                  <span class="icon"><img src="{{ asset('img/icon-4.png') }}"></span>
-                  <span class="text align-self-center">Không quản lý được nguồn vốn</span>
-                </li>
-                <li>
-                  <span class="icon"><img src="{{ asset('img/icon-4.png') }}"></span>
-                  <span class="text align-self-center">Chủ doanh nghiệp thường không thể tách dòng
-                    tiền cá nhân của mình ra khỏi doanh nghiệp</span>
-                </li>
-                <li>
-                  <span class="icon"><img src="{{ asset('img/icon-4.png') }}"></span>
-                  <span class="text align-self-center">Thiếu vốn để mở rộng sản xuất kinh
-                    doanh</span>
-                </li>
-                <li>
-                  <span class="icon"><img src="{{ asset('img/icon-4.png') }}"></span>
-                  <span class="text align-self-center">Thiếu công cụ quản lý dòng tiền</span>
-                </li>
-              </ul>
-              <h4>Khó khăn trong Vận hành và Kiểm soát Thất thoát</h4>
-              <ul>
-                <li>
-                  <span class="icon"><img src="{{ asset('img/icon-4.png') }}"></span>
-                  <span class="text align-self-center">Thiếu bộ công cụ vận hành hoạt động kinh
-                    doanh </span>
-                </li>
-                <li>
-                  <span class="icon"><img src="{{ asset('img/icon-4.png') }}"></span>
-                  <span class="text align-self-center">Thiếu quy trình đánh giá và xây dựng kế
-                    hoạch chiến lược</span>
-                </li>
-                <li>
-                  <span class="icon"><img src="{{ asset('img/icon-4.png') }}"></span>
-                  <span class="text align-self-center" style="letter-spacing: -0.5px;">Đối mặt với
-                    thất thoát: nhân công, nguyên vật liệu, hàng hoá...</span>
-                </li>
-              </ul>
+          <div class="card">
+            <img class="card-img-top img-fluid" src="{{ asset('img/web/solution-icon-3.svg') }}" />
+            <div class="card-body">
+              <h6 class="card-body__title">KIỂM SOÁT THẤT THOÁT DOANH NGHIỆP</h6>
+              <div class="card-body__content">
+                <p>Giải pháp giúp doanh nghiệp cắt giảm tối đa chi phí mà không làm ảnh hưởng đến hoạt
+                  động toàn thể doanh nghiệp thông qua hệ thống phần mềm và chuyên gia BossStack</p>
+              </div>
+            </div>
+            <div class="card-link">
+              <a class="btn btn-size-full" href="#">Xem thêm</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- End TẠI SAO BẠN NÊN CHỌN CHÚNG TÔI? -->
-
-    <!-- Ưu điểm của hệ thống -->
-    <section class="element-section element-bg-1 element-advantages position-relative">
-      <div class="element-advantages-img"></div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-12">
-            <h3>BossStack Coaching mang lại lợi ích gì?</h3>
-            <h4>Sở hữu công cụ kiểm soát các “Business”</h4>
-            <ul style="margin-bottom: 20px;">
-              <li>
-                <span class="icon"><img src="{{ asset('img/icon-4-blue.png') }}"></span>
-                <span class="text">Phân tích dòng tiền </span>
-              </li>
-              <li>
-                <span class="icon"><img src="{{ asset('img/icon-4-blue.png') }}"></span>
-                <span class="text">Tính toán tài sản ròng</span>
-              </li>
-              <li>
-                <span class="icon"><img src="{{ asset('img/icon-4-blue.png') }}"></span>
-                <span class="text">Theo dõi các khoản mục đầu tư</span>
-              </li>
-            </ul>
-            <h4>Khóa đào tạo xử lý dòng tiền</h4>
-            <ul>
-              <li>
-                <span class="icon"><img src="{{ asset('img/icon-4-blue.png') }}"></span>
-                <span class="text" style="letter-spacing: -0.5px;">Dự báo, phân tích và lập kế
-                  hoạch tài chính cho doanh nghiệp</span>
-              </li>
-              <li>
-                <span class="icon"><img src="{{ asset('img/icon-4-blue.png') }}"></span>
-                <span class="text">Kiểm soát các khoản nợ phải thu và nợ phải trả</span>
-              </li>
-              <li>
-                <span class="icon"><img src="{{ asset('img/icon-4-blue.png') }}"></span>
-                <span class="text">Sử dụng các công cụ giúp dự báo dòng tiền</span>
-              </li>
-            </ul>
-          </div>
-          <!-- <div class="col-md-6">
-                        <div class="bg-advantages">
-                            <img src="{{ asset('img/advantages-system.png') }}">
-                        </div>
-                    </div> -->
-        </div>
-      </div>
-    </section>
-    <!-- End Ưu điểm của hệ thống -->
-
-    <!-- Bảng giá phần mềm -->
-    <section class="element-section element-price-list">
-      <div class="container">
-        <h2 class="title">Giải pháp phần mềm BossStack</h2>
-        @include('home.package')
-      </div>
-    </section>
-    <!-- End Bảng giá phần mềm -->
-
-    <!-- Liên hệ
-        <section class="element-section element-contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="contact">
-                            <h1>BẠN CẦN HỖ TRỢ?</h1>
-                            <p>Hãy liên hệ với chúng tôi để nhận được tư vấn sử dụng dịch vụ và gia tăng dòng tiền cá nhân.</p>
-                            <a href="{{ route('contact') }}" class="btn btn-primary btn-contact">Liên hệ</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        End Liên hệ -->
-
-    <!-- Nhận xét -->
-    <section class="element-section element-review">
-      <div class="container">
-
-        <h1 class="text-center mb-5">
-          <font size="6">ĐÁNH GIÁ SẢN PHẨM</font>
-        </h1>
-
-        <div class="carousel-review">
-          <div class="owl-carousel owl-theme carousel-review-items">
-            <div class="item">
-              <div class="avatar mb-3">
-                <img src="{{ asset('img/user-2.jpg') }}">
-              </div>
-              <div class="name mb-2">Nguyễn Đỗ Cẩm Bình</div>
-              <div class="subject mb-2">Trưởng phòng kinh doanh, Công ty BĐS Him Lam</div>
-              <div class="content">
-                <p>Tôi từng nghĩ các ứng dụng quản lý tiền có thể chỉ là một công cụ nhưng BossStack
-                  Coaching đã cho tôi cách nhìn khác. Đây thật sự là một phần mềm có thể tính toán
-                  từng đồng tiền nhỏ cho đến số tiền lớn, mà tính toán thủ công sẽ không khả thi. Nó
-                  trở thành một người bạn đáng tin cậy khi giữ gìn và phát triển tiền bạc của tôi
-                  tốt hơn. Tôi chú ý nhất đến phần tính số tiền còn thiếu hụt cho kỳ hưu trí. Về
-                  dòng tiền, tôi thiết lập các mục tiêu tài chính chi tiết, quản lý thu chi hằng
-                  ngày, quản lý tài sản và nợ, phân tích và theo dõi tiến độ thực hiện các kế hoạch
-                  dòng tiền, và điểm đặc biệt là các gợi ý đầu tư dài hạn phù hợp.</p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="avatar mb-3">
-                <img src="{{ asset('img/user-1.jpg') }}">
-              </div>
-              <div class="name mb-2">Lê Hoài Ân, CFA</div>
-              <div class="subject mb-2">Tác giả cuốn sách bán chạy #1: 20 Năm Lịch Sử Thị Trường
-                Chứng Khoán Việt Nam</div>
-              <div class="content">
-                <p>Ứng dụng BossStack Coaching là công cụ giúp cụ thể hóa những ý tưởng và phương
-                  pháp quản lý được trình bày trong các sách tài chính cá nhân. Với BossStack
-                  Coaching, bạn sẽ có thể theo dõi và kiểm soát được các mục tiêu tài chính đã đề ra
-                  để từng bước đạt được mục tiêu tự do tài chính. Ngoài ra, bạn có thể sử dụng ứng
-                  dụng như một công cụ để quản lý toàn bộ các khoản đầu tư của mình trên thị trường
-                  chứng khoán một cách chi tiết cụ thể từng lệnh giao dịch. Các kiến thức đầu tư
-                  cũng là một trong những ưu điểm của BossStack Coaching mà bạn nên sử dụng. </p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="avatar mb-3">
-                <img src="{{ asset('img/user.jpg') }}">
-              </div>
-              <div class="name mb-2">Huỳnh Thu Ái</div>
-              <div class="subject mb-2">Nhà cố vấn - Đào Tạo Quản Lý Hệ Thống Doanh Nghiệp AMS
-              </div>
-              <div class="content">
-                <p>Sau một thời gian sử dụng BossStack Coaching, tôi đã xem đây như là một công cụ
-                  để thực hiện lên kế hoạch phân bổ tài sản đến phân bổ các dòng tiền lợi nhuận và
-                  các ví mục tiêu tài chính khác nhau. Đồng thời, theo dõi phân tích và đánh giá
-                  tiến độ thực hiện cũng là một trong những tính năng giúp tôi dễ dàng quản lý toàn
-                  bộ danh mục đầu tư của mình. Tôi nói với nhiều người rằng, tôi kiếm được nhiều
-                  tiền hơn nữa khi dùng BossStack Coaching. Đơn giản vì nếu các nguồn tiền được phân
-                  bổ hợp lý, thì tiền sẽ được sử dụng đúng. Và trong từng mục thu chi, từng mục tiêu
-                  tài chính, tôi có thể thấy chúng được tối ưu chưa. Sẽ có hai điều mà tôi phải thực
-                  hiện cùng lúc, một là cần phải kiếm thêm tiền để đổ thêm vào các mục tiêu, hai là
-                  tôi phải cắt giảm đi những chi phí ẩn hay chi phí không cần thiết mà trước đây
-                  mình không để ý đến. Mọi thứ đều nằm trong tầm kiểm soát, như thế tôi có được an
-                  toàn tài chính.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- End Nhận xét -->
-
+    </div>
   </div>
 
-  @include('home.footer')
+  <div class="section section-why-bs why-bs">
+    <div class="container">
+      <div class="wrap">
+        <div class="why-bs__left">
+          <h4 class="section-title">Tại sao lựa chọn BossStack?</h4>
+          <div class="why-bs__list">
+            <div class="why-bs__item">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-1.svg') }}" alt="">
+              <span class="text">Kiểm soát tốt dòng tiền chủ sở hữu</span>
+            </div>
+            <div class="why-bs__item">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-2.svg') }}" alt="">
+              <span class="text">Kiểm soát thất thoát</span>
+            </div>
+            <div class="why-bs__item">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-3.svg') }}" alt="">
+              <span class="text">Theo kịp xu hướng chuyển đổi số</span>
+            </div>
+            <div class="why-bs__item">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-4.svg') }}" alt="">
+              <span class="text">Gia tăng chất lượng dữ liệu Tối ưu hóa chi phí</span>
+            </div>
+            <div class="why-bs__item">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-5.svg') }}" alt="">
+              <span class="text">Công cụ quản lý vận hành hiệu quả cho doanh nghiệp</span>
+            </div>
+            <div class="why-bs__item">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-6.svg') }}" alt="">
+              <span class="text">Tự động hóa quy trình quản lý để giải phóng chủ doanh nghiệp</span>
+            </div>
+          </div>
+        </div>
+        <img class="img-fluid why-bs__img" src="{{ asset('img/web/why-bs-1.png') }}" alt="">
+      </div>
+    </div>
+  </div>
 
-  <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
-  <script src="{{ asset('bower_components/jquery-ui/jquery-ui.min.js') }}"></script>
-  <script>
-    $.widget.bridge('uibutton', $.ui.button);
-  </script>
-  <script src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-  <script src="{{ asset('bower_components/moment/min/moment.min.js') }}"></script>
-  <script src="{{ asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
+  <div class="section section-partner partner">
+    <div class="container">
+      <div class="wrap">
+        <div class="partner-carousel owl-carousel owl-theme">
+          <div class="item">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-1.png') }}">
+          </div>
+          <div class="item">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-2.png') }}">
+          </div>
+          <div class="item">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-3.png') }}">
+          </div>
+          <div class="item">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-4.png') }}">
+          </div>
+          <div class="item">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-5.png') }}">
+          </div>
+          <div class="item">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-6.png') }}">
+          </div>
+          <div class="item">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-7.png') }}">
+          </div>
+          <div class="item">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-8.png') }}">
+          </div>
+          <div class="item">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-9.png') }}">
+          </div>
+          <div class="item">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-10.png') }}">
+          </div>
+          <div class="item">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-11.png') }}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <script src="{{ asset('js/commons.js') }}"></script>
+  <div class="section section-review review">
+    <div class="container">
+      <div class="wrap">
+        <h4 class="section-title">Khách hàng nói về giải pháp BossStack</h4>
+        <div class="review-body">
+          <div class="review-carousel owl-carousel owl-theme">
+            <div class="item">
+              <div class="review-rate">
+                <div class="review-rate__item">
+                  <p class="title">ĐỔI MỚI & CHẤT LƯỢNG</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+                <div class="review-rate__item">
+                  <p class="title">LỢI ÍCH</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+                <div class="review-rate__item">
+                  <p class="title">MỨC ĐỘ HÀI LÒNG</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+              </div>
+              <p class="review-content">“Sử dụng <span class="text-bold">phần mềm BossStack</span>
+                cuối tháng tôi không cần ngồi ghi
+                chép hay
+                nhập bảng tính Excel. <span class="text-bold">Phần mềm BossStack</span> giúp tôi quản
+                lý mọi thu chi của cá nhân, gia
+                đình và bóc tách hoàn toàn với dòng tiền kinh doanh tại doanh nghiệp của tôi. Tính
+                năng
+                mà tôi đặc biệt quan tâm đó chính là tính toán số tiền nghỉ hưu giúp tôi có những kế
+                hoạch dài hạn về tài chính của mình.”</p>
+              <div class="review-footer">
+                <img class="img-fluid review-footer__avt"
+                  src="{{ asset('img/web/review-avt-1.jpg') }}" alt="">
+                <div class="review-footer__info">
+                  <h6 class="name">Nguyễn Đỗ Cẩm Bình</h6>
+                  <p class="position">Trưởng phòng kinh doanh công ty BĐS Him Lam</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="review-rate">
+                <div class="review-rate__item">
+                  <p class="title">ĐỔI MỚI & CHẤT LƯỢNG</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+                <div class="review-rate__item">
+                  <p class="title">LỢI ÍCH</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+                <div class="review-rate__item">
+                  <p class="title">MỨC ĐỘ HÀI LÒNG</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+              </div>
+              <p class="review-content">“Sử dụng <span class="text-bold">phần mềm BossStack</span>
+                cuối tháng tôi không cần ngồi ghi
+                chép hay
+                nhập bảng tính Excel. <span class="text-bold">Phần mềm BossStack</span> giúp tôi quản
+                lý mọi thu chi của cá nhân, gia
+                đình và bóc tách hoàn toàn với dòng tiền kinh doanh tại doanh nghiệp của tôi. Tính
+                năng
+                mà tôi đặc biệt quan tâm đó chính là tính toán số tiền nghỉ hưu giúp tôi có những kế
+                hoạch dài hạn về tài chính của mình.”</p>
+              <div class="review-footer">
+                <img class="img-fluid review-footer__avt"
+                  src="{{ asset('img/web/review-avt-1.jpg') }}" alt="">
+                <div class="review-footer__info">
+                  <h6 class="name">Nguyễn Đỗ Cẩm Bình</h6>
+                  <p class="position">Trưởng phòng kinh doanh công ty BĐS Him Lam</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="review-rate">
+                <div class="review-rate__item">
+                  <p class="title">ĐỔI MỚI & CHẤT LƯỢNG</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+                <div class="review-rate__item">
+                  <p class="title">LỢI ÍCH</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+                <div class="review-rate__item">
+                  <p class="title">MỨC ĐỘ HÀI LÒNG</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+              </div>
+              <p class="review-content">“Sử dụng <span class="text-bold">phần mềm BossStack</span>
+                cuối tháng tôi không cần ngồi ghi
+                chép hay
+                nhập bảng tính Excel. <span class="text-bold">Phần mềm BossStack</span> giúp tôi quản
+                lý mọi thu chi của cá nhân, gia
+                đình và bóc tách hoàn toàn với dòng tiền kinh doanh tại doanh nghiệp của tôi. Tính
+                năng
+                mà tôi đặc biệt quan tâm đó chính là tính toán số tiền nghỉ hưu giúp tôi có những kế
+                hoạch dài hạn về tài chính của mình.”</p>
+              <div class="review-footer">
+                <img class="img-fluid review-footer__avt"
+                  src="{{ asset('img/web/review-avt-1.jpg') }}" alt="">
+                <div class="review-footer__info">
+                  <h6 class="name">Nguyễn Đỗ Cẩm Bình</h6>
+                  <p class="position">Trưởng phòng kinh doanh công ty BĐS Him Lam</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> --}}
-
-  <script src="{{ asset('js/libs/bootstrap3-typeahead.min.js') }}"></script>
-  <script src="{{ asset('js/libs/bootstrap-multiselect.js') }}"></script>
-  <link rel="stylesheet" href="{{ asset('js/libs/bootstrap-multiselect.css') }}" />
-
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-
-  <!-- Carousel JS -->
-  <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-  <!-- Carousel JS -->
-
-  <!-- Fund JS -->
-  <script src="{{ asset('js/fund.js') }}"></script>
-  <!-- Fund JS -->
-
-  @yield('scripts')
-
-
-
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {},
-      Tawk_LoadStart = new Date();
-    (function() {
-      var s1 = document.createElement("script"),
-        s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/60504f44067c2605c0b8c7c8/1f0srb9eh';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script>
-  <!--End of Tawk.to Script-->
-
-</body>
-
-</html>
+  <div class="section section-contact-us contact-us">
+    <div class="container">
+      <div class="wrap">
+        <div class="contact-us__content">
+          <h3 class="section-title">Liên hệ với chúng tôi</h3>
+          <div class="contact-us__list">
+            <div class="contact-us__item">
+              <img class="img-fluid icon" src="{{ asset('img/web/icon-check.svg') }}"
+                alt="" />
+              <span class="text">Cắt giảm tối đa chi phí</span>
+            </div>
+            <div class="contact-us__item">
+              <img class="img-fluid icon" src="{{ asset('img/web/icon-check.svg') }}"
+                alt="" />
+              <span class="text">Tiết kiệm 80% thời gian quản lý dự án</span>
+            </div>
+            <div class="contact-us__item">
+              <img class="img-fluid icon" src="{{ asset('img/web/icon-check.svg') }}"
+                alt="" />
+              <span class="text">Gia tăng 55% hiệu suất công việc</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-us__form" action="" method="post">
+          <div class="form-group">
+            <label class="form-label" for="fullname">Họ và tên <span>*</span></label>
+            <input type="text" class="form-control" id="fullname" name="fullname"
+              placeholder="Họ và tên *" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Số điện thoại <span>*</span></label>
+            <input type="text" class="form-control" id="phone" name="phone"
+              placeholder="Số điện thoại *" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email <span>*</span></label>
+            <input type="email" class="form-control" id="email" name="email"
+              placeholder="Email *" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="company">Công ty</label>
+            <input type="text" class="form-control" id="company" name="company"
+              placeholder="Công ty">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Chúng tôi có thể giúp gì cho bạn?</label>
+            <textarea name="message" class="form-control" id="message"
+              placeholder="Chúng tôi có thể giúp gì cho bạn?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-second btn-size-lg btn-send">Gửi ngay</button>
+        </form>
+      </div>
+    </div>
+  </div>
+@endsection
