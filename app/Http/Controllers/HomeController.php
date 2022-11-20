@@ -26,11 +26,27 @@ class HomeController extends Controller
         return $this->view('index');
     }
 
+    public function cashDissection()
+    {
+        return $this->view('products.CashDissection');
+    }
+
     public function aboutUs()
     {
         return $this->view('aboutus');
     }
 
+    public function contact()
+    {
+        return $this->view('contact');
+    }
+
+    
+
+
+
+
+    /*TẠM ẨN
     public function advisory()
     {
         return $this->view('advisory');
@@ -74,11 +90,6 @@ class HomeController extends Controller
     public function recruitmentDetail()
     {
         return $this->view('recruitment-detail');
-    }
-
-    public function contact()
-    {
-        return $this->view('contact');
     }
 
     public function invest()
@@ -157,6 +168,7 @@ class HomeController extends Controller
     {
         return $this->view('course.MultiCashGrowth');
     }
+    */
 
     public function cashFlowDissection()
     {

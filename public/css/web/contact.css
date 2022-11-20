@@ -1,0 +1,135 @@
+.advisory{
+  background-color: var(--bg-cyan-cl);
+}
+
+.advisory .wrap{
+  display: flex;
+  justify-content: space-between;
+  margin-top: -270px;
+}
+
+.advisory-content,
+.advisory-form{
+  width: calc(50% - 14px);
+}
+
+.advisory-content h4{
+  font-family: hr;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.advisory-content p{
+  color: var(--primary-cl);
+  margin-bottom: 63px;
+}
+
+.advisory-content .company-info__item{
+  display: flex;
+  align-items: flex-start;
+  column-gap: 16px;
+  margin-bottom: 24px;
+}
+
+.advisory-content .company-info__item:last-child{
+  margin-bottom: 0;
+}
+
+.advisory-content .company-info__item .icon{
+  margin-top: 4px;
+}
+
+.advisory-content .company-info__item .text{
+  color: var(--gray-cl-7);
+}
+
+.advisory-form{
+  padding: 60px;
+  border-radius: 16px;
+  background-color: var(--white-cl);
+  box-shadow: 0px 10px 20px rgba(53, 99, 172, 0.3);
+}
+
+.advisory-form__header{
+  margin-bottom: 16px;
+}
+
+.advisory-form__header img{
+  max-width: 259px;
+  margin: 0 auto 16px;
+}
+
+.advisory-form__header p{
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: var(--gray-cl-7);
+}
+
+.advisory-form .form-group{
+  margin-bottom: 24px;
+}
+
+.advisory-form .form-group .form-label{
+  font-family: hb;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 12px;
+  color: #233945;
+}
+
+.advisory-form .form-group .form-control,
+.advisory-form .form-group .form-control::placeholder{
+  font-size: 16px;
+  font-family: hr;
+  line-height: 24px;
+}
+
+.advisory-form .form-group .form-control{
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-color: #EFF0F2;
+}
+
+.advisory-form .form-group textarea{
+  height: 109px;
+}
+
+.advisory-form .form-group .form-control::placeholder{
+  color: #6A7580;
+}
+
+.advisory-form .form-group .form-control:focus{
+  box-shadow: none;
+  border: 2px solid #233945;
+}
+
+.advisory-form .btn-send{
+  margin: 0 auto;
+}
+
+@media (max-width: 1199.98px){
+  .advisory-form{
+    padding: 25px;
+  }
+}
+
+@media (max-width: 991.98px){
+  .advisory .wrap{
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .advisory-content, .advisory-form{
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px){
+
+}
+
+@media (max-width: 575.98px){
+
+}

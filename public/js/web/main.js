@@ -48,6 +48,13 @@ menuMainLink.forEach(element => {
   })
 })
 
+let getLink = window.location.href;
+let namePageUrl = getLink.slice(21);
+
+if (namePageUrl === '') {
+  document.querySelector(".header").classList.add("header-home");
+}
+
 window.addEventListener("scroll", function (e) {
   if (e.currentTarget.pageYOffset > 50) {
     document.querySelector(".header").classList.add("fixed");

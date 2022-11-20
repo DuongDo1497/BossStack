@@ -13,27 +13,29 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/products/cash-flow-dissection', 'HomeController@cashDissection')->name('cash-flow-dissection');
+Route::get('about-us', 'HomeController@aboutUs')->name('about-us');
+Route::get('contact', 'HomeController@contact')->name('contact');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('about-us', 'HomeController@aboutUs')->name('about-us');
+// Landing Page
+Route::get('boctachdongtien', 'HomeController@cashFlowDissection')->name('boctachdongtien');
+Route::get('dulieuso', 'HomeController@digitalData')->name('dulieuso');
+Route::get('chuyendoidongtien', 'HomeController@cashConvert')->name('chuyendoidongtien');
+Route::get('chuyendoivanhanh', 'HomeController@operateConvert')->name('chuyendoivanhanh');
 
+
+
+/* TẠM ẨN
 Route::get('advisory', 'HomeController@advisory')->name('advisory');
-
 Route::get('TheDefinitionOfInvesting', 'HomeController@TheDefinitionOfInvesting')->name('TheDefinitionOfInvesting');
-
 Route::get('WhyYouShouldInvest', 'HomeController@WhyYouShouldInvest')->name('WhyYouShouldInvest');
-
 Route::get('EffectiveBudgeting', 'HomeController@EffectiveBudgeting')->name('EffectiveBudgeting');
-
 Route::get('FinancialPlanning', 'HomeController@FinancialPlanning')->name('FinancialPlanning');
-
 Route::get('SavingMethod', 'HomeController@SavingMethod')->name('SavingMethod');
-
 Route::get('HowToGrowYourCashFlow', 'HomeController@HowToGrowYourCashFlow')->name('HowToGrowYourCashFlow');
-
 Route::get('recruitment', 'HomeController@recruitment')->name('recruitment');
 Route::get('recruitment-details', 'HomeController@recruitmentDetail')->name('recruitment-details');
-Route::get('contact', 'HomeController@contact')->name('contact');
 Route::get('invest', 'HomeController@invest')->name('invest');
 Route::get('personalcash', 'HomeController@personalCash')->name('personalcash');
 Route::get('predictindex', 'HomeController@predictIndex')->name('predictindex');
@@ -47,11 +49,6 @@ Route::get('payment-method', 'HomeController@paymentMethod')->name('payment-meth
 Route::get('information', 'HomeController@information')->name('information');
 // endfooter
 
-Route::get('boctachdongtien', 'HomeController@cashFlowDissection')->name('boctachdongtien');
-Route::get('dulieuso', 'HomeController@digitalData')->name('dulieuso');
-Route::get('chuyendoidongtien', 'HomeController@cashConvert')->name('chuyendoidongtien');
-Route::get('chuyendoivanhanh', 'HomeController@operateConvert')->name('chuyendoivanhanh');
-
 
 // course
 Route::get('bossstack-startup', 'HomeController@startup')->name('bossstack-startup');
@@ -62,6 +59,7 @@ Route::get('money-begets-money', 'HomeController@moneyBegetsMoney')->name('money
 Route::get('multi-cash-growth', 'HomeController@multiCashGrowth')->name('multi-cash-growth');
 Route::post('/store', 'HomeController@store')->name('coaching-store');
 // endcourse
+*/
 
 
 Route::group(['middleware' => ['auth','web','checkauth']], function() {

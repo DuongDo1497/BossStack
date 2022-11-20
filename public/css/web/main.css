@@ -475,7 +475,6 @@
 
 .contact-us__form textarea.form-control{
   height: 109px;
-  resize: none;
 }
 
 .contact-us__form .btn-send{

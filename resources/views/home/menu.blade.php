@@ -7,13 +7,13 @@
     </a>
     <ul class="menu-main__child animate__animated" style="visibility: hidden">
       <li>
-        <a href="{{ asset('boctachdongtien') }}">Giải pháp bóc tách dòng tiền</a>
+        <a href="{{ asset('chuyendoidongtien') }}">Giải pháp bóc tách dòng tiền</a>
       </li>
       <li>
-        <a href="{{ asset('boctachdongtien') }}">Giải pháp dòng tiền số</a>
+        <a href="{{ asset('chuyendoidongtien') }}">Giải pháp dòng tiền số</a>
       </li>
       <li>
-        <a href="{{ asset('boctachdongtien') }}">Kiểm soát thất thoát doanh nghiệp</a>
+        <a href="{{ asset('chuyendoidongtien') }}">Kiểm soát thất thoát doanh nghiệp</a>
       </li>
     </ul>
   </li>

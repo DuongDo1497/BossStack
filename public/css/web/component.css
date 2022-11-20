@@ -5,6 +5,24 @@
   align-items: center;
 }
 
+/* Color Style */
+
+.bg-yellow-cl{
+  background-color: var(--bg-yellow-cl);
+}
+
+.bg-purple-cl{
+  background-color: var(--bg-purple-cl);
+}
+
+.bg-cyan-cl{
+  background-color: var(--bg-cyan-cl);
+}
+
+.bg-green-cl{
+  background-color: var(--bg-green-cl);
+}
+
 /* Button Style */
 .btn{
   width: var(--w-btn);
@@ -86,4 +104,20 @@
   color: var(--primary-cl);
   border: 1px solid var(--primary-cl);
   background-color: var(--white-cl);
+}
+
+/* Advertise Style */
+
+.advertise{
+  padding: 120px 0;
+  background: url('../../img/web/advertise-img.jpg') center bottom/cover no-repeat;
+}
+
+.advertise-title{
+  color: var(--white-cl);
+  margin-bottom: 60px;
+}
+
+.advertise .btn-contact{
+  margin: 0 auto;
 }

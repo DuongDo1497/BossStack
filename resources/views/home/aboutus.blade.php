@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-  <div class="section section-banner banner-default">
+  <div class="banner-default">
     <div class="container">
       <div class="wrap">
         <div class="banner-default__body">
@@ -91,7 +91,7 @@
               </div>
             </div>
           </div>
-          <div class="leadership-item flex-row-reverse">
+          <div class="leadership-item reverse">
             <img class="img-fluid leadership-avt" src="{{ asset('img/web/leadership-2.jpg') }}"
               alt="">
             <div class="leadership-info">
@@ -195,6 +195,15 @@
         </div>
         <img class="img-fluid history-tree" src="{{ asset('img/web/history-tree.png') }}"
           alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-advertise advertise">
+    <div class="container">
+      <div class="wrap">
+        <h3 class="advertise-title">Chúng tôi giải phóng chủ doanh nghiệp khỏi gánh nặng quản lý</h3>
+        <a class="btn btn-second btn-size-lg btn-contact" href="#">Liên hệ</a>
       </div>
     </div>
   </div>

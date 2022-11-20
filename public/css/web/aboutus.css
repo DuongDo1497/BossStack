@@ -1,7 +1,3 @@
-.banner-default{
-  padding: 245px 0 323px;
-}
-
 /* Introduction General */
 
 .introduction .wrap{
@@ -45,6 +41,10 @@
   margin-bottom: 0;
 }
 
+.introduction-bs img{
+  object-fit: cover;
+}
+
 .introduction-slogan{
   display: flex;
   background-color: var(--gray-cl-1);
@@ -65,6 +65,52 @@
   color: var(--gray-cl-7);
 }
 
+@media (max-width: 1399.98px){
+  .introduction-bs__left{
+    width: 670px;
+  }
+}
+
+@media (max-width: 1199.98px){
+  .introduction-bs__left{
+    width: 50%;
+  }
+}
+
+@media (max-width: 991.98px){
+  .introduction-bs,
+  .introduction-slogan{
+    flex-direction: column;
+  }
+
+  .introduction-bs__left{
+    width: 100%;
+  }
+
+  .introduction-bs img{
+    height: 300px;
+  }
+
+  .introduction-slogan__item{
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px){
+  .introduction h3{
+    font-size: 38px;
+  }
+
+  .introduction-bs__content p,
+  .introduction-slogan__item .text{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575.98px){
+
+}
+
 /* Leadership */
 
 .leadership{
@@ -83,12 +129,17 @@
   background-color: var(--white-cl);
 }
 
+.leadership-item.reverse{
+  flex-direction: row-reverse;
+}
+
 .leadership-item:last-child{
   margin-bottom: 0;
 }
 
 .leadership-avt{
   width: 427px;
+  object-fit: cover;
 }
 
 .leadership-info{
@@ -121,6 +172,36 @@
 .leadership-info .exp p{
   color: var(--gray-cl-7);
 }
+
+@media (max-width: 1399.98px){
+
+}
+
+@media (max-width: 1199.98px){
+
+}
+
+@media (max-width: 991.98px){
+  .leadership-item,
+  .leadership-item.reverse{
+    flex-direction: column;
+  }
+
+  .leadership-avt,
+  .leadership-info{
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px){
+
+}
+
+@media (max-width: 575.98px){
+
+}
+
+/* History Company */
 
 .section-about-history .wrap {
   position: relative;
@@ -190,6 +271,163 @@
   text-align: left;
 }
 
+@media (max-width: 1399.98px){
+  .section-about-history .wrap {
+    height: 1300px;
+  }
+
+  .section-about-history .history-item:first-child {
+    top: 160px;
+    left: 420px;
+  }
+
+  .section-about-history .history-item:nth-child(2) {
+    top: 410px;
+    left: 490px;
+  }
+
+  .section-about-history .history-item:nth-child(3) {
+    top: 650px;
+    left: 360px;
+  }
+
+  .section-about-history .history-item:last-child {
+    top: 790px;
+    left: 58px;
+  }
+
+  .section-about-history .history-item .icon {
+    max-width: 120px;
+  }
+
+  .section-about-history .feature {
+    max-width: 332px;
+  }
+
+  .section-about-history .history-tree {
+    max-width: 800px;
+    top: 160px;
+    left: -330px;
+  }
+}
+
+@media (max-width: 1199.98px){
+
+}
+
+@media (max-width: 991.98px){
+  .section-about-history .wrap {
+    height: 1200px
+  }
+
+  .section-about-history .history-item:first-child {
+    top: 140px;
+    left: 340px;
+  }
+
+  .section-about-history .history-item:nth-child(2) {
+    top: 360px;
+    left: 390px;
+  }
+
+  .section-about-history .history-item:nth-child(3) {
+    top: 610px;
+    left: 310px;
+  }
+
+  .section-about-history .history-item:last-child {
+    top: 705px;
+    left: 30px;
+  }
+
+  .section-about-history .feature {
+    max-width: 234px;
+  }
+
+  .section-about-history .feature h4 {
+    font-size: 20px;
+    font-family: hb;
+  }
+
+  .section-about-history .feature p {
+    font-size: 14px;
+  }
+
+  .section-about-history .history-tree {
+    max-width: 700px;
+    top: 160px;
+    left: -330px;
+  }
+}
+
+@media (max-width: 767.98px){
+  .section-about-history .wrap {
+    height: 1000px;
+  }
+
+  .section-about-history .history-item:first-child {
+    top: 110px;
+    left: 250px;
+  }
+
+  .section-about-history .history-item:nth-child(2) {
+    top: 290px;
+    left: 300px;
+  }
+
+  .section-about-history .history-item:nth-child(3) {
+    top: 480px;
+    left: 210px;
+  }
+
+  .section-about-history .history-item:last-child {
+    top: 546px;
+    left: 10px;
+  }
+
+  .section-about-history .history-item .icon {
+    max-width: 88px;
+  }
+
+  .section-about-history .feature {
+    max-width: 140px;
+  }
+
+  .section-about-history .feature h4 {
+    font-size: 15px;
+  }
+
+  .section-about-history .history-tree {
+    max-width: 520px;
+    top: 160px;
+    left: -250px;
+  }
+}
+
 @media (max-width: 575.98px){
-  
+  .section-about-history .history-item:first-child {
+    top: 22px;
+    left: 220px;
+  }
+
+  .section-about-history .history-item:nth-child(2) {
+    top: 172px;
+    left: 240px;
+  }
+
+  .section-about-history .history-item:nth-child(3) {
+    top: 300px;
+    left: 180px;
+  }
+
+  .section-about-history .history-item:last-child {
+    top: 388px;
+    left: 30px;
+  }
+
+  .section-about-history .history-tree {
+    max-width: 400px;
+    top: 180px;
+    left: -170px;
+  }
 }

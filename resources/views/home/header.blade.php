@@ -1,9 +1,9 @@
 <header class="header animate__animated">
   <div class="container">
     <div class="wrap">
-      <a href="#" class="logo">
-        <img class="img-fluid" src="{{ asset('img/web/logo-w.svg') }}" alt="">
-        <img class="img-fluid" src="{{ asset('img/web/logo.svg') }}" alt="">
+      <a href="{{ asset('/') }}" class="logo">
+        <img class="img-fluid logo-w" src="{{ asset('img/web/logo-w.svg') }}" alt="">
+        <img class="img-fluid logo-cl" src="{{ asset('img/web/logo.svg') }}" alt="">
       </a>
       @include('home.menu')
       <div class="button-control">

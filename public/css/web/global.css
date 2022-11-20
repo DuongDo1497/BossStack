@@ -105,12 +105,20 @@ a{
   text-decoration: none;
 }
 
+textarea{
+  resize: none;
+}
+
 .main{
   overflow: hidden;
   position: relative;
 }
 
 @media (max-width: 991.98px){
+  h3 {
+    font-size: 42px;
+  }
+
   h4 {
     font-size: 34px;
   }

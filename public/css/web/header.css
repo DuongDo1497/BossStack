@@ -18,12 +18,20 @@
   justify-content: space-between;
 }
 
-.header .logo img:first-child{
+.header.header-home .logo img:first-child{
   display: block;
 }
 
-.header .logo img:last-child{
+.header.header-home .logo img:last-child{
   display: none;
+}
+
+.header:not(.header-home) .logo img:first-child{
+  display: none;
+}
+
+.header:not(.header-home) .logo img:last-child{
+  display: block;
 }
 
 .header.fixed .logo img:first-child{
@@ -55,6 +63,10 @@
   display: flex;
   align-items: center;
   column-gap: 4px;
+  color: var(--primary-cl-6);
+}
+
+.header.header-home .menu-main__parent .menu-main__link{
   color: var(--white-cl);
 }
 
@@ -78,6 +90,14 @@
 
 .header .menu-main__link .icon-w{
   display: block;
+}
+
+.header:not(.header-home) .icon{
+  display: block;
+}
+
+.header:not(.header-home) .icon-w{
+  display: none;
 }
 
 .header.fixed .menu-main__link .icon{
@@ -119,13 +139,25 @@
 }
 
 .button-control .btn.btn-stroke{
+  color: var(--primary-cl);
+  background-color: transparent;
+  border: 1px solid var(--primary-cl);
+}
+
+.button-control .btn.btn-primary{
+  color: var(--white-cl);
+  background-color: var(--primary-cl);
+  border: 1px solid transparent;
+}
+
+.header.header-home .button-control .btn.btn-stroke{
   color: var(--white-cl);
   background-color: transparent;
   border: 1px solid var(--white-cl);
 }
 
-.button-control .btn.btn-primary{
-  color: var(--primary-cl-6);
+.header.header-home .button-control .btn.btn-primary{
+  color: var(--primary-cl);
   background-color: var(--white-cl);
   border: 1px solid transparent;
 }
@@ -203,8 +235,11 @@
   .menu-main__parent .menu-main__link{
     width: 100%;
     padding: 10px 15px;
-    color: var(--primary-cl-6);
     justify-content: space-between;
+  }
+
+  .header.header-home .menu-main__parent .menu-main__link{
+    color: var(--primary-cl-6);
   }
 
   .header .menu-main__link .icon{
@@ -223,6 +258,7 @@
 
   .menu-main__child li a{
     width: 100%;
+    font-size: 15px;
     padding: 15px 30px;
   }
 
@@ -236,8 +272,12 @@
     display: block;
     border: 0;
     box-shadow: none;
-    color: var(--white-cl);
+    color: var(--primary-cl-6);
     background-color: transparent;
+  }
+
+  .header.header-home .nav-bars{
+    color: var(--white-cl);
   }
 
   .header.fixed .nav-bars{
