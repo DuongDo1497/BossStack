@@ -1,7 +1,7 @@
 @extends('home.layout')
 
 @section('head')
-  <link rel="stylesheet" href="{{ asset('css/web/products/CashDissection.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/web/products/CashExecution.css') }}">
 @endsection
 
 @section('content')
@@ -13,13 +13,13 @@
             <img class="icon img-fluid" src="{{ asset('img/web/link-icon.svg') }}" alt="" />
             <span class="text">Sản phẩm</span>
           </div>
-          <h1 class="banner-default__title text-start">GIẢI PHÁP BÓC TÁCH DÒNG TIỀN</h1>
+          <h1 class="banner-default__title text-start">GIẢI PHÁP THỰC THI DÒNG TIỀN CHUYÊN SÂU</h1>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section section-benefits benefits-product">
+  {{-- <div class="section section-benefits benefits-product">
     <div class="container">
       <div class="wrap">
         <div class="benefits-product__list">
@@ -46,46 +46,42 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
   <div class="section section-why why-product">
     <div class="container">
       <div class="wrap">
         <div class="why-product__content">
-          <h4 class="section-title">Tại sao chủ doanh nghiệp cần giải pháp bóc tách dòng tiền?</h4>
+          <h4 class="section-title">Tại sao chủ doanh nghiệp cần giải pháp thực thi dòng tiền chuyên
+            sâu?</h4>
           <div class="why-product__list">
-            <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-1.svg') }}" alt=""
-                class="icon img-fluid">
-              <span class="text"><b>Làm mãi không dư</b></span>
-            </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-2.svg') }}" alt=""
                 class="icon img-fluid">
-              <span class="text"><b>Luôn bất an</b> vì không biết cách kiểm soát dòng tiền, dự phòng
-                tiền cho tương lai</span>
+              <span class="text">Chủ doanh nghiệp thường không thể tách dòng tiền cá nhân của mình
+                ra khỏi doanh nghiệp.</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-3.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-5.svg') }}" alt=""
                 class="icon img-fluid">
-              <span class="text"><b>Lẫn lộn tiền bạc</b> gia đình, cá nhân và đầu tư, kinh
-                doanh</span>
+              <span class="text">Không quản lý được nguồn vốn doanh nghiệp gây thiếu hụt vốn và mất
+                nhiều cơ hội kinh doanh.</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-4.svg') }}" alt=""
                 class="icon img-fluid">
-              <span class="text"><b>Không có công cụ</b> để xử lý dòng tiền cá nhân, tự doanh và
-                doanh nghiệp</span>
+              <span class="text">Thiếu công cụ phân bổ dòng tiền ảnh hưởng đến hoạt động doanh
+                nghiệp, đặc biệt trong thị trường nhiều biến động.</span>
             </div>
           </div>
         </div>
-        <img src="{{ asset('img/web/cash-dissection-img-1.png') }}" alt=""
+        <img src="{{ asset('img/web/cash-dissection-img-2.png') }}" alt=""
           class="why-product__img img-fluid">
       </div>
     </div>
   </div>
 
-  <div class="section section-help help-product">
+  {{-- <div class="section section-help help-product">
     <div class="container">
       <div class="wrap">
         <h4 class="section-title">BossStack giúp bạn bóc tách dòng tiền như thế nào?</h4>
@@ -115,7 +111,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
   <div class="section section-advertise advertise bg-img-w">
     <div class="container">

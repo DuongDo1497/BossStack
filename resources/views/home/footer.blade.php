@@ -48,9 +48,9 @@
         <p class="footer-item__title">Về chúng tôi</p>
         <div class="footer-item__content">
           <ul>
-            <li><a href="#">Về BossStack</a></li>
+            <li><a href="{{ asset('about-us') }}">Về BossStack</a></li>
             <li><a href="#">Điều khoản sử dụng</a></li>
-            <li><a href="#">Liên hệ</a></li>
+            <li><a href="{{ asset('contact') }}">Liên hệ</a></li>
           </ul>
         </div>
       </div>

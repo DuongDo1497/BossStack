@@ -15,7 +15,8 @@
               <br /><span class="text-bold">CẮT GIẢM CHI PHÍ</span> tức thì và xây dựng kế hoạch
               <br /><span class="text-bold">GIA TĂNG LỢI NHUẬN</span> lâu dài!
             </p>
-            <a class="btn btn-second btn-size-lg btn-contact" href="#">Liên hệ</a>
+            <a class="btn btn-second btn-size-lg btn-contact" href="{{ asset('contact') }}">Liên
+              hệ</a>
           </div>
         </div>
       </div>

@@ -243,7 +243,7 @@
       <div class="container">
         <div class="wrap">
           <h3 class="timeline-title">
-            Giải pháp<br /><span>Bóc tách dòng tiền</span>
+            Giải pháp<br /><span>Chuyển đổi dữ liệu</span>
           </h3>
           <div class="timeline">
             <div class="timeline__all">

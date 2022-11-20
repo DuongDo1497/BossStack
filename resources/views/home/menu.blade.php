@@ -7,10 +7,10 @@
     </a>
     <ul class="menu-main__child animate__animated" style="visibility: hidden">
       <li>
-        <a href="{{ asset('chuyendoidongtien') }}">Giải pháp bóc tách dòng tiền</a>
+        <a href="{{ asset('/products/cash-flow-dissection') }}">Bóc tách dòng tiền</a>
       </li>
       <li>
-        <a href="{{ asset('chuyendoidongtien') }}">Giải pháp dòng tiền số</a>
+        <a href="{{ asset('/products/cash-flow-execution') }}">Thực thi dòng tiền chuyên sâu</a>
       </li>
       <li>
         <a href="{{ asset('chuyendoidongtien') }}">Kiểm soát thất thoát doanh nghiệp</a>

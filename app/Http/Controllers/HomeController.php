@@ -31,6 +31,11 @@ class HomeController extends Controller
         return $this->view('products.CashDissection');
     }
 
+    public function cashExecution()
+    {
+        return $this->view('products.CashExecution');
+    }
+
     public function aboutUs()
     {
         return $this->view('aboutus');

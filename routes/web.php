@@ -14,6 +14,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/products/cash-flow-dissection', 'HomeController@cashDissection')->name('cash-flow-dissection');
+Route::get('/products/cash-flow-execution', 'HomeController@cashExecution')->name('cash-flow-execution');
 Route::get('about-us', 'HomeController@aboutUs')->name('about-us');
 Route::get('contact', 'HomeController@contact')->name('contact');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
@@ -57,9 +58,10 @@ Route::get('bossstack-bigcorp', 'HomeController@bigCorp')->name('bossstack-bigco
 Route::get('cash-flow-handling', 'HomeController@cashFlowHandling')->name('cash-flow-handling');
 Route::get('money-begets-money', 'HomeController@moneyBegetsMoney')->name('money-begets-money');
 Route::get('multi-cash-growth', 'HomeController@multiCashGrowth')->name('multi-cash-growth');
-Route::post('/store', 'HomeController@store')->name('coaching-store');
 // endcourse
 */
+
+Route::post('/store', 'HomeController@store')->name('coaching-store');
 
 
 Route::group(['middleware' => ['auth','web','checkauth']], function() {

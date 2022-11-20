@@ -24,8 +24,8 @@
       <div class="wrap">
         <div class="advisory-content">
           <h4>Liên hệ tư vấn</h4>
-          <p>Chúng tôi sẽ giúp bạn giải đáp các thắc mắc về: <br />Tìm ra giải pháp thích hợp với mô
-            hình kinh doanh của bạn. Áp dụng công nghệ để tối ưu hóa quy trình kinh doanh</p>
+          <p>Chúng tôi sẽ giúp bạn giải đáp các thắc mắc về: <br />- Tìm ra giải pháp thích hợp với mô
+            hình kinh doanh của bạn. <br />- Áp dụng công nghệ để tối ưu hóa quy trình kinh doanh.</p>
           <div class="company-info">
             <div class="company-info__item">
               <img class="icon img-fluid" src="{{ asset('img/web/icon-phone.svg') }}"
