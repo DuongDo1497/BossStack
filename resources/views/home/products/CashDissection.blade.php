@@ -24,24 +24,33 @@
       <div class="wrap">
         <div class="benefits-product__list">
           <div class="benefits-product__item no-bg">
-            <h4 class="section-title">Lợi ích của Giải pháp bóc tách dòng tiền</h4>
+            <div class="benefits-product__content">
+              <h4 class="section-title">Lợi ích của Giải pháp bóc tách dòng tiền</h4>
+            </div>
           </div>
-          <div class="benefits-product__item bg-cyan-cl">
-            <img src="{{ asset('img/web/cash-dissection-1.svg') }}" alt=""
-              class="icon img-fluid">
-            <p>Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, tự doanh, dòng tiền doanh nghiệp
-            </p>
+          <div class="benefits-product__item">
+            <div class="benefits-product__content bg-cyan-cl">
+              <img src="{{ asset('img/web/cash-dissection-1.svg') }}" alt=""
+                class="icon img-fluid">
+              <p>Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, tự doanh, dòng tiền doanh nghiệp
+              </p>
+            </div>
           </div>
-          <div class="benefits-product__item bg-purple-cl">
-            <img src="{{ asset('img/web/cash-dissection-2.svg') }}" alt=""
-              class="icon img-fluid">
-            <p>Phân bổ và thiết lập hệ thống dòng tiền bằng <b>phần mềm BossStack</b></p>
+          <div class="benefits-product__item">
+            <div class="benefits-product__content bg-purple-cl">
+              <img src="{{ asset('img/web/cash-dissection-2.svg') }}" alt=""
+                class="icon img-fluid">
+              <p>Phân bổ và thiết lập hệ thống dòng tiền bằng <b>phần mềm BossStack</b></p>
+            </div>
           </div>
-          <div class="benefits-product__item bg-green-cl">
-            <img src="{{ asset('img/web/cash-dissection-3.svg') }}" alt=""
-              class="icon img-fluid">
-            <p>Phân tích nền tảng dòng tiền, xử lý và bóc tách các mảnh ghép trong dòng tiền tổng quan
-              cá nhân</p>
+          <div class="benefits-product__item">
+            <div class="benefits-product__content bg-green-cl">
+              <img src="{{ asset('img/web/cash-dissection-3.svg') }}" alt=""
+                class="icon img-fluid">
+              <p>Phân tích nền tảng dòng tiền, xử lý và bóc tách các mảnh ghép trong dòng tiền tổng
+                quan
+                cá nhân</p>
+            </div>
           </div>
         </div>
       </div>

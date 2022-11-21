@@ -18,9 +18,16 @@
         <p class="footer-item__title">Sản phẩm</p>
         <div class="footer-item__content">
           <ul>
-            <li><a href="#">Giải pháp bóc tách dòng tiền</a></li>
-            <li><a href="#">Giải pháp thực thi dòng tiền chuyên sâu</a></li>
-            <li><a href="#">Kiểm soát thất thoát doanh nghiệp</a></li>
+            <li>
+              <a href="{{ asset('/products/cash-flow-dissection') }}">Bóc tách dòng tiền</a>
+            </li>
+            <li>
+              <a href="{{ asset('/products/cash-flow-execution') }}">Thực thi dòng tiền chuyên
+                sâu</a>
+            </li>
+            <li>
+              <a href="{{ asset('/products/loss-control') }}">Kiểm soát thất thoát doanh nghiệp</a>
+            </li>
           </ul>
         </div>
       </div>

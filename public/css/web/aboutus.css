@@ -126,6 +126,7 @@
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 60px;
+  transition: max-height .5s ease 0s;
   background-color: var(--white-cl);
 }
 
@@ -168,9 +169,25 @@
   padding-left: 25px;
 }
 
-.leadership-info .exp li,
 .leadership-info .exp p{
+  font-family: hri;
+  color: var(--primary-cl);
+}
+
+.leadership-info .exp p b{
+  font-family: hb;
+}
+
+.leadership-info .exp li,
+.leadership-info .exp p b{
   color: var(--gray-cl-7);
+}
+
+.leadership-info .read-more{
+  color: var(--primary-cl);
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 24px;
 }
 
 @media (max-width: 1399.98px){

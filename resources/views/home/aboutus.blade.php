@@ -80,13 +80,19 @@
               </h5>
               <h6 class="position">CEO/Founder</h6>
               <div class="exp">
+                <p>Hơn <b>15 năm</b> kinh nghiệm về tài chính, đầu tư</p>
+                <p>Hơn <b>10 năm</b> kinh nghiệm trong ngành ngân hàng</p>
                 <ul>
-                  <li>15 năm kinh nghiệm về tài chính, đầu tư</li>
-                  <li>10 năm kinh nghiệm trong ngành ngân hàng</li>
-                  <li>2012 - 2017: Giám đốc PGD, Phó Giám đốc CN Ngân hàng</li>
-                  <li>7 năm kinh nghiệm trong ngành công nghệ (thương hiệu cũ: LamsTech)</li>
-                  <li>2014 - Hiện tại: CEO, Founder sách RBooks</li>
-                  <li>2015 - Hiện tại: CEO, Founder phần mềm BossStack</li>
+                  <li><b>2018 - Hiện tại</b>: Chủ sở hữu, Nhà sáng lập, và Giám đốc công ty
+                    <b>BossStack</b>.
+                  </li>
+                  <li><b>2015 - HIện tại</b>: Chủ sở hữu, Nhà sáng lập, và Giám đốc công ty
+                    <b>Lamstech</b>.
+                  </li>
+                  <li><b>2014 - Hiện tại</b>: Chủ sở hữu, Nhà sáng lập, và Giám đốc công ty
+                    <b>Rbooks</b>.
+                  </li>
+                  <li><b>2012 - 2017</b>: Phó Giám đốc và Giám đốc Chi nhánh Ngân hàng.</li>
                 </ul>
               </div>
             </div>
@@ -104,19 +110,35 @@
               </h5>
               <h6 class="position">Cố Vấn Tài Chính </h6>
               <div class="exp">
-                <p>Giám đốc điều hành V Lotus</p>
-                <p>Chuỗi nhà hàng cao cấp và nổi tiếng trong ngành F&B như:</p>
+                <p><b>2019 – Hiện tại</b>: Giám Đốc Điều Hành V LOTUS</p>
+                <p>Công ty chuyên về thực phẩm và đồ uống với chuỗi nhà hàng cao cấp và các chuỗi
+                  thương hiệu sản phẩm Nhật nổi tiếng như:</p>
                 <ul>
                   <li>Ussina Sky 77</li>
                   <li>Ushi Mania</li>
-                  <li>Conservo (Japanese Bread)</li>
-                  <li>Yoshinoya (World famous beef bowl since 1899)</li>
-                  <li>CocoIchibanya (Japan No1 Curry)</li>
-                  <li>Marukame Udon (Japan No1 Udon)</li>
+                  <li>Conservo (Japanese Breads & Café)</li>
+                  <li>Yoshinoya (giành được danh hiệu Cơm thịt Bò Thế giới nổi tiếng từ năm 1899)</li>
+                  <li>CocoIchibanya (Thương hiệu Nhà hàng Cơm Cà ri Số 1 Nhật Bản)</li>
+                  <li>Marukame Udon (Thương hiệu Tiệm mỳ Udon số một Nhật Bản)</li>
                 </ul>
-                <p>2013 - 2019: CEO-CFO VFS Co ltd</p>
-                <p>...</p>
+                <p><b>2013 - 2019</b>: Giám đốc Điều hành / Giám đốc Tài chính Công ty TNHH VFS</p>
+                <p>Công ty chuyên về thực phẩm và đồ uống với chuỗi nhà hàng thức ăn nhanh Hoa Kỳ như:
+                </p>
+                <ul>
+                  <li>Burger King</li>
+                  <li>Domino’s Pizza</li>
+                  <li>Popeyes Chicken</li>
+                  <li>Dunkin Donuts</li>
+                </ul>
+                <p><b>2007 - 2012</b>: Giám đốc Tài chính: New World Fashion Group (NWFG)</p>
+                <p>Tổng giám đốc điều hành:</p>
+                <ul>
+                  <li>Nhà máy Westfield</li>
+                  <li>Công ty New World Fashion Group - Tập đoàn Vương quốc Anh với Nhà máy May & Khu
+                    Công viên Công nghiệp</li>
+                </ul>
               </div>
+              <p class="read-more">Xem thêm</p>
             </div>
           </div>
           <div class="leadership-item">
@@ -132,20 +154,29 @@
               </h5>
               <h6 class="position">Kế Toán Trưởng</h6>
               <div class="exp">
-                <p>Hơn 20 năm kinh nghiệm trong ngành công nghệ thông tin và Fin-tech</p>
+                <p><b>Tháng 11/2018 - Hiện tại</b>: Kế toán trưởng Điều hành kiêm Giám đốc Tài chính
+                </p>
                 <ul>
-                  <li>Tháng 11/ 2018: Tập đoàn Liên Thái Bình Dương (IPP Group)</li>
+                  <li>Tập đoàn Liên Thái Bình Dương (IPP Group)</li>
                   <li>Công ty TNHH Thời trang và Mỹ phẩm Duy Anh (DAFC), công ty con của IPP Group
                   </li>
                 </ul>
-                <p>Hiện tại Vị trí: Kế toán trưởng Điều hành kiêm Giám đốc Tài chính</p>
+                <p><b>Tháng 3/2013 - Tháng 7/2017</b>: Quản trị Tài chính kiêm Kế toán Trưởng</p>
                 <ul>
-                  <li>Tháng 3/ 1998: Tập đoàn Liên Thái Bình Dương (IPP Group)</li>
+                  <li>Tập đoàn Liên Thái Bình Dương (IPP Group)</li>
                   <li>Công ty TNHH Dịch vụ Thực phẩm và Đồ uống Việt Nam (VFS), công ty con của IPP
                     Group</li>
-                  <li>...</li>
+                  <li>Lĩnh vực kinh doanh: Thực phẩm và Đồ uống.</li>
+                  <li>Thương hiệu: <b>Domino’s Pizza</b>, <b>Burger King</b> và <b>Popeyes Chicken</b>
+                  </li>
+                  <li>Số lượng cửa hàng: Hơn 50</li>
+                </ul>
+                <p><b>Tháng 3/1998 - Tháng 11/2010</b>: Kế toán Trưởng, Trưởng phòng Kinh doanh</p>
+                <ul>
+                  <li>Công ty Cổ phần Tập đoàn T&T (Tập đoàn T&T Group)</li>
                 </ul>
               </div>
+              <p class="read-more">Xem thêm</p>
             </div>
           </div>
         </div>

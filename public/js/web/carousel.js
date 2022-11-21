@@ -4,7 +4,7 @@ $('.partner-carousel').owlCarousel({
   dots: false,
   autoplay: true,
   mouseDrag: false,
-  autoplaySpeed: 1500,
+  autoplaySpeed: 1000,
   responsive:{
     0:{
         items: 1,

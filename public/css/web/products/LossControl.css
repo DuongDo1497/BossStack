@@ -1,0 +1,190 @@
+/* Benefits Section */
+
+.benefits-product__item{
+  --w-item: calc(25% - 30px);
+  --h-item: 472px;
+}
+
+.benefits-product__content{
+  --pd-item: 40px;
+}
+
+.benefits-product__item.no-bg .benefits-product__content{
+  --pd-item: 0;
+  position: static;
+}
+
+.benefits-product__item h4{
+  --text-align: left;
+}
+
+@media (max-width: 1199.98px){
+  .benefits-product__item{
+    --w-item: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 767.98px){
+  .benefits-product__item{
+    --w-item: 100%;
+  }
+}
+
+/* Why Product Section */
+
+.why-product{
+  background: transparent url('../../../img/web/loss-control-bg.jpg') center center/cover no-repeat;
+}
+
+.why-product .wrap{
+  --w-why-content: 100%;
+}
+
+.why-product__content h4{
+  text-align: center;
+}
+
+.why-product__content h4,
+.why-product__item .text{
+  color: var(--white-cl);
+}
+
+.why-product__list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 40px;
+}
+
+.why-product__item{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  width: calc((100% / 3) - 20px);
+  background-color: transparent;
+  border: 1px solid var(--white-cl);
+  margin-bottom: 0;
+}
+
+.why-product__item:nth-child(2){
+  border: 0;
+}
+
+.why-product__item .icon{
+  margin-bottom: 40px;
+}
+
+.why-product__item .text{
+  text-align: center;
+}
+
+.why-product__item:nth-child(2) .text{
+  font-size: 32px;
+  line-height: 42px;
+  font-family: hm;
+}
+
+.why-product__item:nth-child(2) .text b{
+  font-family: hb;
+  font-size: 48px;
+  line-height: 58px;
+  color: #FFCB3D;
+  display: block;
+}
+
+@media (max-width: 1399.98px){
+
+}
+
+@media (max-width: 1199.98px){
+
+}
+
+@media (max-width: 991.98px){
+  .why-product__item{
+    width: calc((100% / 2) - 20px);
+  }
+}
+
+@media (max-width: 767.98px){
+
+}
+
+@media (max-width: 575.98px){
+  .why-product__item{
+    width: 100%;
+  }
+}
+
+/* Help Product Section */
+
+.help-product{
+  --bg-help-section: var(--white-cl);
+}
+
+.help-product .wrap{
+  --mr-bt: 0;
+}
+
+.help-product h4{
+  color: var(--primary-cl);
+}
+
+.help-product__list{
+  --align-items: stretch;
+}
+
+.help-product__item{
+  --w-item: calc((100% / 3) - 20px);
+  --pd-item: 40px 34px;
+  border-radius: 16px;
+  background-color: var(--gray-cl-1);
+  box-shadow: 0px 5px 10px rgba(53, 99, 172, 0.3);
+}
+
+.help-product__item .icon{
+  --size-icon: 300px;
+  --border-radius-icon: 0;
+  --transform-rotate: none;
+}
+
+.help-product__item .icon img{
+  --transform-rotate: none;
+}
+
+.help-product__item p{
+  color: var(--gray-cl-7);
+}
+
+@media (max-width: 1399.98px){
+
+}
+
+@media (max-width: 1199.98px){
+  .help-product__item .icon{
+    --size-icon: 235px;
+  }
+}
+
+@media (max-width: 991.98px){
+  .help-product__list{
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .help-product__item{
+    --w-item: 100%;
+  }
+}
+
+@media (max-width: 767.98px){
+  .help-product__item{
+    --w-item: 100%;
+  }
+}
+
+@media (max-width: 575.98px){
+
+}

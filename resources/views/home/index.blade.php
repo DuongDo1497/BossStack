@@ -11,7 +11,7 @@
         <div class="wrap">
           <div class="banner-home__left">
             <h1 class="banner-home__title">CHUYỂN ĐỔI SỐ <br />DOANH NGHIỆP</h1>
-            <p class="banner-home__text">Cung cấp giải pháp chuyển đổi số doanh nghiệp đem lại
+            <p class="banner-home__text">Cung cấp giải pháp chuyển đổi số doanh nghiệp
               <br /><span class="text-bold">CẮT GIẢM CHI PHÍ</span> tức thì và xây dựng kế hoạch
               <br /><span class="text-bold">GIA TĂNG LỢI NHUẬN</span> lâu dài!
             </p>
@@ -160,12 +160,6 @@
           <div class="item">
             <img class="img-fluid partner-item" src="{{ asset('img/web/partner-9.png') }}">
           </div>
-          <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-10.png') }}">
-          </div>
-          <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-11.png') }}">
-          </div>
         </div>
       </div>
     </div>
@@ -204,24 +198,22 @@
                   </div>
                 </div>
               </div>
-              <p class="review-content">“Sử dụng <span class="text-bold">phần mềm BossStack</span>
-                cuối tháng tôi không cần ngồi ghi
-                chép hay
-                nhập bảng tính Excel. <span class="text-bold">Phần mềm BossStack</span> giúp tôi quản
-                lý mọi thu chi của cá nhân, gia
-                đình và bóc tách hoàn toàn với dòng tiền kinh doanh tại doanh nghiệp của tôi. Tính
-                năng
-                mà tôi đặc biệt quan tâm đó chính là tính toán số tiền nghỉ hưu giúp tôi có những kế
-                hoạch dài hạn về tài chính của mình.”</p>
+              <p class="review-content">“Ban đầu tôi biết đến BossStack với vai trò mang đến giải
+                pháp chuyển đổi số dữ liệu giúp lưu trữ dữ liệu có hệ thống, đồng bộ dữ liệu trên một
+                nền tảng. Tôi có thể tìm kiếm tài liệu, hợp đồng dễ dàng mỗi lần làm việc với khách
+                hàng, đối tác. Tiếp đó, Vietponics áp dụng hệ thống vận hành số chuyên sâu từ
+                BossStack giúp tôi bớt gánh nặng trong khâu điều hành khi có quy trình làm việc rõ
+                ràng, các phòng ban liên kết chặt chẽ và làm việc nhịp nhàng.”</p>
               <div class="review-footer">
                 <img class="img-fluid review-footer__avt"
                   src="{{ asset('img/web/review-avt-1.jpg') }}" alt="">
                 <div class="review-footer__info">
-                  <h6 class="name">Nguyễn Đỗ Cẩm Bình</h6>
-                  <p class="position">Trưởng phòng kinh doanh công ty BĐS Him Lam</p>
+                  <h6 class="name">Nguyễn Đức Huy</h6>
+                  <p class="position">CEO Vietponics</p>
                 </div>
               </div>
             </div>
+
             <div class="item">
               <div class="review-rate">
                 <div class="review-rate__item">
@@ -249,24 +241,22 @@
                   </div>
                 </div>
               </div>
-              <p class="review-content">“Sử dụng <span class="text-bold">phần mềm BossStack</span>
-                cuối tháng tôi không cần ngồi ghi
-                chép hay
-                nhập bảng tính Excel. <span class="text-bold">Phần mềm BossStack</span> giúp tôi quản
-                lý mọi thu chi của cá nhân, gia
-                đình và bóc tách hoàn toàn với dòng tiền kinh doanh tại doanh nghiệp của tôi. Tính
-                năng
-                mà tôi đặc biệt quan tâm đó chính là tính toán số tiền nghỉ hưu giúp tôi có những kế
-                hoạch dài hạn về tài chính của mình.”</p>
+              <p class="review-content">“Là quản lý của một công ty xuất nhập khẩu nông sản, tôi đánh
+                giá cao giải pháp vận vận hành số của BossStack. Trước đó, tôi mất nhiều thời gian cho
+                khâu quản lý vận hành doanh nghiệp, nhập xuất sản phẩm, quản lý nhân sự rồi làm việc
+                cùng các đối tác nước ngoài. Sau một thời gian áp dụng giải pháp vận hành số của
+                BossStack tôi gần như không phải mang công việc về nhà làm và có nhiều thời gian cho
+                gia đình.”</p>
               <div class="review-footer">
                 <img class="img-fluid review-footer__avt"
                   src="{{ asset('img/web/review-avt-1.jpg') }}" alt="">
                 <div class="review-footer__info">
-                  <h6 class="name">Nguyễn Đỗ Cẩm Bình</h6>
-                  <p class="position">Trưởng phòng kinh doanh công ty BĐS Him Lam</p>
+                  <h6 class="name">Nguyễn Thị Hồng Thủy</h6>
+                  <p class="position">CEO Công ty TNHH TMDV XNK Dương Thủy</p>
                 </div>
               </div>
             </div>
+
             <div class="item">
               <div class="review-rate">
                 <div class="review-rate__item">
@@ -294,21 +284,58 @@
                   </div>
                 </div>
               </div>
-              <p class="review-content">“Sử dụng <span class="text-bold">phần mềm BossStack</span>
-                cuối tháng tôi không cần ngồi ghi
-                chép hay
-                nhập bảng tính Excel. <span class="text-bold">Phần mềm BossStack</span> giúp tôi quản
-                lý mọi thu chi của cá nhân, gia
-                đình và bóc tách hoàn toàn với dòng tiền kinh doanh tại doanh nghiệp của tôi. Tính
-                năng
-                mà tôi đặc biệt quan tâm đó chính là tính toán số tiền nghỉ hưu giúp tôi có những kế
-                hoạch dài hạn về tài chính của mình.”</p>
+              <p class="review-content">“Phần mềm BossStack giúp bạn theo dõi và kiểm soát các dòng
+                tiền giúp chúng luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá nhân và dòng tiền đầu
+                tư kinh doanh của bạn được tách bạch hoàn toàn. Việc này giúp các dòng tiền được kiểm
+                soát và tăng trưởng hiệu quả.”</p>
               <div class="review-footer">
                 <img class="img-fluid review-footer__avt"
                   src="{{ asset('img/web/review-avt-1.jpg') }}" alt="">
                 <div class="review-footer__info">
-                  <h6 class="name">Nguyễn Đỗ Cẩm Bình</h6>
-                  <p class="position">Trưởng phòng kinh doanh công ty BĐS Him Lam</p>
+                  <h6 class="name">Lê Hoài Ân</h6>
+                  <p class="position">CFA, tác giả cuốn sách bán chạy số 1 thị trường "20 năm lịch sử
+                    Thị trường Chứng khoán Việt Nam"</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="review-rate">
+                <div class="review-rate__item">
+                  <p class="title">ĐỔI MỚI & CHẤT LƯỢNG</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+                <div class="review-rate__item">
+                  <p class="title">LỢI ÍCH</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+                <div class="review-rate__item">
+                  <p class="title">MỨC ĐỘ HÀI LÒNG</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+              </div>
+              <p class="review-content">“Phần mềm BossStack giúp tôi phân bổ tài sản và dòng tiền vào
+                các ví mục tiêu tài chính khác nhau. Tôi có thể theo dõi từng mục thu chi, từng mục
+                tiêu tài chính đã tối ưu chưa. Từ đó, tôi phân bổ dòng tiền một cách hợp lý và cắt
+                giảm những chi phí không cần thiết.”</p>
+              <div class="review-footer">
+                <img class="img-fluid review-footer__avt"
+                  src="{{ asset('img/web/review-avt-1.jpg') }}" alt="">
+                <div class="review-footer__info">
+                  <h6 class="name">Huỳnh Thu Ái</h6>
+                  <p class="position">Cố vấn, đào tạo hệ thống quản lý doanh nghiệp AMS</p>
                 </div>
               </div>
             </div>
