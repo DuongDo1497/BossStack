@@ -1,0 +1,105 @@
+/* Benefits Section */
+
+.benefits-product__item{
+  --w-item: calc((100% / 3) - 27px);
+  --h-item: 480px;
+}
+
+.benefits-product__item.no-bg{
+  width: 100%;
+  height: auto;
+}
+
+.benefits-product__content{
+  --pd-item: 32px;
+}
+
+.benefits-product__item.no-bg .benefits-product__content{
+  --pd-item: 0;
+  position: static;
+}
+
+.benefits-product__item h4{
+  --text-align: center;
+}
+
+@media (max-width: 767.98px){
+  .benefits-product__item{
+    --w-item: 100%;
+  }
+}
+
+/* Why Product Section */
+
+
+
+/* Help Product Section */
+
+.help-product{
+  --bg-help-section: var(--white-cl);
+}
+
+.help-product .wrap{
+  --mr-bt: 0;
+}
+
+.help-product h4{
+  color: var(--primary-cl);
+}
+
+.help-product__list{
+  --align-items: stretch;
+}
+
+.help-product__item{
+  --w-item: calc((100% / 3) - 20px);
+  --pd-item: 40px 34px;
+  border-radius: 16px;
+  background-color: var(--gray-cl-1);
+  box-shadow: 0px 5px 10px rgba(53, 99, 172, 0.3);
+}
+
+.help-product__item .icon{
+  --size-icon: 300px;
+  --border-radius-icon: 0;
+  --transform-rotate: none;
+}
+
+.help-product__item .icon img{
+  --transform-rotate: none;
+}
+
+.help-product__item p{
+  color: var(--gray-cl-7);
+}
+
+@media (max-width: 1399.98px){
+
+}
+
+@media (max-width: 1199.98px){
+  .help-product__item .icon{
+    --size-icon: 235px;
+  }
+}
+
+@media (max-width: 991.98px){
+  .help-product__list{
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .help-product__item{
+    --w-item: 100%;
+  }
+}
+
+@media (max-width: 767.98px){
+  .help-product__item{
+    --w-item: 100%;
+  }
+}
+
+@media (max-width: 575.98px){
+
+}

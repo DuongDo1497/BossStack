@@ -537,9 +537,8 @@
               <input type="text" class="form-control" name="title" placeholder="Chức vụ">
               <select class="form-select" name="solution">
                 <option selected>Giải pháp</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="">Bóc tách dòng tiền</option>
+                <option value="">Thực thi dòng tiền chuyên sâu</option>
               </select>
             </div>
             <button type="submit" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</button>
