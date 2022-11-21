@@ -25,10 +25,10 @@
     </a>
     <ul class="menu-main__child animate__animated" style="visibility: hidden">
       <li>
-        <a href="{{ asset('chuyendoivanhanh') }}">Chuyển đổi dữ liệu</a>
+        <a href="{{ asset('/products/data-convert') }}">Chuyển đổi dữ liệu</a>
       </li>
       <li>
-        <a href="{{ asset('chuyendoivanhanh') }}">Vận hành số chuyên sâu</a>
+        <a href="{{ asset('/products/operate-digital') }}">Vận hành số chuyên sâu</a>
       </li>
     </ul>
   </li>

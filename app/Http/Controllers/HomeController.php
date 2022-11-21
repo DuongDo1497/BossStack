@@ -41,6 +41,16 @@ class HomeController extends Controller
         return $this->view('products.LossControl');
     }
 
+    public function dataConvert()
+    {
+        return $this->view('products.DataConvert');
+    }
+
+    public function operateDigital()
+    {
+        return $this->view('products.OperateDigital');
+    }
+
     public function aboutUs()
     {
         return $this->view('aboutus');

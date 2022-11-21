@@ -36,8 +36,8 @@
         <p class="footer-item__title">Dịch vụ</p>
         <div class="footer-item__content">
           <ul>
-            <li><a href="#">Giải pháp chuyển đổi dữ liệu</a></li>
-            <li><a href="#">Giải pháp vận hành số chuyên sâu</a></li>
+            <li><a href="{{ asset('/products/data-convert') }}">Chuyển đổi dữ liệu</a></li>
+            <li><a href="{{ asset('/products/operate-digital') }}">Vận hành số chuyên sâu</a></li>
           </ul>
         </div>
       </div>

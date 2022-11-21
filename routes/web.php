@@ -16,6 +16,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/products/cash-flow-dissection', 'HomeController@cashDissection')->name('cash-flow-dissection');
 Route::get('/products/cash-flow-execution', 'HomeController@cashExecution')->name('cash-flow-execution');
 Route::get('/products/loss-control', 'HomeController@lossControl')->name('loss-control');
+Route::get('/products/data-convert', 'HomeController@dataConvert')->name('data-convert');
+Route::get('/products/operate-digital', 'HomeController@operateDigital')->name('operate-digital');
 Route::get('about-us', 'HomeController@aboutUs')->name('about-us');
 Route::get('contact', 'HomeController@contact')->name('contact');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');

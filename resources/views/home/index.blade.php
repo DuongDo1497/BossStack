@@ -206,7 +206,7 @@
                 ràng, các phòng ban liên kết chặt chẽ và làm việc nhịp nhàng.”</p>
               <div class="review-footer">
                 <img class="img-fluid review-footer__avt"
-                  src="{{ asset('img/web/review-avt-1.jpg') }}" alt="">
+                  src="{{ asset('img/web/review-avt-2.jpg') }}" alt="">
                 <div class="review-footer__info">
                   <h6 class="name">Nguyễn Đức Huy</h6>
                   <p class="position">CEO Vietponics</p>
@@ -289,8 +289,8 @@
                 tư kinh doanh của bạn được tách bạch hoàn toàn. Việc này giúp các dòng tiền được kiểm
                 soát và tăng trưởng hiệu quả.”</p>
               <div class="review-footer">
-                <img class="img-fluid review-footer__avt"
-                  src="{{ asset('img/web/review-avt-1.jpg') }}" alt="">
+                <img class="img-fluid review-footer__avt" src="{{ asset('img/user-1.jpg') }}"
+                  alt="">
                 <div class="review-footer__info">
                   <h6 class="name">Lê Hoài Ân</h6>
                   <p class="position">CFA, tác giả cuốn sách bán chạy số 1 thị trường "20 năm lịch sử
@@ -331,11 +331,53 @@
                 tiêu tài chính đã tối ưu chưa. Từ đó, tôi phân bổ dòng tiền một cách hợp lý và cắt
                 giảm những chi phí không cần thiết.”</p>
               <div class="review-footer">
-                <img class="img-fluid review-footer__avt"
-                  src="{{ asset('img/web/review-avt-1.jpg') }}" alt="">
+                <img class="img-fluid review-footer__avt" src="{{ asset('img/user.jpg') }}"
+                  alt="">
                 <div class="review-footer__info">
                   <h6 class="name">Huỳnh Thu Ái</h6>
                   <p class="position">Cố vấn, đào tạo hệ thống quản lý doanh nghiệp AMS</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="review-rate">
+                <div class="review-rate__item">
+                  <p class="title">ĐỔI MỚI & CHẤT LƯỢNG</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+                <div class="review-rate__item">
+                  <p class="title">LỢI ÍCH</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+                <div class="review-rate__item">
+                  <p class="title">MỨC ĐỘ HÀI LÒNG</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+              </div>
+              <p class="review-content">“BossStack là quản gia đáng tin cậy” - Quản gia vừa trông coi
+                nhà cửa (quản lý vận hành), coi sóc tiền bạc (bóc tách dòng tiền chủ doanh nghiệp).
+                BossStack là địa chỉ tin cậy, không những quản trị dòng tiền hiệu quả mà còn tạo giá
+                trị thặng dư, gia tăng giá trị dòng tiền cho doanh nghiệp dựa trên sự am hiểu về hoạt
+                động kinh doanh của doanh nghiệp”</p>
+              <div class="review-footer">
+                <img class="img-fluid review-footer__avt"
+                  src="{{ asset('img/web/review-avt-3.jpg') }}" alt="">
+                <div class="review-footer__info">
+                  <h6 class="name">Đinh Thúy Phương</h6>
+                  <p class="position">Công ty Mana.st</p>
                 </div>
               </div>
             </div>
