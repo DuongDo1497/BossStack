@@ -57,38 +57,37 @@
   <div class="section section-why why-product">
     <div class="container">
       <div class="wrap">
-        <h4 class="section-title">Tại sao chủ doanh nghiệp cần giải pháp chuyển đổi dữ liệu?</h4>
+        <h4 class="section-title">Tại sao chủ doanh nghiệp cần <br />giải pháp chuyển đổi dữ liệu?
+        </h4>
         <div class="why-product__content">
           <div class="why-product__list">
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-2.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-11.svg') }}" alt=""
                 class="icon img-fluid">
-              <span class="text">Chủ doanh nghiệp thường không thể tách dòng tiền cá nhân của mình
-                ra khỏi doanh nghiệp.</span>
+              <span class="text"><b>Dữ liệu, thông tin lưu trữ không đồng bộ</b>, chồng chéo, khó
+                kiểm soát</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-5.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-12.svg') }}" alt=""
                 class="icon img-fluid">
-              <span class="text">Không quản lý được nguồn vốn doanh nghiệp gây thiếu hụt vốn và mất
-                nhiều cơ hội kinh doanh.</span>
+              <span class="text"><b>Khó khăn</b> trong việc <b>bảo mật thông tin</b> tài liệu</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-4.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-13.svg') }}" alt=""
                 class="icon img-fluid">
-              <span class="text">Thiếu công cụ phân bổ dòng tiền ảnh hưởng đến hoạt động doanh
-                nghiệp, đặc biệt trong thị trường nhiều biến động.</span>
+              <span class="text"><b>Ra quyết định</b> thiếu chính xác vì không đủ dữ liệu báo
+                cáo</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-4.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-14.svg') }}" alt=""
                 class="icon img-fluid">
-              <span class="text">Thiếu công cụ phân bổ dòng tiền ảnh hưởng đến hoạt động doanh
-                nghiệp, đặc biệt trong thị trường nhiều biến động.</span>
+              <span class="text">Không có thông tin kịp thời cho các cuộc họp quan trọng, làm việc
+                với đối tác và khách hàng</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-4.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-15.svg') }}" alt=""
                 class="icon img-fluid">
-              <span class="text">Thiếu công cụ phân bổ dòng tiền ảnh hưởng đến hoạt động doanh
-                nghiệp, đặc biệt trong thị trường nhiều biến động.</span>
+              <span class="text"><b>Thất thoát dữ liệu</b> khi thay đổi nhân sự</span>
             </div>
           </div>
         </div>

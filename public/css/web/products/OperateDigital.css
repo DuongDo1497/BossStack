@@ -1,0 +1,156 @@
+/* Benefits Section */
+
+.benefits-product__item{
+  --w-item: calc((100% / 3) - 27px);
+  --h-item: 386px;
+}
+
+.benefits-product__item.no-bg{
+  width: 100%;
+  height: auto;
+}
+
+.benefits-product__content{
+  --pd-item: 40px;
+}
+
+.benefits-product__item.no-bg .benefits-product__content{
+  --pd-item: 0;
+  position: static;
+}
+
+.benefits-product__item h4{
+  --text-align: center;
+}
+
+@media (max-width: 767.98px){
+  .benefits-product__item{
+    --w-item: 100%;
+  }
+}
+
+/* Why Product Section */
+
+.why-product {
+  background-color: var(--bg-cyan-cl);
+}
+
+.why-product .wrap{
+  --w-why-content: 660px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.why-product .wrap .section-title{
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1399.98px){
+  .why-product .wrap{
+    --w-why-content: 55%;
+    column-gap: 0;
+  }
+
+  .why-product__list{
+    width: 90%;
+  }
+}
+
+@media (max-width: 1199.98px){
+
+}
+
+@media (max-width: 991.98px){
+  .why-product .wrap{
+    --w-why-content: 100%;
+  }
+
+  .why-product__list{
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px){
+  .why-product .section-title br{
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px){
+
+}
+
+/* Help Product Section */
+
+.help-product{
+  --bg-help-section: var(--white-cl);
+}
+
+.help-product .wrap{
+  --mr-bt: 0;
+}
+
+.help-product h4{
+  color: var(--primary-cl);
+}
+
+.help-product__list{
+  --align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.help-product__item{
+  --w-item: calc((100% / 3) - 20px);
+  --pd-item: 40px 34px;
+  border-radius: 16px;
+  background-color: var(--gray-cl-1);
+  box-shadow: 0px 5px 10px rgba(53, 99, 172, 0.3);
+}
+
+.help-product__item .icon{
+  --size-icon: 300px;
+  --border-radius-icon: 0;
+  --transform-rotate: none;
+}
+
+.help-product__item .icon img{
+  --transform-rotate: none;
+}
+
+.help-product__item p{
+  color: var(--gray-cl-7);
+}
+
+@media (max-width: 1399.98px){
+
+}
+
+@media (max-width: 1199.98px){
+  .help-product__item .icon{
+    --size-icon: 235px;
+  }
+}
+
+@media (max-width: 991.98px){
+  .help-product__list{
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .help-product__item{
+    --w-item: 100%;
+  }
+}
+
+@media (max-width: 767.98px){
+  .help-product__item{
+    --w-item: 100%;
+  }
+}
+
+@media (max-width: 575.98px){
+
+}

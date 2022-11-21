@@ -80,19 +80,12 @@
               </h5>
               <h6 class="position">CEO/Founder</h6>
               <div class="exp">
-                <p>Hơn <b>15 năm</b> kinh nghiệm về tài chính, đầu tư</p>
-                <p>Hơn <b>10 năm</b> kinh nghiệm trong ngành ngân hàng</p>
+                <p><b>2015 - hiện tại:</b> Chủ sở hữu, Nhà sáng lập và Giám đốc <b>BOSSSTACK</b>.</p>
+                <p><b>2014 - hiện tại:</b> Chủ sở hữu, Nhà sáng lập và Giám đốc <b>RBOOKS</b>.</p>
+                <p>Hơn <b>15 năm</b> kinh nghiệm trong ngành tài chính, đầu tư. Trong đó:</p>
                 <ul>
-                  <li><b>2018 - Hiện tại</b>: Chủ sở hữu, Nhà sáng lập, và Giám đốc công ty
-                    <b>BossStack</b>.
-                  </li>
-                  <li><b>2015 - HIện tại</b>: Chủ sở hữu, Nhà sáng lập, và Giám đốc công ty
-                    <b>Lamstech</b>.
-                  </li>
-                  <li><b>2014 - Hiện tại</b>: Chủ sở hữu, Nhà sáng lập, và Giám đốc công ty
-                    <b>Rbooks</b>.
-                  </li>
-                  <li><b>2012 - 2017</b>: Phó Giám đốc và Giám đốc Chi nhánh Ngân hàng.</li>
+                  <li>Hơn <b>10 năm</b> kinh nghiệm trong ngành ngân hàng.</li>
+                  <li><b>2012-2017:</b> Giám đốc PGD, Phó Giám đốc Chi nhánh.</li>
                 </ul>
               </div>
             </div>
@@ -154,7 +147,7 @@
               </h5>
               <h6 class="position">Kế Toán Trưởng</h6>
               <div class="exp">
-                <p><b>Tháng 11/2018 - Hiện tại</b>: Kế toán trưởng Điều hành kiêm Giám đốc Tài chính
+                <p><b>Tháng 11/2018 - Hiện tại</b>: Kế toán trưởng kiêm Giám đốc Tài chính
                 </p>
                 <ul>
                   <li>Tập đoàn Liên Thái Bình Dương (IPP Group)</li>

@@ -31,7 +31,64 @@
 
 /* Why Product Section */
 
+.why-product {
+  background-color: var(--primary-cl);
+}
 
+.why-product .wrap{
+  --w-why-content: 660px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.why-product .wrap .section-title{
+  width: 100%;
+  color: var(--white-cl);
+  margin-bottom: 60px;
+}
+
+.why-product__item{
+  background-color: var(--primary-cl-4);
+}
+
+.why-product__item .text{
+  color: var(--white-cl);
+}
+
+@media (max-width: 1399.98px){
+  .why-product .wrap{
+    --w-why-content: 55%;
+    column-gap: 0;
+  }
+
+  .why-product__list{
+    width: 90%;
+  }
+}
+
+@media (max-width: 1199.98px){
+
+}
+
+@media (max-width: 991.98px){
+  .why-product .wrap{
+    --w-why-content: 100%;
+  }
+
+  .why-product__list{
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px){
+  .why-product .section-title br{
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px){
+
+}
 
 /* Help Product Section */
 
