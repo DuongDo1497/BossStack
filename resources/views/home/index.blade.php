@@ -174,16 +174,20 @@
             <div class="item">
               <div class="review-rate">
                 <div class="review-rate__item">
-                  <p class="title">ĐỔI MỚI & CHẤT LƯỢNG</p>
+                  <p class="title">CHẤT LƯỢNG</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                   </div>
                 </div>
                 <div class="review-rate__item">
-                  <p class="title">LỢI ÍCH</p>
+                  <p class="title">GIÁ TIỀN</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
@@ -192,6 +196,8 @@
                 <div class="review-rate__item">
                   <p class="title">MỨC ĐỘ HÀI LÒNG</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
@@ -217,16 +223,20 @@
             <div class="item">
               <div class="review-rate">
                 <div class="review-rate__item">
-                  <p class="title">ĐỔI MỚI & CHẤT LƯỢNG</p>
+                  <p class="title">CHẤT LƯỢNG</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                   </div>
                 </div>
                 <div class="review-rate__item">
-                  <p class="title">LỢI ÍCH</p>
+                  <p class="title">GIÁ TIỀN</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
@@ -235,6 +245,8 @@
                 <div class="review-rate__item">
                   <p class="title">MỨC ĐỘ HÀI LÒNG</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
@@ -260,16 +272,20 @@
             <div class="item">
               <div class="review-rate">
                 <div class="review-rate__item">
-                  <p class="title">ĐỔI MỚI & CHẤT LƯỢNG</p>
+                  <p class="title">CHẤT LƯỢNG</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                   </div>
                 </div>
                 <div class="review-rate__item">
-                  <p class="title">LỢI ÍCH</p>
+                  <p class="title">GIÁ TIỀN</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
@@ -278,6 +294,8 @@
                 <div class="review-rate__item">
                   <p class="title">MỨC ĐỘ HÀI LÒNG</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
@@ -302,16 +320,20 @@
             <div class="item">
               <div class="review-rate">
                 <div class="review-rate__item">
-                  <p class="title">ĐỔI MỚI & CHẤT LƯỢNG</p>
+                  <p class="title">CHẤT LƯỢNG</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                   </div>
                 </div>
                 <div class="review-rate__item">
-                  <p class="title">LỢI ÍCH</p>
+                  <p class="title">GIÁ TIỀN</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
@@ -320,6 +342,8 @@
                 <div class="review-rate__item">
                   <p class="title">MỨC ĐỘ HÀI LÒNG</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
@@ -343,16 +367,20 @@
             <div class="item">
               <div class="review-rate">
                 <div class="review-rate__item">
-                  <p class="title">ĐỔI MỚI & CHẤT LƯỢNG</p>
+                  <p class="title">CHẤT LƯỢNG</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                   </div>
                 </div>
                 <div class="review-rate__item">
-                  <p class="title">LỢI ÍCH</p>
+                  <p class="title">GIÁ TIỀN</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
@@ -361,6 +389,8 @@
                 <div class="review-rate__item">
                   <p class="title">MỨC ĐỘ HÀI LÒNG</p>
                   <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
                     <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">

@@ -18,9 +18,11 @@ Route::get('/products/cash-flow-execution', 'HomeController@cashExecution')->nam
 Route::get('/products/loss-control', 'HomeController@lossControl')->name('loss-control');
 Route::get('/products/data-convert', 'HomeController@dataConvert')->name('data-convert');
 Route::get('/products/operate-digital', 'HomeController@operateDigital')->name('operate-digital');
+Route::get('package', 'HomeController@package')->name('package');
 Route::get('about-us', 'HomeController@aboutUs')->name('about-us');
 Route::get('contact', 'HomeController@contact')->name('contact');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('term', 'HomeController@term')->name('term');
 
 // Landing Page
 Route::get('boctachdongtien', 'HomeController@cashFlowDissection')->name('boctachdongtien');

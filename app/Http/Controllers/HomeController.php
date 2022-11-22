@@ -51,6 +51,11 @@ class HomeController extends Controller
         return $this->view('products.OperateDigital');
     }
 
+    public function package()
+    {
+        return $this->view('package');
+    }
+
     public function aboutUs()
     {
         return $this->view('aboutus');
@@ -61,7 +66,10 @@ class HomeController extends Controller
         return $this->view('contact');
     }
 
-    
+    public function terms()
+    {
+        return $this->view('terms');
+    }
 
 
 
