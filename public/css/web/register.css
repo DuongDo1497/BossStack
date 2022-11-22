@@ -7,9 +7,207 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  border-radius: 16px;
+  background-color: var(--white-cl);
+  box-shadow: 0px 5px 10px rgba(53, 99, 172, 0.3);
+}
+
+.register-form{
+  width: 100%;
+}
+
+.register-form h6{
+  font-family: hb;
+  margin-bottom: 48px;
+  color: var(--gray-cl-7);
 }
 
 .register-form__info{
   width: 740px;
   margin: 0 auto;
+}
+
+.register-form__info .register-form__header .logo{
+  margin: 0 auto 24px;
+}
+
+.register-form__info .register-form__body{
+  margin-bottom: 48px;
+}
+
+.form-row{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group{
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.form-row .form-group{
+  width: calc(50% - 12px);
+}
+
+.form-group .form-label{
+  font-family: hb;
+  margin-bottom: 8px;
+  color: var(--gray-cl-7);
+}
+
+.form-group .form-control,
+.form-group .form-select{
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-cl-3);
+  background-color: var(--gray-cl-1);
+}
+
+.form-group .form-control:focus,
+.form-group .form-select:focus,
+.form-check-input:focus{
+  box-shadow: none;
+}
+
+.form-group .form-control::placeholder{
+  font-family: hr;
+  color: var(--gray-cl-5);
+}
+
+.register-form__service{
+  padding-top: 48px;
+  border-top: 1px solid var(--gray-cl-5);
+}
+
+.register-form__service .register-form__body{
+  display: flex;
+  justify-content: space-between;
+}
+
+.register-service__item{
+  padding: 32px 18px;
+  width: calc(25% - 8px);
+  border-radius: 16px;
+  border: 1px solid var(--gray-cl-3);
+}
+
+.register-service__item .service-radio{
+  margin-bottom: 16px;
+}
+
+.register-service__item .service-radio .form-check-input {
+  display: none;
+}
+
+.register-service__item .service-radio .form-check-label {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  background-color: var(--white-cl);
+  display: inline-block;
+  cursor: pointer;
+  padding: 3px;
+  border: 1px solid var(--primary-cl);
+}
+
+.register-service__item .service-radio .form-check-label::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  display: inline-block;
+  background-color: var(--primary-cl);
+  transition: all 0.25s linear;
+}
+
+.register-service__item .service-radio .form-check-input:checked + .form-check-label::before {
+  opacity: 1;
+}
+
+.register-service__item .service-name,
+.register-service__item  .service-info .amount{
+  color: var(--gray-cl-7);
+}
+
+.register-service__item .service-name{
+  line-height: 42px;
+}
+
+.register-service__item .service-info{
+  margin-bottom: 16px;
+}
+
+.register-service__item:nth-child(3) .service-info{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.register-service__item .service-info .amount{
+  font-size: 28px;
+  font-family: hm;
+}
+
+.register-service__item:nth-child(3) .service-info .amount{
+  line-height: 36px;
+}
+
+.register-service__item .service-info .user-type,
+.register-service__item .service-info .unit{
+  color: var(--gray-cl-6);
+}
+
+.register-form .btn-register{
+  margin: 48px auto 0;
+}
+
+@media (max-width: 1399.98px){
+  .register-form__service .register-form__body{
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .register-service__item{
+    width: calc(50% - 8px);
+  }
+
+  .register-service__item:nth-child(3) .service-info{
+    justify-content: flex-start;
+    column-gap: 5px;
+  }
+}
+
+@media (max-width: 1199.98px){
+  
+}
+
+@media (max-width: 991.98px){
+  .register-form__info{
+    width: 100%;
+  }
+
+  .register-service__item .service-info .user-type, 
+  .register-service__item .service-info .unit{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767.98px){
+  .form-row{
+    flex-wrap: wrap;
+  }
+
+  .form-row .form-group{
+    width: 100%;
+  }
+
+  .register-service__item{
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px){
+
 }
