@@ -76,11 +76,6 @@ class HomeController extends Controller
         return $this->view('register');
     }
 
-    public function loginDemo()
-    {
-        return $this->view('loginDemo');
-    }
-
 
 
 

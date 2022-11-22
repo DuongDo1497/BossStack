@@ -24,7 +24,6 @@ Route::get('contact', 'HomeController@contact')->name('contact');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('term', 'HomeController@term')->name('term');
 Route::get('register', 'HomeController@register')->name('register');
-Route::get('loginDemo', 'HomeController@loginDemo')->name('loginDemo');
 
 // Landing Page
 Route::get('boctachdongtien', 'HomeController@cashFlowDissection')->name('boctachdongtien');
