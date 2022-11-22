@@ -71,6 +71,16 @@ class HomeController extends Controller
         return $this->view('term');
     }
 
+    public function register()
+    {
+        return $this->view('register');
+    }
+
+    public function loginDemo()
+    {
+        return $this->view('loginDemo');
+    }
+
 
 
 

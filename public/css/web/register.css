@@ -1,0 +1,15 @@
+.register{
+  background-color: var(--gray-cl-1);
+}
+
+.register .wrap{
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.register-form__info{
+  width: 740px;
+  margin: 0 auto;
+}
