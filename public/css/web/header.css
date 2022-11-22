@@ -178,6 +178,10 @@
   display: none;
 }
 
+.menu-main__item.button-control{
+  display: none;
+}
+
 @media (max-width: 1399.98px){
   .logo{
     width: 165px;
@@ -282,5 +286,29 @@
 
   .header.fixed .nav-bars{
     color: var(--primary-cl-6);
+  }
+
+  .menu-main__item.button-control{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .menu-main__item.button-control .btn.btn-size-full{
+    --h-btn: 40px;
+    --fz-btn: 15px;
+  }
+
+  .header.header-home .menu-main__item.button-control .btn.btn-stroke{
+    color: var(--primary-cl);
+    background-color: transparent;
+    border: 1px solid var(--primary-cl);
+  }
+
+  .header.header-home .menu-main__item.button-control .btn.btn-primary{
+    color: var(--white-cl);
+    background-color: var(--primary-cl);
+    border: 1px solid transparent;
   }
 }

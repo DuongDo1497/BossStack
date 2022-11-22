@@ -73,7 +73,7 @@
             <div class="leadership-info">
               <h5 class="name">
                 Chau Pham
-                <a href="#">
+                <a href="https://www.linkedin.com/in/chau-pham-5b8941248/">
                   <img class="img-fluid leadership-social"
                     src="{{ asset('img/web/linkedin-icon.svg') }}" alt="">
                 </a>

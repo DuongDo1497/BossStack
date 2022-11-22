@@ -59,6 +59,14 @@
             <li><a href="{{ asset('term') }}">Điều khoản sử dụng</a></li>
             <li><a href="{{ asset('contact') }}">Liên hệ</a></li>
           </ul>
+          <div class="footer-item__social">
+            <a href="https://www.facebook.com/bossstack.vn">
+              <img class="img-fluid" src="{{ asset('img/web/fb-icon.svg') }}" alt="">
+            </a>
+            <a href="https://www.linkedin.com/company/82513104/admin/">
+              <img class="img-fluid" src="{{ asset('img/web/linkedin-icon.svg') }}" alt="">
+            </a>
+          </div>
         </div>
       </div>
     </div>

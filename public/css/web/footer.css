@@ -49,6 +49,11 @@
   color: var(--primary-cl);
 }
 
+.footer-item__social{
+  display: flex;
+  column-gap: 16px;
+}
+
 @media (max-width: 1399.98px){
   .footer-item{
     max-width: 200px;

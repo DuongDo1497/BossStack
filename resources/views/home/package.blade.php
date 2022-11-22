@@ -126,7 +126,8 @@
           <div class="package-item">
             <h6 class="package-name">
               Standard
-              <span class="seller">Best Seller</span>
+              <img src="{{ asset('img/web/best-seller.svg') }}" alt=""
+                class="img-fluid seller">
             </h6>
             <div class="package-control">
               <div class="package-price">
@@ -135,7 +136,7 @@
                   <h5 class="amount">299.000</h5>
                   <small class="unit">đồng/tháng</small>
                 </div>
-                <small class="note">Tặng 1 gói thành viên <br />Basic 99.000 đồng/tháng</small>
+                <small class="note">Tặng 1 user thành viên <br />Basic 99.000 đồng/tháng</small>
               </div>
               <form action="" class="package-option">
                 <select class="form-select">
