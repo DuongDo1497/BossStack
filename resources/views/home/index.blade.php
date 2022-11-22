@@ -398,7 +398,7 @@
                 </div>
               </div>
               <p class="review-content">“BossStack là quản gia đáng tin cậy” - Quản gia vừa trông coi
-                nhà cửa (quản lý vận hành), coi sóc tiền bạc (bóc tách dòng tiền chủ doanh nghiệp).
+                nhà cửa (quản lý vận hành), coi sóc tiền bạc (bóc tách và quản lý dòng tiền).
                 BossStack là địa chỉ tin cậy, không những quản trị dòng tiền hiệu quả mà còn tạo giá
                 trị thặng dư, gia tăng giá trị dòng tiền cho doanh nghiệp dựa trên sự am hiểu về hoạt
                 động kinh doanh của doanh nghiệp”</p>
@@ -408,6 +408,58 @@
                 <div class="review-footer__info">
                   <h6 class="name">Đinh Thúy Phương</h6>
                   <p class="position">Công ty Mana.st</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="review-rate">
+                <div class="review-rate__item">
+                  <p class="title">CHẤT LƯỢNG</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+                <div class="review-rate__item">
+                  <p class="title">GIÁ TIỀN</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+                <div class="review-rate__item">
+                  <p class="title">MỨC ĐỘ HÀI LÒNG</p>
+                  <div class="start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                  </div>
+                </div>
+              </div>
+              <p class="review-content">“Tôi từng nghĩ các ứng dụng quản lý tiền có thể chỉ là một
+                công cụ nhưng BossStack
+                Coaching đã cho tôi cách nhìn khác. Đây thật sự là một phần mềm có thể tính toán
+                từng đồng tiền nhỏ cho đến số tiền lớn, mà tính toán thủ công sẽ không khả thi. Nó
+                trở thành một người bạn đáng tin cậy khi giữ gìn và phát triển tiền bạc của tôi
+                tốt hơn. Tôi chú ý nhất đến phần tính số tiền còn thiếu hụt cho kỳ hưu trí. Về
+                dòng tiền, tôi thiết lập các mục tiêu tài chính chi tiết, quản lý thu chi hằng
+                ngày, quản lý tài sản và nợ, phân tích và theo dõi tiến độ thực hiện các kế hoạch
+                dòng tiền, và điểm đặc biệt là các gợi ý đầu tư dài hạn phù hợp.”</p>
+              <div class="review-footer">
+                <img class="img-fluid review-footer__avt" src="{{ asset('img/user-2.jpg') }}"
+                  alt="">
+                <div class="review-footer__info">
+                  <h6 class="name">Nguyễn Đỗ Cẩm Bình</h6>
+                  <p class="position">Trưởng phòng kinh doanh, Công ty BĐS Him Lam</p>
                 </div>
               </div>
             </div>

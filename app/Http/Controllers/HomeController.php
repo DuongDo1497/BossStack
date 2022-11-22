@@ -66,9 +66,9 @@ class HomeController extends Controller
         return $this->view('contact');
     }
 
-    public function terms()
+    public function term()
     {
-        return $this->view('terms');
+        return $this->view('term');
     }
 
 

@@ -9,10 +9,6 @@
     <div class="container">
       <div class="wrap">
         <div class="banner-default__body">
-          {{-- <div class="banner-default__link">
-            <img class="icon img-fluid" src="{{ asset('img/web/link-icon.svg') }}" alt="" />
-            <span class="text">Về chúng tôi</span>
-          </div> --}}
           <h1 class="banner-default__title text-center">Liên hệ</h1>
         </div>
       </div>

@@ -46,7 +46,7 @@
         <p class="footer-item__title">Gói giải pháp</p>
         <div class="footer-item__content">
           <ul>
-            <li><a href="#">Gói giải pháp BossStack</a></li>
+            <li><a href="{{ asset('package') }}">Gói giải pháp BossStack</a></li>
           </ul>
         </div>
       </div>
@@ -56,7 +56,7 @@
         <div class="footer-item__content">
           <ul>
             <li><a href="{{ asset('about-us') }}">Về BossStack</a></li>
-            <li><a href="#">Điều khoản sử dụng</a></li>
+            <li><a href="{{ asset('term') }}">Điều khoản sử dụng</a></li>
             <li><a href="{{ asset('contact') }}">Liên hệ</a></li>
           </ul>
         </div>

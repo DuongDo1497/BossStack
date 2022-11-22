@@ -226,7 +226,8 @@
   <div class="section section-advertise advertise bg-img-blue">
     <div class="container">
       <div class="wrap">
-        <h3 class="advertise-title">Chúng tôi giải phóng chủ doanh nghiệp khỏi gánh nặng quản lý</h3>
+        <h3 class="advertise-title">The easiest way to control business accurately and efficiently
+        </h3>
         <a class="btn btn-second btn-size-lg btn-contact" href="{{ asset('contact') }}">Liên hệ</a>
       </div>
     </div>

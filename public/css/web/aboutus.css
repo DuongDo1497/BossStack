@@ -448,3 +448,7 @@
     left: -170px;
   }
 }
+
+.advertise.bg-img-blue{
+  background: url(../../img/web/aboutus-contact-bg.jpg) center center/cover no-repeat;
+}

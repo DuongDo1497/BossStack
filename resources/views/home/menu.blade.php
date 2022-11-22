@@ -33,7 +33,7 @@
     </ul>
   </li>
   <li class="menu-main__item">
-    <a class="menu-main__link" href="#">
+    <a class="menu-main__link" href="{{ asset('package') }}">
       <span class="text">Gói giải pháp</span>
     </a>
   </li>
