@@ -129,11 +129,59 @@
     </div>
   </div>
 
-  <div class="section section-advertise advertise bg-img-blue">
+  {{-- <div class="section section-advertise advertise bg-img-blue">
     <div class="container">
       <div class="wrap">
         <h3 class="advertise-title">Chúng tôi giải phóng chủ doanh nghiệp khỏi gánh nặng quản lý</h3>
         <a class="btn btn-second btn-size-lg btn-contact" href="{{ asset('contact') }}">Liên hệ</a>
+      </div>
+    </div>
+  </div> --}}
+
+  <div class="section section-advice advice">
+    <div class="container">
+      <div class="wrap">
+        <div class="advice-left">
+          <h4>SẢN PHẨM</h4>
+          <h3>GIẢI PHÁP CHUYỂN ĐỔI DỮ LIỆU</h3>
+        </div>
+        <div class="advice-right">
+          <h6>ĐĂNG KÝ NHẬN TƯ VẤN</h6>
+          <form action="" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control" id="fullname" name="fullname"
+                placeholder="Họ và tên *" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="phone" name="phone"
+                placeholder="Số điện thoại *" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" name="email"
+                placeholder="Email *" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="company" name="company"
+                placeholder="Công ty">
+            </div>
+            <div class="form-group">
+              <select class="form-select">
+                <option selected>Quy mô công ty</option>
+                <option value="">Dưới 30 nhân viên</option>
+                <option value="">Từ 30 - 50 nhân viên</option>
+                <option value="">Từ 50 - 100 nhân viên</option>
+                <option value="">Trên 100 nhân viên</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="position" name="position"
+                placeholder="Chức vụ">
+            </div>
+
+            <button type="submit" class="btn btn-second btn-size-lg btn-register">ĐĂNG KÝ
+              NGAY</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
