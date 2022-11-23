@@ -106,8 +106,9 @@
                   <p class="amount">0</p>
                   <small class="unit">đồng/tháng</small>
                 </div>
-                <select class="form-select service-option">
+                <select class="form-select service-option" disabled>
                   <option selected>Chọn gói thời gian</option>
+                  <option value="">1 tháng</option>
                   <option value="">3 tháng</option>
                   <option value="">6 tháng</option>
                   <option value="">12 tháng</option>
@@ -128,6 +129,7 @@
                 </div>
                 <select class="form-select service-option">
                   <option selected>Chọn gói thời gian</option>
+                  <option value="">1 tháng</option>
                   <option value="">3 tháng</option>
                   <option value="">6 tháng</option>
                   <option value="">12 tháng</option>
@@ -148,6 +150,7 @@
                 </div>
                 <select class="form-select service-option">
                   <option selected>Chọn gói thời gian</option>
+                  <option value="">1 tháng</option>
                   <option value="">3 tháng</option>
                   <option value="">6 tháng</option>
                   <option value="">12 tháng</option>
@@ -168,6 +171,7 @@
                 </div>
                 <select class="form-select service-option">
                   <option selected>Chọn gói thời gian</option>
+                  <option value="">1 tháng</option>
                   <option value="">3 tháng</option>
                   <option value="">6 tháng</option>
                   <option value="">12 tháng</option>

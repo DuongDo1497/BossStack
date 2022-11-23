@@ -9,7 +9,7 @@
           <p><span>Địa chỉ:</span> LM81- 42.OT04 (Officetel), Landmark 81 Vinhomes Central Park,
             720A Điện Biên Phủ, Phường 22, Quận Bình Thạnh, Tp Hồ Chí Minh.
           </p>
-          <p><span>Hotline:</span> +84 918 90 55 00</p>
+          <p><span>Hotline:</span> 0918 90 55 00</p>
           <p><span>Email:</span> info@bossstack.vn</p>
         </div>
       </div>
@@ -65,6 +65,14 @@
             </a>
             <a href="https://www.linkedin.com/company/82513104/admin/">
               <img class="img-fluid" src="{{ asset('img/web/linkedin-icon.svg') }}" alt="">
+            </a>
+          </div>
+          <div class="footer-item__img">
+            <a href="#">
+              <img class="img-fluid" src="{{ asset('img/web/dmca-img.png') }}" alt="">
+            </a>
+            <a href="#">
+              <img class="img-fluid" src="{{ asset('img/web/bct-img.png') }}" alt="">
             </a>
           </div>
         </div>

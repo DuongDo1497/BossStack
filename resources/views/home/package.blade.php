@@ -32,6 +32,7 @@
               <form action="" class="package-option">
                 <select class="form-select" disabled>
                   <option selected>Chọn gói thời gian</option>
+                  <option value="">1 tháng</option>
                   <option value="">3 tháng</option>
                   <option value="">6 tháng</option>
                   <option value="">12 tháng</option>
@@ -42,10 +43,11 @@
             <div class="package-service">
               <p class="package-title">Các dịch vụ bao gồm</p>
               <ul class="package-info">
-                <li>Quản lý ví tài chính từ 1.000đ</li>
                 <li>Tính số tiền nghỉ hưu</li>
-                <li>Cập nhật thu chi ví tổng</li>
-                <li>Theo dõi danh mục tài sản</li>
+                <li>Quản lý thu nhập</li>
+                <li>Quản lý chi tiêu hằng ngày</li>
+                <li>Theo dõi các khoản nợ</li>
+                <li>Quản lý tài sản hiện có</li>
               </ul>
             </div>
             <div class="package-policy">
@@ -83,6 +85,7 @@
               <form action="" class="package-option">
                 <select class="form-select">
                   <option selected>Chọn gói thời gian</option>
+                  <option value="">1 tháng</option>
                   <option value="">3 tháng</option>
                   <option value="">6 tháng</option>
                   <option value="">12 tháng</option>
@@ -94,9 +97,10 @@
               <p class="package-title">Các dịch vụ bao gồm</p>
               <ul class="package-info">
                 <li>Tất cả các tính năng của <b>gói Free</b></li>
-                <li>Thiết lập ví tài chính</li>
-                <li>Thiết lập ví đầu tư</li>
-                <li>Quản lý và phát triển dòng tiền cá nhân</li>
+                <li>Xây dựng mục tiêu dòng tiền xuyên suốt</li>
+                <li>Triển khai việc quản lý tiền và dòng tiền</li>
+                <li>Bóc tách dòng tiền cá nhân, đầu tư, kinh doanh</li>
+                <li>Theo dõi, đánh giá dòng tiền sau bóc tách</li>
               </ul>
             </div>
             <div class="package-policy">
@@ -141,6 +145,7 @@
               <form action="" class="package-option">
                 <select class="form-select">
                   <option selected>Chọn gói thời gian</option>
+                  <option value="">1 tháng</option>
                   <option value="">3 tháng</option>
                   <option value="">6 tháng</option>
                   <option value="">12 tháng</option>
@@ -195,6 +200,7 @@
               <form action="" class="package-option">
                 <select class="form-select">
                   <option selected>Chọn gói thời gian</option>
+                  <option value="">1 tháng</option>
                   <option value="">3 tháng</option>
                   <option value="">6 tháng</option>
                   <option value="">12 tháng</option>
@@ -206,8 +212,8 @@
               <p class="package-title">Các dịch vụ bao gồm</p>
               <ul class="package-info">
                 <li>Tất cả các tính năng của <b>gói Standard</b></li>
-                <li>Phân bổ dòng tiền đầu tư hằng tháng theo phần mềm</li>
-                <li>Theo dõi khuyến nghị đầu tư chứng khoán Việt Nam</li>
+                <li>Phân bổ dòng tiền đầu tư, kinh doanh hằng tháng theo phần mềm</li>
+                <li>Cập nhật khuyến nghị của đội ngũ chuyên gia BossStack</li>
               </ul>
             </div>
             <div class="package-policy">

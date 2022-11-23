@@ -71,9 +71,9 @@ class HomeController extends Controller
         return $this->view('term');
     }
 
-    public function register()
+    public function payments()
     {
-        return $this->view('register');
+        return $this->view('payments');
     }
 
 

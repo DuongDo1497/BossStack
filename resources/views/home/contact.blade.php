@@ -26,16 +26,32 @@
             <div class="company-info__item">
               <img class="icon img-fluid" src="{{ asset('img/web/icon-phone.svg') }}"
                 alt="" />
-              <span class="text">+84 918 90 55 00</span>
+              <ul>
+                <li>
+                  <p class="text"><b>Hotline:</b> 0918 90 55 00 <span>(Ms Ngân)</span></p>
+                </li>
+                <li>
+                  <p class="text"><b>Mr Khải:</b> 0838 44 89 98 <span>(P. Kinh doanh)</span></p>
+                </li>
+                <li>
+                  <p class="text"><b>Ms Lan Anh:</b> 0817 32 89 98 <span>(P. Kinh doanh)</span></p>
+                </li>
+                <li>
+                  <p class="text"><b>Mr Dũng:</b> 0819 04 89 98 <span>(P. Kĩ thuật)</span></p>
+                </li>
+                <li>
+                  <p class="text"><b>Ms Ngọc:</b> 0849 66 40 05 <span>(BP. CSKH)</span></p>
+                </li>
+              </ul>
             </div>
             <div class="company-info__item">
               <img class="icon img-fluid" src="{{ asset('img/web/icon-mail.svg') }}" alt="" />
-              <span class="text">info@bossstack.vn</span>
+              <p class="text">info@bossstack.vn</p>
             </div>
             <div class="company-info__item">
               <img class="icon img-fluid" src="{{ asset('img/web/icon-map.svg') }}" alt="" />
-              <span class="text">LM81- 42.OT04 (Officetel), Landmark 81 Vinhomes Central Park, 720A
-                Điện Biên Phủ, Phường 22, Quận Bình Thạnh, Tp Hồ Chí Minh.</span>
+              <p class="text">LM81- 42.OT04 (Officetel), Landmark 81 Vinhomes Central Park, 720A
+                Điện Biên Phủ, Phường 22, Quận Bình Thạnh, Tp Hồ Chí Minh.</p>
             </div>
           </div>
         </div>

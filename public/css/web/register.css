@@ -159,6 +159,19 @@
   color: var(--gray-cl-6);
 }
 
+.register-service__item .form-select{
+  color: var(--gray-cl-7);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--gray-cl-3);
+  background-color: var(--gray-cl-1);
+}
+
+.register-service__item .form-select:disabled{
+  cursor: no-drop;
+  color: var(--gray-cl-4);
+}
+
 .register-form .btn-register{
   margin: 48px auto 0;
 }

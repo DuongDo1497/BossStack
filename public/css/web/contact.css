@@ -1,11 +1,10 @@
 .advisory{
-  background-color: var(--bg-cyan-cl);
+  background-color: var(--gray-cl-1);
 }
 
 .advisory .wrap{
   display: flex;
   justify-content: space-between;
-  margin-top: -270px;
 }
 
 .advisory-content,
@@ -39,8 +38,21 @@
   margin-top: 4px;
 }
 
+.advisory-content .company-info__item ul li{
+  margin-bottom: 8px;
+}
+
+.advisory-content .company-info__item ul li:last-child{
+  margin-bottom: 0;
+}
+
 .advisory-content .company-info__item .text{
   color: var(--gray-cl-7);
+  margin-bottom: 0;
+}
+
+.advisory-content .company-info__item .text span{
+  color: var(--gray-cl-5);
 }
 
 .advisory-form{
