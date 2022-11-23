@@ -205,7 +205,7 @@
                 </div>
               </div>
               <p class="review-content">“Ban đầu tôi biết đến BossStack với vai trò mang đến giải
-                pháp chuyển đổi số dữ liệu giúp lưu trữ dữ liệu có hệ thống, đồng bộ dữ liệu trên một
+                pháp chuyển đổi dữ liệu giúp lưu trữ dữ liệu có hệ thống, đồng bộ dữ liệu trên một
                 nền tảng. Tôi có thể tìm kiếm tài liệu, hợp đồng dễ dàng mỗi lần làm việc với khách
                 hàng, đối tác. Tiếp đó, Vietponics áp dụng hệ thống vận hành số chuyên sâu từ
                 BossStack giúp tôi bớt gánh nặng trong khâu điều hành khi có quy trình làm việc rõ
@@ -254,7 +254,7 @@
                 </div>
               </div>
               <p class="review-content">“Là quản lý của một công ty xuất nhập khẩu nông sản, tôi đánh
-                giá cao giải pháp vận vận hành số của BossStack. Trước đó, tôi mất nhiều thời gian cho
+                giá cao giải pháp vận hành số của BossStack. Trước đó, tôi mất nhiều thời gian cho
                 khâu quản lý vận hành doanh nghiệp, nhập xuất sản phẩm, quản lý nhân sự rồi làm việc
                 cùng các đối tác nước ngoài. Sau một thời gian áp dụng giải pháp vận hành số của
                 BossStack tôi gần như không phải mang công việc về nhà làm và có nhiều thời gian cho

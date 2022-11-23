@@ -378,9 +378,7 @@
               <div class="content">
                 <img class="img-fluid icon"
                   src="{{ asset('img/landing-page/solution-icon-11.svg') }}">
-                <p class="text">Làm việc trực tiếp lần 1 cùng khách hàng tại <b>văn phòng</b>
-                  BossStack
-                  (hoặc <b>online</b>) trong 4 giờ</p>
+                <p class="text">Khảo sát <b>tình trạng thực tế</b> doanh nghiệp *</p>
               </div>
             </div>
 
@@ -474,7 +472,7 @@
               <p class="review__content">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
                   alt="">
-                Ban đầu tôi biết đến BossStack với vai trò mang đến giải pháp chuyển đổi số dữ liệu
+                Ban đầu tôi biết đến BossStack với vai trò mang đến giải pháp chuyển đổi dữ liệu
                 giúp lưu trữ dữ liệu có hệ thống, đồng bộ dữ liệu trên một nền tảng. Tôi có thể tìm
                 kiếm tài liệu, hợp đồng dễ dàng mỗi lần làm việc với khách hàng, đối tác. Tiếp đó,
                 Vietponics áp dụng hệ thống vận hành số chuyên sâu từ BossStack giúp tôi bớt gánh
@@ -494,7 +492,7 @@
               <p class="review__content">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
                   alt="">
-                Là quản lý của một công ty xuất nhập khẩu nông sản, tôi đánh giá cao giải pháp vận
+                Là quản lý của một công ty xuất nhập khẩu nông sản, tôi đánh giá cao giải pháp
                 vận hành số của BossStack. Trước đó, tôi mất nhiều thời gian cho khâu quản lý vận
                 hành doanh nghiệp, nhập xuất sản phẩm, quản lý nhân sự rồi làm việc cùng các đối tác
                 nước ngoài. Sau một thời gian áp dụng giải pháp vận hành số của BossStack tôi gần

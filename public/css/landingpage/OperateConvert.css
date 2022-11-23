@@ -932,6 +932,10 @@
   margin-bottom: 0;
 }
 
+.register__voucher .voucher-title h4{
+  font-size: 4rem;
+}
+
 .register__voucher .line{
   display: none;
 }
