@@ -64,7 +64,7 @@
             </div>
           </li>
           <li>
-            <a href="#solution" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
+            <a href="#register-now" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
           </li>
         </ul>
       </div>
