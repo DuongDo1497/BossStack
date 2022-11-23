@@ -720,9 +720,8 @@
               placeholder="Chức vụ">
             <select class="form-select" name="solution">
               <option selected>Giải pháp</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="">Chuyển đổi dữ liệu</option>
+              <option value="">Vận hành số chuyên sâu</option>
             </select>
           </div>
 
