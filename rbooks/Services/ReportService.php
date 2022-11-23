@@ -29,6 +29,7 @@ class ReportService extends BaseService
         $address = quote_smart($request->address);
         $title = quote_smart($request->title);
         $content = quote_smart($request->content);
+        $solution = quote_smart($request->solution);
         $created_user_id = '';
         $updated_user_id = '';
 
@@ -41,6 +42,7 @@ class ReportService extends BaseService
             'address' => $address,
             'title' => "$title",
             'content' => "$content",
+            'solution' => "$solution",
             'created_user_id' => $created_user_id,
             'updated_user_id' => $updated_user_id,
         ];
@@ -58,6 +60,7 @@ class ReportService extends BaseService
         $address = quote_smart($request->address);
         $title = quote_smart($request->title);
         $content = quote_smart($request->content);
+        $solution = quote_smart($request->solution);
         $updated_user_id = quote_smart('');
 
         $data = [
@@ -69,6 +72,7 @@ class ReportService extends BaseService
             'address' => $address,
             'title' => "$title",
             'content' => "$content",
+            'solution' => "$solution",
             'updated_user_id' => $updated_user_id,
         ];
 
@@ -78,8 +82,8 @@ class ReportService extends BaseService
     public function getListCoachings($searchField, $searchValue)
     {
         $listData = app(Report::class)
-                            ->where('title', 'like', "%$searchField%")
-                            ->where('content', 'LIKE', "%$searchValue%")
+                            ->where('course', 'like', "%$searchField%")
+                            ->where('solution', 'LIKE', "%$searchValue%")
                             ->where('deleted_at', '=', null)
                             ->orderBy('registerdate', 'desc')
                             ->orderBy('course', 'desc')

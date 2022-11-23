@@ -64,7 +64,7 @@
             </div>
           </li>
           <li>
-            <a href="#register-now" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
+            <a href="#solution" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
           </li>
         </ul>
       </div>
@@ -183,8 +183,7 @@
                   <img class="advantages-content__icon img-fluid"
                     src="{{ asset('img/landing-page/icon-advantages-check.svg') }}"
                     alt="">
-                  <p><span>TIẾT KIỆM</span> <span>87%<sup>*</sup></span> thời gian khi quản lý, xử
-                    lý và đưa ra
+                  <p>Tiết kiệm <span>87%<sup>*</sup></span> thời gian khi quản lý, xử lý và đưa ra
                     các quyết
                     định về tiền</p>
                 </div>
@@ -192,14 +191,14 @@
                   <img class="advantages-content__icon img-fluid"
                     src="{{ asset('img/landing-page/icon-advantages-check.svg') }}"
                     alt="">
-                  <p><span>TÙY CHỈNH</span> phù hợp với tình hình tài chính của từng khách hàng</p>
+                  <p><span>Tùy chỉnh</span> phù hợp với tình hình tài chính của từng khách hàng</p>
                 </div>
                 <div class="advantages-content__item">
                   <img class="advantages-content__icon img-fluid"
                     src="{{ asset('img/landing-page/icon-advantages-check.svg') }}"
                     alt="">
-                  <p><b>Phần mềm BossStack</b> có hệ thống chịu tải cao và tích hợp bảo mật
-                    nhiều lớp qua giao thức <span>HTTPS</span></p>
+                  <p><span>Phần mềm BossStack</span> có hệ thống chịu tải cao và tích hợp bảo mật
+                    nhiều lớp qua giao thức HTTPS</p>
                 </div>
               </div>
               <p class="note"><sup>*</sup> Dựa trên trải nghiệm thực tế khách hàng</p>
@@ -325,7 +324,7 @@
       <div class="container">
         <div class="wrap">
           <h3 class="solution-title">
-            Giải pháp thực thi <br /><span>Dòng tiền chuyên sâu</span>
+            Giải pháp thực thi <br /><span>Bóc tách dòng tiền</span>
           </h3>
 
           <div class="solution-list">
@@ -509,7 +508,7 @@
             data-aos-duration="1000" data-aos-easing="ease-in-out" role="form"
             action="{{ route('coaching-store') }}?continue=true" method="post" id="frm">
             {{ csrf_field() }}
-            <input type='hidden' name='course' value='7'>
+            <input type='hidden' name='course' value='8'>
 
             <h6>
               <p>Đăng ký</p>
@@ -537,9 +536,9 @@
               <input type="text" class="form-control" name="content" placeholder="Công ty">
               <input type="text" class="form-control" name="title" placeholder="Chức vụ">
               <select class="form-select" name="solution">
-                <option selected>Giải pháp</option>
-                <option value="">Bóc tách dòng tiền</option>
-                <option value="">Thực thi dòng tiền chuyên sâu</option>
+                <option selected value="">Giải pháp</option>
+                <option value="1">Bóc tách dòng tiền</option>
+                <option value="2">Thực thi dòng tiền chuyên sâu</option>
               </select>
             </div>
             <button type="submit" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</button>
@@ -622,7 +621,7 @@
               </a>
             </div>
             <div class="footer-content__social">
-              <a href="https://zalo.me/g/vwezco279">
+              <a href="#">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-zalo.svg') }}"
                   alt="">
               </a>
@@ -669,10 +668,15 @@
           src="{{ asset('img/landing-page/popup-img.png') }}" alt="">
       </div>
       <div class="popup-register__body">
+         @if (isset($infor))
+            <div class="alert alert-success">
+              {{ $infor }}
+            </div>
+         @endif
         <form role="form" action="{{ route('coaching-store') }}?continue=true" method="post"
           id="frms">
           {{ csrf_field() }}
-          <input type='hidden' name='course' value='7'>
+          <input type='hidden' name='course' value='8'>
           <div class="popup-register__form">
             <input type="text" class="form-control" name="fullname" placeholder="Họ và tên *"
               required>
@@ -694,9 +698,9 @@
             <input type="hidden" class="form-control" name="title" value=""
               placeholder="Chức vụ">
             <select class="form-select" name="solution">
-              <option selected>Giải pháp</option>
-              <option value="">Bóc tách dòng tiền</option>
-              <option value="">Thực thi dòng tiền chuyên sâu</option>
+              <option selected  value="">Giải pháp</option>
+              <option value="1">Bóc tách dòng tiền</option>
+              <option value="2">Thực thi dòng tiền chuyên sâu</option>
             </select>
           </div>
 

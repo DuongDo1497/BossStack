@@ -16,7 +16,7 @@
                 <h3 class="box-title">DANH SÁCH ĐĂNG KÝ KHÓA HỌC</h3>
                 <div class="box-tools">
                     <div class="btn-group btn-group-sm">
-                        <a class="btn btn-default" href="#"><i class="fa fa-download"></i> Xuất excel</a>
+                        <a class="btn btn-default" href="{{ route('report-export') }}"><i class="fa fa-download"></i> Xuất excel</a>                        
                     </div>
                 </div>
             </div>
@@ -26,13 +26,14 @@
                     <thead>
                         <tr>
                             <th style="text-align: center;" class="text-nowrap" width="1%">STT</th>
-                            <th style="text-align: center;" class="text-nowrap" width="20%">TÊN KHÁCH HÀNG</th>
+                            <th style="text-align: center;" class="text-nowrap" width="15%">TÊN KHÁCH HÀNG</th>
                             <th style="text-align: center;" class="text-nowrap">EMAIL</th>
                             <th style="text-align: center;" class="text-nowrap">ĐIỆN THOẠI</th>
                             <th style="text-align: center;" class="text-nowrap">NGÀY ĐĂNG KÝ</th>
+                            <th style="text-align: center;" class="text-nowrap">CƠ QUAN</th>
+                            <th style="text-align: center;" class="text-nowrap">CHỨC VỤ</th>
                             <th style="text-align: center;" class="text-nowrap">KHÓA HỌC</th>
-                            <th style="text-align: center;" class="text-nowrap">TIÊU ĐỀ</th>
-                            <th style="text-align: center;" class="text-nowrap">NỘI DUNG</th>
+                            <th style="text-align: center;" class="text-nowrap">GIẢI PHÁP</th>
                             <th style="text-align: center;" width="10%">CHỨC NĂNG</th>
                         </tr>
                     </thead>
@@ -52,11 +53,14 @@
                                 <td style="text-align: left;" class="text-nowrap">{{ $customer->email }}</td>
                                 <td style="text-align: left;" class="text-nowrap">{{ $customer->phone }}</td>
                                 <td style="text-align: center;" class="text-nowrap">{{ $customer->registerdate == null ? "" : ConvertSQLDate($customer->registerdate) }}</td>
+                                <td style="text-align: left;" class="text-nowrap">{{ $customer->title }}</td>
+                                <td style="text-align: left;" class="text-nowrap">{{ $customer->content }}</td>
                                 <td style="text-align: left;" class="text-nowrap">
                                   {{ $coursetype[$customer->course] }}        
                                 </td>
-                                <td style="text-align: left;" class="text-nowrap">{{ $customer->title }}</td>
-                                <td style="text-align: left;" class="text-nowrap">{{ $customer->content }}</td>
+                                <td style="text-align: left;" class="text-nowrap">
+                                  {{ $coursetypedetail[$customer->solution] }}        
+                                </td>
                                 <td style="text-align: center;" class="text-nowrap">
                                     <a href="javascript:void(0)" data-id="{{ $customer->id }}" class="btn-delete" title='Xóa'><i class="fa fa-trash" aria-hidden="true"></i></a>
                                         <form name="form-delete-{{ $customer->id }}" method="post" action="{{ route('report-delete', ['id' => $customer->id ]) }}">

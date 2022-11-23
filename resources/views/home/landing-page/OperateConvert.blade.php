@@ -64,7 +64,7 @@
             </div>
           </li>
           <li>
-            <a href="#register-now" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
+            <a href="#solution" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
           </li>
         </ul>
       </div>
@@ -134,17 +134,17 @@
               <div class="difficult-column">
                 <div class="difficult-item">
                   <p class="number"><span>01</span></p>
-                  <p class="text"><b>Dữ liệu, thông tin lưu trữ</b> không đồng bộ, chồng chéo,
-                    khó kiểm soát</p>
+                  <p class="text">Làm mãi <b>không dư</b></p>
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>02</span></p>
-                  <p class="text">Khó khăn trong việc <b>bảo mật thông tin tài liệu</b></p>
+                  <p class="text">Luôn bất an vì không biết <b>cách kiểm soát dòng tiền</b>, dự
+                    phòng tiền cho tương lai</p>
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>03</span></p>
-                  <p class="text">Ra quyết định thiếu chính xác vì <b>không đủ dữ liệu báo
-                      cáo</b></p>
+                  <p class="text"><b>Lẫn lộn tiền bạc</b> gia đình, cá nhân và đầu tư, kinh
+                    doanh</p>
                 </div>
                 <div class="difficult-item">
                   <i class="fa-solid fa-arrow-right"></i>
@@ -154,17 +154,18 @@
               <div class="difficult-column">
                 <div class="difficult-item">
                   <p class="number"><span>04</span></p>
-                  <p class="text"><b>Không có thông tin kịp thời</b> cho các cuộc họp quan trọng,
-                    làm việc với đối tác và khách hàng</p>
+                  <p class="text"><b>Không có công cụ để xử lý dòng tiền</b> cá nhân, tự doanh
+                    và doanh nghiệp</p>
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>05</span></p>
-                  <p class="text"><b>Thất thoát dữ liệu</b> khi thay đổi nhân sự</p>
+                  <p class="text"><b>Chưa tách bạch</b> và quản lý dòng tiền tổng quan, bị thiếu
+                    hụt vốn và mất cơ hội kinh doanh</p>
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>06</span></p>
-                  <p class="text"><b>Thiếu quy trình làm việc</b>, vận hành khó khăn, thiếu tính
-                    liên kết giữa các phòng ban, luồng công việc bị ngắt quãng</p>
+                  <p class="text"><b>Thiếu công cụ phân bổ dòng tiền</b> ảnh hưởng đến hoạt động
+                    doanh nghiệp, đặc biệt trong thị trường nhiều biến động</p>
                 </div>
                 <div class="difficult-item">
                   <i class="fa-solid fa-arrow-right"></i>
@@ -177,18 +178,18 @@
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>07</span></p>
-                  <p class="text"><b>Thiếu quy chuẩn đánh giá</b> chính xác năng lực nhân viên
-                    dựa trên cơ sở dữ liệu</p>
+                  <p class="text"><b>Không có công cụ để xử lý dòng tiền</b> cá nhân, tự doanh
+                    và doanh nghiệp</p>
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>08</span></p>
-                  <p class="text"><b>Thất thoát nhiều chi phí</b> vận hành doanh nghiệp: nhân sự,
-                    hàng hóa, tài chính</p>
+                  <p class="text"><b>Chưa tách bạch</b> và quản lý dòng tiền tổng quan, bị thiếu
+                    hụt vốn và mất cơ hội kinh doanh</p>
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>09</span></p>
-                  <p class="text"><b>Gánh nặng vận hành</b> đặt hết phần lớn trên vai chủ doanh
-                    nghiệp</p>
+                  <p class="text"><b>Thiếu công cụ phân bổ dòng tiền</b> ảnh hưởng đến hoạt động
+                    doanh nghiệp, đặc biệt trong thị trường nhiều biến động</p>
                 </div>
               </div>
             </div>
@@ -226,7 +227,7 @@
                 <div class="advantages-content__item">
                   <img class="advantages-content__icon img-fluid"
                     src="{{ asset('img/landing-page/icon-advantages-7.png') }}" alt="">
-                  <p><span>TÙY CHỈNH</span> thiết lập hệ thống phù hợp với từng doanh nghiệp</p>
+                  <p>Tuỳ chỉnh thiết lập hệ thống <span>phù hợp với từng doanh nghiệp</span></p>
                 </div>
               </div>
               <p class="note"><sup>*</sup> Zenkit (2018)</p>
@@ -377,8 +378,9 @@
               <div class="content">
                 <img class="img-fluid icon"
                   src="{{ asset('img/landing-page/solution-icon-11.svg') }}">
-                <p class="text">Khảo sát <b>tình trạng thực tế</b> doanh nghiệp <span
-                    class="star">*</span></p>
+                <p class="text">Làm việc trực tiếp lần 1 cùng khách hàng tại <b>văn phòng</b>
+                  BossStack
+                  (hoặc <b>online</b>) trong 4 giờ</p>
               </div>
             </div>
 
@@ -430,7 +432,7 @@
                   src="{{ asset('img/landing-page/solution-icon-3.svg') }}">
                 <p class="text">Làm việc trực tiếp <b>2 ngày</b> tại doanh nghiệp để thực thi
                   giải pháp và hướng dẫn, đào tạo nội bộ, đánh giá kết quả thực thi và nghiệm thu
-                  bàn giao <span class="star">*</span></p>
+                  bàn giao</p>
               </div>
             </div>
 
@@ -462,60 +464,62 @@
           <div class="review__carousel-2 owl-carousel owl-theme">
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/web/review-avt-2.jpg') }}" alt=""
+                <img src="{{ asset('img/user-2.jpg') }}" alt=""
                   class="img-fluid review__avatar">
                 <p class="review__info">
-                  <span>Nguyễn Đức Huy</span>
-                  <span>CEO Vietponics</span>
+                  <span>Nguyễn Đỗ Cẩm Bình</span>
+                  <span>Trưởng phòng kinh doanh công ty BĐS Him Lam</span>
                 </p>
               </div>
               <p class="review__content">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
                   alt="">
-                Ban đầu tôi biết đến BossStack với vai trò mang đến giải pháp chuyển đổi dữ liệu
-                giúp lưu trữ dữ liệu có hệ thống, đồng bộ dữ liệu trên một nền tảng. Tôi có thể tìm
-                kiếm tài liệu, hợp đồng dễ dàng mỗi lần làm việc với khách hàng, đối tác. Tiếp đó,
-                Vietponics áp dụng hệ thống vận hành số chuyên sâu từ BossStack giúp tôi bớt gánh
-                nặng trong khâu điều hành khi có quy trình làm việc rõ ràng, các phòng ban liên kết
-                chặt chẽ và làm việc nhịp nhàng.
+                Sử dụng <b>phần mềm BossStack</b> cuối tháng tôi
+                không cần ngồi ghi chép hay nhập bảng tính Excel. <b>Phần mềm BossStack</b> giúp tôi
+                quản lý mọi thu chi của cá nhân, gia đình và bóc tách hoàn toàn với dòng tiền
+                kinh doanh tại doanh nghiệp của tôi. Tính năng mà tôi đặc biệt quan tâm đó chính
+                là tính toán số tiền nghỉ hưu giúp tôi có những kế hoạch dài hạn về tài chính
+                của mình.
               </p>
             </div>
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/web/review-avt-1.jpg') }}" alt=""
+                <img src="{{ asset('img/user-1.jpg') }}" alt=""
                   class="img-fluid review__avatar">
                 <p class="review__info">
-                  <span>Nguyễn Thị Hồng Thủy</span>
-                  <span>CEO Công ty TNHH TMDV XNK Dương Thủy</span>
+                  <span>Lê Hoài Ân - CFA</span>
+                  <span>Tác giả cuốn sách bán chạy số 1 thị trường "<b>
+                      20 năm lịch sử Thị trường Chứng
+                      khoán Việt Nam
+                    </b>"</span>
                 </p>
               </div>
               <p class="review__content">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
                   alt="">
-                Là quản lý của một công ty xuất nhập khẩu nông sản, tôi đánh giá cao giải pháp
-                vận hành số của BossStack. Trước đó, tôi mất nhiều thời gian cho khâu quản lý vận
-                hành doanh nghiệp, nhập xuất sản phẩm, quản lý nhân sự rồi làm việc cùng các đối tác
-                nước ngoài. Sau một thời gian áp dụng giải pháp vận hành số của BossStack tôi gần
-                như không phải mang công việc về nhà làm và có nhiều thời gian cho gia đình.
+                <b>Phần mềm BossStack</b> giúp bạn theo dõi, kiểm soát các dòng tiền và giúp chúng
+                luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá nhân và dòng tiền đầu tư kinh doanh
+                của bạn được tách bạch hoàn toàn. Khi dòng tiền cá nhân và doanh nghiệp được bóc
+                tách, bạn sẽ chủ động hơn trong việc lập kế hoạch tài chính gia đình và các dự án
+                kinh doanh.
               </p>
             </div>
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/web/review-avt-3.jpg') }}" alt=""
+                <img src="{{ asset('img/user.jpg') }}" alt=""
                   class="img-fluid review__avatar">
                 <p class="review__info">
-                  <span>Đinh Thúy Phương</span>
-                  <span>CEO Công ty Mana.st</span>
+                  <span>Huỳnh Thu Ái</span>
+                  <span>Cố vấn, đào tạo hệ thống quản lý doanh nghiệp AMS</span>
                 </p>
               </div>
               <p class="review__content">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
                   alt="">
-                “BossStack là quản gia đáng tin cậy” - Quản gia vừa trông coi nhà cửa (quản lý vận
-                hành), coi sóc tiền bạc (bóc tách dòng tiền chủ doanh nghiệp). BossStack là địa chỉ
-                tin cậy, không những quản trị dòng tiền hiệu quả mà còn tạo giá trị thặng dư, gia
-                tăng giá trị dòng tiền cho doanh nghiệp dựa trên sự am hiểu về hoạt động kinh doanh
-                của doanh nghiệp”
+                <b>Phần mềm BossStack</b> giúp tôi phân bổ tài sản
+                và dòng tiền vào các ví mục tiêu tài chính khác nhau. Tôi có thể theo dõi từng
+                mục thu chi, từng mục tiêu tài chính đã tối ưu chưa. Từ đó, tôi phân bổ dòng
+                tiền một cách hợp lý và cắt giảm những chi phí không cần thiết.
               </p>
             </div>
           </div>
@@ -530,7 +534,7 @@
             data-aos-duration="1000" data-aos-easing="ease-in-out" role="form"
             action="{{ route('coaching-store') }}?continue=true" method="post" id="frm">
             {{ csrf_field() }}
-            <input type='hidden' name='course' value='7'>
+            <input type='hidden' name='course' value='9'>
 
             <h6>
               <p>Đăng ký</p>
@@ -558,9 +562,9 @@
               <input type="text" class="form-control" name="content" placeholder="Công ty">
               <input type="text" class="form-control" name="title" placeholder="Chức vụ">
               <select class="form-select" name="solution">
-                <option selected>Giải pháp</option>
-                <option value="">Chuyển đổi dữ liệu</option>
-                <option value="">Vận hành số chuyên sâu</option>
+                <option selected value="">Giải pháp</option>
+                <option value="3">Chuyển đổi dữ liệu</option>
+                <option value="4">Vận hành số chuyên sâu</option>
               </select>
             </div>
             <button type="submit" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</button>
@@ -568,9 +572,9 @@
           <div class="register__voucher" data-aos="fade-left" data-aos-delay="0"
             data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="voucher-title">
-              <h4>CHUYỂN ĐỔI VẬN HÀNH</h4>
-              <p>Chuyển đổi dữ liệu và vận hành số chuyên sâu giúp nâng cao hiệu quả kinh doanh và
-                gia tăng lợi nhuận doanh nghiệp</p>
+              <h4>CHUYỂN ĐỔI DÒNG TIỀN</h4>
+              <p>Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, dòng tiền kinh doanh bằng
+                phần mềm BossStack</p>
             </div>
             <div class="line"></div>
             <div class="voucher-qr">
@@ -643,7 +647,7 @@
               </a>
             </div>
             <div class="footer-content__social">
-              <a href="https://zalo.me/g/khgykm270">
+              <a href="#">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-zalo.svg') }}"
                   alt="">
               </a>
@@ -690,10 +694,15 @@
           src="{{ asset('img/landing-page/popup-img.png') }}" alt="">
       </div>
       <div class="popup-register__body">
+         @if (isset($infor))
+            <div class="alert alert-success">
+              {{ $infor }}
+            </div>
+         @endif
         <form role="form" action="{{ route('coaching-store') }}?continue=true" method="post"
           id="frms">
           {{ csrf_field() }}
-          <input type='hidden' name='course' value='7'>
+          <input type='hidden' name='course' value='9'>
           <div class="popup-register__form">
             <input type="text" class="form-control" name="fullname" placeholder="Họ và tên *"
               required>
@@ -715,9 +724,9 @@
             <input type="hidden" class="form-control" name="title" value=""
               placeholder="Chức vụ">
             <select class="form-select" name="solution">
-              <option selected>Giải pháp</option>
-              <option value="">Chuyển đổi dữ liệu</option>
-              <option value="">Vận hành số chuyên sâu</option>
+              <option selected value="">Giải pháp</option>
+              <option value="3">Chuyển đổi dữ liệu</option>
+              <option value="4">Vận hành số chuyên sâu</option>
             </select>
           </div>
 

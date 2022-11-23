@@ -47,6 +47,7 @@ class ReportController extends Controller
         $this->view->toDate = getCurrentDate('d');
 
         $this->view->coursetype = config('rbooks.COURSETYPE');
+        $this->view->coursetypedetail = config('rbooks.COURSETYPEDETAIL');        
     }
 
      /**
@@ -78,9 +79,6 @@ class ReportController extends Controller
     public function setView(Request $request)
     {
         $this->viewInit();
-
-        $collections = $this->main_service->getListCoachings('', '')->paginate($this->view->filter['limit']);        
-        $this->view->collections = $collections;
     }
 
     public function index(Request $request)
@@ -90,6 +88,42 @@ class ReportController extends Controller
         return $this->view('index');
     }
 
+    public function listCashConvert(Request $request)
+    {
+        $this->setViewInit();
+        $collections = $this->main_service->getListCoachings('8', '1')->paginate($this->view->filter['limit']);        
+        $this->view->collections = $collections;
+                
+        return $this->view('manage');
+    }
+
+    public function listCashConvertLevel(Request $request)
+    {
+        $this->setViewInit();
+        $collections = $this->main_service->getListCoachings('8', '2')->paginate($this->view->filter['limit']);        
+        $this->view->collections = $collections;
+                
+        return $this->view('manage');
+    }
+
+    public function listOperateConvert(Request $request)
+    {
+        $this->setViewInit();
+        $collections = $this->main_service->getListCoachings('9', '3')->paginate($this->view->filter['limit']);        
+        $this->view->collections = $collections;
+                
+        return $this->view('manage');
+    }
+
+    public function listOperateConvertLevel(Request $request)
+    {
+        $this->setViewInit();
+        $collections = $this->main_service->getListCoachings('9', '4')->paginate($this->view->filter['limit']);        
+        $this->view->collections = $collections;
+                
+        return $this->view('manage');
+    }
+        
     public function manage(Request $request)
     {
         $this->setViewInit();
@@ -122,7 +156,30 @@ class ReportController extends Controller
         return $this->view('index');
     }
 
+    public function export(Request $request)
+    {
+        $coursetype = config('rbooks.COURSETYPE');
+        $coursetypedetail = config('rbooks.COURSETYPEDETAIL');        
 
+        $collections = $this->main_service->getListCoachings('9', '3')->paginate($this->view->filter['limit']);        
+        
+        foreach ($collections as $customer) {
+
+            $registerdate = ($customer->registerdate == null ? '' : ConvertSQLDate($customer->registerdate) ) . " - " . ($customer->finish_at_product == null ? '' : ConvertSQLDate($customer->finish_at_product) );
+            $data[] = array(
+                'fullname' => $customer->fullname,
+                'email' => $customer->email,
+                'phone' => $customer->phone,
+                'registerdate' => $registerdate,
+                'title' => $customer->title,
+                'content' => $customer->content,
+                'course' => $coursetype[$customer->course] ,
+                'solution' => $coursetypedetail[$customer->solution],
+                'created_at' => $customer->created_at,
+            );
+        }
+        return Excel::download(new ReportExport($data), 'ExcelExport' . '-' . date(Export::DATE_FORMAT) . '.xlsx');
+    }
    
   
 }

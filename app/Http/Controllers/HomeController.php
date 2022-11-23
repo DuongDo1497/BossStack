@@ -233,6 +233,8 @@ class HomeController extends Controller
                 '5'=> 'course.MoneyBegetsMoney',
                 '6'=> 'course.MultiCashGrowth',
                 '7'=> 'landing-page.CashFlowDissection',
+                '8'=> 'landing-page.CashConvert',
+                '9'=> 'landing-page.OperateConvert',
               ];
        
         $course = $request->course;
