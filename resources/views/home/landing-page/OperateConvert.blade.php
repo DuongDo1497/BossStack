@@ -134,17 +134,17 @@
               <div class="difficult-column">
                 <div class="difficult-item">
                   <p class="number"><span>01</span></p>
-                  <p class="text">Làm mãi <b>không dư</b></p>
+                  <p class="text"><b>Dữ liệu, thông tin lưu trữ</b> không đồng bộ, chồng chéo,
+                    khó kiểm soát</p>
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>02</span></p>
-                  <p class="text">Luôn bất an vì không biết <b>cách kiểm soát dòng tiền</b>, dự
-                    phòng tiền cho tương lai</p>
+                  <p class="text">Khó khăn trong việc <b>bảo mật thông tin tài liệu</b></p>
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>03</span></p>
-                  <p class="text"><b>Lẫn lộn tiền bạc</b> gia đình, cá nhân và đầu tư, kinh
-                    doanh</p>
+                  <p class="text">Ra quyết định thiếu chính xác vì <b>không đủ dữ liệu báo
+                      cáo</b></p>
                 </div>
                 <div class="difficult-item">
                   <i class="fa-solid fa-arrow-right"></i>
@@ -154,18 +154,17 @@
               <div class="difficult-column">
                 <div class="difficult-item">
                   <p class="number"><span>04</span></p>
-                  <p class="text"><b>Không có công cụ để xử lý dòng tiền</b> cá nhân, tự doanh
-                    và doanh nghiệp</p>
+                  <p class="text"><b>Không có thông tin kịp thời</b> cho các cuộc họp quan trọng,
+                    làm việc với đối tác và khách hàng</p>
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>05</span></p>
-                  <p class="text"><b>Chưa tách bạch</b> và quản lý dòng tiền tổng quan, bị thiếu
-                    hụt vốn và mất cơ hội kinh doanh</p>
+                  <p class="text"><b>Thất thoát dữ liệu</b> khi thay đổi nhân sự</p>
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>06</span></p>
-                  <p class="text"><b>Thiếu công cụ phân bổ dòng tiền</b> ảnh hưởng đến hoạt động
-                    doanh nghiệp, đặc biệt trong thị trường nhiều biến động</p>
+                  <p class="text"><b>Thiếu quy trình làm việc</b>, vận hành khó khăn, thiếu tính
+                    liên kết giữa các phòng ban, luồng công việc bị ngắt quãng</p>
                 </div>
                 <div class="difficult-item">
                   <i class="fa-solid fa-arrow-right"></i>
@@ -178,18 +177,18 @@
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>07</span></p>
-                  <p class="text"><b>Không có công cụ để xử lý dòng tiền</b> cá nhân, tự doanh
-                    và doanh nghiệp</p>
+                  <p class="text"><b>Thiếu quy chuẩn đánh giá</b> chính xác năng lực nhân viên
+                    dựa trên cơ sở dữ liệu</p>
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>08</span></p>
-                  <p class="text"><b>Chưa tách bạch</b> và quản lý dòng tiền tổng quan, bị thiếu
-                    hụt vốn và mất cơ hội kinh doanh</p>
+                  <p class="text"><b>Thất thoát nhiều chi phí</b> vận hành doanh nghiệp: nhân sự,
+                    hàng hóa, tài chính</p>
                 </div>
                 <div class="difficult-item">
                   <p class="number"><span>09</span></p>
-                  <p class="text"><b>Thiếu công cụ phân bổ dòng tiền</b> ảnh hưởng đến hoạt động
-                    doanh nghiệp, đặc biệt trong thị trường nhiều biến động</p>
+                  <p class="text"><b>Gánh nặng vận hành</b> đặt hết phần lớn trên vai chủ doanh
+                    nghiệp</p>
                 </div>
               </div>
             </div>
