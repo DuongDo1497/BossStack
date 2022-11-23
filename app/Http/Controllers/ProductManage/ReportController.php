@@ -88,8 +88,12 @@ class ReportController extends Controller
     public function listCashConvert(Request $request)
     {
         $this->setViewInit();
-        $collections = $this->main_service->getListCoachings('8', '1')->paginate($this->view->filter['limit']);        
+        $course = '8';
+        $solution = '1';
+        $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
         $this->view->collections = $collections;
+        $this->view->course = $course;
+        $this->view->solution = $solution;
                 
         return $this->view('manage');
     }
@@ -97,8 +101,12 @@ class ReportController extends Controller
     public function listCashConvertLevel(Request $request)
     {
         $this->setViewInit();
-        $collections = $this->main_service->getListCoachings('8', '2')->paginate($this->view->filter['limit']);        
+        $course = '8';
+        $solution = '2';
+        $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
         $this->view->collections = $collections;
+        $this->view->course = $course;
+        $this->view->solution = $solution;
                 
         return $this->view('manage');
     }
@@ -106,8 +114,12 @@ class ReportController extends Controller
     public function listOperateConvert(Request $request)
     {
         $this->setViewInit();
-        $collections = $this->main_service->getListCoachings('9', '3')->paginate($this->view->filter['limit']);        
+        $course = '9';
+        $solution = '3';
+        $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
         $this->view->collections = $collections;
+        $this->view->course = $course;
+        $this->view->solution = $solution;
                 
         return $this->view('manage');
     }
@@ -115,8 +127,12 @@ class ReportController extends Controller
     public function listOperateConvertLevel(Request $request)
     {
         $this->setViewInit();
-        $collections = $this->main_service->getListCoachings('9', '4')->paginate($this->view->filter['limit']);        
+        $course = '9';
+        $solution = '4';
+        $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
         $this->view->collections = $collections;
+        $this->view->course = $course;
+        $this->view->solution = $solution;
                 
         return $this->view('manage');
     }
@@ -155,27 +171,41 @@ class ReportController extends Controller
 
     public function export(Request $request)
     {
+        $this->setViewInit();
+
         $coursetype = config('rbooks.COURSETYPE');
         $coursetypedetail = config('rbooks.COURSETYPEDETAIL');        
 
-        $collections = $this->main_service->getListCoachings('9', '3')->paginate($this->view->filter['limit']);        
-        
-        foreach ($collections as $customer) {
+        $course = $request->course;
+        $solution = $request->solution;
 
-            $registerdate = ($customer->registerdate == null ? '' : ConvertSQLDate($customer->registerdate) ) . " - " . ($customer->finish_at_product == null ? '' : ConvertSQLDate($customer->finish_at_product) );
-            $data[] = array(
-                'fullname' => $customer->fullname,
-                'email' => $customer->email,
-                'phone' => $customer->phone,
-                'registerdate' => $registerdate,
-                'title' => $customer->title,
-                'content' => $customer->content,
-                'course' => $coursetype[$customer->course] ,
-                'solution' => $coursetypedetail[$customer->solution],
-                'created_at' => $customer->created_at,
-            );
+        $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
+
+        if ($collections->count() > 0){
+            foreach ($collections as $customer) {
+    
+                $registerdate = ($customer->registerdate == null ? '' : ConvertSQLDate($customer->registerdate) ) . " - " . ($customer->finish_at_product == null ? '' : ConvertSQLDate($customer->finish_at_product) );
+                $data[] = array(
+                    'fullname' => $customer->fullname,
+                    'email' => $customer->email,
+                    'phone' => $customer->phone,
+                    'registerdate' => $registerdate,
+                    'title' => $customer->title,
+                    'content' => $customer->content,
+                    'course' => $coursetype[$customer->course] ,
+                    'solution' => $coursetypedetail[$customer->solution],
+                    'created_at' => $customer->created_at,
+                );
+            }
+            return Excel::download(new ReportExport($data), 'ExcelExport' . '-' . date(Export::DATE_FORMAT) . '.xlsx');
+        }else{
+            $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
+            $this->view->collections = $collections;
+            $this->view->course = $course;
+            $this->view->solution = $solution;
+                    
+            return $this->view('manage');
         }
-        return Excel::download(new ReportExport($data), 'ExcelExport' . '-' . date(Export::DATE_FORMAT) . '.xlsx');
     }
    
   

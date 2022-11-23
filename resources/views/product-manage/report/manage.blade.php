@@ -16,7 +16,7 @@
                 <h3 class="box-title">DANH SÁCH ĐĂNG KÝ KHÓA HỌC</h3>
                 <div class="box-tools">
                     <div class="btn-group btn-group-sm">
-                        <a class="btn btn-default" href="{{ route('report-export') }}"><i class="fa fa-download"></i> Xuất excel</a>                        
+                        <a class="btn btn-default" href="{{ route('report-export', ['course'=> $course, 'solution'=> $solution]) }}"><i class="fa fa-download"></i> Xuất excel</a>                        
                     </div>
                 </div>
             </div>
