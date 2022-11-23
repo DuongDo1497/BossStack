@@ -23,7 +23,6 @@ Route::get('about-us', 'HomeController@aboutUs')->name('about-us');
 Route::get('contact', 'HomeController@contact')->name('contact');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('term', 'HomeController@term')->name('term');
-Route::get('payments', 'HomeController@payments')->name('payments');
 
 // Landing Page
 Route::get('boctachdongtien', 'HomeController@cashFlowDissection')->name('boctachdongtien');
@@ -399,7 +398,12 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::get('/edit/{id}', 'ReportController@edit')->name('report-edit');
         Route::put('/update/{id}', 'ReportController@update')->name('report-update');
         Route::delete('/delete/{id}', 'ReportController@delete')->name('report-delete');
-        
+        Route::get('/listCashConvert', 'ReportController@listCashConvert')->name('report-listcashconvert');
+        Route::get('/listCashConvertLevel', 'ReportController@listCashConvertLevel')->name('report-listcashconvertlevel');
+        Route::get('/listOperateConvert', 'ReportController@listOperateConvert')->name('report-listoperateconvert');
+        Route::get('/listOperateConvertLevel', 'ReportController@listOperateConvertLevel')->name('report-listoperateconvertlevel');
+        Route::get('/export', 'ReportController@export')->name('report-export');
+
     });
 
     // Coupon
