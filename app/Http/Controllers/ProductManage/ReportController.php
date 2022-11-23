@@ -62,9 +62,6 @@ class ReportController extends Controller
     public function setViewInit()
     {
         $this->viewInit();
-
-        $collections = $this->main_service->getListCoachings('', '')->paginate($this->view->filter['limit']);        
-        $this->view->collections = $collections;
     }
 
      /**
