@@ -59,7 +59,16 @@
                       <p class="text">Thanh toán trực tiếp tại văn phòng BossStack</p>
                     </div>
                     <div class="payment-option__body">
-
+                      <p class="title-big">CÔNG TY TNHH LAM MINH ANH</p>
+                      <p>
+                        <span class="title">Địa chỉ</span>
+                        <span class="text">L4-42.OT05, Landmark 81 Vinhomes Central Park, 720A Điện
+                          Biên Phủ, Phường 22, Quận Bình Thạnh, Tp Hồ Chí Minh.</span>
+                      </p>
+                      <p>
+                        <span class="title">Điện thoại</span>
+                        <span class="text">028.3636.4405</span>
+                      </p>
                     </div>
                   </div>
 
@@ -75,7 +84,27 @@
                       <p class="text">Thanh toán chuyển khoản ngân hàng</p>
                     </div>
                     <div class="payment-option__body">
-
+                      <p class="title-big">Bước 1:</p>
+                      <ul class="mb-3">
+                        <li><b>Tên ngân hàng:</b> Ngân hàng TMCP Á Châu (ACB)</li>
+                        <li><b>Số tài khoản:</b> 000000000</li>
+                        <li><b>Tên chủ tài khoản:</b> CÔNG TY TNHH LAM MINH ANH</li>
+                        <li><b>Chi nhánh</b>: Q.Bình Thạnh, TP.HCM</li>
+                      </ul>
+                      <p class="title-big">Bước 2:</p>
+                      <p>[Tên Công ty/ Cá nhân] [Số điện thoại] thanh toán [Số lượng] [Gói
+                        Premium/Standard/Basic] [1thang/3thang/6thang/12thang]</p>
+                      <p>Ví dụ: Công ty TNHH Lam Minh Anh 0918905500 thanh toán 5 Gói Standard 6 tháng
+                        hoặc Nguyễn Văn A 0918905500 thanh toán 1 Gói Basic 12 tháng</p>
+                      <p>(Nếu chuyển qua ATM bạn chụp ảnh biên lai chuyển tiền và gửi
+                        email về info@bossstack.vn cùng với thông tin dịch vụ). Nhận được chuyển khoản
+                        hệ
+                        thống sẽ kích hoạt dịch vụ và gửi thông tin quản trị qua email cho bạn.</p>
+                      <p class="title-big">Bước 3:</p>
+                      <p class="mb-0">Vào trang "Thông tin liên hệ” trên website hoặc gọi điện đến
+                        số điện thoại hỗ
+                        trợ để thông báo tình trạng đã chuyển để hệ thống cập nhật tình trạng thanh
+                        toán đơn hàng của bạn.</p>
                     </div>
                   </div>
 
