@@ -1,0 +1,36 @@
+.payment{
+  background-color: var(--gray-cl-1);
+}
+
+.payment .wrap{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.payment-left,
+.payment-right{
+  padding: 32px;
+  border-radius: 16px;
+  background-color: var(--white-cl);
+  box-shadow: 0px 5px 10px rgba(53, 99, 172, 0.3);
+}
+
+.payment-left{
+  width: calc(772px - 12px);
+}
+
+.payment-right{
+  width: calc(100% - 784px);
+}
+
+.payment-title{
+  text-align: left;
+  color: var(--gray-cl-7);
+  margin-bottom: 48px;
+}
+
+.payment-customer .payment-content{
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+}

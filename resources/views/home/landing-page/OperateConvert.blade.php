@@ -464,62 +464,60 @@
           <div class="review__carousel-2 owl-carousel owl-theme">
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/user-2.jpg') }}" alt=""
+                <img src="{{ asset('img/web/review-avt-2.jpg') }}" alt=""
                   class="img-fluid review__avatar">
                 <p class="review__info">
-                  <span>Nguyễn Đỗ Cẩm Bình</span>
-                  <span>Trưởng phòng kinh doanh công ty BĐS Him Lam</span>
+                  <span>Nguyễn Đức Huy</span>
+                  <span>CEO Vietponics</span>
                 </p>
               </div>
               <p class="review__content">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
                   alt="">
-                Sử dụng <b>phần mềm BossStack</b> cuối tháng tôi
-                không cần ngồi ghi chép hay nhập bảng tính Excel. <b>Phần mềm BossStack</b> giúp tôi
-                quản lý mọi thu chi của cá nhân, gia đình và bóc tách hoàn toàn với dòng tiền
-                kinh doanh tại doanh nghiệp của tôi. Tính năng mà tôi đặc biệt quan tâm đó chính
-                là tính toán số tiền nghỉ hưu giúp tôi có những kế hoạch dài hạn về tài chính
-                của mình.
+                Ban đầu tôi biết đến BossStack với vai trò mang đến giải pháp chuyển đổi số dữ liệu
+                giúp lưu trữ dữ liệu có hệ thống, đồng bộ dữ liệu trên một nền tảng. Tôi có thể tìm
+                kiếm tài liệu, hợp đồng dễ dàng mỗi lần làm việc với khách hàng, đối tác. Tiếp đó,
+                Vietponics áp dụng hệ thống vận hành số chuyên sâu từ BossStack giúp tôi bớt gánh
+                nặng trong khâu điều hành khi có quy trình làm việc rõ ràng, các phòng ban liên kết
+                chặt chẽ và làm việc nhịp nhàng.
               </p>
             </div>
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/user-1.jpg') }}" alt=""
+                <img src="{{ asset('img/web/review-avt-1.jpg') }}" alt=""
                   class="img-fluid review__avatar">
                 <p class="review__info">
-                  <span>Lê Hoài Ân - CFA</span>
-                  <span>Tác giả cuốn sách bán chạy số 1 thị trường "<b>
-                      20 năm lịch sử Thị trường Chứng
-                      khoán Việt Nam
-                    </b>"</span>
+                  <span>Nguyễn Thị Hồng Thủy</span>
+                  <span>CEO Công ty TNHH TMDV XNK Dương Thủy</span>
                 </p>
               </div>
               <p class="review__content">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
                   alt="">
-                <b>Phần mềm BossStack</b> giúp bạn theo dõi, kiểm soát các dòng tiền và giúp chúng
-                luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá nhân và dòng tiền đầu tư kinh doanh
-                của bạn được tách bạch hoàn toàn. Khi dòng tiền cá nhân và doanh nghiệp được bóc
-                tách, bạn sẽ chủ động hơn trong việc lập kế hoạch tài chính gia đình và các dự án
-                kinh doanh.
+                Là quản lý của một công ty xuất nhập khẩu nông sản, tôi đánh giá cao giải pháp vận
+                vận hành số của BossStack. Trước đó, tôi mất nhiều thời gian cho khâu quản lý vận
+                hành doanh nghiệp, nhập xuất sản phẩm, quản lý nhân sự rồi làm việc cùng các đối tác
+                nước ngoài. Sau một thời gian áp dụng giải pháp vận hành số của BossStack tôi gần
+                như không phải mang công việc về nhà làm và có nhiều thời gian cho gia đình.
               </p>
             </div>
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/user.jpg') }}" alt=""
+                <img src="{{ asset('img/web/review-avt-3.jpg') }}" alt=""
                   class="img-fluid review__avatar">
                 <p class="review__info">
-                  <span>Huỳnh Thu Ái</span>
-                  <span>Cố vấn, đào tạo hệ thống quản lý doanh nghiệp AMS</span>
+                  <span>Đinh Thúy Phương</span>
+                  <span>CEO Công ty Mana.st</span>
                 </p>
               </div>
               <p class="review__content">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
                   alt="">
-                <b>Phần mềm BossStack</b> giúp tôi phân bổ tài sản
-                và dòng tiền vào các ví mục tiêu tài chính khác nhau. Tôi có thể theo dõi từng
-                mục thu chi, từng mục tiêu tài chính đã tối ưu chưa. Từ đó, tôi phân bổ dòng
-                tiền một cách hợp lý và cắt giảm những chi phí không cần thiết.
+                “BossStack là quản gia đáng tin cậy” - Quản gia vừa trông coi nhà cửa (quản lý vận
+                hành), coi sóc tiền bạc (bóc tách dòng tiền chủ doanh nghiệp). BossStack là địa chỉ
+                tin cậy, không những quản trị dòng tiền hiệu quả mà còn tạo giá trị thặng dư, gia
+                tăng giá trị dòng tiền cho doanh nghiệp dựa trên sự am hiểu về hoạt động kinh doanh
+                của doanh nghiệp”
               </p>
             </div>
           </div>
@@ -572,9 +570,9 @@
           <div class="register__voucher" data-aos="fade-left" data-aos-delay="0"
             data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="voucher-title">
-              <h4>CHUYỂN ĐỔI DÒNG TIỀN</h4>
-              <p>Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, dòng tiền kinh doanh bằng
-                phần mềm BossStack</p>
+              <h4>CHUYỂN ĐỔI VẬN HÀNH</h4>
+              <p>Chuyển đổi dữ liệu và vận hành số chuyên sâu giúp nâng cao hiệu quả kinh doanh và
+                gia tăng lợi nhuận doanh nghiệp</p>
             </div>
             <div class="line"></div>
             <div class="voucher-qr">
@@ -647,7 +645,7 @@
               </a>
             </div>
             <div class="footer-content__social">
-              <a href="#">
+              <a href="https://zalo.me/g/khgykm270">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-zalo.svg') }}"
                   alt="">
               </a>

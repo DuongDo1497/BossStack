@@ -245,7 +245,7 @@
               <div class="timeline__item" data-aos="fade-down" data-aos-delay="0"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="timeline__content">
-                  <h3 class="timeline__header">Buổi 1</h3>
+                  <h3 class="timeline__header">Step 1</h3>
                   <div class="timeline__body">
                     <ul>
                       <li>
@@ -274,7 +274,7 @@
               <div class="timeline__item" data-aos="fade-down" data-aos-delay="500"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="timeline__content">
-                  <h3 class="timeline__header">Buổi 2</h3>
+                  <h3 class="timeline__header">Step 2</h3>
                   <div class="timeline__body">
                     <ul>
                       <li>
@@ -304,7 +304,7 @@
               <div class="timeline__item" data-aos="fade-down" data-aos-delay="1000"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="timeline__content">
-                  <h3 class="timeline__header">Buổi 3</h3>
+                  <h3 class="timeline__header">Step 3</h3>
                   <div class="timeline__body">
                     <ul>
                       <li>

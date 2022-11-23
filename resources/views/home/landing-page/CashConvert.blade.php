@@ -324,7 +324,7 @@
       <div class="container">
         <div class="wrap">
           <h3 class="solution-title">
-            Giải pháp thực thi <br /><span>Bóc tách dòng tiền</span>
+            Giải pháp thực thi <br /><span>Dòng tiền chuyên sâu</span>
           </h3>
 
           <div class="solution-list">
@@ -621,7 +621,7 @@
               </a>
             </div>
             <div class="footer-content__social">
-              <a href="#">
+              <a href="https://zalo.me/g/vwezco279">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-zalo.svg') }}"
                   alt="">
               </a>

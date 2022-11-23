@@ -302,10 +302,12 @@
                   </div>
                 </div>
               </div>
-              <p class="review-content">“Phần mềm BossStack giúp bạn theo dõi và kiểm soát các dòng
-                tiền giúp chúng luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá nhân và dòng tiền đầu
-                tư kinh doanh của bạn được tách bạch hoàn toàn. Việc này giúp các dòng tiền được kiểm
-                soát và tăng trưởng hiệu quả.”</p>
+              <p class="review-content">“<b>Phần mềm BossStack</b> giúp bạn theo dõi, kiểm soát các
+                dòng tiền và giúp chúng
+                luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá nhân và dòng tiền đầu tư kinh doanh
+                của bạn được tách bạch hoàn toàn. Khi dòng tiền cá nhân và doanh nghiệp được bóc
+                tách, bạn sẽ chủ động hơn trong việc lập kế hoạch tài chính gia đình và các dự án
+                kinh doanh.”</p>
               <div class="review-footer">
                 <img class="img-fluid review-footer__avt" src="{{ asset('img/user-1.jpg') }}"
                   alt="">
@@ -407,7 +409,7 @@
                   src="{{ asset('img/web/review-avt-3.jpg') }}" alt="">
                 <div class="review-footer__info">
                   <h6 class="name">Đinh Thúy Phương</h6>
-                  <p class="position">Công ty Mana.st</p>
+                  <p class="position">CEO Công ty Mana.st</p>
                 </div>
               </div>
             </div>
@@ -445,15 +447,12 @@
                   </div>
                 </div>
               </div>
-              <p class="review-content">“Tôi từng nghĩ các ứng dụng quản lý tiền có thể chỉ là một
-                công cụ nhưng BossStack
-                Coaching đã cho tôi cách nhìn khác. Đây thật sự là một phần mềm có thể tính toán
-                từng đồng tiền nhỏ cho đến số tiền lớn, mà tính toán thủ công sẽ không khả thi. Nó
-                trở thành một người bạn đáng tin cậy khi giữ gìn và phát triển tiền bạc của tôi
-                tốt hơn. Tôi chú ý nhất đến phần tính số tiền còn thiếu hụt cho kỳ hưu trí. Về
-                dòng tiền, tôi thiết lập các mục tiêu tài chính chi tiết, quản lý thu chi hằng
-                ngày, quản lý tài sản và nợ, phân tích và theo dõi tiến độ thực hiện các kế hoạch
-                dòng tiền, và điểm đặc biệt là các gợi ý đầu tư dài hạn phù hợp.”</p>
+              <p class="review-content">“Sử dụng <b>phần mềm BossStack</b> cuối tháng tôi
+                không cần ngồi ghi chép hay nhập bảng tính Excel. <b>Phần mềm BossStack</b> giúp tôi
+                quản lý mọi thu chi của cá nhân, gia đình và bóc tách hoàn toàn với dòng tiền
+                kinh doanh tại doanh nghiệp của tôi. Tính năng mà tôi đặc biệt quan tâm đó chính
+                là tính toán số tiền nghỉ hưu giúp tôi có những kế hoạch dài hạn về tài chính
+                của mình.”</p>
               <div class="review-footer">
                 <img class="img-fluid review-footer__avt" src="{{ asset('img/user-2.jpg') }}"
                   alt="">
