@@ -546,7 +546,7 @@
           <div class="register__voucher" data-aos="fade-left" data-aos-delay="0"
             data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="voucher-title">
-              <h4>CHUYỂN ĐỔI DÒNG TIỀN</h4>
+              <h4>BÓC TÁCH DÒNG TIỀN</h4>
               <p>Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, dòng tiền kinh doanh bằng
                 phần mềm BossStack</p>
             </div>
