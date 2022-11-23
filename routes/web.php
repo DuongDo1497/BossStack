@@ -403,7 +403,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::get('/listCashConvertLevel', 'ReportController@listCashConvertLevel')->name('report-listcashconvertlevel');
         Route::get('/listOperateConvert', 'ReportController@listOperateConvert')->name('report-listoperateconvert');
         Route::get('/listOperateConvertLevel', 'ReportController@listOperateConvertLevel')->name('report-listoperateconvertlevel');
-        Route::get('/export', 'ReportController@export')->name('report-export');
+        Route::get('/export/{course}/{solution}', 'ReportController@export')->name('report-export');
 
     });
 

@@ -28,8 +28,8 @@ class ReportExport implements FromView, WithEvents
                 $event->sheet->getColumnDimension('E')->setWidth(20);
                 $event->sheet->getColumnDimension('F')->setWidth(20);
                 $event->sheet->getColumnDimension('G')->setWidth(20);
-                $event->sheet->getColumnDimension('H')->setWidth(20);
-                $event->sheet->getColumnDimension('I')->setWidth(20);
+                $event->sheet->getColumnDimension('H')->setWidth(30);
+                $event->sheet->getColumnDimension('I')->setWidth(30);
 
                 $boder = [
                     'font' => array(
@@ -69,8 +69,6 @@ class ReportExport implements FromView, WithEvents
                 $event->sheet->getDelegate()->getStyle('D4:D10000')->applyFromArray($styleArray);
                 $event->sheet->getDelegate()->getStyle('E4:E10000')->applyFromArray($styleArray);
                 $event->sheet->getDelegate()->getStyle('G4:G10000')->applyFromArray($styleArray);
-                $event->sheet->getDelegate()->getStyle('I4:I10000')->applyFromArray($styleArray);
-                $event->sheet->getDelegate()->getStyle('H4:H10000')->applyFromArray($styleArray);
 //                $event->sheet->getStyle('E2')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)->getStartColor()->setARGB('FFFF0000');
                   
             }
