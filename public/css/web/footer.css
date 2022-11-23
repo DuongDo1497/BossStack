@@ -54,6 +54,10 @@
   column-gap: 16px;
 }
 
+.footer-item__social img{
+  width: 35px;
+}
+
 .footer-item__img a{
   display: inline-block;
   margin-top: 16px;

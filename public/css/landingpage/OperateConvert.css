@@ -684,6 +684,14 @@
   color: var(--white-cl);
 }
 
+.solution-item .content .text .star{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 4rem;
+  color: #95CCDD;
+}
+
 .solution-note{
   color: var(--white-cl);
   margin-top: 5rem;

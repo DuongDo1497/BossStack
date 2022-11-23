@@ -4,7 +4,7 @@ $('.partner-carousel').owlCarousel({
   dots: false,
   autoplay: true,
   mouseDrag: false,
-  autoplaySpeed: 300,
+  autoplaySpeed: 100,
   responsive:{
     0:{
         items: 1,
@@ -25,7 +25,7 @@ $('.review-carousel').owlCarousel({
   margin: 66,
   autoplay: true,
   mouseDrag: false,
-  autoplaySpeed: 1500,
+  autoplaySpeed: 2000,
   navText: [
     "<i class='fa-solid fa-angle-left'></i>",
     "<i class='fa-solid fa-angle-right'></i>"

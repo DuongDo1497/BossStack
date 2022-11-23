@@ -226,7 +226,7 @@
                 <div class="advantages-content__item">
                   <img class="advantages-content__icon img-fluid"
                     src="{{ asset('img/landing-page/icon-advantages-7.png') }}" alt="">
-                  <p>Tuỳ chỉnh thiết lập hệ thống <span>phù hợp với từng doanh nghiệp</span></p>
+                  <p><span>TÙY CHỈNH</span> thiết lập hệ thống phù hợp với từng doanh nghiệp</p>
                 </div>
               </div>
               <p class="note"><sup>*</sup> Zenkit (2018)</p>
@@ -377,7 +377,8 @@
               <div class="content">
                 <img class="img-fluid icon"
                   src="{{ asset('img/landing-page/solution-icon-11.svg') }}">
-                <p class="text">Khảo sát <b>tình trạng thực tế</b> doanh nghiệp *</p>
+                <p class="text">Khảo sát <b>tình trạng thực tế</b> doanh nghiệp <span
+                    class="star">*</span></p>
               </div>
             </div>
 
@@ -429,7 +430,7 @@
                   src="{{ asset('img/landing-page/solution-icon-3.svg') }}">
                 <p class="text">Làm việc trực tiếp <b>2 ngày</b> tại doanh nghiệp để thực thi
                   giải pháp và hướng dẫn, đào tạo nội bộ, đánh giá kết quả thực thi và nghiệm thu
-                  bàn giao</p>
+                  bàn giao <span class="star">*</span></p>
               </div>
             </div>
 

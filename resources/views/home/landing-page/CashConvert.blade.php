@@ -183,7 +183,8 @@
                   <img class="advantages-content__icon img-fluid"
                     src="{{ asset('img/landing-page/icon-advantages-check.svg') }}"
                     alt="">
-                  <p>Tiết kiệm <span>87%<sup>*</sup></span> thời gian khi quản lý, xử lý và đưa ra
+                  <p><span>TIẾT KIỆM</span> <span>87%<sup>*</sup></span> thời gian khi quản lý, xử
+                    lý và đưa ra
                     các quyết
                     định về tiền</p>
                 </div>
@@ -191,14 +192,14 @@
                   <img class="advantages-content__icon img-fluid"
                     src="{{ asset('img/landing-page/icon-advantages-check.svg') }}"
                     alt="">
-                  <p><span>Tùy chỉnh</span> phù hợp với tình hình tài chính của từng khách hàng</p>
+                  <p><span>TÙY CHỈNH</span> phù hợp với tình hình tài chính của từng khách hàng</p>
                 </div>
                 <div class="advantages-content__item">
                   <img class="advantages-content__icon img-fluid"
                     src="{{ asset('img/landing-page/icon-advantages-check.svg') }}"
                     alt="">
-                  <p><span>Phần mềm BossStack</span> có hệ thống chịu tải cao và tích hợp bảo mật
-                    nhiều lớp qua giao thức HTTPS</p>
+                  <p><b>Phần mềm BossStack</b> có hệ thống chịu tải cao và tích hợp bảo mật
+                    nhiều lớp qua giao thức <span>HTTPS</span></p>
                 </div>
               </div>
               <p class="note"><sup>*</sup> Dựa trên trải nghiệm thực tế khách hàng</p>
