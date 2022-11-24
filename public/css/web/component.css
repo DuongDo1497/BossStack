@@ -79,6 +79,12 @@
   border: 1px solid var(--primary-cl);
 }
 
+.btn.btn-primary:focus,
+.btn.btn-second:focus,
+.btn.btn-stroke:focus{
+  box-shadow: none;
+}
+
 /* Section Style */
 .section{
   padding: 120px 0;

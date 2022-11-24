@@ -834,6 +834,8 @@
 
 .review__top .review__avatar{
   width: 10.8rem !important;
+  height: 10.8rem;
+  object-fit: cover;
   border-radius: 50%;
   flex-shrink: 0;
 }

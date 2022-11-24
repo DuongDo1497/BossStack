@@ -379,7 +379,7 @@
             data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/user-2.jpg') }}" alt=""
+                <img src="{{ asset('img/web/review-avt-4.jpg') }}" alt=""
                   class="img-fluid review__avatar">
                 <p class="review__content">Sử dụng phần mềm BossStack cuối tháng tôi
                   không cần ngồi ghi chép hay nhập bảng tính Excel. Phần mềm BossStack giúp tôi

@@ -31,13 +31,13 @@
                   <p class="text"><b>Hotline:</b> 0918 90 55 00 <span>(Ms Ngân)</span></p>
                 </li>
                 <li>
-                  <p class="text"><b>Mr Khải:</b> 0838 44 89 98 <span>(P. Kinh doanh)</span></p>
+                  <p class="text"><b>Mr Khải:</b> 0838 44 89 98 <span>(BP. Kinh doanh)</span></p>
                 </li>
                 <li>
-                  <p class="text"><b>Ms Lan Anh:</b> 0817 32 89 98 <span>(P. Kinh doanh)</span></p>
+                  <p class="text"><b>Ms Lan Anh:</b> 0817 32 89 98 <span>(BP. Kinh doanh)</span></p>
                 </li>
                 <li>
-                  <p class="text"><b>Mr Dũng:</b> 0819 04 89 98 <span>(P. Kĩ thuật)</span></p>
+                  <p class="text"><b>Mr Dũng:</b> 0819 04 89 98 <span>(BP. Kĩ thuật)</span></p>
                 </li>
                 <li>
                   <p class="text"><b>Ms Ngọc:</b> 0849 66 40 05 <span>(BP. CSKH)</span></p>
