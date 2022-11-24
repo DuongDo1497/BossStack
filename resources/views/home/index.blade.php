@@ -457,8 +457,8 @@
                 là tính toán số tiền nghỉ hưu giúp tôi có những kế hoạch dài hạn về tài chính
                 của mình.”</p>
               <div class="review-footer">
-                <img class="img-fluid review-footer__avt" src="{{ asset('img/user-2.jpg') }}"
-                  alt="">
+                <img class="img-fluid review-footer__avt"
+                  src="{{ asset('img/web/review-avt-4.jpg') }}" alt="">
                 <div class="review-footer__info">
                   <h6 class="name">Nguyễn Đỗ Cẩm Bình</h6>
                   <p class="position">Trưởng phòng kinh doanh, Công ty BĐS Him Lam</p>
