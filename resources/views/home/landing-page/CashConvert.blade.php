@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BossStack Coaching - Dữ liệu số Doanh nghiệp</title>
+  <title>{{ config('app.name') }}</title>
   <link rel="shortcut icon" href="{{ asset('img/landing-page/favicon.ico') }}" type="image/x-icon">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -438,7 +438,7 @@
           <div class="review__carousel-2 owl-carousel owl-theme">
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/user-2.jpg') }}" alt=""
+                <img src="{{ asset('img/web/review-avt-4.jpg') }}" alt=""
                   class="img-fluid review__avatar">
                 <p class="review__info">
                   <span>Nguyễn Đỗ Cẩm Bình</span>
@@ -668,11 +668,11 @@
           src="{{ asset('img/landing-page/popup-img.png') }}" alt="">
       </div>
       <div class="popup-register__body">
-         @if (isset($infor))
-            <div class="alert alert-success">
-              {{ $infor }}
-            </div>
-         @endif
+        @if (isset($infor))
+          <div class="alert alert-success">
+            {{ $infor }}
+          </div>
+        @endif
         <form role="form" action="{{ route('coaching-store') }}?continue=true" method="post"
           id="frms">
           {{ csrf_field() }}
@@ -698,7 +698,7 @@
             <input type="hidden" class="form-control" name="title" value=""
               placeholder="Chức vụ">
             <select class="form-select" name="solution">
-              <option selected  value="">Giải pháp</option>
+              <option selected value="">Giải pháp</option>
               <option value="1">Bóc tách dòng tiền</option>
               <option value="2">Thực thi dòng tiền chuyên sâu</option>
             </select>
