@@ -107,8 +107,8 @@
               <p class="package-title">Chính sách</p>
               <ul class="package-info">
                 <li>Giảm <b>10%</b> khi đăng ký mua gói <b>3 tháng</b></li>
-                <li>Giảm <b>15%</b> khi đăng ký mua gói <b>6 tháng</b></li>
-                <li>Giảm <b>20%</b> khi đăng ký mua gói <b>12 tháng</b></li>
+                <li>Giảm <b>20%</b> khi đăng ký mua gói <b>6 tháng</b></li>
+                <li>Giảm <b>30%</b> khi đăng ký mua gói <b>12 tháng</b></li>
               </ul>
             </div>
             <div class="package-support">
@@ -219,9 +219,9 @@
             <div class="package-policy">
               <p class="package-title">Chính sách</p>
               <ul class="package-info">
-                <li>Giảm <b>15%</b> khi đăng ký mua gói <b>3 tháng</b></li>
+                <li>Giảm <b>10%</b> khi đăng ký mua gói <b>3 tháng</b></li>
                 <li>Giảm <b>20%</b> khi đăng ký mua gói <b>6 tháng</b></li>
-                <li>Giảm <b>35%</b> khi đăng ký mua gói <b>12 tháng</b></li>
+                <li>Giảm <b>30%</b> khi đăng ký mua gói <b>12 tháng</b></li>
               </ul>
             </div>
             <div class="package-support">

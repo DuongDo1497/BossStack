@@ -126,7 +126,6 @@
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 60px;
-  transition: max-height .5s ease 0s;
   background-color: var(--white-cl);
 }
 
@@ -162,6 +161,11 @@
   text-align: left;
   color: var(--gray-cl-5);
   margin-bottom: 16px;
+}
+
+.leadership-info .exp{
+  overflow: hidden;
+  height: calc(100% - 154px);
 }
 
 .leadership-info .exp ul{
