@@ -494,16 +494,17 @@
             </div>
           </div>
         </div>
-          @if (isset($infor))
-            <div class="alert alert-success">
-              {{ $infor }}
-            </div>
-          @endif
-          <form action="{{ route('coaching-store') }}?continue=true" method="post" id="frm">
-            {{ csrf_field() }}
-            <input type='hidden' name='course' value='7'>
-            <input type='hidden' name='solution' value='0'>
-            <input type='hidden' name='typereport' value='0'>
+        @if (isset($infor))
+          <div class="alert alert-success">
+            {{ $infor }}
+          </div>
+        @endif
+        <form class="contact-us__form" action="{{ route('coaching-store') }}?continue=true"
+          method="post" id="frm">
+          {{ csrf_field() }}
+          <input type='hidden' name='course' value='7'>
+          <input type='hidden' name='solution' value='0'>
+          <input type='hidden' name='typereport' value='0'>
           <div class="form-group">
             <label class="form-label" for="fullname">Họ và tên <span>*</span></label>
             <input type="text" class="form-control" id="fullname" name="fullname"
