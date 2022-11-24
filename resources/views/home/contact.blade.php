@@ -31,13 +31,13 @@
                   <p class="text"><b>Hotline:</b> 0918 90 55 00 <span>(Ms Ngân)</span></p>
                 </li>
                 <li>
-                  <p class="text"><b>Mr Khải:</b> 0838 44 89 98 <span>(BP. Kinh doanh)</span></p>
+                  <p class="text"><b>Mr Khải:</b> 0838 44 89 98 <span>(P. Kinh doanh)</span></p>
                 </li>
                 <li>
-                  <p class="text"><b>Ms Lan Anh:</b> 0817 32 89 98 <span>(BP. Kinh doanh)</span></p>
+                  <p class="text"><b>Ms Lan Anh:</b> 0817 32 89 98 <span>(P. Kinh doanh)</span></p>
                 </li>
                 <li>
-                  <p class="text"><b>Mr Dũng:</b> 0819 04 89 98 <span>(BP. Kĩ thuật)</span></p>
+                  <p class="text"><b>Mr Dũng:</b> 0819 04 89 98 <span>(P. Kĩ thuật)</span></p>
                 </li>
                 <li>
                   <p class="text"><b>Ms Ngọc:</b> 0849 66 40 05 <span>(BP. CSKH)</span></p>
@@ -61,7 +61,17 @@
             <img class="img-fluid" src="{{ asset('img/web/logo.svg') }}" alt="">
             <p>Liên hệ với chúng tôi</p>
           </div>
-          <form action="">
+          @if (isset($infor))
+            <div class="alert alert-success">
+              {{ $infor }}
+            </div>
+          @endif
+          <form action="{{ route('coaching-store') }}?continue=true" method="post" id="frm">
+            {{ csrf_field() }}
+            <input type='hidden' name='course' value='7'>
+            <input type='hidden' name='solution' value='0'>
+            <input type='hidden' name='typereport' value='0'>
+
             <div class="form-group">
               <label class="form-label" for="fullname">Họ và tên <span>*</span></label>
               <input type="text" class="form-control" id="fullname" name="fullname"
@@ -79,12 +89,12 @@
             </div>
             <div class="form-group">
               <label class="form-label" for="company">Công ty</label>
-              <input type="text" class="form-control" id="company" name="company"
+              <input type="text" class="form-control" id="content" name="content"
                 placeholder="Công ty">
             </div>
             <div class="form-group">
               <label class="form-label" for="message">Chúng tôi có thể giúp gì cho bạn?</label>
-              <textarea name="message" class="form-control" id="message"
+              <textarea name="title" class="form-control" id="title"
                 placeholder="Chúng tôi có thể giúp gì cho bạn?"></textarea>
             </div>
             <button type="submit" class="btn btn-second btn-size-lg btn-send">Gửi ngay</button>

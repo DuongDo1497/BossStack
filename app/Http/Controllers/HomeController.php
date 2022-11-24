@@ -237,7 +237,7 @@ class HomeController extends Controller
                 '4'=> 'products.OperateDigital',
                 '5'=> 'products.LossControl',
                 '6'=> '',
-                '7'=> '',
+                '7'=> 'contact',
                 '8'=> 'landing-page.CashConvert',
                 '9'=> 'landing-page.OperateConvert',
               ];

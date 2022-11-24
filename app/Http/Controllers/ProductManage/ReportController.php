@@ -150,6 +150,19 @@ class ReportController extends Controller
                 
         return $this->view('manage');
     }
+
+    public function listContact(Request $request)
+    {
+        $this->setViewInit();
+        $course = '7';
+        $solution = '0';
+        $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
+        $this->view->collections = $collections;
+        $this->view->course = $course;
+        $this->view->solution = $solution;
+                
+        return $this->view('contact');
+    }
         
     public function manage(Request $request)
     {

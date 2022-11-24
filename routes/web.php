@@ -404,6 +404,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::get('/listLostControl', 'ReportController@listLostControl')->name('report-listlostcontrol');
         Route::get('/listOperateConvert', 'ReportController@listOperateConvert')->name('report-listoperateconvert');
         Route::get('/listOperateConvertLevel', 'ReportController@listOperateConvertLevel')->name('report-listoperateconvertlevel');
+        Route::get('/listContact', 'ReportController@listContact')->name('report-listcontact');
         Route::get('/export/{course}/{solution}', 'ReportController@export')->name('report-export');
 
     });

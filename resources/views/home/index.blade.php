@@ -163,9 +163,6 @@
           <div class="item">
             <img class="img-fluid partner-item" src="{{ asset('img/web/partner-12.png') }}">
           </div>
-          <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-13.png') }}">
-          </div>
         </div>
       </div>
     </div>
@@ -460,8 +457,8 @@
                 là tính toán số tiền nghỉ hưu giúp tôi có những kế hoạch dài hạn về tài chính
                 của mình.”</p>
               <div class="review-footer">
-                <img class="img-fluid review-footer__avt"
-                  src="{{ asset('img/web/review-avt-4.jpg') }}" alt="">
+                <img class="img-fluid review-footer__avt" src="{{ asset('img/user-2.jpg') }}"
+                  alt="">
                 <div class="review-footer__info">
                   <h6 class="name">Nguyễn Đỗ Cẩm Bình</h6>
                   <p class="position">Trưởng phòng kinh doanh, Công ty BĐS Him Lam</p>
@@ -497,7 +494,16 @@
             </div>
           </div>
         </div>
-        <form class="contact-us__form" action="" method="post">
+          @if (isset($infor))
+            <div class="alert alert-success">
+              {{ $infor }}
+            </div>
+          @endif
+          <form action="{{ route('coaching-store') }}?continue=true" method="post" id="frm">
+            {{ csrf_field() }}
+            <input type='hidden' name='course' value='7'>
+            <input type='hidden' name='solution' value='0'>
+            <input type='hidden' name='typereport' value='0'>
           <div class="form-group">
             <label class="form-label" for="fullname">Họ và tên <span>*</span></label>
             <input type="text" class="form-control" id="fullname" name="fullname"
@@ -515,12 +521,12 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="company">Công ty</label>
-            <input type="text" class="form-control" id="company" name="company"
+            <input type="text" class="form-control" id="content" name="content"
               placeholder="Công ty">
           </div>
           <div class="form-group">
             <label class="form-label" for="message">Chúng tôi có thể giúp gì cho bạn?</label>
-            <textarea name="message" class="form-control" id="message"
+            <textarea name="title" class="form-control" id="title"
               placeholder="Chúng tôi có thể giúp gì cho bạn?"></textarea>
           </div>
           <button type="submit" class="btn btn-second btn-size-lg btn-send">Gửi ngay</button>
