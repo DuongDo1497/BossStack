@@ -163,6 +163,9 @@
           <div class="item">
             <img class="img-fluid partner-item" src="{{ asset('img/web/partner-12.png') }}">
           </div>
+          <div class="item">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-13.png') }}">
+          </div>
         </div>
       </div>
     </div>
