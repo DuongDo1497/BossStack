@@ -147,7 +147,16 @@
         </div>
         <div class="advice-right">
           <h6>ĐĂNG KÝ NHẬN TƯ VẤN</h6>
-          <form action="" method="post">
+          @if (isset($infor))
+            <div class="alert alert-success">
+              {{ $infor }}
+            </div>
+          @endif
+          <form action="{{ route('coaching-store') }}?continue=true" method="post" id="frm">
+            {{ csrf_field() }}
+            <input type='hidden' name='course' value='9'>
+            <input type='hidden' name='solution' value='3'>
+            <input type='hidden' name='typereport' value='1'>
             <div class="form-group">
               <input type="text" class="form-control" id="fullname" name="fullname"
                 placeholder="Họ và tên *" required>
@@ -161,23 +170,27 @@
                 placeholder="Email *" required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="company" name="company"
+              <input type="text" class="form-control" id="content" name="content"
                 placeholder="Công ty">
             </div>
             <div class="form-group">
-              <select class="form-select">
-                <option selected>Quy mô công ty</option>
-                <option value="">Dưới 30 nhân viên</option>
-                <option value="">Từ 30 - 50 nhân viên</option>
-                <option value="">Từ 50 - 100 nhân viên</option>
-                <option value="">Trên 100 nhân viên</option>
-              </select>
+                <select class="form-select" name="companytype">
+                    <option value="">Quy mô công ty</option>
+                    @foreach($companytypes as $key=>$value)
+                        @if($key != '')
+                            @if($key == old('companytype'))
+                                <option value="{{ $key }}" selected>{{ $value }}</option>
+                            @else
+                                <option value="{{ $key }}">{{ $value }}</option>                                                                    
+                            @endif
+                        @endif
+                    @endforeach
+                </select>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="position" name="position"
+              <input type="text" class="form-control" id="title" name="title"
                 placeholder="Chức vụ">
             </div>
-
             <button type="submit" class="btn btn-second btn-size-lg btn-register">ĐĂNG KÝ
               NGAY</button>
           </form>

@@ -47,7 +47,8 @@ class ReportController extends Controller
         $this->view->toDate = getCurrentDate('d');
 
         $this->view->coursetype = config('rbooks.COURSETYPE');
-        $this->view->coursetypedetail = config('rbooks.COURSETYPEDETAIL');        
+        $this->view->coursetypedetail = config('rbooks.COURSETYPEDETAIL');
+        $this->view->companytypes = config('rbooks.COMPANYTYPES');                
     }
 
      /**
@@ -103,6 +104,19 @@ class ReportController extends Controller
         $this->setViewInit();
         $course = '8';
         $solution = '2';
+        $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
+        $this->view->collections = $collections;
+        $this->view->course = $course;
+        $this->view->solution = $solution;
+                
+        return $this->view('manage');
+    }
+
+    public function listLostControl(Request $request)
+    {
+        $this->setViewInit();
+        $course = '8';
+        $solution = '5';
         $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
         $this->view->collections = $collections;
         $this->view->course = $course;
@@ -175,9 +189,11 @@ class ReportController extends Controller
 
         $coursetype = config('rbooks.COURSETYPE');
         $coursetypedetail = config('rbooks.COURSETYPEDETAIL');        
+        $companytypes = config('rbooks.COMPANYTYPES');                
 
         $course = $request->course;
         $solution = $request->solution;
+        $companytype = $request->companytype;
 
         $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
 
@@ -194,6 +210,7 @@ class ReportController extends Controller
                     'content' => $customer->content,
                     'course' => $coursetype[$customer->course] ,
                     'solution' => $coursetypedetail[$customer->solution],
+                    'companytype' => $companytypes[$customer->companytype],
                     'created_at' => $customer->created_at,
                 );
             }
@@ -203,6 +220,7 @@ class ReportController extends Controller
             $this->view->collections = $collections;
             $this->view->course = $course;
             $this->view->solution = $solution;
+            $this->view->companytypes = $companytypes;
                     
             return $this->view('manage');
         }

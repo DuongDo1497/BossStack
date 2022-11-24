@@ -28,26 +28,31 @@ class HomeController extends Controller
 
     public function cashDissection()
     {
+        $this->view->companytypes = config('rbooks.COMPANYTYPES');
         return $this->view('products.CashDissection');
     }
 
     public function cashExecution()
     {
+        $this->view->companytypes = config('rbooks.COMPANYTYPES');
         return $this->view('products.CashExecution');
     }
 
     public function lossControl()
     {
+        $this->view->companytypes = config('rbooks.COMPANYTYPES');
         return $this->view('products.LossControl');
     }
 
     public function dataConvert()
     {
+        $this->view->companytypes = config('rbooks.COMPANYTYPES');
         return $this->view('products.DataConvert');
     }
 
     public function operateDigital()
     {
+        $this->view->companytypes = config('rbooks.COMPANYTYPES');
         return $this->view('products.OperateDigital');
     }
 
@@ -226,18 +231,20 @@ class HomeController extends Controller
     public function store(ReportStoreRequest $request)
     {
         $courseview = [ 
-                '1'=> 'course.Startup',
-                '2'=> 'course.SMEs',
-                '3'=> 'course.BigCorp',
-                '4'=> 'course.CashFlowHandling',
-                '5'=> 'course.MoneyBegetsMoney',
-                '6'=> 'course.MultiCashGrowth',
-                '7'=> 'landing-page.CashFlowDissection',
+                '1'=> 'products.CashDissection',
+                '2'=> 'products.CashExecution',
+                '3'=> 'products.DataConvert',
+                '4'=> 'products.OperateDigital',
+                '5'=> 'products.LossControl',
+                '6'=> '',
+                '7'=> '',
                 '8'=> 'landing-page.CashConvert',
                 '9'=> 'landing-page.OperateConvert',
               ];
-       
+
+        $typereport = $request->typereport;
         $course = $request->course;
+        $solution = $request->solution;
        
         $result = app(ReportService::class)->create($request);
         $message = "";
@@ -248,7 +255,11 @@ class HomeController extends Controller
         }
         
         $this->view->infor = $message;
+        if ($typereport == "1"){
+        	$course = $solution;
+        }
         $templateview = $courseview[$course];
+        $this->view->companytypes = config('rbooks.COMPANYTYPES');
         return $this->view($templateview);
     }
 

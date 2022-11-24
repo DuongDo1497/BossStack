@@ -11,7 +11,7 @@ class Report extends BaseModel
      * @var array
      */
     protected $fillable = [
-        'registerdate', 'course', 'fullname', 'email', 'phone' , 'address', 'title', 'content', 'solution', 'created_user_id', 'created_at', 'updated_user_id', 'updated_at' 
+        'registerdate', 'course', 'fullname', 'email', 'phone' , 'address', 'title', 'content', 'solution', 'companytype', 'created_user_id', 'created_at', 'updated_user_id', 'updated_at' 
     ];
 
 

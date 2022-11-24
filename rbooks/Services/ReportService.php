@@ -30,6 +30,7 @@ class ReportService extends BaseService
         $title = quote_smart($request->title);
         $content = quote_smart($request->content);
         $solution = quote_smart($request->solution);
+        $companytype = quote_smart($request->companytype);
         $created_user_id = '';
         $updated_user_id = '';
 
@@ -43,6 +44,7 @@ class ReportService extends BaseService
             'title' => "$title",
             'content' => "$content",
             'solution' => "$solution",
+            'companytype' => "$companytype",
             'created_user_id' => $created_user_id,
             'updated_user_id' => $updated_user_id,
         ];
@@ -61,6 +63,7 @@ class ReportService extends BaseService
         $title = quote_smart($request->title);
         $content = quote_smart($request->content);
         $solution = quote_smart($request->solution);
+        $companytype = quote_smart($request->companytype);
         $updated_user_id = quote_smart('');
 
         $data = [
@@ -73,6 +76,7 @@ class ReportService extends BaseService
             'title' => "$title",
             'content' => "$content",
             'solution' => "$solution",
+            'companytype' => "$companytype",
             'updated_user_id' => $updated_user_id,
         ];
 

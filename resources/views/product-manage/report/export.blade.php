@@ -8,7 +8,8 @@
 			<th>Email</th>
             <th>Điện thoại</th>
 			<th>Ngày đăng ký</th>
-            <th>Cơ quan</th>
+            <th>Công ty</th>
+            <th>Quy mô</th>
             <th>Chức vụ</th>
             <th>Khóa học</th>
             <th>Giải pháp</th>
@@ -23,8 +24,9 @@
 			<td>{{ $customer['email'] }}</td>
             <td>{{ $customer['phone'] }}</td>
 			<td>{{ ConvertSQLDate($customer['registerdate']) }}</td>
-            <td>{{ $customer['title'] }}</td>
             <td>{{ $customer['content'] }}</td>
+            <td>{{ $customer['companytype'] }}</td>
+            <td>{{ $customer['title'] }}</td>
             <td>{{ $customer['course'] }}</td>
             <td>{{ $customer['solution'] }}</td>
 		</tr>

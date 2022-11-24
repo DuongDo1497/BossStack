@@ -509,7 +509,7 @@
             action="{{ route('coaching-store') }}?continue=true" method="post" id="frm">
             {{ csrf_field() }}
             <input type='hidden' name='course' value='8'>
-
+            <input type='hidden' name='typereport' value='0'>
             <h6>
               <p>Đăng ký</p>
               <p>Thông tin tư vấn</p>
@@ -677,6 +677,7 @@
           id="frms">
           {{ csrf_field() }}
           <input type='hidden' name='course' value='8'>
+          <input type='hidden' name='typereport' value='0'>
           <div class="popup-register__form">
             <input type="text" class="form-control" name="fullname" placeholder="Họ và tên *"
               required>

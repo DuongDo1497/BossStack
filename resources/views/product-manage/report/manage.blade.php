@@ -30,7 +30,8 @@
                             <th style="text-align: center;" class="text-nowrap">EMAIL</th>
                             <th style="text-align: center;" class="text-nowrap">ĐIỆN THOẠI</th>
                             <th style="text-align: center;" class="text-nowrap">NGÀY ĐĂNG KÝ</th>
-                            <th style="text-align: center;" class="text-nowrap">CƠ QUAN</th>
+                            <th style="text-align: center;" class="text-nowrap">CÔNG TY</th>
+                            <th style="text-align: center;" class="text-nowrap">QUY MÔ</th>
                             <th style="text-align: center;" class="text-nowrap">CHỨC VỤ</th>
                             <th style="text-align: center;" class="text-nowrap">KHÓA HỌC</th>
                             <th style="text-align: center;" class="text-nowrap">GIẢI PHÁP</th>
@@ -53,8 +54,9 @@
                                 <td style="text-align: left;" class="text-nowrap">{{ $customer->email }}</td>
                                 <td style="text-align: left;" class="text-nowrap">{{ $customer->phone }}</td>
                                 <td style="text-align: center;" class="text-nowrap">{{ $customer->registerdate == null ? "" : ConvertSQLDate($customer->registerdate) }}</td>
-                                <td style="text-align: left;" class="text-nowrap">{{ $customer->title }}</td>
                                 <td style="text-align: left;" class="text-nowrap">{{ $customer->content }}</td>
+                                <td style="text-align: left;" class="text-nowrap">{{ $companytypes[$customer->companytype] }}</td>
+                                <td style="text-align: left;" class="text-nowrap">{{ $customer->title }}</td>
                                 <td style="text-align: left;" class="text-nowrap">
                                   {{ $coursetype[$customer->course] }}        
                                 </td>

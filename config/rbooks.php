@@ -223,9 +223,16 @@ return [
     'COURSETYPEDETAIL' => [ 
             ''=>_(''),
             '1'=>_('Bóc tách dòng tiền'),
-            '2'=>_('Thực thi dòng tiền chuyên sâu'),
+            '2'=>_('Thực thi dòng tiền'),
             '3'=>_('Chuyển đổi dữ liệu'),
-            '4'=>_('Vận hành số chuyên sâu'),
+            '4'=>_('Vận hành số'),
+            '5'=>_('Kiểm soát thất thoát'),
           ],
-
+    'COMPANYTYPES' => [ 
+            ''=>_(''),
+            '1'=>_('Dưới 30 nhân viên'),
+            '2'=>_('Từ 30 - 50 nhân viên'),
+            '3'=>_('Từ 50 - 100 nhân viên'),
+            '4'=>_('Trên 100 nhân viên'),
+          ],
 ];

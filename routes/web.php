@@ -401,6 +401,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::delete('/delete/{id}', 'ReportController@delete')->name('report-delete');
         Route::get('/listCashConvert', 'ReportController@listCashConvert')->name('report-listcashconvert');
         Route::get('/listCashConvertLevel', 'ReportController@listCashConvertLevel')->name('report-listcashconvertlevel');
+        Route::get('/listLostControl', 'ReportController@listLostControl')->name('report-listlostcontrol');
         Route::get('/listOperateConvert', 'ReportController@listOperateConvert')->name('report-listoperateconvert');
         Route::get('/listOperateConvertLevel', 'ReportController@listOperateConvertLevel')->name('report-listoperateconvertlevel');
         Route::get('/export/{course}/{solution}', 'ReportController@export')->name('report-export');
