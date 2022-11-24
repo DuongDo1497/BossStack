@@ -221,104 +221,105 @@
                               data-bs-parent="#accordion">
                               <div class="bank-list">
                                 <div class="title">
-                                  <p class="title-big">Địa chỉ đăng ký thẻ Tín dụng/Ghi nợ</p>
+                                  <p class="title-big">Hỗ trợ thanh toán</p>
                                 </div>
                                 <div class="content">
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank1">
-                                      <label class="form-check-label" for="bank1"></label>
+                                      <input class="form-check-input" type="radio" name="bankAtm"
+                                        id="bankAtm1">
+                                      <label class="form-check-label"
+                                        for="bankInternetAtm1"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-1.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank2">
-                                      <label class="form-check-label" for="bank2"></label>
+                                      <input class="form-check-input" type="radio" name="bankAtm"
+                                        id="bankAtm2">
+                                      <label class="form-check-label" for="bankAtm2"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-2.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank3">
-                                      <label class="form-check-label" for="bank3"></label>
+                                      <input class="form-check-input" type="radio" name="bankAtm"
+                                        id="bankAtm3">
+                                      <label class="form-check-label" for="bankAtm3"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-3.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank4">
-                                      <label class="form-check-label" for="bank4"></label>
+                                      <input class="form-check-input" type="radio" name="bankAtm"
+                                        id="bankAtm4">
+                                      <label class="form-check-label" for="bankAtm4"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-4.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank5">
-                                      <label class="form-check-label" for="bank5"></label>
+                                      <input class="form-check-input" type="radio" name="bankAtm"
+                                        id="bankAtm5">
+                                      <label class="form-check-label" for="bankAtm5"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-5.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank6">
-                                      <label class="form-check-label" for="bank6"></label>
+                                      <input class="form-check-input" type="radio" name="bankAtm"
+                                        id="bankAtm6">
+                                      <label class="form-check-label" for="bankAtm6"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-6.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank7">
-                                      <label class="form-check-label" for="bank7"></label>
+                                      <input class="form-check-input" type="radio" name="bankAtm"
+                                        id="bankAtm7">
+                                      <label class="form-check-label" for="bankAtm7"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-7.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank8">
-                                      <label class="form-check-label" for="bank8"></label>
+                                      <input class="form-check-input" type="radio" name="bankAtm"
+                                        id="bankAtm8">
+                                      <label class="form-check-label" for="bankAtm8"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-8.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank9">
-                                      <label class="form-check-label" for="bank9"></label>
+                                      <input class="form-check-input" type="radio" name="bankAtm"
+                                        id="bankAtm9">
+                                      <label class="form-check-label" for="bankAtm9"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-9.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank10">
-                                      <label class="form-check-label" for="bank10"></label>
+                                      <input class="form-check-input" type="radio" name="bankAtm"
+                                        id="bankAtm10">
+                                      <label class="form-check-label" for="bankAtm10"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-10.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank11">
-                                      <label class="form-check-label" for="bank11"></label>
+                                      <input class="form-check-input" type="radio" name="bankAtm"
+                                        id="bankAtm11">
+                                      <label class="form-check-label" for="bankAtm11"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-11.png') }}" alt="">
@@ -338,107 +339,287 @@
                               data-bs-parent="#accordion">
                               <div class="bank-list">
                                 <div class="title">
-                                  <p class="title-big">Địa chỉ đăng ký thẻ Tín dụng/Ghi nợ</p>
+                                  <p class="title-big">Hỗ trợ thanh toán</p>
                                 </div>
                                 <div class="content">
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank1">
-                                      <label class="form-check-label" for="bank1"></label>
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet1">
+                                      <label class="form-check-label" for="bankInternet1"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-1.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank2">
-                                      <label class="form-check-label" for="bank2"></label>
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet2">
+                                      <label class="form-check-label" for="bankInternet2"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-2.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank3">
-                                      <label class="form-check-label" for="bank3"></label>
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet3">
+                                      <label class="form-check-label" for="bankInternet3"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-3.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank4">
-                                      <label class="form-check-label" for="bank4"></label>
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet4">
+                                      <label class="form-check-label" for="bankInternet4"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-4.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank5">
-                                      <label class="form-check-label" for="bank5"></label>
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet5">
+                                      <label class="form-check-label" for="bankInternet5"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-5.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank6">
-                                      <label class="form-check-label" for="bank6"></label>
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet6">
+                                      <label class="form-check-label" for="bankInternet6"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-6.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank7">
-                                      <label class="form-check-label" for="bank7"></label>
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet7">
+                                      <label class="form-check-label" for="bankInternet7"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-7.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank8">
-                                      <label class="form-check-label" for="bank8"></label>
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet8">
+                                      <label class="form-check-label" for="bankInternet8"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-8.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank9">
-                                      <label class="form-check-label" for="bank9"></label>
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet9">
+                                      <label class="form-check-label" for="bankInternet9"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-9.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank10">
-                                      <label class="form-check-label" for="bank10"></label>
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet10">
+                                      <label class="form-check-label" for="bankInternet10"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-10.png') }}" alt="">
                                   </div>
                                   <div class="bank-item">
                                     <div class="form-group">
-                                      <input class="form-check-input" type="radio" name="bank"
-                                        id="bank11">
-                                      <label class="form-check-label" for="bank11"></label>
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet11">
+                                      <label class="form-check-label" for="bankInternet11"></label>
                                     </div>
                                     <img class="img-fluid bank-logo"
                                       src="{{ asset('img/web/bank-logo-11.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet12">
+                                      <label class="form-check-label" for="bankInternet12"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-12.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet13">
+                                      <label class="form-check-label" for="bankInternet13"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-13.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet14">
+                                      <label class="form-check-label" for="bankInternet14"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-14.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet15">
+                                      <label class="form-check-label" for="bankInternet15"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-15.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet16">
+                                      <label class="form-check-label" for="bankInternet16"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-16.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet16">
+                                      <label class="form-check-label" for="bankInternet16"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-16.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet17">
+                                      <label class="form-check-label" for="bankInternet17"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-17.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet18">
+                                      <label class="form-check-label" for="bankInternet18"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-18.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet19">
+                                      <label class="form-check-label" for="bankInternet19"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-19.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet20">
+                                      <label class="form-check-label" for="bankInternet20"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-20.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet21">
+                                      <label class="form-check-label" for="bankInternet21"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-21.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet22">
+                                      <label class="form-check-label" for="bankInternet22"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-22.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet23">
+                                      <label class="form-check-label" for="bankInternet23"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-23.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet24">
+                                      <label class="form-check-label" for="bankInternet24"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-24.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet25">
+                                      <label class="form-check-label" for="bankInternet25"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-25.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet26">
+                                      <label class="form-check-label" for="bankInternet26"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-26.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet27">
+                                      <label class="form-check-label" for="bankInternet27"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-27.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet28">
+                                      <label class="form-check-label" for="bankInternet28"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-28.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet29">
+                                      <label class="form-check-label" for="bankInternet29"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-29.png') }}" alt="">
+                                  </div>
+                                  <div class="bank-item">
+                                    <div class="form-group">
+                                      <input class="form-check-input" type="radio"
+                                        name="bankInternet" id="bankInternet30">
+                                      <label class="form-check-label" for="bankInternet30"></label>
+                                    </div>
+                                    <img class="img-fluid bank-logo"
+                                      src="{{ asset('img/web/bank-logo-30.png') }}" alt="">
                                   </div>
                                 </div>
                               </div>

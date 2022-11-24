@@ -272,14 +272,18 @@
 }
 
 .payment-option__body .bank-list .bank-item{
-  width: 76px;
+  width: 94px;
   height: 34px;
   border-radius: 4px;
   border: 1px solid var(--gray-cl-3);
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 4px;
+  column-gap: 12px;
+}
+
+.payment-option__body .bank-list .bank-logo{
+  width: 56px;
 }
 
 .bank-item .form-group{
