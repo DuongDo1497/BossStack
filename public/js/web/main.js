@@ -3,6 +3,7 @@ let menuMainLink = document.querySelectorAll('.menu-main__link');
 let navBar = document.querySelector('.nav-bars');
 
 navBar.addEventListener('click', function (e) {
+  e.stopPropagation();
   if(!menuMainParent.classList.contains('checked')){
     menuMainParent.classList.add('checked');
   }else{
@@ -10,8 +11,9 @@ navBar.addEventListener('click', function (e) {
   }
 })
 
-menuMainLink.forEach(element => {
+menuMainLink.forEach((element, index) => {
   element.addEventListener('click', function(e){
+    e.stopPropagation();
     let menuMainChild = e.currentTarget.parentElement.querySelector('.menu-main__child');
     if (window.outerWidth >= 992) {
       if (menuMainChild) {
@@ -48,6 +50,20 @@ menuMainLink.forEach(element => {
   })
 })
 
+window.addEventListener("click", function(e){
+  if (!e.target.matches('.menu-main__link')){
+    menuMainLink.forEach(element => {
+      element.classList.remove('active');
+      let menuMainChild = element.parentElement.querySelector('.menu-main__child');
+      setTimeout(() => {
+        menuMainChild.style.visibility = 'hidden';
+      }, 1500);
+      menuMainChild.classList.add('animate__slideOutDown');
+      menuMainChild.classList.remove('animate__slideInUp');
+    })
+  }
+});
+
 let getLink = window.location.href;
 let namePageUrl = getLink.slice(21);
 
@@ -74,5 +90,25 @@ document.querySelector(".backtotop").addEventListener("click", function (e) {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
+
+
+let leadershipItem = document.querySelectorAll('.leadership-item');
+leadershipItem.forEach(element => {
+  element.style.maxHeight = '420px';
+  element.style.transition = 'all .5s ease 0s';
+  let readMore = element.querySelector('.read-more');
+  if (readMore !== null) {
+    readMore.addEventListener('click', function(e){
+      if(e.currentTarget.innerText === 'Xem thêm'){
+        e.currentTarget.innerText = 'Rút gọn';
+        element.style.maxHeight = '1000px';
+      }else{
+        e.currentTarget.innerText = 'Xem thêm';
+        element.style.maxHeight = '420px';
+      }
+    })
+  }
+});
+
 
 
