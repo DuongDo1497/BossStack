@@ -76,13 +76,6 @@ $(function() {
     // Hide the loading icon
     loading_wrapper.fadeOut();
 
-
-    var height_content = $('.content-wrapper').height();
-
-    if (height_content <= 900) {
-        $('.content-wrapper').addClass("height-900");
-    }
-
     var width_browser = $(document).width();
 
     if (width_browser <= 767) {

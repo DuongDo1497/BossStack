@@ -163,10 +163,10 @@ function formatNumberColor($value, $type=0, $num_decimal_places=2, $show_zero=1,
     $indent = ''; $bgcolor = '';
 
     if($value >= 0){
-        $bgcolor = '#1eb40f';
+        $bgcolor = 'text-success text-nowrap';
         $indent = '+';
     }else{
-        $bgcolor = '#ff423e';
+        $bgcolor = 'text-error text-nowrap';
         $indent = '-';
     }                                                                     
 
@@ -182,7 +182,7 @@ function formatNumberColor($value, $type=0, $num_decimal_places=2, $show_zero=1,
         }
     }
 
-    $sb = "<font style='color:$bgcolor'>" . $indent . " " . $sb . "</font>";
+    $sb = "<div class='$bgcolor'>" . $indent . " " . $sb . "</div>";
 
     return $sb;
 }
@@ -201,21 +201,21 @@ function formatNumberColor($value, $type=0, $num_decimal_places=2, $show_zero=1,
  */
 function formatNumberColorCustom($value, $type=0, $num_decimal_places=2, $show_zero=1, $custom=0, $dec_point=".", $thousands_sep=","){
     $sb = "";
-    $indent = ''; $bgcolor = '';
+    // $indent = ''; $bgcolor = '';
 
-    if($custom == 0){
-        $bgcolor = '#1eb40f';
-        $indent = '+';
-    }elseif($custom == 1){
-        $bgcolor = '#ff423e';
-        $indent = '-';
-    }elseif($custom == 2){
-        $bgcolor = '#1eb40f';
-        $indent = '';
-    }elseif($custom == 3){
-        $bgcolor = '#ff423e';
-        $indent = '';
-    }                                                                     
+    // if($custom == 0){
+    //     $bgcolor = '#1eb40f';
+    //     $indent = '+';
+    // }elseif($custom == 1){
+    //     $bgcolor = '#ff423e';
+    //     $indent = '-';
+    // }elseif($custom == 2){
+    //     $bgcolor = '#1eb40f';
+    //     $indent = '';
+    // }elseif($custom == 3){
+    //     $bgcolor = '#ff423e';
+    //     $indent = '';
+    // }                                                                     
 
     if ($value == 0 and $show_zero == 0){
         return "";
@@ -229,8 +229,11 @@ function formatNumberColorCustom($value, $type=0, $num_decimal_places=2, $show_z
         }
     }
     
+    // if ($sb != ""){
+    //     $sb = "<font style='color:$bgcolor'>" . $indent . " " . $sb . "</font>";
+    // }
     if ($sb != ""){
-        $sb = "<font style='color:$bgcolor'>" . $indent . " " . $sb . "</font>";
+        $sb = $sb . " " . "đồng";
     }
     return $sb;
 }
