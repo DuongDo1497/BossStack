@@ -85,13 +85,25 @@
   color: #BC2C22;
 }
 
+.form-group .form-control,
+.form-group .select2-container--default{
+  width: var(--w-input) !important;
+}
+
+.form-group .form-control,
+.form-group .select2-selection--single,
 .form-group .form-control{
-  width: var(--w-input);
   font-size: 16px;
   padding: 9px 12px;
   border-radius: 2px;
   background-color: var(--white-cl);
   border: 1px solid #D9D9D9;
+}
+
+.form-group .form-control[type="file"]{
+  height: auto;
+  padding: 0;
+  border: 0;
 }
 
 .form-group .form-control:focus{
@@ -199,4 +211,44 @@
 
 .note-content p:first-child{
   font-family: hm;
+}
+
+.noti-index{
+  display: flex;
+  justify-content: center;
+}
+
+.noti-index__wrap{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: var(--bg-cyan-cl);
+}
+
+.noti-index__item{
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  padding: 0 10px;
+  border-right: 1px solid var(--gray-cl-4);
+}
+
+.noti-index__item:first-child{
+  padding-left: 0;
+}
+
+.noti-index__item:last-child{
+  padding-right: 0;
+  border-right: 0;
+}
+
+.noti-index__item p{
+  margin-bottom: 0;
+}
+
+.noti-index__item .number{
+  font-family: hb;
 }

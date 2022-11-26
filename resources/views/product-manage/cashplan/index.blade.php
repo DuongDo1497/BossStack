@@ -68,23 +68,25 @@
     <div class="box-content">
       <div class="box box-primary">
         <div class="noti-index">
-          <div class="noti-index__item">
-            <p class="title">Số ví tài chính:</p>
-            <p class="number">{{ $collections->count() }}</p>
-          </div>
-          <div class="noti-index__item">
-            <p class="title">Tổng số tiền mục tiêu:</p>
-            <p class="number">{!! formatNumberColor($collections->sum('requireamount'), 1, 0, 0) !!}</p>
-          </div>
-          <div class="noti-index__item">
-            <p class="title">Tổng số tiền đang thực hiện:</p>
-            <p class="number">{!! formatNumberColor($collections->sum('amount'), 1, 0, 1) !!}</p>
-          </div>
-          <div class="noti-index__item">
-            <p class="title">Tổng số tiền còn lại:</p>
-            <p class="number">
-              {!! formatNumberColor($collections->sum('requireamount') - $collections->sum('amount')) !!}
-            </p>
+          <div class="noti-index__wrap">
+            <div class="noti-index__item">
+              <p class="title">Số ví tài chính:</p>
+              <p class="number">{{ $collections->count() }}</p>
+            </div>
+            <div class="noti-index__item">
+              <p class="title">Tổng số tiền mục tiêu:</p>
+              <p class="number">{!! formatNumberColor($collections->sum('requireamount'), 1, 0, 0) !!}</p>
+            </div>
+            <div class="noti-index__item">
+              <p class="title">Tổng số tiền đang thực hiện:</p>
+              <p class="number">{!! formatNumberColor($collections->sum('amount'), 1, 0, 1) !!}</p>
+            </div>
+            <div class="noti-index__item">
+              <p class="title">Tổng số tiền còn lại:</p>
+              <p class="number">
+                {!! formatNumberColor($collections->sum('requireamount') - $collections->sum('amount')) !!}
+              </p>
+            </div>
           </div>
         </div>
         <a href="{{ route('cashplans-add') }}" class="btn btn-primary btn-add">

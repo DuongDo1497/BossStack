@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('head')
-  <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
+  {{-- <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
 
   <style type="text/css">
     label {
@@ -23,11 +23,10 @@
         justify-content: normal;
       }
     }
-  </style>
+  </style> --}}
 @endsection
 
 @section('content')
-
   @if (isset($infor))
     <div class="alert alert-success">
       {{ $infor }}
@@ -38,7 +37,93 @@
     @include('layouts.partials.messages.success')
   @endif
 
-  <div class="row">
+  <div class="section cashplan-add">
+    <div class="breadcrumb">
+      <span>Quản lý tài khoản</span> / <span>Thiết lập ví tài chính</span> / <span class="current">Thêm
+        ví tài chính</span>
+    </div>
+    <p class="title-page">{{ $title->heading }}</p>
+
+    <form role="form" action="{{ route('cashplans-process') }}?continue=true" method="post"
+      id="frm" enctype="multipart/form-data">
+      {{ csrf_field() }}
+      <input type='hidden' name='typereport' value=''>
+      <input type='hidden' name='customer_id' value='{{ $customer_id }}'>
+      <input type="hidden" name="currentamountunittype" id="currentamountunittype" value="1">
+      <input type="hidden" name="requireamountunittype" id="requireamountunittype" value="1">
+
+      <div class="box-content">
+        <div class="box box-primary">
+          <div class="box-form">
+            <div class="form-group">
+              <label for="">Mục tiêu <span>*</span>:</label>
+              <select class="form-select select2" name="plantype" id="plantype">
+                @foreach ($plantypes as $key => $value)
+                  @if ($key == old('plantype'))
+                    <option value="{{ $key }}" selected>{{ $value }}</option>
+                  @else
+                    @if (Auth()->user()->service_product_id == 3)
+                      <option value="{{ $key }}">{{ $value }}</option>
+                    @else
+                      @if ($key == 9 or $key == 13)
+                      @else
+                        <option value="{{ $key }}">{{ $value }}</option>
+                      @endif
+                    @endif
+                  @endif
+                @endforeach
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="description">Chi tiết <span>*</span>:</label>
+              <input type="text" class="form-control" name="description" id="description"
+                value="{{ old('description') }}" onkeyup="" placeholder="Nhập..." required>
+            </div>
+            <div class="form-group">
+              <label for="plandate">Ngày lập <span>*</span>:</label>
+              <input type="text" class="form-control" name="plandate" id="plandate"
+                value="{{ old('plandate') == '' ? $plandate : old('plandate') }}" onkeyup=""
+                placeholder="" required>
+            </div>
+            <div class="form-group">
+              <label for="currentage">Tuổi hiện tại <span>*</span>:</label>
+              <input type="text" class="form-control" name="currentage" id="currentage"
+                value="{{ $currentage == null ? old('currentage') : $currentage }}"
+                onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="" required>
+            </div>
+            <div class="form-group">
+              <label for="planage">Tuổi hoàn thành mục tiêu <span>*</span>:</label>
+              <input type="text" class="form-control" name="planage" id="planage"
+                value="{{ old('planage') == '' ? '' : old('planage') }}" onkeyup=""
+                placeholder="Nhập..." required>
+            </div>
+            <div class="form-group">
+              <label for="requireamount">Số tiền mục tiêu <span>*</span>:</label>
+              <input type="text" class="form-control" name="requireamount" id="requireamount"
+                value="{{ old('requireamount') == '' ? 0 : old('requireamount') }}" onkeyup=""
+                placeholder="" required>
+            </div>
+            <div class="form-group">
+              <label for="finishdate">Ngày dự kiến hoàn thành:</label>
+              <input type="text" class="form-control" name="finishdate" id="finishdate"
+                value="" onkeyup="" placeholder="Nhập...">
+            </div>
+            <div class="form-group">
+              <label for="">Hóa đơn, chứng từ kèm theo:</label>
+              <input type="file" class="form-control" name="fImages" id="" value=""
+                onkeyup="" placeholder="">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-add">
+            <img src="{{ asset('img/icon-add.svg') }}" alt="">
+            Thêm ví tài chính
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  {{-- <div class="row">
     <form role="form" action="{{ route('cashplans-process') }}?continue=true" method="post"
       id="frm" enctype="multipart/form-data">
 
@@ -304,8 +389,7 @@
 
       </div>
     </form>
-  </div>
-
+  </div> --}}
 @endsection
 
 @section('scripts')
