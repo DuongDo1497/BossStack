@@ -59,6 +59,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="{{ asset('js/web/main.js') }}"></script>
   <script src="{{ asset('js/web/carousel.js') }}"></script>
+  <script src="{{ asset('js/commons.js') }}"></script>  
   @yield('scripts')
 </body>
 

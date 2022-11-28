@@ -36,9 +36,10 @@ return [
             '1'=>_('Nữ'),
           ],   
 
-    'CUSTOMERTYPE' => ['0'=>_('Tổ chức'), 
-            '1'=>_('Cá nhân'),
-            '2'=>_('Học sinh/sinh viên'),
+    'CUSTOMERTYPE' => ['0'=>_('Big Corporations'), 
+            '1'=>_('SMEs'),
+            '2'=>_('Start-up'),
+            '3'=>_('Cá nhân'),
             '9'=>_('Khác'),
           ], 
 
@@ -197,9 +198,9 @@ return [
 
     'PRODUCTTYPES' => [ 
             '0' => ['month' => '1', 'discount' => '0'],
-            '1' => ['month' => '3', 'discount' => '20'],
-            '2' => ['month' => '6', 'discount' => '30'],
-            '3' => ['month' => '12', 'discount' => '50'],
+            '1' => ['month' => '3', 'discount' => '10'],
+            '2' => ['month' => '6', 'discount' => '20'],
+            '3' => ['month' => '12', 'discount' => '30'],
           ],
 
     'PRODUCTACCESSPAGES' => [ 

@@ -14,6 +14,9 @@
       </div>
     </div>
   </div>
+<form role="form" action="{{ route('customers-register') }}" method="post" id="frm">
+{{ csrf_field() }}
+<input type='hidden' name='typereport' value=''>
 
   <div class="section section-package package">
     <div class="container">
@@ -29,16 +32,7 @@
                   <small class="unit"></small>
                 </div>
               </div>
-              <form action="" class="package-option">
-                <select class="form-select" disabled>
-                  <option selected>Chọn gói thời gian</option>
-                  <option value="">1 tháng</option>
-                  <option value="">3 tháng</option>
-                  <option value="">6 tháng</option>
-                  <option value="">12 tháng</option>
-                </select>
-                <button type="submit" class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
-              </form>
+                <button type="submit" onclick="processReports('frm', '4')" class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
             </div>
             <div class="package-service">
               <p class="package-title">Các dịch vụ bao gồm</p>
@@ -82,16 +76,19 @@
                   <small class="unit">đồng/tháng</small>
                 </div>
               </div>
-              <form action="" class="package-option">
-                <select class="form-select">
-                  <option selected>Chọn gói thời gian</option>
-                  <option value="">1 tháng</option>
-                  <option value="">3 tháng</option>
-                  <option value="">6 tháng</option>
-                  <option value="">12 tháng</option>
+                <select class="form-select" name="producttypes_1">
+                    <option value="0">Chọn gói thời gian</option>
+                    @foreach($producttypes as $key=>$value)
+                        @if($key > 0)
+                            @if($key == old('producttypes_1'))
+                                <option value="{{ $key }}" selected>{{ $value['month'] }} tháng (giảm {{ $value['discount'] }}%)</option>
+                            @else
+                                <option value="{{ $key }}">{{ $value['month'] }} tháng (giảm {{ $value['discount'] }}%)</option>      
+                            @endif
+                        @endif
+                    @endforeach
                 </select>
-                <button type="submit" class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
-              </form>
+                <button type="submit" onclick="processReports('frm', '1')" class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
             </div>
             <div class="package-service">
               <p class="package-title">Các dịch vụ bao gồm</p>
@@ -142,16 +139,19 @@
                 </div>
                 <small class="note">Tặng 1 user thành viên <br />Basic 99.000 đồng/tháng</small>
               </div>
-              <form action="" class="package-option">
-                <select class="form-select">
-                  <option selected>Chọn gói thời gian</option>
-                  <option value="">1 tháng</option>
-                  <option value="">3 tháng</option>
-                  <option value="">6 tháng</option>
-                  <option value="">12 tháng</option>
+                <select class="form-select" name="producttypes_2">
+                    <option value="0">Chọn gói thời gian</option>
+                    @foreach($producttypes as $key=>$value)
+                        @if($key > 0)
+                            @if($key == old('producttypes_2'))
+                                <option value="{{ $key }}" selected>{{ $value['month'] }} tháng (giảm {{ $value['discount'] }}%)</option>
+                            @else
+                                <option value="{{ $key }}">{{ $value['month'] }} tháng (giảm {{ $value['discount'] }}%)</option>      
+                            @endif
+                        @endif
+                    @endforeach
                 </select>
-                <button type="submit" class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
-              </form>
+                <button type="submit" onclick="processReports('frm', '2')" class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
             </div>
             <div class="package-service">
               <p class="package-title">Các dịch vụ bao gồm</p>
@@ -197,16 +197,19 @@
                   <small class="unit">đồng/tháng</small>
                 </div>
               </div>
-              <form action="" class="package-option">
-                <select class="form-select">
-                  <option selected>Chọn gói thời gian</option>
-                  <option value="">1 tháng</option>
-                  <option value="">3 tháng</option>
-                  <option value="">6 tháng</option>
-                  <option value="">12 tháng</option>
+                <select class="form-select" name="producttypes_3">
+                    <option value="0">Chọn gói thời gian</option>
+                    @foreach($producttypes as $key=>$value)
+                        @if($key > 0)
+                            @if($key == old('producttypes_3'))
+                                <option value="{{ $key }}" selected>{{ $value['month'] }} tháng (giảm {{ $value['discount'] }}%)</option>
+                            @else
+                                <option value="{{ $key }}">{{ $value['month'] }} tháng (giảm {{ $value['discount'] }}%)</option>      
+                            @endif
+                        @endif
+                    @endforeach
                 </select>
-                <button type="submit" class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
-              </form>
+                <button type="submit" onclick="processReports('frm', '3')" class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
             </div>
             <div class="package-service">
               <p class="package-title">Các dịch vụ bao gồm</p>
@@ -252,4 +255,6 @@
       </div>
     </div>
   </div>
+
+</form>
 @endsection

@@ -58,6 +58,7 @@ class HomeController extends Controller
 
     public function package()
     {
+        $this->view->producttypes = config('rbooks.PRODUCTTYPES');
         return $this->view('package');
     }
 
