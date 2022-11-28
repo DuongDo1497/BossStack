@@ -210,8 +210,60 @@
               </div>
             </div>
             <div id="scheduleyear" class="tab-pane fade">
-              <h3>Menu 2</h3>
-              <p>Some content in menu 2.</p>
+              @php
+                $i = 1;
+                $totalsavingamountplan = $model->totalcurrentamount;
+              @endphp
+              <div class="tab-pane__body">
+                <div class="noti-index">
+                  <div class="noti-index__wrap">
+                    <div class="noti-index__item">
+                      <p class="title">Để đạt được mục tiêu tài chính:</p>
+                      <p class="number">{{ formatNumber($model->requireamount, 1, 0, 0) }} VND</p>
+                    </div>
+                    <div class="noti-index__item">
+                      <p class="title">Bạn cần tích lũy:</p>
+                      <p class="number">{{ formatNumber($savingamountplan / 12, 1, 0, 1) }}
+                        VND/tháng
+                      </p>
+                    </div>
+                    <div class="noti-index__item">
+                      <p class="title">Trong:</p>
+                      <p class="number">{{ $timeplan }} năm</p>
+                    </div>
+                    <div class="noti-index__item">
+                      <p class="title">Số tiền tích lũy đầu kỳ:</p>
+                      <p class="number">{{ formatNumber($model->totalcurrentamount, 1, 0, 0) }} VND
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <table class="table table-bordered table-list">
+                  <thead>
+                    <tr>
+                      <th>STT</th>
+                      <th>Tháng</th>
+                      <th>Tiền tích lũy cuối tháng</th>
+                      <th>Số dư cuối kỳ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @for ($item = $model->currentage + 1; $item <= $model->planage; $item++)
+                      @php
+                        $totalsavingamountplan += $savingamountplan;
+                        $totalsavingamountplan = $totalsavingamountplan > $requireamount ? $requireamount : $totalsavingamountplan;
+                      @endphp
+                      <tr class="table-cashplan">
+                        <td class="text-center">{{ $i++ }}</td>
+                        <td class="text-center">{{ $item }}</td>
+                        <td class="text-center">{{ formatNumber($savingamountplan, 1, 0, 0) }}</td>
+                        <td class="text-center">{{ formatNumber($totalsavingamountplan, 1, 0, 0) }}
+                        </td>
+                      </tr>
+                    @endfor
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

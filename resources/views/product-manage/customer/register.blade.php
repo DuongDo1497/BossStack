@@ -87,9 +87,61 @@
                   @endforeach
                 </select>
               </div>
+              <div class="form-group">
+                <label class="form-label" for="typereport">Thông tin sản phẩm <span>*</span></label>
+                <select class="form-select" id="typereport" name="typereport"
+                  onchange='onChangeSelect();' required>
+                  <option selected>Chọn sản phẩm</option>
+                  @foreach ($service_product as $item)
+                    @if ($item->id == old('typereport') or $item->id == $typereport)
+                      @if ($item->id == 4)
+                        <option value="{{ $item->id }}" selected>
+                          {{ $item->name }}</option>
+                      @else
+                        <option value="{{ $item->id }}" selected>
+                          {{ $item->name }}
+                          ({{ formatNumber($item->price, 1, 0, 1) }} đồng/tháng)
+                        </option>
+                      @endif
+                    @else
+                      @if ($item->id == 4)
+                        <option value="{{ $item->id }}">{{ $item->name }}
+                        </option>
+                      @else
+                        <option value="{{ $item->id }}">{{ $item->name }}
+                          ({{ formatNumber($item->price, 1, 0, 1) }} đồng/tháng)
+                        </option>
+                      @endif
+                    @endif
+                  @endforeach
+                </select>
+              </div>
+              <div id="producttypelabel" class="form-group">
+                <label class="form-label" for="producttype">Thời gian gói <span>*</span></label>
+                <select class="form-select" id="producttype" name="producttype"
+                  onchange='onChangeSelect();' required>
+                  <option selected>Chọn gói thời gian</option>
+                  @foreach ($producttypes as $key => $value)
+                    @if ($key > 0)
+                      @if ($key == old('producttype') or $key == $producttype)
+                        <option value="{{ $key }}" selected>
+                          {{ $value['month'] }} tháng (giảm
+                          {{ $value['discount'] }}%)</option>
+                      @else
+                        <option value="{{ $key }}">{{ $value['month'] }}
+                          tháng (giảm {{ $value['discount'] }}%)</option>
+                      @endif
+                    @endif
+                  @endforeach
+                </select>
+              </div>
+              <div class="form-group">Số tiền thanh toán: <span id="amountlabel"></span> đồng.
+              </div>
             </div>
           </div>
-          <div class="register-form__service">
+
+          {{-- Tạm ẩn --}}
+          {{-- <div class="register-form__service">
             <div class="register-form__header">
               <h6>DỊCH VỤ ĐĂNG KÝ</h6>
             </div>
@@ -178,10 +230,56 @@
                 </select>
               </div>
             </div>
-          </div>
+          </div> --}}
+          {{-- Tạm ẩn --}}
           <button type="submit" class="btn btn-second btn-size-lg btn-register">Đăng ký</button>
         </form>
       </div>
     </div>
   </div>
+@endsection
+
+@section('scripts')
+  <script type="text/javascript">
+    var dataProduct = [];
+    @foreach ($service_product as $item)
+      dataProduct[{{ $item['id'] }}] = ['{{ $item['name'] }}', {{ $item['price'] }}];
+    @endforeach
+    var dataProductType = [];
+    @foreach ($producttypes as $key => $value)
+      dataProductType[{{ $key }}] = [{{ $value['month'] }}, {{ $value['discount'] }}];
+    @endforeach
+
+    function onChangeSelect() {
+      if (document.getElementById("typereport").value == 4) {
+        document.getElementById("producttypelabel").style.display = 'none';
+      } else {
+        document.getElementById("producttypelabel").style.display = 'block';
+
+        typereport_id = document.getElementById("typereport").value;
+        producttype_id = document.getElementById("producttype").value;
+        price = dataProduct[typereport_id][1];
+        month = dataProductType[producttype_id][0];
+        discount = dataProductType[producttype_id][1];
+
+        amount = (price - (price * discount / 100)) * month;
+        document.getElementById("amountlabel").innerHTML = formatCurrency(amount);
+      }
+    }
+
+    if (document.getElementById("typereport").value == 4) {
+      document.getElementById("producttypelabel").style.display = 'none';
+    } else {
+      document.getElementById("producttypelabel").style.display = 'block';
+
+      typereport_id = document.getElementById("typereport").value;
+      producttype_id = document.getElementById("producttype").value;
+      price = dataProduct[typereport_id][1];
+      month = dataProductType[producttype_id][0];
+      discount = dataProductType[producttype_id][1];
+
+      amount = (price - (price * discount / 100)) * month;
+      document.getElementById("amountlabel").innerHTML = formatCurrency(amount);
+    }
+  </script>
 @endsection
