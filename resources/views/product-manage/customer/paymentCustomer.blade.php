@@ -18,28 +18,30 @@
   <div class="section section-payment payment">
     <div class="container">
       <div class="wrap">
-        <form action="">
+        <form role="form" action="{{ route('customers-processPaymentMomo') }}?continue=true"
+          method="post" id="frm">
+          {{ csrf_field() }}
+          <input type='hidden' name='typereport' value=''>
+          <input type='hidden' name='cid' value='{{ $id }}'>
           <div class="payment-left">
             <div class="payment-customer">
               <h6 class="payment-title">Thông tin khách hàng</h6>
               <div class="payment-content">
                 <p>
                   <span class="title">Họ và tên</span>
-                  <span class="text">Tên khách hàng</span>
+                  <span class="text">{{ $customer->fullname }}</span>
                 </p>
                 <p>
                   <span class="title">Email</span>
-                  <span class="text">mailkhachhang@gmail.com</span>
+                  <span class="text">{{ $customer->email }}</span>
                 </p>
                 <p>
                   <span class="title">Địa chỉ</span>
-                  <span class="text">Landmark 81 Vinhomes Central Park, 720A Điện Biên Phủ, Phường
-                    22,
-                    Quận Bình Thạnh, Tp Hồ Chí Minh.</span>
+                  <span class="text">{{ $customer->address }}</span>
                 </p>
                 <p>
                   <span class="title">Điện thoại</span>
-                  <span class="text">0123456789</span>
+                  <span class="text">{{ $customer->phone }}</span>
                 </p>
               </div>
             </div>
@@ -50,8 +52,8 @@
                   <div class="payment-option__item">
                     <div class="payment-option__header">
                       <div class="form-group">
-                        <input class="form-check-input" type="radio" name="paymentType"
-                          value="" id="paymentDirect" data-bs-toggle="collapse"
+                        <input class="form-check-input" type="radio" name="ord_payment_method"
+                          value="0" id="paymentDirect" data-bs-toggle="collapse"
                           href="#payment-direct">
                         <label class="form-check-label" for="paymentDirect"></label>
                       </div>
@@ -80,8 +82,8 @@
                   <div class="payment-option__item">
                     <div class="payment-option__header">
                       <div class="form-group">
-                        <input class="form-check-input" type="radio" name="paymentType"
-                          value="" id="paymentTranfer" data-bs-toggle="collapse"
+                        <input class="form-check-input" type="radio" name="ord_payment_method"
+                          value="1" id="paymentTranfer" data-bs-toggle="collapse"
                           href="#payment-tranfer">
                         <label class="form-check-label" for="paymentTranfer"></label>
                       </div>
@@ -159,13 +161,17 @@
                                     <p>Chi tiết thẻ</p>
                                     <div class="icon">
                                       <img class="img-fluid"
-                                        src="{{ asset('img/web/card-icon-1.svg') }}" alt="">
+                                        src="{{ asset('img/web/card-icon-1.svg') }}"
+                                        alt="">
                                       <img class="img-fluid"
-                                        src="{{ asset('img/web/card-icon-2.svg') }}" alt="">
+                                        src="{{ asset('img/web/card-icon-2.svg') }}"
+                                        alt="">
                                       <img class="img-fluid"
-                                        src="{{ asset('img/web/card-icon-3.svg') }}" alt="">
+                                        src="{{ asset('img/web/card-icon-3.svg') }}"
+                                        alt="">
                                       <img class="img-fluid"
-                                        src="{{ asset('img/web/card-icon-4.svg') }}" alt="">
+                                        src="{{ asset('img/web/card-icon-4.svg') }}"
+                                        alt="">
                                     </div>
                                   </div>
                                   <div class="body">
@@ -647,20 +653,21 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Standard</td>
-                      <td>1 Tháng</td>
-                      <td>267.000 đồng</td>
+                      <td>{{ $service_product_name }}</td>
+                      <td>{{ $producttypes_numtime }} tháng</td>
+                      <td>{{ formatNumber($producttypes_amount, 1, 0, 0) }} đồng</td>
                     </tr>
                   </tbody>
                   <tfoot>
                     <tr>
                       <td colspan="2">Thành tiền</td>
-                      <td>267.000 đồng</td>
+                      <td>{{ formatNumber($producttypes_amount, 1, 0, 0) }} đồng</td>
                     </tr>
                   </tfoot>
                 </table>
               </div>
-              <button type="submit" class="btn btn-second btn-size-lg btn-pay">Thanh toán</button>
+              <button type="submit" class="btn btn-second btn-size-lg btn-pay"
+                onclick="processReports('frm', 'process')">Thanh toán</button>
             </div>
           </div>
         </form>
