@@ -96,14 +96,15 @@
   color: #BC2C22;
 }
 
+.form-group .form-div,
 .form-group .form-control,
+.form-group .form-text,
 .form-group .select2-container--default{
   width: var(--w-input) !important;
 }
 
 .form-group .form-control,
-.form-group .select2-selection--single,
-.form-group .form-control{
+.form-group .select2-selection--single{
   height: auto;
   font-size: 16px;
   padding: 9px 12px;
@@ -127,6 +128,18 @@
   color: var(--gray-cl-4);
 }
 
+.form-group .form-text{
+  margin-bottom: 0;
+}
+
+.form-group small{
+  font-family: hri;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--gray-cl-5);
+}
+
+/* Status Notification Style */
 .status{
   width: 65px;
   height: 24px;
@@ -139,7 +152,6 @@
   color: var(--white-cl);
 }
 
-/* Status Notification Style */
 .status.status-error{
   background-color: #BC2C22;
 }

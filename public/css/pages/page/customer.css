@@ -1,0 +1,8 @@
+.customer-edit .form-group label{
+  --w-label: 227px;
+}
+
+.customer-edit .form-group .form-div,
+.customer-edit .form-group .form-control{
+  --w-input: 461px;
+}
