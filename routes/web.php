@@ -28,7 +28,7 @@ Route::get('payments', 'HomeController@payments')->name('payments');
 // Landing Page
 Route::get('boctachdongtien', 'HomeController@cashFlowDissection')->name('boctachdongtien');
 Route::get('dulieuso', 'HomeController@digitalData')->name('dulieuso');
-Route::get('chuyendoidongtien', 'HomeController@cashConvert')->name('chuyendoidongtien');
+Route::get('boctachdongtien', 'HomeController@cashConvert')->name('boctachdongtien');
 Route::get('chuyendoivanhanh', 'HomeController@operateConvert')->name('chuyendoivanhanh');
 
 

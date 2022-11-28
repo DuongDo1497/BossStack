@@ -2,8 +2,8 @@
   <div class="container">
     <div class="wrap">
       <a href="{{ asset('/') }}" class="logo">
-        <img class="img-fluid logo-w" src="{{ asset('img/web/logo-w.svg') }}" alt="">
-        <img class="img-fluid logo-cl" src="{{ asset('img/web/logo.svg') }}" alt="">
+        <img class="img-fluid logo-w" src="{{ asset('img/web/logo-w.svg') }}" alt="BossStack">
+        <img class="img-fluid logo-cl" src="{{ asset('img/web/logo.svg') }}" alt="BossStack">
       </a>
       @include('home.menu')
       <div class="button-control">

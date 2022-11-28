@@ -1,0 +1,114 @@
+.cashplan .btn-add,
+.cashplan-analysis .btn-add{
+  width: 182px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-left: auto;
+  margin-bottom: 24px;
+}
+
+.cashplan .box-control{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cashplan .box-control .control{
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.cashplan .box-control .count,
+.cashplan .box-control .text{
+  margin-bottom: 0;
+  color: var(--gray-cl-5);
+}
+
+.cashplan .box-control .count{
+  font-family: hb;
+}
+
+.cashplan .box-control .btn-export,
+.cashplan .box-control .btn-delete{
+  border: 1px solid var(--gray-cl-3);
+}
+
+.cashplan .box-control .btn-export{
+  background-color: #73C1E5;
+}
+
+.cashplan .box-control .btn-delete{
+  background-color: #E57381;
+}
+
+.cashplan-add .box-form label,
+.cashplan-analysis .box-form label{
+  --w-label: 227px;
+}
+
+.cashplan-add .box-form .form-control,
+.cashplan-add .box-form .select2-container--default,
+.cashplan-analysis .box-form .form-control,
+.cashplan-analysis .box-form .select2-container--default{
+  --w-input: 463px;
+}
+
+.cashplan-add  .btn-add{
+  margin-top: 22px;
+  margin-left: calc(227px + 16px);
+}
+
+.cashplan-analysis .box-primary:last-child{
+  padding: 0;
+}
+
+.cashplan-analysis .nav-tabs li{
+  width: calc(100% / 3);
+  height: 48px;
+  margin-bottom: 0;
+}
+
+.cashplan-analysis .nav-tabs li a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: 0;
+  border-radius: 0;
+  color: var(--gray-cl-7);
+  background-color: var(--gray-cl-1);
+  border: 1px solid var(--gray-cl-3);
+}
+
+.cashplan-analysis .nav-tabs li.active a{
+  border: 0;
+  font-family: hm;
+  color: var(--gray-cl-8);
+  background-color: var(--white-cl);
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.cashplan-analysis .tab-pane__body{
+  padding: 24px 28.5px 45px;
+}
+
+.cashplan-analysis .chart-body{
+  padding: 16px;
+  border-radius: 16px;
+  background-color: var(--gray-cl-1);
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.cashplan-analysis .chart-body .chart-unit{
+  margin-bottom: 24px;
+}
+
+.cashplan-analysis .chart-body #chart .c3-axis-y,
+.cashplan-analysis .chart-body #chart .c3-legend-item{
+  font-family: hr;
+  font-size: 14px;
+}

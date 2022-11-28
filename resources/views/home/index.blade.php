@@ -56,7 +56,8 @@
               </div>
             </div>
             <div class="card-link">
-              <a class="btn btn-size-full" href="#">Xem thêm</a>
+              <a class="btn btn-size-full" href="{{ asset('/products/cash-flow-dissection') }}">Xem
+                thêm</a>
             </div>
           </div>
 
@@ -70,7 +71,7 @@
               </div>
             </div>
             <div class="card-link">
-              <a class="btn btn-size-full" href="#">Xem thêm</a>
+              <a class="btn btn-size-full" href="{{ asset('/products/data-convert') }}">Xem thêm</a>
             </div>
           </div>
 
@@ -84,7 +85,7 @@
               </div>
             </div>
             <div class="card-link">
-              <a class="btn btn-size-full" href="#">Xem thêm</a>
+              <a class="btn btn-size-full" href="{{ asset('/products/loss-control') }}">Xem thêm</a>
             </div>
           </div>
         </div>

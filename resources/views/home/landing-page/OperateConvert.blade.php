@@ -8,6 +8,10 @@
   <title>{{ config('app.name') }}</title>
   <link rel="shortcut icon" href="{{ asset('img/landing-page/favicon.ico') }}" type="image/x-icon">
 
+  <meta name="description" content="BossStack">
+  <meta property="og:title" content="BossStack">
+  <meta property="og:site_name" content="BossStack">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -36,8 +40,8 @@
   <header class="header">
     <div class="container">
       <div class="wrap">
-        <a class="logo" href="{{ asset('dulieuso') }}"><img class="img-fluid"
-            src="{{ asset('img/logo-bossstack.png') }}"></a>
+        <a class="logo" href="{{ asset('chuyendoivanhanh') }}"><img class="img-fluid"
+            src="{{ asset('img/web/logo.svg') }}" alt="BossStack"></a>
         <ul class="course-info">
           <li>
             <img class="course-info__icon img-fluid"
@@ -614,11 +618,11 @@
   <footer class="footer footer-bg-img">
     <div class="container">
       <div class="wrap">
-        <a class="logo" href="{{ asset('boctachdongtien') }}">
+        <a class="logo" href="{{ asset('chuyendoivanhanh') }}">
           <img class="img-fluid logo-img-cl"
-            src="{{ asset('img/landing-page/logo-bs-color.svg') }}">
+            src="{{ asset('img/landing-page/logo-bs-color.svg') }}" alt="BossStack">
           <img class="img-fluid logo-img-white"
-            src="{{ asset('img/landing-page/logo-bs-white.svg') }}">
+            src="{{ asset('img/landing-page/logo-bs-white.svg') }}" alt="BossStack">
         </a>
         <div class="footer-content">
           <div class="footer-content__item">
@@ -736,6 +740,18 @@
       </div>
     </div>
   </div>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CW9T4BJH9S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-CW9T4BJH9S');
+  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="

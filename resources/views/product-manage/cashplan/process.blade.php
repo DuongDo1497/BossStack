@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
 @section('head')
+  <link rel="stylesheet" href="{{ asset('css/pages/page/cashplan.css') }}">
+
   {{-- <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
 
   <style type="text/css">
@@ -60,43 +62,43 @@
           </a>
           <div class="box-form">
             <div class="form-group">
-              <label for="">Mục tiêu <span>*</span>:</label>
+              <label for="">Mục tiêu<span>*</span>:</label>
               <input type="text" class="form-control" name="" id=""
                 value="{{ mb_strtoupper($plantypes[$model->plantype]) }}" readonly>
             </div>
             <div class="form-group">
-              <label for="">Ví <span>*</span>:</label>
+              <label for="">Ví<span>*</span>:</label>
               <input type="text" class="form-control" name="" id=""
                 value="{{ $model->accountno }}" readonly>
             </div>
             <div class="form-group">
-              <label for="">Tên ví tài chính <span>*</span>:</label>
+              <label for="">Tên ví tài chính<span>*</span>:</label>
               <input type="text" class="form-control" name="" id=""
                 value="{{ $model->planname }}" readonly>
             </div>
             <div class="form-group">
-              <label for="">Chi tiết <span>*</span>:</label>
+              <label for="">Chi tiết<span>*</span>:</label>
               <input type="text" class="form-control" name="" id=""
                 value="{{ $model->description }}" readonly>
             </div>
             <div class="form-group">
-              <label for="">Ngày lập <span>*</span>:</label>
+              <label for="">Ngày lập<span>*</span>:</label>
               <input type="text" class="form-control" name="" id=""
                 value="{{ $model->plandate == '' ? '' : ConvertSQLDate($model->plandate) }}"
                 readonly>
             </div>
             <div class="form-group">
-              <label for="">Tuổi hiện tại <span>*</span>:</label>
+              <label for="">Tuổi hiện tại<span>*</span>:</label>
               <input type="text" class="form-control" name="" id=""
                 value="{{ $model->currentage }}" readonly>
             </div>
             <div class="form-group">
-              <label for="">Tuổi hoàn thành mục tiêu <span>*</span>:</label>
+              <label for="">Tuổi hoàn thành mục tiêu<span>*</span>:</label>
               <input type="text" class="form-control" name="" id=""
                 value="{{ $model->planage == '' ? 50 : $model->planage }}" readonly>
             </div>
             <div class="form-group">
-              <label for="">Số tiền mục tiêu <span>*</span>:</label>
+              <label for="">Số tiền mục tiêu<span>*</span>:</label>
               <input type="text" class="form-control" name="" id=""
                 value="{{ $model->requireamount == '' ? 0 : formatNumber($model->requireamount, 1, 0, 0) }}"
                 readonly>

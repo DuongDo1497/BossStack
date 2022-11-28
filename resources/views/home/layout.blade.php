@@ -10,6 +10,7 @@
 
   <meta name="description" content="BossStack">
   <meta property="og:title" content="BossStack">
+  <meta property="og:site_name" content="BossStack">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -34,6 +35,7 @@
   <link rel="stylesheet" href="{{ asset('css/web/footer.css') }}">
   <link rel="stylesheet" href="{{ asset('css/web/banner.css') }}">
   @yield('head')
+  {{-- @laravelPWA --}}
 </head>
 
 <body>
@@ -48,6 +50,18 @@
   <div class="backtotop animate__animated animate__zoomOut">
     <i class="fa-solid fa-arrow-up"></i>
   </div>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2LMZ9Y78H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-Y2LMZ9Y78H');
+  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="

@@ -1,3 +1,4 @@
+/* Button Style */
 .btn{
   font-size: 16px;
   padding: 6px 16px;
@@ -10,6 +11,7 @@
   background-color: #1890FF;
 }
 
+/* Default Style */
 .breadcrumb,
 .title-page{
   margin-bottom: 0;
@@ -19,6 +21,14 @@
 .breadcrumb{
   padding: 16px 24px 8px;
   border-bottom: 1px solid var(--gray-cl-2);
+}
+
+.breadcrumb .prev{
+  color: var(--gray-cl-7);
+}
+
+.breadcrumb .prev:hover{
+  color: #72afd2;
 }
 
 .breadcrumb .current{
@@ -64,6 +74,7 @@
   color: var(--gray-cl-6);
 }
 
+/* Form Style */
 .form-group{
   display: flex;
   align-items: center;
@@ -93,6 +104,7 @@
 .form-group .form-control,
 .form-group .select2-selection--single,
 .form-group .form-control{
+  height: auto;
   font-size: 16px;
   padding: 9px 12px;
   border-radius: 2px;
@@ -127,6 +139,7 @@
   color: var(--white-cl);
 }
 
+/* Status Notification Style */
 .status.status-error{
   background-color: #BC2C22;
 }
@@ -135,6 +148,7 @@
   background-color: #0A9A4A;
 }
 
+/* Table Style */
 .table-list thead tr th,
 .table-list tbody tr td{
   padding: 8px;
@@ -156,6 +170,7 @@
   color: var(--gray-cl-6);
 }
 
+/* Text Style */
 .text-error,
 .text-success{
   font-family: hm;
@@ -169,6 +184,7 @@
   color: #0A9A4A !important;
 }
 
+/* Paging Nav Style */
 .paging .pagination{
   display: flex;
   align-items: center;
@@ -200,6 +216,7 @@
   background-color: var(--gray-cl-6);
 }
 
+/* Note Footer Style */
 .note-content{
   margin-top: 57px;
 }
@@ -213,6 +230,7 @@
   font-family: hm;
 }
 
+/* Notification Index Style */
 .noti-index{
   display: flex;
   justify-content: center;

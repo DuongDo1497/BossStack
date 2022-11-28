@@ -58,7 +58,7 @@
     <div class="container">
       <div class="wrap">
         <div class="why-product__content">
-          <h4 class="section-title">Tại sao chủ doanh nghiệp cần giải pháp bóc tách dòng tiền?</h4>
+          <h4 class="section-title">Tại sao chủ doanh nghiệp cần kiểm soát thất thoát?</h4>
           <div class="why-product__list">
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-6.svg') }}" alt=""
@@ -176,18 +176,18 @@
                 placeholder="Công ty">
             </div>
             <div class="form-group">
-                <select class="form-select" name="companytype">
-                    <option value="">Quy mô công ty</option>
-                    @foreach($companytypes as $key=>$value)
-                        @if($key != '')
-                            @if($key == old('companytype'))
-                                <option value="{{ $key }}" selected>{{ $value }}</option>
-                            @else
-                                <option value="{{ $key }}">{{ $value }}</option>                                                                    
-                            @endif
-                        @endif
-                    @endforeach
-                </select>
+              <select class="form-select" name="companytype">
+                <option value="">Quy mô công ty</option>
+                @foreach ($companytypes as $key => $value)
+                  @if ($key != '')
+                    @if ($key == old('companytype'))
+                      <option value="{{ $key }}" selected>{{ $value }}</option>
+                    @else
+                      <option value="{{ $key }}">{{ $value }}</option>
+                    @endif
+                  @endif
+                @endforeach
+              </select>
             </div>
             <div class="form-group">
               <input type="text" class="form-control" id="title" name="title"

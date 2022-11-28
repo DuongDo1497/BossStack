@@ -1,0 +1,67 @@
+.form-advisory__company,
+.form-advisory__contact{
+  max-width: 746px;
+}
+
+.form-advisory__company{
+  margin-bottom: 32px;
+}
+
+.form-advisory__company p,
+.form-advisory__contact p{
+  margin-bottom: 24px;
+}
+
+.form-advisory__company .company-info{
+  padding: 32px;
+  border-radius: 16px;
+  background-color: var(--bg-yellow-cl);
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.form-advisory__company .company-name,
+.form-advisory__company ul li span{
+  font-family: hm;
+}
+
+.form-advisory__company ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.form-advisory__company ul li{
+  margin-bottom: 8px;
+}
+
+.form-advisory__company ul li:last-child{
+  margin-bottom: 0;
+}
+
+.form-advisory__contact .form-group{
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.form-advisory__contact .form-group:last-child{
+  margin-bottom: 0;
+}
+
+.form-advisory__contact .form-group label{
+  --w-label: 100%;
+  font-size: 14px;
+  font-family: hb;
+  margin-bottom: 8px;
+}
+
+.form-advisory__contact .form-group .form-control{
+  --w-input: 100%;
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: 1px solid var(--gray-cl-3);
+}
+
+.form-advisory__contact .form-group textarea.form-control{
+  height: 109px;
+  resize: none;
+}

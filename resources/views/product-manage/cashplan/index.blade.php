@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
 @section('head')
+  <link rel="stylesheet" href="{{ asset('css/pages/page/cashplan.css') }}">
+
   {{-- <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
 
 <style type="text/css">

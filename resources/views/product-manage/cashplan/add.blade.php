@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
 @section('head')
+  <link rel="stylesheet" href="{{ asset('css/pages/page/cashplan.css') }}">
+
   {{-- <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
 
   <style type="text/css">
@@ -39,7 +41,8 @@
 
   <div class="section cashplan-add">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <span>Thiết lập ví tài chính</span> / <span class="current">Thêm
+      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cashplans-index') }}">Thiết lập
+        ví tài chính</a> / <span class="current">Thêm
         ví tài chính</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
@@ -56,7 +59,7 @@
         <div class="box box-primary">
           <div class="box-form">
             <div class="form-group">
-              <label for="">Mục tiêu <span>*</span>:</label>
+              <label for="">Mục tiêu<span>*</span>:</label>
               <select class="form-select select2" name="plantype" id="plantype">
                 @foreach ($plantypes as $key => $value)
                   @if ($key == old('plantype'))
@@ -75,30 +78,30 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="description">Chi tiết <span>*</span>:</label>
+              <label for="description">Chi tiết<span>*</span>:</label>
               <input type="text" class="form-control" name="description" id="description"
                 value="{{ old('description') }}" onkeyup="" placeholder="Nhập..." required>
             </div>
             <div class="form-group">
-              <label for="plandate">Ngày lập <span>*</span>:</label>
+              <label for="plandate">Ngày lập<span>*</span>:</label>
               <input type="text" class="form-control" name="plandate" id="plandate"
                 value="{{ old('plandate') == '' ? $plandate : old('plandate') }}" onkeyup=""
                 placeholder="" required>
             </div>
             <div class="form-group">
-              <label for="currentage">Tuổi hiện tại <span>*</span>:</label>
+              <label for="currentage">Tuổi hiện tại<span>*</span>:</label>
               <input type="text" class="form-control" name="currentage" id="currentage"
                 value="{{ $currentage == null ? old('currentage') : $currentage }}"
                 onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="" required>
             </div>
             <div class="form-group">
-              <label for="planage">Tuổi hoàn thành mục tiêu <span>*</span>:</label>
+              <label for="planage">Tuổi hoàn thành mục tiêu<span>*</span>:</label>
               <input type="text" class="form-control" name="planage" id="planage"
                 value="{{ old('planage') == '' ? '' : old('planage') }}" onkeyup=""
                 placeholder="Nhập..." required>
             </div>
             <div class="form-group">
-              <label for="requireamount">Số tiền mục tiêu <span>*</span>:</label>
+              <label for="requireamount">Số tiền mục tiêu<span>*</span>:</label>
               <input type="text" class="form-control" name="requireamount" id="requireamount"
                 value="{{ old('requireamount') == '' ? 0 : old('requireamount') }}" onkeyup=""
                 placeholder="" required>
@@ -115,7 +118,7 @@
             </div>
           </div>
           <button type="submit" class="btn btn-primary btn-add">
-            <img src="{{ asset('img/icon-add.svg') }}" alt="">
+            {{-- <img src="{{ asset('img/icon-add.svg') }}" alt=""> --}}
             Thêm ví tài chính
           </button>
         </div>
