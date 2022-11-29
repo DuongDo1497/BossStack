@@ -98,7 +98,7 @@ class UserCustomerService extends BaseService
         $ret = 0;
         try {
             Mail::send('mail.newAccount', ['usercustomer' => $usercustomer, 'userpassword' => $userpassword], function ($message) use ($usercustomer, $userpassword) {
-                $message->from('info@fiinves.vn', 'BossStack Ecommerce');
+                $message->from('info@fiinves.vn', 'BossStack');
                 $message->to($usercustomer->email)->subject('Email thong bao tai khoan da duoc kich hoat - Active account notification');
             });
             $ret = 1;
@@ -118,13 +118,13 @@ class UserCustomerService extends BaseService
         $ret = 0;
         try {
             Mail::send('mail.newAccountAdmin', ['usercustomer' => $usercustomer, 'userpassword' => $userpassword], function ($message) use ($usercustomer, $userpassword, $sendmailfrom, $sendmailcc) {
-                $message->from($sendmailfrom, 'BossStack Ecommerce');
+                $message->from($sendmailfrom, 'BossStack');
                 $message->to($sendmailcc)->subject('Email thong bao tai khoan da duoc kich hoat - Active account notification');
             });
 
             if ($sendmailcc_1 != ""){
                 Mail::send('mail.newAccountAdmin', ['usercustomer' => $usercustomer, 'userpassword' => $userpassword], function ($message) use ($usercustomer, $userpassword, $sendmailfrom, $sendmailcc_1) {
-                    $message->from($sendmailfrom, 'FIINVES Ecommerce');
+                    $message->from($sendmailfrom, 'BossStack');
                     $message->to($sendmailcc_1)->subject('Email thong bao tai khoan da duoc kich hoat - Active account notification');
                 });
             }
@@ -141,7 +141,7 @@ class UserCustomerService extends BaseService
     {
 
         Mail::send('mail.inforBankAccount', ['usercustomer' => $usercustomer, 'contract' => $contract], function ($message) use ($usercustomer, $contract) {
-            $message->from('info@fiinves.vn', 'BossStack Ecommerce');
+            $message->from('info@fiinves.vn', 'BossStack');
             $message->to($usercustomer->email)->subject('Email thong bao thanh toan dich vu - Email payment notification');
         });
 
@@ -230,7 +230,7 @@ class UserCustomerService extends BaseService
     {
 
         Mail::send('mail.changePassword', ['usercustomer' => $usercustomer, 'userpassword' => $userpassword], function ($message) use ($usercustomer, $userpassword) {
-            $message->from('infor@dongtiencanhan.com', 'BossStack Ecommerce');
+            $message->from('infor@dongtiencanhan.com', 'BossStack');
             $message->to($usercustomer->email)->subject('BossStack: Thu thong bao cap mat khau thanh cong - Change Password sucessfully');
         });
 
@@ -319,9 +319,8 @@ class UserCustomerService extends BaseService
 
     public function sendMailResetPassword($usercustomer, $userpassword)
     {
-
         Mail::send('mail.resetPassword', ['usercustomer' => $usercustomer, 'userpassword' => $userpassword], function ($message) use ($usercustomer, $userpassword) {
-            $message->from('infor@dongtiencanhan.com', 'BossStack Ecommerce');
+            $message->from('infor@dongtiencanhan.com', 'BossStack');
             $message->to($usercustomer->email)->subject('BossStack: Thu thong bao khoi phuc mat khau thanh cong - Reset Password sucessfully');
         });
 

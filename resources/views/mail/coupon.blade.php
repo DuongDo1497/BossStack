@@ -22,7 +22,7 @@
         </tr>
         <tr>
             <td colspan='2'>
-            (You can access BossStack Coaching and consult the manual by clicking on the link below)
+            (You can access BossStack and consult the manual by clicking on the link below)
             </td>
         </tr>
         <tr>
@@ -37,7 +37,7 @@
         </tr>
         <tr>
             <td colspan='2'> 
-            (Please contact <b>Customer Department</b>).
+            (Please contact <b>Customer Services Department</b>).
             </td>
         </tr>
         <tr>
@@ -62,7 +62,7 @@
         </tr>
         <tr>
             <td colspan='2'>
-            Phòng chăm sóc khách hàng/Customer Department
+            Phòng chăm sóc khách hàng/Customer Services Department
             </td>
         </tr>
         <tr>
