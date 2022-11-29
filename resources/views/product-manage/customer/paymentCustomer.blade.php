@@ -53,7 +53,7 @@
                     <div class="payment-option__header">
                       <div class="form-group">
                         <input class="form-check-input" type="radio" name="ord_payment_method"
-                          value="0" id="paymentDirect" data-bs-toggle="collapse"
+                          value="0" checked="checked" id="paymentDirect" data-bs-toggle="collapse"
                           href="#payment-direct">
                         <label class="form-check-label" for="paymentDirect"></label>
                       </div>
