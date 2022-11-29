@@ -15,6 +15,7 @@
     content="BossStack - The easiest way to control business accurately and efficiently">
   <meta property="og:site_name" content="BossStack">
   <link rel="canonical" href="https://bossstack.vn" />
+  <meta name="google-site-verification" content="-k2SmRCFohBmfol7XucRrxczosxFvyGEsHG9WVmd8-A" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     rel="stylesheet"

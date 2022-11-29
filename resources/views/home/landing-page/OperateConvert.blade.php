@@ -45,7 +45,7 @@
         <ul class="course-info">
           <li>
             <img class="course-info__icon img-fluid"
-              src="{{ asset('img/landing-page/icon-phone.svg') }}" />
+              src="{{ asset('img/landing-page/icon-phone.svg') }}" alt="icon-phone" />
             <div class="course-info__content">
               <span class="title">Hotline</span>
               <span class="text">+84 918 90 55 00</span>
@@ -53,7 +53,7 @@
           </li>
           <li>
             <img class="course-info__icon img-fluid"
-              src="{{ asset('img/landing-page/icon-mail.svg') }}" />
+              src="{{ asset('img/landing-page/icon-mail.svg') }}" alt="icon-mail" />
             <div class="course-info__content">
               <span class="title">Email</span>
               <span class="text">info@bossstack.vn</span>
@@ -61,7 +61,7 @@
           </li>
           <li>
             <img class="course-info__icon img-fluid"
-              src="{{ asset('img/landing-page/icon-calendar.svg') }}" />
+              src="{{ asset('img/landing-page/icon-calendar.svg') }}" alt="icon-calendar" />
             <div class="course-info__content">
               <span class="title">Lịch khai giảng</span>
               <span class="text">30/11/2022</span>
@@ -89,7 +89,7 @@
           <a href="#register-now" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
         </div>
         <img class="banner-img img-fluid" src="{{ asset('img/landing-page/banner-img-1.png') }}"
-          alt="" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
+          alt="banner-img" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
           data-aos-easing="ease-in-out">
       </div>
     </div>
@@ -103,22 +103,24 @@
           <div class="who-list">
             <div class="card">
               <img class="card-img-top img-fluid"
-                src="{{ asset('img/landing-page/who-icon-5.svg') }}" alt="">
+                src="{{ asset('img/landing-page/who-icon-5.svg') }}"
+                alt="Cửa hàng kinh doanh tự do">
               <p class="card-title">Cửa hàng kinh doanh tự do</p>
             </div>
             <div class="card">
               <img class="card-img-top img-fluid"
-                src="{{ asset('img/landing-page/who-icon-6.svg') }}" alt="">
+                src="{{ asset('img/landing-page/who-icon-6.svg') }}" alt="Startup">
               <p class="card-title">Startup</p>
             </div>
             <div class="card">
               <img class="card-img-top img-fluid"
-                src="{{ asset('img/landing-page/who-icon-7.svg') }}" alt="">
+                src="{{ asset('img/landing-page/who-icon-7.svg') }}"
+                alt="Doanh nghiệp vừa và nhỏ">
               <p class="card-title">Doanh nghiệp vừa và nhỏ</p>
             </div>
             <div class="card">
               <img class="card-img-top img-fluid"
-                src="{{ asset('img/landing-page/who-icon-8.svg') }}" alt="">
+                src="{{ asset('img/landing-page/who-icon-8.svg') }}" alt="Doanh nghiệp lớn">
               <p class="card-title">Doanh nghiệp lớn</p>
             </div>
           </div>
@@ -213,31 +215,36 @@
               <div class="advantages-content__list">
                 <div class="advantages-content__item">
                   <img class="advantages-content__icon img-fluid"
-                    src="{{ asset('img/landing-page/icon-advantages-4.svg') }}" alt="">
+                    src="{{ asset('img/landing-page/icon-advantages-4.svg') }}"
+                    alt="icon-advantages">
                   <p>Tiết kiệm <span>80%<sup>*</sup></span> thời gian khi quản lý dự án</p>
                 </div>
                 <div class="advantages-content__item">
                   <img class="advantages-content__icon img-fluid"
-                    src="{{ asset('img/landing-page/icon-advantages-5.svg') }}" alt="">
+                    src="{{ asset('img/landing-page/icon-advantages-5.svg') }}"
+                    alt="icon-advantages">
                   <p>Tăng <span>55%<sup>*</sup></span> hiệu suất công việc của từng nhân sự ở các
                     phòng ban</p>
                 </div>
                 <div class="advantages-content__item">
                   <img class="advantages-content__icon img-fluid"
-                    src="{{ asset('img/landing-page/icon-advantages-8.svg') }}" alt="">
+                    src="{{ asset('img/landing-page/icon-advantages-8.svg') }}"
+                    alt="icon-advantages">
                   <p><span>95%<sup>*</sup></span> doanh nghiệp tinh gọn quy trình, linh hoạt trong
                     việc ra quyết định</p>
                 </div>
                 <div class="advantages-content__item">
                   <img class="advantages-content__icon img-fluid"
-                    src="{{ asset('img/landing-page/icon-advantages-7.png') }}" alt="">
+                    src="{{ asset('img/landing-page/icon-advantages-7.png') }}"
+                    alt="icon-advantages">
                   <p>Tuỳ chỉnh thiết lập hệ thống <span>phù hợp với từng doanh nghiệp</span></p>
                 </div>
               </div>
               <p class="note"><sup>*</sup> Zenkit (2018)</p>
             </div>
             <img class="advantages-content__img img-fluid"
-              src="{{ asset('img/landing-page/advantages-img.png') }}" alt="">
+              src="{{ asset('img/landing-page/advantages-img.png') }}"
+              alt="advantages-content-img">
           </div>
         </div>
       </div>
@@ -256,7 +263,8 @@
                 <div class="timeline__content">
                   <div class="timeline__header">
                     <img class="img-fluid timeline-icon"
-                      src="{{ asset('img/landing-page/timeline-icon-1.svg') }}">
+                      src="{{ asset('img/landing-page/timeline-icon-1.svg') }}"
+                      alt="timeline-icon">
                     <h3>STEP <span>1</span></h3>
                   </div>
                   <div class="timeline__body">
@@ -282,7 +290,8 @@
                 <div class="timeline__content">
                   <div class="timeline__header">
                     <img class="img-fluid timeline-icon"
-                      src="{{ asset('img/landing-page/timeline-icon-2.svg') }}">
+                      src="{{ asset('img/landing-page/timeline-icon-2.svg') }}"
+                      alt="timeline-icon">
                     <h3>STEP <span>2</span></h3>
                   </div>
                   <div class="timeline__body">
@@ -310,7 +319,8 @@
                 <div class="timeline__content">
                   <div class="timeline__header">
                     <img class="img-fluid timeline-icon"
-                      src="{{ asset('img/landing-page/timeline-icon-3.svg') }}">
+                      src="{{ asset('img/landing-page/timeline-icon-3.svg') }}"
+                      alt="timeline-icon">
                     <h3>STEP <span>3</span></h3>
                   </div>
                   <div class="timeline__body">
@@ -363,7 +373,7 @@
               <p class="number">1</p>
               <div class="content">
                 <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-1.svg') }}">
+                  src="{{ asset('img/landing-page/solution-icon-1.svg') }}" alt="solution-icon">
                 <p class="text">Ký hợp đồng</p>
               </div>
             </div>
@@ -372,7 +382,7 @@
               <p class="number">2</p>
               <div class="content">
                 <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-10.svg') }}">
+                  src="{{ asset('img/landing-page/solution-icon-10.svg') }}" alt="solution-icon">
                 <p class="text">Thu thập thông tin dữ liệu chủ doanh nghiệp</p>
               </div>
             </div>
@@ -381,7 +391,7 @@
               <p class="number">3</p>
               <div class="content">
                 <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-11.svg') }}">
+                  src="{{ asset('img/landing-page/solution-icon-11.svg') }}" alt="solution-icon">
                 <p class="text">Làm việc trực tiếp lần 1 cùng khách hàng tại <b>văn phòng</b>
                   BossStack
                   (hoặc <b>online</b>) trong 4 giờ</p>
@@ -392,7 +402,7 @@
               <p class="number">4</p>
               <div class="content">
                 <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-4.svg') }}">
+                  src="{{ asset('img/landing-page/solution-icon-4.svg') }}" alt="solution-icon">
                 <p class="text"><b>Đội ngũ chuyên gia</b> BossStack sẽ phân tích và lên kế hoạch
                   bằng
                   phần mềm <span class="italic">Microsoft 365 Business</span></p>
@@ -403,7 +413,7 @@
               <p class="number">5</p>
               <div class="content">
                 <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-12.svg') }}">
+                  src="{{ asset('img/landing-page/solution-icon-12.svg') }}" alt="solution-icon">
                 <p class="text">Tổ chức lễ KickOff tại văn phòng BossStack: giải pháp <b>vận hành
                     số</b> doanh nghiệp</p>
               </div>
@@ -413,7 +423,7 @@
               <p class="number">6</p>
               <div class="content">
                 <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-3.svg') }}">
+                  src="{{ asset('img/landing-page/solution-icon-3.svg') }}" alt="solution-icon">
                 <p class="text">Làm việc <b>trực tiếp</b> cùng nhân sự phụ trách của doanh nghiệp
                   trong <b>1 tuần</b> </p>
               </div>
@@ -423,7 +433,7 @@
               <p class="number">7</p>
               <div class="content">
                 <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-13.svg') }}">
+                  src="{{ asset('img/landing-page/solution-icon-13.svg') }}" alt="solution-icon">
                 <p class="text">Chuyển giao <b>bộ kế hoạch</b> vận hành số chi tiết và bộ hướng
                   dẫn sử dụng phần mềm <span class="italic">Microsoft 365 Business</span></p>
               </div>
@@ -433,7 +443,7 @@
               <p class="number">8</p>
               <div class="content">
                 <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-3.svg') }}">
+                  src="{{ asset('img/landing-page/solution-icon-3.svg') }}" alt="solution-icon">
                 <p class="text">Làm việc trực tiếp <b>2 ngày</b> tại doanh nghiệp để thực thi
                   giải pháp và hướng dẫn, đào tạo nội bộ, đánh giá kết quả thực thi và nghiệm thu
                   bàn giao</p>
@@ -444,7 +454,7 @@
               <p class="number">9</p>
               <div class="content">
                 <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-14.svg') }}">
+                  src="{{ asset('img/landing-page/solution-icon-14.svg') }}" alt="solution-icon">
                 <p class="text">Thực hiện hỗ trợ kĩ thuật 24/7 cho 1 tài khoản <b>Standard</b> và
                   1 tài khoản <b>Basic</b> của <span class="italic">Microsoft 365 Business</span>
                   trong <b>1 năm</b></p>
@@ -468,7 +478,7 @@
           <div class="review__carousel-2 owl-carousel owl-theme">
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/web/review-avt-4.jpg') }}" alt=""
+                <img src="{{ asset('img/web/review-avt-4.jpg') }}" alt="review-avt"
                   class="img-fluid review__avatar">
                 <p class="review__info">
                   <span>Nguyễn Đỗ Cẩm Bình</span>
@@ -477,7 +487,7 @@
               </div>
               <p class="review__content">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
-                  alt="">
+                  alt="icon-quote">
                 Sử dụng <b>phần mềm BossStack</b> cuối tháng tôi
                 không cần ngồi ghi chép hay nhập bảng tính Excel. <b>Phần mềm BossStack</b> giúp tôi
                 quản lý mọi thu chi của cá nhân, gia đình và bóc tách hoàn toàn với dòng tiền
@@ -488,7 +498,7 @@
             </div>
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/user-1.jpg') }}" alt=""
+                <img src="{{ asset('img/user-1.jpg') }}" alt="review-avt"
                   class="img-fluid review__avatar">
                 <p class="review__info">
                   <span>Lê Hoài Ân - CFA</span>
@@ -500,7 +510,7 @@
               </div>
               <p class="review__content">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
-                  alt="">
+                  alt="icon-quote">
                 <b>Phần mềm BossStack</b> giúp bạn theo dõi, kiểm soát các dòng tiền và giúp chúng
                 luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá nhân và dòng tiền đầu tư kinh doanh
                 của bạn được tách bạch hoàn toàn. Khi dòng tiền cá nhân và doanh nghiệp được bóc
@@ -510,7 +520,7 @@
             </div>
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/user.jpg') }}" alt=""
+                <img src="{{ asset('img/user.jpg') }}" alt="review-avt"
                   class="img-fluid review__avatar">
                 <p class="review__info">
                   <span>Huỳnh Thu Ái</span>
@@ -519,7 +529,7 @@
               </div>
               <p class="review__content">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
-                  alt="">
+                  alt="icon-quote">
                 <b>Phần mềm BossStack</b> giúp tôi phân bổ tài sản
                 và dòng tiền vào các ví mục tiêu tài chính khác nhau. Tôi có thể theo dõi từng
                 mục thu chi, từng mục tiêu tài chính đã tối ưu chưa. Từ đó, tôi phân bổ dòng
@@ -584,7 +594,7 @@
             <div class="voucher-qr">
               <div class="voucher-qr__img">
                 <img class="img-fluid" src="{{ asset('img/landing-page/qr-code-boctach.png') }}"
-                  alt="">
+                  alt="qr-code-boctach">
               </div>
               <p class="voucher-qr__text">Quét mã QR để tìm hiểu thêm</p>
             </div>
@@ -641,19 +651,19 @@
               <a
                 href="https://www.linkedin.com/company/bossstack/posts/?feedView=all&viewAsMember=true">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-linkedin.svg') }}"
-                  alt="">
+                  alt="icon-linkedin">
               </a>
             </div>
             <div class="footer-content__social">
               <a href="https://www.facebook.com/bossstack.vn">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-fb.svg') }}"
-                  alt="">
+                  alt="icon-fb">
               </a>
             </div>
             <div class="footer-content__social">
               <a href="#">
                 <img class="img-fluid" src="{{ asset('img/landing-page/icon-zalo.svg') }}"
-                  alt="">
+                  alt="icon-zalo">
               </a>
             </div>
           </div>
@@ -670,7 +680,7 @@
     <div class="popup-register__box">
       <button class="close-popup">
         <img class="img-fluid" src="{{ asset('img/landing-page/icon-close.svg') }}"
-          alt="">
+          alt="icon-close">
       </button>
       <div class="popup-register__header">
         <div class="popup-register__left">
@@ -695,7 +705,7 @@
           </div>
         </div>
         <img class="img-fluid popup-register__image"
-          src="{{ asset('img/landing-page/popup-img.png') }}" alt="">
+          src="{{ asset('img/landing-page/popup-img.png') }}" alt="popup-img">
       </div>
       <div class="popup-register__body">
         @if (isset($infor))
