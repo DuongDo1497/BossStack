@@ -1,24 +1,16 @@
-.retireplans .box-primary:first-child label{
-  --w-label: 335px;
+.retireplans .box-form{
+  --w-box-form: 706px;
 }
 
-.retireplans .box-primary:first-child .form-control{
-  --w-input: 463px;
+.retireplans .form-group label{
+  --w-label: 324px;
 }
 
 .retireplans .btn-analysis{
   margin-top: 24px;
-  margin-left: 351px;
+  margin-left: 340px;
 }
 
-.retireplans .box-primary:last-child label{
+.retireplans .box:last-child .form-group label{
   --w-label: 530px;
-}
-
-.retireplans .box-primary:last-child .form-control{
-  --w-input: 215px;
-}
-
-.retireplans .box-primary:last-child .box-form{
-  margin-bottom: 20px;
 }

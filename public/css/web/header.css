@@ -196,11 +196,11 @@
   }
 
   .button-control{
-    width: 208px;
+    width: 300px;
   }
 
   .button-control .btn.btn-size-md{
-    --w-btn: 100px;
+    --w-btn: 145px;
   }
 }
 

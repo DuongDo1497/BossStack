@@ -108,6 +108,11 @@
   width: 100%;
 }
 
+.package-control .package-option{
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
 .package-option .form-select{
   font-size: 18px;
   padding: 4px 8px;
