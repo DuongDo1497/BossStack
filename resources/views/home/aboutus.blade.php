@@ -36,13 +36,13 @@
                 nghiệp thực sự giải phóng <b>"bản thân"</b> ra khỏi <b>"business"</b> của mình.</p>
             </div>
           </div>
-          <img class="img-fluid" src="{{ asset('img/web/introduction-img.jpg') }}" alt="">
+          <img class="img-fluid" src="{{ asset('img/web/introduction-img.jpg') }}" alt="Về BossStack">
         </div>
         <div class="introduction-slogan">
           <div class="introduction-slogan__item">
             <h3 class="title">
               <img class="img-fluid" src="{{ asset('img/web/introduction-icon-1.svg') }}"
-                alt="">
+                alt="Sứ mệnh">
               Sứ mệnh
             </h3>
             <p class="text">BossStack đồng hành, thực thi và mang đến hiệu quả tối ưu giúp chủ doanh
@@ -51,7 +51,7 @@
           <div class="introduction-slogan__item">
             <h3 class="title">
               <img class="img-fluid" src="{{ asset('img/web/introduction-icon-2.svg') }}"
-                alt="">
+                alt="Tầm nhìn">
               Tầm nhìn
             </h3>
             <p class="text">Chuyển đổi số ngành tài chính, phát triển nền tảng tài chính vững chắc
@@ -69,13 +69,13 @@
         <div class="leadership-list">
           <div class="leadership-item">
             <img class="img-fluid leadership-avt" src="{{ asset('img/web/leadership-1.jpg') }}"
-              alt="">
+              alt="avatar">
             <div class="leadership-info">
               <h5 class="name">
                 Chau Pham
                 <a href="https://www.linkedin.com/in/chau-pham-5b8941248/">
                   <img class="img-fluid leadership-social"
-                    src="{{ asset('img/web/linkedin-icon.svg') }}" alt="">
+                    src="{{ asset('img/web/linkedin-icon.svg') }}" alt="icon linkedin">
                 </a>
               </h5>
               <h6 class="position">CEO/Founder</h6>
@@ -92,13 +92,13 @@
           </div>
           <div class="leadership-item reverse">
             <img class="img-fluid leadership-avt" src="{{ asset('img/web/leadership-2.jpg') }}"
-              alt="">
+              alt="avatar">
             <div class="leadership-info">
               <h5 class="name">
                 Tu Nguyen
                 <a href="#">
                   <img class="img-fluid leadership-social"
-                    src="{{ asset('img/web/linkedin-icon.svg') }}" alt="">
+                    src="{{ asset('img/web/linkedin-icon.svg') }}" alt="icon linkedin">
                 </a>
               </h5>
               <h6 class="position">Cố Vấn Tài Chính </h6>
@@ -136,13 +136,13 @@
           </div>
           <div class="leadership-item">
             <img class="img-fluid leadership-avt" src="{{ asset('img/web/leadership-3.jpg') }}"
-              alt="">
+              alt="avatar">
             <div class="leadership-info">
               <h5 class="name">
                 Huong Le
                 <a href="#">
                   <img class="img-fluid leadership-social"
-                    src="{{ asset('img/web/linkedin-icon.svg') }}" alt="">
+                    src="{{ asset('img/web/linkedin-icon.svg') }}" alt="icon linkedin">
                 </a>
               </h5>
               <h6 class="position">Kế Toán Trưởng</h6>
@@ -185,40 +185,40 @@
           <div class="history-item">
             <span class="year">2014</span>
             <img class="img-fluid icon" src="{{ asset('img/web/history-icon-1.png') }}"
-              alt="" />
+              alt="Lịch sử hình thành và phát triển" />
           </div>
 
           <div class="history-item">
             <span class="year">2015</span>
             <img class="img-fluid icon" src="{{ asset('img/web/history-icon-2.png') }}"
-              alt="" />
+              alt="Lịch sử hình thành và phát triển" />
           </div>
 
           <div class="history-item">
             <span class="year">2018</span>
             <img class="img-fluid icon" src="{{ asset('img/web/history-icon-3.png') }}"
-              alt="" />
+              alt="Lịch sử hình thành và phát triển" />
             <div class="feature">
               <h6>Phát triển tính năng:</h6>
-              <p>Bóc tách Dòng tiền</p>
-              <p>Thực thi Dòng tiền Chuyên sâu</p>
+              <p>- Bóc tách Dòng tiền</p>
+              <p>- Thực thi Dòng tiền Chuyên sâu</p>
             </div>
           </div>
 
           <div class="history-item">
             <span class="year">2021</span>
             <img class="img-fluid icon" src="{{ asset('img/web/history-icon-4.png') }}"
-              alt="" />
+              alt="Lịch sử hình thành và phát triển" />
             <div class="feature">
               <h6>Phát triển giải pháp:</h6>
-              <p>Chuyển đổi Dữ liệu</p>
-              <p>Vận hành số Chuyên sâu</p>
-              <p>Kiểm soát Thất thoát Doanh nghiệp</p>
+              <p>- Chuyển đổi Dữ liệu</p>
+              <p>- Vận hành số Chuyên sâu</p>
+              <p>- Kiểm soát Thất thoát Doanh nghiệp</p>
             </div>
           </div>
         </div>
         <img class="img-fluid history-tree" src="{{ asset('img/web/history-tree.png') }}"
-          alt="" />
+          alt="circle background" />
       </div>
     </div>
   </div>

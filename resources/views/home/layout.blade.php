@@ -5,12 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{ config('app.name') }}</title>
+  <title>{{ config('app.name') }} - The easiest way to control business accurately and efficiently
+  </title>
   <link rel="shortcut icon" href="{{ asset('img/landing-page/favicon.ico') }}" type="image/x-icon">
 
-  <meta name="description" content="BossStack">
-  <meta property="og:title" content="BossStack">
+  <meta name="description"
+    content="Cung cấp sản phẩm và dịch vụ đem lại LỢI NHUẬN TỨC THÌ và xây dựng kế hoạch GIA TĂNG LỢI NHUẬN lâu dài!">
+  <meta property="og:title"
+    content="BossStack - The easiest way to control business accurately and efficiently">
   <meta property="og:site_name" content="BossStack">
+  <link rel="canonical" href="https://bossstack.vn" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -73,7 +77,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="{{ asset('js/web/main.js') }}"></script>
   <script src="{{ asset('js/web/carousel.js') }}"></script>
-  <script src="{{ asset('js/commons.js') }}"></script>  
+  <script src="{{ asset('js/commons.js') }}"></script>
   @yield('scripts')
 </body>
 

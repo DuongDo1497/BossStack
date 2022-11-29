@@ -35,7 +35,8 @@
         <h4 class="section-title">Giải pháp của BossStack</h4>
         <div class="solution-body">
           <div class="card">
-            <img class="card-img-top img-fluid" src="{{ asset('img/web/solution-icon-1.svg') }}" />
+            <img class="card-img-top img-fluid" src="{{ asset('img/web/solution-icon-1.svg') }}"
+              alt="BÓC TÁCH DÒNG TIỀN" />
             <div class="card-body">
               <h6 class="card-body__title">BÓC TÁCH DÒNG TIỀN</h6>
               <div class="card-body__content">
@@ -43,12 +44,12 @@
                 <ul>
                   <li>
                     <img class="icon img-fluid" src="{{ asset('img/web/icon-right.svg') }}"
-                      alt="">
+                      alt="icon">
                     Xử lý và bóc tách các mảnh ghép trong dòng tiền tổng quan cá nhân
                   </li>
                   <li>
                     <img class="icon img-fluid" src="{{ asset('img/web/icon-right.svg') }}"
-                      alt="">
+                      alt="icon">
                     Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, tự doanh, dòng tiền doanh
                     nghiệp
                   </li>
@@ -62,7 +63,8 @@
           </div>
 
           <div class="card">
-            <img class="card-img-top img-fluid" src="{{ asset('img/web/solution-icon-2.svg') }}" />
+            <img class="card-img-top img-fluid" src="{{ asset('img/web/solution-icon-2.svg') }}"
+              alt="CHUYỂN ĐỔI VẬN HÀNH" />
             <div class="card-body">
               <h6 class="card-body__title">CHUYỂN ĐỔI VẬN HÀNH</h6>
               <div class="card-body__content">
@@ -76,7 +78,8 @@
           </div>
 
           <div class="card">
-            <img class="card-img-top img-fluid" src="{{ asset('img/web/solution-icon-3.svg') }}" />
+            <img class="card-img-top img-fluid" src="{{ asset('img/web/solution-icon-3.svg') }}"
+              alt="KIỂM SOÁT THẤT THOÁT DOANH NGHIỆP" />
             <div class="card-body">
               <h6 class="card-body__title">KIỂM SOÁT THẤT THOÁT DOANH NGHIỆP</h6>
               <div class="card-body__content">
@@ -100,32 +103,38 @@
           <h4 class="section-title">Tại sao lựa chọn BossStack?</h4>
           <div class="why-bs__list">
             <div class="why-bs__item">
-              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-1.svg') }}" alt="">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-1.svg') }}"
+                alt="Kiểm soát tốt dòng tiền chủ sở hữu">
               <span class="text">Kiểm soát tốt dòng tiền chủ sở hữu</span>
             </div>
             <div class="why-bs__item">
-              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-2.svg') }}" alt="">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-2.svg') }}"
+                alt="Kiểm soát thất thoát">
               <span class="text">Kiểm soát thất thoát</span>
             </div>
             <div class="why-bs__item">
-              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-3.svg') }}" alt="">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-3.svg') }}"
+                alt="Theo kịp xu hướng chuyển đổi số">
               <span class="text">Theo kịp xu hướng chuyển đổi số</span>
             </div>
             <div class="why-bs__item">
-              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-4.svg') }}" alt="">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-4.svg') }}"
+                alt="Gia tăng chất lượng dữ liệu Tối ưu hóa chi phí">
               <span class="text">Gia tăng chất lượng dữ liệu Tối ưu hóa chi phí</span>
             </div>
             <div class="why-bs__item">
-              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-5.svg') }}" alt="">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-5.svg') }}"
+                alt="Công cụ quản lý vận hành hiệu quả cho doanh nghiệp">
               <span class="text">Công cụ quản lý vận hành hiệu quả cho doanh nghiệp</span>
             </div>
             <div class="why-bs__item">
-              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-6.svg') }}" alt="">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-6.svg') }}"
+                alt="Tự động hóa quy trình quản lý để giải phóng chủ doanh nghiệp">
               <span class="text">Tự động hóa quy trình quản lý để giải phóng chủ doanh nghiệp</span>
             </div>
           </div>
         </div>
-        <img class="img-fluid why-bs__img" src="{{ asset('img/web/why-bs-1.png') }}" alt="">
+        <img class="img-fluid why-bs__img" src="{{ asset('img/web/why-bs-1.png') }}" alt="image">
       </div>
     </div>
   </div>
@@ -135,34 +144,44 @@
       <div class="wrap">
         <div class="partner-carousel owl-carousel owl-theme">
           <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-1.png') }}">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-1.png') }}"
+              alt="partner-icon">
           </div>
           <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-2.png') }}">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-2.png') }}"
+              alt="partner-icon">
           </div>
           <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-3.png') }}">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-3.png') }}"
+              alt="partner-icon">
           </div>
           <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-4.png') }}">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-4.png') }}"
+              alt="partner-icon">
           </div>
           <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-5.png') }}">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-5.png') }}"
+              alt="partner-icon">
           </div>
           <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-6.png') }}">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-6.png') }}"
+              alt="partner-icon">
           </div>
           <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-7.png') }}">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-7.png') }}"
+              alt="partner-icon">
           </div>
           <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-8.png') }}">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-8.png') }}"
+              alt="partner-icon">
           </div>
           <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-9.png') }}">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-9.png') }}"
+              alt="partner-icon">
           </div>
           <div class="item">
-            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-12.png') }}">
+            <img class="img-fluid partner-item" src="{{ asset('img/web/partner-12.png') }}"
+              alt="partner-icon">
           </div>
         </div>
       </div>
@@ -180,31 +199,46 @@
                 <div class="review-rate__item">
                   <p class="title">CHẤT LƯỢNG</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
                 <div class="review-rate__item">
                   <p class="title">GIÁ TIỀN</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
                 <div class="review-rate__item">
                   <p class="title">MỨC ĐỘ HÀI LÒNG</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
               </div>
@@ -216,7 +250,7 @@
                 ràng, các phòng ban liên kết chặt chẽ và làm việc nhịp nhàng.”</p>
               <div class="review-footer">
                 <img class="img-fluid review-footer__avt"
-                  src="{{ asset('img/web/review-avt-2.jpg') }}" alt="">
+                  src="{{ asset('img/web/review-avt-2.jpg') }}" alt="avatar">
                 <div class="review-footer__info">
                   <h6 class="name">Nguyễn Đức Huy</h6>
                   <p class="position">CEO Vietponics</p>
@@ -229,31 +263,46 @@
                 <div class="review-rate__item">
                   <p class="title">CHẤT LƯỢNG</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
                 <div class="review-rate__item">
                   <p class="title">GIÁ TIỀN</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
                 <div class="review-rate__item">
                   <p class="title">MỨC ĐỘ HÀI LÒNG</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
               </div>
@@ -265,7 +314,7 @@
                 gia đình.”</p>
               <div class="review-footer">
                 <img class="img-fluid review-footer__avt"
-                  src="{{ asset('img/web/review-avt-1.jpg') }}" alt="">
+                  src="{{ asset('img/web/review-avt-1.jpg') }}" alt="avatar">
                 <div class="review-footer__info">
                   <h6 class="name">Nguyễn Thị Hồng Thủy</h6>
                   <p class="position">CEO Công ty TNHH TMDV XNK Dương Thủy</p>
@@ -278,31 +327,46 @@
                 <div class="review-rate__item">
                   <p class="title">CHẤT LƯỢNG</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
                 <div class="review-rate__item">
                   <p class="title">GIÁ TIỀN</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
                 <div class="review-rate__item">
                   <p class="title">MỨC ĐỘ HÀI LÒNG</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
               </div>
@@ -314,7 +378,7 @@
                 kinh doanh.”</p>
               <div class="review-footer">
                 <img class="img-fluid review-footer__avt" src="{{ asset('img/user-1.jpg') }}"
-                  alt="">
+                  alt="avatar">
                 <div class="review-footer__info">
                   <h6 class="name">Lê Hoài Ân</h6>
                   <p class="position">CFA, tác giả cuốn sách bán chạy số 1 thị trường "20 năm lịch sử
@@ -328,31 +392,46 @@
                 <div class="review-rate__item">
                   <p class="title">CHẤT LƯỢNG</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
                 <div class="review-rate__item">
                   <p class="title">GIÁ TIỀN</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
                 <div class="review-rate__item">
                   <p class="title">MỨC ĐỘ HÀI LÒNG</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
               </div>
@@ -362,7 +441,7 @@
                 giảm những chi phí không cần thiết.”</p>
               <div class="review-footer">
                 <img class="img-fluid review-footer__avt" src="{{ asset('img/user.jpg') }}"
-                  alt="">
+                  alt="avatar">
                 <div class="review-footer__info">
                   <h6 class="name">Huỳnh Thu Ái</h6>
                   <p class="position">Cố vấn, đào tạo hệ thống quản lý doanh nghiệp AMS</p>
@@ -375,31 +454,46 @@
                 <div class="review-rate__item">
                   <p class="title">CHẤT LƯỢNG</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
                 <div class="review-rate__item">
                   <p class="title">GIÁ TIỀN</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
                 <div class="review-rate__item">
                   <p class="title">MỨC ĐỘ HÀI LÒNG</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
               </div>
@@ -410,7 +504,7 @@
                 động kinh doanh của doanh nghiệp”</p>
               <div class="review-footer">
                 <img class="img-fluid review-footer__avt"
-                  src="{{ asset('img/web/review-avt-3.jpg') }}" alt="">
+                  src="{{ asset('img/web/review-avt-3.jpg') }}" alt="avatar">
                 <div class="review-footer__info">
                   <h6 class="name">Đinh Thúy Phương</h6>
                   <p class="position">CEO Công ty Mana.st</p>
@@ -423,31 +517,46 @@
                 <div class="review-rate__item">
                   <p class="title">CHẤT LƯỢNG</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
                 <div class="review-rate__item">
                   <p class="title">GIÁ TIỀN</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
                 <div class="review-rate__item">
                   <p class="title">MỨC ĐỘ HÀI LÒNG</p>
                   <div class="start">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
-                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
+                    <img class="img-fluid" src="{{ asset('img/web/icon-start.svg') }}"
+                      alt="icon-start">
                   </div>
                 </div>
               </div>
@@ -459,7 +568,7 @@
                 của mình.”</p>
               <div class="review-footer">
                 <img class="img-fluid review-footer__avt"
-                  src="{{ asset('img/web/review-avt-4.jpg') }}" alt="">
+                  src="{{ asset('img/web/review-avt-4.jpg') }}" alt="avatar">
                 <div class="review-footer__info">
                   <h6 class="name">Nguyễn Đỗ Cẩm Bình</h6>
                   <p class="position">Trưởng phòng kinh doanh, Công ty BĐS Him Lam</p>
@@ -480,17 +589,17 @@
           <div class="contact-us__list">
             <div class="contact-us__item">
               <img class="img-fluid icon" src="{{ asset('img/web/icon-check.svg') }}"
-                alt="" />
+                alt="icon" />
               <span class="text">Cắt giảm tối đa chi phí</span>
             </div>
             <div class="contact-us__item">
               <img class="img-fluid icon" src="{{ asset('img/web/icon-check.svg') }}"
-                alt="" />
+                alt="icon" />
               <span class="text">Tiết kiệm 80% thời gian quản lý dự án</span>
             </div>
             <div class="contact-us__item">
               <img class="img-fluid icon" src="{{ asset('img/web/icon-check.svg') }}"
-                alt="" />
+                alt="icon" />
               <span class="text">Gia tăng 55% hiệu suất công việc</span>
             </div>
           </div>

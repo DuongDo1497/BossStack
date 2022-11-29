@@ -25,7 +25,7 @@
           <div class="company-info">
             <div class="company-info__item">
               <img class="icon img-fluid" src="{{ asset('img/web/icon-phone.svg') }}"
-                alt="" />
+                alt="icon" />
               <ul>
                 <li>
                   <p class="text"><b>Hotline:</b> 0918 90 55 00 <span>(Ms Ngân)</span></p>
@@ -45,20 +45,26 @@
               </ul>
             </div>
             <div class="company-info__item">
-              <img class="icon img-fluid" src="{{ asset('img/web/icon-mail.svg') }}" alt="" />
+              <img class="icon img-fluid" src="{{ asset('img/web/icon-mail.svg') }}" alt="icon" />
               <p class="text">info@bossstack.vn</p>
             </div>
             <div class="company-info__item">
-              <img class="icon img-fluid" src="{{ asset('img/web/icon-map.svg') }}" alt="" />
+              <img class="icon img-fluid" src="{{ asset('img/web/icon-map.svg') }}" alt="icon" />
               <p class="text">LM81- 42.OT04 (Officetel), Landmark 81 Vinhomes Central Park, 720A
                 Điện Biên Phủ, Phường 22, Quận Bình Thạnh, Tp Hồ Chí Minh.</p>
             </div>
+          </div>
+          <div class="company-maps">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2120688935174!2d106.7219059292688!3d10.795063401125727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527c2f8f30911%3A0x36ac5073f8c91acd!2sLandmark%2081!5e0!3m2!1svi!2s!4v1669685873733!5m2!1svi!2s"
+              style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 
         <div class="advisory-form">
           <div class="advisory-form__header">
-            <img class="img-fluid" src="{{ asset('img/web/logo.svg') }}" alt="">
+            <img class="img-fluid" src="{{ asset('img/web/logo.svg') }}" alt="BossStack">
             <p>Liên hệ với chúng tôi</p>
           </div>
           @if (isset($infor))

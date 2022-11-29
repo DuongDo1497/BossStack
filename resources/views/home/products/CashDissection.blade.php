@@ -10,7 +10,7 @@
       <div class="wrap">
         <div class="banner-default__body">
           <div class="banner-default__link">
-            <img class="icon img-fluid" src="{{ asset('img/web/link-icon.svg') }}" alt="" />
+            <img class="icon img-fluid" src="{{ asset('img/web/link-icon.svg') }}" alt="icon" />
             <span class="text">Sản phẩm</span>
           </div>
           <h1 class="banner-default__title text-start">GIẢI PHÁP BÓC TÁCH DÒNG TIỀN</h1>
@@ -30,7 +30,7 @@
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-cyan-cl">
-              <img src="{{ asset('img/web/cash-dissection-1.svg') }}" alt=""
+              <img src="{{ asset('img/web/cash-dissection-1.svg') }}" alt="cash-dissection"
                 class="icon img-fluid">
               <p>Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, tự doanh, dòng tiền doanh nghiệp
               </p>
@@ -38,14 +38,14 @@
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-purple-cl">
-              <img src="{{ asset('img/web/cash-dissection-2.svg') }}" alt=""
+              <img src="{{ asset('img/web/cash-dissection-2.svg') }}" alt="cash-dissection"
                 class="icon img-fluid">
               <p>Phân bổ và thiết lập hệ thống dòng tiền bằng <b>phần mềm BossStack</b></p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
-              <img src="{{ asset('img/web/cash-dissection-3.svg') }}" alt=""
+              <img src="{{ asset('img/web/cash-dissection-3.svg') }}" alt="cash-dissection"
                 class="icon img-fluid">
               <p>Phân tích nền tảng dòng tiền, xử lý và bóc tách các mảnh ghép trong dòng tiền tổng
                 quan
@@ -64,31 +64,31 @@
           <h4 class="section-title">Tại sao chủ doanh nghiệp cần giải pháp bóc tách dòng tiền?</h4>
           <div class="why-product__list">
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-1.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-1.svg') }}" alt="icon"
                 class="icon img-fluid">
               <span class="text"><b>Làm mãi không dư</b></span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-2.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-2.svg') }}" alt="icon"
                 class="icon img-fluid">
               <span class="text"><b>Luôn bất an</b> vì không biết cách kiểm soát dòng tiền, dự phòng
                 tiền cho tương lai</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-3.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-3.svg') }}" alt="icon"
                 class="icon img-fluid">
               <span class="text"><b>Lẫn lộn tiền bạc</b> gia đình, cá nhân và đầu tư, kinh
                 doanh</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-4.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-4.svg') }}" alt="icon"
                 class="icon img-fluid">
               <span class="text"><b>Không có công cụ</b> để xử lý dòng tiền cá nhân, tự doanh và
                 doanh nghiệp</span>
             </div>
           </div>
         </div>
-        <img src="{{ asset('img/web/cash-dissection-img-1.png') }}" alt=""
+        <img src="{{ asset('img/web/cash-dissection-img-1.png') }}" alt="background image"
           class="why-product__img img-fluid">
       </div>
     </div>
@@ -102,20 +102,20 @@
           <div class="help-product__list">
             <div class="help-product__item">
               <div class="icon">
-                <img src="{{ asset('img/web/help-icon-1.svg') }}" alt="" class="img-fluid">
+                <img src="{{ asset('img/web/help-icon-1.svg') }}" alt="help-icon" class="img-fluid">
               </div>
               <p><b>Hỗ trợ khách hàng</b> xử lý các tình huống thực tế</p>
             </div>
             <div class="help-product__item">
               <div class="icon">
-                <img src="{{ asset('img/web/help-icon-2.svg') }}" alt="" class="img-fluid">
+                <img src="{{ asset('img/web/help-icon-2.svg') }}" alt="help-icon" class="img-fluid">
               </div>
               <p><b>Chuyên gia BossStack</b> đồng hành cùng khách hàng trong suốt quá trình thực hiện
                 giải pháp</p>
             </div>
             <div class="help-product__item">
               <div class="icon">
-                <img src="{{ asset('img/web/help-icon-3.svg') }}" alt="" class="img-fluid">
+                <img src="{{ asset('img/web/help-icon-3.svg') }}" alt="help-icon" class="img-fluid">
               </div>
               <p>Sử dụng <b>phần mềm BossStack</b> để phân tích, đánh giá và hỗ trợ ra quyết định về
                 tiền</p>
@@ -171,18 +171,18 @@
                 placeholder="Công ty">
             </div>
             <div class="form-group">
-                <select class="form-select" name="companytype">
-                    <option value="">Quy mô công ty</option>
-                    @foreach($companytypes as $key=>$value)
-                        @if($key != '')
-                            @if($key == old('companytype'))
-                                <option value="{{ $key }}" selected>{{ $value }}</option>
-                            @else
-                                <option value="{{ $key }}">{{ $value }}</option>                                                                    
-                            @endif
-                        @endif
-                    @endforeach
-                </select>
+              <select class="form-select" name="companytype">
+                <option value="">Quy mô công ty</option>
+                @foreach ($companytypes as $key => $value)
+                  @if ($key != '')
+                    @if ($key == old('companytype'))
+                      <option value="{{ $key }}" selected>{{ $value }}</option>
+                    @else
+                      <option value="{{ $key }}">{{ $value }}</option>
+                    @endif
+                  @endif
+                @endforeach
+              </select>
             </div>
             <div class="form-group">
               <input type="text" class="form-control" id="title" name="title"

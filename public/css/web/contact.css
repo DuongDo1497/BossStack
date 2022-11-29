@@ -23,19 +23,28 @@
   margin-bottom: 63px;
 }
 
-.advisory-content .company-info__item{
+.company-info__item{
   display: flex;
   align-items: flex-start;
   column-gap: 16px;
   margin-bottom: 24px;
 }
 
-.advisory-content .company-info__item:last-child{
+.company-info__item:last-child{
   margin-bottom: 0;
 }
 
-.advisory-content .company-info__item .icon{
+.company-info__item .icon{
   margin-top: 4px;
+}
+
+.company-info__item .text{
+  color: var(--gray-cl-7);
+  margin-bottom: 0;
+}
+
+.company-info__item .text span{
+  color: var(--gray-cl-5);
 }
 
 .advisory-content .company-info__item ul li{
@@ -46,13 +55,14 @@
   margin-bottom: 0;
 }
 
-.advisory-content .company-info__item .text{
-  color: var(--gray-cl-7);
-  margin-bottom: 0;
+.company-maps{
+  margin-top: 16px;
 }
 
-.advisory-content .company-info__item .text span{
-  color: var(--gray-cl-5);
+.company-maps iframe{
+  width: 100%;
+  height: 400px;
+  border-radius: 16px;
 }
 
 .advisory-form{

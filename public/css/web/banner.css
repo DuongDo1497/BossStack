@@ -54,7 +54,7 @@
 }
 
 .banner-video video{
-  width: 120%;
+  max-width: 120%;
 }
 
 .banner-video .banner-video__bg{

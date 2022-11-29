@@ -88,6 +88,7 @@
             <input type="text" class="form-control" name="currentage" id="currentage"
               value="Bossstack">
           </div>
+
           <div class="form-group">
             <label for="currentage">ID truy cập:</label>
             <div class="form-div">
@@ -96,6 +97,7 @@
               <small>ID truy cập là tài khoản dùng để đăng nhập vào các dịch vụ trên hệ thống</small>
             </div>
           </div>
+
           <div class="form-group">
             <label for="currentage">Email:</label>
             <div class="form-div">
@@ -105,6 +107,7 @@
                 nhận tất cả các email thông báo, thông tin từ hệ thống</small>
             </div>
           </div>
+
           <div class="form-group">
             <label for="currentage">Quản lý thông tin cá nhân:</label>
             <p class="form-text">Thông tin chi tiết khách hàng <a href="#">[Sửa]</a></p>
@@ -115,8 +118,31 @@
       <div class="box box-primary">
         <div class="row">
           <div class="col-md-7">
-            <h6 class="box-title">Thông tin khách hàng</h6>
-            <h6 class="box-title">Nguồn thông tin biết đến chương trình</h6>
+            <div class="customer-info">
+              <h6 class="box-title">Thông tin khách hàng</h6>
+              <div class="box-form">
+                <div class="form-group">
+                  <label for="currentage">Tên đầy đủ:</label>
+                  <input type="text" class="form-control" name="currentage" id="currentage"
+                    value="Bossstack">
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="currentage">Tên đầy đủ:</label>
+                    <input type="text" class="form-control" name="currentage" id="currentage"
+                      value="Bossstack">
+                  </div>
+                  <div class="form-group">
+                    <label for="currentage">Tên đầy đủ:</label>
+                    <input type="text" class="form-control" name="currentage" id="currentage"
+                      value="Bossstack">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="customer-social">
+              <h6 class="box-title">Nguồn thông tin biết đến chương trình</h6>
+            </div>
           </div>
           <div class="col-md-5"></div>
         </div>

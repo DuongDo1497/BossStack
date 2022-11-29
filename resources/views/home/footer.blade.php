@@ -3,7 +3,7 @@
     <div class="wrap">
       <div class="footer-item">
         <a href="#" class="logo">
-          <img class="img-fluid" src="{{ asset('img/web/logo.svg') }}" alt="">
+          <img class="img-fluid" src="{{ asset('img/web/logo.svg') }}" alt="BossStack">
         </a>
         <div class="footer-item__content">
           <p><span>Địa chỉ:</span> LM81- 42.OT04 (Officetel), Landmark 81 Vinhomes Central Park,
@@ -61,18 +61,18 @@
           </ul>
           <div class="footer-item__social">
             <a href="https://www.facebook.com/bossstack.vn">
-              <img class="img-fluid" src="{{ asset('img/web/fb-icon.svg') }}" alt="">
+              <img class="img-fluid" src="{{ asset('img/web/fb-icon.svg') }}" alt="icon">
             </a>
             <a href="https://www.linkedin.com/company/82513104/admin/">
-              <img class="img-fluid" src="{{ asset('img/web/linkedin-icon.svg') }}" alt="">
+              <img class="img-fluid" src="{{ asset('img/web/linkedin-icon.svg') }}" alt="icon">
             </a>
           </div>
           <div class="footer-item__img">
             <a href="#">
-              <img class="img-fluid" src="{{ asset('img/web/dmca-img.png') }}" alt="">
+              <img class="img-fluid" src="{{ asset('img/web/bct-img.png') }}" alt="Bộ Công thương">
             </a>
             <a href="#">
-              <img class="img-fluid" src="{{ asset('img/web/bct-img.png') }}" alt="">
+              <img class="img-fluid" src="{{ asset('img/web/dmca-img.png') }}" alt="dmca">
             </a>
           </div>
         </div>

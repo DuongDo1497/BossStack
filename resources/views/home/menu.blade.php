@@ -2,8 +2,8 @@
   <li class="menu-main__item">
     <a class="menu-main__link" href="#">
       <span class="text">Sản phẩm</span>
-      <img class="icon img-fluid" src="{{ asset('img/web/icon-down.svg') }}" alt="">
-      <img class="icon-w img-fluid" src="{{ asset('img/web/icon-down-w.svg') }}" alt="">
+      <img class="icon img-fluid" src="{{ asset('img/web/icon-down.svg') }}" alt="icon">
+      <img class="icon-w img-fluid" src="{{ asset('img/web/icon-down-w.svg') }}" alt="icon">
     </a>
     <ul class="menu-main__child animate__animated" style="visibility: hidden">
       <li>
@@ -20,8 +20,8 @@
   <li class="menu-main__item">
     <a class="menu-main__link" href="#">
       <span class="text">Dịch vụ</span>
-      <img class="icon img-fluid" src="{{ asset('img/web/icon-down.svg') }}" alt="">
-      <img class="icon-w img-fluid" src="{{ asset('img/web/icon-down-w.svg') }}" alt="">
+      <img class="icon img-fluid" src="{{ asset('img/web/icon-down.svg') }}" alt="icon">
+      <img class="icon-w img-fluid" src="{{ asset('img/web/icon-down-w.svg') }}" alt="icon">
     </a>
     <ul class="menu-main__child animate__animated" style="visibility: hidden">
       <li>

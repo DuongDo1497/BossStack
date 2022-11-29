@@ -10,7 +10,7 @@
       <div class="wrap">
         <div class="banner-default__body">
           <div class="banner-default__link">
-            <img class="icon img-fluid" src="{{ asset('img/web/link-icon.svg') }}" alt="" />
+            <img class="icon img-fluid" src="{{ asset('img/web/link-icon.svg') }}" alt="icon" />
             <span class="text">Sản phẩm</span>
           </div>
           <h1 class="banner-default__title text-start">KIỂM SOÁT THẤT THOÁT DOANH NGHIỆP</h1>
@@ -30,21 +30,21 @@
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-cyan-cl">
-              <img src="{{ asset('img/web/cash-dissection-7.svg') }}" alt=""
+              <img src="{{ asset('img/web/cash-dissection-7.svg') }}" alt="cash-dissection"
                 class="icon img-fluid">
               <p>Tiết kiệm thời gian và chi phí quản lý doanh nghiệp</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-purple-cl">
-              <img src="{{ asset('img/web/cash-dissection-8.svg') }}" alt=""
+              <img src="{{ asset('img/web/cash-dissection-8.svg') }}" alt="cash-dissection"
                 class="icon img-fluid">
               <p>Kiểm soát thất thoát từ quy trình quản lý vận hành</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
-              <img src="{{ asset('img/web/cash-dissection-9.svg') }}" alt=""
+              <img src="{{ asset('img/web/cash-dissection-9.svg') }}" alt="cash-dissection"
                 class="icon img-fluid">
               <p>Chủ động nguồn tài chính cho các cơ hội kinh doanh và phát triển doanh nghiệp</p>
             </div>
@@ -61,7 +61,7 @@
           <h4 class="section-title">Tại sao chủ doanh nghiệp cần kiểm soát thất thoát?</h4>
           <div class="why-product__list">
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-6.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-6.svg') }}" alt="icon"
                 class="icon img-fluid">
               <span class="text">Quy trình nhập, xuất và sản xuất sản phẩm chưa đồng bộ gây khó khăn
                 trong khâu quản lý và kiểm soát chất lượng</span>
@@ -70,26 +70,26 @@
               <span class="text"><b>50%</b> doanh nghiệp đang gặp phải những vấn đề dưới đây:</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-7.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-7.svg') }}" alt="icon"
                 class="icon img-fluid">
               <span class="text">Quy trình quản lý vận hành doanh nghiệp chưa rõ ràng, chưa có các
                 công cụ hỗ trợ đi kèm dẫn đến chi phí tăng cao, dư thừa nhân sự và lãng phí thời
                 gian</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-8.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-8.svg') }}" alt="icon"
                 class="icon img-fluid">
               <span class="text">Chi phí tài chính chưa được sắp xếp theo cùng sự phát triển của
                 doanh nghiệp</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-9.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-9.svg') }}" alt="icon"
                 class="icon img-fluid">
               <span class="text">Quy trình bán hàng chưa tối ưu gây thất thoát tài sản doanh nghiệp,
                 tốn thời gian và chi phí kinh doanh</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-10.svg') }}" alt=""
+              <img src="{{ asset('img/web/why-product-10.svg') }}" alt="icon"
                 class="icon img-fluid">
               <span class="text">Bỏ lỡ các chi phí cơ hội kinh doanh, ảnh hưởng đến việc phát triển
                 doanh nghiệp</span>
@@ -108,20 +108,20 @@
           <div class="help-product__list">
             <div class="help-product__item">
               <div class="icon">
-                <img src="{{ asset('img/web/help-icon-8.png') }}" alt="" class="img-fluid">
+                <img src="{{ asset('img/web/help-icon-8.png') }}" alt="help-icon" class="img-fluid">
               </div>
               <p>Khảo sát thực tế, thu thập thông tin dữ liệu thực tế tại doanh nghiệp</p>
             </div>
             <div class="help-product__item">
               <div class="icon">
-                <img src="{{ asset('img/web/help-icon-9.png') }}" alt="" class="img-fluid">
+                <img src="{{ asset('img/web/help-icon-9.png') }}" alt="help-icon" class="img-fluid">
               </div>
               <p>Phân tích và đánh giá cụ thể từng con số bằng phần mềm và đội ngũ chuyên gia
                 BossStack</p>
             </div>
             <div class="help-product__item">
               <div class="icon">
-                <img src="{{ asset('img/web/help-icon-10.png') }}" alt="" class="img-fluid">
+                <img src="{{ asset('img/web/help-icon-10.png') }}" alt="help-icon" class="img-fluid">
               </div>
               <p>BossStack đồng hành thực thi kế hoạch kiểm soát thất thoát cùng doanh nghiệp</p>
             </div>
