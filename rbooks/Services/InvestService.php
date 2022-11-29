@@ -44,6 +44,7 @@ class InvestService extends BaseService
         $maxValue = intval($maxValue) + 1;
         $newsorder = quote_smart($maxValue);
         $author = quote_smart($request->author);
+        $hidden = quote_smart($request->hidden);
 
         $created_user_id = quote_smart(Auth()->user()->id);
         $updated_user_id = quote_smart(Auth()->user()->id);
@@ -57,6 +58,7 @@ class InvestService extends BaseService
             'content' => $content,
             'newsorder' => $newsorder,
             'author' => $author,
+            'hidden' => $hidden,
             'created_user_id' => $created_user_id,
             'updated_user_id' => $updated_user_id,
         ];
@@ -86,6 +88,7 @@ class InvestService extends BaseService
         $content = quote_smart($request->content);
         $newsorder = quote_smart($request->newsorder);
         $author = quote_smart($request->author);
+        $hidden = quote_smart($request->hidden);
 
         $created_user_id = quote_smart(Auth()->user()->id);
         $updated_user_id = quote_smart(Auth()->user()->id);
@@ -99,13 +102,14 @@ class InvestService extends BaseService
             'content' => $content,
             'newsorder' => $newsorder,
             'author' => $author,
+            'hidden' => $hidden,
             'updated_user_id' => $updated_user_id,
         ];
 
         return $this->repository->update($data, $id);
     }
 
-    public function getListNews($searchField, $searchValue)
+    public function getListNewsManage($searchField, $searchValue)
     {
         $listData = app(Invest::class)
                             ->where('newstype', 'like', "%$searchField%")
@@ -116,4 +120,15 @@ class InvestService extends BaseService
         return $listData;    
     }            
 
+    public function getListNews($searchField, $searchValue)
+    {
+        $listData = app(Invest::class)
+                            ->where('newstype', 'like', "%$searchField%")
+                            ->where('shortcontent', 'LIKE', "%$searchValue%")
+                            ->where('hidden', '=', '0')
+                            ->where('deleted_at', '=', null)
+                            ->orderBy('created_at', 'desc');
+                                        
+        return $listData;    
+    }   
 }

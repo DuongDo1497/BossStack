@@ -145,8 +145,9 @@
                     <div class="payment-option__body collapse" id="payment-online"
                       data-bs-parent="#accordion-parent">
                       <div class="content">
+
                         <div id="accordion" class="card-type">
-                          <div class="card-type__item">
+<!--                          <div class="card-type__item">
                             <div class="card-type__header" data-bs-toggle="collapse"
                               href="#card-type__global">
                               <p class="text">Thẻ quốc tế</p>
@@ -631,6 +632,7 @@
                               </div>
                             </div>
                           </div>
+-->
                         </div>
                       </div>
                     </div>

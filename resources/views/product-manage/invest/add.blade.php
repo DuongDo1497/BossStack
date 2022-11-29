@@ -126,6 +126,19 @@
                             </div>
                         </div>
                     </div>                      
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2 col-xs-4 item">
+                                <label>Hiển thị/Ẩn:&nbsp;&nbsp;</label>
+                            </div>
+                            <div class="col-md-6 col-xs-8 item">
+                                <input type="checkbox" tabindex="4" name="hidden" value="1" id="chk-hidden" {{ old('hidden')==1 ? 'checked="checked"' : '' }}>
+                                @if($errors->has('hidden'))<span class="text-danger">{{ $errors->first('hidden') }}</span>@endif                            
+                            </div>
+                        </div>
+                    </div>                      
+
                     <br>
                     <button class="btn btn-success btn-bg-blue" style="width: 15%;" onclick="processReports('frm', 'store')">Lưu</button>
                     <br><br>

@@ -31,6 +31,7 @@
                             <th width="18%" style="text-align: center;">Loại</th>
                             <th width="15%" style="text-align: center;">Ngày đăng</th>
                             <th width="10%" style="text-align: center;">Tác giả</th>
+                            <th width="10%" style="text-align: center;">Hiển thị/Ẩn</th>
                             <th width="10%" style="text-align: center;">Thao tác</th>
                         </tr>
                     </thead>
@@ -51,6 +52,11 @@
                                 <td style="text-align: left;" class="text-nowrap">{{ $newstypes[$model->newstype] }}</td>
                                 <td style="text-align: center;" class="text-nowrap">{{ $model->newsdate == null ? "" : ConvertSQLDate($model->newsdate) }}</td>                                
                                 <td style="text-align: left;" class="text-nowrap">{{ $model->author }}</td>
+                                <td style="text-align: center;" class="text-nowrap">
+                                    @if($model->hidden == 1)
+                                        <img src="{{ asset('image/check.gif') }}">        
+                                    @endif   
+                                </td>
                                 <td style="text-align: center;" class="text-nowrap">
                                     <a href="{{ route('invests-edit', ['id'=> $model->id]) }}"><i class="fas fa-pencil-alt" style="margin-right: 10px;"></i></a>
                                     <a href="javascript:void(0)" data-id="{{ $model->id }}" class="btn-delete"><i class="fa fa-trash" aria-hidden="true"></i></a>

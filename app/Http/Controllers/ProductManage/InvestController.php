@@ -80,7 +80,7 @@ class InvestController extends Controller
         $this->view->searchField = $searchField;
         $this->view->searchValue = $searchValue;
 
-        $collections = $this->main_service->getListNews($searchField, $searchValue)->paginate($this->view->filter['limit']);        
+        $collections = $this->main_service->getListNewsManage($searchField, $searchValue)->paginate($this->view->filter['limit']);        
         $this->view->collections = $collections;
     }
 
