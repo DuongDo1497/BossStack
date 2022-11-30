@@ -5,28 +5,28 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ config('app.name') }}</title>
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-    name="viewport">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <meta name="route" content="{{ request()->route()->getName() }}">
+
+  <meta name="description"
+    content="Cung cấp sản phẩm và dịch vụ đem lại LỢI NHUẬN TỨC THÌ và xây dựng kế hoạch GIA TĂNG LỢI NHUẬN lâu dài!">
+  <meta property="og:title" content="BossStack - The easiest way to control business accurately and efficiently">
+  <meta property="og:site_name" content="BossStack">
 
   <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
-  <link rel="stylesheet"
-    href="{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ asset('bower_components/Ionicons/css/ionicons.min.css') }}">
   <link rel="stylesheet" href="{{ asset('dist/css/skins/_all-skins.min.css') }}">
   <link rel="stylesheet" href="{{ asset('bower_components/morris.js/morris.css') }}">
   <link rel="stylesheet" href="{{ asset('bower_components/jvectormap/jquery-jvectormap.css') }}">
   <link rel="stylesheet"
     href="{{ asset('bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}">
-  <link rel="stylesheet"
-    href="{{ asset('bower_components/bootstrap-daterangepicker/daterangepicker.css') }}">
-  <link rel="stylesheet"
-    href="{{ asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('bower_components/bootstrap-daterangepicker/daterangepicker.css') }}">
+  <link rel="stylesheet" href="{{ asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
   <link rel="stylesheet" href="{{ asset('bower_components/select2/dist/css/select2.min.css') }}">
   <link rel="stylesheet" href="{{ asset('plugins/iCheck/all.css') }}">
   <link rel="stylesheet" href="{{ asset('css/common.css') }}">
@@ -102,8 +102,7 @@
       <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
         <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a>
         </li>
-        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i
-              class="fa fa-gears"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
       </ul>
       <!-- Tab panes -->
       <div class="tab-content">
@@ -254,8 +253,7 @@
             <div class="form-group">
               <label class="control-sidebar-subheading">
                 Delete chat history
-                <a href="javascript:void(0)" class="text-red pull-right"><i
-                    class="fas fa-trash"></i></a>
+                <a href="javascript:void(0)" class="text-red pull-right"><i class="fas fa-trash"></i></a>
               </label>
             </div>
             <!-- /.form-group -->
@@ -306,8 +304,7 @@
   <script src="{{ asset('js/commons.js') }}"></script>
 
   {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> --}}
-  <script type="text/javascript"
-    src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
   <script src="{{ asset('js/libs/bootstrap3-typeahead.min.js') }}"></script>
   <script src="{{ asset('js/libs/bootstrap-multiselect.js') }}"></script>
@@ -323,8 +320,7 @@
 
   @yield('scripts')
 
-  <script
-    src="{{ asset('bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.vi.min.js') }}">
+  <script src="{{ asset('bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.vi.min.js') }}">
   </script>
   <script
     src="{{ asset('bower_components/bootstrap-datetimepicker-master/build/js/bootstrap-datetimepicker.min.js') }}">

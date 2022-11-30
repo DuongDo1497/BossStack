@@ -1,5 +1,9 @@
 /* Button Style */
 .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
   font-size: 16px;
   padding: 6px 16px;
   border-radius: 4px;
@@ -9,6 +13,34 @@
 .btn.btn-primary{
   border: 1px solid #1890FF;
   background-color: #1890FF;
+}
+
+.box-search{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.box-search .control{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 8px;
+}
+
+.box-search .control .btn-transfer{
+  border: 1px solid var(--bg-cyan-cl-6);
+  background-color: var(--bg-cyan-cl-6);
+}
+
+.box-search .control .btn-income{
+  border: 1px solid #0A9A4A;
+  background-color: #0A9A4A;
+}
+
+.box-search .control .btn-cost{
+  border: 1px solid #DE6573;
+  background-color: #DE6573;
 }
 
 /* Default Style */
@@ -225,6 +257,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 24px;
 }
 
 .box-control .control{

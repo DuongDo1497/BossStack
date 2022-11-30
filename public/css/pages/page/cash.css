@@ -1,11 +1,5 @@
 /* Thu chi vi tong - Index */
 
-.cash-index .box-search{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-
 .cash-index .filter-timeline{
   width: 51%;
   display: flex;
@@ -20,29 +14,6 @@
 
 .filter-timeline .form-group:last-child{
   --w-label: 30px;
-}
-
-.cash-index .control{
-  width: 32%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  column-gap: 8px;
-}
-
-.cash-index .control .btn-transfer{
-  border: 1px solid var(--bg-cyan-cl-6);
-  background-color: var(--bg-cyan-cl-6);
-}
-
-.cash-index .control .btn-income{
-  border: 1px solid #0A9A4A;
-  background-color: #0A9A4A;
-}
-
-.cash-index .control .btn-cost{
-  border: 1px solid #DE6573;
-  background-color: #DE6573;
 }
 
 .spending-history{

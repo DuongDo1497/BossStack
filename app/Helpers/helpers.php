@@ -167,7 +167,7 @@ function formatNumberColor($value, $type=0, $num_decimal_places=2, $show_zero=1,
         $indent = '+';
     }else{
         $bgcolor = 'text-error text-nowrap';
-        $indent = '-';
+        // $indent = '-';
     }                                                                     
 
     if ($value == 0 and $show_zero == 0){
