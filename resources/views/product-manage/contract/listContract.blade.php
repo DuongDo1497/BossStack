@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
 @section('head')
+  <link rel="stylesheet" href="{{ asset('css/pages/page/contract.css') }}">
+
   {{-- <style type="text/css">
     @media only screen and (max-width: 768px) {
       .box .box-body {
@@ -60,7 +62,9 @@
                   <input type="checkbox" name="" id="">
                 </td>
                 <td class="text-center">{{ $i++ }}</td>
-                <td>{{ $contract->contractno }}</td>
+                <td><a
+                    href="{{ route('contracts-detailContract', ['id' => $contract->id]) }}">{{ $contract->contractno }}</a>
+                </td>
                 <td>
                   <ul>
                     <li><b>Gói:</b> {{ $contract->service_product_name }}
