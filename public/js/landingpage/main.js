@@ -74,7 +74,7 @@ let getDays = document.querySelectorAll('.days');
 let getHours = document.querySelectorAll('.hours');
 let getMinutes = document.querySelectorAll('.minutes');
 let getSeconds = document.querySelectorAll('.seconds');
-let countDownDate = new Date("2022, 11, 30").getTime();
+let countDownDate = new Date("2022, 12, 30").getTime();
 
 // Update the count down every 1 second
 let countDown = setInterval(function() {

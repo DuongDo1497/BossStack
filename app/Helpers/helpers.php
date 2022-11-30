@@ -201,21 +201,21 @@ function formatNumberColor($value, $type=0, $num_decimal_places=2, $show_zero=1,
  */
 function formatNumberColorCustom($value, $type=0, $num_decimal_places=2, $show_zero=1, $custom=0, $dec_point=".", $thousands_sep=","){
     $sb = "";
-    // $indent = ''; $bgcolor = '';
+    $indent = ''; $textcl = '';
 
-    // if($custom == 0){
-    //     $bgcolor = '#1eb40f';
-    //     $indent = '+';
-    // }elseif($custom == 1){
-    //     $bgcolor = '#ff423e';
-    //     $indent = '-';
-    // }elseif($custom == 2){
-    //     $bgcolor = '#1eb40f';
-    //     $indent = '';
-    // }elseif($custom == 3){
-    //     $bgcolor = '#ff423e';
-    //     $indent = '';
-    // }                                                                     
+    if($custom == 0){
+        $textcl = 'text-success';
+        $indent = '+';
+    }elseif($custom == 1){
+        $textcl = 'text-error';
+        $indent = '-';
+    }elseif($custom == 2){
+        $textcl = 'text-success';
+        $indent = '+';
+    }elseif($custom == 3){
+        $textcl = 'text-error';
+        $indent = '-';
+    }                                                                     
 
     if ($value == 0 and $show_zero == 0){
         return "";
@@ -229,11 +229,8 @@ function formatNumberColorCustom($value, $type=0, $num_decimal_places=2, $show_z
         }
     }
     
-    // if ($sb != ""){
-    //     $sb = "<font style='color:$bgcolor'>" . $indent . " " . $sb . "</font>";
-    // }
     if ($sb != ""){
-        $sb = $sb . " " . "đồng";
+        $sb = "<span class='$textcl'>" . $indent . " " . $sb . "</span>";
     }
     return $sb;
 }

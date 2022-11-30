@@ -1,5 +1,5 @@
 <script type="text/javascript">
-        $(function () {
+  $(function () {
             param = {   format: "dd/mm/yyyy",
                         autoclose: true,
                         daysOfWeekHighlighted: "0,6",
@@ -13,7 +13,7 @@
         });
 </script>
 <script>
-      var unitcurrency = 1;
+  var unitcurrency = 1;
       var smallData = [
         ['x', '2014-01-01', '2014-01-02', '2014-01-03', '2014-01-04', '2014-01-05', '2014-01-6', '2014-01-7', '2014-01-8', '2014-01-9', '2014-01-10'],
         ['sample', 6, 14, 12, 25, 37, 40, 5, 28, 9, 30],
@@ -69,33 +69,37 @@
         dataPie[i++] = ['{{ $item['incometypename'] }}', {{ $item['amount'] }}];
       @endforeach
       
-      var width_chart2 = $('#chart2').width();
-
-      c3.generate({
-        bindto: '#chart2',
-        data: {
-          type : 'donut',
-          onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
-          onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
-          onclick: function (d, i) { console.log("onclick", d, i, this); },
-          columns: dataPie
-        },
-        axis: {
-          x: {
-            label: 'Sepal.Width'
+      // var width_chart2 = $('#chart2').width();
+      
+      if(dataPie.length !== 0){
+        c3.generate({
+          bindto: '#chart2',
+          data: {
+            type : 'pie',
+            onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
+            onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
+            onclick: function (d, i) { console.log("onclick", d, i, this); },
+            columns: dataPie
           },
-          y: {
-            label: 'Petal.Width'
-          }
-        },
-        size: {
-            height: 220,
-            width: width_chart2
-        },
-        padding: {
-          right: 50
-        }    
-      });
+          axis: {
+            x: {
+              label: 'Sepal.Width'
+            },
+            y: {
+              label: 'Petal.Width'
+            }
+          },
+          size: {
+              height: 300,
+              width: 482
+          },
+          padding: {
+            right: 50
+          }    
+        });
+      }else{
+        document.querySelector('#chart2').innerHTML = `<span class="text-error">Không có dữ liệu</span>`;
+      }
 
 //     var dataPie1 = [
 //       ["abc", 20],
@@ -108,34 +112,38 @@
         dataPie1[i++] = ['{{ $item['incometypename'] }}', {{ $item['amount'] }}];
       @endforeach
       
-      var width_chart3 = $('#chart3').width();
+      // var width_chart3 = $('#chart3').width();
 
-      c3.generate({
-        bindto: '#chart3',
-        data: {
-          type : 'donut',
-          onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
-          onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
-          onclick: function (d, i) { console.log("onclick", d, i, this); },
-          columns: dataPie1
-        },
-        axis: {
-          x: {
-            label: 'Sepal.Width'
+      if(dataPie1.length !== 0){
+        c3.generate({
+          bindto: '#chart3',
+          data: {
+            type : 'pie',
+            onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
+            onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
+            onclick: function (d, i) { console.log("onclick", d, i, this); },
+            columns: dataPie1
           },
-          y: {
-            label: 'Petal.Width'
-          }
-        },
-        size: {
-            height: 220,
-            width: width_chart3
-        },
-        padding: {
-          right: 50
-        }     
-      
-      });
+          axis: {
+            x: {
+              label: 'Sepal.Width'
+            },
+            y: {
+              label: 'Petal.Width'
+            }
+          },
+          size: {
+              height: 300,
+              width: 482
+          },
+          padding: {
+            right: 50
+          }     
+        
+        });
+      }else{
+        document.querySelector('#chart3').innerHTML = `<span class="text-error">Không có dữ liệu</span>`;
+      }
 
 //      var listmonth = [
 //          ['Thu nhập', -30, 200, 200, 400, -150, 250],
@@ -304,12 +312,12 @@
         dataPie2[i++] = ['{{ $item['incometypename'] }}', {{ $item['amount'] }}];
       @endforeach
 
-      var width_chart5 = $('#chart5').width();
+      // var width_chart5 = $('#chart5').width();
 
       c3.generate({
         bindto: '#chart5',
         data: {
-          type : 'donut',
+          type : 'pie',
           onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
           onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
           onclick: function (d, i) { console.log("onclick", d, i, this); },
@@ -324,8 +332,8 @@
           }
         },
         size: {
-            height: 300,
-            width: width_chart5
+            // height: 300,
+            width: 482
         },
         padding: {
           right: 50
@@ -344,12 +352,12 @@
         dataPie3[i++] = ['{{ $item['incometypename'] }}', {{ $item['amount'] }}];
       @endforeach
       
-      var width_chart6 = $('#chart6').width();
+      // var width_chart6 = $('#chart6').width();
 
       c3.generate({
         bindto: '#chart6',
         data: {
-          type : 'donut',
+          type : 'pie',
           onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
           onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
           onclick: function (d, i) { console.log("onclick", d, i, this); },
@@ -364,8 +372,8 @@
           }
         },
         size: {
-            height: 300,
-            width: width_chart6
+            // height: 300,
+            width: 482
         },
         padding: {
           right: 50

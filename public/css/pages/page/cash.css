@@ -24,6 +24,10 @@
 
 .cash-index .control{
   width: 32%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 8px;
 }
 
 .cash-index .control .btn-transfer{
@@ -56,7 +60,7 @@
 
 .spending-history__list{
   width: calc(56% - 12px);
-
+  height: 324px;
 }
 
 .spending-history__result{
@@ -72,6 +76,11 @@
 .spending-history__result .number{
   font-size: 20px;
   font-family: hm;
+}
+
+.spending-history__table{
+  height: calc(100% - 71px);
+  overflow-y: scroll;
 }
 
 .spending-history__table .table-list tbody tr td,
@@ -116,4 +125,50 @@
 
 .spending-history__sort .table-list td:first-child{
   color: var(--gray-cl-7);
+}
+
+.cash-index .box-primary:last-child{
+  padding: 0;
+}
+
+.cash-index .nav-tabs{
+  --tab-count: 2;
+}
+
+.tab-pane__body .chart-list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-pane__body .chart-item{
+  width: calc(50% - 12px);
+  border-radius: 16px;
+  padding: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-pane__body .chart-item:first-child{
+  background-color: var(--bg-green-cl);
+}
+
+.tab-pane__body .chart-item:last-child{
+  background-color: var(--bg-purple-cl);
+}
+
+.tab-pane__body .chart-item .c3-event-rect{
+  width: 100%;
+}
+
+.tab-pane__body .chart-item .c3-chart{
+  height: 276px;
+}
+
+.tab-pane__body .read-more{
+  width: 120px;
+  margin-top: 24px;
+  margin-left: auto;
+  display: block;
+  color: var(--primary-cl);
 }

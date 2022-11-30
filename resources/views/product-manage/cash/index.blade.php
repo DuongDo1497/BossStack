@@ -155,13 +155,14 @@
                                 <tbody>
                                     @php
                                     $i = 0;
+                                    $textcl = 'text-success';
                                     $indent = '+';
                                     @endphp
                                     @foreach ($incomesmonth as $item)
                                     <tr>
                                         <td>{{ $item['incometypename'] }}</td>
-                                        <td class="text-right">{{ $indent }} {{ formatNumber($item['amount'], 1, 0, 0)}}
-                                        </td>
+                                        <td class="text-right"><span class="{{ $textcl }}">{{ $indent }} {{
+                                                formatNumber($item['amount'], 1, 0, 0)}}</span></td>
                                     </tr>
                                     @php
                                     $i++;
@@ -180,13 +181,14 @@
                                 <tbody>
                                     @php
                                     $i = 0;
+                                    $textcl = 'text-error';
                                     $indent = '-';
                                     @endphp
                                     @foreach ($expensesmonth as $item)
                                     <tr>
                                         <td>{{ $item['incometypename'] }}</td>
-                                        <td class="text-right">{{$indent }} {{ formatNumber($item['amount'], 1, 0, 0)}}
-                                        </td>
+                                        <td class="text-right"><span class="{{ $textcl }}"> {{$indent }} {{
+                                                formatNumber($item['amount'], 1, 0, 0)}}</span></td>
                                     </tr>
                                     @php
                                     $i++;
@@ -197,6 +199,46 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box box-primary">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#rptday">Báo cáo ngày {{ $currentDate }}</a></li>
+                    <li><a data-toggle="tab" href="#rptmonth">Báo cáo tháng {{substr($currentDate, 3) }}</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="rptday" class="tab-pane fade in active">
+                        <div class="tab-pane__body">
+                            <div class="chart-list">
+                                <div class="chart-item">
+                                    <p class="chart-title">Thu nhập</p>
+                                    <div id="chart2"></div>
+                                </div>
+                                <div class="chart-item">
+                                    <p class="chart-title">Chi phí</p>
+                                    <div id="chart3"></div>
+                                </div>
+                            </div>
+                            <a class="read-more" href="{{ route('cashincomes-index') }}">Xem chi tiết &gt;&gt;</a>
+                        </div>
+                    </div>
+                    <div id="rptmonth" class="tab-pane fade">
+                        <div class="tab-pane__body">
+                            <div class="chart-list">
+                                <div class="chart-item">
+                                    <p class="chart-title">Thu nhập</p>
+                                    <div id="chart5"></div>
+                                </div>
+                                <div class="chart-item">
+                                    <p class="chart-title">Chi phí</p>
+                                    <div id="chart6"></div>
+                                </div>
+                            </div>
+                            <a class="read-more" href="{{ route('cashincomes-index') }}">Xem chi tiết &gt;&gt;</a>
                         </div>
                     </div>
                 </div>
