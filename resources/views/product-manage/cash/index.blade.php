@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
 @section('head')
+<link rel="stylesheet" href="{{ asset('css/pages/page/cash.css') }}">
+
 {{--
 <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
 
@@ -61,17 +63,146 @@
 @include('layouts.partials.messages.success')
 @endif
 
-<div class="section form-advisory">
+<div class="section cash-index">
     <div class="breadcrumb">
-        <span>Tư vấn 24/7</span> / <span class="current">Hỗ trợ</span>
+        <span>Quản lý tài khoản</span> / <span class="current">Thu chi ví tổng</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
-    <div class="box-content">
-        <div class="box box-primary">
+    <form role="form" action="{{ route('cash-index') }}" method="get" id="frm" name="frm">
+        {{ csrf_field() }}
+        <input type='hidden' name='typereport' value=''>
+        <input type="hidden" name="currentDate" value="{{ $currentDate }}">
+        <div class="box-content">
+            <div class="box box-primary">
+                <div class="box-search">
+                    <div class="filter-timeline">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fromDate">Thời gian từ:</label>
+                                <input type="text" class="form-control" name="fromDate" id="fromDate"
+                                    value="{{ old('fromDate') == "" ? $fromDate : old('fromDate') }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="toDate">đến:</label>
+                                <input type="text" class="form-control" name="toDate" id="toDate"
+                                    value="{{ old('toDate') == "" ? $toDate : old('toDate') }}">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-search">
+                            Tìm kiếm
+                            <img class="icon" src="{{ asset('img/icon-search.svg') }}" alt="">
+                        </button>
+                    </div>
+                    <div class="control">
+                        <a href="{{ route('cashtranfers-add') }}" class="btn btn-primary btn-transfer">
+                            <img class="icon" src="{{ asset('img/icon-transfer.svg') }}" alt="">
+                            Phân bổ
+                        </a>
+                        <a href="{{ route('cashincomes-process', ['incomestatustype' => 0]) }}"
+                            class="btn btn-primary btn-income">
+                            <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
+                            Thu nhập
+                        </a>
+                        <a href="{{ route('cashincomes-process', ['incomestatustype' => 1]) }}"
+                            class="btn btn-primary btn-cost">
+                            <img class="icon" src="{{ asset('img/icon-loss.svg') }}" alt="">
+                            Chi phí
+                        </a>
+                    </div>
+                </div>
+                <div class="spending-history">
+                    <div class="spending-history__list">
+                        <div class="spending-history__result">
+                            <span class="text">Ví tổng</span>
+                            <span class="number">{!!formatNumberColor($accountno_primary->amount, 1, 0, 1)!!}</span>
+                        </div>
+                        <div class="spending-history__table">
+                            <table class="table table-bordered table-list">
+                                <tbody>
+                                    @php
+                                    $total_income = 0; $total_expense = 0; $total_bank = 0;
+                                    $indent = '';
+                                    $bgcolor = '';
+                                    @endphp
+                                    @foreach ($listincomes as $cashincome)
+                                    @php
 
+                                    $inden = $cashincome->incomestatustype;//0: thu, 1: chi phí
+                                    if($cashincome->incomestatustype == 0){
+                                    $total_income += $cashincome->amount;
+                                    }elseif($cashincome->incomestatustype == 1){
+                                    $total_expense += $cashincome->amount;
+                                    }
+                                    @endphp
+                                    <tr>
+                                        <td>
+                                            <p>{{ConvertSQLDate($cashincome->transactiondate) }}</p>
+                                            <p>{{$cashincome->content }}</p>
+                                        </td>
+                                        <td class="text-right">{!!formatNumberColorCustom($cashincome->amount, 1, 0, 1,
+                                            $inden)!!}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="spending-history__sort">
+                        <div class="income-highest">
+                            <p>Thu nhập cao nhất</p>
+                            <table class="table table-bordered table-list">
+                                <tbody>
+                                    @php
+                                    $i = 0;
+                                    $indent = '+';
+                                    @endphp
+                                    @foreach ($incomesmonth as $item)
+                                    <tr>
+                                        <td>{{ $item['incometypename'] }}</td>
+                                        <td class="text-right">{{ $indent }} {{ formatNumber($item['amount'], 1, 0, 0)}}
+                                        </td>
+                                    </tr>
+                                    @php
+                                    $i++;
+                                    if ($i == 2){
+                                    break;
+                                    }
+                                    @endphp
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="line"></div>
+                        <div class="cost-highest">
+                            <p>Chi phí cao nhất</p>
+                            <table class="table table-bordered table-list">
+                                <tbody>
+                                    @php
+                                    $i = 0;
+                                    $indent = '-';
+                                    @endphp
+                                    @foreach ($expensesmonth as $item)
+                                    <tr>
+                                        <td>{{ $item['incometypename'] }}</td>
+                                        <td class="text-right">{{$indent }} {{ formatNumber($item['amount'], 1, 0, 0)}}
+                                        </td>
+                                    </tr>
+                                    @php
+                                    $i++;
+                                    if ($i == 2){
+                                    break;
+                                    }
+                                    @endphp
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </form>
 </div>
 
 {{-- <form role="form" action="{{ route('cash-index') }}" method="get" id="frm" name="frm">

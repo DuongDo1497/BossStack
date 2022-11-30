@@ -12,16 +12,12 @@
   <meta property="og:title" content="BossStack">
   <meta property="og:site_name" content="BossStack">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
@@ -44,24 +40,24 @@
             src="{{ asset('img/web/logo.svg') }}" alt="BossStack"></a>
         <ul class="course-info">
           <li>
-            <img class="course-info__icon img-fluid"
-              src="{{ asset('img/landing-page/icon-phone.svg') }}" alt="icon-phone" />
+            <img class="course-info__icon img-fluid" src="{{ asset('img/landing-page/icon-phone.svg') }}"
+              alt="icon-phone" />
             <div class="course-info__content">
               <span class="title">Hotline</span>
               <span class="text">+84 918 90 55 00</span>
             </div>
           </li>
           <li>
-            <img class="course-info__icon img-fluid"
-              src="{{ asset('img/landing-page/icon-mail.svg') }}" alt="icon-mail" />
+            <img class="course-info__icon img-fluid" src="{{ asset('img/landing-page/icon-mail.svg') }}"
+              alt="icon-mail" />
             <div class="course-info__content">
               <span class="title">Email</span>
               <span class="text">info@bossstack.vn</span>
             </div>
           </li>
           <li>
-            <img class="course-info__icon img-fluid"
-              src="{{ asset('img/landing-page/icon-calendar.svg') }}" alt="icon-calendar" />
+            <img class="course-info__icon img-fluid" src="{{ asset('img/landing-page/icon-calendar.svg') }}"
+              alt="icon-calendar" />
             <div class="course-info__content">
               <span class="title">Lịch khai giảng</span>
               <span class="text">30/11/2022</span>
@@ -78,8 +74,8 @@
   <div class="banner">
     <div class="container">
       <div class="wrap">
-        <div class="banner-content" data-aos="fade-right" data-aos-delay="500"
-          data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div class="banner-content" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000"
+          data-aos-easing="ease-in-out">
           <h1>BÓC TÁCH <span>DÒNG TIỀN</span></h1>
           <ul>
             <li><span>XỬ LÝ</span> và <span>BÓC TÁCH</span> các mảnh ghép trong dòng tiền tổng quan
@@ -90,12 +86,12 @@
           <a href="#register-now" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</a>
         </div>
         <img class="banner-img img-fluid" src="{{ asset('img/landing-page/banner-img-2.png') }}"
-          alt="BÓC TÁCH DÒNG TIỀN" data-aos="fade-left" data-aos-delay="500"
-          data-aos-duration="1000" data-aos-easing="ease-in-out">
+          alt="BÓC TÁCH DÒNG TIỀN" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
+          data-aos-easing="ease-in-out">
       </div>
     </div>
-    <img class="banner-bg-footer img-fluid"
-      src="{{ asset('img/landing-page/banner-bg-footer.png') }}" alt="banner-bg-footer">
+    <img class="banner-bg-footer img-fluid" src="{{ asset('img/landing-page/banner-bg-footer.png') }}"
+      alt="banner-bg-footer">
   </div>
 
   <div class="main">
@@ -105,25 +101,23 @@
           <h4>Bạn là?</h4>
           <div class="who-list">
             <div class="card">
-              <img class="card-img-top img-fluid"
-                src="{{ asset('img/landing-page/who-icon-1.svg') }}" alt="Cá nhân có nhu cầu">
+              <img class="card-img-top img-fluid" src="{{ asset('img/landing-page/who-icon-1.svg') }}"
+                alt="Cá nhân có nhu cầu">
               <p class="card-title">Cá nhân có nhu cầu</p>
             </div>
             <div class="card">
-              <img class="card-img-top img-fluid"
-                src="{{ asset('img/landing-page/who-icon-2.svg') }}"
+              <img class="card-img-top img-fluid" src="{{ asset('img/landing-page/who-icon-2.svg') }}"
                 alt="Nhân viên, cấp quản lý văn phòng">
               <p class="card-title">Nhân viên, cấp quản lý văn phòng</p>
             </div>
             <div class="card">
-              <img class="card-img-top img-fluid"
-                src="{{ asset('img/landing-page/who-icon-4.svg') }}"
+              <img class="card-img-top img-fluid" src="{{ asset('img/landing-page/who-icon-4.svg') }}"
                 alt="Nhà đầu tư, kinh doanh tự do">
               <p class="card-title">Nhà đầu tư, kinh doanh tự do</p>
             </div>
             <div class="card">
-              <img class="card-img-top img-fluid"
-                src="{{ asset('img/landing-page/who-icon-3.svg') }}" alt="Chủ doanh nghiệp">
+              <img class="card-img-top img-fluid" src="{{ asset('img/landing-page/who-icon-3.svg') }}"
+                alt="Chủ doanh nghiệp">
               <p class="card-title">Chủ doanh nghiệp</p>
             </div>
           </div>
@@ -136,8 +130,8 @@
         <div class="wrap">
           <div class="difficult-title">
             <h5>Đây có phải <span>KHÓ KHĂN</span> bạn đang gặp phải</h5>
-            <img src="https://bossstack.vn/img/landing-page/icon-question.png"
-              alt="icon-question-img" class="img-fluid icon-question-img">
+            <img src="https://bossstack.vn/img/landing-page/icon-question.png" alt="icon-question-img"
+              class="img-fluid icon-question-img">
           </div>
           <div class="difficult-left">
             <div class="difficult-list">
@@ -187,30 +181,25 @@
               <div class="advantages-content__list">
                 <div class="advantages-content__item">
                   <img class="advantages-content__icon img-fluid"
-                    src="{{ asset('img/landing-page/icon-advantages-check.svg') }}"
-                    alt="icon-advantages-check">
-                  <p>Tiết kiệm <span>87%<sup>*</sup></span> thời gian khi quản lý, xử lý và đưa ra
-                    các quyết
-                    định về tiền</p>
+                    src="{{ asset('img/landing-page/icon-advantages-check.svg') }}" alt="icon-advantages-check">
+                  <p><span>TIẾT KIỆM</span> <span>87%<sup>*</sup></span> thời gian khi quản lý, xử
+                    lý và đưa ra</p>
                 </div>
                 <div class="advantages-content__item">
                   <img class="advantages-content__icon img-fluid"
-                    src="{{ asset('img/landing-page/icon-advantages-check.svg') }}"
-                    alt="icon-advantages-check">
-                  <p><span>Tùy chỉnh</span> phù hợp với tình hình tài chính của từng khách hàng</p>
+                    src="{{ asset('img/landing-page/icon-advantages-check.svg') }}" alt="icon-advantages-check">
+                  <p><span>TÙY CHỈNH</span> phù hợp với tình hình tài chính của từng khách hàng</p>
                 </div>
                 <div class="advantages-content__item">
                   <img class="advantages-content__icon img-fluid"
-                    src="{{ asset('img/landing-page/icon-advantages-check.svg') }}"
-                    alt="icon-advantages-check">
-                  <p><span>Phần mềm BossStack</span> có hệ thống chịu tải cao và tích hợp bảo mật
-                    nhiều lớp qua giao thức HTTPS</p>
+                    src="{{ asset('img/landing-page/icon-advantages-check.svg') }}" alt="icon-advantages-check">
+                  <p><b>Phần mềm BossStack</b> có hệ thống chịu tải cao và tích hợp bảo mật
+                    nhiều lớp qua giao thức <span>HTTPS</span></p>
                 </div>
               </div>
               <p class="note"><sup>*</sup> Dựa trên trải nghiệm thực tế khách hàng</p>
             </div>
-            <img class="advantages-content__img img-fluid"
-              src="{{ asset('img/landing-page/advantages-img.png') }}"
+            <img class="advantages-content__img img-fluid" src="{{ asset('img/landing-page/advantages-img.png') }}"
               alt="advantages-content-img">
           </div>
         </div>
@@ -225,12 +214,11 @@
           </h3>
           <div class="timeline">
             <div class="timeline__all">
-              <div class="timeline__item" data-aos="fade-down" data-aos-delay="0"
-                data-aos-duration="1000" data-aos-easing="ease-in-out">
+              <div class="timeline__item" data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
                 <div class="timeline__content">
                   <div class="timeline__header">
-                    <img class="img-fluid timeline-icon"
-                      src="{{ asset('img/landing-page/timeline-icon-1.svg') }}"
+                    <img class="img-fluid timeline-icon" src="{{ asset('img/landing-page/timeline-icon-1.svg') }}"
                       alt="timeline-icon">
                     <h3>STEP <span>1</span></h3>
                   </div>
@@ -252,12 +240,11 @@
                   </div>
                 </div>
               </div>
-              <div class="timeline__item" data-aos="fade-down" data-aos-delay="500"
-                data-aos-duration="1000" data-aos-easing="ease-in-out">
+              <div class="timeline__item" data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
                 <div class="timeline__content">
                   <div class="timeline__header">
-                    <img class="img-fluid timeline-icon"
-                      src="{{ asset('img/landing-page/timeline-icon-2.svg') }}"
+                    <img class="img-fluid timeline-icon" src="{{ asset('img/landing-page/timeline-icon-2.svg') }}"
                       alt="timeline-icon">
                     <h3>STEP <span>2</span></h3>
                   </div>
@@ -288,12 +275,11 @@
                   </div>
                 </div>
               </div>
-              <div class="timeline__item" data-aos="fade-down" data-aos-delay="1000"
-                data-aos-duration="1000" data-aos-easing="ease-in-out">
+              <div class="timeline__item" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
                 <div class="timeline__content">
                   <div class="timeline__header">
-                    <img class="img-fluid timeline-icon"
-                      src="{{ asset('img/landing-page/timeline-icon-3.svg') }}"
+                    <img class="img-fluid timeline-icon" src="{{ asset('img/landing-page/timeline-icon-3.svg') }}"
                       alt="timeline-icon">
                     <h3>STEP <span>3</span></h3>
                   </div>
@@ -334,7 +320,7 @@
       <div class="container">
         <div class="wrap">
           <h3 class="solution-title">
-            Giải pháp thực thi <br /><span>Bóc tách dòng tiền</span>
+            Giải pháp thực thi <br /><span>Dòng tiền chuyên sâu</span>
           </h3>
 
           <div class="solution-list">
@@ -347,8 +333,8 @@
             <div class="solution-item">
               <p class="number">1</p>
               <div class="content">
-                <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-1.svg') }}" alt="solution-icon">
+                <img class="img-fluid icon" src="{{ asset('img/landing-page/solution-icon-1.svg') }}"
+                  alt="solution-icon">
                 <p class="text">Ký hợp đồng</p>
               </div>
             </div>
@@ -356,8 +342,8 @@
             <div class="solution-item">
               <p class="number">2</p>
               <div class="content">
-                <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-2.svg') }}" alt="solution-icon">
+                <img class="img-fluid icon" src="{{ asset('img/landing-page/solution-icon-2.svg') }}"
+                  alt="solution-icon">
                 <p class="text">Thu thập thông tin dữ liệu chủ doanh nghiệp</p>
               </div>
             </div>
@@ -365,8 +351,8 @@
             <div class="solution-item">
               <p class="number">3</p>
               <div class="content">
-                <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-3.svg') }}" alt="solution-icon">
+                <img class="img-fluid icon" src="{{ asset('img/landing-page/solution-icon-3.svg') }}"
+                  alt="solution-icon">
                 <p class="text">Làm việc trực tiếp lần 1 cùng khách hàng tại <b>văn phòng</b>
                   BossStack
                   (hoặc <b>online</b>) trong 4 giờ</p>
@@ -376,8 +362,8 @@
             <div class="solution-item">
               <p class="number">4</p>
               <div class="content">
-                <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-4.svg') }}" alt="solution-icon">
+                <img class="img-fluid icon" src="{{ asset('img/landing-page/solution-icon-4.svg') }}"
+                  alt="solution-icon">
                 <p class="text">Phân tích đánh giá bằng <b>phần mềm</b> và đội ngũ chuyên gia
                   BossStack
                 </p>
@@ -387,8 +373,8 @@
             <div class="solution-item">
               <p class="number">5</p>
               <div class="content">
-                <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-5.svg') }}" alt="solution-icon">
+                <img class="img-fluid icon" src="{{ asset('img/landing-page/solution-icon-5.svg') }}"
+                  alt="solution-icon">
                 <p class="text">Làm việc trực tiếp lần 2 cùng khách hàng tại <b>văn phòng</b>
                   BossStack
                   (hoặc <b>online</b>) trong 2 giờ</p>
@@ -398,8 +384,8 @@
             <div class="solution-item">
               <p class="number">6</p>
               <div class="content">
-                <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-6.svg') }}" alt="solution-icon">
+                <img class="img-fluid icon" src="{{ asset('img/landing-page/solution-icon-6.svg') }}"
+                  alt="solution-icon">
                 <p class="text">Chuyển giao <b>bộ kế hoạch</b> bóc tách dòng tiền chi tiết</p>
               </div>
             </div>
@@ -407,8 +393,8 @@
             <div class="solution-item">
               <p class="number">7</p>
               <div class="content">
-                <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-7.svg') }}" alt="solution-icon">
+                <img class="img-fluid icon" src="{{ asset('img/landing-page/solution-icon-7.svg') }}"
+                  alt="solution-icon">
                 <p class="text">Chuyển giao <b>bộ hướng dẫn</b> sử dụng phần mềm BossStack</p>
               </div>
             </div>
@@ -416,8 +402,8 @@
             <div class="solution-item">
               <p class="number">8</p>
               <div class="content">
-                <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-8.svg') }}" alt="solution-icon">
+                <img class="img-fluid icon" src="{{ asset('img/landing-page/solution-icon-8.svg') }}"
+                  alt="solution-icon">
                 <p class="text">Thực hiện hỗ trợ kĩ thuật 24/7 cho 1 tài khoản <b>Standard</b>
                   (kèm 1
                   tài khoản <b>thành viên</b>) trong 1 năm</p>
@@ -427,8 +413,8 @@
             <div class="solution-item">
               <p class="number">9</p>
               <div class="content">
-                <img class="img-fluid icon"
-                  src="{{ asset('img/landing-page/solution-icon-9.svg') }}" alt="solution-icon">
+                <img class="img-fluid icon" src="{{ asset('img/landing-page/solution-icon-9.svg') }}"
+                  alt="solution-icon">
                 <p class="text">Cập nhật và đánh giá tiến độ bộ kế hoạch bóc tách dòng tiền <b>
                     3
                     tháng/ lần trong 1 năm
@@ -443,21 +429,19 @@
     <div class="section section-review">
       <div class="container">
         <div class="wrap">
-          <h4 class="review__title">Khách hàng nói về <span>Giải pháp <span
-                class="highlight">Boss</span>Stack</span></h4>
+          <h4 class="review__title">Khách hàng nói về <span>Giải pháp <span class="highlight">Boss</span>Stack</span>
+          </h4>
           <div class="review__carousel-2 owl-carousel owl-theme">
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/web/review-avt-4.jpg') }}" alt="review-avt"
-                  class="img-fluid review__avatar">
+                <img src="{{ asset('img/web/review-avt-4.jpg') }}" alt="review-avt" class="img-fluid review__avatar">
                 <p class="review__info">
                   <span>Nguyễn Đỗ Cẩm Bình</span>
                   <span>Trưởng phòng kinh doanh công ty BĐS Him Lam</span>
                 </p>
               </div>
               <p class="review__content">
-                <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
-                  alt="icon-quote">
+                <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}" alt="icon-quote">
                 Sử dụng <b>phần mềm BossStack</b> cuối tháng tôi
                 không cần ngồi ghi chép hay nhập bảng tính Excel. <b>Phần mềm BossStack</b> giúp tôi
                 quản lý mọi thu chi của cá nhân, gia đình và bóc tách hoàn toàn với dòng tiền
@@ -468,8 +452,7 @@
             </div>
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/user-1.jpg') }}" alt="review-avt"
-                  class="img-fluid review__avatar">
+                <img src="{{ asset('img/user-1.jpg') }}" alt="review-avt" class="img-fluid review__avatar">
                 <p class="review__info">
                   <span>Lê Hoài Ân - CFA</span>
                   <span>Tác giả cuốn sách bán chạy số 1 thị trường "<b>
@@ -479,8 +462,7 @@
                 </p>
               </div>
               <p class="review__content">
-                <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
-                  alt="icon-quote">
+                <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}" alt="icon-quote">
                 <b>Phần mềm BossStack</b> giúp bạn theo dõi, kiểm soát các dòng tiền và giúp chúng
                 luôn hoạt động hiệu quả. Đặc biệt, dòng tiền cá nhân và dòng tiền đầu tư kinh doanh
                 của bạn được tách bạch hoàn toàn. Khi dòng tiền cá nhân và doanh nghiệp được bóc
@@ -490,16 +472,14 @@
             </div>
             <div class="item">
               <div class="review__top">
-                <img src="{{ asset('img/user.jpg') }}" alt="review-avt"
-                  class="img-fluid review__avatar">
+                <img src="{{ asset('img/user.jpg') }}" alt="review-avt" class="img-fluid review__avatar">
                 <p class="review__info">
                   <span>Huỳnh Thu Ái</span>
                   <span>Cố vấn, đào tạo hệ thống quản lý doanh nghiệp AMS</span>
                 </p>
               </div>
               <p class="review__content">
-                <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}"
-                  alt="icon-quote">
+                <img class="img-fluid" src="{{ asset('img/landing-page/icon-quote-3.png') }}" alt="icon-quote">
                 <b>Phần mềm BossStack</b> giúp tôi phân bổ tài sản
                 và dòng tiền vào các ví mục tiêu tài chính khác nhau. Tôi có thể theo dõi từng
                 mục thu chi, từng mục tiêu tài chính đã tối ưu chưa. Từ đó, tôi phân bổ dòng
@@ -514,9 +494,9 @@
     <div class="section section-register" id="register-now">
       <div class="container">
         <div class="wrap">
-          <form class="register__form" data-aos="fade-right" data-aos-delay="0"
-            data-aos-duration="1000" data-aos-easing="ease-in-out" role="form"
-            action="{{ route('coaching-store') }}?continue=true" method="post" id="frm">
+          <form class="register__form" data-aos="fade-right" data-aos-delay="0" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" role="form" action="{{ route('coaching-store') }}?continue=true" method="post"
+            id="frm">
             {{ csrf_field() }}
             <input type='hidden' name='course' value='8'>
             <input type='hidden' name='typereport' value='0'>
@@ -525,22 +505,19 @@
               <p>Thông tin tư vấn</p>
             </h6>
             <div class="form-info">
-              <input type="text" class="form-control" name="fullname"
-                placeholder="Họ và tên *" required>
+              <input type="text" class="form-control" name="fullname" placeholder="Họ và tên *" required>
               @if ($errors->has('fullname'))
-                <span class="text-danger">{{ $errors->first('fullname') }}</span>
+              <span class="text-danger">{{ $errors->first('fullname') }}</span>
               @endif
 
-              <input type="text" class="form-control" name="phone"
-                placeholder="Số điện thoại *" required>
+              <input type="text" class="form-control" name="phone" placeholder="Số điện thoại *" required>
               @if ($errors->has('phone'))
-                <span class="text-danger">{{ $errors->first('phone') }}</span>
+              <span class="text-danger">{{ $errors->first('phone') }}</span>
               @endif
 
-              <input type="email" class="form-control" name="email" placeholder="Email *"
-                required>
+              <input type="email" class="form-control" name="email" placeholder="Email *" required>
               @if ($errors->has('email'))
-                <span class="text-danger">{{ $errors->first('email') }}</span>
+              <span class="text-danger">{{ $errors->first('email') }}</span>
               @endif
 
               <input type="text" class="form-control" name="content" placeholder="Công ty">
@@ -553,8 +530,8 @@
             </div>
             <button type="submit" class="btn btn-primary btn-register">ĐĂNG KÝ NGAY</button>
           </form>
-          <div class="register__voucher" data-aos="fade-left" data-aos-delay="0"
-            data-aos-duration="1000" data-aos-easing="ease-in-out">
+          <div class="register__voucher" data-aos="fade-left" data-aos-delay="0" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
             <div class="voucher-title">
               <h4>BÓC TÁCH DÒNG TIỀN</h4>
               <p>Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, dòng tiền kinh doanh bằng
@@ -563,8 +540,7 @@
             <div class="line"></div>
             <div class="voucher-qr">
               <div class="voucher-qr__img">
-                <img class="img-fluid" src="{{ asset('img/landing-page/qr-code-boctach.png') }}"
-                  alt="qr-code-boctach">
+                <img class="img-fluid" src="{{ asset('img/landing-page/qr-code-boctach.png') }}" alt="qr-code-boctach">
               </div>
               <p class="voucher-qr__text">Quét mã QR để tìm hiểu thêm</p>
             </div>
@@ -599,10 +575,8 @@
     <div class="container">
       <div class="wrap">
         <a class="logo" href="{{ asset('chuyendoidongtien') }}">
-          <img class="img-fluid logo-img-cl"
-            src="{{ asset('img/landing-page/logo-bs-color.svg') }}" alt="BossStack">
-          <img class="img-fluid logo-img-white"
-            src="{{ asset('img/landing-page/logo-bs-white.svg') }}" alt="BossStack">
+          <img class="img-fluid logo-img-cl" src="{{ asset('img/landing-page/logo-bs-color.svg') }}" alt="BossStack">
+          <img class="img-fluid logo-img-white" src="{{ asset('img/landing-page/logo-bs-white.svg') }}" alt="BossStack">
         </a>
         <div class="footer-content">
           <div class="footer-content__item">
@@ -618,22 +592,18 @@
           </div>
           <div class="footer-content__item">
             <div class="footer-content__social">
-              <a
-                href="https://www.linkedin.com/company/bossstack/posts/?feedView=all&viewAsMember=true">
-                <img class="img-fluid" src="{{ asset('img/landing-page/icon-linkedin.svg') }}"
-                  alt="icon-linkedin">
+              <a href="https://www.linkedin.com/company/bossstack/posts/?feedView=all&viewAsMember=true">
+                <img class="img-fluid" src="{{ asset('img/landing-page/icon-linkedin.svg') }}" alt="icon-linkedin">
               </a>
             </div>
             <div class="footer-content__social">
               <a href="https://www.facebook.com/bossstack.vn">
-                <img class="img-fluid" src="{{ asset('img/landing-page/icon-fb.svg') }}"
-                  alt="icon-fb">
+                <img class="img-fluid" src="{{ asset('img/landing-page/icon-fb.svg') }}" alt="icon-fb">
               </a>
             </div>
             <div class="footer-content__social">
-              <a href="#">
-                <img class="img-fluid" src="{{ asset('img/landing-page/icon-zalo.svg') }}"
-                  alt="icon-zalo">
+              <a href="https://zalo.me/g/vwezco279">
+                <img class="img-fluid" src="{{ asset('img/landing-page/icon-zalo.svg') }}" alt="icon-zalo">
               </a>
             </div>
           </div>
@@ -649,8 +619,7 @@
   <div class="popup-register hide">
     <div class="popup-register__box">
       <button class="close-popup">
-        <img class="img-fluid" src="{{ asset('img/landing-page/icon-close.svg') }}"
-          alt="icon-close">
+        <img class="img-fluid" src="{{ asset('img/landing-page/icon-close.svg') }}" alt="icon-close">
       </button>
       <div class="popup-register__header">
         <div class="popup-register__left">
@@ -674,40 +643,34 @@
             </div>
           </div>
         </div>
-        <img class="img-fluid popup-register__image"
-          src="{{ asset('img/landing-page/popup-img.png') }}" alt="popup-img">
+        <img class="img-fluid popup-register__image" src="{{ asset('img/landing-page/popup-img.png') }}"
+          alt="popup-img">
       </div>
       <div class="popup-register__body">
         @if (isset($infor))
-          <div class="alert alert-success">
-            {{ $infor }}
-          </div>
+        <div class="alert alert-success">
+          {{ $infor }}
+        </div>
         @endif
-        <form role="form" action="{{ route('coaching-store') }}?continue=true" method="post"
-          id="frms">
+        <form role="form" action="{{ route('coaching-store') }}?continue=true" method="post" id="frms">
           {{ csrf_field() }}
           <input type='hidden' name='course' value='8'>
           <input type='hidden' name='typereport' value='0'>
           <div class="popup-register__form">
-            <input type="text" class="form-control" name="fullname" placeholder="Họ và tên *"
-              required>
+            <input type="text" class="form-control" name="fullname" placeholder="Họ và tên *" required>
             @if ($errors->has('fullname'))
-              <span class="text-danger">{{ $errors->first('fullname') }}</span>
+            <span class="text-danger">{{ $errors->first('fullname') }}</span>
             @endif
-            <input type="text" class="form-control" name="phone"
-              placeholder="Số điện thoại *" required>
+            <input type="text" class="form-control" name="phone" placeholder="Số điện thoại *" required>
             @if ($errors->has('phone'))
-              <span class="text-danger">{{ $errors->first('phone') }}</span>
+            <span class="text-danger">{{ $errors->first('phone') }}</span>
             @endif
-            <input type="email" class="form-control" name="email" placeholder="Email *"
-              required>
+            <input type="email" class="form-control" name="email" placeholder="Email *" required>
             @if ($errors->has('email'))
-              <span class="text-danger">{{ $errors->first('email') }}</span>
+            <span class="text-danger">{{ $errors->first('email') }}</span>
             @endif
-            <input type="hidden" class="form-control" name="content" value=""
-              placeholder="Công ty">
-            <input type="hidden" class="form-control" name="title" value=""
-              placeholder="Chức vụ">
+            <input type="hidden" class="form-control" name="content" value="" placeholder="Công ty">
+            <input type="hidden" class="form-control" name="title" value="" placeholder="Chức vụ">
             <select class="form-select" name="solution">
               <option selected value="">Giải pháp</option>
               <option value="1">Bóc tách dòng tiền</option>
