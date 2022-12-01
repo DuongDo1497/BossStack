@@ -146,7 +146,7 @@
             <td class="text-right">{!! formatNumberColor($cashplan->requireamount, 1, 0, 0) !!}</td>
             <td class="text-right">{!! formatNumberColor($cashplan->amount, 1, 0, 1) !!}</td>
             <td class="text-right">{!! formatNumberColor($cashplan->requireamount - $cashplan->amount, 1, 0, 1) !!}</td>
-            <td>
+            <td class="text-center">
               @if ($cashplan->finish == 1)
               <div class="status status-error">{{ $accountstatustype[$cashplan->finish] }}
               </div>

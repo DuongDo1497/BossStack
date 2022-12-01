@@ -1,5 +1,5 @@
 <script>
-function selectOnlyThis(id){
+  function selectOnlyThis(id){
   var myCheckbox = document.getElementsByName("assetid");
   Array.prototype.forEach.call(myCheckbox,function(el){
     el.checked = false;
@@ -8,7 +8,7 @@ function selectOnlyThis(id){
 }
 </script>
 <script>
-    $(function() {
+  $(function() {
         $('.btn-delete').click(function(){
             var id = $(this).data('id');
             swal({
@@ -33,7 +33,7 @@ function selectOnlyThis(id){
     });
 </script>
 <script type="text/javascript">
-        $(function () {
+  $(function () {
             param = {   format: "dd/mm/yyyy",
                         autoclose: true,
                         daysOfWeekHighlighted: "0,6",
@@ -45,8 +45,7 @@ function selectOnlyThis(id){
         });
 </script>
 <script>
-
-@if(isset($collections) and isset($asset_0) and isset($asset_1))
+  @if(isset($collections) and isset($asset_0) and isset($asset_1))
 
   var listasset = [];
   var i = 0;
@@ -66,7 +65,11 @@ function selectOnlyThis(id){
       onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
       onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
       onclick: function (d, i) { console.log("onclick", d, i, this); },
-      columns: listasset
+      columns: listasset,
+      colors: {
+        "Nợ Thế Chấp": '#F4BE37',
+        "Nợ Tín Chấp": '#5388D8',
+      }
     },
     axis: {
       x: {
@@ -108,7 +111,11 @@ function selectOnlyThis(id){
       onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
       onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
       onclick: function (d, i) { console.log("onclick", d, i, this); },
-      columns: listasset
+      columns: listasset,
+      colors: {
+        "Tài Sản Vô Hình": '#F4BE37',
+        "Ví mục tiêu": '#5388D8',
+      }
     },
     axis: {
       x: {
@@ -141,7 +148,11 @@ function selectOnlyThis(id){
       onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
       onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
       onclick: function (d, i) { console.log("onclick", d, i, this); },
-      columns: listasset
+      columns: listasset,
+      colors: {
+        "Nợ": '#F4BE37',
+        "Tài sản": '#5388D8',
+      }
     },
     donut: {
         title: "Tổng tài sản thực",

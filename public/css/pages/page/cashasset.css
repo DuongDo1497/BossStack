@@ -1,0 +1,33 @@
+.cashasset-index .chart-list{
+  --chart-count: 3;
+}
+
+.cashasset-index .box-search .control{
+  width: 100%;
+}
+
+.cashasset-index .box-search .btn-debt,
+.cashasset-index .box-search .btn-asset{
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.cashasset-index .box-search .btn-debt{
+  border: 1px solid #DE6573;
+  background-color: #DE6573;
+}
+
+.cashasset-index .box-search .btn-asset{
+  border: 1px solid #0A9A4A;
+  background-color: #0A9A4A;
+}
+
+.cashasset-index tbody td:nth-child(3) p:last-child{
+  margin-bottom: 0;
+}
+
+.cashasset-add .btn-save,
+.cashasset-edit .btn-save{
+  width: auto;
+  margin-top: 24px;
+  margin-left: 237px;
+}

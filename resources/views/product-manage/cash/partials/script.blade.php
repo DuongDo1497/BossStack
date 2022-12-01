@@ -314,32 +314,36 @@
 
       // var width_chart5 = $('#chart5').width();
 
-      c3.generate({
-        bindto: '#chart5',
-        data: {
-          type : 'pie',
-          onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
-          onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
-          onclick: function (d, i) { console.log("onclick", d, i, this); },
-          columns: dataPie2
-        },
-        axis: {
-          x: {
-            label: 'Sepal.Width'
+      if(dataPie.length !== 0){
+        c3.generate({
+          bindto: '#chart5',
+          data: {
+            type : 'pie',
+            onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
+            onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
+            onclick: function (d, i) { console.log("onclick", d, i, this); },
+            columns: dataPie2
           },
-          y: {
-            label: 'Petal.Width'
-          }
-        },
-        size: {
-            // height: 300,
-            width: 482
-        },
-        padding: {
-          right: 50
-        }   
-      
-      });
+          axis: {
+            x: {
+              label: 'Sepal.Width'
+            },
+            y: {
+              label: 'Petal.Width'
+            }
+          },
+          size: {
+              // height: 300,
+              width: 482
+          },
+          padding: {
+            right: 50
+          }   
+        
+        });
+      }else{
+        document.querySelector('#chart5').innerHTML = `<span class="text-error">Không có dữ liệu</span>`;
+      }
 
 //      var dataPie3 = [
 //        ["abc", 20],
@@ -354,32 +358,36 @@
       
       // var width_chart6 = $('#chart6').width();
 
-      c3.generate({
-        bindto: '#chart6',
-        data: {
-          type : 'pie',
-          onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
-          onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
-          onclick: function (d, i) { console.log("onclick", d, i, this); },
-          columns: dataPie3
-        },
-        axis: {
-          x: {
-            label: 'Sepal.Width'
+      if(dataPie.length !== 0){
+        c3.generate({
+          bindto: '#chart6',
+          data: {
+            type : 'pie',
+            onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
+            onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
+            onclick: function (d, i) { console.log("onclick", d, i, this); },
+            columns: dataPie3
           },
-          y: {
-            label: 'Petal.Width'
-          }
-        },
-        size: {
-            // height: 300,
-            width: 482
-        },
-        padding: {
-          right: 50
-        }   
-      
-      });
+          axis: {
+            x: {
+              label: 'Sepal.Width'
+            },
+            y: {
+              label: 'Petal.Width'
+            }
+          },
+          size: {
+              // height: 300,
+              width: 482
+          },
+          padding: {
+            right: 50
+          }   
+        
+        });
+      }else{
+        document.querySelector('#chart6').innerHTML = `<span class="text-error">Không có dữ liệu</span>`;
+      }
 
 
       $(document).ready(function () {

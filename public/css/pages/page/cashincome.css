@@ -2,6 +2,7 @@
   width: 100%;
 }
 
+.cashincome-add .btn-save,
 .cashincome-edit .btn-save{
   width: auto;
   margin-top: 24px;

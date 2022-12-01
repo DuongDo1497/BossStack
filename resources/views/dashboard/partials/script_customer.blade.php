@@ -1,5 +1,5 @@
 <script type="text/javascript">
-        $(function () {
+  $(function () {
             param = {   format: "dd/mm/yyyy",
                         autoclose: true,
                         daysOfWeekHighlighted: "0,6",
@@ -12,7 +12,6 @@
         });
 </script>
 <script>
-
   var listmonth = [];  
   var i = 1;
   listmonth[0] = ['x'];
@@ -40,7 +39,7 @@
       },
     },
     color: {
-        pattern: ['#F58220', '#2D5DA9']
+        pattern: ['#979AE9', '#8BD6C5']
     },
     axis: {
       x: {
@@ -68,7 +67,7 @@
         width: width_chart5
     },
     padding: {
-      left: 30,
+      left: 80,
       right: 30,
       top: 50,
       bottom: 0
@@ -149,8 +148,7 @@
 
 </script>
 <script>
-
-@if(isset($collections) and isset($asset_0) and isset($asset_1))
+  @if(isset($collections) and isset($asset_0) and isset($asset_1))
 
   var listasset = [];
   var i = 0;
@@ -170,10 +168,11 @@
       onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
       onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
       onclick: function (d, i) { console.log("onclick", d, i, this); },
-      columns: listasset
-    },
-    color: {
-        pattern: ['#F58220', '#2D5DA9']
+      columns: listasset,
+      colors: {
+        "Nợ Thế Chấp": '#F4BE37',
+        "Nợ Tín Chấp": '#5388D8',
+      }
     },
     axis: {
       x: {
@@ -216,10 +215,11 @@
       onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
       onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
       onclick: function (d, i) { console.log("onclick", d, i, this); },
-      columns: listasset
-    },
-    color: {
-        pattern: ['#F58220', '#2D5DA9']
+      columns: listasset,
+      colors: {
+        "Tài Sản Vô Hình": '#F4BE37',
+        "Ví mục tiêu": '#5388D8',
+      }
     },
     axis: {
       x: {
@@ -252,10 +252,11 @@
       onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
       onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
       onclick: function (d, i) { console.log("onclick", d, i, this); },
-      columns: listasset
-    },
-    color: {
-        pattern: ['#F58220', '#2D5DA9']
+      columns: listasset,
+      colors: {
+        "Nợ": '#F4BE37',
+        "Tài sản": '#5388D8',
+      }
     },
     donut: {
         title: "Tổng tài sản thực",

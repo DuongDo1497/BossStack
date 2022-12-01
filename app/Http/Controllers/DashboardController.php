@@ -19,7 +19,7 @@ class DashboardController extends Controller
         parent::__construct(null);
 
         $this->setViewPrefix('dashboard.');
-        $this->view->setHeading('');
+        $this->view->setHeading('TỔNG QUAN TÀI KHOẢN');
     }
 
     public function index(Request $request)

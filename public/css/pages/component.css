@@ -50,6 +50,11 @@
   background-color: var(--white-cl);
 }
 
+.no-bg .breadcrumb,
+.no-bg .title-page{
+  background-color: transparent;
+}
+
 .breadcrumb{
   padding: 16px 24px 8px;
   border-bottom: 1px solid var(--gray-cl-2);
@@ -91,6 +96,11 @@
   margin-bottom: 16px;
   background-color: var(--white-cl);
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.no-bg .box.box-primary{
+  box-shadow: none;
+  background-color: transparent;
 }
 
 .box.box-primary:last-child{
@@ -196,6 +206,7 @@
   font-family: hm;
   font-size: 10px;
   border-radius: 8px;
+  white-space: nowrap;
   display: inline-block;
   color: var(--white-cl);
 }
@@ -218,14 +229,11 @@
 }
 
 .table-list thead tr th,
-.table-list tbody tr td{
+.table-list tbody tr td,
+.table-list tfoot tr td{
   padding: 8px;
   vertical-align: middle;
   border: 1px solid var(--gray-cl-3) !important;
-}
-
-.table-list thead tr th,
-.table-list tbody tr td{
   border-top: 1px solid var(--gray-cl-3) !important;
   border-bottom: 1px solid var(--gray-cl-3) !important;
 }
@@ -234,8 +242,23 @@
   text-align: center;
 }
 
-.table-list tbody tr td{
+.table-list tbody tr td,
+.table-list tbody tr td a{
   color: var(--gray-cl-6);
+  transition: all .5s ease 0s;
+}
+
+.table-list tbody tr:hover td{
+  background-color: var(--bg-cyan-cl);
+}
+
+.table-list tbody tr:hover td a{
+  color: var(--primary-cl);
+  text-decoration: underline;
+}
+
+.table-list tfoot tr td{
+  color: var(--gray-cl-7);
 }
 
 /* Text Style */
@@ -286,7 +309,8 @@
 }
 
 .box-control .btn-delete{
-  background-color: #E57381;
+  border: 1px solid #BC2C22;
+  background-color: #BC2C22;
 }
 
 /* Paging Nav Style */
@@ -412,4 +436,52 @@
 
 .tab-pane__body{
   padding: 24px 28.5px 45px;
+}
+
+/* Chart list style */
+.chart-list{
+  --chart-count: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart-list .chart-item{
+  --chart-item-size: calc(100% / var(--chart-count));
+  width: calc(var(--chart-item-size) - 12px);
+  padding: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Shortcut page style  */
+.overview-page{
+  display: flex;
+  justify-content: center;
+  column-gap: 16px;
+}
+
+.overview-page__item a{
+  width: 195px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 16px;
+}
+
+.overview-page__item .icon{
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-cl);
+  border-radius: 16px;
+  background: linear-gradient(151.68deg, #3563AC 6.57%, #73B0DD 112.14%);;
+}
+
+.overview-page__item .text{
+  color: var(--gray-cl-7);
 }

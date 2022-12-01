@@ -179,7 +179,10 @@
           </div>
 
           <div class="package-item">
-            <h6 class="package-name">Standard</h6>
+            <h6 class="package-name">
+              Standard
+              <img src="{{ asset('img/web/best-seller.svg') }}" alt="best-seller" class="img-fluid seller">
+            </h6>
             <div class="package-control">
               <div class="package-price">
                 <div class="info">
