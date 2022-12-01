@@ -123,7 +123,7 @@
                   </div>
                 </div>
 
-                <div class="payment-option__item d-none">
+                <div class="payment-option__item">
                   <div class="payment-option__header">
                     <div class="form-group">
                       <input class="form-check-input" type="radio" name="paymentType" value="" id="paymentOnline"
