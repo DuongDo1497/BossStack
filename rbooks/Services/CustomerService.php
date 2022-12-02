@@ -47,7 +47,7 @@ class CustomerService extends BaseService
                 $imageName = $defaultUserImage.$imageN;
                 $image->move(public_path($defaultUserImage), $imageName);
             }
-    
+
             $user_id = "";
             $customercode = quote_smart($maxValue);
             $fullname = quote_smart($request->fullname);
@@ -133,13 +133,13 @@ class CustomerService extends BaseService
             ];
     
             $retCustomer = $this->repository->create($data);
-    
+
             //Thong tin don hang dang ky dich vu
             $service_product_id = $request->typereport;//Dang ky su dung goi dich vu theo ca nhan, doanh nghiep, vip
+
             $producttypes = config('rbooks.PRODUCTTYPES');
             $producttype = ($request->producttype == null ? '0' : $request->producttype);
             $producttypes_select = $producttypes[$producttype];
-
             if ($service_product_id != ""){
                 $serviceproduct = app(ServiceProductService::class)->getServiceProductFromId($service_product_id, '1')->first();
                 $termtype = $serviceproduct->termtype;

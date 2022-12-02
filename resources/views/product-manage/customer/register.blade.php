@@ -108,7 +108,6 @@
                 <label class="form-label" for="typereport">Thông tin sản phẩm <span>*</span></label>
                 <select class="form-select" id="typereport" name="typereport"
                   onchange='onChangeSelect();' required>
-                  <option selected>Chọn sản phẩm</option>
                   @foreach ($service_product as $item)
                     @if ($item->id == old('typereport') or $item->id == $typereport)
                       @if ($item->id == 4)
@@ -137,7 +136,6 @@
                 <label class="form-label" for="producttype">Thời gian gói <span>*</span></label>
                 <select class="form-select" id="producttype" name="producttype"
                   onchange='onChangeSelect();' required>
-                  <option selected>Chọn gói thời gian</option>
                   @foreach ($producttypes as $key => $value)
                     @if ($key > 0)
                       @if ($key == old('producttype') or $key == $producttype)
