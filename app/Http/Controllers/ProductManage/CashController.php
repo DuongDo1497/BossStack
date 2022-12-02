@@ -158,7 +158,7 @@ class CashController extends Controller
 
     public function process(Request $request)
     {
-        if (app(APIAdminService::class)->hasUserAccessPage(Auth()->user()->role, 'cash-process', Auth()->user()->service_product_id) == 0){
+        if (app(APIAdminService::class)->hasUserAccessPage(Auth()->user()->role, 'cash-process', Auth()->user()->service_product_id, Auth()->user()->approved_product) == 0){
             return app(APIAdminService::class)->authorizeRolePage(0); //chuyen den trang thong bao loi truy cap
         } 
         

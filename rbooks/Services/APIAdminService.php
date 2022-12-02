@@ -135,18 +135,18 @@ class APIAdminService extends BaseService
      * @access  public
      * @date    Sep 14, 2019 5:18:52 PM
      */
-    public function hasUserAccessPage($role, $resource, $service_product_id)
+    public function hasUserAccessPage($role, $resource, $service_product_id, $approved_product)
     {
 
 //       Vd: goi kiem tra nhom role duoc phep truy cap page hay khong  
-//       if (app(APIAdminService::class)->hasUserAccessPage($request->user()->role, 'dashboard', 1) == 0){
+//       if (app(APIAdminService::class)->hasUserAccessPage($request->user()->role, 'dashboard', 1, 1) == 0){
 //           return app(APIAdminService::class)->authorizeRoles(0); //chuyen den trang thong bao loi truy cap
 //       } 
 
         $productaccesspages = config('rbooks.PRODUCTACCESSPAGES');
         $flag = 0;
         //kiem tra role co quyen truy cap resource nay khong voi user khach hang
-        if ($role == "KH" and $resource != "" and $service_product_id != ""){
+        if ($role == "KH" and $resource != "" and $service_product_id != "" and $approved_product == "1"){
             $pages = $productaccesspages[$service_product_id];
 
             if (in_array($resource, $pages)){

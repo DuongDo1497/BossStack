@@ -76,7 +76,7 @@ class CustomerService extends BaseService
             $approved_code = 0; //0: Chua duyet  1: Da duyet  => bang khach hang customer
             $approvestatustype_code = "P"; //Dang cho duyet   => bang hop dong contract
             $contractstatustype_code = "1";//Moi mo           => bang hop dong contract
-            $blocked_code = "1";// 0: Mo tai khoan  1: Khoa tai khoan  => bang tai khoan dang nhap khach hang user
+            $blocked_code = "0";// 0: Mo tai khoan  1: Khoa tai khoan  => bang tai khoan dang nhap khach hang user
             //Neu chon goi mien phí thi chuyen trang thai sang tai khoan -> da duyet, hop dong -> hoat dong
             if ($service_product_id == "4"){
             	$approved_code = 1;// $service_product_id = 4 -> chon goi mien phi, cac goi khac deu tao user mien phi
