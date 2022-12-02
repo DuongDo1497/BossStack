@@ -53,7 +53,8 @@
 
 <div class="section cashincome-edit">
     <div class="breadcrumb">
-        <span>Quản lý tài khoản</span> / <span>Thu chi ví tổng</span> / <span class="current">Chỉnh sửa</span>
+        <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cash-index') }}">Thu chi ví tổng</a> / <span
+            class="current">Chỉnh sửa</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 

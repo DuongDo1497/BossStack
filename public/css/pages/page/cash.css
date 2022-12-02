@@ -1,13 +1,18 @@
 /* Thu chi vi tong - Index */
 
-.cash-index .filter-timeline{
-  width: 51%;
+.cash-index .filter-timeline,
+.cash-process .filter-timeline{
   display: flex;
   align-items: center;
   column-gap: 16px;
 }
 
-.cash-index .form-group{
+.cash-index .filter-timeline{
+  width: 51%;
+}
+
+.cash-index .form-group,
+.cash-process .form-group{
   --w-label: 92px;
   margin-bottom: 0;
 }
@@ -128,4 +133,21 @@
   margin-left: auto;
   display: block;
   color: var(--primary-cl);
+}
+
+.cash-process .box-search{
+  justify-content: center;
+}
+
+.cash-process .filter-timeline{
+  width: 61%;
+}
+
+.cash-process__wrap{
+  margin: 0 -24px;
+}
+
+.cash-process__wrap .tab-pane__body table{
+  position: relative;
+  overflow-x: auto;
 }

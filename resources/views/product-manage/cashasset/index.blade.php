@@ -68,23 +68,20 @@
             <div class="noti-index">
                 <div class="noti-index__wrap">
                     <div class="noti-index__item">
-                        <p class="title">Số ví tài chính:</p>
-                        <p class="number">{{ $collections->count() }}</p>
+                        <p class="title">Tổng nợ</p>
+                        <p class="number">-1,720,000,000</p>
                     </div>
                     <div class="noti-index__item">
-                        <p class="title">Tổng số tiền mục tiêu:</p>
-                        <p class="number">{!! formatNumberColor($collections->sum('requireamount'), 1, 0, 0) !!}</p>
+                        <p class="title">Tổng tài sản</p>
+                        <p class="number">+20,000,000</p>
                     </div>
                     <div class="noti-index__item">
-                        <p class="title">Tổng số tiền đang thực hiện:</p>
-                        <p class="number">{!! formatNumberColor($collections->sum('amount'), 1, 0, 1) !!}</p>
+                        <p class="title">Tỷ lệ nợ/tài sản</p>
+                        <p class="number">24%</p>
                     </div>
                     <div class="noti-index__item">
-                        <p class="title">Tổng số tiền còn lại:</p>
-                        <p class="number">
-                            {!! formatNumberColor($collections->sum('requireamount') - $collections->sum('amount'), 1,
-                            0, 1) !!}
-                        </p>
+                        <p class="title">Tổng tài sản thực</p>
+                        <p class="number">+16,350,000</p>
                     </div>
                 </div>
             </div>

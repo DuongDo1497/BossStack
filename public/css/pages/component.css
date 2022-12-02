@@ -15,6 +15,16 @@
   background-color: #1890FF;
 }
 
+.btn.btn-export{
+  border: 1px solid #73C1E5;
+  background-color: #73C1E5;
+}
+
+.btn.btn-delete{
+  border: 1px solid #BC2C22;
+  background-color: #BC2C22;
+}
+
 .box-search{
   display: flex;
   justify-content: space-between;
@@ -297,20 +307,6 @@
 
 .box-control .count{
   font-family: hb;
-}
-
-.box-control .btn-export,
-.box-control .btn-delete{
-  border: 1px solid var(--gray-cl-3);
-}
-
-.box-control .btn-export{
-  background-color: #73C1E5;
-}
-
-.box-control .btn-delete{
-  border: 1px solid #BC2C22;
-  background-color: #BC2C22;
 }
 
 /* Paging Nav Style */
