@@ -289,8 +289,7 @@
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
-    <form role="form" action="{{ route('cash-processPlan') }}" method="post" id="frm"
-      name="frm">
+    <form role="form" action="{{ route('cash-processPlan') }}" method="post" id="frm" name="frm">
       {{ csrf_field() }}
       <input type='hidden' name='typereport' value=''>
       <div class="box-content">
@@ -300,13 +299,11 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="fromdate">Thời gian từ:</label>
-                  <input type="text" class="form-control" name="fromdate" id="fromdate"
-                    value="{{ $fromdate }}">
+                  <input type="text" class="form-control" name="fromdate" id="fromdate" value="{{ $fromdate }}">
                 </div>
                 <div class="form-group">
                   <label for="todate">đến:</label>
-                  <input type="text" class="form-control" name="todate" id="todate"
-                    value="{{ $todate }}">
+                  <input type="text" class="form-control" name="todate" id="todate" value="{{ $todate }}">
                 </div>
               </div>
               <button type="submit" class="btn btn-primary btn-filter">
@@ -350,15 +347,12 @@
                   <ul class="nav nav-tabs">
                     @for ($i = 0; $i < count($yearArray); $i++)
                       <li class="{{ $i == 0 ? ' active' : '' }}">
-                        <a data-toggle="tab" href="#schedulemonth_{{ $i }}">
-                          <b>Năm thứ {{ $i + 1 }}</b>
-                        </a>
+                        <a data-toggle="tab" href="#schedulemonth_{{ $i }}">Năm thứ {{ $i + 1 }}</a>
                       </li>
                     @endfor
                   </ul>
                   @for ($i = 0; $i < count($yearArray); $i++)
-                    <div id="schedulemonth_{{ $i }}"
-                      class="tab-pane fade {{ $i == 0 ? ' in active' : '' }}">
+                    <div id="schedulemonth_{{ $i }}" class="tab-pane fade {{ $i == 0 ? ' in active' : '' }}">
                       <div class="wrap">
                         <table class="table table-bordered table-list">
                           <thead>
@@ -433,13 +427,13 @@
                                   @endforeach
 
                                   @php
-                                    $color = '#000000';
+                                    $color = 'text-success';
                                     if ($dataArray[$key]['process_planamount'] < 0) {
-                                        $color = '#ff0000';
+                                        $color = 'text-error';
                                     }
                                   @endphp
-                                  <td style="text-align: right;color: {{ $color }};"
-                                    class="fixed fixed-last">{!! formatNumber($dataArray[$key]['process_planamount'], 1, 0, 0) !!}
+                                  <td class="fixed fixed-last">
+                                    <span class="{{ $color }}">{!! formatNumber($dataArray[$key]['process_planamount'], 1, 0, 0) !!}</span>
                                   </td>
                                 </tr>
                               @endif
@@ -458,12 +452,14 @@
                               @endforeach
 
                               @php
-                                $color = '#000000';
+                                $color = 'text-success';
                                 if ($sumArray['process_planamount'] < 0) {
-                                    $color = '#ff0000';
+                                    $color = 'text-error';
                                 }
                               @endphp
-                              <td class="fixed fixed-last">{!! formatNumber($sumArray['process_planamount'], 1, 0, 0) !!}</td>
+                              <td class="fixed fixed-last">
+                                <span class="{{ $color }}">{!! formatNumber($sumArray['process_planamount'], 1, 0, 0) !!}</span>
+                              </td>
                             </tr>
                           </tfoot>
                         </table>
@@ -474,14 +470,234 @@
               </div>
               <div id="processing" class="tab-pane fade">
                 <div class="tab-pane__body">
+                  <ul class="nav nav-tabs">
+                    @for ($i = 0; $i < count($yearArray); $i++)
+                      <li class="{{ $i == 0 ? ' active' : '' }}">
+                        <a data-toggle="tab" href="#schedulemonthreal_{{ $i }}">Năm thứ
+                          {{ $i + 1 }}</a>
+                      </li>
+                    @endfor
+                  </ul>
+                  @for ($i = 0; $i < count($yearArray); $i++)
+                    <div id="schedulemonthreal_{{ $i }}"
+                      class="tab-pane fade {{ $i == 0 ? ' in active' : '' }}">
+                      <div class="wrap">
+                        <table class="table table-bordered table-list" id="tablecash_{{ $i }}">
+                          <thead>
+                            @php
+                              $icash = 1;
+                            @endphp
+                            <tr>
+                              <th class="fixed fixed-1" rowspan="4">STT</th>
+                              <th class="fixed fixed-2" rowspan="4">Tháng</th>
+                              <th class="fixed fixed-3" rowspan="4">Thu nhập</th>
+                              <th class="fixed fixed-4" rowspan="4">Chi phí</th>
+                              <th class="fixed fixed-5" rowspan="4">Chi trả nợ</th>
+                              @foreach ($listcashplan as $cashplan)
+                                <th>Mục tiêu {{ $icash++ }}</th>
+                              @endforeach
+                              <th class="fixed fixed-last" rowspan="4">Chênh Lệch Dòng Tiền</th>
+                            </tr>
+
+                            <tr>
+                              <th></th>
+                              @foreach ($listcashplan as $cashplan)
+                                <th>{{ $cashplan->planname }} <br> {{ $cashplan->description }}
+                                  <br>Ngày lập:
+                                  {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}
+                                </th>
+                              @endforeach
+                            </tr>
+
+                            <tr>
+                              <th></th>
+                              @foreach ($listcashplan as $cashplan)
+                                <th>{{ formatNumber($cashplan->requireamount, 1, 0, 0) }}</th>
+                              @endforeach
+                            </tr>
+
+                            <tr>
+                              <th></th>
+                              @foreach ($listcashplan as $cashplan)
+                                <th>Kế hoạch:
+                                  {{ formatNumber($cashplan->planage - $cashplan->currentage, 1, 0, 0) }} năm
+                                </th>
+                              @endforeach
+                            </tr>
+                          </thead>
+
+                          <tbody>
+                            @php
+                              $stt = 1;
+                            @endphp
+                            @foreach ($monthArray as $key => $value)
+                              @if ($yearArray[$i] == $value)
+                                <tr>
+                                  <td class="fixed fixed-1">{{ $stt++ }}</td>
+                                  <td class="fixed fixed-2">
+                                    {{ str_replace('_', '/', $key) }}
+                                  </td>
+                                  <td class="fixed fixed-3">
+                                    {!! formatNumberColorCustom($dataArray[$key]['income'], 1, 0, 0, 0) !!}
+                                  </td>
+                                  <td class="fixed fixed-4">
+                                    {!! formatNumberColorCustom($dataArray[$key]['expense'], 1, 0, 0, 1) !!}
+                                  </td>
+                                  <td class="fixed fixed-5">
+                                    {!! formatNumberColorCustom($dataArray[$key]['bank'], 1, 0, 0, 1) !!}
+                                  </td>
+
+                                  @foreach ($listcashplan as $cashplan)
+                                    <td>{!! formatNumberColorCustom($dataArray[$key][$cashplan->id . '_realamount'], 1, 0, 0, 1) !!}</td>
+                                  @endforeach
+
+                                  @php
+                                    $color = 'text-success';
+                                    if ($dataArray[$key]['process_planamount'] < 0) {
+                                        $color = 'text-error';
+                                    }
+                                  @endphp
+                                  <td class="fixed fixed-last">
+                                    <span class="{{ $color }}">{!! formatNumber($dataArray[$key]['process_realamount'], 1, 0, 0) !!}</span>
+                                  </td>
+                                </tr>
+                              @endif
+                            @endforeach
+                          </tbody>
+
+                          @if ($i + 1 == count($yearArray))
+                            <tfoot>
+                              <tr>
+                                <td class="fixed fixed-1" colspan='2'>Tổng cộng</td>
+                                <td class="fixed fixed-3">{!! formatNumberColorCustom($sumArray['income'], 1, 0, 0, 0) !!}</td>
+                                <td class="fixed fixed-4">{!! formatNumberColorCustom($sumArray['expense'], 1, 0, 0, 1) !!}</td>
+                                <td class="fixed fixed-5">{!! formatNumberColorCustom($sumArray['bank'], 1, 0, 0, 1) !!}</td>
+
+                                @foreach ($listcashplan as $cashplan)
+                                  <td>{!! formatNumberColorCustom($sumArray[$cashplan->id . '_realamount'], 1, 0, 0, 1) !!}</td>
+                                @endforeach
+
+                                @php
+                                  $color = 'text-success';
+                                  if ($sumArray['process_planamount'] < 0) {
+                                      $color = 'text-error';
+                                  }
+                                @endphp
+                                <td class="fixed fixed-last">
+                                  <span class="{{ $color }}">{!! formatNumber($sumArray['process_realamount'], 1, 0, 0) !!}</span>
+                                </td>
+                              </tr>
+                            </tfoot>
+                          @endif
+                        </table>
+                      </div>
+                    </div>
+                  @endfor
                 </div>
               </div>
               <div id="assessment" class="tab-pane fade">
                 <div class="tab-pane__body">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel incidunt nulla sint
-                  voluptatem, debitis, modi molestiae reiciendis necessitatibus quisquam aliquid aut.
-                  Nulla
-                  cumque quia saepe impedit qui illo magnam suscipit.
+                  <table class="table table-bordered table-list">
+                    <thead>
+                      <tr>
+                        <th>STT</th>
+                        <th>Mục Tiêu</th>
+                        <th>Tên Mục Tiêu</th>
+                        <th>Kế hoạch</th>
+                        <th>Số tiền đã thực hiện</th>
+                        <th width="10%">Tình Trạng</th>
+                        <th width="30%">Tiến Độ</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @php
+                        $icash = 1;
+                        $total_requireamount = 0;
+                        $total_realamount = 0;
+                        $checkTotalPlan = '';
+                        $checkTotalText = '';
+                        $percentTotalProcess = 0;
+                        $percentProcess = 0;
+                      @endphp
+                      @foreach ($listcashplan as $cashplan)
+                        @php
+                          $checkAmountPlan = $sumArray[$cashplan->id . '_realamount'] - $sumArray[$cashplan->id . '_planamount'];
+                          $checkPlan = $checkAmountPlan > 0 ? 'status status-success' : 'status status-error';
+                          
+                          $checkText = $checkAmountPlan > 0 ? 'Đang thực hiện tốt' : 'Đang thiếu hụt ';
+                          
+                          $percentProcess = round(($sumArray[$cashplan->id . '_realamount'] / $cashplan->requireamount) * 100, 0);
+                          if ($percentProcess >= 100) {
+                              $percentProcess = 100;
+                          }
+                          
+                          //tong cong ke hoach, da thuc hien
+                          $total_requireamount += $cashplan->requireamount;
+                          $total_realamount += $sumArray[$cashplan->id . '_realamount'];
+                          
+                          $checkTotalAmountPlan = $total_realamount - $total_requireamount;
+                          $checkTotalPlan = $checkTotalAmountPlan > 0 ? 'label label-success' : 'label label-danger';
+                          
+                          $checkTotalText = $checkTotalAmountPlan > 0 ? 'Đang thực hiện tốt' : 'Đang thiếu hụt ';
+                          
+                          $percentTotalProcess = round(($total_realamount / $total_requireamount) * 100, 0);
+                          if ($percentTotalProcess >= 100) {
+                              $percentTotalProcess = 100;
+                          }
+                        @endphp
+
+                        <tr>
+                          <td class="text-center">{{ $icash }}</td>
+                          <td class="text-center">Mục tiêu {{ $icash++ }}</td>
+                          <td><b>{{ $cashplan->planname }}</b> <br> {{ $cashplan->description }}
+                            <br>Ngày lập: {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}
+                          </td>
+                          <td class="text-right">{!! formatNumberColorCustom($cashplan->requireamount, 1, 0, 0, 0) !!}</td>
+                          <td class="text-right">{!! formatNumberColorCustom($sumArray[$cashplan->id . '_realamount'], 1, 0, 0, 0) !!}</td>
+                          <td class="text-center">
+                            <span class="{{ $checkPlan }}">{{ $checkText }}</span>
+                          </td>
+                          <td>
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-success" role="progressbar"
+                                aria-valuenow="{{ formatNumber($percentProcess, 1, 2, 1) }}" aria-valuemin="0"
+                                aria-valuemax="100" style="width: {{ formatNumber($percentProcess, 1, 2, 1) }}%">
+                                {{ formatNumber($percentProcess, 1, 0, 1) }}%
+                              </div>
+                              <div class="progress-bar progress-bar-danger" role="progressbar"
+                                aria-valuenow="{{ formatNumber(100 - $percentProcess, 1, 2, 1) }}" aria-valuemin="0"
+                                aria-valuemax="100" style="width: {{ formatNumber(100 - $percentProcess, 1, 2, 1) }}%">
+                                {{ formatNumber(100 - $percentProcess, 1, 0, 1) }}%
+                              </div>
+                            </div>
+                            <p>
+                              <span class="square status-success"></span>
+                              Đã thực hiện: {{ formatNumber($percentProcess, 1, 0, 1) }}%
+                            </p>
+                            <p>
+                              <span class="square status-error"></span>
+                              Chưa thực hiện: {{ formatNumber(100 - $percentProcess, 1, 0, 1) }}%
+                            </p>
+                          </td>
+                        </tr>
+                      @endforeach
+                    </tbody>
+                    @if ($checkTotalText != '')
+                      <tfoot>
+                        <tr>
+                          <td colspan="3"><b>Tổng cộng</b></td>
+                          <td class="text-right" style="white-space: nowrap !important;">
+                            {!! formatNumberColorCustom($total_requireamount, 1, 0, 0, 0) !!}
+                          </td>
+                          <td class="text-right" style="white-space: nowrap !important;">
+                            {!! formatNumberColorCustom($total_realamount, 1, 0, 0, 0) !!}
+                          </td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tfoot>
+                    @endif
+                  </table>
                 </div>
               </div>
             </div>

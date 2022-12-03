@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('head')
-<link rel="stylesheet" href="{{ asset('css/pages/page/cashasset.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/pages/page/cashasset.css') }}">
 
-{{-- <style type="text/css">
+  {{-- <style type="text/css">
     .detailed-property .box-body table tbody td.text-nowrap,
     .detailed-property .box-body table tbody th.text-nowrap {
         white-space: nowrap !important;
@@ -45,174 +45,177 @@
 @endsection
 
 @section('content')
-@if(session()->has('success'))
-@include('layouts.partials.messages.success')
-@endif
+  @if (session()->has('success'))
+    @include('layouts.partials.messages.success')
+  @endif
 
-@if(isset($infor))
-@if($error == 1)
-@include('layouts.partials.messages.warning')
-@else
-@include('layouts.partials.messages.infor')
-@endif
-@endif
+  @if (isset($infor))
+    @if ($error == 1)
+      @include('layouts.partials.messages.warning')
+    @else
+      @include('layouts.partials.messages.infor')
+    @endif
+  @endif
 
-<div class="section cashasset-index">
+  <div class="section cashasset-index">
     <div class="breadcrumb">
-        <span>Danh mục tài sản - nợ</span> / <span class="current">Công cụ quản lý tài sản nợ - có</span>
+      <span>Danh mục tài sản - nợ</span> / <span class="current">Công cụ quản lý tài sản nợ - có</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
     <div class="box-content">
-        <div class="box box-primary">
-            <div class="noti-index">
-                <div class="noti-index__wrap">
-                    <div class="noti-index__item">
-                        <p class="title">Tổng nợ</p>
-                        <p class="number">-1,720,000,000</p>
-                    </div>
-                    <div class="noti-index__item">
-                        <p class="title">Tổng tài sản</p>
-                        <p class="number">+20,000,000</p>
-                    </div>
-                    <div class="noti-index__item">
-                        <p class="title">Tỷ lệ nợ/tài sản</p>
-                        <p class="number">24%</p>
-                    </div>
-                    <div class="noti-index__item">
-                        <p class="title">Tổng tài sản thực</p>
-                        <p class="number">+16,350,000</p>
-                    </div>
-                </div>
+      <div class="box box-primary">
+        <div class="noti-index">
+          <div class="noti-index__wrap">
+            <div class="noti-index__item">
+              <p class="title">Tổng nợ</p>
+              <p class="number">-1,720,000,000</p>
             </div>
-            <h6 class="box-title">Biểu đồ tỷ trọng tài sản</h6>
-            <p class="box-des">Chức năng quản lý tài sản - nợ của phần mềm BossStack Coaching là công cụ hữu ích để hỗ
-                trợ bạn đánh giá và xem lại việc quản lý tài sản của mình.</p>
-            <div class="chart-list">
-                <div class="chart-item">
-                    <p class="chart-title">Nợ</p>
-                    <div id="rptasset1"></div>
-                </div>
-                <div class="chart-item">
-                    <p class="chart-title">Tài sản</p>
-                    <div id="rptasset2"></div>
-                </div>
-                <div class="chart-item">
-                    <p class="chart-title">Tổng tài sản thực</p>
-                    <div id="rptasset3"></div>
-                </div>
+            <div class="noti-index__item">
+              <p class="title">Tổng tài sản</p>
+              <p class="number">+20,000,000</p>
             </div>
+            <div class="noti-index__item">
+              <p class="title">Tỷ lệ nợ/tài sản</p>
+              <p class="number">24%</p>
+            </div>
+            <div class="noti-index__item">
+              <p class="title">Tổng tài sản thực</p>
+              <p class="number">+16,350,000</p>
+            </div>
+          </div>
         </div>
+        <h6 class="box-title">Biểu đồ tỷ trọng tài sản</h6>
+        <p class="box-des">Chức năng quản lý tài sản - nợ của phần mềm BossStack là công cụ hữu ích để
+          hỗ
+          trợ bạn đánh giá và xem lại việc quản lý tài sản của mình.</p>
+        <div class="chart-list">
+          <div class="chart-item">
+            <p class="chart-title">Nợ</p>
+            <div id="rptasset1"></div>
+          </div>
+          <div class="chart-item">
+            <p class="chart-title">Tài sản</p>
+            <div id="rptasset2"></div>
+          </div>
+          <div class="chart-item">
+            <p class="chart-title">Tổng tài sản thực</p>
+            <div id="rptasset3"></div>
+          </div>
+        </div>
+      </div>
 
-        <div class="box box-primary">
-            <h6 class="box-title">Danh sách chi tiết tài sản</h6>
-            <div class="box-search">
-                <div class="control">
-                    <a href="{{ route('cashassets-process', ['assetstatustype' => 3]) }}"
-                        class="btn btn-primary btn-debt">
-                        <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
-                        Nợ
-                    </a>
-                    <a href="{{ route('cashassets-process', ['assetstatustype' => 4]) }}"
-                        class="btn btn-primary btn-asset">
-                        <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
-                        Tài sản
-                    </a>
-                </div>
-            </div>
-            <table class="table table-bordered table-list">
-                <thead>
-                    <tr>
-                        <th rowspan="2">
-                            <input type="checkbox" name="" id="">
-                        </th>
-                        <th rowspan="2">STT</th>
-                        <th rowspan="2">Tài sản</th>
-                        <th rowspan="2">Phân loại</th>
-                        <th rowspan="2">Chi tiết</th>
-                        <th rowspan="2">Ngày</th>
-                        <th colspan="2">Tài sản</th>
-                    </tr>
-                    <tr>
-                        <th>Nợ</th>
-                        <th>Có</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @if($collections->count() === 0)
-                    <tr>
-                        <td colspan="7"><b>Không có dữ liệu!!!</b></td>
-                    </tr>
-                    @endif
-                    @php
-                    $i = 1;
-                    $total_asset = 0; $total_expense = 0;
-                    @endphp
-                    @foreach($collections as $cashasset)
-                    @php
-                    if($cashasset->assetstatustype == 3){
+      <div class="box box-primary">
+        <h6 class="box-title">Danh sách chi tiết tài sản</h6>
+        <div class="box-search">
+          <div class="control">
+            <a href="{{ route('cashassets-process', ['assetstatustype' => 3]) }}"
+              class="btn btn-primary btn-debt">
+              <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
+              Nợ
+            </a>
+            <a href="{{ route('cashassets-process', ['assetstatustype' => 4]) }}"
+              class="btn btn-primary btn-asset">
+              <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
+              Tài sản
+            </a>
+          </div>
+        </div>
+        <table class="table table-bordered table-list">
+          <thead>
+            <tr>
+              <th rowspan="2">
+                <input type="checkbox" name="" id="">
+              </th>
+              <th rowspan="2">STT</th>
+              <th rowspan="2">Tài sản</th>
+              <th rowspan="2">Phân loại</th>
+              <th rowspan="2">Chi tiết</th>
+              <th rowspan="2">Ngày</th>
+              <th colspan="2">Tài sản</th>
+            </tr>
+            <tr>
+              <th>Nợ</th>
+              <th>Có</th>
+            </tr>
+          </thead>
+          <tbody>
+            @if ($collections->count() === 0)
+              <tr>
+                <td colspan="7"><b>Không có dữ liệu!!!</b></td>
+              </tr>
+            @endif
+            @php
+              $i = 1;
+              $total_asset = 0;
+              $total_expense = 0;
+            @endphp
+            @foreach ($collections as $cashasset)
+              @php
+                if ($cashasset->assetstatustype == 3) {
                     $total_asset += $cashasset->remainamount;
-                    }elseif($cashasset->assetstatustype == 4){
+                } elseif ($cashasset->assetstatustype == 4) {
                     $total_expense += $cashasset->remainamount;
-                    }
-                    @endphp
-                    <tr>
-                        <td>
-                            <input type="checkbox" name="" id="">
-                        </td>
-                        <td class="text-center">{{ $i++ }}</td>
-                        <td>
-                            <p>
-                                <a href="{{ route('cashassets-edit',['id'=> $cashasset->id]) }}">{{
-                                    $cashasset->assetname }}</a>
-                                @if($cashasset->document != '')
-                                <a target="_blank" href="{{ $pathdocument . $cashasset->document }}"
-                                    title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
-                                        style="margin-right: 10px;"></i></a>
-                                @endif
-                            </p>
-                            <p>Số tiền: {{ formatNumber($cashasset->amount, 1, 0, 1) }}</p>
-                        </td>
-                        <td>{{ $cashasset->config_types_name }}</td>
-                        <td class="text-center">{{ $cashasset->config_type_details_name }}</td>
-                        <td class="text-center">{{ $cashasset->assetdate == null ? "" :
-                            ConvertSQLDate($cashasset->assetdate) }}</td>
-                        @if($cashasset->assetstatustype == 3)
-                        <td class="text-right">{!!formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 1) !!}</td>
-                        <td class="text-right"></td>
-                        @elseif($cashasset->assetstatustype == 4)
-                        <td class="text-right"></td>
-                        <td class="text-right">{!!formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 0) !!}</td>
-                        @endif
-                    </tr>
-                    @endforeach
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="6">Tổng cộng</td>
-                        <td class="text-right">{!!formatNumberColorCustom($total_asset, 1, 0, 0, 1) !!}</td>
-                        <td class="text-right">{!!formatNumberColorCustom($total_expense, 1, 0, 0, 0) !!}</td>
-                    </tr>
-                </tfoot>
-            </table>
-            <div class="box-control">
-                <div class="control">
-                    <p class="count">4</p>
-                    <p class="text">Ví tài chính đang được chọn</p>
-                    <a href="#" class="btn btn-delete">
-                        <img src="{{ asset('img/icon-delete.svg') }}" alt="">
-                        Xóa
-                    </a>
-                </div>
-                <div class="paging">
-                    {{ $collections->links() }}
-                </div>
-            </div>
+                }
+              @endphp
+              <tr>
+                <td>
+                  <input type="checkbox" name="" id="">
+                </td>
+                <td class="text-center">{{ $i++ }}</td>
+                <td>
+                  <p>
+                    <a
+                      href="{{ route('cashassets-edit', ['id' => $cashasset->id]) }}">{{ $cashasset->assetname }}</a>
+                    @if ($cashasset->document != '')
+                      <a target="_blank" href="{{ $pathdocument . $cashasset->document }}"
+                        title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
+                          style="margin-right: 10px;"></i></a>
+                    @endif
+                  </p>
+                  <p>Số tiền: {{ formatNumber($cashasset->amount, 1, 0, 1) }}</p>
+                </td>
+                <td>{{ $cashasset->config_types_name }}</td>
+                <td class="text-center">{{ $cashasset->config_type_details_name }}</td>
+                <td class="text-center">
+                  {{ $cashasset->assetdate == null ? '' : ConvertSQLDate($cashasset->assetdate) }}
+                </td>
+                @if ($cashasset->assetstatustype == 3)
+                  <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 1) !!}</td>
+                  <td class="text-right"></td>
+                @elseif($cashasset->assetstatustype == 4)
+                  <td class="text-right"></td>
+                  <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 0) !!}</td>
+                @endif
+              </tr>
+            @endforeach
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="6">Tổng cộng</td>
+              <td class="text-right">{!! formatNumberColorCustom($total_asset, 1, 0, 0, 1) !!}</td>
+              <td class="text-right">{!! formatNumberColorCustom($total_expense, 1, 0, 0, 0) !!}</td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="box-control">
+          <div class="control">
+            <p class="count">4</p>
+            <p class="text">Ví tài chính đang được chọn</p>
+            <a href="#" class="btn btn-delete">
+              <img src="{{ asset('img/icon-delete.svg') }}" alt="">
+              Xóa
+            </a>
+          </div>
+          <div class="paging">
+            {{ $collections->links() }}
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
-{{-- <div class="row">
+  {{-- <div class="row">
     <form role="form" action="{{ route('cashassets-modify') }}?continue=true" method="post" id="frm">
         {{ csrf_field() }}
         <div class="col-xs-12">
@@ -289,7 +292,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @if($collections->count() === 0)
+                                @if ($collections->count() === 0)
                                 <tr>
                                     <td colspan="7"><b>Không có dữ liệu!!!</b></td>
                                 </tr>
@@ -298,7 +301,7 @@
                                 $i = 1;
                                 $total_asset = 0; $total_expense = 0;
                                 @endphp
-                                @foreach($collections as $cashasset)
+                                @foreach ($collections as $cashasset)
                                 @php
                                 if($cashasset->assetstatustype == 3){
                                 $total_asset += $cashasset->remainamount;
@@ -316,7 +319,7 @@
                                     <td style="text-align: center;" class="text-nowrap">{{ $i++ }}</td>
                                     <td style="text-align: left;" class="text-nowrap">{{ $cashasset->assetname }}
                                         &nbsp;&nbsp;&nbsp;
-                                        @if($cashasset->document != '')
+                                        @if ($cashasset->document != '')
                                         <a style="color: #1b1464;" target="_blank"
                                             href="{{ $pathdocument . $cashasset->document }}"
                                             title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
@@ -330,7 +333,7 @@
                                         $cashasset->config_type_details_name }}</td>
                                     <td style="text-align: center;" class="text-nowrap">{{ $cashasset->assetdate == null
                                         ? "" : ConvertSQLDate($cashasset->assetdate) }}</td>
-                                    @if($cashasset->assetstatustype == 3)
+                                    @if ($cashasset->assetstatustype == 3)
                                     <td style="text-align: right;" class="text-nowrap">{!!
                                         formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 1) !!}</td>
                                     <td style="text-align: right;" class="text-nowrap"></td>
@@ -355,7 +358,7 @@
                                 </tr>
                                 @endforeach
 
-                                @foreach($listaccounts as $cashasset)
+                                @foreach ($listaccounts as $cashasset)
                                 @php
                                 $total_expense += $cashasset->amount;
 
@@ -440,9 +443,8 @@
         </div>
     </form>
 </div> --}}
-
 @endsection
 
 @section('scripts')
-@include('product-manage.cashasset.partials.script')
+  @include('product-manage.cashasset.partials.script')
 @endsection

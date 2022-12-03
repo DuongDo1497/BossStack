@@ -223,3 +223,39 @@
 .tab-pane__body .tab-pane .wrap .fixed-last{
   right: 0;
 }
+
+#assessment .tab-pane__body tbody td:last-child{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+#assessment .tab-pane__body tbody td:last-child .progress{
+  width: 100%;
+  margin-top: 0;
+}
+
+#assessment .tab-pane__body tbody td:last-child p{
+  margin: 0;
+  font-size: 13px;
+  width: calc(50% - 8px);
+}
+
+#assessment .tab-pane__body tbody td:last-child .square{
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+#assessment .tab-pane__body tbody td:last-child .progress-bar-success,
+#assessment .tab-pane__body tbody td:last-child .status-success{
+  background-color: #0A9A4A;
+}
+
+#assessment .tab-pane__body tbody td:last-child .progress-bar-danger,
+#assessment .tab-pane__body tbody td:last-child .status-error{
+  background-color: #BC2C22;
+}
