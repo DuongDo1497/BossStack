@@ -59,7 +59,7 @@ class ContractController extends Controller
                 
         $collections = $this->main_service->getListContract($request)->paginate($this->view->filter['limit']);
         $this->view->collections = $collections;
-               
+
         return $this->view('index');
     }
 
@@ -210,8 +210,8 @@ class ContractController extends Controller
         $collections = $this->main_service->getListContractFromCustomer($customer_id, 1, "P")->paginate($this->view->filter['limit']);
         $this->view->collections = $collections;
 
-        $this->view->setHeading('THÔNG TIN DỊCH VỤ');
-        $this->view->setSubHeading('Dịch vụ đang chờ duyệt');                
+        $this->view->setHeading('ĐANG CHỜ DUYỆT');
+        $this->view->setSubHeading('Đang chờ duyệt');                
         return $this->view('listContract');
     }
     
@@ -227,8 +227,8 @@ class ContractController extends Controller
         $collections = $this->main_service->getListContractFromCustomer($customer_id, 2, "A")->paginate($this->view->filter['limit']);
         $this->view->collections = $collections;
 
-        $this->view->setHeading('THÔNG TIN DỊCH VỤ');
-        $this->view->setSubHeading('Dịch vụ đang sử dụng');                
+        $this->view->setHeading('ĐANG SỬ DỤNG');
+        $this->view->setSubHeading('Đang sử dụng');                
         return $this->view('listContract');
     }
 
@@ -244,8 +244,8 @@ class ContractController extends Controller
         $collections = $this->main_service->getListContractFromCustomer($customer_id, 3, "A")->paginate($this->view->filter['limit']);
         $this->view->collections = $collections;
 
-        $this->view->setHeading('THÔNG TIN DỊCH VỤ');
-        $this->view->setSubHeading('Dịch vụ đã hết hạn');                
+        $this->view->setHeading('ĐÃ HẾT HẠN');
+        $this->view->setSubHeading('Đã hết hạn');                
         return $this->view('listContract');
     }
     
@@ -264,7 +264,8 @@ class ContractController extends Controller
         $this->view->customers = app(CustomerService::class)->getAll();
                 
         $this->view->model = $this->main_service->find($id);
-        $this->view->setHeading('THÔNG TIN DỊCH VỤ');
+        $this->view->setHeading('THÔNG TIN CHI TIẾT GÓI THÀNH VIÊN');
+        $this->view->setSubHeading(' Thông tin chi tiết gói thành viên');  
 
         return $this->view('detailContract');
     }

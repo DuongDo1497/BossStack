@@ -27,7 +27,7 @@
 
   <div class="section listContractQueue">
     <div class="breadcrumb">
-      <span>Dịch vụ</span> / <span class="current">Đang chờ duyệt</span>
+      <span>Dịch vụ</span> / <span class="current">{{ $title->sub_heading }}</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 

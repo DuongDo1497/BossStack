@@ -173,3 +173,40 @@
 .package-security .package-info li{
   color: var(--gray-cl-6);
 }
+
+.contract-detail .service-info__table{
+  padding: 16px 24px;
+  border-radius: 8px;
+  background-color: var(--gray-cl-1);
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.contract-detail .service-info__table table{
+  margin-bottom: 0;
+}
+
+.contract-detail .service-info__table th,
+.contract-detail .service-info__table td{
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--gray-cl-3);
+}
+
+.contract-detail .service-info__table th,
+.contract-detail .service-info__table tfoot td{
+  font-size: 18px;
+}
+
+.contract-detail .service-info__table th:first-child,
+.contract-detail .service-info__table td:first-child{
+  text-align: left;
+}
+
+.contract-detail .service-info__table tfoot td{
+  padding-top: 36px;
+  border-bottom: 0;
+}
+
+.contract-detail .service-info__table tfoot td:first-child{
+  text-align: right;
+}
