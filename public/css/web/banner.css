@@ -71,10 +71,10 @@
 }
 
 @media (max-width: 1399.98px){
-  .banner-video video{
+  /* .banner-video video{
     max-width: inherit;
     max-height: 100%;
-  }
+  } */
 }
 
 @media (max-width: 767.98px) {
@@ -88,10 +88,10 @@
     line-height: 1.5;
   }
 
-  .banner-video video{
+  /* .banner-video video{
     position: relative;
     left: -25%;
-  }
+  } */
 }
 
 @media (max-width: 575.98px){

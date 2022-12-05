@@ -82,6 +82,11 @@ class HomeController extends Controller
         return $this->view('payments');
     }
 
+    public function noti()
+    {
+        return $this->view('noti');
+    }
+
 
 
 

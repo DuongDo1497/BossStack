@@ -54,7 +54,7 @@
                 </tr>
               </thead>
               <tbody>
-                <td><b>{{ $model->service_product_name }}</b>
+                <td><b>Gói {{ $model->service_product_name }}</b>
                   <br />{{ formatNumber($model->service_product_price, 1, 0, 1) }} đồng/tháng
                 </td>
                 <td>{{ $model->term }} tháng</td>

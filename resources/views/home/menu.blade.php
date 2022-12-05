@@ -45,6 +45,6 @@
   <li class="menu-main__item button-control">
     <a href="{{ route('customers-register', ['service_product_id' => 1]) }}"
       class="btn btn-primary btn-size-full btn-register">Tạo tài khoản</a>
-    <a href="{{ route('login') }}" class="btn btn-stroke btn-size-full btn-login">Đăng nhập</a>
+    <a href="{{ route('noti') }}" class="btn btn-stroke btn-size-full btn-login">Đăng nhập</a>
   </li>
 </ul>
