@@ -30,22 +30,19 @@
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-cyan-cl">
-              <img src="{{ asset('img/web/cash-dissection-10.svg') }}" alt="cash-dissection"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/cash-dissection-10.svg') }}" alt="cash-dissection" class="icon img-fluid">
               <p>BossStack giúp doanh nghiệp phân tích sản phẩm lõi và xác định mô hình kinh doanh</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-purple-cl">
-              <img src="{{ asset('img/web/cash-dissection-11.svg') }}" alt="cash-dissection"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/cash-dissection-11.svg') }}" alt="cash-dissection" class="icon img-fluid">
               <p>Hệ thống hóa và quản trị dữ liệu bằng phần mềm Microsoft 365 Business</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
-              <img src="{{ asset('img/web/cash-dissection-12.svg') }}" alt="cash-dissection"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/cash-dissection-12.svg') }}" alt="cash-dissection" class="icon img-fluid">
               <p>Thiết lập luồng cơ bản dữ liệu doanh nghiệp</p>
             </div>
           </div>
@@ -62,31 +59,26 @@
         <div class="why-product__content">
           <div class="why-product__list">
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-11.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-11.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text"><b>Dữ liệu, thông tin lưu trữ không đồng bộ</b>, chồng chéo, khó
                 kiểm soát</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-12.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-12.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text"><b>Khó khăn</b> trong việc <b>bảo mật thông tin</b> tài liệu</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-13.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-13.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text"><b>Ra quyết định</b> thiếu chính xác vì không đủ dữ liệu báo
                 cáo</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-14.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-14.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Không có thông tin kịp thời cho các cuộc họp quan trọng, làm việc
                 với đối tác và khách hàng</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-15.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-15.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text"><b>Thất thoát dữ liệu</b> khi thay đổi nhân sự</span>
             </div>
           </div>
@@ -120,7 +112,7 @@
               <div class="icon">
                 <img src="{{ asset('img/web/help-icon-13.png') }}" alt="help-icon" class="img-fluid">
               </div>
-              <p>Thực hành trực trên phần mềm Microsoft 365 Business để phân tích, đánh giá giải pháp
+              <p>Thực hành trực tiếp trên phần mềm Microsoft 365 Business để phân tích, đánh giá giải pháp
                 chuyển đổi dữ liệu</p>
             </div>
           </div>
@@ -158,20 +150,19 @@
             <input type='hidden' name='solution' value='3'>
             <input type='hidden' name='typereport' value='1'>
             <div class="form-group">
-              <input type="text" class="form-control" id="fullname" name="fullname"
-                placeholder="Họ và tên *" required>
+              <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Họ và tên *"
+                required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="phone" name="phone"
-                placeholder="Số điện thoại *" required>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại *"
+                required>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" id="email" name="email"
-                placeholder="Email *" required>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email *"
+                required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="content" name="content"
-                placeholder="Công ty">
+              <input type="text" class="form-control" id="content" name="content" placeholder="Công ty">
             </div>
             <div class="form-group">
               <select class="form-select" name="companytype">
@@ -188,8 +179,7 @@
               </select>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="title" name="title"
-                placeholder="Chức vụ">
+              <input type="text" class="form-control" id="title" name="title" placeholder="Chức vụ">
             </div>
             <button type="submit" class="btn btn-second btn-size-lg btn-register">ĐĂNG KÝ
               NGAY</button>

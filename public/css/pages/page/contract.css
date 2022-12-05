@@ -174,10 +174,25 @@
   color: var(--gray-cl-6);
 }
 
+/* Mua dich vu */
+
+.btn-pay,
+.btn-home{
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: 32px;
+}
+
+.btn-home{
+  width: 123px;
+  height: 36px;
+}
+
 .contract-detail .box-form .form-group:first-child .form-text{
   color: var(--gray-cl-6);
 }
 
+.contract-add .service-info__table,
 .contract-detail .service-info__table{
   padding: 16px 24px;
   border-radius: 8px;
@@ -185,10 +200,13 @@
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
 }
 
+.contract-add .service-info__table table,
 .contract-detail .service-info__table table{
   margin-bottom: 0;
 }
 
+.contract-add .service-info__table th,
+.contract-add .service-info__table td,
 .contract-detail .service-info__table th,
 .contract-detail .service-info__table td{
   text-align: center;
@@ -196,21 +214,284 @@
   border-bottom: 1px solid var(--gray-cl-3);
 }
 
+.contract-add .service-info__table th,
+.contract-add .service-info__table tfoot td,
 .contract-detail .service-info__table th,
 .contract-detail .service-info__table tfoot td{
   font-size: 18px;
 }
 
+.contract-add .service-info__table th:first-child,
+.contract-add .service-info__table td:first-child,
 .contract-detail .service-info__table th:first-child,
 .contract-detail .service-info__table td:first-child{
   text-align: left;
 }
 
+.contract-add .service-info__table tfoot td,
 .contract-detail .service-info__table tfoot td{
   padding-top: 36px;
   border-bottom: 0;
 }
 
+.contract-add .service-info__table tfoot td:first-child,
 .contract-detail .service-info__table tfoot td:first-child{
   text-align: right;
+}
+
+/* Payment option */
+
+.payment-option .payment-option__item{
+  overflow: hidden;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--gray-cl-3);
+  background-color: var(--white-cl);
+}
+
+.payment-option__item .payment-option__header{
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  column-gap: 16px;
+}
+
+.payment-option__item .payment-option__header .form-group{
+  margin-bottom: 0;
+}
+
+.payment-option__header .form-check-input{
+  display: none;
+}
+
+.payment-option__header .form-check-label{
+  width: 16px;
+  height: 16px;
+  padding: 2px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid var(--primary-cl);
+  background-color: var(--white-cl);
+}
+
+.payment-option__header .form-check-label::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  display: flex;
+  background-color: var(--primary-cl);
+  transition: all 0.25s linear;
+}
+
+.payment-option__header .form-check-input:checked + .form-check-label::before{
+  opacity: 1;
+}
+
+.payment-option__header .text{
+  font-family: hm;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--gray-cl-7);
+  margin-bottom: 0;
+}
+
+.payment-option__item:first-child .payment-option__body p{
+  display: flex;
+}
+
+.payment-option__body .content{
+  padding: 0 48px 16px;
+}
+
+.payment-option__body .paragraph,
+.payment-option__body p:not(.title-big){
+  margin-bottom: 8px;
+}
+
+.payment-option__body .paragraph:last-child,
+.payment-option__body p:not(.title-big):last-child{
+  margin-bottom: 0;
+}
+
+.payment-option__body .title-big{
+  font-size: 20px;
+  font-family: hb;
+  color: var(--gray-cl-7);
+  margin-bottom: 8px;
+}
+
+.payment-option__body ul li,
+.payment-option__body p{
+  font-size: 18px;
+  color: var(--gray-cl-7);
+}
+
+.card-type .card-type__item{
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.card-type .card-type__item:last-child{
+  margin-bottom: 0;
+}
+
+.card-type__item .card-type__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 8px;
+  background-color: var(--gray-cl-2);
+}
+
+.card-type__item .card-type__header p{
+  font-family: hb;
+  color: var(--gray-cl-7);
+  margin: 0;
+}
+
+.card-type__body .card-form,
+.card-type__body .bank-list{
+  margin: 16px auto 0;
+  padding: 32px;
+  border-radius: 16px;
+  background-color: var(--white-cl);
+  box-shadow: 0px 5px 10px rgba(53, 99, 172, 0.3);
+}
+
+.card-type__body .card-form{
+  width: 480px;
+}
+
+.card-type__body .card-form > p,
+.card-form .title p{
+  font-size: 18px;
+  color: var(--gray-cl-7);
+}
+
+.card-type__body .card-form > p{
+  font-family: hb;
+}
+
+.card-type__body .card-form .title,
+.card-type__body .bank-list .title{
+  width: 100%;
+}
+
+.card-type__body .card-form .title p{
+  font-family: hr;
+}
+
+.card-form__detail .title,
+.card-form__detail .title .icon{
+  display: flex;
+  align-items: center;
+}
+
+.card-form__detail .title{
+  justify-content: space-between;
+}
+
+.card-type__body .card-form .card-form__detail,
+.card-type__body .card-form .card-form__address{
+  margin-bottom: 16px;
+}
+
+.card-type__body .card-form .form-row{
+  display: flex;
+  column-gap: 16px;
+}
+
+.card-type__body .card-form .form-row .form-group{
+  width: calc(50% - 8px);
+}
+
+.card-type__body .card-form .form-group{
+  margin-bottom: 8px;
+}
+
+.card-type__body .card-form .form-group:last-child{
+  margin-bottom: 0;
+}
+
+.card-type__body .card-form .form-control{
+  font-size: 16px;
+  border: 1px solid var(--gray-cl-3);
+  background-color: var(--gray-cl-1);
+}
+
+.card-type__body .card-form .form-control::placeholder{
+  color: var(--gray-cl-5);
+}
+
+.card-type__body .card-form .btn-submit{
+  margin: 0 auto;
+}
+
+.card-type__body .bank-list{
+  width: 100%;
+}
+
+.payment-option__body .bank-list .content{
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 8px;
+}
+
+.payment-option__body .bank-list .bank-item{
+  width: 94px;
+  height: 34px;
+  border-radius: 4px;
+  border: 1px solid var(--gray-cl-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+}
+
+.payment-option__body .bank-list .bank-logo{
+  width: 56px;
+}
+
+.bank-item .form-group{
+  line-height: 0;
+}
+
+.bank-item .form-check-input{
+  display: none;
+}
+
+.bank-item .form-check-label {
+  width: 10px;
+  height: 10px;
+  padding: 2px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid var(--primary-cl);
+  background-color: var(--white-cl);
+}
+
+.bank-item .form-check-label::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  display: flex;
+  background-color: var(--primary-cl);
+  transition: all 0.25s linear;
+}
+
+.bank-item .form-check-input:checked + .form-check-label::before {
+  opacity: 1;
+}
+
+.contract-result p:last-child{
+  color: var(--gray-cl-6);
 }

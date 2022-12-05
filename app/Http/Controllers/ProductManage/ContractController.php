@@ -361,7 +361,7 @@ class ContractController extends Controller
         $ord_payment_method = $request->ord_payment_method;
         if ($ord_payment_method == "0" or $ord_payment_method == "1" or $ord_payment_method == "2"){//Chon thanh toan truc tiep, chuyen khoan
 
-            $message = 'Đăng ký dịch vụ thành công. Vui lòng thanh toán để hoàn tất đơn hàng (bỏ qua thông báo này nếu bạn đã hoàn tất thanh toán).';
+            $message = 'Đăng ký dịch vụ thành công.';
             $this->view->infor = $message;
             $this->view->errorCode = "0";//Dang ky thanh cong, chua thanh toan
 

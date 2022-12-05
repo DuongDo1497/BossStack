@@ -13,7 +13,7 @@
             <img class="icon img-fluid" src="{{ asset('img/web/link-icon.svg') }}" alt="icon" />
             <span class="text">Dịch vụ</span>
           </div>
-          <h1 class="banner-default__title text-start">GIẢI PHÁP VẬN HÀNH SỐ CHUYÊN SÂU</h1>
+          <h1 class="banner-default__title text-start">ĐIỂM KHÁC BIỆT CỦA GIẢI PHÁP VẬN HÀNH SỐ CHUYÊN SÂU</h1>
         </div>
       </div>
     </div>
@@ -30,22 +30,19 @@
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-cyan-cl">
-              <img src="{{ asset('img/web/cash-dissection-13.svg') }}" alt="cash-dissection"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/cash-dissection-13.svg') }}" alt="cash-dissection" class="icon img-fluid">
               <p>Tiết kiệm 87% thời gian quản lý dự án của doanh nghiệp</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-purple-cl">
-              <img src="{{ asset('img/web/cash-dissection-14.svg') }}" alt="cash-dissection"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/cash-dissection-14.svg') }}" alt="cash-dissection" class="icon img-fluid">
               <p>Tăng 55% hiệu suất công việc của từng nhân sự ở các phòng ban</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
-              <img src="{{ asset('img/web/cash-dissection-15.svg') }}" alt="cash-dissection"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/cash-dissection-15.svg') }}" alt="cash-dissection" class="icon img-fluid">
               <p>95% doanh nghiệp tinh gọn quy trình, linh hoạt trong việc ra quyết định</p>
             </div>
           </div>
@@ -62,26 +59,22 @@
         <div class="why-product__content">
           <div class="why-product__list">
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-16.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-16.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Thiếu quy trình làm việc, vận hành khó khăn, thiếu tính liên kết
                 giữa các phòng ban, luồng công việc bị ngắt quãng</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-17.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-17.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Thiếu quy chuẩn đánh giá chính xác năng lực nhân viên dựa trên cơ
                 sở dữ liệu</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-18.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-18.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Thất thoát nhiều chi phí vận hành doanh nghiệp: nhân sự, hàng hóa,
                 tài chính</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-19.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-19.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Gánh nặng vận hành đặt hết phần lớn lên vai chủ doanh nghiệp</span>
             </div>
           </div>
@@ -95,7 +88,7 @@
   <div class="section section-help help-product">
     <div class="container">
       <div class="wrap">
-        <h4 class="section-title">BossStack giúp doanh nghiệp GIẢI PHÁP VẬN HÀNH SỐ CHUYÊN SÂU NHƯ THẾ
+        <h4 class="section-title">BossStack giúp doanh nghiệp THỰC THI VẬN HÀNH SỐ CHUYÊN SÂU NHƯ THẾ
           NÀO?</h4>
         <div class="help-product__process">
           <div class="help-product__list">
@@ -160,27 +153,25 @@
               {{ $infor }}
             </div>
           @endif
-          <form action="{{ route('coaching-store') }}?continue=true" method="post"
-            id="frm">
+          <form action="{{ route('coaching-store') }}?continue=true" method="post" id="frm">
             {{ csrf_field() }}
             <input type='hidden' name='course' value='9'>
             <input type='hidden' name='solution' value='4'>
             <input type='hidden' name='typereport' value='1'>
             <div class="form-group">
-              <input type="text" class="form-control" id="fullname" name="fullname"
-                placeholder="Họ và tên *" required>
+              <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Họ và tên *"
+                required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="phone" name="phone"
-                placeholder="Số điện thoại *" required>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại *"
+                required>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" id="email" name="email"
-                placeholder="Email *" required>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email *"
+                required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="content" name="content"
-                placeholder="Công ty">
+              <input type="text" class="form-control" id="content" name="content" placeholder="Công ty">
             </div>
             <div class="form-group">
               <select class="form-select" name="companytype">
@@ -197,8 +188,7 @@
               </select>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="title" name="title"
-                placeholder="Chức vụ">
+              <input type="text" class="form-control" id="title" name="title" placeholder="Chức vụ">
             </div>
             <button type="submit" class="btn btn-second btn-size-lg btn-register">ĐĂNG KÝ
               NGAY</button>
