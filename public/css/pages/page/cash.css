@@ -151,6 +151,29 @@
   margin-bottom: 24px;
 }
 
+.tab-pane__body .nav-tabs li{
+  width: 109px;
+  height: 32px;
+}
+
+.tab-pane__body .nav-tabs li a{
+  color: var(--primary-cl-3);
+  background-color: var(--white-cl);
+  border: 1px solid var(--primary-cl-3);
+}
+
+.tab-pane__body .nav-tabs li a:hover{
+  color: var(--primary-cl-3);
+}
+
+.tab-pane__body .nav-tabs li.active a{
+  font-family: hr;
+  color: var(--white-cl);
+  border: 1px solid var(--primary-cl-3);
+  background-color: var(--primary-cl-3);
+  box-shadow: none;
+}
+
 .tab-pane__body .tab-pane{
   --w-fixed-col: 120px;
   position: relative;
