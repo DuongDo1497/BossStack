@@ -214,7 +214,7 @@ function formatNumberColorCustom($value, $type=0, $num_decimal_places=2, $show_z
         $indent = '+';
     }elseif($custom == 3){
         $textcl = 'text-error';
-        $indent = '';
+        $indent = '-';
     }                                                                     
 
     if ($value == 0 and $show_zero == 0){

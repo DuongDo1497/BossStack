@@ -13,7 +13,7 @@
             <img class="icon img-fluid" src="{{ asset('img/web/link-icon.svg') }}" alt="icon" />
             <span class="text">Dịch vụ</span>
           </div>
-          <h1 class="banner-default__title text-start">ĐIỂM KHÁC BIỆT CỦA GIẢI PHÁP VẬN HÀNH SỐ CHUYÊN SÂU</h1>
+          <h1 class="banner-default__title text-start">GIẢI PHÁP VẬN HÀNH SỐ CHUYÊN SÂU</h1>
         </div>
       </div>
     </div>
@@ -25,7 +25,7 @@
         <div class="benefits-product__list">
           <div class="benefits-product__item no-bg">
             <div class="benefits-product__content">
-              <h4 class="section-title">GIẢI PHÁP VẬN HÀNH SỐ CHUYÊN SÂU</h4>
+              <h4 class="section-title">ĐIỂM KHÁC BIỆT CỦA GIẢI PHÁP VẬN HÀNH SỐ CHUYÊN SÂU</h4>
             </div>
           </div>
           <div class="benefits-product__item">

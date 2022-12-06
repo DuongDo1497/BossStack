@@ -1,3 +1,9 @@
+.dashboard-index .box.box-primary:nth-child(2),
+.dashboard-index .box.box-primary:last-child{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .spending-history{
   display: flex;
   justify-content: space-between;
@@ -69,6 +75,7 @@
   width: 51%;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   column-gap: 16px;
 }
 

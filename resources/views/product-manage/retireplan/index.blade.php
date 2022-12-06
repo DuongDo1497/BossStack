@@ -21,8 +21,7 @@
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
-    <form role="form" action="{{ route('retireplans-process') }}?continue=true" method="post"
-      id="frm">
+    <form role="form" action="{{ route('retireplans-process') }}?continue=true" method="post" id="frm">
       {{ csrf_field() }}
       <input type='hidden' name='typereport' value=''>
       <div class="box-content">
@@ -62,8 +61,7 @@
             </div>
             <div class="form-group">
               <label for="retirementsavings">Tiền đóng góp hưu trí (tháng)<span>*</span>:</label>
-              <input type="text" class="form-control" name="retirementsavings"
-                id="retirementsavings"
+              <input type="text" class="form-control" name="retirementsavings" id="retirementsavings"
                 value="{{ $retirementsavings == null ? old('retirementsavings') : formatNumber($retirementsavings, 1, 0, 0) }}"
                 onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
             </div>
@@ -87,8 +85,8 @@
           <div class="box-form">
             <div class="form-group">
               <label for="">Số năm còn làm việc</label>
-              <input type="text" class="form-control" name="" id=""
-                value="{{ $workage_d }} năm" readonly>
+              <input type="text" class="form-control" name="" id="" value="{{ $workage_d }} năm"
+                readonly>
             </div>
             <div class="form-group">
               <label for="">Số năm nghỉ hưu</label>
@@ -118,7 +116,7 @@
               <label for="">Số tiền còn thiếu hụt khi nghỉ hưu</label>
               <div class="form-text">
                 @if ($totalamount_m <= 0)
-                  {!! formatNumberColorCustom($totalamount_m, 1, 0, 1, 3) !!}
+                  {!! formatNumberColorCustom($totalamount_m, 1, 0, 0, 1) !!}
                 @else
                   {!! formatNumberColorCustom($totalamount_m, 1, 0, 0, 2) !!}
                 @endif

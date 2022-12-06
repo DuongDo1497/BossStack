@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('head')
-<link rel="stylesheet" href="{{ asset('css/pages/page/cashplan.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/pages/page/cashplan.css') }}">
 
-{{--
+  {{--
 <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
 
 <style type="text/css">
@@ -35,239 +35,243 @@
 @endsection
 
 @section('content')
-@if (session()->has('success'))
-@include('layouts.partials.messages.success')
-@endif
+  @if (session()->has('success'))
+    @include('layouts.partials.messages.success')
+  @endif
 
-<div class="section cashplan-analysis">
-  <div class="breadcrumb">
-    <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cashplans-index') }}">Thiết lập ví tài chính</a> /
-    <span class="current">{{ mb_strtoupper($plantypes[$model->plantype]) }}</span>
-  </div>
-  <p class="title-page">{{ $title->heading }}</p>
-
-  <form role="form" action="{{ route('cashplans-update', ['id' => $model->id]) }}?continue=true" method="post" id="frm"
-    name="frm">
-    {{ csrf_field() }}
-    {{ method_field('put') }}
-    <input type='hidden' name='typereport' value=''>
-    <input type='hidden' name='customer_id' value='{{ $model->customer_id }}'>
-    <input type="hidden" name="currentamountunittype" id="currentamountunittype" value="1">
-    <input type="hidden" name="requireamountunittype" id="requireamountunittype" value="1">
-
-    <div class="box-content">
-      <div class="box box-primary">
-        <a href="{{ route('cashplans-add') }}" class="btn btn-primary btn-add">
-          <img src="{{ asset('img/icon-add.svg') }}" alt="">
-          Thêm ví tài chính
-        </a>
-        <div class="box-form">
-          <div class="form-group">
-            <label for="">Mục tiêu<span>*</span>:</label>
-            <input type="text" class="form-control" name="" id=""
-              value="{{ mb_strtoupper($plantypes[$model->plantype]) }}" readonly>
-          </div>
-          <div class="form-group">
-            <label for="">Ví<span>*</span>:</label>
-            <input type="text" class="form-control" name="" id="" value="{{ $model->accountno }}" readonly>
-          </div>
-          <div class="form-group">
-            <label for="">Tên ví tài chính<span>*</span>:</label>
-            <input type="text" class="form-control" name="" id="" value="{{ $model->planname }}" readonly>
-          </div>
-          <div class="form-group">
-            <label for="">Chi tiết<span>*</span>:</label>
-            <input type="text" class="form-control" name="" id="" value="{{ $model->description }}" readonly>
-          </div>
-          <div class="form-group">
-            <label for="">Ngày lập<span>*</span>:</label>
-            <input type="text" class="form-control" name="" id=""
-              value="{{ $model->plandate == '' ? '' : ConvertSQLDate($model->plandate) }}" readonly>
-          </div>
-          <div class="form-group">
-            <label for="">Tuổi hiện tại<span>*</span>:</label>
-            <input type="text" class="form-control" name="" id="" value="{{ $model->currentage }}" readonly>
-          </div>
-          <div class="form-group">
-            <label for="">Tuổi hoàn thành mục tiêu<span>*</span>:</label>
-            <input type="text" class="form-control" name="" id=""
-              value="{{ $model->planage == '' ? 50 : $model->planage }}" readonly>
-          </div>
-          <div class="form-group">
-            <label for="">Số tiền mục tiêu<span>*</span>:</label>
-            <input type="text" class="form-control" name="" id=""
-              value="{{ $model->requireamount == '' ? 0 : formatNumber($model->requireamount, 1, 0, 0) }}" readonly>
-          </div>
-          <div class="form-group">
-            <label for="">Ngày dự kiến hoàn thành:</label>
-            <input type="text" class="form-control" name="" id=""
-              value="{{ $model->finishdate == '' ? '' : ConvertSQLDate($model->finishdate) }}" readonly>
-          </div>
-        </div>
-      </div>
-
-      <div class="box box-primary">
-        <ul class="nav nav-tabs">
-          <li class="active"><a data-toggle="tab" href="#rptchart">Biểu đồ</a></li>
-          <li><a data-toggle="tab" href="#schedulemonth">Kế hoạch tích lũy tháng</a></li>
-          <li><a data-toggle="tab" href="#scheduleyear">Kế hoạch tích lũy năm</a></li>
-        </ul>
-
-        <div class="tab-content">
-          <div id="rptchart" class="tab-pane fade in active">
-            <div class="tab-pane__body">
-              <div class="noti-index">
-                <div class="noti-index__wrap">
-                  <div class="noti-index__item">
-                    <p class="title">Để đạt được mục tiêu tài chính:</p>
-                    <p class="number">{{ formatNumber($model->requireamount, 1, 0, 0) }} VND</p>
-                  </div>
-                  <div class="noti-index__item">
-                    <p class="title">Bạn cần tích lũy:</p>
-                    <p class="number">{{ formatNumber($savingamountplan / 12, 1, 0, 1) }}
-                      VND/tháng
-                    </p>
-                  </div>
-                  <div class="noti-index__item">
-                    <p class="title">Trong:</p>
-                    <p class="number">{{ $timeplan }} năm</p>
-                  </div>
-                </div>
-              </div>
-              <div class="chart-body">
-                <p class="chart-unit">Đơn vị tính: ngàn VNĐ</p>
-                <div id="chart"></div>
-              </div>
-            </div>
-          </div>
-          <div id="schedulemonth" class="tab-pane fade">
-            @php
-            $i = 1;
-            $savingamountplanmonth = round($savingamountplan / 12, 0);
-            $totalsavingamountplan = $model->totalcurrentamount;
-            $plandate = $model->plandate == '' ? getCurrentDate('d') : ConvertSQLDate($model->plandate);
-            $dateArray = explode('/', $plandate);
-            $day = '25';
-            $month = $dateArray[1];
-            $year = $dateArray[2];
-            $plandate = "$day/$month/$year";
-            @endphp
-            <div class="tab-pane__body">
-              <div class="noti-index">
-                <div class="noti-index__wrap">
-                  <div class="noti-index__item">
-                    <p class="title">Để đạt được mục tiêu tài chính:</p>
-                    <p class="number">{{ formatNumber($model->requireamount, 1, 0, 0) }} VND</p>
-                  </div>
-                  <div class="noti-index__item">
-                    <p class="title">Bạn cần tích lũy:</p>
-                    <p class="number">{{ formatNumber($savingamountplan / 12, 1, 0, 1) }}
-                      VND/tháng
-                    </p>
-                  </div>
-                  <div class="noti-index__item">
-                    <p class="title">Trong:</p>
-                    <p class="number">{{ $timeplan }} năm</p>
-                  </div>
-                  <div class="noti-index__item">
-                    <p class="title">Số tiền tích lũy đầu kỳ:</p>
-                    <p class="number">{{ formatNumber($model->totalcurrentamount, 1, 0, 0) }} VND
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <table class="table table-bordered table-list">
-                <thead>
-                  <tr>
-                    <th>STT</th>
-                    <th>Tháng</th>
-                    <th>Tiền tích lũy cuối tháng</th>
-                    <th>Số dư cuối kỳ</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @for ($item = 1; $item <= $timeplan * 12; $item++) @php $totalsavingamountplan
-                    +=$savingamountplanmonth; $totalsavingamountplan=$totalsavingamountplan> $requireamount ?
-                    $requireamount : $totalsavingamountplan;
-                    $planmonth = DateAdd($plandate, 'm', $item);
-                    @endphp
-                    <tr>
-                      <td class="text-center">{{ $i++ }}</td>
-                      <td class="text-center">{{ substr($planmonth, 3) }}</td>
-                      <td class="text-center">{{ formatNumber($savingamountplanmonth, 1, 0, 0) }}
-                      </td>
-                      <td class="text-center">{{ formatNumber($totalsavingamountplan, 1, 0, 0) }}
-                      </td>
-                    </tr>
-                    @endfor
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div id="scheduleyear" class="tab-pane fade">
-            @php
-            $i = 1;
-            $totalsavingamountplan = $model->totalcurrentamount;
-            @endphp
-            <div class="tab-pane__body">
-              <div class="noti-index">
-                <div class="noti-index__wrap">
-                  <div class="noti-index__item">
-                    <p class="title">Để đạt được mục tiêu tài chính:</p>
-                    <p class="number">{{ formatNumber($model->requireamount, 1, 0, 0) }} VND</p>
-                  </div>
-                  <div class="noti-index__item">
-                    <p class="title">Bạn cần tích lũy:</p>
-                    <p class="number">{{ formatNumber($savingamountplan / 12, 1, 0, 1) }}
-                      VND/tháng
-                    </p>
-                  </div>
-                  <div class="noti-index__item">
-                    <p class="title">Trong:</p>
-                    <p class="number">{{ $timeplan }} năm</p>
-                  </div>
-                  <div class="noti-index__item">
-                    <p class="title">Số tiền tích lũy đầu kỳ:</p>
-                    <p class="number">{{ formatNumber($model->totalcurrentamount, 1, 0, 0) }} VND
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <table class="table table-bordered table-list">
-                <thead>
-                  <tr>
-                    <th>STT</th>
-                    <th>Tháng</th>
-                    <th>Tiền tích lũy cuối tháng</th>
-                    <th>Số dư cuối kỳ</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @for ($item = $model->currentage + 1; $item <= $model->planage; $item++)
-                    @php
-                    $totalsavingamountplan += $savingamountplan;
-                    $totalsavingamountplan = $totalsavingamountplan > $requireamount ? $requireamount :
-                    $totalsavingamountplan;
-                    @endphp
-                    <tr class="table-cashplan">
-                      <td class="text-center">{{ $i++ }}</td>
-                      <td class="text-center">{{ $item }}</td>
-                      <td class="text-center">{{ formatNumber($savingamountplan, 1, 0, 0) }}</td>
-                      <td class="text-center">{{ formatNumber($totalsavingamountplan, 1, 0, 0) }}
-                      </td>
-                    </tr>
-                    @endfor
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="section cashplan-analysis">
+    <div class="breadcrumb">
+      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cashplans-index') }}">Thiết lập ví tài chính</a> /
+      <span class="current">{{ mb_strtoupper($plantypes[$model->plantype]) }}</span>
     </div>
-  </form>
-</div>
+    <p class="title-page">{{ $title->heading }}</p>
 
-{{-- <div class="row">
+    <form role="form" action="{{ route('cashplans-update', ['id' => $model->id]) }}?continue=true" method="post"
+      id="frm" name="frm">
+      {{ csrf_field() }}
+      {{ method_field('put') }}
+      <input type='hidden' name='typereport' value=''>
+      <input type='hidden' name='customer_id' value='{{ $model->customer_id }}'>
+      <input type="hidden" name="currentamountunittype" id="currentamountunittype" value="1">
+      <input type="hidden" name="requireamountunittype" id="requireamountunittype" value="1">
+
+      <div class="box-content">
+        <div class="box box-primary">
+          {{-- <a href="{{ route('cashplans-add') }}" class="btn btn-primary btn-add">
+            <img src="{{ asset('img/icon-add.svg') }}" alt="">
+            Thêm ví tài chính
+          </a> --}}
+          <div class="box-form">
+            <div class="form-group">
+              <label for="">Mục tiêu<span>*</span>:</label>
+              <input type="text" class="form-control" name="" id=""
+                value="{{ mb_strtoupper($plantypes[$model->plantype]) }}" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Ví<span>*</span>:</label>
+              <input type="text" class="form-control" name="" id="" value="{{ $model->accountno }}"
+                readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Tên ví tài chính<span>*</span>:</label>
+              <input type="text" class="form-control" name="" id="" value="{{ $model->planname }}"
+                readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Chi tiết<span>*</span>:</label>
+              <input type="text" class="form-control" name="" id="" value="{{ $model->description }}"
+                readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Ngày lập<span>*</span>:</label>
+              <input type="text" class="form-control" name="" id=""
+                value="{{ $model->plandate == '' ? '' : ConvertSQLDate($model->plandate) }}" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Tuổi hiện tại<span>*</span>:</label>
+              <input type="text" class="form-control" name="" id="" value="{{ $model->currentage }}"
+                readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Tuổi hoàn thành mục tiêu<span>*</span>:</label>
+              <input type="text" class="form-control" name="" id=""
+                value="{{ $model->planage == '' ? 50 : $model->planage }}" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Số tiền mục tiêu<span>*</span>:</label>
+              <input type="text" class="form-control" name="" id=""
+                value="{{ $model->requireamount == '' ? 0 : formatNumber($model->requireamount, 1, 0, 0) }}" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Ngày dự kiến hoàn thành:</label>
+              <input type="text" class="form-control" name="" id=""
+                value="{{ $model->finishdate == '' ? '' : ConvertSQLDate($model->finishdate) }}" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="box box-primary">
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#rptchart">Biểu đồ</a></li>
+            <li><a data-toggle="tab" href="#schedulemonth">Kế hoạch tích lũy tháng</a></li>
+            <li><a data-toggle="tab" href="#scheduleyear">Kế hoạch tích lũy năm</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="rptchart" class="tab-pane fade in active">
+              <div class="tab-pane__body">
+                <div class="noti-index">
+                  <div class="noti-index__wrap">
+                    <div class="noti-index__item">
+                      <p class="title">Để đạt được mục tiêu tài chính:</p>
+                      <p class="number">{{ formatNumber($model->requireamount, 1, 0, 0) }} VND</p>
+                    </div>
+                    <div class="noti-index__item">
+                      <p class="title">Bạn cần tích lũy:</p>
+                      <p class="number">{{ formatNumber($savingamountplan / 12, 1, 0, 1) }}
+                        VND/tháng
+                      </p>
+                    </div>
+                    <div class="noti-index__item">
+                      <p class="title">Trong:</p>
+                      <p class="number">{{ $timeplan }} năm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chart-body">
+                  <p class="chart-unit">Đơn vị tính: ngàn VNĐ</p>
+                  <div id="chart"></div>
+                </div>
+              </div>
+            </div>
+            <div id="schedulemonth" class="tab-pane fade">
+              @php
+                $i = 1;
+                $savingamountplanmonth = round($savingamountplan / 12, 0);
+                $totalsavingamountplan = $model->totalcurrentamount;
+                $plandate = $model->plandate == '' ? getCurrentDate('d') : ConvertSQLDate($model->plandate);
+                $dateArray = explode('/', $plandate);
+                $day = '25';
+                $month = $dateArray[1];
+                $year = $dateArray[2];
+                $plandate = "$day/$month/$year";
+              @endphp
+              <div class="tab-pane__body">
+                <div class="noti-index">
+                  <div class="noti-index__wrap">
+                    <div class="noti-index__item">
+                      <p class="title">Để đạt được mục tiêu tài chính:</p>
+                      <p class="number">{{ formatNumber($model->requireamount, 1, 0, 0) }} VND</p>
+                    </div>
+                    <div class="noti-index__item">
+                      <p class="title">Bạn cần tích lũy:</p>
+                      <p class="number">{{ formatNumber($savingamountplan / 12, 1, 0, 1) }}
+                        VND/tháng
+                      </p>
+                    </div>
+                    <div class="noti-index__item">
+                      <p class="title">Trong:</p>
+                      <p class="number">{{ $timeplan }} năm</p>
+                    </div>
+                    <div class="noti-index__item">
+                      <p class="title">Số tiền tích lũy đầu kỳ:</p>
+                      <p class="number">{{ formatNumber($model->totalcurrentamount, 1, 0, 0) }} VND
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <table class="table table-bordered table-list">
+                  <thead>
+                    <tr>
+                      <th>STT</th>
+                      <th>Tháng</th>
+                      <th>Tiền tích lũy cuối tháng</th>
+                      <th>Số dư cuối kỳ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @for ($item = 1; $item <= $timeplan * 12; $item++)
+                      @php
+                        $totalsavingamountplan += $savingamountplanmonth;
+                        $totalsavingamountplan = $totalsavingamountplan > $requireamount ? $requireamount : $totalsavingamountplan;
+                        $planmonth = DateAdd($plandate, 'm', $item);
+                      @endphp
+                      <tr>
+                        <td class="text-center">{{ $i++ }}</td>
+                        <td class="text-center">{{ substr($planmonth, 3) }}</td>
+                        <td class="text-center">{{ formatNumber($savingamountplanmonth, 1, 0, 0) }}
+                        </td>
+                        <td class="text-center">{{ formatNumber($totalsavingamountplan, 1, 0, 0) }}
+                        </td>
+                      </tr>
+                    @endfor
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="scheduleyear" class="tab-pane fade">
+              @php
+                $i = 1;
+                $totalsavingamountplan = $model->totalcurrentamount;
+              @endphp
+              <div class="tab-pane__body">
+                <div class="noti-index">
+                  <div class="noti-index__wrap">
+                    <div class="noti-index__item">
+                      <p class="title">Để đạt được mục tiêu tài chính:</p>
+                      <p class="number">{{ formatNumber($model->requireamount, 1, 0, 0) }} VND</p>
+                    </div>
+                    <div class="noti-index__item">
+                      <p class="title">Bạn cần tích lũy:</p>
+                      <p class="number">{{ formatNumber($savingamountplan / 12, 1, 0, 1) }}
+                        VND/tháng
+                      </p>
+                    </div>
+                    <div class="noti-index__item">
+                      <p class="title">Trong:</p>
+                      <p class="number">{{ $timeplan }} năm</p>
+                    </div>
+                    <div class="noti-index__item">
+                      <p class="title">Số tiền tích lũy đầu kỳ:</p>
+                      <p class="number">{{ formatNumber($model->totalcurrentamount, 1, 0, 0) }} VND
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <table class="table table-bordered table-list">
+                  <thead>
+                    <tr>
+                      <th>STT</th>
+                      <th>Tháng</th>
+                      <th>Tiền tích lũy cuối tháng</th>
+                      <th>Số dư cuối kỳ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @for ($item = $model->currentage + 1; $item <= $model->planage; $item++)
+                      @php
+                        $totalsavingamountplan += $savingamountplan;
+                        $totalsavingamountplan = $totalsavingamountplan > $requireamount ? $requireamount : $totalsavingamountplan;
+                      @endphp
+                      <tr class="table-cashplan">
+                        <td class="text-center">{{ $i++ }}</td>
+                        <td class="text-center">{{ $item }}</td>
+                        <td class="text-center">{{ formatNumber($savingamountplan, 1, 0, 0) }}</td>
+                        <td class="text-center">{{ formatNumber($totalsavingamountplan, 1, 0, 0) }}
+                        </td>
+                      </tr>
+                    @endfor
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  {{-- <div class="row">
   <form role="form" action="{{ route('cashplans-update', ['id' => $model->id]) }}?continue=true" method="post" id="frm"
     name="frm">
     <div class="col-md-12">
@@ -733,6 +737,6 @@
 @endsection
 
 @section('scripts')
-@include('product-manage.cashplan.partials.script')
-@include('product-manage.cashplan.partials.script_customer')
+  @include('product-manage.cashplan.partials.script')
+  @include('product-manage.cashplan.partials.script_customer')
 @endsection

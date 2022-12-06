@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('head')
-<link rel="stylesheet" href="{{ asset('css/pages/page/cash.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/pages/page/cash.css') }}">
 
-{{--
+  {{--
 <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
 
 <style type="text/css">
@@ -59,195 +59,194 @@
 </style> --}}
 @endsection
 @section('content')
-@if (session()->has('success'))
-@include('layouts.partials.messages.success')
-@endif
+  @if (session()->has('success'))
+    @include('layouts.partials.messages.success')
+  @endif
 
-<div class="section cash-index">
+  <div class="section cash-index no-bg">
     <div class="breadcrumb">
-        <span>Quản lý tài khoản</span> / <span class="current">Thu chi ví tổng</span>
+      <span>Quản lý tài khoản</span> / <span class="current">Thu chi ví tổng</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
     <form role="form" action="{{ route('cash-index') }}" method="get" id="frm" name="frm">
-        {{ csrf_field() }}
-        <input type='hidden' name='typereport' value=''>
-        <input type="hidden" name="currentDate" value="{{ $currentDate }}">
-        <div class="box-content">
-            <div class="box box-primary">
-                <div class="box-search">
-                    <div class="filter-timeline">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="fromDate">Thời gian từ:</label>
-                                <input type="text" class="form-control" name="fromDate" id="fromDate"
-                                    value="{{ old('fromDate') == "" ? $fromDate : old('fromDate') }}">
-                            </div>
-                            <div class="form-group">
-                                <label for="toDate">đến:</label>
-                                <input type="text" class="form-control" name="toDate" id="toDate"
-                                    value="{{ old('toDate') == "" ? $toDate : old('toDate') }}">
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-search">
-                            Tìm kiếm
-                            <img class="icon" src="{{ asset('img/icon-search.svg') }}" alt="">
-                        </button>
-                    </div>
-                    <div class="control">
-                        <a href="{{ route('cashtranfers-add') }}" class="btn btn-primary btn-transfer">
-                            <img class="icon" src="{{ asset('img/icon-transfer.svg') }}" alt="">
-                            Phân bổ
-                        </a>
-                        <a href="{{ route('cashincomes-process', ['incomestatustype' => 0]) }}"
-                            class="btn btn-primary btn-income">
-                            <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
-                            Thu nhập
-                        </a>
-                        <a href="{{ route('cashincomes-process', ['incomestatustype' => 1]) }}"
-                            class="btn btn-primary btn-cost">
-                            <img class="icon" src="{{ asset('img/icon-loss.svg') }}" alt="">
-                            Chi phí
-                        </a>
-                    </div>
+      {{ csrf_field() }}
+      <input type='hidden' name='typereport' value=''>
+      <input type="hidden" name="currentDate" value="{{ $currentDate }}">
+      <div class="box-content">
+        <div class="box box-primary">
+          <div class="box-search">
+            <div class="filter-timeline">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fromDate">Thời gian từ:</label>
+                  <input type="text" class="form-control" name="fromDate" id="fromDate"
+                    value="{{ old('fromDate') == '' ? $fromDate : old('fromDate') }}">
                 </div>
-                <div class="spending-history">
-                    <div class="spending-history__list">
-                        <div class="spending-history__result">
-                            <span class="text">Ví tổng</span>
-                            <span class="number">{!!formatNumberColor($accountno_primary->amount, 1, 0, 1)!!}</span>
-                        </div>
-                        <div class="spending-history__table">
-                            <table class="table table-bordered table-list">
-                                <tbody>
-                                    @php
-                                    $total_income = 0; $total_expense = 0; $total_bank = 0;
-                                    $indent = '';
-                                    $bgcolor = '';
-                                    @endphp
-                                    @foreach ($listincomes as $cashincome)
-                                    @php
-
-                                    $inden = $cashincome->incomestatustype;//0: thu, 1: chi phí
-                                    if($cashincome->incomestatustype == 0){
-                                    $total_income += $cashincome->amount;
-                                    }elseif($cashincome->incomestatustype == 1){
-                                    $total_expense += $cashincome->amount;
-                                    }
-                                    @endphp
-                                    <tr>
-                                        <td>
-                                            <p>{{ConvertSQLDate($cashincome->transactiondate) }}</p>
-                                            <p>{{$cashincome->content }}</p>
-                                        </td>
-                                        <td class="text-right">{!!formatNumberColorCustom($cashincome->amount, 1, 0, 1,
-                                            $inden)!!}</td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="spending-history__sort">
-                        <div class="income-highest">
-                            <p>Thu nhập cao nhất</p>
-                            <table class="table table-bordered table-list">
-                                <tbody>
-                                    @php
-                                    $i = 0;
-                                    $textcl = 'text-success';
-                                    $indent = '+';
-                                    @endphp
-                                    @foreach ($incomesmonth as $item)
-                                    <tr>
-                                        <td>{{ $item['incometypename'] }}</td>
-                                        <td class="text-right"><span class="{{ $textcl }}">{{ $indent }} {{
-                                                formatNumber($item['amount'], 1, 0, 0)}}</span></td>
-                                    </tr>
-                                    @php
-                                    $i++;
-                                    if ($i == 2){
-                                    break;
-                                    }
-                                    @endphp
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="line"></div>
-                        <div class="cost-highest">
-                            <p>Chi phí cao nhất</p>
-                            <table class="table table-bordered table-list">
-                                <tbody>
-                                    @php
-                                    $i = 0;
-                                    $textcl = 'text-error';
-                                    $indent = '-';
-                                    @endphp
-                                    @foreach ($expensesmonth as $item)
-                                    <tr>
-                                        <td>{{ $item['incometypename'] }}</td>
-                                        <td class="text-right"><span class="{{ $textcl }}"> {{$indent }} {{
-                                                formatNumber($item['amount'], 1, 0, 0)}}</span></td>
-                                    </tr>
-                                    @php
-                                    $i++;
-                                    if ($i == 2){
-                                    break;
-                                    }
-                                    @endphp
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                <div class="form-group">
+                  <label for="toDate">đến:</label>
+                  <input type="text" class="form-control" name="toDate" id="toDate"
+                    value="{{ old('toDate') == '' ? $toDate : old('toDate') }}">
                 </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-search">
+                Tìm kiếm
+                <img class="icon" src="{{ asset('img/icon-search.svg') }}" alt="">
+              </button>
             </div>
-
-            <div class="box box-primary">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#rptday">Báo cáo ngày {{ $currentDate }}</a></li>
-                    <li><a data-toggle="tab" href="#rptmonth">Báo cáo tháng {{substr($currentDate, 3) }}</a></li>
-                </ul>
-
-                <div class="tab-content">
-                    <div id="rptday" class="tab-pane fade in active">
-                        <div class="tab-pane__body">
-                            <div class="chart-list">
-                                <div class="chart-item">
-                                    <p class="chart-title">Thu nhập</p>
-                                    <div id="chart2"></div>
-                                </div>
-                                <div class="chart-item">
-                                    <p class="chart-title">Chi phí</p>
-                                    <div id="chart3"></div>
-                                </div>
-                            </div>
-                            <a class="read-more" href="{{ route('cashincomes-index') }}">Xem chi tiết &gt;&gt;</a>
-                        </div>
-                    </div>
-                    <div id="rptmonth" class="tab-pane fade">
-                        <div class="tab-pane__body">
-                            <div class="chart-list">
-                                <div class="chart-item">
-                                    <p class="chart-title">Thu nhập</p>
-                                    <div id="chart5"></div>
-                                </div>
-                                <div class="chart-item">
-                                    <p class="chart-title">Chi phí</p>
-                                    <div id="chart6"></div>
-                                </div>
-                            </div>
-                            <a class="read-more" href="{{ route('cashincomes-index') }}">Xem chi tiết &gt;&gt;</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="control">
+              <a href="{{ route('cashtranfers-add') }}" class="btn btn-primary btn-transfer">
+                <img class="icon" src="{{ asset('img/icon-transfer.svg') }}" alt="">
+                Phân bổ
+              </a>
+              <a href="{{ route('cashincomes-process', ['incomestatustype' => 0]) }}" class="btn btn-primary btn-income">
+                <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
+                Thu nhập
+              </a>
+              <a href="{{ route('cashincomes-process', ['incomestatustype' => 1]) }}" class="btn btn-primary btn-cost">
+                <img class="icon" src="{{ asset('img/icon-loss.svg') }}" alt="">
+                Chi phí
+              </a>
             </div>
+          </div>
+          <div class="spending-history">
+            <div class="spending-history__list">
+              <div class="spending-history__result">
+                <span class="text">Ví tổng</span>
+                <span class="number">{!! formatNumberColor($accountno_primary->amount, 1, 0, 1) !!}</span>
+              </div>
+              <div class="spending-history__table">
+                <table class="table table-bordered table-list">
+                  <tbody>
+                    @php
+                      $total_income = 0;
+                      $total_expense = 0;
+                      $total_bank = 0;
+                      $indent = '';
+                      $bgcolor = '';
+                    @endphp
+                    @foreach ($listincomes as $cashincome)
+                      @php
+                        
+                        $inden = $cashincome->incomestatustype; //0: thu, 1: chi phí
+                        if ($cashincome->incomestatustype == 0) {
+                            $total_income += $cashincome->amount;
+                        } elseif ($cashincome->incomestatustype == 1) {
+                            $total_expense += $cashincome->amount;
+                        }
+                      @endphp
+                      <tr>
+                        <td>
+                          <p>{{ ConvertSQLDate($cashincome->transactiondate) }}</p>
+                          <p>{{ $cashincome->content }}</p>
+                        </td>
+                        <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 1, 3) !!}</td>
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="spending-history__sort">
+              <div class="income-highest">
+                <p>Thu nhập cao nhất</p>
+                <table class="table table-bordered table-list">
+                  <tbody>
+                    @php
+                      $i = 0;
+                      $textcl = 'text-success';
+                      $indent = '+';
+                    @endphp
+                    @foreach ($incomesmonth as $item)
+                      <tr>
+                        <td>{{ $item['incometypename'] }}</td>
+                        <td class="text-right"><span class="{{ $textcl }}">{{ $indent }}
+                            {{ formatNumber($item['amount'], 1, 0, 0) }}</span></td>
+                      </tr>
+                      @php
+                        $i++;
+                        if ($i == 2) {
+                            break;
+                        }
+                      @endphp
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+              <div class="line"></div>
+              <div class="cost-highest">
+                <p>Chi phí cao nhất</p>
+                <table class="table table-bordered table-list">
+                  <tbody>
+                    @php
+                      $i = 0;
+                      $textcl = 'text-error';
+                      $indent = '-';
+                    @endphp
+                    @foreach ($expensesmonth as $item)
+                      <tr>
+                        <td>{{ $item['incometypename'] }}</td>
+                        <td class="text-right"><span class="{{ $textcl }}"> {{ $indent }}
+                            {{ formatNumber($item['amount'], 1, 0, 0) }}</span></td>
+                      </tr>
+                      @php
+                        $i++;
+                        if ($i == 2) {
+                            break;
+                        }
+                      @endphp
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
-    </form>
-</div>
 
-{{-- <form role="form" action="{{ route('cash-index') }}" method="get" id="frm" name="frm">
+        <div class="box box-primary">
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#rptday">Báo cáo ngày {{ $currentDate }}</a></li>
+            <li><a data-toggle="tab" href="#rptmonth">Báo cáo tháng {{ substr($currentDate, 3) }}</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="rptday" class="tab-pane fade in active">
+              <div class="tab-pane__body">
+                <div class="chart-list">
+                  <div class="chart-item">
+                    <p class="chart-title">Thu nhập</p>
+                    <div id="chart2"></div>
+                  </div>
+                  <div class="chart-item">
+                    <p class="chart-title">Chi phí</p>
+                    <div id="chart3"></div>
+                  </div>
+                </div>
+                <a class="read-more" href="{{ route('cashincomes-index') }}">Xem chi tiết &gt;&gt;</a>
+              </div>
+            </div>
+            <div id="rptmonth" class="tab-pane fade">
+              <div class="tab-pane__body">
+                <div class="chart-list">
+                  <div class="chart-item">
+                    <p class="chart-title">Thu nhập</p>
+                    <div id="chart5"></div>
+                  </div>
+                  <div class="chart-item">
+                    <p class="chart-title">Chi phí</p>
+                    <div id="chart6"></div>
+                  </div>
+                </div>
+                <a class="read-more" href="{{ route('cashincomes-index') }}">Xem chi tiết &gt;&gt;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  {{-- <form role="form" action="{{ route('cash-index') }}" method="get" id="frm" name="frm">
     {{ csrf_field() }}
     <input type='hidden' name='typereport' value=''>
     <input type="hidden" name="currentDate" value="{{ $currentDate }}">
@@ -568,5 +567,5 @@
 @endsection
 
 @section('scripts')
-@include('product-manage.cash.partials.script')
+  @include('product-manage.cash.partials.script')
 @endsection

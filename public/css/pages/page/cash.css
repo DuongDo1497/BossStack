@@ -30,7 +30,7 @@
 .spending-history__sort{
   padding: 24px;
   border-radius: 16px;
-  background-color: var(--gray-cl-1);
+  background-color: var(--white-cl);
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
 }
 
@@ -52,6 +52,11 @@
 .spending-history__result .number{
   font-size: 20px;
   font-family: hm;
+}
+
+.spending-history__list .table-bordered,
+.spending-history__sort .table-bordered{
+  border: 0;
 }
 
 .spending-history__table{
@@ -109,6 +114,7 @@
 
 .cash-index .box-primary:last-child{
   padding: 0;
+  background-color: var(--white-cl);
 }
 
 .cash-index .nav-tabs{
