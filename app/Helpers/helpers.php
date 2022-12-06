@@ -133,7 +133,7 @@ function formatNumber($value, $type=0, $num_decimal_places=2, $show_zero=1, $dec
     $sb = "";
 
     if ($value == 0 and $show_zero == 0){
-        return "";
+        return "0";
     } else {
         if ($type == 0){
             $sb = $value;
@@ -162,13 +162,15 @@ function formatNumberColor($value, $type=0, $num_decimal_places=2, $show_zero=1,
     $sb = "";
     $indent = ''; $bgcolor = '';
 
-    if($value >= 0){
+    if($value > 0){
         $bgcolor = 'text-success text-nowrap';
         $indent = '+';
-    }else{
+    }else if($value < 0){
         $bgcolor = 'text-error text-nowrap';
         // $indent = '-';
-    }                                                                     
+    }else{
+        $bgcolor = 'text';
+    }                                                                 
 
     if ($value == 0 and $show_zero == 0){
         return "";

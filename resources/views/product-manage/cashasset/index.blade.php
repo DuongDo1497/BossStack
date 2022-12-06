@@ -109,13 +109,11 @@
         <h6 class="box-title">Danh sách chi tiết tài sản</h6>
         <div class="box-search">
           <div class="control">
-            <a href="{{ route('cashassets-process', ['assetstatustype' => 3]) }}"
-              class="btn btn-primary btn-debt">
+            <a href="{{ route('cashassets-process', ['assetstatustype' => 3]) }}" class="btn btn-primary btn-debt">
               <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
               Nợ
             </a>
-            <a href="{{ route('cashassets-process', ['assetstatustype' => 4]) }}"
-              class="btn btn-primary btn-asset">
+            <a href="{{ route('cashassets-process', ['assetstatustype' => 4]) }}" class="btn btn-primary btn-asset">
               <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
               Tài sản
             </a>
@@ -165,8 +163,7 @@
                 <td class="text-center">{{ $i++ }}</td>
                 <td>
                   <p>
-                    <a
-                      href="{{ route('cashassets-edit', ['id' => $cashasset->id]) }}">{{ $cashasset->assetname }}</a>
+                    <a href="{{ route('cashassets-edit', ['id' => $cashasset->id]) }}">{{ $cashasset->assetname }}</a>
                     @if ($cashasset->document != '')
                       <a target="_blank" href="{{ $pathdocument . $cashasset->document }}"
                         title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
@@ -181,7 +178,7 @@
                   {{ $cashasset->assetdate == null ? '' : ConvertSQLDate($cashasset->assetdate) }}
                 </td>
                 @if ($cashasset->assetstatustype == 3)
-                  <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 1) !!}</td>
+                  <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 3) !!}</td>
                   <td class="text-right"></td>
                 @elseif($cashasset->assetstatustype == 4)
                   <td class="text-right"></td>
@@ -193,7 +190,7 @@
           <tfoot>
             <tr>
               <td colspan="6">Tổng cộng</td>
-              <td class="text-right">{!! formatNumberColorCustom($total_asset, 1, 0, 0, 1) !!}</td>
+              <td class="text-right">{!! formatNumberColorCustom($total_asset, 1, 0, 0, 3) !!}</td>
               <td class="text-right">{!! formatNumberColorCustom($total_expense, 1, 0, 0, 0) !!}</td>
             </tr>
           </tfoot>

@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('head')
-<link rel="stylesheet" href="{{ asset('css/pages/page/invests.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/pages/page/invests.css') }}">
 
-{{--
+  {{--
 <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
 
 <style type="text/css">
@@ -16,55 +16,55 @@
 @endsection
 
 @section('content')
-@if (session()->has('success'))
-@include('layouts.partials.messages.success')
-@endif
+  @if (session()->has('success'))
+    @include('layouts.partials.messages.success')
+  @endif
 
-@if (isset($infor))
-@include('layouts.partials.messages.infor')
-@endif
+  @if (isset($infor))
+    @include('layouts.partials.messages.infor')
+  @endif
 
-<div class="section form-advisory">
-  <div class="breadcrumb">
-    <span>Quản lý tài khoản</span> / <span class="current">Khuyến nghị</span>
-  </div>
-  <p class="title-page">{{ $title->heading }}</p>
+  <div class="section form-advisory">
+    <div class="breadcrumb">
+      <span>Quản lý tài khoản</span> / <span class="current">Khuyến nghị</span>
+    </div>
+    <p class="title-page">{{ $title->heading }}</p>
 
-  <div class="box-content">
-    <div class="box box-primary">
-      <div class="news">
-        @php
-        $i = 0;
-        @endphp
-        @foreach ($collections_0 as $model)
-        @php
-        $i++;
-        if ($i >= 7) {
-        break;
-        }
-        @endphp
-        <div class="news-item">
-          <a href="{{ route('invests-detail', ['id' => $model->id]) }}">
-            <div class="news-image">
-              <img src="{{ asset($pathimage . $model->newsimage) }}" alt="">
+    <div class="box-content">
+      <div class="box box-primary">
+        <div class="news">
+          @php
+            $i = 0;
+          @endphp
+          @foreach ($collections_0 as $model)
+            @php
+              $i++;
+              if ($i >= 7) {
+                  break;
+              }
+            @endphp
+            <div class="news-item">
+              <a href="{{ route('invests-detail', ['id' => $model->id]) }}">
+                <div class="news-image">
+                  <img src="{{ asset($pathimage . $model->newsimage) }}" alt="">
+                </div>
+                <div class="news-content">
+                  <p class="news-title">{{ $model->newstitle }}</p>
+                  <div class="news-des">{!! $model->shortcontent !!}</div>
+                  <div class="news-info">
+                    <span class="news-author">{{ $model->author }}</span>
+                    <span class="news-date">{{ ConvertSQLDate($model->newsdate) }}</span>
+                  </div>
+                </div>
+              </a>
             </div>
-            <div class="news-content">
-              <p class="news-title">{{ $model->newstitle }}</p>
-              <div class="news-des">{!! $model->shortcontent !!}</div>
-              <div class="news-info">
-                <span class="news-author">{{ $model->author }}</span>
-                <span class="news-date">{{ ConvertSQLDate($model->newsdate)}}</span>
-              </div>
-            </div>
-          </a>
+          @endforeach
         </div>
-        @endforeach
       </div>
     </div>
   </div>
-</div>
 
-{{-- <div class="news">
+  {{-- <div class="news">
   <div class="news-list">
     <div class="news-latest">
       <h3 class="title-category"><span>NHẬN ĐỊNH CHỨNG KHOÁN</span></h3>
@@ -213,7 +213,7 @@
 
 
 @section('scripts')
-{{-- <script type="text/javascript">
+  {{-- <script type="text/javascript">
   $(function() {
       var width_img = $(".news-list .image").width();
 

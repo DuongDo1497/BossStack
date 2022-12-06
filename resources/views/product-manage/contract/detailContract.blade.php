@@ -81,7 +81,8 @@
             </div>
             <div class="form-group">
               <label for="">Ngày duyệt:</label>
-              <div class="form-text">{{ $model->approved_at == '0000-00-00' ? '' : ConvertSQLDate($model->approved_at) }}
+              <div class="form-text">
+                {{ $model->approved_at == '0000-00-00' ? 'Không có' : ConvertSQLDate($model->approved_at) }}
               </div>
             </div>
           </div>

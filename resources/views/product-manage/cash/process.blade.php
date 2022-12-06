@@ -416,14 +416,14 @@
                                     {!! formatNumberColorCustom($dataArray[$key]['income'], 1, 0, 0, 0) !!}
                                   </td>
                                   <td class="fixed fixed-4">
-                                    {!! formatNumberColorCustom($dataArray[$key]['expense'], 1, 0, 0, 1) !!}
+                                    {!! formatNumberColorCustom($dataArray[$key]['expense'], 1, 0, 0, 3) !!}
                                   </td>
                                   <td class="fixed fixed-5">
-                                    {!! formatNumberColorCustom($dataArray[$key]['bank'], 1, 0, 0, 1) !!}
+                                    {!! formatNumberColorCustom($dataArray[$key]['bank'], 1, 0, 0, 3) !!}
                                   </td>
 
                                   @foreach ($listcashplan as $cashplan)
-                                    <td>{!! formatNumberColorCustom($dataArray[$key][$cashplan->id . '_planamount'], 1, 0, 0, 1) !!}</td>
+                                    <td>{!! formatNumberColorCustom($dataArray[$key][$cashplan->id . '_planamount'], 1, 0, 0, 3) !!}</td>
                                   @endforeach
 
                                   @php
@@ -444,11 +444,11 @@
                             <tr>
                               <td class="fixed fixed-1" colspan='2'>Tổng cộng</td>
                               <td class="fixed fixed-3">{!! formatNumberColorCustom($sumArray['income'], 1, 0, 0, 0) !!}</td>
-                              <td class="fixed fixed-4">{!! formatNumberColorCustom($sumArray['expense'], 1, 0, 0, 1) !!}</td>
-                              <td class="fixed fixed-5">{!! formatNumberColorCustom($sumArray['bank'], 1, 0, 0, 1) !!}</td>
+                              <td class="fixed fixed-4">{!! formatNumberColorCustom($sumArray['expense'], 1, 0, 0, 3) !!}</td>
+                              <td class="fixed fixed-5">{!! formatNumberColorCustom($sumArray['bank'], 1, 0, 0, 3) !!}</td>
 
                               @foreach ($listcashplan as $cashplan)
-                                <td>{!! formatNumberColorCustom($sumArray[$cashplan->id . '_planamount'], 1, 0, 0, 1) !!}</td>
+                                <td>{!! formatNumberColorCustom($sumArray[$cashplan->id . '_planamount'], 1, 0, 0, 3) !!}</td>
                               @endforeach
 
                               @php
@@ -541,14 +541,14 @@
                                     {!! formatNumberColorCustom($dataArray[$key]['income'], 1, 0, 0, 0) !!}
                                   </td>
                                   <td class="fixed fixed-4">
-                                    {!! formatNumberColorCustom($dataArray[$key]['expense'], 1, 0, 0, 1) !!}
+                                    {!! formatNumberColorCustom($dataArray[$key]['expense'], 1, 0, 0, 3) !!}
                                   </td>
                                   <td class="fixed fixed-5">
-                                    {!! formatNumberColorCustom($dataArray[$key]['bank'], 1, 0, 0, 1) !!}
+                                    {!! formatNumberColorCustom($dataArray[$key]['bank'], 1, 0, 0, 3) !!}
                                   </td>
 
                                   @foreach ($listcashplan as $cashplan)
-                                    <td>{!! formatNumberColorCustom($dataArray[$key][$cashplan->id . '_realamount'], 1, 0, 0, 1) !!}</td>
+                                    <td>{!! formatNumberColorCustom($dataArray[$key][$cashplan->id . '_realamount'], 1, 0, 0, 3) !!}</td>
                                   @endforeach
 
                                   @php
@@ -570,11 +570,11 @@
                               <tr>
                                 <td class="fixed fixed-1" colspan='2'>Tổng cộng</td>
                                 <td class="fixed fixed-3">{!! formatNumberColorCustom($sumArray['income'], 1, 0, 0, 0) !!}</td>
-                                <td class="fixed fixed-4">{!! formatNumberColorCustom($sumArray['expense'], 1, 0, 0, 1) !!}</td>
-                                <td class="fixed fixed-5">{!! formatNumberColorCustom($sumArray['bank'], 1, 0, 0, 1) !!}</td>
+                                <td class="fixed fixed-4">{!! formatNumberColorCustom($sumArray['expense'], 1, 0, 0, 3) !!}</td>
+                                <td class="fixed fixed-5">{!! formatNumberColorCustom($sumArray['bank'], 1, 0, 0, 3) !!}</td>
 
                                 @foreach ($listcashplan as $cashplan)
-                                  <td>{!! formatNumberColorCustom($sumArray[$cashplan->id . '_realamount'], 1, 0, 0, 1) !!}</td>
+                                  <td>{!! formatNumberColorCustom($sumArray[$cashplan->id . '_realamount'], 1, 0, 0, 3) !!}</td>
                                 @endforeach
 
                                 @php
