@@ -580,8 +580,7 @@ class CustomerController extends Controller
                 
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
 
-        $this->view->setHeading('TỔNG QUAN TÀI KHOẢN');
-        $this->view->setSubHeading('Tổng quan tài khoản');
+        $this->view->setHeading('TỔNG QUAN USER');
 
         return $this->view('user.dashboardUser');
     }
@@ -593,7 +592,7 @@ class CustomerController extends Controller
                 
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
 
-        $this->view->setHeading('THÔNG TIN TÀI KHOẢN');
+        $this->view->setHeading('THÊM MỚI USER CON');
         $this->view->setSubHeading('Thêm mới');
 
         return $this->view('user.addUser');
@@ -646,6 +645,7 @@ class CustomerController extends Controller
                
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
 
+        $this->view->setHeading('CHỈNH SỬA USER CON');
         $this->view->setSubHeading('Chỉnh sửa');
 
         return $this->view('user.editUser');

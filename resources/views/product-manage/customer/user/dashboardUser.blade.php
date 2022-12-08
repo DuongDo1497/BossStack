@@ -1,31 +1,33 @@
 @extends('layouts.master')
 
 @section('head')
-<link rel="stylesheet" href="{{ asset('css/pages/style_admin.css') }}">
-
-<style type="text/css">
-    @media only screen and (min-width: 320px) and (max-width: 575px){
-        .text-nowrap{
-            white-space: nowrap !important;
-        }
-    }
-</style>
+  {{-- <link rel="stylesheet" href="{{ asset('css/pages/page/cashplan.css') }}"> --}}
 @endsection
 
 @section('content')
-
-@if(session()->has('success'))
+  @if (session()->has('success'))
     @include('layouts.partials.messages.success')
-@endif
+  @endif
 
-TỔNG QUAN USER
+  @if (isset($infor))
+    @include('layouts.partials.messages.infor')
+  @endif
 
-<br><br>
-<a href="{{ route('customers-addUser') }}" style="width: 16%;">Thêm mới user</a><br>
-<a href="{{ route('customers-editUser',['id'=>0]) }}" style="width: 16%;">Cập nhật user</a><br>
+  <div class="section cashplan">
+    <div class="breadcrumb">
+      <span>Quản lý user</span> / <span class="current">Tổng quan user</span>
+    </div>
+    <p class="title-page">{{ $title->heading }}</p>
 
+    <div class="box-content">
+      <div class="box box-primary">
 
+      </div>
+    </div>
+
+  </div>
 @endsection
 
-
-
+@section('scripts')
+  @include('product-manage.cashplan.partials.script')
+@endsection

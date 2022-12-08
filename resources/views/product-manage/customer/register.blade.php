@@ -1,6 +1,9 @@
 @extends('home.layout')
 
 @section('head')
+  <link rel="stylesheet"
+    href="{{ asset('bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}" />
+
   <link rel="stylesheet" href="{{ asset('css/web/register.css') }}">
 @endsection
 
@@ -19,17 +22,17 @@
             <div class="register-form__body">
               <div class="form-group">
                 <label class="form-label" for="fullname">Họ và tên <span>*</span></label>
-                <input type="text" class="form-control" id="fullname" name="fullname"
-                  placeholder="Họ và tên *" value="{{ old('fullname') }}" required>
-                  @if ($errors->has('fullname'))
-                    <span class="text-danger">{{ $errors->first('fullname') }}</span>
-                  @endif
+                <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Họ và tên *"
+                  value="{{ old('fullname') }}" required>
+                @if ($errors->has('fullname'))
+                  <span class="text-danger">{{ $errors->first('fullname') }}</span>
+                @endif
               </div>
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="birthday">Ngày sinh <span>*</span></label>
-                  <input type="date" class="form-control" id="birthday" name="birthday"
-                    placeholder="Ngày sinh *" value="{{ old('birthday') }}" required>
+                  <input type="text" class="form-control" id="birthday" name="birthday" placeholder="Ngày sinh *"
+                    value="{{ old('birthday') }}" required>
                   @if ($errors->has('birthday'))
                     <span class="text-danger">{{ $errors->first('birthday') }}</span>
                   @endif
@@ -55,25 +58,25 @@
               </div>
               <div class="form-group">
                 <label class="form-label" for="address">Địa chỉ <span>*</span></label>
-                <input type="text" class="form-control" id="address" name="address"
-                  placeholder="Địa chỉ *" value="{{ old('address') }}" required>
-                  @if ($errors->has('address'))
-                    <span class="text-danger">{{ $errors->first('address') }}</span>
-                  @endif
+                <input type="text" class="form-control" id="address" name="address" placeholder="Địa chỉ *"
+                  value="{{ old('address') }}" required>
+                @if ($errors->has('address'))
+                  <span class="text-danger">{{ $errors->first('address') }}</span>
+                @endif
               </div>
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="phone">Điện thoại <span>*</span></label>
-                  <input type="text" class="form-control" id="phone" name="phone"
-                    placeholder="Điện thoại *" value="{{ old('phone') }}" required>
+                  <input type="text" class="form-control" id="phone" name="phone" placeholder="Điện thoại *"
+                    value="{{ old('phone') }}" required>
                   @if ($errors->has('phone'))
                     <span class="text-danger">{{ $errors->first('phone') }}</span>
                   @endif
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="email">Email <span>*</span></label>
-                  <input type="email" class="form-control" id="email" name="email"
-                    placeholder="Email *" value="{{ old('email') }}" required>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email *"
+                    value="{{ old('email') }}" required>
                   @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                   @endif
@@ -106,8 +109,7 @@
               </div>
               <div class="form-group">
                 <label class="form-label" for="typereport">Thông tin sản phẩm <span>*</span></label>
-                <select class="form-select" id="typereport" name="typereport"
-                  onchange='onChangeSelect();' required>
+                <select class="form-select" id="typereport" name="typereport" onchange='onChangeSelect();' required>
                   @foreach ($service_product as $item)
                     @if ($item->id == old('typereport') or $item->id == $typereport)
                       @if ($item->id == 4)
@@ -132,10 +134,9 @@
                   @endforeach
                 </select>
               </div>
-              <div id="producttypelabel" class="form-group"  style="">
+              <div id="producttypelabel" class="form-group" style="">
                 <label class="form-label" for="producttype">Thời gian gói <span>*</span></label>
-                <select class="form-select" id="producttype" name="producttype"
-                  onchange='onChangeSelect();' required>
+                <select class="form-select" id="producttype" name="producttype" onchange='onChangeSelect();' required>
                   @foreach ($producttypes as $key => $value)
                     @if ($key > 0)
                       @if ($key == old('producttype') or $key == $producttype)
@@ -253,7 +254,24 @@
     </div>
   </div>
 @endsection
+
 @section('scripts')
+  <script src="{{ asset('bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+  <script src="{{ asset('bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.vi.min.js') }}">
+  </script>
+  <script type="text/javascript">
+    $(function() {
+      var param = {
+        format: "dd/mm/yyyy",
+        autoclose: true,
+        daysOfWeekHighlighted: "0,6",
+        todayHighlight: true,
+        todayBtn: "linked",
+        language: "vi",
+      };
+      $('#birthday').datepicker(param);
+    });
+  </script>
   <script type="text/javascript">
     var dataProduct = [];
     @foreach ($service_product as $item)
@@ -267,7 +285,7 @@
     function onChangeSelect() {
       if (document.getElementById("typereport").value == 4) {
         document.getElementById("producttypelabel").style.display = 'none';
-        document.getElementById("amountlabel").innerHTML = 0;        
+        document.getElementById("amountlabel").innerHTML = 0;
       } else {
         document.getElementById("producttypelabel").style.display = 'block';
 

@@ -15,6 +15,10 @@
   --w-label: 78px;
 }
 
+.form-row .form-group:nth-child(2) .select2-container{
+  width: 198px !important;
+}
+
 .customer-edit .box:nth-child(2) .box-item:last-child{
   width: 28%;
   display: flex;

@@ -79,9 +79,8 @@
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
-    <form role="form"
-      action="{{ route('customers-updateCustomer', ['id' => $model->id]) }}?continue=true"
-      method="post" id="customer-form" enctype="multipart/form-data">
+    <form role="form" action="{{ route('customers-updateCustomer', ['id' => $model->id]) }}?continue=true" method="post"
+      id="customer-form" enctype="multipart/form-data">
       {{ csrf_field() }}
       {{ method_field('put') }}
 
@@ -91,8 +90,7 @@
           <div class="box-form">
             <div class="form-group">
               <label for="fullname">Tên đầy đủ:</label>
-              <input type="text" class="form-control" name="fullname" id="fullname"
-                value="{{ $model->fullname }}">
+              <input type="text" class="form-control" name="fullname" id="fullname" value="{{ $model->fullname }}">
             </div>
 
             <div class="form-group">
@@ -124,10 +122,9 @@
 
             <div class="form-group">
               <label for="currentage">Mật khẩu:</label>
-              <input type="password" class="form-control" name="currentage" id="currentage"
-                value="*********">
-              <a class="change-pass" data-toggle="collapse" data-parent="#accordion-customers"
-                href="#changepassword">[Đổi mật khẩu]</a>
+              <input type="password" class="form-control" name="currentage" id="currentage" value="*********">
+              <a class="change-pass" data-toggle="collapse" data-parent="#accordion-customers" href="#changepassword">[Đổi
+                mật khẩu]</a>
             </div>
           </div>
         </div>
@@ -151,16 +148,24 @@
                   </div>
                   <div class="form-group">
                     <label for="gender">Giới tính:</label>
-                    <input type="text" class="form-control" name="gender" id="gender"
-                      value="{{ $model->gender }}">
+                    <select class="form-control select2" name="gender">
+                      @foreach ($gendertype as $key => $value)
+                        @if ($key == $model->gender)
+                          <option value="{{ $key }}" selected>{{ $value }}</option>
+                        @else
+                          <option value="{{ $key }}">{{ $value }}</option>
+                        @endif
+                      @endforeach
+                    </select>
+                    {{-- <input type="text" class="form-control" name="gender" id="gender"
+                      value="{{ $model->gender }}"> --}}
                   </div>
                 </div>
 
                 <div class="form-row">
                   <div class="form-group">
                     <label for="phone">Điện thoại:</label>
-                    <input type="text" class="form-control" name="phone" id="phone"
-                      value="{{ $model->phone }}">
+                    <input type="text" class="form-control" name="phone" id="phone" value="{{ $model->phone }}">
                   </div>
                   <div class="form-group">
                     <label for="email">Email:</label>
@@ -183,8 +188,7 @@
                   </div>
                   <div class="form-group">
                     <label for="">Điện thoại:</label>
-                    <input type="text" class="form-control" name="" id=""
-                      value="">
+                    <input type="text" class="form-control" name="" id="" value="">
                   </div>
                 </div>
 
@@ -258,8 +262,7 @@
 
             <div class="form-group">
               <label for="confirmnewpassword">Nhập lại mật khẩu mới:</label>
-              <input type="password" class="form-control" name="confirmnewpassword"
-                id="confirmnewpassword">
+              <input type="password" class="form-control" name="confirmnewpassword" id="confirmnewpassword">
             </div>
           </div>
         </div>
