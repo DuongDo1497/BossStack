@@ -23,7 +23,6 @@ class CashPlanStoreRequest extends FormRequest
             'plandate' => 'required',
             'currentage' => 'required',
             'planage' => 'required|gt:currentage',
-            'currentamount' => 'required',
             'requireamount' => 'required',
             'description' => 'required',
         ];
@@ -37,7 +36,6 @@ class CashPlanStoreRequest extends FormRequest
             'plandate.required' => "Bạn chưa nhập ngày lập mục tiêu.",
             'currentage.required' => "Bạn chưa nhập số tuổi hiện tại.",
             'planage.required' => "Bạn chưa nhập số tuổi đạt được mục đích tài chính.",
-            'currentamount.required' => "Bạn chưa nhập vốn đầu tư hiện tại.",
             'requireamount.required' => "Bạn chưa nhập kế hoạch mục tiêu.",
             'planage.gt' => "Tuổi hoàn thành mục tiêu phải lớn hơn tuổi hiện tại.",
         ];
