@@ -73,6 +73,10 @@
                 readonly>
             </div>
             <div class="form-group">
+              <label for="">Phân loại<span>*</span>:</label>
+              <input type="text" class="form-control" name="" id="" value="Cá nhân" readonly>
+            </div>
+            <div class="form-group">
               <label for="">Tên ví tài chính<span>*</span>:</label>
               <input type="text" class="form-control" name="" id="" value="{{ $model->planname }}"
                 readonly>
@@ -242,8 +246,8 @@
                   <thead>
                     <tr>
                       <th>STT</th>
-                      <th>Tháng</th>
-                      <th>Tiền tích lũy cuối tháng</th>
+                      <th>Tuổi</th>
+                      <th>Tiền tích lũy năm</th>
                       <th>Số dư cuối kỳ</th>
                     </tr>
                   </thead>

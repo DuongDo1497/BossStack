@@ -39,7 +39,7 @@
     @include('layouts.partials.messages.success')
   @endif
 
-  <div class="section cashplan-add">
+  <div class="section cashplan-add-11">
     <div class="breadcrumb">
       <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cashplans-index') }}">Thiết lập
         ví tài chính</a> / <span class="current">Thêm
@@ -47,8 +47,8 @@
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
-    <form role="form" action="{{ route('cashplans-process') }}?continue=true" method="post"
-      id="frm" enctype="multipart/form-data">
+    <form role="form" action="{{ route('cashplans-process') }}?continue=true" method="post" id="frm"
+      enctype="multipart/form-data">
       {{ csrf_field() }}
       <input type='hidden' name='typereport' value=''>
       <input type='hidden' name='customer_id' value='{{ $customer_id }}'>
@@ -80,45 +80,59 @@
             <div class="form-group">
               <label for="description">Chi tiết<span>*</span>:</label>
               <input type="text" class="form-control" name="description" id="description"
-                value="{{ old('description') }}" onkeyup="" placeholder="Nhập..." required>
+                value="{{ old('description') }}" placeholder="Nhập...">
+              @if ($errors->has('description'))
+                <span class="text-danger">{{ $errors->first('description') }}</span>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="">Phân loại<span>*</span>:</label>
+              <select class="form-select select2" name="" id="">
+                <option selected>Chọn loại</option>
+                <option value="">Cá nhân</option>
+                <option value="">Gia đình</option>
+                <option value="">Đầu tư</option>
+                <option value="">Kinh doanh</option>
+                <option value="">Dòng tiền khác</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="plandate">Ngày lập<span>*</span>:</label>
               <input type="text" class="form-control" name="plandate" id="plandate"
-                value="{{ old('plandate') == '' ? $plandate : old('plandate') }}" onkeyup=""
-                placeholder="" required>
+                value="{{ old('plandate') == '' ? $plandate : old('plandate') }}" readonly>
             </div>
             <div class="form-group">
               <label for="currentage">Tuổi hiện tại<span>*</span>:</label>
               <input type="text" class="form-control" name="currentage" id="currentage"
                 value="{{ $currentage == null ? old('currentage') : $currentage }}"
-                onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="" required>
+                onkeyup="this.value=formatNumberDecimal(this.value)" readonly>
             </div>
             <div class="form-group">
               <label for="planage">Tuổi hoàn thành mục tiêu<span>*</span>:</label>
               <input type="text" class="form-control" name="planage" id="planage"
-                value="{{ old('planage') == '' ? '' : old('planage') }}" onkeyup=""
-                placeholder="Nhập..." required>
+                value="{{ old('planage') == '' ? '' : old('planage') }}" placeholder="Nhập...">
+              @if ($errors->has('planage'))
+                <span class="text-danger">{{ $errors->first('planage') }}</span>
+              @endif
             </div>
             <div class="form-group">
               <label for="requireamount">Số tiền mục tiêu<span>*</span>:</label>
               <input type="text" class="form-control" name="requireamount" id="requireamount"
-                value="{{ old('requireamount') == '' ? 0 : old('requireamount') }}" onkeyup=""
-                placeholder="" required>
+                value="{{ old('requireamount') == '' ? 0 : old('requireamount') }}"
+                onkeyup="this.value=formatNumberDecimal(this.value)">
             </div>
             <div class="form-group">
               <label for="finishdate">Ngày dự kiến hoàn thành:</label>
-              <input type="text" class="form-control" name="finishdate" id="finishdate"
-                value="" onkeyup="" placeholder="Nhập...">
+              <input type="text" class="form-control" name="finishdate" id="finishdate" value=""
+                placeholder="Nhập...">
             </div>
             <div class="form-group">
               <label for="">Hóa đơn, chứng từ kèm theo:</label>
-              <input type="file" class="form-control" name="fImages" id="" value=""
-                onkeyup="" placeholder="">
+              <input type="file" class="form-control" name="fImages" id="" value="" onkeyup=""
+                placeholder="">
             </div>
           </div>
-          <button type="submit" class="btn btn-primary btn-add">
-            {{-- <img src="{{ asset('img/icon-add.svg') }}" alt=""> --}}
+          <button class="btn btn-primary btn-add" onclick="processReports('frm', 'process')">
             Thêm ví tài chính
           </button>
         </div>
@@ -127,8 +141,8 @@
   </div>
 
   {{-- <div class="row">
-    <form role="form" action="{{ route('cashplans-process') }}?continue=true" method="post"
-      id="frm" enctype="multipart/form-data">
+    <form role="form" action="{{ route('cashplans-process') }}?continue=true" method="post" id="frm"
+      enctype="multipart/form-data">
 
 
       <div class="col-md-12">
@@ -136,10 +150,8 @@
           {{ csrf_field() }}
           <input type='hidden' name='typereport' value=''>
           <input type='hidden' name='customer_id' value='{{ $customer_id }}'>
-          <input type="hidden" name="currentamountunittype" id="currentamountunittype"
-            value="1">
-          <input type="hidden" name="requireamountunittype" id="requireamountunittype"
-            value="1">
+          <input type="hidden" name="currentamountunittype" id="currentamountunittype" value="1">
+          <input type="hidden" name="requireamountunittype" id="requireamountunittype" value="1">
 
           <div class="box-body">
             <font style="font-size:11pt;">Thông tin thiết lập các kế hoạch tài chính của khách hàng.
@@ -179,8 +191,7 @@
                   <label>Chi tiết <small class="text-danger text"> (*)</small>:</label>
                 </div>
                 <div class="col-md-4 col-xs-7">
-                  <input type="text" class="form-control" name="description"
-                    value="{{ old('description') }}">
+                  <input type="text" class="form-control" name="description" value="{{ old('description') }}">
                   @if ($errors->has('description'))
                     <span class="text-danger">{{ $errors->first('description') }}</span>
                   @endif
@@ -226,9 +237,8 @@
                       (*)</small>:</label>
                 </div>
                 <div class="col-md-4 col-xs-7" style="align-self: center;">
-                  <input type="text" class="form-control"
-                    value="{{ old('planage') == '' ? '' : old('planage') }}" name="planage"
-                    id="planage">
+                  <input type="text" class="form-control" value="{{ old('planage') == '' ? '' : old('planage') }}"
+                    name="planage" id="planage">
                   @if ($errors->has('planage'))
                     <span class="text-danger">{{ $errors->first('planage') }}</span>
                   @endif
@@ -267,9 +277,8 @@
                 </div>
                 <div class="col-md-4 col-xs-7" style="align-self: center;">
                   <input type="text" class="form-control"
-                    value="{{ old('currentamount') == '' ? 0 : old('currentamount') }}"
-                    name="currentamount" id="currentamount"
-                    onkeyup='this.value=formatNumberDecimal(this.value)'>
+                    value="{{ old('currentamount') == '' ? 0 : old('currentamount') }}" name="currentamount"
+                    id="currentamount" onkeyup='this.value=formatNumberDecimal(this.value)'>
                 </div>
               </div>
             </div>
@@ -281,9 +290,8 @@
                 </div>
                 <div class="col-md-4 col-xs-7" style="align-self: center;">
                   <input type="text" class="form-control"
-                    value="{{ old('requireamount') == '' ? 0 : old('requireamount') }}"
-                    name="requireamount" id="requireamount"
-                    onkeyup='this.value=formatNumberDecimal(this.value)'>
+                    value="{{ old('requireamount') == '' ? 0 : old('requireamount') }}" name="requireamount"
+                    id="requireamount" onkeyup='this.value=formatNumberDecimal(this.value)'>
                 </div>
               </div>
             </div>
@@ -294,8 +302,7 @@
                   <label>Ngày dự kiến hoàn thành :</label>
                 </div>
                 <div class="col-md-4 col-xs-7">
-                  <input type='text' class="form-control" name="finishdate" id='finishdate'
-                    value="" />
+                  <input type='text' class="form-control" name="finishdate" id='finishdate' value="" />
                 </div>
               </div>
             </div>
@@ -338,8 +345,7 @@
               </div>
             </div>
 
-            <button class="btn btn-success"
-              style="background-color: #ff7f0e; border: 1px solid #ff7f0e;"
+            <button class="btn btn-success" style="background-color: #ff7f0e; border: 1px solid #ff7f0e;"
               onclick="processReports('frm', 'process')">Thêm mục tiêu</button>
 
 

@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('head')
-<link rel="stylesheet" href="{{ asset('css/pages/page/cashplan.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/pages/page/cashplan.css') }}">
 
-{{--
+  {{--
 <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
 
 <style type="text/css">
@@ -54,141 +54,138 @@
 @endsection
 
 @section('content')
-@if (session()->has('success'))
-@include('layouts.partials.messages.success')
-@endif
+  @if (session()->has('success'))
+    @include('layouts.partials.messages.success')
+  @endif
 
-@if (isset($infor))
-@include('layouts.partials.messages.infor')
-@endif
+  @if (isset($infor))
+    @include('layouts.partials.messages.infor')
+  @endif
 
-<div class="section cashplan">
-  <div class="breadcrumb">
-    <span>Quản lý tài khoản</span> / <span class="current">Thiết lập ví tài chính</span>
-  </div>
-  <p class="title-page">{{ $title->heading }}</p>
+  <div class="section cashplan">
+    <div class="breadcrumb">
+      <span>Quản lý tài khoản</span> / <span class="current">Thiết lập ví tài chính</span>
+    </div>
+    <p class="title-page">{{ $title->heading }}</p>
 
-  <div class="box-content">
-    <div class="box box-primary">
-      <div class="noti-index">
-        <div class="noti-index__wrap">
-          <div class="noti-index__item">
-            <p class="title">Số ví tài chính:</p>
-            <p class="number">{{ $collections->count() }}</p>
-          </div>
-          <div class="noti-index__item">
-            <p class="title">Tổng số tiền mục tiêu:</p>
-            <p class="number">{!! formatNumberColor($collections->sum('requireamount'), 1, 0, 0) !!}</p>
-          </div>
-          <div class="noti-index__item">
-            <p class="title">Tổng số tiền đang thực hiện:</p>
-            <p class="number">{!! formatNumberColor($collections->sum('amount'), 1, 0, 1) !!}</p>
-          </div>
-          <div class="noti-index__item">
-            <p class="title">Tổng số tiền còn lại:</p>
-            <p class="number">
-              {!! formatNumberColor($collections->sum('requireamount') - $collections->sum('amount'), 1, 0, 1) !!}
-            </p>
+    <div class="box-content">
+      <div class="box box-primary">
+        <div class="noti-index">
+          <div class="noti-index__wrap">
+            <div class="noti-index__item">
+              <p class="title">Số ví tài chính:</p>
+              <p class="number">{{ $collections->count() }}</p>
+            </div>
+            <div class="noti-index__item">
+              <p class="title">Tổng số tiền mục tiêu:</p>
+              <p class="number">{!! formatNumberColor($collections->sum('requireamount'), 1, 0, 0) !!}</p>
+            </div>
+            <div class="noti-index__item">
+              <p class="title">Tổng số tiền đang thực hiện:</p>
+              <p class="number">{!! formatNumberColor($collections->sum('amount'), 1, 0, 1) !!}</p>
+            </div>
+            <div class="noti-index__item">
+              <p class="title">Tổng số tiền còn lại:</p>
+              <p class="number">
+                {!! formatNumberColor($collections->sum('requireamount') - $collections->sum('amount'), 1, 0, 1) !!}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <a href="{{ route('cashplans-add') }}" class="btn btn-primary btn-add">
-        <img src="{{ asset('img/icon-add.svg') }}" alt="">
-        Thêm ví tài chính
-      </a>
-      <table class="table table-bordered table-list">
-        <thead>
-          <tr>
-            <th>
-              <input type="checkbox" name="" id="">
-            </th>
-            <th>STT</th>
-            <th>Kế hoạch</th>
-            <th>Ví tài chính</th>
-            <th>Ngày lập</th>
-            <th>Số tuổi hiện tại</th>
-            <th>Số tuổi đạt mục tiêu</th>
-            <th>Số tiền mục tiêu</th>
-            <th>Đang thực hiện</th>
-            <th>Còn lại</th>
-            <th>Trạng thái</th>
-          </tr>
-        </thead>
-        <tbody>
-          @if ($collections->count() === 0)
-          <tr>
-            <td colspan="11"><b>Không có dữ liệu!!!</b></td>
-          </tr>
-          @endif
-          @php
-          $i = 1;
-          @endphp
-          @foreach ($collections as $cashplan)
-          <tr>
-            <td>
-              <input type="checkbox" name="" id="">
-            </td>
-            <td class="text-center">{{ $i++ }}</td>
-            <td>
-              {{ $cashplan->description }}
-              @if ($cashplan->document != '')
-              <a style="color: #1b1464;" target="_blank" href="{{ $pathdocument . $cashplan->document }}"
-                title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip" style="margin-right: 10px;"></i></a>
-              @endif
-            </td>
-            <td><a href="{{ route('cashplans-analysis', ['id' => $cashplan->id]) }}">{{ $plantypes[$cashplan->plantype]
-                }}</a>
-            </td>
-            <td class="text-center">
-              {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}</td>
-            <td class="text-center">{{ formatNumber($cashplan->currentage, 1, 0, 0) }}</td>
-            <td class="text-center">{{ formatNumber($cashplan->planage, 1, 0, 0) }}</td>
-            <td class="text-right">{!! formatNumberColor($cashplan->requireamount, 1, 0, 0) !!}</td>
-            <td class="text-right">{!! formatNumberColor($cashplan->amount, 1, 0, 1) !!}</td>
-            <td class="text-right">{!! formatNumberColor($cashplan->requireamount - $cashplan->amount, 1, 0, 1) !!}</td>
-            <td class="text-center">
-              @if ($cashplan->finish == 1)
-              <div class="status status-error">{{ $accountstatustype[$cashplan->finish] }}
-              </div>
-              @else
-              <div class="status status-success">{{ $accountstatustype[$cashplan->finish] }}
-              </div>
-              @endif
-            </td>
-          </tr>
-          @endforeach
-        </tbody>
-      </table>
-      <div class="box-control">
-        <div class="control">
-          <p class="count">4</p>
-          <p class="text">Ví tài chính đang được chọn</p>
-          <a href="#" class="btn btn-export">
-            <img src="{{ asset('img/icon-export.svg') }}" alt="">
-            Xuất file Excel
-          </a>
-          <a href="#" class="btn btn-delete">
-            <img src="{{ asset('img/icon-delete.svg') }}" alt="">
-            Xóa
-          </a>
+        <a href="{{ route('cashplans-add') }}" class="btn btn-primary btn-add">
+          <img src="{{ asset('img/icon-add.svg') }}" alt="">
+          Thêm ví tài chính
+        </a>
+        <table class="table table-bordered table-list">
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" name="" id="">
+              </th>
+              <th>STT</th>
+              <th>Kế hoạch</th>
+              <th>Phân loại</th>
+              <th>Ngày lập</th>
+              <th>Số tuổi đạt mục tiêu</th>
+              <th>Số tiền mục tiêu</th>
+              <th>Đang thực hiện</th>
+              <th>Còn lại</th>
+              <th>Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody>
+            @if ($collections->count() === 0)
+              <tr>
+                <td colspan="10"><b>Không có dữ liệu!!!</b></td>
+              </tr>
+            @endif
+            @php
+              $i = 1;
+            @endphp
+            @foreach ($collections as $cashplan)
+              <tr>
+                <td class="text-center">
+                  <input type="checkbox" name="" id="">
+                </td>
+                <td class="text-center">{{ $i++ }}</td>
+                <td>
+                  <a href="{{ route('cashplans-analysis', ['id' => $cashplan->id]) }}">{{ $cashplan->description }}</a>
+                  @if ($cashplan->document != '')
+                    <a style="color: #1b1464;" target="_blank" href="{{ $pathdocument . $cashplan->document }}"
+                      title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
+                        style="margin-right: 10px;"></i></a>
+                  @endif
+                </td>
+                <td class="text-center">Text</td>
+                <td class="text-center">
+                  {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}</td>
+                <td class="text-center">{{ formatNumber($cashplan->planage, 1, 0, 0) }}</td>
+                <td class="text-right">{!! formatNumberColor($cashplan->requireamount, 1, 0, 0) !!}</td>
+                <td class="text-right">{!! formatNumberColor($cashplan->amount, 1, 0, 1) !!}</td>
+                <td class="text-right">{!! formatNumberColor($cashplan->requireamount - $cashplan->amount, 1, 0, 1) !!}</td>
+                <td class="text-center">
+                  @if ($cashplan->finish == 1)
+                    <div class="status status-error">{{ $accountstatustype[$cashplan->finish] }}
+                    </div>
+                  @else
+                    <div class="status status-success">{{ $accountstatustype[$cashplan->finish] }}
+                    </div>
+                  @endif
+                </td>
+              </tr>
+            @endforeach
+          </tbody>
+        </table>
+        <div class="box-control">
+          <div class="control">
+            <p class="count">4</p>
+            <p class="text">Ví tài chính đang được chọn</p>
+            <a href="#" class="btn btn-export">
+              <img src="{{ asset('img/icon-export.svg') }}" alt="">
+              Xuất file Excel
+            </a>
+            <a href="#" class="btn btn-delete">
+              <img src="{{ asset('img/icon-delete.svg') }}" alt="">
+              Xóa
+            </a>
+          </div>
+          <div class="paging">
+            {{ $collections->links() }}
+          </div>
         </div>
-        <div class="paging">
-          {{ $collections->links() }}
+        <div class="note-content">
+          <p>* Một số lưu ý khi thao tác :</p>
+          <p>- Bạn có thể thiết lập, chỉnh sửa và xem lại các ví tài chính sau khi lập.
+          </p>
+          <p>- Số dư hiện có trong ví tài chính sẽ mặc định được chuyển về ví tổng sau
+            khi bạn thực hiện thao tác xóa ví tài chính.</p>
         </div>
-      </div>
-      <div class="note-content">
-        <p>* Một số lưu ý khi thao tác :</p>
-        <p>- Bạn có thể thiết lập, chỉnh sửa và xem lại các ví tài chính sau khi lập.
-        </p>
-        <p>- Số dư hiện có trong ví tài chính sẽ mặc định được chuyển về ví tổng sau
-          khi bạn thực hiện thao tác xóa ví tài chính.</p>
       </div>
     </div>
+
   </div>
 
-</div>
-
-{{-- <div class="row">
+  {{-- <div class="row">
   <div class="col-xs-12">
     <div class="box">
       <p style="margin-left:5px;margin-top:10px;font-size:11pt;">
@@ -367,5 +364,5 @@
 @endsection
 
 @section('scripts')
-@include('product-manage.cashplan.partials.script')
+  @include('product-manage.cashplan.partials.script')
 @endsection
