@@ -131,6 +131,16 @@ class CashIncomeController extends Controller
 
         //Lay danh sach cac muc thu nhap hoac chi phi
         $this->view->incomestatustype = $request->incomestatustype;
+        if($request->incomestatustype == '0'){
+            $this->view->setHeading('THÊM MỚI THU NHẬP');
+            $this->view->setSubHeading('Thêm mới thu nhập');
+        }
+
+         if($request->incomestatustype == '1'){
+            $this->view->setHeading('THÊM MỚI CHI PHÍ');
+            $this->view->setSubHeading('Thêm mới chi phí');
+        }
+
         $this->view->incometypes = app(ConfigTypeService::class)->getConfigTypeFromType($request->incomestatustype);
 
         //Lay danh sach chi tiet cac muc cua thu nhap hoac chi phi
@@ -150,7 +160,6 @@ class CashIncomeController extends Controller
         $this->view->amount = '';
         $this->view->description = '';
             
-        $this->view->setSubHeading('Tạo mới');
         return $this->view('add');
     }
 

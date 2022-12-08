@@ -59,8 +59,19 @@
         <div class="box box-primary">
           <div class="box-form">
             <div class="form-group">
+              <label for="">Phân loại<span>*</span>:</label>
+              <select class="form-select select2" name="" id="">
+                <option selected>Chọn loại</option>
+                <option value="">Cá nhân</option>
+                <option value="">Gia đình</option>
+                <option value="">Đầu tư</option>
+                <option value="">Kinh doanh</option>
+                <option value="">Dòng tiền khác</option>
+              </select>
+            </div>
+            <div class="form-group">
               <label for="">Mục tiêu<span>*</span>:</label>
-              <select class="form-select select2" name="plantype" id="plantype">
+              <select class="form-select select2" name="plantype" id="plantype" required>
                 @foreach ($plantypes as $key => $value)
                   @if ($key == old('plantype'))
                     <option value="{{ $key }}" selected>{{ $value }}</option>
@@ -80,29 +91,15 @@
             <div class="form-group">
               <label for="description">Chi tiết<span>*</span>:</label>
               <input type="text" class="form-control" name="description" id="description"
-                value="{{ old('description') }}" placeholder="Nhập...">
-              @if ($errors->has('description'))
-                <span class="text-danger">{{ $errors->first('description') }}</span>
-              @endif
+                value="{{ old('description') }}" placeholder="Nhập..." required>
             </div>
             <div class="form-group">
-              <label for="">Phân loại<span>*</span>:</label>
-              <select class="form-select select2" name="" id="">
-                <option selected>Chọn loại</option>
-                <option value="">Cá nhân</option>
-                <option value="">Gia đình</option>
-                <option value="">Đầu tư</option>
-                <option value="">Kinh doanh</option>
-                <option value="">Dòng tiền khác</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="plandate">Ngày lập<span>*</span>:</label>
+              <label for="plandate">Ngày lập:</label>
               <input type="text" class="form-control" name="plandate" id="plandate"
                 value="{{ old('plandate') == '' ? $plandate : old('plandate') }}" readonly>
             </div>
             <div class="form-group">
-              <label for="currentage">Tuổi hiện tại<span>*</span>:</label>
+              <label for="currentage">Tuổi hiện tại:</label>
               <input type="text" class="form-control" name="currentage" id="currentage"
                 value="{{ $currentage == null ? old('currentage') : $currentage }}"
                 onkeyup="this.value=formatNumberDecimal(this.value)" readonly>
@@ -110,16 +107,13 @@
             <div class="form-group">
               <label for="planage">Tuổi hoàn thành mục tiêu<span>*</span>:</label>
               <input type="text" class="form-control" name="planage" id="planage"
-                value="{{ old('planage') == '' ? '' : old('planage') }}" placeholder="Nhập...">
-              @if ($errors->has('planage'))
-                <span class="text-danger">{{ $errors->first('planage') }}</span>
-              @endif
+                value="{{ old('planage') == '' ? '' : old('planage') }}" placeholder="Nhập..." required>
             </div>
             <div class="form-group">
               <label for="requireamount">Số tiền mục tiêu<span>*</span>:</label>
               <input type="text" class="form-control" name="requireamount" id="requireamount"
                 value="{{ old('requireamount') == '' ? 0 : old('requireamount') }}"
-                onkeyup="this.value=formatNumberDecimal(this.value)">
+                onkeyup="this.value=formatNumberDecimal(this.value)" required>
             </div>
             <div class="form-group">
               <label for="finishdate">Ngày dự kiến hoàn thành:</label>

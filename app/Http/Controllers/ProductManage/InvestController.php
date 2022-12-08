@@ -23,7 +23,7 @@ class InvestController extends Controller
         $this->setViewPrefix('product-manage.invest.');
         $this->setRoutePrefix('invests-');
 
-        $this->view->setHeading('ĐẦU TƯ');
+        $this->view->setHeading('KHUYẾN NGHỊ');
     }
 
     /**

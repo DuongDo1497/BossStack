@@ -27,7 +27,7 @@ class CashPlanController extends Controller
         $this->setViewPrefix('product-manage.cashplan.');
         $this->setRoutePrefix('cashplans-');
 
-        $this->view->setHeading('VÍ MỤC TIÊU');
+        $this->view->setHeading('THIẾT LẬP VÍ TÀI CHÍNH');
 
     }
 
@@ -63,6 +63,8 @@ class CashPlanController extends Controller
     public function setViewInit()
     {
         $customer_id = Auth::user()->customer()->first()->id;
+
+        $this->view->setHeading('THÊM VÍ TÀI CHÍNH');
         $this->viewInit($customer_id);
     }
 

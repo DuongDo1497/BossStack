@@ -46,6 +46,8 @@ class CashTranferController extends Controller
     public function setViewInit()
     {
         $customer_id = Auth::user()->customer()->first()->id;
+
+        $this->view->setHeading('CHUYỂN TIỀN');
         $this->viewInit($customer_id);
     }
 
@@ -111,6 +113,7 @@ class CashTranferController extends Controller
         $description = ($request->description == null ? '' : $request->description);
         $this->view->description = $description;
 
+        
         $this->view->setSubHeading('Tạo mới');
         return $this->view('add');
     }

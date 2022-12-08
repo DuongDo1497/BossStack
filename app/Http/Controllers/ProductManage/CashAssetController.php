@@ -164,6 +164,13 @@ class CashAssetController extends Controller
 
         //Lay danh sach cac tai san no hoac co
         $this->view->assetstatustype = $request->assetstatustype;
+        if($request->assetstatustype == '3'){
+            $this->view->setHeading('THÊM MỚI TÀI SẢN NỢ');
+        }
+
+        if($request->assetstatustype == '4'){
+            $this->view->setHeading('THÊM MỚI TÀI SẢN CÓ');
+        }
         $this->view->assettypes = app(ConfigTypeService::class)->getConfigTypeFromType($request->assetstatustype);
 
         //Lay danh sach chi tiet cac muc cua tai san no (3) hoac co (4)

@@ -157,7 +157,7 @@
                 }
               @endphp
               <tr>
-                <td>
+                <td class="text-center">
                   <input type="checkbox" name="" id="">
                 </td>
                 <td class="text-center">{{ $i++ }}</td>

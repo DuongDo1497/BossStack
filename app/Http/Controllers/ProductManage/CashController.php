@@ -27,7 +27,7 @@ class CashController extends Controller
         $this->setViewPrefix('product-manage.cash.');
         $this->setRoutePrefix('cashs-');
 
-        $this->view->setHeading('NHẬP THU CHI VÍ TỔNG');
+        $this->view->setHeading('THU CHI VÍ TỔNG');
 
     }
 
@@ -162,7 +162,7 @@ class CashController extends Controller
             return app(APIAdminService::class)->authorizeRolePage(0); //chuyen den trang thong bao loi truy cap
         } 
         
-        $this->view->setHeading('PHÂN TÍCH DÒNG TIỀN CÁ NHÂN');
+        $this->view->setHeading('BÓC TÁCH DÒNG TIỀN');
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
 
         $currentDate = ($request->currentDate == null ? getCurrentDate('d') : $request->currentDate);
