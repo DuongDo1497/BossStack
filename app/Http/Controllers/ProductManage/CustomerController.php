@@ -572,5 +572,100 @@ class CustomerController extends Controller
             ->route('customers-editCustomer')
             ->with(NotificationMessage::UPDATE_SUCCESS);
     }
+
+    public function dashboardUser()
+    {
+        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
+        $this->view->model = $this->main_service->find($customer_id);
+                
+        $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+
+        $this->view->setHeading('TỔNG QUAN TÀI KHOẢN');
+        $this->view->setSubHeading('Tổng quan tài khoản');
+
+        return $this->view('user.dashboardUser');
+    }
+
+    public function addUser()
+    {
+        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
+        $this->view->model = $this->main_service->find($customer_id);
+                
+        $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+
+        $this->view->setHeading('THÔNG TIN TÀI KHOẢN');
+        $this->view->setSubHeading('Thêm mới');
+
+        return $this->view('user.addUser');
+    }
+
+    public function storeUser(FamilyRelationshipStoreRequest $request)
+    {
+        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
+
+        $result = app(FamilyRelationshipService::class)->createFamilyRelationship($request, $customer_id);
+
+        $message = "";
+        if ($result){
+            $message = "Thông tin đã được cập nhật thành công !";
+        }else{
+            $message = "Lỗi lưu dữ liệu !";
+        }
+        
+        $this->view->infor = $message;
+
+        return redirect()
+            ->route('user.editUser')
+            ->with(NotificationMessage::UPDATE_SUCCESS);
+    }
+
+    public function deleteUser($id)
+    {
+        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
+
+        $result = app(FamilyRelationshipService::class)->delete($id);
+
+        $message = "";
+        if ($result){
+            $message = "Thông tin đã được cập nhật thành công !";
+        }else{
+            $message = "Lỗi lưu dữ liệu !";
+        }
+        
+        $this->view->infor = $message;
+
+        return redirect()
+            ->route('user.editUser')
+            ->with(NotificationMessage::DELETE_SUCCESS);
+    }
+
+    public function editUser($id)
+    {
+        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
+
+               
+        $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+
+        $this->view->setSubHeading('Chỉnh sửa');
+
+        return $this->view('user.editUser');
+    }
+
+    public function updateUser(FamilyRelationshipStoreRequest $request, $id)
+    {
+
+        $message = "";
+        if ($result){
+            $message = "Thông tin đã được cập nhật thành công !";
+        }else{
+            $message = "Lỗi lưu dữ liệu !";
+        }
+        
+        $this->view->infor = $message;
+
+        return redirect()
+            ->route('user.editUser')
+            ->with(NotificationMessage::UPDATE_SUCCESS);
+    }
     
 }

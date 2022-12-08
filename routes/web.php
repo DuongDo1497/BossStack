@@ -231,6 +231,13 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::delete('/deleteFamilyRelationship/{id}', 'CustomerController@deleteFamilyRelationship')->name('customers-deleteFamilyRelationship');
         Route::get('/editFamilyRelationship/{id}', 'CustomerController@editFamilyRelationship')->name('customers-editFamilyRelationship');
         Route::put('/updateFamilyRelationship/{id}', 'CustomerController@updateFamilyRelationship')->name('customers-updateFamilyRelationship');
+
+        Route::get('/dashboardUser', 'CustomerController@dashboardUser')->name('customers-dashboardUser');
+        Route::get('/addUser', 'CustomerController@addUser')->name('customers-addUser');
+        Route::post('/storeUser', 'CustomerController@storeUser')->name('customers-storeUser');
+        Route::delete('/deleteUser/{id}', 'CustomerController@deleteUser')->name('customers-deleteUser');
+        Route::get('/editUser/{id}', 'CustomerController@editUser')->name('customers-editUser');
+        Route::put('/updateUser/{id}', 'CustomerController@updateUser')->name('customers-updateUser');
     });
 
     // Hỗ trợ tư vấn KH
