@@ -29,6 +29,10 @@
   padding: 0;
 }
 
+.chart-tab{
+  display: none;
+}
+
 .spending-history__sort{
   width: calc(30% - 8px);
   display: flex;
@@ -112,4 +116,56 @@
   font-family: hr;
   font-size: 14px;
   color: var(--gray-cl-6);
+}
+
+@media (max-width: 575.98px){
+  .box.box-primary{
+    padding: 16px 0;
+  }
+
+  .spending-history{
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .spending-history__list,
+  .spending-history__sort{
+    width: 100%;
+  }
+
+  .chart-list{
+    display: none;
+  }
+
+  .chart-tab{
+    display: block;
+  }
+
+  .chart-tab .nav-tabs__mobile{
+    margin-bottom: 40px;
+  }
+
+  .spending-history__sort .line{
+    margin: 16px 0;
+  }
+
+  .dashboard-index .filter-timeline{
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .dashboard-index .form-group{
+    /* --w-label: 100%; */
+    width: calc(50% - 8px);
+    /* flex-wrap: wrap; */
+  }
+
+  .dashboard-index .filter-timeline .btn.btn-primary{
+    width: 100%;
+  }
+
+  .my-cash #chart5 .c3-axis-y-label{
+  transform: translate(0, -40px);
+}
 }

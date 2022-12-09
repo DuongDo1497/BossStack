@@ -18,7 +18,7 @@
 }
 
 .banner-home .banner-home__left{
-  max-width: 614px;
+  max-width: 800px;
   color: var(--white-cl);
 }
 
@@ -29,6 +29,19 @@
   text-align: left;
   color: var(--white-cl);
   margin-bottom: 40px;
+}
+
+.banner-home__left .banner-home__title span{
+  display: block;
+  font-family: mm;
+}
+
+.banner-home__left .banner-home__title span:first-child{
+  font-size: 48px;
+}
+
+.banner-home__left .banner-home__title span:last-child{
+  font-size: 42px;
 }
 
 .banner-home__left .banner-home__text{
@@ -87,6 +100,14 @@
     font-size: 39px;
     line-height: 1.5;
   }
+
+  .banner-home__left .banner-home__title span:first-child{
+  font-size: 35px;
+}
+
+.banner-home__left .banner-home__title span:last-child{
+  font-size: 33px;
+}
 
   /* .banner-video video{
     position: relative;

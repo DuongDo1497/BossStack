@@ -14,3 +14,24 @@
 .retireplans .box:last-child .form-group label{
   --w-label: 530px;
 }
+
+@media (max-width: 575.98px){
+  .retireplans .box-form{
+    --w-box-form: 100%;
+  }
+
+  .retireplans .box:first-child .form-group:last-child label,
+  .retireplans .box:last-child .form-group label{
+    --w-label: 50%;
+  }
+
+  .retireplans .box:first-child .form-group:last-child,
+  .retireplans .box:last-child .form-group{
+    justify-content: space-between;
+  }
+
+  .retireplans .btn-analysis{
+    width: 100%;
+    margin-left: 0;
+  }
+}

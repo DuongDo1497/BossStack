@@ -1,0 +1,24 @@
+.customer-user .btn-add{
+  width: 182px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-left: auto;
+  margin-bottom: 24px;
+}
+
+.customer-user .btn-save{
+  width: auto;
+  margin-top: 24px;
+  margin-left: 237px;
+}
+
+.customer-user .relationship{
+  padding: 24px;
+  border-radius: 16px;
+  background-color: var(--gray-cl-1);
+}
+
+.customer-user .relationship .form-group:last-child{
+  margin-bottom: 0;
+}

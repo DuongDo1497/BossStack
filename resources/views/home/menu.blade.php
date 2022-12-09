@@ -18,6 +18,16 @@
     </ul>
   </li>
   <li class="menu-main__item">
+    <a class="menu-main__link" href="{{ asset('package') }}">
+      <span class="text">Gói giải pháp</span>
+    </a>
+  </li>
+  <li class="menu-main__item">
+    <a class="menu-main__link" href="{{ asset('about-us') }}">
+      <span class="text">Về chúng tôi</span>
+    </a>
+  </li>
+  <li class="menu-main__item">
     <a class="menu-main__link" href="#">
       <span class="text">Dịch vụ</span>
       <img class="icon img-fluid" src="{{ asset('img/web/icon-down.svg') }}" alt="icon">
@@ -31,16 +41,6 @@
         <a href="{{ asset('/products/operate-digital') }}">Vận hành số chuyên sâu</a>
       </li>
     </ul>
-  </li>
-  <li class="menu-main__item">
-    <a class="menu-main__link" href="{{ asset('package') }}">
-      <span class="text">Gói giải pháp</span>
-    </a>
-  </li>
-  <li class="menu-main__item">
-    <a class="menu-main__link" href="{{ asset('about-us') }}">
-      <span class="text">Về chúng tôi</span>
-    </a>
   </li>
   <li class="menu-main__item button-control">
     <a href="{{ route('customers-register', ['service_product_id' => 1]) }}"

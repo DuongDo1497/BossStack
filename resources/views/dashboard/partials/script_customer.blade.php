@@ -37,6 +37,9 @@
         sample: 'Thu',
         sample1: 'Chi',
       },
+      selection: {
+        enabled: true
+      }
     },
     color: {
         pattern: ['#979AE9', '#8BD6C5']
@@ -50,7 +53,7 @@
         label:{
           text: 'Thời gian',
           position: 'outer-right'
-        } 
+        },
       },
       y : {
         tick: {
@@ -275,6 +278,137 @@
   });
 
   d3.select("#rptasset3 .c3-chart-arcs-title").append("tspan").attr("dy", 18).attr("x", 0).attr("class", "second-title").text(formatNumberDecimal(total_asset_0-total_asset_1, 0));
+
+@endif
+
+
+@if(isset($collections) and isset($asset_0) and isset($asset_1))
+
+  var listasset = [];
+  var i = 0;
+  var total_asset_0 = 0;        
+  var total_asset_1 = 0;
+  @foreach($asset_0 as $item)
+      listasset[i++] = ['{{ $item['assettypename'] }}', {{ $item['amount'] }}];
+      total_asset_0 += {{ $item['amount'] }};
+  @endforeach
+
+  var width_chart1mb = $('#rptasset1mb').width();
+
+  c3.generate({
+    bindto: '#rptasset1mb',
+    data: {
+      type : 'pie',
+      onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
+      onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
+      onclick: function (d, i) { console.log("onclick", d, i, this); },
+      columns: listasset,
+      colors: {
+        "Nợ Thế Chấp": '#F4BE37',
+        "Nợ Tín Chấp": '#5388D8',
+      }
+    },
+    axis: {
+      x: {
+        label: 'Sepal.Width'
+      },
+      y: {
+        label: 'Petal.Width'
+      }
+    },
+    size: {
+        height: 220,
+        width: width_chart1mb
+    },
+    padding: {
+      right: 50
+    }        
+  });
+
+  var listasset = [];
+  var i = 0;        
+  @foreach($asset_1 as $item)
+      listasset[i++] = ['{{ $item['assettypename'] }}', {{ $item['amount'] }}];
+      total_asset_1 += {{ $item['amount'] }};
+  @endforeach
+
+  var total_account = 0;
+  @foreach($listaccounts as $cashasset)
+      total_account += {{ $cashasset->amount }};
+  @endforeach
+
+  listasset[i++] = ['Ví mục tiêu', total_account];
+  total_asset_1 += total_account;
+
+  var width_chart2mb = $('#rptasset2mb').width();
+
+  c3.generate({
+    bindto: '#rptasset2mb',
+    data: {
+      type : 'pie',
+      onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
+      onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
+      onclick: function (d, i) { console.log("onclick", d, i, this); },
+      columns: listasset,
+      colors: {
+        "Tài Sản Vô Hình": '#F4BE37',
+        "Ví mục tiêu": '#5388D8',
+      }
+    },
+    axis: {
+      x: {
+        label: 'Sepal.Width'
+      },
+      y: {
+        label: 'Petal.Width'
+      }
+    },
+    size: {
+        height: 220,
+        width: width_chart2mb
+    },
+    padding: {
+      right: 50
+    }        
+  });
+
+  var listasset = [
+    ["Nợ", total_asset_0],
+    ["Tài sản", total_asset_1],
+  ];
+
+  var width_chart3mb = $('#rptasset3mb').width();
+
+  c3.generate({
+    bindto: '#rptasset3mb',
+    data: {
+      type: 'donut',
+      onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
+      onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
+      onclick: function (d, i) { console.log("onclick", d, i, this); },
+      columns: listasset,
+      colors: {
+        "Nợ": '#F4BE37',
+        "Tài sản": '#5388D8',
+      }
+    },
+    donut: {
+        title: "Tổng tài sản thực",
+        label: {
+          show: false 
+        },
+        width: 25,
+    },
+    size: {
+        height: 220,
+        width: width_chart3mb
+    },
+    padding: {
+      right: 50
+    }        
+  });
+
+  d3.select("#rptasset3mb .c3-chart-arcs-title").append("tspan").attr("dy", 18).attr("x", 0).attr("class", "second-title").text(formatNumberDecimal(total_asset_0-total_asset_1, 0));
 
 @endif
 

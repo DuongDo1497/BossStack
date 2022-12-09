@@ -128,17 +128,11 @@ h6{
 .btn-bg-blue {
   background-color: #1b1464 !important;
   border: 1px solid #1b1464 !important;
-}   
-
-@media only screen and (min-width: 426px) and (max-width: 1024px) {
-  .content-wrapper {
-    background-size: 65%;
-  }
 }
 
-@media only screen and (max-width: 425px) {
-  .content-wrapper {
-    background-size: 100%;
+@media (max-width: 575.98px) {
+  .content-wrapper{
+    margin-left: 0 !important;
   }
 }
 
@@ -187,13 +181,9 @@ h6{
   max-width: 100%;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media (max-width: 767.98px) {
   .skin-blue .main-header .navbar {
     background-color: #fff;
-  }
-
-  .sidebar-open .main-header .navbar {
-    margin-left: 230px;
   }
 
   .main-header .navbar-static-top .sidebar-toggle,
@@ -224,6 +214,31 @@ h6{
 
   .navbar-custom-menu .navbar-nav li.notifications-menu .dropdown-menu {
     right: 0;
+  }
+}
+
+@media (max-width: 575.98px){
+  .skin-blue .main-header .navbar{
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar-open .main-header .navbar {
+    margin-left: 241px;
+  }
+
+  .skin-blue .main-header .title-page{
+    font-size: 16px;
+    font-family: hm;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .skin-blue .main-header .title-page::before{
+    display: none;
   }
 }
 
@@ -479,11 +494,19 @@ h6{
   color: #fff !important;
 }
 
-@media only screen and (max-width: 768px) {
-  .sidebar-open .main-sidebar {
-    position: fixed;
-    overflow-y: auto;
-    padding-top: 0 !important;
+@media (max-width: 575.98px){
+  .skin-blue .main-sidebar{
+    -webkit-transform: translate(-241px,0);
+    -ms-transform: translate(-241px,0);
+    -o-transform: translate(-241px,0);
+    transform: translate(-241px,0);
+  }
+
+  .skin-blue.sidebar-open .content-wrapper{
+    -webkit-transform: translate(241px,0);
+    -ms-transform: translate(241px,0);
+    -o-transform: translate(241px,0);
+    transform: translate(241px,0);
   }
 }
 

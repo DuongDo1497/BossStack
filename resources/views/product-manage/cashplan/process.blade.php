@@ -115,7 +115,7 @@
         </div>
 
         <div class="box box-primary">
-          <ul class="nav nav-tabs">
+          <ul class="nav nav-tabs nav-tabs__mobile">
             <li class="active"><a data-toggle="tab" href="#rptchart">Biểu đồ</a></li>
             <li><a data-toggle="tab" href="#schedulemonth">Kế hoạch tích lũy tháng</a></li>
             <li><a data-toggle="tab" href="#scheduleyear">Kế hoạch tích lũy năm</a></li>

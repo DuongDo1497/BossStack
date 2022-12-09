@@ -62,7 +62,7 @@
     @include('layouts.partials.messages.infor')
   @endif
 
-  <div class="section cashplan">
+  <div class="section cashplan-index">
     <div class="breadcrumb">
       <span>Quản lý tài khoản</span> / <span class="current">Thiết lập ví tài chính</span>
     </div>
@@ -96,66 +96,71 @@
           <img src="{{ asset('img/icon-add.svg') }}" alt="">
           Thêm ví tài chính
         </a>
-        <table class="table table-bordered table-list">
-          <thead>
-            <tr>
-              <th>
-                <input type="checkbox" name="" id="">
-              </th>
-              <th>STT</th>
-              <th>Kế hoạch</th>
-              <th>Phân loại</th>
-              <th>Ngày lập</th>
-              <th>Số tuổi đạt mục tiêu</th>
-              <th>Số tiền mục tiêu</th>
-              <th>Đang thực hiện</th>
-              <th>Còn lại</th>
-              <th>Trạng thái</th>
-            </tr>
-          </thead>
-          <tbody>
-            @if ($collections->count() === 0)
-              <tr>
-                <td colspan="10"><b>Không có dữ liệu!!!</b></td>
-              </tr>
-            @endif
-            @php
-              $i = 1;
-            @endphp
-            @foreach ($collections as $cashplan)
-              <tr>
-                <td class="text-center">
-                  <input type="checkbox" name="" id="">
-                </td>
-                <td class="text-center">{{ $i++ }}</td>
-                <td>
-                  <a href="{{ route('cashplans-analysis', ['id' => $cashplan->id]) }}">{{ $cashplan->description }}</a>
-                  @if ($cashplan->document != '')
-                    <a style="color: #1b1464;" target="_blank" href="{{ $pathdocument . $cashplan->document }}"
-                      title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
-                        style="margin-right: 10px;"></i></a>
-                  @endif
-                </td>
-                <td class="text-center">Text</td>
-                <td class="text-center">
-                  {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}</td>
-                <td class="text-center">{{ formatNumber($cashplan->planage, 1, 0, 0) }}</td>
-                <td class="text-right">{!! formatNumberColor($cashplan->requireamount, 1, 0, 0) !!}</td>
-                <td class="text-right">{!! formatNumberColor($cashplan->amount, 1, 0, 1) !!}</td>
-                <td class="text-right">{!! formatNumberColor($cashplan->requireamount - $cashplan->amount, 1, 0, 1) !!}</td>
-                <td class="text-center">
-                  @if ($cashplan->finish == 1)
-                    <div class="status status-error">{{ $accountstatustype[$cashplan->finish] }}
-                    </div>
-                  @else
-                    <div class="status status-success">{{ $accountstatustype[$cashplan->finish] }}
-                    </div>
-                  @endif
-                </td>
-              </tr>
-            @endforeach
-          </tbody>
-        </table>
+        <div class="table-wrap">
+          <div class="table-content">
+            <table class="table table-bordered table-list">
+              <thead>
+                <tr>
+                  <th class="text-center fixed fixed-1">
+                    <input type="checkbox" name="" id="">
+                  </th>
+                  <th class="fixed fixed-2">STT</th>
+                  <th class="fixed fixed-3">Kế hoạch</th>
+                  <th>Phân loại</th>
+                  <th>Ngày lập</th>
+                  <th>Số tuổi đạt mục tiêu</th>
+                  <th>Số tiền mục tiêu</th>
+                  <th>Đang thực hiện</th>
+                  <th>Còn lại</th>
+                  <th>Trạng thái</th>
+                </tr>
+              </thead>
+              <tbody>
+                @if ($collections->count() === 0)
+                  <tr>
+                    <td colspan="10"><b>Không có dữ liệu!!!</b></td>
+                  </tr>
+                @endif
+                @php
+                  $i = 1;
+                @endphp
+                @foreach ($collections as $cashplan)
+                  <tr>
+                    <td class="text-center fixed fixed-1">
+                      <input type="checkbox" name="" id="">
+                    </td>
+                    <td class="text-center fixed fixed-2">{{ $i++ }}</td>
+                    <td class="fixed fixed-3">
+                      <a
+                        href="{{ route('cashplans-analysis', ['id' => $cashplan->id]) }}">{{ $cashplan->description }}</a>
+                      @if ($cashplan->document != '')
+                        <a style="color: #1b1464;" target="_blank" href="{{ $pathdocument . $cashplan->document }}"
+                          title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
+                            style="margin-right: 10px;"></i></a>
+                      @endif
+                    </td>
+                    <td class="text-center">Text</td>
+                    <td class="text-center">
+                      {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}</td>
+                    <td class="text-center">{{ formatNumber($cashplan->planage, 1, 0, 0) }}</td>
+                    <td class="text-right">{!! formatNumberColor($cashplan->requireamount, 1, 0, 0) !!}</td>
+                    <td class="text-right">{!! formatNumberColor($cashplan->amount, 1, 0, 1) !!}</td>
+                    <td class="text-right">{!! formatNumberColor($cashplan->requireamount - $cashplan->amount, 1, 0, 1) !!}</td>
+                    <td class="text-center">
+                      @if ($cashplan->finish == 1)
+                        <div class="status status-error">{{ $accountstatustype[$cashplan->finish] }}
+                        </div>
+                      @else
+                        <div class="status status-success">{{ $accountstatustype[$cashplan->finish] }}
+                        </div>
+                      @endif
+                    </td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
+        </div>
         <div class="box-control">
           <div class="control">
             <p class="count">4</p>

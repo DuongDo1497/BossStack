@@ -32,7 +32,7 @@
                 quyết định, bóc tách dòng tiền, chuyển đổi vận hành, kiểm soát thất thoát và phát
                 triển dữ liệu khách hàng.</p>
               <p>Mỗi giải pháp của BossStack chuyên sâu đều mang tính thực thi từ vận hành đến tài
-                chính tạo nên bức tranh tổng thể doanh nghiệp sáng rõ và hiệu quả, giúp chủ doanh
+                chính tạo nên bức tranh tổng thể doanh nghiệp minh bạch và hiệu quả, giúp chủ doanh
                 nghiệp thực sự giải phóng <b>"bản thân"</b> ra khỏi <b>"business"</b> của mình.</p>
             </div>
           </div>
@@ -41,8 +41,7 @@
         <div class="introduction-slogan">
           <div class="introduction-slogan__item">
             <h3 class="title">
-              <img class="img-fluid" src="{{ asset('img/web/introduction-icon-1.svg') }}"
-                alt="Sứ mệnh">
+              <img class="img-fluid" src="{{ asset('img/web/introduction-icon-1.svg') }}" alt="Sứ mệnh">
               Sứ mệnh
             </h3>
             <p class="text">BossStack đồng hành, thực thi và mang đến hiệu quả tối ưu giúp chủ doanh
@@ -50,8 +49,7 @@
           </div>
           <div class="introduction-slogan__item">
             <h3 class="title">
-              <img class="img-fluid" src="{{ asset('img/web/introduction-icon-2.svg') }}"
-                alt="Tầm nhìn">
+              <img class="img-fluid" src="{{ asset('img/web/introduction-icon-2.svg') }}" alt="Tầm nhìn">
               Tầm nhìn
             </h3>
             <p class="text">Chuyển đổi số ngành tài chính, phát triển nền tảng tài chính vững chắc
@@ -68,21 +66,20 @@
         <h4 class="section-title">Thành phần ban lãnh đạo</h4>
         <div class="leadership-list">
           <div class="leadership-item">
-            <img class="img-fluid leadership-avt" src="{{ asset('img/web/leadership-1.jpg') }}"
-              alt="avatar">
+            <img class="img-fluid leadership-avt" src="{{ asset('img/web/leadership-1.jpg') }}" alt="avatar">
             <div class="leadership-info">
               <h5 class="name">
                 Chau Pham
                 <a href="https://www.linkedin.com/in/chau-pham-5b8941248/">
-                  <img class="img-fluid leadership-social"
-                    src="{{ asset('img/web/linkedin-icon.svg') }}" alt="icon linkedin">
+                  <img class="img-fluid leadership-social" src="{{ asset('img/web/linkedin-icon.svg') }}"
+                    alt="icon linkedin">
                 </a>
               </h5>
               <h6 class="position">CEO/Founder</h6>
               <div class="exp">
                 <p><b>2015 - hiện tại:</b> Chủ sở hữu, Nhà sáng lập và Giám đốc <b>BOSSSTACK</b>.</p>
                 <p><b>2014 - hiện tại:</b> Chủ sở hữu, Nhà sáng lập và Giám đốc <b>RBOOKS</b>.</p>
-                <p>Hơn <b>15 năm</b> kinh nghiệm trong ngành tài chính, đầu tư. Trong đó:</p>
+                <p>Hơn <b>15 năm</b> kinh nghiệm trong ngành tài chính. Trong đó:</p>
                 <ul>
                   <li>Hơn <b>10 năm</b> kinh nghiệm trong ngành ngân hàng.</li>
                   <li><b>2012-2017:</b> Giám đốc PGD, Phó Giám đốc Chi nhánh.</li>
@@ -91,17 +88,16 @@
             </div>
           </div>
           <div class="leadership-item reverse">
-            <img class="img-fluid leadership-avt" src="{{ asset('img/web/leadership-2.jpg') }}"
-              alt="avatar">
+            <img class="img-fluid leadership-avt" src="{{ asset('img/web/leadership-2.jpg') }}" alt="avatar">
             <div class="leadership-info">
               <h5 class="name">
                 Tu Nguyen
                 <a href="#">
-                  <img class="img-fluid leadership-social"
-                    src="{{ asset('img/web/linkedin-icon.svg') }}" alt="icon linkedin">
+                  <img class="img-fluid leadership-social" src="{{ asset('img/web/linkedin-icon.svg') }}"
+                    alt="icon linkedin">
                 </a>
               </h5>
-              <h6 class="position">Cố Vấn Tài Chính </h6>
+              <h6 class="position">Cố Vấn Cấp Cao</h6>
               <div class="exp">
                 <p><b>2019 – Hiện tại</b>: Giám Đốc Điều Hành V LOTUS</p>
                 <p>Công ty chuyên về thực phẩm và đồ uống với chuỗi nhà hàng cao cấp và các chuỗi
@@ -135,17 +131,16 @@
             </div>
           </div>
           <div class="leadership-item">
-            <img class="img-fluid leadership-avt" src="{{ asset('img/web/leadership-3.jpg') }}"
-              alt="avatar">
+            <img class="img-fluid leadership-avt" src="{{ asset('img/web/leadership-3.jpg') }}" alt="avatar">
             <div class="leadership-info">
               <h5 class="name">
                 Huong Le
                 <a href="#">
-                  <img class="img-fluid leadership-social"
-                    src="{{ asset('img/web/linkedin-icon.svg') }}" alt="icon linkedin">
+                  <img class="img-fluid leadership-social" src="{{ asset('img/web/linkedin-icon.svg') }}"
+                    alt="icon linkedin">
                 </a>
               </h5>
-              <h6 class="position">Kế Toán Trưởng</h6>
+              <h6 class="position">Giám đốc tài chính</h6>
               <div class="exp">
                 <p><b>Tháng 11/2018 - Hiện tại</b>: Kế toán trưởng kiêm Giám đốc Tài chính
                 </p>
@@ -217,8 +212,7 @@
             </div>
           </div>
         </div>
-        <img class="img-fluid history-tree" src="{{ asset('img/web/history-tree.png') }}"
-          alt="circle background" />
+        <img class="img-fluid history-tree" src="{{ asset('img/web/history-tree.png') }}" alt="circle background" />
       </div>
     </div>
   </div>

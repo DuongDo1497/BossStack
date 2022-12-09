@@ -184,7 +184,7 @@ function formatNumberColor($value, $type=0, $num_decimal_places=2, $show_zero=1,
         }
     }
 
-    $sb = "<div class='$bgcolor'>" . $indent . " " . $sb . "</div>";
+    $sb = "<span class='$bgcolor'>" . $indent . " " . $sb . "</span>";
 
     return $sb;
 }

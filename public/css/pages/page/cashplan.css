@@ -1,4 +1,4 @@
-.cashplan .btn-add,
+.cashplan-index .btn-add,
 .cashplan-analysis .btn-add{
   width: 182px;
   display: flex;
@@ -32,4 +32,104 @@
 .cashplan-analysis .chart-body #chart .c3-legend-item{
   font-family: hr;
   font-size: 14px;
+}
+
+@media (max-width: 575.98px){
+  .cashplan-index .noti-index__wrap,
+  .cashplan-analysis .noti-index__wrap{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cashplan-index .table-wrap .table-content{
+    width: calc(100% - 192px); 
+    margin-left: 192px;
+    margin-right: 0;
+  }
+
+  .cashplan-index .table-wrap table td:not(.fixed){
+    background-color: var(--gray-cl-3);
+  }
+
+  .cashplan-index .table-wrap table .fixed:first-child{
+    width: 32px;
+  }
+
+  .cashplan-index .table-wrap table .fixed:nth-child(2){
+    width: 39px;
+  }
+
+  .cashplan-index .table-wrap table .fixed-2 {
+    left: 32px; 
+  }
+
+  .cashplan-index .table-wrap table .fixed-3 {
+    left: 71px; 
+  }
+
+  .cashplan-analysis .box-primary:last-child{
+    padding: 16px 24px;
+  }
+
+  .nav-tabs__mobile{
+    margin-bottom: 24px;
+  }
+
+  .nav-tabs__mobile::before,
+  .nav-tabs__mobile::after{
+    display: none;
+  }
+
+  .nav-tabs__mobile li{
+    --w-tabs: calc(100% / 3);
+    width: calc(var(--w-tabs) - 8px);
+    flex-grow: 1;
+  }
+
+  .nav-tabs__mobile li a{
+    text-align: center;
+  }
+
+  .tab-pane__body{
+    padding: 0;
+  }
+
+  .noti-index__wrap{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+    background-color: transparent;
+  }
+
+  .noti-index__item{
+    flex-grow: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 8px;
+    border-radius: 8px;
+    border-right: 0;
+    background-color: #F1F8FB;
+  }
+
+  .noti-index__item:first-child{
+    padding-left: 8px;
+    background-color: var(--bg-cyan-cl);
+  }
+
+  .cashplan-analysis .noti-index__item:first-child{
+    width: 100%;
+  }
+
+  .noti-index__item:last-child{
+    padding: 8px;
+  }
+
+  .noti-index__item p{
+    text-align: center;
+    display: inline-block;
+  }
+
+  .cashplan-analysis .chart-body{
+    padding: 16px 0;
+  }
 }

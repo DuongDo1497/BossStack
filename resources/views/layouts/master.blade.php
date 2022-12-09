@@ -27,8 +27,7 @@
     href="{{ asset('bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}">
   <link rel="stylesheet" href="{{ asset('bower_components/bootstrap-daterangepicker/daterangepicker.css') }}">
   <link rel="stylesheet" href="{{ asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('bower_components/select2/dist/css/select2.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('plugins/iCheck/all.css') }}">
+
   <link rel="stylesheet" href="{{ asset('css/common.css') }}">
   <link rel="stylesheet" href="{{ asset('css/web/font.css') }}">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -46,11 +45,13 @@
   <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
 
   @yield('head')
+
+  <link rel="stylesheet" href="{{ asset('bower_components/select2/dist/css/select2.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('plugins/iCheck/all.css') }}">
   <link rel="stylesheet" href="{{ asset('dist/css/AdminLTE.min.css') }}">
 
   <script src="{{ asset('js/jquery.min.js') }}"></script>
   <script src="{{ asset('js/jquery.tabledit.js') }}"></script>
-
   <script src="{{ asset('bower_components/ckeditor/ckeditor.js') }}"></script>
   <script src="{{ asset('bower_components/ckeditor/ckfinder/ckfinder.js') }}"></script>
 
@@ -65,22 +66,23 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
-    <header class="main-header" style="display: none;">
+    <header class="main-header">
       <!-- Header Navbar: style can be found in header.less -->
-      <nav class="navbar-desktop">
+      {{-- <nav class="navbar-desktop">
         <div class="navbar-custom-menu">
           @include('layouts.partials.navigations.top')
         </div>
-      </nav>
+      </nav> --}}
 
       <nav class="navbar navbar-mobile navbar-static-top">
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
           <i class="fa fa-bars" aria-hidden="true"></i>
           <span class="sr-only">Toggle navigation</span>
         </a>
-        <div class="navbar-custom-menu">
+        <p class="title-page">{{ $title->heading }}</p>
+        {{-- <div class="navbar-custom-menu">
           @include('layouts.partials.navigations.top')
-        </div>
+        </div> --}}
       </nav>
     </header>
     <!-- Left side column. contains the logo and sidebar -->
@@ -282,16 +284,13 @@
 
   <script src="{{ asset('bower_components/raphael/raphael.min.js') }}"></script>
   <script src="{{ asset('bower_components/morris.js/morris.min.js') }}"></script>
-  <script src="{{ asset('bower_components/jquery-sparkline/dist/jquery.sparkline.min.js') }}">
-  </script>
+  <script src="{{ asset('bower_components/jquery-sparkline/dist/jquery.sparkline.min.js') }}"></script>
   <script src="{{ asset('plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
   <script src="{{ asset('plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
   <script src="{{ asset('bower_components/jquery-knob/dist/jquery.knob.min.js') }}"></script>
   <script src="{{ asset('bower_components/moment/min/moment.min.js') }}"></script>
-  <script src="{{ asset('bower_components/bootstrap-daterangepicker/daterangepicker.js') }}">
-  </script>
-  <script src="{{ asset('bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js') }}">
-  </script>
+  <script src="{{ asset('bower_components/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+  <script src="{{ asset('bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js') }}"></script>
   <script src="{{ asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
   <script src="{{ asset('bower_components/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
   <script src="{{ asset('bower_components/fastclick/lib/fastclick.js') }}"></script>
@@ -322,8 +321,7 @@
 
   <script src="{{ asset('bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.vi.min.js') }}">
   </script>
-  <script
-    src="{{ asset('bower_components/bootstrap-datetimepicker-master/build/js/bootstrap-datetimepicker.min.js') }}">
+  <script src="{{ asset('bower_components/bootstrap-datetimepicker-master/build/js/bootstrap-datetimepicker.min.js') }}">
   </script>
   <link rel="stylesheet"
     href="{{ asset('bower_components/bootstrap-datetimepicker-master/build/css/bootstrap-datetimepicker.min.css') }}" />

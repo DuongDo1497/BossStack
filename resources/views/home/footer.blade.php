@@ -33,16 +33,6 @@
       </div>
 
       <div class="footer-item">
-        <p class="footer-item__title">Dịch vụ</p>
-        <div class="footer-item__content">
-          <ul>
-            <li><a href="{{ asset('/products/data-convert') }}">Chuyển đổi dữ liệu</a></li>
-            <li><a href="{{ asset('/products/operate-digital') }}">Vận hành số chuyên sâu</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-item">
         <p class="footer-item__title">Gói giải pháp</p>
         <div class="footer-item__content">
           <ul>
@@ -58,6 +48,16 @@
             <li><a href="{{ asset('about-us') }}">Về BossStack</a></li>
             <li><a href="{{ asset('term') }}">Điều khoản sử dụng</a></li>
             <li><a href="{{ asset('contact') }}">Liên hệ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-item">
+        <p class="footer-item__title">Dịch vụ</p>
+        <div class="footer-item__content">
+          <ul>
+            <li><a href="{{ asset('/products/data-convert') }}">Chuyển đổi dữ liệu</a></li>
+            <li><a href="{{ asset('/products/operate-digital') }}">Vận hành số chuyên sâu</a></li>
           </ul>
           <div class="footer-item__social">
             <a href="https://www.facebook.com/bossstack.vn">

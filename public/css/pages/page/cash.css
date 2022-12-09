@@ -288,3 +288,42 @@
 #assessment .tab-pane__body tbody td:last-child .status-error{
   background-color: #BC2C22;
 }
+
+@media (max-width: 575.98px){
+  .cash-index .filter-timeline{
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .cash-index .form-group{
+    width: 50%;
+  }
+
+  .cash-index .filter-timeline .btn-search{
+    width: 100%;
+  }
+
+  .spending-history{
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .spending-history__list, 
+  .spending-history__sort{
+    width: 100%;
+  }
+
+  .spending-history__sort .line{
+    margin: 16px 0;
+  }
+
+  .chart-list{
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .tab-pane__body .chart-item{
+    width: 100%;
+  }
+}
