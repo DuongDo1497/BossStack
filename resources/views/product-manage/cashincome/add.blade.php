@@ -154,12 +154,12 @@
               <label for="amount">Số tiền<span>*</span>:</label>
               <input type="text" class="form-control" name="amount" id="amount"
                 value="{{ old('amount') == '' ? $amount : old('amount') }}"
-                onkeyup="this.value=formatNumberDecimal(this.value)" required>
+                onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
             </div>
             <div class="form-group">
               <label for="description">Ghi chú:</label>
               <input type="text" class="form-control" name="description" id="description"
-                value="{{ old('description') == '' ? $description : old('description') }}">
+                value="{{ old('description') == '' ? $description : old('description') }}" placeholder="Nhập...">
             </div>
             <div class="form-group">
               <label for="fImages">Hóa đơn chứng từ kèm theo:</label>

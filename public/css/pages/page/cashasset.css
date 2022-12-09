@@ -31,3 +31,20 @@
   margin-top: 24px;
   margin-left: 237px;
 }
+
+@media (max-width: 575.98px){
+  .cashasset-index .noti-index__wrap{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cashasset-index .chart-list{
+    --chart-count: 1;
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .cashasset-index .box-search .control{
+    justify-content: flex-end;
+  }
+}

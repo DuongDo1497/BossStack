@@ -237,6 +237,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::post('/storeUser', 'CustomerController@storeUser')->name('customers-storeUser');
         Route::delete('/deleteUser/{id}', 'CustomerController@deleteUser')->name('customers-deleteUser');
         Route::get('/editUser/{id}', 'CustomerController@editUser')->name('customers-editUser');
+        Route::get('/inforUser/{id}', 'CustomerController@inforUser')->name('customers-inforUser');
         Route::put('/updateUser/{id}', 'CustomerController@updateUser')->name('customers-updateUser');
     });
 

@@ -1,5 +1,9 @@
-.cashincome .box-search .control{
+.cashincome-index .box-search .control{
   width: 100%;
+}
+
+.cashincome-index .table-wrap tr:last-child th:first-child{
+  display: none;
 }
 
 .cashincome-add .btn-save,
@@ -7,4 +11,55 @@
   width: auto;
   margin-top: 24px;
   margin-left: 237px;
+}
+
+@media (max-width: 575.98px){
+  .cashincome-add .btn-save,
+  .cashincome-edit .btn-save{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .cashincome-index .noti-index__wrap{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cashincome-index .table-wrap .table-content{
+    width: calc(100% - 192px); 
+    margin-left: 192px;
+    margin-right: 0;
+  }
+
+  .cashincome-index .table-wrap table th.fixed{
+    height: 102px;
+  }
+
+  .cashincome-index .table-wrap tr:first-child th:last-child{
+    width: 275px;
+  }
+
+  .cashincome-index .table-wrap table td{
+    height: 108px;
+  }
+
+  .cashincome-index .table-wrap table td:not(.fixed){
+    background-color: var(--gray-cl-3);
+  }
+
+  .cashincome-index .table-wrap table .fixed:first-child{
+    width: 32px;
+  }
+
+  .cashincome-index .table-wrap table .fixed:nth-child(2){
+    width: 39px;
+  }
+
+  .cashincome-index .table-wrap table .fixed-2 {
+    left: 32px; 
+  }
+
+  .cashincome-index .table-wrap table .fixed-3 {
+    left: 71px; 
+  }
 }

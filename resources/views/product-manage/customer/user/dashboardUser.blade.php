@@ -58,7 +58,7 @@
               </td>
               <td class="text-center">1</td>
               <td>
-                <a href="#">Nguyễn Văn A</a>
+                <a href="{{ route('customers-updateUser', ['id' => 0]) }}">Nguyễn Văn A</a>
               </td>
               <td class="text-center">Dì</td>
               <td class="text-center">24/11/1991</td>

@@ -94,39 +94,8 @@
     padding: 0;
   }
 
-  .noti-index__wrap{
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 8px;
-    background-color: transparent;
-  }
-
-  .noti-index__item{
-    flex-grow: 1;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 8px;
-    border-radius: 8px;
-    border-right: 0;
-    background-color: #F1F8FB;
-  }
-
-  .noti-index__item:first-child{
-    padding-left: 8px;
-    background-color: var(--bg-cyan-cl);
-  }
-
   .cashplan-analysis .noti-index__item:first-child{
     width: 100%;
-  }
-
-  .noti-index__item:last-child{
-    padding: 8px;
-  }
-
-  .noti-index__item p{
-    text-align: center;
-    display: inline-block;
   }
 
   .cashplan-analysis .chart-body{

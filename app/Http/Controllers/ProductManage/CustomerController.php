@@ -651,6 +651,19 @@ class CustomerController extends Controller
         return $this->view('user.editUser');
     }
 
+    public function inforUser($id)
+    {
+        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
+
+               
+        $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+
+        $this->view->setHeading('THÔNG TIN USER CON');
+        // $this->view->setSubHeading('Chỉnh sửa');
+
+        return $this->view('user.inforUser');
+    }
+
     public function updateUser(FamilyRelationshipStoreRequest $request, $id)
     {
 
