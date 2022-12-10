@@ -238,6 +238,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::delete('/deleteUser/{id}', 'CustomerController@deleteUser')->name('customers-deleteUser');
         Route::get('/editUser/{id}', 'CustomerController@editUser')->name('customers-editUser');
         Route::get('/inforUser/{id}', 'CustomerController@inforUser')->name('customers-inforUser');
+        Route::get('/indexUser', 'CustomerController@indexUser')->name('customers-indexUser');
         Route::put('/updateUser/{id}', 'CustomerController@updateUser')->name('customers-updateUser');
     });
 
@@ -353,6 +354,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
     // Tinh so tien nghi huu
     Route::group(['prefix' => 'retireplans'], function (){
         Route::get('/', 'RetirePlanController@index')->name('retireplans-index');
+        Route::get('/indexProfit', 'RetirePlanController@indexProfit')->name('retireplans-profit');
         Route::post('/process', 'RetirePlanController@process')->name('retireplans-process');
     });
 

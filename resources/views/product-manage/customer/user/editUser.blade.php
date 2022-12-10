@@ -13,10 +13,10 @@
     @include('layouts.partials.messages.infor')
   @endif
 
-  <div class="section customer-user">
+  <div class="section customer-user__edit">
     <div class="breadcrumb">
-      <span>Quản lý user</span> / <span>Tổng quan user - Gia đình</span> / <span>Thông tin user</span> / <span
-        class="current">Chỉnh sửa</span>
+      <span>Quản lý user</span> / <span>Tổng quan user</span> / <span>Thông tin user</span> / <span class="current">Chỉnh
+        sửa</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
@@ -50,37 +50,42 @@
               <option value="">Kinh doanh</option>
             </select>
           </div>
-          <div class="relationship">
-            <div class="form-group">
-              <label for="">Mối quan hệ<span>*</span>:</label>
-              <select class="form-select select2" name="" id="">
-                <option selected>Chọn loại</option>
-                <option value="">Gia đình</option>
-                <option value="">Kinh doanh</option>
-              </select>
-            </div>
+          <div class="form-group">
+            <label for="">Mối quan hệ<span>*</span>:</label>
+            <select class="form-select select2" name="" id="">
+              <option selected>Chọn loại</option>
+              <option value="">Gia đình</option>
+              <option value="">Kinh doanh</option>
+            </select>
+          </div>
 
-            <div class="form-group">
-              <label for="">Phân quyền<span>*</span>:</label>
-              <select class="form-select select2" name="" id="">
-                <option selected>Chọn loại</option>
-                <option value="">Gia đình</option>
-                <option value="">Kinh doanh</option>
-              </select>
-            </div>
+          <div class="form-group">
+            <label for="">Phân quyền<span>*</span>:</label>
+            <select class="form-select select2" name="" id="">
+              <option selected>Chọn loại</option>
+              <option value="">Gia đình</option>
+              <option value="">Kinh doanh</option>
+            </select>
+          </div>
 
-            <div class="form-group">
-              <label for=""></label>
-              <div class="form-text">
-                <input type="checkbox" name="" id="">
-                Người phụ thuộc
-              </div>
+          <div class="form-group">
+            <label for=""></label>
+            <div class="form-text">
+              <input type="checkbox" name="" id="">
+              Người phụ thuộc
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-save">
-          Tạo user
-        </button>
+        <div class="box-search">
+          <div class="control">
+            <a href="{{ route('customers-dashboardUser') }}" class="btn btn-primary btn-cancel">
+              Hủy bỏ
+            </a>
+            <button type="submit" class="btn btn-primary btn-save">
+              Lưu
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-.customer-user .btn-add{
+.customer-user__dashboard .btn-add{
   width: 182px;
   display: flex;
   align-items: center;
@@ -7,18 +7,30 @@
   margin-bottom: 24px;
 }
 
-.customer-user .btn-save{
+.customer-user__add .btn-save,
+.customer-user__edit .control,
+.customer-user__info .control{
   width: auto;
   margin-top: 24px;
   margin-left: 237px;
 }
 
-.customer-user .relationship{
+.customer-user__add .relationship{
   padding: 24px;
   border-radius: 16px;
   background-color: var(--gray-cl-1);
 }
 
-.customer-user .relationship .form-group:last-child{
+.customer-user__add .relationship .form-group:last-child{
   margin-bottom: 0;
+}
+
+.customer-user__info .control .btn-edit,
+.customer-user__edit .control .btn-cancel{
+  color: #1890FF;
+  background-color: transparent;
+}
+
+.customer-user__edit .control .btn-cancel{
+  width: auto;
 }

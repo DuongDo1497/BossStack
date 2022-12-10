@@ -13,7 +13,7 @@
     @include('layouts.partials.messages.infor')
   @endif
 
-  <div class="section customer-user">
+  <div class="section customer-user__dashboard">
     <div class="breadcrumb">
       <span>Quản lý user</span> / <span class="current">Tổng quan user</span>
     </div>
@@ -24,11 +24,11 @@
         <div class="noti-index">
           <div class="noti-index__wrap">
             <div class="noti-index__item">
-              <p class="title">Số ví tài chính:</p>
+              <p class="title">Số user con:</p>
               <p class="number">15</p>
             </div>
             <div class="noti-index__item">
-              <p class="title">Tổng số tiền mục tiêu:</p>
+              <p class="title">Số người phụ thuộc:</p>
               <p class="number">10</p>
             </div>
           </div>
@@ -45,6 +45,7 @@
               </th>
               <th>STT</th>
               <th>Họ tên</th>
+              <th>Nội dung</th>
               <th>Mối quan hệ</th>
               <th>Ngày sinh</th>
               <th>Người phụ thuộc</th>
@@ -58,8 +59,9 @@
               </td>
               <td class="text-center">1</td>
               <td>
-                <a href="{{ route('customers-updateUser', ['id' => 0]) }}">Nguyễn Văn A</a>
+                <a href="{{ route('customers-inforUser', ['id' => 0]) }}">Nguyễn Văn A</a>
               </td>
+              <td class="text-center">Thu - chi</td>
               <td class="text-center">Dì</td>
               <td class="text-center">24/11/1991</td>
               <td class="text-center">
@@ -75,6 +77,7 @@
               <td>
                 <a href="#">Nguyễn Văn A</a>
               </td>
+              <td class="text-center">Tiết kiệm</td>
               <td class="text-center">Dì</td>
               <td class="text-center">24/11/1991</td>
               <td class="text-center">

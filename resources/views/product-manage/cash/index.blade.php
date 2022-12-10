@@ -140,7 +140,11 @@
                           <p>{{ ConvertSQLDate($cashincome->transactiondate) }}</p>
                           <p>{{ $cashincome->content }}</p>
                         </td>
-                        <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 1, 3) !!}</td>
+                        @if ($cashincome->incomestatustype == 0)
+                          <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 0, 0) !!}</td>
+                        @elseif ($cashincome->incomestatustype == 1)
+                          <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 0, 3) !!}</td>
+                        @endif
                       </tr>
                     @endforeach
                   </tbody>
