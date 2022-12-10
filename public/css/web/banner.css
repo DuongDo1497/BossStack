@@ -116,6 +116,18 @@
 }
 
 @media (max-width: 575.98px){
+  .banner-home__left .banner-home__title{
+    font-size: 31px;
+  }
+
+  .banner-home__left .banner-home__title span:first-child{
+    font-size: 28px;
+  }
+
+  .banner-home__left .banner-home__title span:last-child{
+    font-size: 25px;
+  }
+
   .banner-home__left .banner-home__text br{
     display: none;
   }
