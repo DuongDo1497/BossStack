@@ -201,5 +201,19 @@ class RetirePlanController extends Controller
         
         return $this->view('index');
     }
+
+
+    public function indexProfit()
+    {
+        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
+        $this->view->model = $this->main_service->find($customer_id);
+                
+        $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+
+        $this->view->setHeading('TÍNH LỢI NHUẬN KINH DOANH');
+        $this->view->setSubHeading('Thêm mới');
+
+        return $this->view('indexProfit');
+    }
          
 }
