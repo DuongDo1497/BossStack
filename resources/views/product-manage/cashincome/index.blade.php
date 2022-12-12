@@ -95,7 +95,8 @@
                   <th colspan="2">Số tiền</th>
                 </tr>
                 <tr>
-                  <th></th>
+                  <th class="draft"></th>
+                  <th class="draft"></th>
                   <th>Thu nhập</th>
                   <th>Chi phí</th>
                 </tr>

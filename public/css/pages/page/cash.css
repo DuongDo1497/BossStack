@@ -416,6 +416,11 @@
     row-gap: 16px;
   }
 
+  .cash-index .control .btn{
+    font-size: 14px;
+    column-gap: 5px;
+  }
+
   .cash-index .form-group{
     width: 50%;
   }
@@ -436,6 +441,15 @@
 
   .spending-history__sort .line{
     margin: 16px 0;
+  }
+
+  .spending-history__table .table-list tbody tr td, 
+  .spending-history__sort .table-list tbody tr td{
+    width: 50%;
+  }
+
+  .cash-index .nav-tabs li a{
+    font-size: 14px;
   }
 
   .chart-list{

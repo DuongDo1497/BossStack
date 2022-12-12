@@ -36,8 +36,10 @@
 
       <div class="box-content">
         <div class="box box-primary">
-          <p class="box-des">Thông tin ví tiền, số dư dùng để quản lý dòng tiền cá nhân. Để xem lại thông tin chi
-            tiết các ví tiền vui lòng xem <a href="{{ route('cashaccounts-index') }}">[tại đây]</a></p>
+          {{-- <p class="box-des">Thông tin ví tiền, số dư dùng để quản lý dòng tiền cá nhân. Để xem lại thông tin chi
+            tiết các ví tiền vui lòng xem <a href="{{ route('cashaccounts-index') }}">[tại đây]</a></p> --}}
+
+          <p class="box-des">Thông tin ví tiền, số dư dùng để quản lý dòng tiền cá nhân.</p>
 
           <div class="box-form">
             <div class="form-group">
@@ -114,7 +116,7 @@
                               ' - ' .
                               $item->accountname .
                               "
-                                                          (Số dư: " .
+                                                                                    (Số dư: " .
                               formatNumber($item->amount, 1, 0, 1) .
                               ')' }}
                         </option>
@@ -124,7 +126,7 @@
                               ' - ' .
                               $item->accountname .
                               "
-                                                          (Kế hoạch: " .
+                                                                                    (Kế hoạch: " .
                               formatNumber($item->requireamount, 1, 0, 0) .
                               ', Số dư: ' .
                               formatNumber($item->amount, 1, 0, 1) .

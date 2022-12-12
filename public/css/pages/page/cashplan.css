@@ -67,6 +67,11 @@
     left: 71px; 
   }
 
+  .cashplan-add  .btn-add{
+    width: 100%;
+    margin-left: 0;
+  }
+
   .cashplan-analysis .box-primary:last-child{
     padding: 16px 24px;
   }

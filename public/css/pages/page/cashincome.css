@@ -2,6 +2,10 @@
   width: 100%;
 }
 
+.cashincome-index .table-wrap tr th.draft{
+  display: none;
+}
+
 .cashincome-index .table-wrap tr:last-child th:first-child{
   display: none;
 }
@@ -25,6 +29,11 @@
     padding-right: 0;
   }
 
+  .cashincome-index .control .btn{
+    font-size: 14px;
+    column-gap: 5px;
+  }
+
   .cashincome-index .table-wrap .table-content{
     width: calc(100% - 192px); 
     margin-left: 192px;
@@ -33,6 +42,10 @@
 
   .cashincome-index .table-wrap table th.fixed{
     height: 102px;
+  }
+
+  .cashincome-index .table-wrap tr th.draft{
+    display: inline-table;
   }
 
   .cashincome-index .table-wrap tr:first-child th:last-child{

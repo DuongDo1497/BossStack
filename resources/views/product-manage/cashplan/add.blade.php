@@ -39,7 +39,7 @@
     @include('layouts.partials.messages.success')
   @endif
 
-  <div class="section cashplan-add-11">
+  <div class="section cashplan-add">
     <div class="breadcrumb">
       <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cashplans-index') }}">Thiết lập
         ví tài chính</a> / <span class="current">Thêm

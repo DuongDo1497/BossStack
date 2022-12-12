@@ -47,4 +47,11 @@
   .cashasset-index .box-search .control{
     justify-content: flex-end;
   }
+
+  .cashasset-add .btn-save,
+  .cashasset-edit .btn-save{
+    width: 100%;
+    margin-top: 24px;
+    margin-left: 0;
+  }
 }
