@@ -34,3 +34,54 @@
 .customer-user__edit .control .btn-cancel{
   width: auto;
 }
+
+@media (max-width: 575.98px){
+  .customer-user__dashboard .table-wrap .table-content{
+    width: calc(100% - 192px); 
+    margin-left: 192px;
+    margin-right: 0;
+  }
+
+  .table-wrap table th.fixed{
+    height: 40px;
+  }
+
+  .customer-user__dashboard .table-wrap table td:not(.fixed){
+    background-color: var(--gray-cl-3);
+  }
+
+  .customer-user__dashboard .table-wrap table .fixed:first-child{
+    width: 32px;
+  }
+
+  .customer-user__dashboard .table-wrap table .fixed:nth-child(2){
+    width: 39px;
+  }
+
+  .customer-user__dashboard .table-wrap table .fixed-2 {
+    left: 32px; 
+  }
+
+  .customer-user__dashboard .table-wrap table .fixed-3 {
+    left: 71px; 
+  }
+
+  .customer-user__add .btn-save, 
+  .customer-user__edit .control, 
+  .customer-user__info .control{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .customer-user__edit .control, 
+  .customer-user__info .control{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 8px;
+  }
+
+  .customer-user__info .control .btn-primary,
+  .customer-user__edit .control .btn-primary{
+    width: 100%;
+  }
+}

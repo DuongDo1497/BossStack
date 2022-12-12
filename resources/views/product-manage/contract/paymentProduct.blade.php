@@ -31,13 +31,13 @@
                   <div class="payment-option__header">
                     <div class="form-group">
                       <input class="form-check-input" type="radio" name="ord_payment_method" value="0"
-                        checked="checked" id="paymentDirect" data-bs-toggle="collapse" href="#payment-direct">
+                        id="paymentDirect" data-toggle="collapse" href="#payment-direct" data-parent="#accordion-parent">
                       <label class="form-check-label" for="paymentDirect"></label>
                     </div>
                     <img class="img-fluid payment-icon" src="{{ asset('img/web/payment-icon-1.svg') }}" alt="">
                     <p class="text">Thanh toán trực tiếp tại văn phòng BossStack</p>
                   </div>
-                  <div class="payment-option__body collapse" id="payment-direct" data-bs-parent="#accordion-parent">
+                  <div class="payment-option__body collapse" id="payment-direct">
                     <div class="content">
                       <p class="title-big">CÔNG TY TNHH LAM MINH ANH</p>
                       <p>
@@ -58,13 +58,14 @@
                   <div class="payment-option__header">
                     <div class="form-group">
                       <input class="form-check-input" type="radio" name="ord_payment_method" value="1"
-                        id="paymentTranfer" data-bs-toggle="collapse" href="#payment-tranfer">
+                        id="paymentTranfer" data-toggle="collapse" href="#payment-tranfer"
+                        data-parent="#accordion-parent">
                       <label class="form-check-label" for="paymentTranfer"></label>
                     </div>
                     <img class="img-fluid payment-icon" src="{{ asset('img/web/payment-icon-2.svg') }}" alt="">
                     <p class="text">Thanh toán chuyển khoản ngân hàng</p>
                   </div>
-                  <div class="payment-option__body collapse" id="payment-tranfer" data-bs-parent="#accordion-parent">
+                  <div class="payment-option__body collapse" id="payment-tranfer">
                     <div class="content">
                       <div class="paragraph">
                         <p class="title-big">Bước 1:</p>

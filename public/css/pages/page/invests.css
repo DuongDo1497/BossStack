@@ -141,3 +141,20 @@
   font-family: hm;
   margin: 0 auto 16px;
 }
+
+@media (max-width: 575.98px){
+  .news-item,
+  .single-post__content, 
+  .single-post__slogan{
+    width: 100%;
+  }
+
+  .single-post{
+    padding: 0;
+  }
+
+  .single-post__tag{
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

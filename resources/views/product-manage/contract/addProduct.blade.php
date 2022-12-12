@@ -22,13 +22,13 @@
     <form role="form" action="{{ route('contracts-storeProduct') }}?continue=true" method="post" id="frm">
       {{ csrf_field() }}
       <input type='hidden' name='typereport' value=''>
+      <input type='hidden' name='service_product_id' value='{{ $service_product_id }}'>
+      <input type='hidden' name='producttypes_numtime' value='{{ $producttypes_numtime }}'>
+      <input type='hidden' name='producttypes_discount' value='{{ $producttypes_discount }}'>
+      <input type='hidden' name='producttypes_amount' value='{{ $producttypes_amount }}'>
       <div class="box-content">
         <div class="box box-primary">
           <div class="service-info__table">
-            <input type='hidden' name='service_product_id' value='{{ $service_product_id }}'>
-            <input type='hidden' name='producttypes_numtime' value='{{ $producttypes_numtime }}'>
-            <input type='hidden' name='producttypes_discount' value='{{ $producttypes_discount }}'>
-            <input type='hidden' name='producttypes_amount' value='{{ $producttypes_amount }}'>
             <table class="table">
               <thead>
                 <tr>
@@ -54,7 +54,35 @@
               </tfoot>
             </table>
           </div>
+          <div class="service-info__list">
+            <div class="box-form">
+              <div class="form-group">
+                <label>Dịch vụ</label>
+                <p class="form-text"><b>Gói {{ $service_product_name }}</b></p>
+              </div>
+              <div class="form-group">
+                <label>Thời hạn</label>
+                <p class="form-text"><b>{{ $producttypes_numtime }} tháng</b></p>
+              </div>
+              <div class="form-group">
+                <label>Giảm giá</label>
+                <p class="form-text"><b>{{ $producttypes_discount }}%</b></p>
+              </div>
+              <div class="form-group">
+                <label>Số tiền thanh toán</label>
+                <p class="form-text"><b>{{ formatNumber($producttypes_amount, 1, 0, 0) }} đồng</b></p>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="box-form">
+              <div class="form-group">
+                <label>Tổng</label>
+                <p class="form-text"><b>{{ formatNumber($producttypes_amount, 1, 0, 0) }} đồng</b></p>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
 
       <button class="btn btn-primary btn-pay" onclick="processReports('frm', 'store')">

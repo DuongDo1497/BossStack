@@ -37,56 +37,60 @@
           <img src="{{ asset('img/icon-add.svg') }}" alt="">
           Tạo user mới
         </a>
-        <table class="table table-bordered table-list">
-          <thead>
-            <tr>
-              <th>
-                <input type="checkbox" name="" id="">
-              </th>
-              <th>STT</th>
-              <th>Họ tên</th>
-              <th>Nội dung</th>
-              <th>Mối quan hệ</th>
-              <th>Ngày sinh</th>
-              <th>Người phụ thuộc</th>
-              <th>Ngày lập</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-center">
-                <input type="checkbox" name="" id="">
-              </td>
-              <td class="text-center">1</td>
-              <td>
-                <a href="{{ route('customers-inforUser', ['id' => 0]) }}">Nguyễn Văn A</a>
-              </td>
-              <td class="text-center">Thu - chi</td>
-              <td class="text-center">Dì</td>
-              <td class="text-center">24/11/1991</td>
-              <td class="text-center">
-                <img src="{{ asset('img/icon-success.svg') }}" alt="">
-              </td>
-              <td class="text-center">24/11/2022</td>
-            </tr>
-            <tr>
-              <td class="text-center">
-                <input type="checkbox" name="" id="">
-              </td>
-              <td class="text-center">1</td>
-              <td>
-                <a href="#">Nguyễn Văn A</a>
-              </td>
-              <td class="text-center">Tiết kiệm</td>
-              <td class="text-center">Dì</td>
-              <td class="text-center">24/11/1991</td>
-              <td class="text-center">
-                <img src="{{ asset('img/icon-error.svg') }}" alt="">
-              </td>
-              <td class="text-center">24/11/2022</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-wrap">
+          <div class="table-content">
+            <table class="table table-bordered table-list">
+              <thead>
+                <tr>
+                  <th class="fixed fixed-1">
+                    <input type="checkbox" name="" id="">
+                  </th>
+                  <th class="fixed fixed-2">STT</th>
+                  <th class="fixed fixed-3">Họ tên</th>
+                  <th>Nội dung</th>
+                  <th>Mối quan hệ</th>
+                  <th>Ngày sinh</th>
+                  <th>Người phụ thuộc</th>
+                  <th>Ngày lập</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center fixed fixed-1">
+                    <input type="checkbox" name="" id="">
+                  </td>
+                  <td class="text-center fixed fixed-2">1</td>
+                  <td class="fixed fixed-3">
+                    <a href="{{ route('customers-inforUser', ['id' => 0]) }}">Nguyễn Văn A</a>
+                  </td>
+                  <td class="text-center">Thu - chi</td>
+                  <td class="text-center">Dì</td>
+                  <td class="text-center">24/11/1991</td>
+                  <td class="text-center">
+                    <img src="{{ asset('img/icon-success.svg') }}" alt="">
+                  </td>
+                  <td class="text-center">24/11/2022</td>
+                </tr>
+                <tr>
+                  <td class="text-center fixed fixed-1">
+                    <input type="checkbox" name="" id="">
+                  </td>
+                  <td class="text-center fixed fixed-2">2</td>
+                  <td class="fixed fixed-3">
+                    <a href="{{ route('customers-inforUser', ['id' => 0]) }}">Nguyễn Văn A</a>
+                  </td>
+                  <td class="text-center">Thu - chi</td>
+                  <td class="text-center">Dì</td>
+                  <td class="text-center">24/11/1991</td>
+                  <td class="text-center">
+                    <img src="{{ asset('img/icon-success.svg') }}" alt="">
+                  </td>
+                  <td class="text-center">24/11/2022</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
         <div class="box-control">
           <div class="control">
             <p class="count">4</p>

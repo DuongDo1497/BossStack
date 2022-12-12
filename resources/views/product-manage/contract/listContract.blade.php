@@ -33,81 +33,85 @@
 
     <div class="box-content">
       <div class="box box-primary">
-        <table class="table table-bordered table-list">
-          <thead>
-            <tr>
-              <th>
-                <input type="checkbox" name="" id="">
-              </th>
-              <th>STT</th>
-              <th>Mã đơn hàng</th>
-              <th>Tên dịch vụ</th>
-              <th>Thời gian tạo</th>
-              <th>Thanh toán</th>
-              <th>Tình trạng</th>
-            </tr>
-          </thead>
-          <tbody>
-            @if ($collections->count() === 0)
-              <tr>
-                <td colspan="7"><b>Không có dữ liệu!!!</b></td>
-              </tr>
-            @endif
-            @php
-              $i = 1;
-            @endphp
-            @foreach ($collections as $contract)
-              <tr>
-                <td>
-                  <input type="checkbox" name="" id="">
-                </td>
-                <td class="text-center">{{ $i++ }}</td>
-                <td><a
-                    href="{{ route('contracts-detailContract', ['id' => $contract->id]) }}">{{ $contract->contractno }}</a>
-                </td>
-                <td>
-                  <ul>
-                    <li><b>Gói:</b> {{ $contract->service_product_name }}
-                      ({{ formatNumber($contract->service_product_price, 1, 0, 1) }} đồng/tháng)
-                    </li>
-                    <li><b>Thời hạn:</b> {{ formatNumber($contract->term, 1, 0, 1) }} tháng, giảm
-                      {{ formatNumber($contract->discount, 1, 0, 1) }} %</li>
-                    <li><b>Số tiền:</b> {{ formatNumber($contract->amount, 1, 0, 1) }} đồng</li>
-                    <li><b>Thời gian từ:</b>
-                      {{ $contract->contractdate == null ? '' : ConvertSQLDate($contract->contractdate) }}
-                      -
-                      {{ ($contract->lastcontractdate == null or $contract->contractdate == $contract->lastcontractdate) ? 'Không thời hạn' : ConvertSQLDate($contract->lastcontractdate) }}
-                    </li>
-                  </ul>
-                </td>
-                <td class="text-center">
-                  {{ $contract->created_at == null ? '' : ConvertSQLDate($contract->created_at, 1) }}
-                </td>
-                <td class="text-center">
-                  @if ($contract->service_product_price != 0)
-                    @if ($contract->payment == null or $contract->payment == '0')
-                      <div class="status status-error">{{ $paymenttype[0] }}</div>
-                    @elseif($contract->payment == '1')
-                      <div class="status status-success">{{ $paymenttype[1] }}</div>
-                    @endif
-                  @endif
-                </td>
-                <td class="text-center">
-                  @if ($contract->contractstatustype == 1)
-                    <div class="status status-warning">
-                      {{ $contractstatustype[$contract->contractstatustype] }}</div>
-                  @elseif($contract->contractstatustype == 2)
-                    <div class="status status-success">
-                      {{ $contractstatustype[$contract->contractstatustype] }}</div>
-                  @else
-                    <div class="status status-error">
-                      {{ $contractstatustype[$contract->contractstatustype] }}</div>
-                  @endif
-                </td>
-              </tr>
-            @endforeach
-          </tbody>
-        </table>
+        <div class="table-wrap">
+          <div class="table-content">
+            <table class="table table-bordered table-list">
+              <thead>
+                <tr>
+                  <th class="fixed fixed-1">
+                    <input type="checkbox" name="" id="">
+                  </th>
+                  <th class="fixed fixed-2">STT</th>
+                  <th class="fixed fixed-3">Mã đơn hàng</th>
+                  <th>Tên dịch vụ</th>
+                  <th>Thời gian tạo</th>
+                  <th>Thanh toán</th>
+                  <th>Tình trạng</th>
+                </tr>
+              </thead>
+              <tbody>
+                @if ($collections->count() === 0)
+                  <tr>
+                    <td colspan="7"><b>Không có dữ liệu!!!</b></td>
+                  </tr>
+                @endif
+                @php
+                  $i = 1;
+                @endphp
+                @foreach ($collections as $contract)
+                  <tr>
+                    <td class="fixed fixed-1">
+                      <input type="checkbox" name="" id="">
+                    </td>
+                    <td class="text-center fixed fixed-2">{{ $i++ }}</td>
+                    <td class="fixed fixed-3"><a
+                        href="{{ route('contracts-detailContract', ['id' => $contract->id]) }}">{{ $contract->contractno }}</a>
+                    </td>
+                    <td>
+                      <ul>
+                        <li><b>Gói:</b> {{ $contract->service_product_name }}
+                          ({{ formatNumber($contract->service_product_price, 1, 0, 1) }} đồng/tháng)
+                        </li>
+                        <li><b>Thời hạn:</b> {{ formatNumber($contract->term, 1, 0, 1) }} tháng, giảm
+                          {{ formatNumber($contract->discount, 1, 0, 1) }} %</li>
+                        <li><b>Số tiền:</b> {{ formatNumber($contract->amount, 1, 0, 1) }} đồng</li>
+                        <li><b>Thời gian từ:</b>
+                          {{ $contract->contractdate == null ? '' : ConvertSQLDate($contract->contractdate) }}
+                          -
+                          {{ ($contract->lastcontractdate == null or $contract->contractdate == $contract->lastcontractdate) ? 'Không thời hạn' : ConvertSQLDate($contract->lastcontractdate) }}
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="text-center">
+                      {{ $contract->created_at == null ? '' : ConvertSQLDate($contract->created_at, 1) }}
+                    </td>
+                    <td class="text-center">
+                      @if ($contract->service_product_price != 0)
+                        @if ($contract->payment == null or $contract->payment == '0')
+                          <div class="status status-error">{{ $paymenttype[0] }}</div>
+                        @elseif($contract->payment == '1')
+                          <div class="status status-success">{{ $paymenttype[1] }}</div>
+                        @endif
+                      @endif
+                    </td>
+                    <td class="text-center">
+                      @if ($contract->contractstatustype == 1)
+                        <div class="status status-warning">
+                          {{ $contractstatustype[$contract->contractstatustype] }}</div>
+                      @elseif($contract->contractstatustype == 2)
+                        <div class="status status-success">
+                          {{ $contractstatustype[$contract->contractstatustype] }}</div>
+                      @else
+                        <div class="status status-error">
+                          {{ $contractstatustype[$contract->contractstatustype] }}</div>
+                      @endif
+                    </td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
+        </div>
         <div class="box-control">
           <div class="control">
             <p class="count">4</p>

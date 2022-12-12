@@ -69,6 +69,34 @@
               </tfoot>
             </table>
           </div>
+
+          <div class="service-info__list">
+            <div class="box-form">
+              <div class="form-group">
+                <label>Dịch vụ</label>
+                <p class="form-text"><b>Gói {{ $model->service_product_name }}</b></p>
+              </div>
+              <div class="form-group">
+                <label>Thời hạn</label>
+                <p class="form-text"><b>{{ $model->term }} tháng</b></p>
+              </div>
+              <div class="form-group">
+                <label>Giảm giá</label>
+                <p class="form-text"><b>{{ $model->discount }}%</b></p>
+              </div>
+              <div class="form-group">
+                <label>Số tiền thanh toán</label>
+                <p class="form-text"><b>{{ formatNumber($model->amount, 1, 0, 1) }} đồng</b></p>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="box-form">
+              <div class="form-group">
+                <label>Tổng</label>
+                <p class="form-text"><b>{{ formatNumber($model->amount, 1, 0, 1) }} đồng</b></p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="box box-primary">
