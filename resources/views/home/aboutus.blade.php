@@ -97,7 +97,7 @@
                     alt="icon linkedin">
                 </a>
               </h5>
-              <h6 class="position">Cố Vấn Cấp Cao</h6>
+              <h6 class="position">Cố vấn cấp cao</h6>
               <div class="exp">
                 <p><b>2019 – Hiện tại</b>: Giám Đốc Điều Hành V LOTUS</p>
                 <p>Công ty chuyên về thực phẩm và đồ uống với chuỗi nhà hàng cao cấp và các chuỗi
@@ -196,7 +196,7 @@
             <div class="feature">
               <h6>Phát triển tính năng:</h6>
               <p>- Bóc tách Dòng tiền</p>
-              <p>- Thực thi Dòng tiền Chuyên sâu</p>
+              <p>- Thực thi Dòng tiền Doanh nghiệp</p>
             </div>
           </div>
 

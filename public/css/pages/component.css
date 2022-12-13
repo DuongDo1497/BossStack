@@ -671,7 +671,7 @@
 }
 
 .overview-page__item a{
-  width: 195px;
+  width: 162px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -692,6 +692,7 @@
 }
 
 .overview-page__item .text{
+  text-align: center;
   color: var(--gray-cl-7);
 }
 

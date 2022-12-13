@@ -98,14 +98,14 @@
               <span class="text">Kiểm soát thất thoát</span>
             </div>
             <div class="why-bs__item">
-              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-3.svg') }}"
-                alt="Theo kịp xu hướng chuyển đổi số">
-              <span class="text">Theo kịp xu hướng chuyển đổi số</span>
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-7.svg') }}"
+                alt="Gia tăng chất lượng dữ liệu Tối ưu hóa chi phí">
+              <span class="text">Tối ưu hóa chi phí</span>
             </div>
             <div class="why-bs__item">
               <img class="img-fluid icon" src="{{ asset('img/web/why-icon-4.svg') }}"
                 alt="Gia tăng chất lượng dữ liệu Tối ưu hóa chi phí">
-              <span class="text">Gia tăng chất lượng dữ liệu Tối ưu hóa chi phí</span>
+              <span class="text">Gia tăng chất lượng dữ liệu</span>
             </div>
             <div class="why-bs__item">
               <img class="img-fluid icon" src="{{ asset('img/web/why-icon-5.svg') }}"
@@ -116,6 +116,11 @@
               <img class="img-fluid icon" src="{{ asset('img/web/why-icon-6.svg') }}"
                 alt="Tự động hóa quy trình quản lý để giải phóng chủ doanh nghiệp">
               <span class="text">Tự động hóa quy trình quản lý để giải phóng chủ doanh nghiệp</span>
+            </div>
+            <div class="why-bs__item">
+              <img class="img-fluid icon" src="{{ asset('img/web/why-icon-3.svg') }}"
+                alt="Theo kịp xu hướng chuyển đổi số">
+              <span class="text">Theo kịp xu hướng chuyển đổi số</span>
             </div>
           </div>
         </div>

@@ -35,6 +35,15 @@
             <div class="overview-page__item">
               <a href="{{ route('retireplans-index') }}">
                 <span class="icon">
+                  <i class="fa fa-line-chart"></i>
+                </span>
+                <span class="text">Tính lợi nhuận kinh doanh</span>
+              </a>
+            </div>
+
+            <div class="overview-page__item">
+              <a href="{{ route('retireplans-index') }}">
+                <span class="icon">
                   <i class="fa fa-pie-chart"></i>
                 </span>
                 <span class="text">Tính số tiền nghỉ hưu</span>
