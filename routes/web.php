@@ -232,6 +232,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::get('/editFamilyRelationship/{id}', 'CustomerController@editFamilyRelationship')->name('customers-editFamilyRelationship');
         Route::put('/updateFamilyRelationship/{id}', 'CustomerController@updateFamilyRelationship')->name('customers-updateFamilyRelationship');
 
+        Route::get('/dashboardMain', 'CustomerController@dashboardMain')->name('customers-dashboardMain');
         Route::get('/dashboardUser', 'CustomerController@dashboardUser')->name('customers-dashboardUser');
         Route::get('/addUser', 'CustomerController@addUser')->name('customers-addUser');
         Route::post('/storeUser', 'CustomerController@storeUser')->name('customers-storeUser');

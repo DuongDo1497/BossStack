@@ -573,6 +573,18 @@ class CustomerController extends Controller
             ->with(NotificationMessage::UPDATE_SUCCESS);
     }
 
+    public function dashboardMain()
+    {
+        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
+        $this->view->model = $this->main_service->find($customer_id);
+                
+        $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+
+        $this->view->setHeading('TỔNG QUAN');
+
+        return $this->view('user.dashboardMain');
+    }
+
     public function dashboardUser()
     {
         $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
