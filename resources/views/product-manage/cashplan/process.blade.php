@@ -77,7 +77,7 @@
                 readonly>
             </div>
             <div class="form-group">
-              <label for="">Tên ví tài chính<span>*</span>:</label>
+              <label for="">Tên dòng tiền<span>*</span>:</label>
               <input type="text" class="form-control" name="" id="" value="{{ $model->planname }}"
                 readonly>
             </div>
