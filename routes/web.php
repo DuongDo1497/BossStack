@@ -359,7 +359,6 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::post('/process', 'RetirePlanController@process')->name('retireplans-process');
     });
 
-
     // Quan ly tai san no, co
     Route::group(['prefix' => 'cashassets'], function (){
         Route::get('/', 'CashAssetController@index')->name('cashassets-index');
@@ -433,58 +432,6 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::put('/sendMail/{id}', 'CouponController@sendMail')->name('coupons-sendMail');
     });
 
-});
-
-// Quản lý tài chính
-Route::group(['namespace' => 'FinancialManage', 'middleware' => ['auth','web','checkauth']], function() {
-
-    // Doanh thu
-    Route::group(['prefix' => 'revenues'], function (){
-        Route::get('/', 'RevenueController@index')->name('revenues-index');
-        Route::get('/add', 'RevenueController@add')->name('revenues-add');
-        Route::post('/store', 'RevenueController@store')->name('revenues-store');
-        Route::get('/edit/{id}', 'RevenueController@edit')->name('revenues-edit');
-        Route::put('/update/{id}', 'RevenueController@update')->name('revenues-update');
-        Route::delete('/delete/{id}', 'RevenueController@delete')->name('revenues-delete');
-        Route::get('/export/{id}', 'RevenueController@export')->name('revenues-export');
-
-        Route::get('/revenues-net', 'RevenueController@net')->name('revenues-net');
-        Route::get('/receivables-debt', 'RevenueController@receivable')->name('receivables-debt');
-    });
-
-    // Chi phí tổng
-    Route::group(['prefix' => 'costs'], function (){
-        Route::get('/', 'CostController@index')->name('costs-index');
-        Route::get('/add', 'CostController@add')->name('costs-add');
-        Route::post('/store', 'CostController@store')->name('costs-store');
-        Route::get('/edit/{id}', 'CostController@edit')->name('costs-edit');
-        Route::put('/update/{id}', 'CostController@update')->name('costs-update');
-        Route::delete('/delete/{id}', 'CostController@delete')->name('costs-delete');
-        Route::get('/export/{id}', 'CostController@export')->name('costs-export');
-    });
-
-    // Chi phí thực tế
-    Route::group(['prefix' => 'costsreal'], function (){
-        Route::get('/', 'CostRealController@index')->name('costsreal-index');
-        Route::get('/add', 'CostRealController@add')->name('costsreal-add');
-        Route::post('/store', 'CostRealController@store')->name('costsreal-store');
-        Route::get('/edit/{id}', 'CostRealController@edit')->name('costsreal-edit');
-        Route::put('/update/{id}', 'CostRealController@update')->name('costsreal-update');
-        Route::delete('/delete/{id}', 'CostRealController@delete')->name('costsreal-delete');
-        Route::get('/export/{id}', 'CostRealController@export')->name('costsreal-export');
-    });
-
-    // Công nợ phải trả
-    Route::group(['prefix' => 'paydebt'], function (){
-        Route::get('/', 'PayDebtController@index')->name('paydebt-index');
-        Route::get('/add', 'PayDebtController@add')->name('paydebt-add');
-        Route::post('/store', 'PayDebtController@store')->name('paydebt-store');
-        Route::get('/edit/{id}', 'PayDebtController@edit')->name('paydebt-edit');
-        Route::put('/update/{id}', 'PayDebtController@update')->name('paydebt-update');
-        Route::delete('/delete/{id}', 'PayDebtController@delete')->name('paydebt-delete');
-        Route::get('/export/{id}', 'PayDebtController@export')->name('paydebt-export');
-    });
-
     // Lợi nhuận
     Route::group(['prefix' => 'profits'], function (){
         Route::get('/', 'ProfitController@index')->name('profits-index');
@@ -493,9 +440,10 @@ Route::group(['namespace' => 'FinancialManage', 'middleware' => ['auth','web','c
         Route::get('/edit/{id}', 'ProfitController@edit')->name('profits-edit');
         Route::put('/update/{id}', 'ProfitController@update')->name('profits-update');
         Route::delete('/delete/{id}', 'ProfitController@delete')->name('profits-delete');
-        Route::get('/export/{id}', 'ProfitController@export')->name('profits-export');
+        Route::get('/history/{id}', 'ProfitController@history')->name('profits-history');
+        Route::get('/result/{id}', 'ProfitController@result')->name('profits-result');
     });
-
+    
 });
 
 // Quản lý hệ thống vận hành
