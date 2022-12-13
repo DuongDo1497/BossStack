@@ -63,8 +63,8 @@
               <label for="">Phân quyền<span>*</span>:</label>
               <select class="form-select select2" name="" id="">
                 <option selected>Chọn loại</option>
-                <option value="">Gia đình</option>
-                <option value="">Kinh doanh</option>
+                <option value="">User Thành viên</option>
+                <option value="">User Admin</option>
               </select>
             </div>
 

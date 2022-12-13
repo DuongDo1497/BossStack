@@ -40,18 +40,7 @@
             <div class="card-body">
               <h6 class="card-body__title">BÓC TÁCH DÒNG TIỀN</h6>
               <div class="card-body__content">
-                <p>Sử dụng công cụ thực thi phần mềm BossStack nhằm:</p>
-                <ul>
-                  <li>
-                    <img class="icon img-fluid" src="{{ asset('img/web/icon-right.svg') }}" alt="icon">
-                    Xử lý và bóc tách các mảnh ghép trong dòng tiền tổng quan cá nhân
-                  </li>
-                  <li>
-                    <img class="icon img-fluid" src="{{ asset('img/web/icon-right.svg') }}" alt="icon">
-                    Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, tự doanh, dòng tiền doanh
-                    nghiệp
-                  </li>
-                </ul>
+                <p>Xử lý và bóc tách các mảnh ghép trong dòng tiền tổng quan cá nhân bằng phần mềm BossStack</p>
               </div>
             </div>
             <div class="card-link">
@@ -64,10 +53,9 @@
             <img class="card-img-top img-fluid" src="{{ asset('img/web/solution-icon-2.svg') }}"
               alt="CHUYỂN ĐỔI VẬN HÀNH" />
             <div class="card-body">
-              <h6 class="card-body__title">CHUYỂN ĐỔI VẬN HÀNH</h6>
+              <h6 class="card-body__title">THỰC THI DÒNG TIỀN DOANH NGHIỆP</h6>
               <div class="card-body__content">
-                <p>Số hóa dữ liệu doanh nghiệp và chuyển đổi vận hành số giúp nâng cao hiệu quả kinh
-                  doanh và gia tăng lợi nhuận doanh nghiệp</p>
+                <p>Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, tự doanh, dòng tiền doanh nghiệp</p>
               </div>
             </div>
             <div class="card-link">
@@ -81,8 +69,8 @@
             <div class="card-body">
               <h6 class="card-body__title">KIỂM SOÁT THẤT THOÁT DOANH NGHIỆP</h6>
               <div class="card-body__content">
-                <p>Giải pháp giúp doanh nghiệp cắt giảm tối đa chi phí mà không làm ảnh hưởng đến hoạt
-                  động toàn thể doanh nghiệp thông qua hệ thống phần mềm và chuyên gia BossStack</p>
+                <p>Giúp doanh nghiệp cắt giảm tối đa chi phí mà không làm ảnh hưởng đến hoạt động toàn thể doanh nghiệp
+                  thông qua hệ thống phần mềm và chuyên gia BossStack</p>
               </div>
             </div>
             <div class="card-link">

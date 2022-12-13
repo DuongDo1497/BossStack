@@ -55,6 +55,10 @@
   margin-bottom: 12px;
 }
 
+.solution-body .card-body__content p{
+  text-align: center;
+}
+
 .solution-body .card-body__content li{
   display: flex;
   align-items: flex-start;

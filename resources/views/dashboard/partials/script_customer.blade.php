@@ -177,6 +177,11 @@
         "Nợ Tín Chấp": '#5388D8',
       }
     },
+    pie: {
+      label: {
+        show: false
+      }
+    },
     axis: {
       x: {
         label: 'Sepal.Width'
@@ -222,6 +227,11 @@
       colors: {
         "Tài Sản Vô Hình": '#F4BE37',
         "Ví mục tiêu": '#5388D8',
+      }
+    },
+    pie: {
+      label: {
+        show: false
       }
     },
     axis: {

@@ -64,7 +64,7 @@
 
   <div class="section cashplan-index">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <span class="current">Thiết lập ví tài chính</span>
+      <span>Quản lý tài khoản</span> / <span class="current">Thiết lập dòng tiền</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
@@ -94,7 +94,7 @@
         </div>
         <a href="{{ route('cashplans-add') }}" class="btn btn-primary btn-add">
           <img src="{{ asset('img/icon-add.svg') }}" alt="">
-          Thêm ví tài chính
+          Thêm dòng tiền
         </a>
         <div class="table-wrap">
           <div class="table-content">
@@ -180,10 +180,10 @@
         </div>
         <div class="note-content">
           <p>* Một số lưu ý khi thao tác :</p>
-          <p>- Bạn có thể thiết lập, chỉnh sửa và xem lại các ví tài chính sau khi lập.
+          <p>- Bạn có thể thiết lập, chỉnh sửa và xem lại các dòng tiền sau khi lập.
           </p>
-          <p>- Số dư hiện có trong ví tài chính sẽ mặc định được chuyển về ví tổng sau
-            khi bạn thực hiện thao tác xóa ví tài chính.</p>
+          <p>- Số dư hiện có trong dòng tiền sẽ mặc định được chuyển về ví tổng sau
+            khi bạn thực hiện thao tác xóa dòng tiền.</p>
         </div>
       </div>
     </div>

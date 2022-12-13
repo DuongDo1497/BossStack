@@ -42,8 +42,7 @@
   <div class="section cashplan-add">
     <div class="breadcrumb">
       <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cashplans-index') }}">Thiết lập
-        ví tài chính</a> / <span class="current">Thêm
-        ví tài chính</span>
+        dòng tiền</a> / <span class="current">Thêm dòng tiền</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
@@ -127,7 +126,7 @@
             </div>
           </div>
           <button class="btn btn-primary btn-add" onclick="processReports('frm', 'process')">
-            Thêm ví tài chính
+            Thêm dòng tiền
           </button>
         </div>
       </div>

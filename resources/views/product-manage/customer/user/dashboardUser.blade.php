@@ -24,7 +24,7 @@
         <div class="noti-index">
           <div class="noti-index__wrap">
             <div class="noti-index__item">
-              <p class="title">Số user con:</p>
+              <p class="title">Số User Thành viên:</p>
               <p class="number">15</p>
             </div>
             <div class="noti-index__item">
