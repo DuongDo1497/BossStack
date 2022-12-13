@@ -54,8 +54,12 @@
             <label for="">Mối quan hệ<span>*</span>:</label>
             <select class="form-select select2" name="" id="">
               <option selected>Chọn loại</option>
-              <option value="">Gia đình</option>
-              <option value="">Kinh doanh</option>
+              <option value="">Vợ/Chồng</option>
+              <option value="">Con</option>
+              <option value="">Anh/em</option>
+              <option value="">Cháu</option>
+              <option value="">Quản gia</option>
+              <option value="">Người thân khác</option>
             </select>
           </div>
 
@@ -63,8 +67,8 @@
             <label for="">Phân quyền<span>*</span>:</label>
             <select class="form-select select2" name="" id="">
               <option selected>Chọn loại</option>
-              <option value="">User Thành viên</option>
               <option value="">User Admin</option>
+              <option value="">User Thành viên</option>
             </select>
           </div>
 
