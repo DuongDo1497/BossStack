@@ -22,13 +22,13 @@
       <div class="container">
         <div class="wrap">
           <div class="package-list">
-            <div class="package-item">
+            {{-- <div class="package-item">
               <img class="package-image img-fluid" src="{{ asset('img/web/package-premium.png') }}" alt="goi-premium">
               <div class="package-content">
                 <p>Gói Premium</p>
                 <p>Coming soon</p>
               </div>
-            </div>
+            </div> --}}
 
             <div class="package-item">
               <h6 class="package-name">Free</h6>
@@ -211,67 +211,67 @@
               </div>
             </div>
 
-            {{-- <div class="package-item">
-            <h6 class="package-name">Premium</h6>
-            <div class="package-control">
-              <div class="package-price">
-                <div class="info">
-                  <small class="user-type"></small>
-                  <h5 class="amount">499.000</h5>
-                  <small class="unit">đồng/tháng</small>
+            <div class="package-item">
+              <h6 class="package-name">Premium</h6>
+              <div class="package-control">
+                <div class="package-price">
+                  <div class="info">
+                    <small class="user-type"></small>
+                    <h5 class="amount">499.000</h5>
+                    <small class="unit">đồng/tháng</small>
+                  </div>
+                </div>
+                <div class="package-option">
+                  <select class="form-select" name="producttypes_3">
+                    <option value="0">Chọn gói thời gian</option>
+                    @foreach ($producttypes as $key => $value)
+                      @if ($key > 0)
+                        @if ($key == old('producttypes_3'))
+                          <option value="{{ $key }}" selected>{{ $value['month'] }} tháng
+                            (giảm {{ $value['discount'] }}%)
+                          </option>
+                        @else
+                          <option value="{{ $key }}">{{ $value['month'] }} tháng (giảm
+                            {{ $value['discount'] }}%)</option>
+                        @endif
+                      @endif
+                    @endforeach
+                  </select>
+                  <button type="submit" onclick="processReports('frm', '3')"
+                    class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
                 </div>
               </div>
-              <div class="package-option">
-                <select class="form-select" name="producttypes_3">
-                  <option value="0">Chọn gói thời gian</option>
-                  @foreach ($producttypes as $key => $value)
-                  @if ($key > 0)
-                  @if ($key == old('producttypes_3'))
-                  <option value="{{ $key }}" selected>{{ $value['month'] }} tháng
-                    (giảm {{ $value['discount'] }}%)
-                  </option>
-                  @else
-                  <option value="{{ $key }}">{{ $value['month'] }} tháng (giảm
-                    {{ $value['discount'] }}%)</option>
-                  @endif
-                  @endif
-                  @endforeach
-                </select>
-                <button type="submit" onclick="processReports('frm', '3')"
-                  class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
+              <div class="package-service">
+                <p class="package-title">Các dịch vụ bao gồm</p>
+                <ul class="package-info">
+                  <li>Tất cả các tính năng của <b>gói Standard</b></li>
+                  <li>Phân bổ dòng tiền đầu tư, kinh doanh hằng tháng theo phần mềm</li>
+                  <li>Cập nhật khuyến nghị của đội ngũ chuyên gia BossStack</li>
+                </ul>
+              </div>
+              <div class="package-policy">
+                <p class="package-title">Chính sách</p>
+                <ul class="package-info">
+                  <li>Giảm <b>10%</b> khi đăng ký mua gói <b>3 tháng</b></li>
+                  <li>Giảm <b>20%</b> khi đăng ký mua gói <b>6 tháng</b></li>
+                  <li>Giảm <b>30%</b> khi đăng ký mua gói <b>12 tháng</b></li>
+                </ul>
+              </div>
+              <div class="package-support">
+                <p class="package-title">Hỗ trợ và triển khai</p>
+                <ul class="package-info">
+                  <li>Hỗ trợ 24/7 qua email, chat và điện thoại</li>
+                  <li>Đảm bảo hệ thống uptime tới 99.9%</li>
+                </ul>
+              </div>
+              <div class="package-security">
+                <p class="package-title">Tuân thủ và bảo mật</p>
+                <ul class="package-info">
+                  <li>Tuân thủ bảo mật và quyền riêng tư</li>
+                  <li>Đặt các chính sách về tạo mật khẩu</li>
+                </ul>
               </div>
             </div>
-            <div class="package-service">
-              <p class="package-title">Các dịch vụ bao gồm</p>
-              <ul class="package-info">
-                <li>Tất cả các tính năng của <b>gói Standard</b></li>
-                <li>Phân bổ dòng tiền đầu tư, kinh doanh hằng tháng theo phần mềm</li>
-                <li>Cập nhật khuyến nghị của đội ngũ chuyên gia BossStack</li>
-              </ul>
-            </div>
-            <div class="package-policy">
-              <p class="package-title">Chính sách</p>
-              <ul class="package-info">
-                <li>Giảm <b>10%</b> khi đăng ký mua gói <b>3 tháng</b></li>
-                <li>Giảm <b>20%</b> khi đăng ký mua gói <b>6 tháng</b></li>
-                <li>Giảm <b>30%</b> khi đăng ký mua gói <b>12 tháng</b></li>
-              </ul>
-            </div>
-            <div class="package-support">
-              <p class="package-title">Hỗ trợ và triển khai</p>
-              <ul class="package-info">
-                <li>Hỗ trợ 24/7 qua email, chat và điện thoại</li>
-                <li>Đảm bảo hệ thống uptime tới 99.9%</li>
-              </ul>
-            </div>
-            <div class="package-security">
-              <p class="package-title">Tuân thủ và bảo mật</p>
-              <ul class="package-info">
-                <li>Tuân thủ bảo mật và quyền riêng tư</li>
-                <li>Đặt các chính sách về tạo mật khẩu</li>
-              </ul>
-            </div>
-          </div> --}}
           </div>
         </div>
       </div>

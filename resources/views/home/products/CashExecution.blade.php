@@ -13,7 +13,7 @@
             <img class="icon img-fluid" src="{{ asset('img/web/link-icon.svg') }}" alt="icon" />
             <span class="text">Sản phẩm</span>
           </div>
-          <h1 class="banner-default__title text-start">GIẢI PHÁP THỰC THI DÒNG TIỀN CHUYÊN SÂU</h1>
+          <h1 class="banner-default__title text-start">GIẢI PHÁP THỰC THI DÒNG TIỀN DOANH NGHIỆP</h1>
         </div>
       </div>
     </div>
@@ -25,29 +25,26 @@
         <div class="benefits-product__list">
           <div class="benefits-product__item no-bg">
             <div class="benefits-product__content">
-              <h4 class="section-title">Điểm khác biệt <br />Giải pháp thực thi dòng tiền chuyên sâu
+              <h4 class="section-title">Điểm khác biệt <br />Giải pháp thực thi dòng tiền doanh nghiệp
               </h4>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-cyan-cl">
-              <img src="{{ asset('img/web/cash-dissection-4.svg') }}" alt="cash-dissection"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/cash-dissection-4.svg') }}" alt="cash-dissection" class="icon img-fluid">
               <p>Tiết kiệm 87% thời gian quản lý, xử lý và đưa ra các quyết định về tiền</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-purple-cl">
-              <img src="{{ asset('img/web/cash-dissection-5.svg') }}" alt="cash-dissection"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/cash-dissection-5.svg') }}" alt="cash-dissection" class="icon img-fluid">
               <p>Hệ thống <b>phần mềm BossStack</b> tùy chỉnh phù hợp với tình hình tài chính của từng
                 khách hàng</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
-              <img src="{{ asset('img/web/cash-dissection-6.svg') }}" alt="cash-dissection"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/cash-dissection-6.svg') }}" alt="cash-dissection" class="icon img-fluid">
               <p>Tách bạch dòng tiền cá nhân và doanh nghiệp giúp khách hàng dễ dàng lên kế hoạch mục
                 tiêu tài chính gia đình và doanh nghiệp</p>
             </div>
@@ -61,24 +58,20 @@
     <div class="container">
       <div class="wrap">
         <div class="why-product__content">
-          <h4 class="section-title">Tại sao chủ doanh nghiệp cần giải pháp thực thi dòng tiền chuyên
-            sâu?</h4>
+          <h4 class="section-title">Tại sao chủ doanh nghiệp cần giải pháp thực thi dòng tiền doanh nghiệp?</h4>
           <div class="why-product__list">
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-2.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-2.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Chủ doanh nghiệp thường không thể tách dòng tiền cá nhân của mình
                 ra khỏi doanh nghiệp.</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-5.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-5.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Không quản lý được nguồn vốn doanh nghiệp gây thiếu hụt vốn và mất
                 nhiều cơ hội kinh doanh.</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-4.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-4.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Thiếu công cụ phân bổ dòng tiền ảnh hưởng đến hoạt động doanh
                 nghiệp, đặc biệt trong thị trường nhiều biến động.</span>
             </div>
@@ -93,7 +86,7 @@
   <div class="section section-help help-product">
     <div class="container">
       <div class="wrap">
-        <h4 class="section-title">BossStack giúp bạn thực thi dòng tiền chuyên sâu như thế nào?</h4>
+        <h4 class="section-title">BossStack giúp bạn thực thi dòng tiền doanh nghiệp như thế nào?</h4>
         <div class="help-product__process">
           <div class="help-product__list">
             <div class="help-product__item">
@@ -122,7 +115,7 @@
               <div class="icon">
                 <img src="{{ asset('img/web/help-icon-7.svg') }}" alt="help-icon" class="img-fluid">
               </div>
-              <p><b>BossStack đồng hành</b> thực thi dòng tiền chuyên sâu cùng khách hàng</p>
+              <p><b>BossStack đồng hành</b> thực thi dòng tiền doanh nghiệp cùng khách hàng</p>
             </div>
           </div>
         </div>
@@ -144,7 +137,7 @@
       <div class="wrap">
         <div class="advice-left">
           <h4>SẢN PHẨM</h4>
-          <h3>GIẢI PHÁP THỰC THI DÒNG TIỀN CHUYÊN SÂU</h3>
+          <h3>GIẢI PHÁP THỰC THI DÒNG TIỀN DOANH NGHIỆP</h3>
         </div>
         <div class="advice-right">
           <h6>ĐĂNG KÝ NHẬN TƯ VẤN</h6>
@@ -159,20 +152,19 @@
             <input type='hidden' name='solution' value='2'>
             <input type='hidden' name='typereport' value='1'>
             <div class="form-group">
-              <input type="text" class="form-control" id="fullname" name="fullname"
-                placeholder="Họ và tên *" required>
+              <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Họ và tên *"
+                required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="phone" name="phone"
-                placeholder="Số điện thoại *" required>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại *"
+                required>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" id="email" name="email"
-                placeholder="Email *" required>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email *"
+                required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="content" name="content"
-                placeholder="Công ty">
+              <input type="text" class="form-control" id="content" name="content" placeholder="Công ty">
             </div>
             <div class="form-group">
               <select class="form-select" name="companytype">
@@ -189,8 +181,7 @@
               </select>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="title" name="title"
-                placeholder="Chức vụ">
+              <input type="text" class="form-control" id="title" name="title" placeholder="Chức vụ">
             </div>
             <button type="submit" class="btn btn-second btn-size-lg btn-register">ĐĂNG KÝ
               NGAY</button>

@@ -30,14 +30,16 @@
                 <div class="payment-option__item">
                   <div class="payment-option__header">
                     <div class="form-group">
+                      {{-- <input class="form-check-input" type="radio" name="ord_payment_method optradio" value="0"
+                        id="paymentDirect" data-toggle="collapse" href="#payment-direct" data-parent="#accordion-parent"> --}}
                       <input class="form-check-input" type="radio" name="ord_payment_method" value="0"
-                        id="paymentDirect" data-toggle="collapse" href="#payment-direct" data-parent="#accordion-parent">
+                        id="paymentDirect" data-toggle="" href="#payment-direct" data-parent="#accordion-parent">
                       <label class="form-check-label" for="paymentDirect"></label>
                     </div>
                     <img class="img-fluid payment-icon" src="{{ asset('img/web/payment-icon-1.svg') }}" alt="">
                     <p class="text">Thanh toán trực tiếp tại văn phòng BossStack</p>
                   </div>
-                  <div class="payment-option__body collapse" id="payment-direct">
+                  <div class="payment-option__body" id="payment-direct">
                     <div class="content">
                       <p class="title-big">CÔNG TY TNHH LAM MINH ANH</p>
                       <p>
@@ -57,15 +59,17 @@
                 <div class="payment-option__item">
                   <div class="payment-option__header">
                     <div class="form-group">
-                      <input class="form-check-input" type="radio" name="ord_payment_method" value="1"
+                      {{-- <input class="form-check-input" type="radio" name="ord_payment_method optradio" value="1"
                         id="paymentTranfer" data-toggle="collapse" href="#payment-tranfer"
-                        data-parent="#accordion-parent">
+                        data-parent="#accordion-parent"> --}}
+                      <input class="form-check-input" type="radio" name="ord_payment_method" value="1"
+                        id="paymentTranfer" data-toggle="" href="#payment-tranfer" data-parent="#accordion-parent">
                       <label class="form-check-label" for="paymentTranfer"></label>
                     </div>
                     <img class="img-fluid payment-icon" src="{{ asset('img/web/payment-icon-2.svg') }}" alt="">
                     <p class="text">Thanh toán chuyển khoản ngân hàng</p>
                   </div>
-                  <div class="payment-option__body collapse" id="payment-tranfer">
+                  <div class="payment-option__body" id="payment-tranfer">
                     <div class="content">
                       <div class="paragraph">
                         <p class="title-big">Bước 1:</p>
@@ -788,4 +792,16 @@
 
 @section('scripts')
   @include('product-manage.contract.partials.script')
+
+  <script type="text/javascript">
+    let
+    let formInputCheck = document.querySelectorAll('.form-check-input');
+    formInputCheck.forEach(function(element, index) {
+      element.addEventListener('change', function(e) {
+        if (e.currentTarget.checked) {
+          e.currentTarget.setAttribute('data-toggle', 'collapse')
+        }
+      })
+    })
+  </script>
 @endsection
