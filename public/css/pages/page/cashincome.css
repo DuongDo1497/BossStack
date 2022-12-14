@@ -30,6 +30,8 @@
   }
 
   .cashincome-index .control .btn{
+    --w-btn: calc(100% / 3);
+    width: var(--w-btn);
     font-size: 14px;
     column-gap: 5px;
   }

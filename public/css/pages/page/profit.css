@@ -77,3 +77,38 @@
 .profit-history table tbody td{
   text-align: center;
 }
+
+@media (max-width: 575.98px){
+  .profit-index .btn-next, 
+  .profit-add .btn-analysis{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .profit-add .box-search{
+    width: 100%;
+  }
+
+  .profit-add .box-search .control{
+    justify-content: flex-end;
+  }
+
+  .profit-result table tbody td{
+    width: 50%;
+  }
+
+  .profit-result .box-search .control{
+    justify-content: center;
+  }
+
+  .profit-history .box.box-primary{
+    border: 0;
+    padding: 16px 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .profit-history table{
+    display: none;
+  }
+}

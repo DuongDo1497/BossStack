@@ -125,12 +125,16 @@
   border-radius: 16px;
 }
 
-.tab-pane__body .chart-item:first-child{
-  background-color: var(--bg-green-cl);
+.tab-pane__body .chart-item .chart-title{
+  font-family: hm;
 }
 
-.tab-pane__body .chart-item:last-child{
-  background-color: var(--bg-purple-cl);
+.tab-pane__body .chart-item:first-child .chart-title{
+  color: #0A9A4A;
+}
+
+.tab-pane__body .chart-item:last-child .chart-title{
+  color: #BC2C22;
 }
 
 .tab-pane__body .read-more{
@@ -417,6 +421,7 @@
   }
 
   .cash-index .control .btn{
+    width: calc(100% / 3);
     font-size: 14px;
     column-gap: 5px;
   }

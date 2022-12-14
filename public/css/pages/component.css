@@ -400,6 +400,7 @@
 
 .box-control .count,
 .box-control .text{
+  white-space: nowrap;
   margin-bottom: 0;
   color: var(--gray-cl-5);
 }
@@ -721,5 +722,49 @@
   .overview-page__item .text{
     font-size: 12px;
     text-align: center;
+  }
+}
+
+/* Danh sach thong tin */
+.list-info{
+  display: none;
+}
+
+@media (max-width: 575.98px){
+  .list-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .list-info .item{
+    padding: 16px;
+    background-color: var(--white-cl);
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+  }
+
+  .list-info .item .form-group{
+    --w-label: auto;
+    justify-content: space-between;
+  }
+
+  .list-info .form-group label,
+  .list-info .form-group .form-text{
+    font-size: 14px;
+  }
+
+  .list-info .form-group .title-primary,
+  .list-info .form-group .text-primary{
+    font-size: 16px;
+    font-family: hb;
+    color: var(--gray-cl-7);
+  }
+
+  .list-info .form-group label{
+    color: var(--gray-cl-6);
+  }
+
+  .list-info .form-group .form-text{
+    color: var(--gray-cl-7);
   }
 }

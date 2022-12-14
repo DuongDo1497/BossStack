@@ -92,6 +92,11 @@
         },
         columns: dataPie
       },
+      pie: {
+        label: {
+          show: false
+        }
+      },
       axis: {
         x: {
           label: 'Sepal.Width'
@@ -99,6 +104,9 @@
         y: {
           label: 'Petal.Width'
         }
+      },
+      color: {
+        pattern: ['#C8FFD4', '#79DE58', '#0A9A4A', '#CEEB9E']
       },
       size: {
         height: 300,
@@ -141,6 +149,11 @@
         },
         columns: dataPie1
       },
+      pie: {
+        label: {
+          show: false
+        }
+      },
       axis: {
         x: {
           label: 'Sepal.Width'
@@ -148,6 +161,9 @@
         y: {
           label: 'Petal.Width'
         }
+      },
+      color: {
+        pattern: ['#BC2C22', '#FFAA5B', '#FFDD63', '#FF9F9F', '#DE6573', '#F0B7A5']
       },
       size: {
         height: 300,
@@ -351,6 +367,11 @@
         },
         columns: dataPie2
       },
+      pie: {
+        label: {
+          show: false
+        }
+      },
       axis: {
         x: {
           label: 'Sepal.Width'
@@ -358,6 +379,9 @@
         y: {
           label: 'Petal.Width'
         }
+      },
+      color: {
+        pattern: ['#C8FFD4', '#79DE58', '#0A9A4A', '#CEEB9E']
       },
       size: {
         // height: 300,
@@ -401,6 +425,11 @@
         },
         columns: dataPie3
       },
+      pie: {
+        label: {
+          show: false
+        }
+      },
       axis: {
         x: {
           label: 'Sepal.Width'
@@ -408,6 +437,9 @@
         y: {
           label: 'Petal.Width'
         }
+      },
+      color: {
+        pattern: ['#BC2C22', '#FFAA5B', '#FFDD63', '#FF9F9F', '#DE6573', '#F0B7A5']
       },
       size: {
         // height: 300,

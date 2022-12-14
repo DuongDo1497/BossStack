@@ -43,7 +43,7 @@
   }
 
   .table-wrap table th.fixed{
-    height: 40px;
+    height: 63px;
   }
 
   .customer-user__dashboard .table-wrap table td:not(.fixed){

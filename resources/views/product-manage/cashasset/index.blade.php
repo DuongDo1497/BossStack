@@ -107,6 +107,18 @@
 
       <div class="box box-primary">
         <h6 class="box-title">Danh sách chi tiết tài sản</h6>
+        <div class="noti-index">
+          <div class="noti-index__wrap">
+            <div class="noti-index__item">
+              <p class="title">Tổng Tài sản nợ</p>
+              <p class="number">- 1,300,000,000</p>
+            </div>
+            <div class="noti-index__item">
+              <p class="title">Tổng Tài sản có</p>
+              <p class="number">+ 3,500,000,000</p>
+            </div>
+          </div>
+        </div>
         <div class="box-search">
           <div class="control">
             <a href="{{ route('cashassets-process', ['assetstatustype' => 3]) }}" class="btn btn-primary btn-debt">
@@ -119,82 +131,87 @@
             </a>
           </div>
         </div>
-        <table class="table table-bordered table-list">
-          <thead>
-            <tr>
-              <th rowspan="2">
-                <input type="checkbox" name="" id="">
-              </th>
-              <th rowspan="2">STT</th>
-              <th rowspan="2">Tài sản</th>
-              <th rowspan="2">Phân loại</th>
-              <th rowspan="2">Chi tiết</th>
-              <th rowspan="2">Ngày</th>
-              <th colspan="2">Tài sản</th>
-            </tr>
-            <tr>
-              <th>Nợ</th>
-              <th>Có</th>
-            </tr>
-          </thead>
-          <tbody>
-            @if ($collections->count() === 0)
-              <tr>
-                <td colspan="7"><b>Không có dữ liệu!!!</b></td>
-              </tr>
-            @endif
-            @php
-              $i = 1;
-              $total_asset = 0;
-              $total_expense = 0;
-            @endphp
-            @foreach ($collections as $cashasset)
-              @php
-                if ($cashasset->assetstatustype == 3) {
-                    $total_asset += $cashasset->remainamount;
-                } elseif ($cashasset->assetstatustype == 4) {
-                    $total_expense += $cashasset->remainamount;
-                }
-              @endphp
-              <tr>
-                <td class="text-center">
-                  <input type="checkbox" name="" id="">
-                </td>
-                <td class="text-center">{{ $i++ }}</td>
-                <td>
-                  <p>
-                    <a href="{{ route('cashassets-edit', ['id' => $cashasset->id]) }}">{{ $cashasset->assetname }}</a>
-                    @if ($cashasset->document != '')
-                      <a target="_blank" href="{{ $pathdocument . $cashasset->document }}"
-                        title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
-                          style="margin-right: 10px;"></i></a>
-                    @endif
-                  </p>
-                  <p>Số tiền: {{ formatNumber($cashasset->amount, 1, 0, 1) }}</p>
-                </td>
-                <td>{{ $cashasset->config_types_name }}</td>
-                <td class="text-center">{{ $cashasset->config_type_details_name }}</td>
-                <td class="text-center">
-                  {{ $cashasset->assetdate == null ? '' : ConvertSQLDate($cashasset->assetdate) }}
-                </td>
-                @if ($cashasset->assetstatustype == 3)
-                  <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 3) !!}</td>
-                  <td class="text-right"></td>
-                @elseif($cashasset->assetstatustype == 4)
-                  <td class="text-right"></td>
-                  <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 0) !!}</td>
+        <div class="table-wrap">
+          <div class="table-content">
+            <table class="table table-bordered table-list">
+              <thead>
+                <tr>
+                  <th rowspan="2" class="fixed fixed-1">
+                    <input type="checkbox" name="" id="">
+                  </th>
+                  <th rowspan="2" class="fixed fixed-2">STT</th>
+                  <th rowspan="2" class="fixed fixed-3">Tài sản</th>
+                  <th rowspan="2">Phân loại</th>
+                  <th rowspan="2">Chi tiết</th>
+                  <th rowspan="2">Ngày</th>
+                  <th colspan="2">Tài sản</th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>Nợ</th>
+                  <th>Có</th>
+                </tr>
+              </thead>
+              <tbody>
+                @if ($collections->count() === 0)
+                  <tr>
+                    <td colspan="7"><b>Không có dữ liệu!!!</b></td>
+                  </tr>
                 @endif
-              </tr>
-            @endforeach
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="6">Tổng cộng</td>
-              <td class="text-right">{!! formatNumberColorCustom($total_asset, 1, 0, 0, 3) !!}</td>
-              <td class="text-right">{!! formatNumberColorCustom($total_expense, 1, 0, 0, 0) !!}</td>
-            </tr>
-          </tfoot>
-        </table>
+                @php
+                  $i = 1;
+                  $total_asset = 0;
+                  $total_expense = 0;
+                @endphp
+                @foreach ($collections as $cashasset)
+                  @php
+                    if ($cashasset->assetstatustype == 3) {
+                        $total_asset += $cashasset->remainamount;
+                    } elseif ($cashasset->assetstatustype == 4) {
+                        $total_expense += $cashasset->remainamount;
+                    }
+                  @endphp
+                  <tr>
+                    <td class="text-center fixed fixed-1">
+                      <input type="checkbox" name="" id="">
+                    </td>
+                    <td class="text-center fixed fixed-2">{{ $i++ }}</td>
+                    <td class="fixed fixed-3">
+                      <p>
+                        <a href="{{ route('cashassets-edit', ['id' => $cashasset->id]) }}">{{ $cashasset->assetname }}</a>
+                        @if ($cashasset->document != '')
+                          <a target="_blank" href="{{ $pathdocument . $cashasset->document }}"
+                            title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
+                              style="margin-right: 10px;"></i></a>
+                        @endif
+                      </p>
+                      <p>Số tiền: {{ formatNumber($cashasset->amount, 1, 0, 1) }}</p>
+                    </td>
+                    <td>{{ $cashasset->config_types_name }}</td>
+                    <td class="text-center">{{ $cashasset->config_type_details_name }}</td>
+                    <td class="text-center">
+                      {{ $cashasset->assetdate == null ? '' : ConvertSQLDate($cashasset->assetdate) }}
+                    </td>
+                    @if ($cashasset->assetstatustype == 3)
+                      <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 3) !!}</td>
+                      <td class="text-right"></td>
+                    @elseif($cashasset->assetstatustype == 4)
+                      <td class="text-right"></td>
+                      <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 0) !!}</td>
+                    @endif
+                  </tr>
+                @endforeach
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="6">Tổng cộng</td>
+                  <td class="text-right">{!! formatNumberColorCustom($total_asset, 1, 0, 0, 3) !!}</td>
+                  <td class="text-right">{!! formatNumberColorCustom($total_expense, 1, 0, 0, 0) !!}</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
         <div class="box-control">
           <div class="control">
             <p class="count">4</p>
