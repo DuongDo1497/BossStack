@@ -1,7 +1,7 @@
 /* Contract package */
 
 .package-list{
-  --package-count: 3;
+  --package-count: 4;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -10,35 +10,10 @@
 
 .package-item{
   --w-item: calc(100% / var(--package-count));
-  width: calc(var(--w-item) - 8px);
+  width: calc(var(--w-item) - 14px);
   border-radius: 16px;
   background-color: var(--white-cl);
   box-shadow: 0px 5px 10px rgba(53, 99, 172, 0.3);
-}
-
-.package-item:first-child{
-  width: 100%;
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  column-gap: 95px;
-  padding-left: 50px;
-  background: url('../../../img/web/package-bg.jpg') center center/cover no-repeat;
-}
-
-.package-item:first-child .package-content p:first-child{
-  font-family: hb;
-  font-size: 80px;
-  line-height: 98px;
-  margin-bottom: 16px;
-  background: linear-gradient(93.37deg, #FBC540 11.76%, #FDEBBE 49.54%, #FBC540 80.19%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.package-item:first-child .package-content p:last-child{
-  font-size: 40px;
-  color: var(--bg-cyan-cl);
 }
 
 .package-item .package-control,
@@ -80,7 +55,7 @@
   margin-bottom: 24px;
 }
 
-.package-item:last-child .package-price .info{
+.package-item:nth-child(3) .package-price .info{
   align-items: flex-end;
   flex-direction: row;
   column-gap: 4px;
@@ -138,19 +113,26 @@
   background-color: var(--second-cl);
 }
 
-/* .package-option .form-select:disabled{
-  cursor: no-drop;
-  color: var(--gray-cl-4);
-  border: 1px solid var(--gray-cl-4);
-  background-color: transparent;
-} */
-
 .package-service{
-  height: 350px;
+  height: 252px;
 }
 
 .package-policy{
-  height: 180px;
+  height: 246px;
+}
+
+.package-policy .package-info{
+  padding-bottom: 8px;
+}
+
+.package-policy small{
+  font-family: hri;
+  font-size: 13px;
+  padding: 0 16px;
+  text-align: right;
+  color: var(--gray-cl-7);
+  display: block;
+  margin-bottom: 24px;
 }
 
 .package-title{
@@ -182,20 +164,6 @@
 
   .package-item{
     width: 100%;
-  }
-
-  .package-item:first-child{
-    margin-bottom: 0;
-    padding: 10px;
-  }
-
-  .package-item:first-child .package-image{
-    display: none;
-  }
-
-  .package-item:first-child .package-content p:first-child{
-    font-size: 58px;
-    line-height: 68px;
   }
 
   .package-item div{

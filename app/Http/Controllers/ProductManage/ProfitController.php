@@ -21,7 +21,7 @@ class ProfitController extends Controller
         $this->setViewPrefix('product-manage.profit.');
         $this->setRoutePrefix('profits-');
 
-        $this->view->setHeading('QUẢN LÝ LỢI NHUẬN');
+        $this->view->setHeading('TÍNH LỢI NHUẬN KINH DOANH');
     }
 
     public function index(Request $request)
@@ -35,6 +35,7 @@ class ProfitController extends Controller
     public function add()
     {
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+        $this->view->setHeading('TÍNH LỢI NHUẬN KINH DOANH');
 
         return $this->view('add');
     }
@@ -67,6 +68,7 @@ class ProfitController extends Controller
     {
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
 
+        $this->view->setHeading('LỊCH SỬ');
         return $this->view('history');
     }
     
@@ -74,6 +76,7 @@ class ProfitController extends Controller
     {
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
 
+        $this->view->setHeading('KẾT QUẢ');
         return $this->view('result');
     }        
 }

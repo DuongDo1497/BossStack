@@ -110,7 +110,7 @@
               <div class="form-group">
                 <label class="form-label" for="typereport">Thông tin sản phẩm <span>*</span></label>
                 <select class="form-select" id="typereport" name="typereport" onchange='onChangeSelect();' required>
-                  @foreach ($service_product as $item)
+                  {{-- @foreach ($service_product as $item)
                     @if ($item->id == old('typereport') or $item->id == $typereport)
                       @if ($item->id == 4)
                         <option value="{{ $item->id }}" selected>
@@ -131,13 +131,18 @@
                         </option>
                       @endif
                     @endif
-                  @endforeach
+                  @endforeach --}}
+                  <option selected>Chọn gói giải pháp</option>
+                  <option value="">Mở tài khoản (Miễn phí)</option>
+                  <option value="">Basic</option>
+                  <option value="">Standard</option>
+                  <option value="">Premium</option>
                 </select>
               </div>
               <div id="producttypelabel" class="form-group" style="">
                 <label class="form-label" for="producttype">Thời gian gói <span>*</span></label>
                 <select class="form-select" id="producttype" name="producttype" onchange='onChangeSelect();' required>
-                  @foreach ($producttypes as $key => $value)
+                  {{-- @foreach ($producttypes as $key => $value)
                     @if ($key > 0)
                       @if ($key == old('producttype') or $key == $producttype)
                         <option value="{{ $key }}" selected>
@@ -148,7 +153,11 @@
                           tháng (giảm {{ $value['discount'] }}%)</option>
                       @endif
                     @endif
-                  @endforeach
+                  @endforeach --}}
+                  <option selected>Chọn thời gian</option>
+                  <option value="">1 năm</option>
+                  <option value="">2 năm</option>
+                  <option value="">3 năm</option>
                 </select>
               </div>
               <div class="form-group">Số tiền thanh toán: <span id="amountlabel"></span> đồng.

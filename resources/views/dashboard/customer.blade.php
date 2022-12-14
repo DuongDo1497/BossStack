@@ -35,7 +35,7 @@
             <div class="overview-page__item">
               <a href="{{ route('retireplans-index') }}">
                 <span class="icon">
-                  <i class="fa fa-line-chart"></i>
+                  <i class="fas fa-calculator"></i>
                 </span>
                 <span class="text">Tính lợi nhuận kinh doanh</span>
               </a>
@@ -44,7 +44,7 @@
             <div class="overview-page__item">
               <a href="{{ route('retireplans-index') }}">
                 <span class="icon">
-                  <i class="fa fa-pie-chart"></i>
+                  <i class="fa fa-money"></i>
                 </span>
                 <span class="text">Tính số tiền nghỉ hưu</span>
               </a>
@@ -53,7 +53,7 @@
             <div class="overview-page__item">
               <a href="{{ route('cashplans-index') }}">
                 <span class="icon">
-                  <i class="fa fa-building"></i>
+                  <i class="fa fa-cog"></i>
                 </span>
                 <span class="text">Thiết lập ví tài chính</span>
               </a>
@@ -62,7 +62,7 @@
             <div class="overview-page__item">
               <a href="{{ route('cash-index') }}">
                 <span class="icon">
-                  <i class="fas fa-calculator"></i>
+                  <i class="fa fa-file"></i>
                 </span>
                 <span class="text">Thu chi ví tổng</span>
               </a>
@@ -71,7 +71,7 @@
             <div class="overview-page__item">
               <a href="{{ route('cashassets-index') }}">
                 <span class="icon">
-                  <i class="fa fa-list-alt"></i>
+                  <i class="fa fa-list-ol"></i>
                 </span>
                 <span class="text">Danh mục tài sản - nợ</span>
               </a>
@@ -80,7 +80,7 @@
             <div class="overview-page__item">
               <a href="{{ route('cash-process') }}">
                 <span class="icon">
-                  <i class="fa fa-tasks"></i>
+                  <i class="fa fa-address-card"></i>
                 </span>
                 <span class="text">Bóc tách dòng tiền</span>
               </a>

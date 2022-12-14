@@ -355,7 +355,6 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
     // Tinh so tien nghi huu
     Route::group(['prefix' => 'retireplans'], function (){
         Route::get('/', 'RetirePlanController@index')->name('retireplans-index');
-        Route::get('/indexProfit', 'RetirePlanController@indexProfit')->name('retireplans-profit');
         Route::post('/process', 'RetirePlanController@process')->name('retireplans-process');
     });
 
