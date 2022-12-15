@@ -36,7 +36,7 @@
                 onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
             </div>
             <div class="form-group">
-              <label for="retirementage">Tuổi nghỉ hưu dự án<span>*</span>:</label>
+              <label for="retirementage">Tuổi nghỉ hưu dự kiến<span>*</span>:</label>
               <input type="text" class="form-control" name="retirementage" id="retirementage"
                 value="{{ $retirementage == null ? old('retirementage') : formatNumber($retirementage, 1, 0, 0) }}"
                 onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>

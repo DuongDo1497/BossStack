@@ -209,6 +209,11 @@
   --w-label: 90px;
 }
 
+#cash-dissection__dashboard .table-wrap thead tr:last-child th:first-child,
+#assessment__dashboard .table-wrap thead tr:last-child th:first-child{
+  display: none;
+}
+
 #cash-dissection__dashboard tbody td:first-child,
 #cash-dissection__dashboard tbody tr:last-child td:nth-child(2),
 #cash-dissection__detail tbody td:first-child,
@@ -464,5 +469,115 @@
 
   .tab-pane__body .chart-item{
     width: 100%;
+  }
+
+  .cash-process .filter-timeline{
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .cash-process .filter-timeline .form-group{
+    width: 50%;
+  }
+
+  .cash-process .filter-timeline .btn-filter{
+    width: 100%;
+  }
+
+  .cash-process #cash-dissection__dashboard .filter-timeline .form-group,
+  .cash-process #assessment__dashboard .filter-timeline .form-group,
+  .cash-process #cash-dissection__dashboard .filter-timeline .btn-filter,
+  .cash-process #assessment__dashboard .filter-timeline .btn-filter{
+    width: calc(50% - 8px);
+  }
+
+  .cash-process #cash-dissection__dashboard .table-wrap .table-content,
+  .cash-process #assessment__dashboard .table-wrap .table-content{
+    width: calc(100% - 320px); 
+    margin-left: 320px;
+    margin-right: 0;
+  }
+
+  .cash-process #cash-dissection__dashboard .table-wrap table th.fixed,
+  .cash-process #assessment__dashboard .table-wrap table th.fixed{
+    height: 80px;
+  }
+
+  .cash-process #cash-dissection__dashboard .table-wrap thead tr:first-child th:nth-child(3),
+  .cash-process #assessment__dashboard .table-wrap thead tr:first-child th:nth-child(3){
+    width: 430px;
+  }
+
+  .cash-process #assessment__dashboard .table-wrap thead tr:first-child th:nth-child(4){
+    width: 250px;
+  }
+
+  .cash-process #cash-dissection__dashboard .table-wrap thead tr:last-child th:first-child,
+  .cash-process #assessment__dashboard .table-wrap thead tr:last-child th:first-child{
+    display: block;
+  }
+
+  .cash-process #cash-dissection__dashboard .table-wrap table td:not(.fixed),
+  .cash-process #assessment__dashboard .table-wrap table td:not(.fixed){
+    background-color: var(--gray-cl-3);
+  }
+
+  .cash-process #cash-dissection__dashboard .table-wrap table .fixed,
+  .cash-process #assessment__dashboard .table-wrap table .fixed{
+    width: 160px;
+  }
+
+  .cash-process #cash-dissection__dashboard .table-wrap table .fixed-2,
+  .cash-process #assessment__dashboard .table-wrap table .fixed-2{
+    left: 160px; 
+  }
+
+  .cash-process #cash-dissection__detail .table-wrap .table-content,
+  .cash-process #assessment__detail .table-wrap .table-content{
+    width: calc(100% - 285px); 
+    margin-left: 285px;
+    margin-right: 0;
+  }
+
+  .cash-process #cash-dissection__detail .table-wrap table .fixed,
+  .cash-process #assessment__detail .table-wrap table .fixed{
+    width: 285px;
+  }
+
+  .cash-process #cash-dissection__detail .table-wrap table th.fixed,
+  .cash-process #assessment__detail .table-wrap table th.fixed{
+    height: 80px;
+  }
+
+  .cash-process #cash-dissection__detail .table-wrap thead tr:first-child th:nth-child(2),
+  .cash-process #assessment__detail .table-wrap thead tr:first-child th:nth-child(2){
+    width: 430px;
+  }
+
+  .cash-process #assessment__detail .table-wrap thead tr:first-child th:nth-child(3){
+    width: 250px;
+  }
+
+  .cash-process #cash-dissection__detail .table-wrap thead tr:last-child th:first-child,
+  .cash-process #assessment__detail .table-wrap thead tr:last-child th:first-child{
+    display: block;
+  }
+
+  .cash-process #cash-dissection__detail .table-wrap table td,
+  .cash-process #assessment__detail .table-wrap table td{
+    height: 140px;
+  }
+
+  .cash-process #cash-dissection__detail .table-wrap table td:not(.fixed),
+  .cash-process #assessment__detail .table-wrap table td:not(.fixed){
+    background-color: var(--gray-cl-3);
+  }
+
+  .cash-process #cash-dissection__detail .table-wrap table td:first-child,
+  .cash-process #assessment__detail .table-wrap table td:first-child{
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
   }
 }

@@ -33,7 +33,8 @@
                 triển dữ liệu khách hàng.</p>
               <p>Mỗi giải pháp của BossStack chuyên sâu đều mang tính thực thi từ vận hành đến tài
                 chính tạo nên bức tranh tổng thể doanh nghiệp minh bạch và hiệu quả, giúp chủ doanh
-                nghiệp thực sự giải phóng <b>"bản thân"</b> ra khỏi <b>"business"</b> của mình.</p>
+                nghiệp thực sự giải phóng <b class="high-light">"bản thân"</b> ra khỏi <b
+                  class="high-light">"business"</b> của mình.</p>
             </div>
           </div>
           <img class="img-fluid" src="{{ asset('img/web/introduction-img.jpg') }}" alt="Về BossStack">

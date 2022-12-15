@@ -95,7 +95,7 @@
                 <p class="package-title">Các dịch vụ bao gồm</p>
                 <ul class="package-info">
                   <li>Sử dụng toàn bộ tính năng sản phẩm</li>
-                  <li>Miễn phí cập nhập tính năng mới</li>
+                  <li>Miễn phí cập nhật tính năng mới</li>
                 </ul>
               </div>
               <div class="package-policy">
@@ -151,7 +151,7 @@
                 <p class="package-title">Các dịch vụ bao gồm</p>
                 <ul class="package-info">
                   <li>Sử dụng toàn bộ tính năng sản phẩm</li>
-                  <li>Miễn phí cập nhập tính năng mới</li>
+                  <li>Miễn phí cập nhật tính năng mới</li>
                   <li>Đội ngũ BossStack hướng dẫn Giải pháp chuyển đổi</li>
                 </ul>
               </div>
@@ -205,7 +205,7 @@
                 <p class="package-title">Các dịch vụ bao gồm</p>
                 <ul class="package-info">
                   <li>Sử dụng toàn bộ tính năng sản phẩm</li>
-                  <li>Miễn phí cập nhập tính năng mới</li>
+                  <li>Miễn phí cập nhật tính năng mới</li>
                   <li>Đội ngũ BossStack hướng dẫn Giải pháp chuyển đổi</li>
                 </ul>
               </div>

@@ -70,7 +70,7 @@
         width: width_chart5
     },
     padding: {
-      left: 80,
+      left: 100,
       right: 30,
       top: 50,
       bottom: 0

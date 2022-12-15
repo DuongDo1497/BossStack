@@ -41,6 +41,10 @@
   margin-bottom: 0;
 }
 
+.introduction-bs__content p b.high-light{
+  color: var(--primary-cl);
+}
+
 .introduction-bs img{
   object-fit: cover;
 }
