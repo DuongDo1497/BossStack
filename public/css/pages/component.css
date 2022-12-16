@@ -666,13 +666,21 @@
 
 /* Shortcut page style  */
 .overview-page{
+  --count-item: 6;
+  --w-item: calc(100% / var(--count-item));
+  width: 70%;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
   column-gap: 16px;
 }
 
+.overview-page__item{
+  width: calc(var(--w-item) - 8px);
+}
+
 .overview-page__item a{
-  width: 162px;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -683,11 +691,10 @@
 .overview-page__item .icon{
   width: 80px;
   height: 80px;
-  font-size: 40px;
+  padding: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--white-cl);
   border-radius: 16px;
   background: linear-gradient(151.68deg, #3563AC 6.57%, #73B0DD 112.14%);;
 }
@@ -695,10 +702,12 @@
 .overview-page__item .text{
   text-align: center;
   color: var(--gray-cl-7);
+  text-transform: capitalize;
 }
 
 @media (max-width: 575.98px){
   .overview-page{
+    --w-item: 120px;
     padding: 0 15px;
     justify-content: flex-start;
     overflow-x: scroll;
@@ -708,14 +717,14 @@
     display: none;
   }
 
-  .overview-page__item a{
-    width: 110px;
+  .overview-page__item{
+    flex-shrink: 0;
   }
 
   .overview-page__item .icon{
     width: 36px;
     height: 36px;
-    font-size: 20px;
+    padding: 6px;
     border-radius: 8px;
   }
 

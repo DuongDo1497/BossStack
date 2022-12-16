@@ -33,55 +33,43 @@
         <div class="box box-primary">
           <div class="overview-page">
             <div class="overview-page__item">
-              <a href="{{ route('retireplans-index') }}">
-                <span class="icon">
-                  <i class="fas fa-calculator"></i>
-                </span>
-                <span class="text">Tính lợi nhuận kinh doanh</span>
+              <a href="{{ route('profits-index') }}">
+                <img class="icon" src="{{ asset('img/dashboard-1.svg') }}" alt="">
+                <span class="text">Tính lợi nhuận<br />kinh doanh</span>
               </a>
             </div>
 
             <div class="overview-page__item">
               <a href="{{ route('retireplans-index') }}">
-                <span class="icon">
-                  <i class="fa fa-money"></i>
-                </span>
-                <span class="text">Tính số tiền nghỉ hưu</span>
+                <img class="icon" src="{{ asset('img/dashboard-2.svg') }}" alt="">
+                <span class="text">Tính số tiền<br />nghỉ hưu</span>
               </a>
             </div>
 
             <div class="overview-page__item">
               <a href="{{ route('cashplans-index') }}">
-                <span class="icon">
-                  <i class="fa fa-cog"></i>
-                </span>
+                <img class="icon" src="{{ asset('img/dashboard-3.svg') }}" alt="">
                 <span class="text">Thiết lập ví tài chính</span>
               </a>
             </div>
 
             <div class="overview-page__item">
               <a href="{{ route('cash-index') }}">
-                <span class="icon">
-                  <i class="fa fa-file"></i>
-                </span>
+                <img class="icon" src="{{ asset('img/dashboard-4.svg') }}" alt="">
                 <span class="text">Thu chi ví tổng</span>
               </a>
             </div>
 
             <div class="overview-page__item">
               <a href="{{ route('cashassets-index') }}">
-                <span class="icon">
-                  <i class="fa fa-list-ol"></i>
-                </span>
-                <span class="text">Danh mục tài sản - nợ</span>
+                <img class="icon" src="{{ asset('img/dashboard-5.svg') }}" alt="">
+                <span class="text">Danh mục<br />tài sản - nợ</span>
               </a>
             </div>
 
             <div class="overview-page__item">
               <a href="{{ route('cash-process') }}">
-                <span class="icon">
-                  <i class="fa fa-address-card"></i>
-                </span>
+                <img class="icon" src="{{ asset('img/dashboard-6.svg') }}" alt="">
                 <span class="text">Bóc tách dòng tiền</span>
               </a>
             </div>
