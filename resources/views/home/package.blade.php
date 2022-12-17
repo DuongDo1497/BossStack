@@ -94,7 +94,7 @@
               <div class="package-service">
                 <p class="package-title">Các dịch vụ bao gồm</p>
                 <ul class="package-info">
-                  <li>Sử dụng toàn bộ tính năng sản phẩm</li>
+                  <li>Sử dụng <a href="{{ asset('feature') }}">toàn bộ tính năng sản phẩm</a></li>
                   <li>Miễn phí cập nhật tính năng mới</li>
                 </ul>
               </div>
@@ -150,7 +150,7 @@
               <div class="package-service">
                 <p class="package-title">Các dịch vụ bao gồm</p>
                 <ul class="package-info">
-                  <li>Sử dụng toàn bộ tính năng sản phẩm</li>
+                  <li>Sử dụng <a href="{{ asset('feature') }}">toàn bộ tính năng sản phẩm</a></li>
                   <li>Miễn phí cập nhật tính năng mới</li>
                   <li>Đội ngũ BossStack hướng dẫn Giải pháp chuyển đổi</li>
                 </ul>
@@ -204,7 +204,7 @@
               <div class="package-service">
                 <p class="package-title">Các dịch vụ bao gồm</p>
                 <ul class="package-info">
-                  <li>Sử dụng toàn bộ tính năng sản phẩm</li>
+                  <li>Sử dụng <a href="{{ asset('feature') }}">toàn bộ tính năng sản phẩm</a></li>
                   <li>Miễn phí cập nhật tính năng mới</li>
                   <li>Đội ngũ BossStack hướng dẫn Giải pháp chuyển đổi</li>
                 </ul>
@@ -236,17 +236,16 @@
         </div>
       </div>
     </div>
+  </form>
 
-    <div class="section section-advertise advertise bg-img-blue">
-      <div class="container">
-        <div class="wrap">
-          <h3 class="advertise-title">Chúng tôi giải phóng chủ doanh nghiệp khỏi gánh nặng quản lý
-          </h3>
-          <a class="btn btn-second btn-size-lg btn-contact" href="{{ asset('contact') }}">Liên
-            hệ</a>
-        </div>
+  <div class="section section-advertise advertise bg-img-blue">
+    <div class="container">
+      <div class="wrap">
+        <h3 class="advertise-title">Chúng tôi giải phóng chủ doanh nghiệp khỏi gánh nặng quản lý
+        </h3>
+        <a class="btn btn-second btn-size-lg btn-contact" href="{{ asset('contact') }}">Liên
+          hệ</a>
       </div>
     </div>
-
-  </form>
+  </div>
 @endsection

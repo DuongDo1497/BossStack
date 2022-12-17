@@ -137,6 +137,11 @@
   height: 274px;
 }
 
+.package-service .package-info li a{
+  color: var(--second-cl);
+  text-decoration: underline;
+}
+
 .package-policy{
   height: 246px;
 }

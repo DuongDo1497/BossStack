@@ -1,0 +1,121 @@
+.help-product h4{
+  width: 100%;
+  color: var(--primary-cl);
+}
+
+.help-product h4 span{
+  color: var(--second-cl);
+}
+
+.help-product__item{
+  --w-item: calc((100% / 3) - 20px);
+  --pd-item: 0 18px;
+}
+
+.help-product__item .icon{
+  --size-icon: 295px;
+  --border-radius-icon: 0;
+  --transform-rotate: none;
+  margin-bottom: 16px;
+}
+
+.help-product__item h6{
+  color: var(--gray-cl-8);
+  margin-bottom: 16px;
+}
+
+.help-product__item p{
+  color: var(--gray-cl-7);
+}
+
+.feature-bs.gray{
+  background-color: var(--gray-cl-1);
+}
+
+.feature-bs .section-title{
+  max-width: 960px;
+  margin: 0 auto 64px;
+}
+
+.feature-bs__body{
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-bs__body.reverse{
+  flex-direction: row-reverse;
+}
+
+.feature-bs__body .feature-bs__item:first-child{
+  width: 560px;
+}
+
+.feature-bs__body .feature-bs__item:last-child{
+  width: 690px;
+}
+
+.feature-bs__item li{
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  margin-bottom: 24px;
+}
+
+.feature-bs__item li:last-child{
+  margin-bottom: 0;
+}
+
+.feature-bs__item li .icon{
+  --w-icon: 32px;
+  width: var(--w-icon);
+  height: var(--w-icon);
+}
+
+.feature-bs__item li .text{
+  color: var(--gray-cl-7);
+}
+
+@media (max-width: 1399.98px){
+  .feature-bs__body .feature-bs__item:last-child{
+    width: 545px;
+  }
+}
+
+@media (max-width: 1199.98px){
+  .help-product__item .icon{
+    --size-icon: 240px;
+  }
+
+  .feature-bs__body .feature-bs__item:first-child,
+  .feature-bs__body .feature-bs__item:last-child{
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 991.98px){
+  .help-product__list{
+    --align-items: stretch;
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .help-product__item{
+    --w-item: 100%;
+  }
+
+  .feature-bs__item li .icon{
+    --w-icon: 20px;
+  }
+}
+
+@media (max-width: 767.98px){
+  .feature-bs__body{
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .feature-bs__body .feature-bs__item:first-child, 
+  .feature-bs__body .feature-bs__item:last-child{
+    width: 100%;
+  }
+}

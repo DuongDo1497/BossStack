@@ -20,6 +20,7 @@ Route::get('/products/data-convert', 'HomeController@dataConvert')->name('data-c
 Route::get('/products/operate-digital', 'HomeController@operateDigital')->name('operate-digital');
 Route::get('package', 'HomeController@package')->name('package');
 Route::get('about-us', 'HomeController@aboutUs')->name('about-us');
+Route::get('feature', 'HomeController@feature')->name('feature');
 Route::get('contact', 'HomeController@contact')->name('contact');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('term', 'HomeController@term')->name('term');

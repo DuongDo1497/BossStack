@@ -62,6 +62,11 @@ class HomeController extends Controller
         return $this->view('package');
     }
 
+    public function feature()
+    {
+        return $this->view('feature');
+    }
+
     public function aboutUs()
     {
         return $this->view('aboutus');
