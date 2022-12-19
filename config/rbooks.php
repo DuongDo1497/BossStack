@@ -198,9 +198,9 @@ return [
 
     'PRODUCTTYPES' => [ 
             '0' => ['month' => '1', 'discount' => '0'],
-            '1' => ['month' => '3', 'discount' => '10'],
-            '2' => ['month' => '6', 'discount' => '20'],
-            '3' => ['month' => '12', 'discount' => '30'],
+            '1' => ['month' => '12', 'discount' => '20'],
+            '2' => ['month' => '24', 'discount' => '30'],
+            '3' => ['month' => '36', 'discount' => '30'],
           ],
 
     'PRODUCTACCESSPAGES' => [ 

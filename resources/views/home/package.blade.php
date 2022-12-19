@@ -83,9 +83,9 @@
                 <div class="package-option">
                   <select class="form-select" name="producttypes_1">
                     <option value="0">Chọn gói thời gian</option>
-                    <option value="">1 năm</option>
-                    <option value="">2 năm</option>
-                    <option value="">3 năm</option>
+                    <option value="1">1 năm</option>
+                    <option value="2">2 năm</option>
+                    <option value="3">3 năm</option>
                   </select>
                   <button type="submit" onclick="processReports('frm', '1')"
                     class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
@@ -139,9 +139,9 @@
                 <div class="package-option">
                   <select class="form-select" name="producttypes_2">
                     <option value="0">Chọn gói thời gian</option>
-                    <option value="">1 năm</option>
-                    <option value="">2 năm</option>
-                    <option value="">3 năm</option>
+                    <option value="1">1 năm</option>
+                    <option value="2">2 năm</option>
+                    <option value="3">3 năm</option>
                   </select>
                   <button type="submit" onclick="processReports('frm', '2')"
                     class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
@@ -193,9 +193,9 @@
                 <div class="package-option">
                   <select class="form-select" name="producttypes_3">
                     <option value="0">Chọn gói thời gian</option>
-                    <option value="">1 năm</option>
-                    <option value="">2 năm</option>
-                    <option value="">3 năm</option>
+                    <option value="1">1 năm</option>
+                    <option value="2">2 năm</option>
+                    <option value="3">3 năm</option>
                   </select>
                   <button type="submit" onclick="processReports('frm', '3')"
                     class="btn btn-second btn-size-lg btn-buy">Mua ngay</button>
