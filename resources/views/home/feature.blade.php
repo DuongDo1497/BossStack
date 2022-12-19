@@ -51,7 +51,7 @@
     </div>
   </div>
 
-  <div class="section section-feature feature-bs gray">
+  <div class="section section-feature feature-bs icon-svg gray">
     <div class="container">
       <div class="wrap">
         <h4 class="section-title">Quản lý toàn bộ dòng tiền tổng quan cá nhân, doanh nghiệp</h4>
@@ -59,22 +59,22 @@
           <div class="feature-bs__item">
             <ul>
               <li>
-                <img class="icon img-fluid" src="{{ asset('img/web/icon-check-circle.svg') }}" alt="">
+                <img class="icon img-fluid" src="{{ asset('img/web/feature-icon-1.svg') }}" alt="">
                 <span class="text">Theo dõi dòng tiền theo từng giai đoạn</span>
               </li>
 
               <li>
-                <img class="icon img-fluid" src="{{ asset('img/web/icon-check-circle.svg') }}" alt="">
+                <img class="icon img-fluid" src="{{ asset('img/web/feature-icon-2.svg') }}" alt="">
                 <span class="text">Xây dựng và đánh giá dòng tiền cá nhân, doanh nghiệp</span>
               </li>
 
               <li>
-                <img class="icon img-fluid" src="{{ asset('img/web/icon-check-circle.svg') }}" alt="">
+                <img class="icon img-fluid" src="{{ asset('img/web/feature-icon-3.svg') }}" alt="">
                 <span class="text">Báo cáo tự động</span>
               </li>
 
               <li>
-                <img class="icon img-fluid" src="{{ asset('img/web/icon-check-circle.svg') }}" alt="">
+                <img class="icon img-fluid" src="{{ asset('img/web/feature-icon-4.svg') }}" alt="">
                 <span class="text">Tùy chỉnh linh hoạt</span>
               </li>
             </ul>

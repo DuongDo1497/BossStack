@@ -71,6 +71,10 @@
   height: var(--w-icon);
 }
 
+.feature-bs.icon-svg .feature-bs__item li .icon{
+  --w-icon: 60px;
+}
+
 .feature-bs__item li .text{
   color: var(--gray-cl-7);
 }
@@ -117,5 +121,9 @@
   .feature-bs__body .feature-bs__item:first-child, 
   .feature-bs__body .feature-bs__item:last-child{
     width: 100%;
+  }
+
+  .feature-bs.icon-svg .feature-bs__item li .icon{
+    --w-icon: 40px;
   }
 }

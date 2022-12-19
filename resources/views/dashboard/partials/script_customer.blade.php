@@ -326,6 +326,11 @@
         label: 'Petal.Width'
       }
     },
+    pie: {
+      label: {
+        show: false
+      }
+    },
     size: {
         height: 220,
         width: width_chart1mb
@@ -371,6 +376,11 @@
       },
       y: {
         label: 'Petal.Width'
+      }
+    },
+    pie: {
+      label: {
+        show: false
       }
     },
     size: {

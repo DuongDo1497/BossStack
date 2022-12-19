@@ -65,7 +65,7 @@
                 value="{{ $retirementsavings == null ? old('retirementsavings') : formatNumber($retirementsavings, 1, 0, 0) }}"
                 onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
             </div>
-            <div class="form-group">
+            {{-- <div class="form-group">
               <label for="">Tiền cho các mục tiêu tài chính khác (tháng):</label>
               <input type='hidden' name='otherplan' id='otherplan' value='{{ $otherplan }}'>
               <div class="form-text">
@@ -75,7 +75,7 @@
                   {!! formatNumberColorCustom($otherplan, 1, 0, 1, 3) !!}
                 @endif
               </div>
-            </div>
+            </div> --}}
           </div>
           <button type="submit" class="btn btn-primary btn-analysis">Phân tích</button>
         </div>
