@@ -544,9 +544,11 @@
                           
                           $checkText = $checkAmountPlan > 0 ? 'Đang thực hiện tốt' : 'Đang thiếu hụt ';
                           
-                          $percentProcess = round(($sumArray[$cashplan->id . '_realamount'] / $cashplan->requireamount) * 100, 0);
-                          if ($percentProcess >= 100) {
-                              $percentProcess = 100;
+                          if ($cashplan->requireamount > 0){
+                              $percentProcess = round(($sumArray[$cashplan->id . '_realamount'] / $cashplan->requireamount) * 100, 0);
+                              if ($percentProcess >= 100) {
+                                  $percentProcess = 100;
+                              }
                           }
                           
                           //tong cong ke hoach, da thuc hien
@@ -881,11 +883,12 @@
                                       $checkPlan = $checkAmountPlan > 0 ? 'status status-success' : 'status status-error';
                                       
                                       $checkText = $checkAmountPlan > 0 ? 'Đang thực hiện tốt' : 'Đang thiếu hụt ';
-                                      
-                                      $percentProcess = round(($sumArray[$cashplan->id . '_realamount'] / $cashplan->requireamount) * 100, 0);
-                                      if ($percentProcess >= 100) {
-                                          $percentProcess = 100;
-                                      }
+                                      if ($cashplan->requireamount > 0){
+                                          $percentProcess = round(($sumArray[$cashplan->id . '_realamount'] / $cashplan->requireamount) * 100, 0);
+                                          if ($percentProcess >= 100) {
+                                              $percentProcess = 100;
+                                          }
+                                      }  
                                       
                                       //tong cong ke hoach, da thuc hien
                                       $total_requireamount += $cashplan->requireamount;
