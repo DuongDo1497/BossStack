@@ -580,7 +580,7 @@ class CustomerController extends Controller
                 
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
 
-        $this->view->setHeading('TỔNG QUAN');
+        $this->view->setHeading('TỔNG QUAN USER');
 
         return $this->view('user.dashboardMain');
     }

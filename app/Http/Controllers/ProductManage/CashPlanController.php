@@ -204,6 +204,8 @@ class CashPlanController extends Controller
         $this->setViewInit();
         $this->processPlan($id);
         
+        $this->view->setHeading('PHÂN TÍCH DÒNG TIỀN');
+
         return $this->view('process');
     }
     

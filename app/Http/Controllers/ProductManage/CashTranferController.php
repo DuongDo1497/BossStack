@@ -47,7 +47,7 @@ class CashTranferController extends Controller
     {
         $customer_id = Auth::user()->customer()->first()->id;
 
-        $this->view->setHeading('CHUYỂN TIỀN');
+        $this->view->setHeading('PHÂN BỔ');
         $this->viewInit($customer_id);
     }
 

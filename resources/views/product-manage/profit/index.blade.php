@@ -41,7 +41,7 @@
               placeholder="Nhập..." required>
           </div>
         </div>
-        <a href="{{ route('profits-add') }}" class="btn btn-primary btn-next">Tiếp tục</a>
+        <a href="{{ route('profits-add') }}" class="btn btn-primary btn-analysis">Phân tích</a>
       </div>
     </div>
   </div>

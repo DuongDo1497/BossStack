@@ -210,7 +210,8 @@
 }
 
 #cash-dissection__dashboard .table-wrap thead tr:last-child th:first-child,
-#assessment__dashboard .table-wrap thead tr:last-child th:first-child{
+#assessment__dashboard .table-wrap thead tr:last-child th:first-child,
+#assessment__detail .table-wrap thead tr:last-child th:first-child{
   display: none;
 }
 

@@ -10,7 +10,7 @@
       <div class="container">
         <div class="wrap">
           <div class="banner-home__left">
-            <h1 class="banner-home__title"><span>PHẦN MỀM</span> QUẢN LÝ DÒNG TIỀN <span>dành cho Cá nhân và Doanh
+            <h1 class="banner-home__title"><span>PHẦN MỀM</span> BÓC TÁCH DÒNG TIỀN <span>dành cho Cá nhân và Doanh
                 nghiệp</span>
             </h1>
             <p class="banner-home__text">Đưa ra quyết định tốt hơn, đem lại <span class="text-bold">LỢI NHUẬN TỨC THÌ</span>

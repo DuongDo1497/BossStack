@@ -1,4 +1,4 @@
-.profit-index .btn-next,
+.profit-index .btn-analysis,
 .profit-add .btn-analysis{
   width: 100px;
   margin-top: 24px;
@@ -53,6 +53,11 @@
 
 .profit-result table tbody th.light{
   font-family: hl;
+}
+
+.profit-result table tbody th .text-small{
+  font-size: 13px;
+  color: var(--gray-cl-6);
 }
 
 .profit-result table tbody td{

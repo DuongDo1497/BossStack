@@ -24,7 +24,7 @@
   <div class="section cashtranfer-add">
     <div class="breadcrumb">
       <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cash-index') }}">Thu chi ví tổng</a> / <span
-        class="current">Chuyển tiền</span>
+        class="current">Phân bổ</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
@@ -116,7 +116,7 @@
                               ' - ' .
                               $item->accountname .
                               "
-                                                                                    (Số dư: " .
+                                                                                                              (Số dư: " .
                               formatNumber($item->amount, 1, 0, 1) .
                               ')' }}
                         </option>
@@ -126,7 +126,7 @@
                               ' - ' .
                               $item->accountname .
                               "
-                                                                                    (Kế hoạch: " .
+                                                                                                              (Kế hoạch: " .
                               formatNumber($item->requireamount, 1, 0, 0) .
                               ', Số dư: ' .
                               formatNumber($item->amount, 1, 0, 1) .
@@ -160,8 +160,8 @@
           </div>
 
           <button type="submit" class="btn btn-primary btn-tranfer"
-            onclick="processSubmitOpenWindow('frm', 'add', '_top', '{{ route('cashtranfers-store') }}?continue=true', '1')">Chuyển
-            tiền</button>
+            onclick="processSubmitOpenWindow('frm', 'add', '_top', '{{ route('cashtranfers-store') }}?continue=true', '1')">Phân
+            bổ</button>
         </div>
       </div>
     </form>

@@ -17,18 +17,18 @@
           <div class="register-form__info">
             <div class="register-form__header">
               <img class="img-fluid logo" src="{{ asset('img/web/logo.svg') }}" alt="">
-              <h6>THÔNG TIN CÁ NHÂN</h6>
+              <h6>THÔNG TIN KHÁCH HÀNG</h6>
             </div>
             <div class="register-form__body">
               <div class="form-group">
-                <label class="form-label" for="fullname">Họ và tên <span>*</span></label>
+                <label class="form-label" for="fullname">Tên khách hàng <span>*</span></label>
                 <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Họ và tên *"
                   value="{{ old('fullname') }}" required>
                 @if ($errors->has('fullname'))
                   <span class="text-danger">{{ $errors->first('fullname') }}</span>
                 @endif
               </div>
-              <div class="form-row">
+              {{-- <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="birthday">Ngày sinh <span>*</span></label>
                   <input type="text" class="form-control" id="birthday" name="birthday" placeholder="Ngày sinh *"
@@ -63,7 +63,7 @@
                 @if ($errors->has('address'))
                   <span class="text-danger">{{ $errors->first('address') }}</span>
                 @endif
-              </div>
+              </div> --}}
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="phone">Điện thoại <span>*</span></label>
@@ -82,7 +82,7 @@
                   @endif
                 </div>
               </div>
-              <div class="form-row">
+              {{-- <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="contactname">Người liên hệ khi cần</label>
                   <input type="text" class="form-control" id="contactname" name="contactname"
@@ -106,11 +106,11 @@
                     @endif
                   @endforeach
                 </select>
-              </div>
+              </div> --}}
               <div class="form-group">
                 <label class="form-label" for="typereport">Thông tin sản phẩm <span>*</span></label>
                 <select class="form-select" id="typereport" name="typereport" onchange='onChangeSelect();' required>
-                   @foreach ($service_product as $item)
+                  @foreach ($service_product as $item)
                     @if ($item->id == old('typereport') or $item->id == $typereport)
                       @if ($item->id == 4)
                         <option value="{{ $item->id }}" selected>
@@ -131,20 +131,20 @@
                         </option>
                       @endif
                     @endif
-                  @endforeach 
+                  @endforeach
                 </select>
               </div>
               <div id="producttypelabel" class="form-group" style="">
                 <label class="form-label" for="producttype">Thời gian gói <span>*</span></label>
                 <select class="form-select" id="producttype" name="producttype" onchange='onChangeSelect();' required>
-                   @foreach ($producttypes as $key => $value)
+                  @foreach ($producttypes as $key => $value)
                     @if ($key > 0)
                       @if ($key == old('producttype') or $key == $producttype)
                         <option value="{{ $key }}" selected>
-                          {{ $value['month']/12 }} năm (giảm
+                          {{ $value['month'] / 12 }} năm (giảm
                           {{ $value['discount'] }}%)</option>
                       @else
-                        <option value="{{ $key }}">{{ $value['month']/12 }}
+                        <option value="{{ $key }}">{{ $value['month'] / 12 }}
                           năm (giảm {{ $value['discount'] }}%)</option>
                       @endif
                     @endif

@@ -28,7 +28,7 @@
               <th rowspan="6">Chi phí</th>
             </tr>
             <tr>
-              <th class="light">Giá vốn hàng bán (biến phí)</th>
+              <th class="light">Giá vốn hàng bán <span class="text-small">(biến phí)</span></th>
               <td>81,910,000,000 <span>VND</span></td>
             </tr>
             <tr>
@@ -48,7 +48,8 @@
               <td>81,910,000,000 <span>VND</span></td>
             </tr>
             <tr>
-              <th colspan="2" class="text-center">Thuế thu nhập doanh nghiệp (20%) (biến phí)</th>
+              <th colspan="2" class="text-center">Thuế thu nhập doanh nghiệp (20%) <span class="text-small">(biến
+                  phí)</span></th>
               <td>81,910,000,000 <span>VND</span></td>
             </tr>
             <tr>
