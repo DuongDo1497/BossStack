@@ -1,3 +1,14 @@
+.banner-default__title p{
+  font-family: hl;
+  display: inline-block;
+  text-transform: none;
+}
+
+.banner-default__title p .highlight{
+  font-family: hb;
+  color: var(--second-cl);
+}
+
 .package{
   background-color: var(--primary-cl-1);
 }

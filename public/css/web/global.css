@@ -32,9 +32,9 @@
   --bg-green-cl: #F2FDEE;
 }
 
-* {
+/* * {
   user-select: none;
-}
+} */
 
 html {
   font-size: 20px;

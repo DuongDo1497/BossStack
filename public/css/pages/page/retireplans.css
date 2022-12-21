@@ -15,6 +15,12 @@
   --w-label: 530px;
 }
 
+.retireplans .notification{
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--gray-cl-2);
+}
+
 @media (max-width: 575.98px){
   .retireplans .box-form{
     --w-box-form: 100%;

@@ -365,7 +365,7 @@ class CustomerController extends Controller
         $this->view->listFamilyRelationship = $listFamilyRelationship;
 
         $this->view->model = $this->main_service->find($customer_id);
-        $this->view->setHeading('THÔNG TIN KHÁCH HÀNG');
+        $this->view->setHeading('THÔNG TIN CÁ NHÂN');
         $this->view->setSubHeading('Chỉnh sửa');
 
         return $this->view('editCustomer');

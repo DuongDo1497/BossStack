@@ -9,7 +9,9 @@
     <div class="container">
       <div class="wrap">
         <div class="banner-default__body">
-          <h1 class="banner-default__title text-center">bossstack gói giải pháp</h1>
+          <h1 class="banner-default__title text-center">
+            <p><span class="highlight">Boss</span>Stack</p> gói giải pháp
+          </h1>
         </div>
       </div>
     </div>

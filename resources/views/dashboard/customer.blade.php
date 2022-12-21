@@ -79,7 +79,7 @@
         <div class="box box-primary">
           <div class="spending-history">
             <div class="spending-history__list">
-              <h6 class="box-title">Theo dõi tài sản</h6>
+              <h6 class="box-title">Theo dõi tổng tài sản - nợ</h6>
               <div class="chart-list">
                 <div class="chart-item">
                   <p class="chart-title">Nợ</p>

@@ -77,12 +77,12 @@
                 readonly>
             </div>
             <div class="form-group">
-              <label for="">Tên dòng tiền<span>*</span>:</label>
+              <label for="">Tên ví<span>*</span>:</label>
               <input type="text" class="form-control" name="" id="" value="{{ $model->planname }}"
                 readonly>
             </div>
             <div class="form-group">
-              <label for="">Chi tiết<span>*</span>:</label>
+              <label for="">Tên dòng tiền<span>*</span>:</label>
               <input type="text" class="form-control" name="" id="" value="{{ $model->description }}"
                 readonly>
             </div>

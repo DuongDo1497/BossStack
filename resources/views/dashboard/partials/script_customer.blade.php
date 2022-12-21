@@ -167,7 +167,7 @@
   c3.generate({
     bindto: '#rptasset1',
     data: {
-      type : 'pie',
+      type : 'donut',
       onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
       onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
       onclick: function (d, i) { console.log("onclick", d, i, this); },
@@ -177,10 +177,11 @@
         "Nợ Tín Chấp": '#5388D8',
       }
     },
-    pie: {
+    donut: {
       label: {
         show: false
-      }
+      },
+      width: 25,
     },
     axis: {
       x: {
@@ -219,7 +220,7 @@
   c3.generate({
     bindto: '#rptasset2',
     data: {
-      type : 'pie',
+      type : 'donut',
       onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
       onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
       onclick: function (d, i) { console.log("onclick", d, i, this); },
@@ -229,10 +230,11 @@
         "Ví mục tiêu": '#5388D8',
       }
     },
-    pie: {
+    donut: {
       label: {
         show: false
-      }
+      },
+      width: 25,
     },
     axis: {
       x: {

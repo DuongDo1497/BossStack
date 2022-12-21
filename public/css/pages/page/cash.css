@@ -486,6 +486,10 @@
     width: 100%;
   }
 
+  .cash-process .cash-dissection .panel-body{
+    padding: 32px 12px;
+  }
+
   .cash-process #cash-dissection__dashboard .filter-timeline .form-group,
   .cash-process #assessment__dashboard .filter-timeline .form-group,
   .cash-process #cash-dissection__dashboard .filter-timeline .btn-filter,
@@ -495,8 +499,8 @@
 
   .cash-process #cash-dissection__dashboard .table-wrap .table-content,
   .cash-process #assessment__dashboard .table-wrap .table-content{
-    width: calc(100% - 320px); 
-    margin-left: 320px;
+    width: calc(100% - 210px); 
+    margin-left: 210px;
     margin-right: 0;
   }
 
@@ -519,6 +523,14 @@
     display: block;
   }
 
+  .cash-process #cash-dissection__dashboard tbody td:first-child,
+  .cash-process #assessment__dashboard tbody td:first-child,
+  .cash-process #cash-dissection__dashboard tbody tr:last-child td:first-child,
+  .cash-process #assessment__dashboard tbody tr:last-child td:first-child{
+    padding-left: 8px;
+    justify-content: flex-start;
+  }
+
   .cash-process #cash-dissection__dashboard .table-wrap table td:not(.fixed),
   .cash-process #assessment__dashboard .table-wrap table td:not(.fixed){
     background-color: var(--gray-cl-3);
@@ -526,12 +538,12 @@
 
   .cash-process #cash-dissection__dashboard .table-wrap table .fixed,
   .cash-process #assessment__dashboard .table-wrap table .fixed{
-    width: 160px;
+    width: 105px;
   }
 
   .cash-process #cash-dissection__dashboard .table-wrap table .fixed-2,
   .cash-process #assessment__dashboard .table-wrap table .fixed-2{
-    left: 160px; 
+    left: 105px; 
   }
 
   .cash-process #cash-dissection__detail .table-wrap .table-content,

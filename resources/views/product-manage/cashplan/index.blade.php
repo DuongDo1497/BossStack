@@ -73,7 +73,7 @@
         <div class="noti-index">
           <div class="noti-index__wrap">
             <div class="noti-index__item">
-              <p class="title">Số ví tài chính:</p>
+              <p class="title">Số dòng tiền:</p>
               <p class="number">{{ $collections->count() }}</p>
             </div>
             <div class="noti-index__item">
@@ -105,7 +105,7 @@
                     <input type="checkbox" name="" id="">
                   </th>
                   <th class="fixed fixed-2">STT</th>
-                  <th class="fixed fixed-3">Kế hoạch</th>
+                  <th class="fixed fixed-3">Tên dòng tiền</th>
                   <th>Phân loại</th>
                   <th>Ngày lập</th>
                   <th>Số tuổi đạt mục tiêu</th>

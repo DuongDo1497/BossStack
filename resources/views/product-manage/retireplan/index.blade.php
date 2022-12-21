@@ -123,7 +123,7 @@
               </div>
             </div>
             @if (isset($infor) and $error == 2)
-              <div class="alert {{ $alert }}" role="alert">{{ $infor }}</div>
+              <p class="notification">{{ $infor }}</p>
             @endif
           </div>
         </div>

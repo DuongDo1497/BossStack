@@ -88,7 +88,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="description">Chi tiết<span>*</span>:</label>
+              <label for="description">Tên dòng tiền<span>*</span>:</label>
               <input type="text" class="form-control" name="description" id="description"
                 value="{{ old('description') }}" placeholder="Nhập..." required>
             </div>
