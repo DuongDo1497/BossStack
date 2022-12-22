@@ -14,6 +14,7 @@
             <span class="text">Sản phẩm</span>
           </div>
           <h1 class="banner-default__title text-start">KIỂM SOÁT THẤT THOÁT DOANH NGHIỆP</h1>
+          <small>* Dành cho doanh nghiệp có doanh thu trên 100 tỷ/năm</small>
         </div>
       </div>
     </div>
@@ -25,28 +26,25 @@
         <div class="benefits-product__list">
           <div class="benefits-product__item no-bg">
             <div class="benefits-product__content">
-              <h4 class="section-title">Lợi ích kiểm soát thất thoát DOANH NGHIỆP</h4>
+              <h4 class="section-title">Lợi ích kiểm soát thất thoát doanh nghiệp</h4>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-cyan-cl">
-              <img src="{{ asset('img/web/cash-dissection-7.svg') }}" alt="cash-dissection"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/cash-dissection-17.svg') }}" alt="cash-dissection" class="icon img-fluid">
               <p>Tiết kiệm thời gian và chi phí quản lý doanh nghiệp</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-purple-cl">
-              <img src="{{ asset('img/web/cash-dissection-8.svg') }}" alt="cash-dissection"
-                class="icon img-fluid">
-              <p>Kiểm soát thất thoát từ quy trình quản lý vận hành</p>
+              <img src="{{ asset('img/web/cash-dissection-18.svg') }}" alt="cash-dissection" class="icon img-fluid">
+              <p>Phân tích toàn bộ hoạt động của doanh nghiệp để đưa ra các chiến lược cắt giảm chi phí cần thiết</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
-              <img src="{{ asset('img/web/cash-dissection-9.svg') }}" alt="cash-dissection"
-                class="icon img-fluid">
-              <p>Chủ động nguồn tài chính cho các cơ hội kinh doanh và phát triển doanh nghiệp</p>
+              <img src="{{ asset('img/web/cash-dissection-19.svg') }}" alt="cash-dissection" class="icon img-fluid">
+              <p>Rà soát và thiếp lập lại các lỗ hổng tài chính cho doanh nghiệp​</p>
             </div>
           </div>
         </div>
@@ -58,11 +56,10 @@
     <div class="container">
       <div class="wrap">
         <div class="why-product__content">
-          <h4 class="section-title">Tại sao chủ doanh nghiệp cần kiểm soát thất thoát?</h4>
+          <h4 class="section-title">Tại sao chủ doanh nghiệp cần kiểm soát thất thoát tài chính ?</h4>
           <div class="why-product__list">
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-6.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-6.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Quy trình nhập, xuất và sản xuất sản phẩm chưa đồng bộ gây khó khăn
                 trong khâu quản lý và kiểm soát chất lượng</span>
             </div>
@@ -70,27 +67,23 @@
               <span class="text"><b>50%</b> doanh nghiệp đang gặp phải những vấn đề dưới đây:</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-7.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-7.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Quy trình quản lý vận hành doanh nghiệp chưa rõ ràng, chưa có các
                 công cụ hỗ trợ đi kèm dẫn đến chi phí tăng cao, dư thừa nhân sự và lãng phí thời
                 gian</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-8.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-8.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Chi phí tài chính chưa được sắp xếp theo cùng sự phát triển của
                 doanh nghiệp</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-9.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-9.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Quy trình bán hàng chưa tối ưu gây thất thoát tài sản doanh nghiệp,
                 tốn thời gian và chi phí kinh doanh</span>
             </div>
             <div class="why-product__item">
-              <img src="{{ asset('img/web/why-product-10.svg') }}" alt="icon"
-                class="icon img-fluid">
+              <img src="{{ asset('img/web/why-product-10.svg') }}" alt="icon" class="icon img-fluid">
               <span class="text">Bỏ lỡ các chi phí cơ hội kinh doanh, ảnh hưởng đến việc phát triển
                 doanh nghiệp</span>
             </div>
@@ -145,7 +138,7 @@
       <div class="wrap">
         <div class="advice-left">
           <h4>SẢN PHẨM</h4>
-          <h3>KIỂM SOÁT THẤT THOÁT DOANH NGHIỆP</h3>
+          <h3>KIỂM SOÁT THẤT THOÁT TÀI CHÍNH DOANH NGHIỆP </h3>
         </div>
         <div class="advice-right">
           <h6>ĐĂNG KÝ NHẬN TƯ VẤN</h6>
@@ -160,20 +153,19 @@
             <input type='hidden' name='solution' value='5'>
             <input type='hidden' name='typereport' value='1'>
             <div class="form-group">
-              <input type="text" class="form-control" id="fullname" name="fullname"
-                placeholder="Họ và tên *" required>
+              <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Họ và tên *"
+                required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="phone" name="phone"
-                placeholder="Số điện thoại *" required>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại *"
+                required>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" id="email" name="email"
-                placeholder="Email *" required>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email *"
+                required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="content" name="content"
-                placeholder="Công ty">
+              <input type="text" class="form-control" id="content" name="content" placeholder="Công ty">
             </div>
             <div class="form-group">
               <select class="form-select" name="companytype">
@@ -190,8 +182,7 @@
               </select>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="title" name="title"
-                placeholder="Chức vụ">
+              <input type="text" class="form-control" id="title" name="title" placeholder="Chức vụ">
             </div>
 
             <button type="submit" class="btn btn-second btn-size-lg btn-register">ĐĂNG KÝ

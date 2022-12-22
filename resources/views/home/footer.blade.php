@@ -24,9 +24,6 @@
             <li>
               <a href="{{ asset('/products/cash-flow-execution') }}">Thực thi dòng tiền doanh nghiệp</a>
             </li>
-            <li>
-              <a href="{{ asset('/products/loss-control') }}">Kiểm soát thất thoát doanh nghiệp</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -57,6 +54,9 @@
           <ul>
             <li><a href="{{ asset('/products/data-convert') }}">Chuyển đổi dữ liệu</a></li>
             <li><a href="{{ asset('/products/operate-digital') }}">Vận hành số chuyên sâu</a></li>
+            <li>
+              <a href="{{ asset('/products/loss-control') }}">Kiểm soát thất thoát doanh nghiệp</a>
+            </li>
           </ul>
           <div class="footer-item__social">
             <a href="https://www.facebook.com/bossstack.vn">

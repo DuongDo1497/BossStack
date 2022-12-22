@@ -43,6 +43,26 @@
   align-items: center;
 }
 
+.why-product:not(.reverse){
+  background-color: var(--white-cl);
+}
+
+.why-product:not(.reverse) .why-product__list{
+  width: 580px;
+}
+
+.why-product.reverse .section-title{
+  text-align: right;
+}
+
+.why-product.reverse .why-product__list{
+  margin-left: auto;
+}
+
+.why-product:not(.reverse) .why-product__item{
+  border: 1px solid var(--gray-cl-4);
+}
+
 /* Help Product Section */
 
 .help-product{

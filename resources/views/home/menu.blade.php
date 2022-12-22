@@ -12,9 +12,6 @@
       <li>
         <a href="{{ asset('/products/cash-flow-execution') }}">Thực thi dòng tiền doanh nghiệp</a>
       </li>
-      <li>
-        <a href="{{ asset('/products/loss-control') }}">Kiểm soát thất thoát doanh nghiệp</a>
-      </li>
     </ul>
   </li>
   <li class="menu-main__item">
@@ -39,6 +36,9 @@
       </li>
       <li>
         <a href="{{ asset('/products/operate-digital') }}">Vận hành số chuyên sâu</a>
+      </li>
+      <li>
+        <a href="{{ asset('/products/loss-control') }}">Kiểm soát thất thoát doanh nghiệp</a>
       </li>
     </ul>
   </li>

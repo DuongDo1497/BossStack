@@ -25,31 +25,59 @@
         <div class="benefits-product__list">
           <div class="benefits-product__item no-bg">
             <div class="benefits-product__content">
-              <h4 class="section-title">Điểm khác biệt <br />Giải pháp thực thi dòng tiền doanh nghiệp
-              </h4>
+              <h4 class="section-title">Giải pháp thực thi dòng tiền doanh nghiệp phù hợp với​</h4>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-cyan-cl">
-              <img src="{{ asset('img/web/cash-dissection-4.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Tiết kiệm 87% thời gian quản lý, xử lý và đưa ra các quyết định về tiền</p>
+              <img src="{{ asset('img/web/cash-dissection-6.svg') }}" alt="cash-dissection" class="icon img-fluid">
+              <p>Doanh nghiệp có nhu cầu tăng vốn giúp mở rộng, phát triển kinh doanh, IPO và có nhu cầu mời các nhà đầu
+                tư hỗ trợ doanh nghiệp​</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-purple-cl">
-              <img src="{{ asset('img/web/cash-dissection-5.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Hệ thống <b>phần mềm BossStack</b> tùy chỉnh phù hợp với tình hình tài chính của từng
-                khách hàng</p>
+              <img src="{{ asset('img/web/cash-dissection-16.svg') }}" alt="cash-dissection" class="icon img-fluid">
+              <p>Doanh nghiệp có nhu cầu mua lại hoặc sáp nhập với một doanh nghiệp khác nhằm mở rộng lĩnh vực kinh doanh,
+                phát triển thị trường​</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
-              <img src="{{ asset('img/web/cash-dissection-6.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Tách bạch dòng tiền cá nhân và doanh nghiệp giúp khách hàng dễ dàng lên kế hoạch mục
-                tiêu tài chính gia đình và doanh nghiệp</p>
+              <img src="{{ asset('img/web/cash-dissection-5.svg') }}" alt="cash-dissection" class="icon img-fluid">
+              <p>Doanh nghiệp cần có chiến lược quản trị và bóc tách các dòng tiền kinh doanh, dòng tiền tài chính</p>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-why why-product reverse">
+    <div class="container">
+      <div class="wrap">
+        <div class="why-product__content">
+          <h4 class="section-title">Điểm khác biệt giải pháp thực thi dòng tiền doanh nghiệp</h4>
+          <div class="why-product__list">
+            <div class="why-product__item">
+              <img src="{{ asset('img/web/why-product-20.svg') }}" alt="icon" class="icon img-fluid">
+              <span class="text">Tiết kiệm 87% thời gian quản lý, xử lý và đưa ra các quyết định về tiền</span>
+            </div>
+            <div class="why-product__item">
+              <img src="{{ asset('img/web/why-product-21.svg') }}" alt="icon" class="icon img-fluid">
+              <span class="text">Hệ thống <b>phần mềm BossStack</b> tùy chỉnh phù hợp với tình hình tài chính của từng
+                khách
+                hàng</span>
+            </div>
+            <div class="why-product__item">
+              <img src="{{ asset('img/web/why-product-22.svg') }}" alt="icon" class="icon img-fluid">
+              <span class="text">Cung cấp bức tranh tài chính tổng thể​<br />Quản trị dòng tiền hoạt động​​<br />Kiểm
+                soát rủi ro tài chính​</span>
+            </div>
+          </div>
+        </div>
+        <img src="{{ asset('img/web/cash-dissection-img-5.png') }}" alt="background image"
+          class="why-product__img img-fluid">
       </div>
     </div>
   </div>
@@ -62,8 +90,8 @@
           <div class="why-product__list">
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-2.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Chủ doanh nghiệp thường không thể tách dòng tiền cá nhân của mình
-                ra khỏi doanh nghiệp.</span>
+              <span class="text">Doanh nghiệp chưa có bức tranh tài chính tổng thể, không quản trị được dòng tiền hoạt
+                động và rủi ro tài chính​.</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-5.svg') }}" alt="icon" class="icon img-fluid">
@@ -93,29 +121,26 @@
               <div class="icon">
                 <img src="{{ asset('img/web/help-icon-4.svg') }}" alt="help-icon" class="img-fluid">
               </div>
-              <p><b>Khảo sát thực tế</b>, thu thập thông tin dữ liệu thực tế của khách hàng</p>
+              <p>Khảo sát thực tế, thu thập thông tin dữ liệu thực tế của khách hàng</p>
             </div>
             <div class="help-product__item">
               <div class="icon">
                 <img src="{{ asset('img/web/help-icon-5.svg') }}" alt="help-icon" class="img-fluid">
               </div>
-              <p><b>Phân tích</b> và <b>đánh giá tổng quan tài chính</b> của khách hàng bằng phần mềm
-                và đội ngũ
-                chuyên gia BossStack</p>
+              <p>Phân tích và đánh giá tổng quan tài chính của khách hàng bằng phần mềm và đội ngũ chuyên gia BossStack
+              </p>
             </div>
             <div class="help-product__item">
               <div class="icon">
                 <img src="{{ asset('img/web/help-icon-6.svg') }}" alt="help-icon" class="img-fluid">
               </div>
-              <p><b>Chuyển giao bộ kế hoạch</b> bóc tách dòng tiền, bộ hướng dẫn sử dụng <b>phần mềm
-                  BossStack</b>
-                chi tiết</p>
+              <p>Chuyển giao bộ kế hoạch bóc tách dòng tiền, bộ hướng dẫn sử dụng phần mềm BossStack chi tiết</p>
             </div>
             <div class="help-product__item">
               <div class="icon">
                 <img src="{{ asset('img/web/help-icon-7.svg') }}" alt="help-icon" class="img-fluid">
               </div>
-              <p><b>BossStack đồng hành</b> thực thi dòng tiền doanh nghiệp cùng khách hàng</p>
+              <p>BossStack đồng hành thực thi dòng tiền chuyên sâu cùng khách hàng</p>
             </div>
           </div>
         </div>

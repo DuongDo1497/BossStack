@@ -1,3 +1,13 @@
+/* Banner Section */
+
+.banner-default__body small{
+  font-family: hl;
+  font-size: 18px;
+  color: var(--gray-cl-4);
+  display: inline-block;
+  margin-top: 16px;
+}
+
 /* Benefits Section */
 
 .benefits-product__item{

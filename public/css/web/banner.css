@@ -28,7 +28,7 @@
   font-family: mb;
   text-align: left;
   color: var(--white-cl);
-  margin-bottom: 40px;
+  margin-bottom: 56px;
 }
 
 .banner-home__left .banner-home__title span{
@@ -46,7 +46,7 @@
 
 .banner-home__left .banner-home__text{
   max-width: 529px;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 }
 
 .banner-home__left .banner-home__text .text-bold{

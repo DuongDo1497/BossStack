@@ -92,7 +92,7 @@
 
 .section-title{
   font-family: mm;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 @media (max-width: 991.98px){
@@ -250,6 +250,10 @@
   --w-why-content: 732px;
   display: flex;
   align-items: flex-start;
+}
+
+.why-product.reverse .wrap{
+  flex-direction: row-reverse;
 }
 
 .why-product__content{

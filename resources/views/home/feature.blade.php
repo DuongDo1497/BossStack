@@ -9,7 +9,8 @@
     <div class="container">
       <div class="wrap">
         <div class="banner-default__body">
-          <h1 class="banner-default__title text-center">Tính năng bossstack</h1>
+          <h1 class="banner-default__title text-center">Tính năng <p><span class="highlight">Boss</span>Stack</p>
+          </h1>
         </div>
       </div>
     </div>

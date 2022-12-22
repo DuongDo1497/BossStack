@@ -93,7 +93,7 @@
             <div class="leadership-info">
               <h5 class="name">
                 Tu Nguyen
-                <a href="#">
+                <a href="https://www.linkedin.com/in/tu-nguyen-manh-49952827/">
                   <img class="img-fluid leadership-social" src="{{ asset('img/web/linkedin-icon.svg') }}"
                     alt="icon linkedin">
                 </a>
@@ -136,7 +136,7 @@
             <div class="leadership-info">
               <h5 class="name">
                 Huong Le
-                <a href="#">
+                <a href="https://www.linkedin.com/in/huong-le-913abbb3/">
                   <img class="img-fluid leadership-social" src="{{ asset('img/web/linkedin-icon.svg') }}"
                     alt="icon linkedin">
                 </a>
