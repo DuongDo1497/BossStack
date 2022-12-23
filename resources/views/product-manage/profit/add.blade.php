@@ -25,23 +25,7 @@
         </div>
         <div class="box-form">
           <div class="form-group">
-            <label for="managementcosts">Chi phí quản lý doanh nghiệp<span>*</span>:</label>
-            <div class="input-group">
-              <input type="text" class="form-control number" name="managementcosts" id="managementcosts"
-                value="18,010,000,000" onkeyup="" placeholder="Nhập..." readonly>
-              <span class="input-group-addon">&#8363;</span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="sellingcosts">Chi phí bán hàng<span>*</span>:</label>
-            <div class="input-group">
-              <input type="text" class="form-control number" name="sellingcosts" id="sellingcosts"
-                value="18,010,000,000" onkeyup="" placeholder="Nhập..." readonly>
-              <span class="input-group-addon">&#8363;</span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="financialcosts">Chi phí tài chính<span>*</span>:</label>
+            <label for="financialcosts">Chi phí tài chính:</label>
             <div class="input-group">
               <input type="text" class="form-control number" name="financialcosts" id="financialcosts"
                 value="18,010,000,000" onkeyup="" placeholder="Nhập..." readonly>
@@ -49,9 +33,33 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="othercosts">Chi phí khác<span>*</span>:</label>
+            <label for="sellingcosts">Chi phí bán hàng:</label>
+            <div class="input-group">
+              <input type="text" class="form-control number" name="sellingcosts" id="sellingcosts"
+                value="18,010,000,000" onkeyup="" placeholder="Nhập..." readonly>
+              <span class="input-group-addon">&#8363;</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="managementcosts">Chi phí quản lý doanh nghiệp:</label>
+            <div class="input-group">
+              <input type="text" class="form-control number" name="managementcosts" id="managementcosts"
+                value="18,010,000,000" onkeyup="" placeholder="Nhập..." readonly>
+              <span class="input-group-addon">&#8363;</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="othercosts">Chi phí khác:</label>
             <div class="input-group">
               <input type="text" class="form-control number" name="othercosts" id="othercosts" value="18,010,000,000"
+                onkeyup="" placeholder="Nhập..." readonly>
+              <span class="input-group-addon">&#8363;</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="total">Tổng cộng:</label>
+            <div class="input-group">
+              <input type="text" class="form-control number" name="total" id="total" value="18,010,000,000"
                 onkeyup="" placeholder="Nhập..." readonly>
               <span class="input-group-addon">&#8363;</span>
             </div>
@@ -64,9 +72,17 @@
         <p class="box-des">Nhập thông tin để tính lợi nhuận kinh doanh của bạn.</p>
         <div class="box-form">
           <div class="form-group">
-            <label for="turnover">Doanh thu<span>*</span>:</label>
+            <label for="turnover">Doanh thu thuần<span>*</span>:</label>
             <div class="input-group">
               <input type="text" class="form-control number" name="turnover" id="turnover" value=""
+                onkeyup="" placeholder="Nhập..." required>
+              <span class="input-group-addon">&#8363;</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="profitother">Doanh thu TC + TN khác<span>*</span>:</label>
+            <div class="input-group">
+              <input type="text" class="form-control number" name="profitother" id="profitother" value=""
                 onkeyup="" placeholder="Nhập..." required>
               <span class="input-group-addon">&#8363;</span>
             </div>
@@ -80,10 +96,10 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="expectedprofit">LN Doanh thu/Kì vọng <span>*</span>:</label>
+            <label for="expectedprofit">Tỉ suất Lợi Nhuận kì vọng <span>*</span>:</label>
             <div class="input-group">
-              <input type="text" class="form-control number" name="expectedprofit" id="expectedprofit" value=""
-                onkeyup="" placeholder="Nhập..." required>
+              <input type="text" class="form-control number" name="expectedprofit" id="expectedprofit"
+                value="" onkeyup="" placeholder="Nhập..." required>
               <span class="input-group-addon">&#37;</span>
             </div>
           </div>

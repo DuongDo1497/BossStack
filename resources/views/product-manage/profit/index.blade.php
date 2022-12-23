@@ -21,9 +21,9 @@
         <p class="box-des">Nhập thông tin để tính lợi nhuận kinh doanh của bạn.</p>
         <div class="box-form">
           <div class="form-group">
-            <label for="managementcosts">Chi phí quản lý doanh nghiệp<span>*</span>:</label>
+            <label for="financialcosts">Chi phí tài chính<span>*</span>:</label>
             <div class="input-group">
-              <input type="text" class="form-control number" name="managementcosts" id="managementcosts" value=""
+              <input type="text" class="form-control number" name="financialcosts" id="financialcosts" value=""
                 onkeyup="" placeholder="Nhập..." required>
               <span class="input-group-addon">&#8363;</span>
             </div>
@@ -37,9 +37,9 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="financialcosts">Chi phí tài chính<span>*</span>:</label>
+            <label for="managementcosts">Chi phí quản lý doanh nghiệp<span>*</span>:</label>
             <div class="input-group">
-              <input type="text" class="form-control number" name="financialcosts" id="financialcosts" value=""
+              <input type="text" class="form-control number" name="managementcosts" id="managementcosts" value=""
                 onkeyup="" placeholder="Nhập..." required>
               <span class="input-group-addon">&#8363;</span>
             </div>

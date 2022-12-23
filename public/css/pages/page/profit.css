@@ -61,8 +61,12 @@
   text-align: right;
 }
 
-.profit-result table tbody td span{
-  color: var(--gray-cl-6);
+.profit-result table tr:first-child th:last-child{
+  width: 15%;
+}
+
+.profit-result table tr td:last-child{
+  text-align: center;
 }
 
 .profit-result .box-search{

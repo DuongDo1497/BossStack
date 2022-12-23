@@ -21,40 +21,52 @@
         <table class="table table-bordered">
           <tbody>
             <tr>
+              <th colspan="2" class="text-center">Chỉ tiêu</th>
+              <th class="text-center">Số tiền</th>
+              <th class="text-center">Tỉ lệ</th>
+            </tr>
+            <tr>
               <th colspan="2" class="text-center">Doanh thu</th>
               <td>81,910,000,000 <span>VND</span></td>
+              <td>20%</td>
             </tr>
             <tr>
               <th rowspan="6">Chi phí</th>
             </tr>
             <tr>
-              <th class="light">Giá vốn hàng bán <span class="text-small">(biến phí)</span></th>
+              <th class="light">Giá vốn hàng bán</th>
               <td>81,910,000,000 <span>VND</span></td>
-            </tr>
-            <tr>
-              <th class="light">Chi phí quản lý doanh nghiệp</th>
-              <td>81,910,000,000 <span>VND</span></td>
-            </tr>
-            <tr>
-              <th class="light">Chi phí bán hàng</th>
-              <td>81,910,000,000 <span>VND</span></td>
+              <td>20%</td>
             </tr>
             <tr>
               <th class="light">Chi phí tài chính</th>
               <td>81,910,000,000 <span>VND</span></td>
+              <td>20%</td>
+            </tr>
+            <tr>
+              <th class="light">Chi phí bán hàng</th>
+              <td>81,910,000,000 <span>VND</span></td>
+              <td>20%</td>
+            </tr>
+            <tr>
+              <th class="light">Chi phí quản lý doanh nghiệp</th>
+              <td>81,910,000,000 <span>VND</span></td>
+              <td>20%</td>
             </tr>
             <tr>
               <th class="light">Chi phí khác</th>
               <td>81,910,000,000 <span>VND</span></td>
+              <td>20%</td>
             </tr>
             <tr>
-              <th colspan="2" class="text-center">Thuế thu nhập doanh nghiệp (20%) <span class="text-small">(biến
-                  phí)</span></th>
+              <th colspan="2" class="text-center">Thuế thu nhập doanh nghiệp (20%)</th>
               <td>81,910,000,000 <span>VND</span></td>
+              <td>20%</td>
             </tr>
             <tr>
               <th colspan="2" class="text-center">Lợi nhuận</th>
               <td>81,910,000,000 <span>VND</span></td>
+              <td>20%</td>
             </tr>
           </tbody>
         </table>

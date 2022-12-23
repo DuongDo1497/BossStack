@@ -32,10 +32,10 @@
           <tbody>
             <tr>
               <td>01</td>
+              <td><span class="text-error">18,010,000,000</span> VND</td>
+              <td><span class="text-success">18,010,000,000</span> VND</td>
               <td>18,010,000,000 VND</td>
-              <td>18,010,000,000 VND</td>
-              <td>18,010,000,000 VND</td>
-              <td>18,010,000,000 VND</td>
+              <td><span class="text-success">18,010,000,000</span> VND</td>
               <td>24/11/2022 09:58:24</td>
             </tr>
           </tbody>
