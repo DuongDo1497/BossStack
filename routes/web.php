@@ -440,7 +440,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::get('/edit/{id}', 'ProfitController@edit')->name('profits-edit');
         Route::put('/update/{id}', 'ProfitController@update')->name('profits-update');
         Route::delete('/delete/{id}', 'ProfitController@delete')->name('profits-delete');
-        Route::get('/history/{id}', 'ProfitController@history')->name('profits-history');
+        Route::get('/history', 'ProfitController@history')->name('profits-history');
         Route::get('/result/{id}', 'ProfitController@result')->name('profits-result');
     });
     

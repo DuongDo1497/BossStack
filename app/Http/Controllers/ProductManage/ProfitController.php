@@ -64,7 +64,7 @@ class ProfitController extends Controller
         return $this->view('index');
     }
 
-    public function history(Request $request)
+    public function history()
     {
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
 

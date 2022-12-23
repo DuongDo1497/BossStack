@@ -20,7 +20,7 @@
         <div class="box-search">
           <div class="control">
             <a href="{{ route('profits-index') }}" class="btn btn-primary btn-edit">Chỉnh sửa</a>
-            <a href="{{ route('profits-history', ['id' => 0]) }}" class="btn btn-primary btn-history">Lịch sử</a>
+            <a href="{{ route('profits-history') }}" class="btn btn-primary btn-history">Lịch sử</a>
           </div>
         </div>
         <div class="box-form">

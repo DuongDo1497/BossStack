@@ -102,7 +102,7 @@ h6{
 
 .content-wrapper {
   min-height: 100vh !important;
-  margin-left: 241px !important;
+  margin-left: 258px !important;
   background-color: var(--gray-cl-1) !important;
 }
 
@@ -250,11 +250,11 @@ h6{
 }
 
 .skin-blue .main-sidebar{
-  width: 241px;
+  width: 258px;
 }
 
 .main-sidebar .sidebar {
-  width: 241px;
+  width: 258px;
   height: 100% !important;
   display: flex;
   flex-direction: column;
