@@ -31,39 +31,48 @@
           <div class="box-form">
             <div class="form-group">
               <label for="currentage">Tuổi hiện tại của bạn<span>*</span>:</label>
-              <input type="text" class="form-control" name="currentage" id="currentage"
+              <input type="text" class="form-control number" name="currentage" id="currentage"
                 value="{{ $currentage == null ? old('currentage') : formatNumber($currentage, 1, 0, 0) }}"
                 onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
             </div>
             <div class="form-group">
               <label for="retirementage">Tuổi nghỉ hưu dự kiến<span>*</span>:</label>
-              <input type="text" class="form-control" name="retirementage" id="retirementage"
+              <input type="text" class="form-control number" name="retirementage" id="retirementage"
                 value="{{ $retirementage == null ? old('retirementage') : formatNumber($retirementage, 1, 0, 0) }}"
                 onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
             </div>
             <div class="form-group">
               <label for="longevity">Tuổi thọ dự kiến<span>*</span>:</label>
-              <input type="text" class="form-control" name="longevity" id="longevity"
+              <input type="text" class="form-control number" name="longevity" id="longevity"
                 value="{{ $longevity == null ? old('longevity') : formatNumber($longevity, 1, 0, 0) }}"
                 onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
             </div>
             <div class="form-group">
               <label for="currentincome">Thu nhập hiện tại (tháng)<span>*</span>:</label>
-              <input type="text" class="form-control" name="currentincome" id="currentincome"
-                value="{{ $currentincome == null ? old('currentincome') : formatNumber($currentincome, 1, 0, 0) }}"
-                onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
+              <div class="input-group">
+                <input type="text" class="form-control number" name="currentincome" id="currentincome"
+                  value="{{ $currentincome == null ? old('currentincome') : formatNumber($currentincome, 1, 0, 0) }}"
+                  onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
+                <span class="input-group-addon">&#8363;</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="currentcost">Chi phí hiện tại (tháng)<span>*</span>:</label>
-              <input type="text" class="form-control" name="currentcost" id="currentcost"
-                value="{{ $currentcost == null ? old('currentcost') : formatNumber($currentcost, 1, 0, 0) }}"
-                onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
+              <div class="input-group">
+                <input type="text" class="form-control number" name="currentcost" id="currentcost"
+                  value="{{ $currentcost == null ? old('currentcost') : formatNumber($currentcost, 1, 0, 0) }}"
+                  onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
+                <span class="input-group-addon">&#8363;</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="retirementsavings">Tiền đóng góp hưu trí (tháng)<span>*</span>:</label>
-              <input type="text" class="form-control" name="retirementsavings" id="retirementsavings"
-                value="{{ $retirementsavings == null ? old('retirementsavings') : formatNumber($retirementsavings, 1, 0, 0) }}"
-                onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
+              <div class="input-group">
+                <input type="text" class="form-control number" name="retirementsavings" id="retirementsavings"
+                  value="{{ $retirementsavings == null ? old('retirementsavings') : formatNumber($retirementsavings, 1, 0, 0) }}"
+                  onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
+                <span class="input-group-addon">&#8363;</span>
+              </div>
             </div>
             {{-- <div class="form-group">
               <label for="">Tiền cho các mục tiêu tài chính khác (tháng):</label>
@@ -113,7 +122,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="">Số tiền còn thiếu hụt khi nghỉ hưu</label>
+              <label for="">Số tiền dư thừa khi nghỉ hưu</label>
               <div class="form-text">
                 @if ($totalamount_m <= 0)
                   {!! formatNumberColorCustom($totalamount_m, 1, 0, 0, 1) !!}

@@ -22,23 +22,35 @@
         <div class="box-form">
           <div class="form-group">
             <label for="managementcosts">Chi phí quản lý doanh nghiệp<span>*</span>:</label>
-            <input type="text" class="form-control" name="managementcosts" id="managementcosts" value=""
-              onkeyup="" placeholder="Nhập..." required>
+            <div class="input-group">
+              <input type="text" class="form-control number" name="managementcosts" id="managementcosts" value=""
+                onkeyup="" placeholder="Nhập..." required>
+              <span class="input-group-addon">&#8363;</span>
+            </div>
           </div>
           <div class="form-group">
             <label for="sellingcosts">Chi phí bán hàng<span>*</span>:</label>
-            <input type="text" class="form-control" name="sellingcosts" id="sellingcosts" value="" onkeyup=""
-              placeholder="Nhập..." required>
+            <div class="input-group">
+              <input type="text" class="form-control number" name="sellingcosts" id="sellingcosts" value=""
+                onkeyup="" placeholder="Nhập..." required>
+              <span class="input-group-addon">&#8363;</span>
+            </div>
           </div>
           <div class="form-group">
             <label for="financialcosts">Chi phí tài chính<span>*</span>:</label>
-            <input type="text" class="form-control" name="financialcosts" id="financialcosts" value=""
-              onkeyup="" placeholder="Nhập..." required>
+            <div class="input-group">
+              <input type="text" class="form-control number" name="financialcosts" id="financialcosts" value=""
+                onkeyup="" placeholder="Nhập..." required>
+              <span class="input-group-addon">&#8363;</span>
+            </div>
           </div>
           <div class="form-group">
             <label for="othercosts">Chi phí khác<span>*</span>:</label>
-            <input type="text" class="form-control" name="othercosts" id="othercosts" value="" onkeyup=""
-              placeholder="Nhập..." required>
+            <div class="input-group">
+              <input type="text" class="form-control number" name="othercosts" id="othercosts" value=""
+                onkeyup="" placeholder="Nhập..." required>
+              <span class="input-group-addon">&#8363;</span>
+            </div>
           </div>
         </div>
         <a href="{{ route('profits-add') }}" class="btn btn-primary btn-analysis">Phân tích</a>

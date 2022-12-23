@@ -12,70 +12,98 @@
         });
 </script>
 <script>
-  var listmonth = [];  
-  var i = 1;
-  listmonth[0] = ['x'];
-  listmonth[1] = ['Thu'];
-  listmonth[2] = ['Chi'];
-  @foreach($listmonth as $key=>$item)
-    listmonth[0][i] = '{{ "$key" }}';
-    listmonth[1][i] = {{ $item['income_amount'] }};
-    listmonth[2][i] = {{ $item['expense_amount'] }};
-    i++;
-  @endforeach
-
-  var width_chart5 = $('#chart5').width();
-
   c3.generate({
     bindto: '#chart5',
     data: {
-      type: 'line',
-      x: 'x',
-      y: 'y',
-      columns: listmonth,
+      columns: [
+        ['data1', 30, 20, 50, 40, 60, 50],
+        ['data2', 200, 130, 90, 240, 130, 220],
+        ['data3', 300, 200, 160, 400, 250, 250],
+      ],
+      types: {
+        data1: 'bar',
+        data2: 'bar',
+        data3: 'spline',
+      },
       names: {
-        sample: 'Thu',
-        sample1: 'Chi',
+        data1: 'Doanh thu',
+        data2: 'Chi phí',
+        data3: 'Lợi nhuận',
       },
       selection: {
         enabled: true
       }
     },
     color: {
-        pattern: ['#979AE9', '#8BD6C5']
-    },
-    axis: {
-      x: {
-        type: 'timeseries',
-        tick: {
-          format: "%d/%m"
-        },
-        label:{
-          text: 'Thời gian',
-          position: 'outer-right'
-        },
-      },
-      y : {
-        tick: {
-            format: d3.format(",")
-        },
-        label:{
-          text: 'ĐVT: VND',
-          position: 'inner-top'
-        } 
-      }
-    },
-    size: {
-        height: 500,
-        width: width_chart5
-    },
-    padding: {
-      left: 100,
-      right: 30,
-      top: 50,
-      bottom: 0
-    }       
+        pattern: ['#85C88A', '#DE6573', '#0A9A4A']
+    },      
   });
+
+  // Tạm ẩn
+  // var listmonth = [];  
+  // var i = 1;
+  // listmonth[0] = ['x'];
+  // listmonth[1] = ['Thu'];
+  // listmonth[2] = ['Chi'];
+  // @foreach($listmonth as $key=>$item)
+  //   listmonth[0][i] = '{{ "$key" }}';
+  //   listmonth[1][i] = {{ $item['income_amount'] }};
+  //   listmonth[2][i] = {{ $item['expense_amount'] }};
+  //   i++;
+  // @endforeach
+
+  // var width_chart5 = $('#chart5').width();
+
+  // c3.generate({
+  //   bindto: '#chart5',
+  //   data: {
+  //     type: 'line',
+  //     x: 'x',
+  //     y: 'y',
+  //     columns: listmonth,
+  //     names: {
+  //       sample: 'Thu',
+  //       sample1: 'Chi',
+  //     },
+  //     selection: {
+  //       enabled: true
+  //     }
+  //   },
+  //   color: {
+  //       pattern: ['#979AE9', '#8BD6C5']
+  //   },
+  //   axis: {
+  //     x: {
+  //       type: 'timeseries',
+  //       tick: {
+  //         format: "%d/%m"
+  //       },
+  //       label:{
+  //         text: 'Thời gian',
+  //         position: 'outer-right'
+  //       },
+  //     },
+  //     y : {
+  //       tick: {
+  //           format: d3.format(",")
+  //       },
+  //       label:{
+  //         text: 'ĐVT: VND',
+  //         position: 'inner-top'
+  //       } 
+  //     }
+  //   },
+  //   size: {
+  //       height: 500,
+  //       width: width_chart5
+  //   },
+  //   padding: {
+  //     left: 100,
+  //     right: 30,
+  //     top: 50,
+  //     bottom: 0
+  //   }       
+  // });
 
   // var width_chart5_mb = $('#chart5_mb').width();
 
@@ -200,6 +228,8 @@
     }        
   });
 
+  d3.select("#rptasset1 .c3-chart-arcs-title").append("tspan").attr("dy", 5).attr("x", 0).attr("class", "second-title").text(formatNumberDecimal("8421179444", 0));
+
   var listasset = [];
   var i = 0;        
   @foreach($asset_1 as $item)
@@ -253,6 +283,8 @@
     }        
   });
 
+  d3.select("#rptasset2 .c3-chart-arcs-title").append("tspan").attr("dy", 5).attr("x", 0).attr("class", "second-title").text(formatNumberDecimal("8421179444", 0));
+
   var listasset = [
     ["Nợ", total_asset_0],
     ["Tài sản", total_asset_1],
@@ -274,7 +306,7 @@
       }
     },
     donut: {
-        title: "Tổng tài sản thực",
+        // title: "Tổng tài sản thực",
         label: {
           show: false 
         },
@@ -289,7 +321,7 @@
     }        
   });
 
-  d3.select("#rptasset3 .c3-chart-arcs-title").append("tspan").attr("dy", 18).attr("x", 0).attr("class", "second-title").text(formatNumberDecimal(total_asset_0-total_asset_1, 0));
+  d3.select("#rptasset3 .c3-chart-arcs-title").append("tspan").attr("dy", 5).attr("x", 0).attr("class", "second-title").text(formatNumberDecimal(total_asset_0-total_asset_1, 0));
 
 @endif
 
@@ -310,7 +342,7 @@
   c3.generate({
     bindto: '#rptasset1mb',
     data: {
-      type : 'pie',
+      type : 'donut',
       onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
       onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
       onclick: function (d, i) { console.log("onclick", d, i, this); },
@@ -328,10 +360,11 @@
         label: 'Petal.Width'
       }
     },
-    pie: {
+    donut: {
       label: {
         show: false
-      }
+      },
+      width: 25,
     },
     size: {
         height: 220,
@@ -341,6 +374,8 @@
       right: 50
     }        
   });
+
+  d3.select("#rptasset1mb .c3-chart-arcs-title").append("tspan").attr("dy", 5).attr("x", 0).attr("class", "second-title").text(formatNumberDecimal("8421179444", 0));
 
   var listasset = [];
   var i = 0;        
@@ -362,7 +397,7 @@
   c3.generate({
     bindto: '#rptasset2mb',
     data: {
-      type : 'pie',
+      type : 'donut',
       onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
       onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
       onclick: function (d, i) { console.log("onclick", d, i, this); },
@@ -380,10 +415,11 @@
         label: 'Petal.Width'
       }
     },
-    pie: {
+    donut: {
       label: {
         show: false
-      }
+      },
+      width: 25,
     },
     size: {
         height: 220,
@@ -393,6 +429,8 @@
       right: 50
     }        
   });
+
+  d3.select("#rptasset2mb .c3-chart-arcs-title").append("tspan").attr("dy", 5).attr("x", 0).attr("class", "second-title").text(formatNumberDecimal("8421179444", 0));
 
   var listasset = [
     ["Nợ", total_asset_0],
@@ -415,7 +453,7 @@
       }
     },
     donut: {
-        title: "Tổng tài sản thực",
+        // title: "Tổng tài sản thực",
         label: {
           show: false 
         },
@@ -430,7 +468,7 @@
     }        
   });
 
-  d3.select("#rptasset3mb .c3-chart-arcs-title").append("tspan").attr("dy", 18).attr("x", 0).attr("class", "second-title").text(formatNumberDecimal(total_asset_0-total_asset_1, 0));
+  d3.select("#rptasset3mb .c3-chart-arcs-title").append("tspan").attr("dy", 5).attr("x", 0).attr("class", "second-title").text(formatNumberDecimal(total_asset_0-total_asset_1, 0));
 
 @endif
 

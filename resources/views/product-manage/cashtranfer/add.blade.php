@@ -67,7 +67,7 @@
             <div class="form-group">
               <label for="">Số dư khả dụng:</label>
               <input type='hidden' name='cashaccount_amount_send' value='{{ $cashaccount_amount_send }}'>
-              <div class="form-text">{!! $cashaccount_amount_send === '' ? '' : formatNumberColor($cashaccount_amount_send, 1, 0, 1) !!}</div>
+              <div class="form-text text-right">{!! $cashaccount_amount_send === '' ? '0' : formatNumberColor($cashaccount_amount_send, 1, 0, 1) !!}</div>
             </div>
             @php
               $check = '';
@@ -116,7 +116,7 @@
                               ' - ' .
                               $item->accountname .
                               "
-                                                                                                              (Số dư: " .
+                                                                                                                                                                  (Số dư: " .
                               formatNumber($item->amount, 1, 0, 1) .
                               ')' }}
                         </option>
@@ -126,7 +126,7 @@
                               ' - ' .
                               $item->accountname .
                               "
-                                                                                                              (Kế hoạch: " .
+                                                                                                                                                                  (Kế hoạch: " .
                               formatNumber($item->requireamount, 1, 0, 0) .
                               ', Số dư: ' .
                               formatNumber($item->amount, 1, 0, 1) .
@@ -140,9 +140,12 @@
             </div>
             <div class="form-group">
               <label for="amount">Số tiền<span>*</span>:</label>
-              <input type="text" class="form-control" name="amount" id="amount" {{ $check }}
-                value="{{ old('amount') == '' ? $amount : old('amount') }}"
-                onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
+              <div class="input-group">
+                <input type="text" class="form-control number" name="amount" id="amount" {{ $check }}
+                  value="{{ old('amount') == '' ? $amount : old('amount') }}"
+                  onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
+                <span class="input-group-addon">&#8363;</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="description">Nội dung:</label>

@@ -77,16 +77,17 @@
           <div class="box-form">
             <div class="form-group">
               <label for="incomedate">Ngày giao dịch<span>*</span>:</label>
-              <input type="text" class="form-control" name="incomedate" id="incomedate"
-                value="{{ old('incomedate') == '' ? $incomedate : old('incomedate') }}" required>
+              <div class="form-text text-right">{{ old('incomedate') == '' ? $incomedate : old('incomedate') }}</div>
+              {{-- <input type="text" class="form-control" name="incomedate" id="incomedate"
+                value="{{ old('incomedate') == '' ? $incomedate : old('incomedate') }}" required> --}}
             </div>
             <div class="form-group">
               <label for="">Ví tiền:</label>
-              <div class="form-text">{{ $cashaccount_name . ' [ ' . $cashaccountno . ' ]' }}</div>
+              <div class="form-text text-right">{{ $cashaccount_name . ' [ ' . $cashaccountno . ' ]' }}</div>
             </div>
             <div class="form-group">
               <label for="">Số dư khả dụng:</label>
-              <div class="form-text">{!! formatNumberColor($cashaccount_amount, 1, 0, 1) !!}</div>
+              <div class="form-text text-right">{!! formatNumberColor($cashaccount_amount, 1, 0, 1) !!}</div>
             </div>
             <div class="form-group">
               <label for="incometype">Loại<span>*</span>:</label>
@@ -152,9 +153,12 @@
             @endif
             <div class="form-group">
               <label for="amount">Số tiền<span>*</span>:</label>
-              <input type="text" class="form-control" name="amount" id="amount"
-                value="{{ old('amount') == '' ? $amount : old('amount') }}"
-                onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
+              <div class="input-group">
+                <input type="text" class="form-control number" name="amount" id="amount"
+                  value="{{ old('amount') == '' ? $amount : old('amount') }}"
+                  onkeyup="this.value=formatNumberDecimal(this.value)" placeholder="Nhập..." required>
+                <span class="input-group-addon">&#8363;</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="description">Ghi chú:</label>

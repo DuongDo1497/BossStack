@@ -10,6 +10,11 @@
   display: none;
 }
 
+.cashincome-index .table-wrap tr td:nth-child(7),
+.cashincome-index .table-wrap tr td:last-child{
+  white-space: nowrap !important;
+}
+
 .cashincome-add .btn-save,
 .cashincome-edit .btn-save{
   width: auto;

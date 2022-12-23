@@ -76,7 +76,7 @@
 }
 
 .dashboard-index .filter-timeline {
-  width: 51%;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -86,10 +86,6 @@
 .dashboard-index .form-group{
   --w-label: 92px;
   margin-bottom: 0;
-}
-
-.filter-timeline .form-group:last-child{
-  --w-label: 30px;
 }
 
 .my-cash{

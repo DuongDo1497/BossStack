@@ -93,18 +93,21 @@
             </div>
             <div class="form-group">
               <label for="">Tuổi hiện tại<span>*</span>:</label>
-              <input type="text" class="form-control" name="" id="" value="{{ $model->currentage }}"
-                readonly>
+              <input type="text" class="form-control number" name="" id=""
+                value="{{ $model->currentage }}" readonly>
             </div>
             <div class="form-group">
               <label for="">Tuổi hoàn thành mục tiêu<span>*</span>:</label>
-              <input type="text" class="form-control" name="" id=""
+              <input type="text" class="form-control number" name="" id=""
                 value="{{ $model->planage == '' ? 50 : $model->planage }}" readonly>
             </div>
             <div class="form-group">
               <label for="">Số tiền mục tiêu<span>*</span>:</label>
-              <input type="text" class="form-control" name="" id=""
-                value="{{ $model->requireamount == '' ? 0 : formatNumber($model->requireamount, 1, 0, 0) }}" readonly>
+              <div class="input-group">
+                <input type="text" class="form-control number" name="" id=""
+                  value="{{ $model->requireamount == '' ? 0 : formatNumber($model->requireamount, 1, 0, 0) }}" readonly>
+                <span class="input-group-addon">&#8363;</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="">Ngày dự kiến hoàn thành:</label>

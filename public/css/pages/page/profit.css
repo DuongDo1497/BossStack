@@ -30,11 +30,7 @@
 .profit-add .box:first-child .box-form .form-control{
   font-family: hm;
   text-align: right;
-}
-
-.profit-add .box:first-child .box-form .form-control:read-only{
-  background-color: var(--gray-cl-2);
-}
+} 
 
 .profit-result table{
   max-width: 754px;

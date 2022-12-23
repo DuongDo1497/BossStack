@@ -99,20 +99,23 @@
             </div>
             <div class="form-group">
               <label for="currentage">Tuổi hiện tại:</label>
-              <input type="text" class="form-control" name="currentage" id="currentage"
+              <input type="text" class="form-control number" name="currentage" id="currentage"
                 value="{{ $currentage == null ? old('currentage') : $currentage }}"
                 onkeyup="this.value=formatNumberDecimal(this.value)" readonly>
             </div>
             <div class="form-group">
               <label for="planage">Tuổi hoàn thành mục tiêu<span>*</span>:</label>
-              <input type="text" class="form-control" name="planage" id="planage"
+              <input type="text" class="form-control number" name="planage" id="planage"
                 value="{{ old('planage') == '' ? '' : old('planage') }}" placeholder="Nhập..." required>
             </div>
             <div class="form-group">
               <label for="requireamount">Số tiền mục tiêu<span>*</span>:</label>
-              <input type="text" class="form-control" name="requireamount" id="requireamount"
-                value="{{ old('requireamount') == '' ? 0 : old('requireamount') }}"
-                onkeyup="this.value=formatNumberDecimal(this.value)" required>
+              <div class="input-group">
+                <input type="text" class="form-control number" name="requireamount" id="requireamount"
+                  value="{{ old('requireamount') == '' ? 0 : old('requireamount') }}"
+                  onkeyup="this.value=formatNumberDecimal(this.value)" required>
+                <span class="input-group-addon">&#8363;</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="finishdate">Ngày dự kiến hoàn thành:</label>

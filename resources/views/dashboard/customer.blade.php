@@ -53,7 +53,14 @@
               </a>
             </div>
 
-            <div class="overview-page__item">
+            <div class="overview-page__item add">
+              <a href="#">
+                <img class="icon" src="{{ asset('img/dashboard-add.svg') }}" alt="">
+                <span class="text">Thêm tiện ích</span>
+              </a>
+            </div>
+
+            {{-- <div class="overview-page__item">
               <a href="{{ route('cash-index') }}">
                 <img class="icon" src="{{ asset('img/dashboard-4.svg') }}" alt="">
                 <span class="text">Thu chi ví tổng</span>
@@ -73,6 +80,13 @@
                 <span class="text">Bóc tách dòng tiền</span>
               </a>
             </div>
+
+            <div class="overview-page__item">
+              <a href="{{ route('cash-process') }}">
+                <img class="icon" src="{{ asset('img/dashboard-6.svg') }}" alt="">
+                <span class="text">Bóc tách dòng tiền</span>
+              </a>
+            </div> --}}
           </div>
         </div>
 
@@ -116,15 +130,15 @@
             </div>
             <div class="spending-history__sort">
               <div class="income-highest">
-                <p>Thu nhập cao nhất</p>
+                <p>Lợi nhuận cao nhất</p>
                 <table class="table table-bordered table-list">
                   <tbody>
                     <tr>
-                      <td>abc</td>
+                      <td>Lợi nhuận 1</td>
                       <td class="text-right">+ 15,000,000</td>
                     </tr>
                     <tr>
-                      <td>anc</td>
+                      <td>Lợi nhuận 2</td>
                       <td class="text-right">+ 15,000,000</td>
                     </tr>
                   </tbody>
@@ -132,16 +146,16 @@
               </div>
               <div class="line"></div>
               <div class="cost-highest">
-                <p>Chi phí cao nhất</p>
+                <p>Lợi nhuận thấp nhất</p>
                 <table class="table table-bordered table-list">
                   <tbody>
                     <tr>
-                      <td>abc</td>
-                      <td class="text-right">- 15,000,000</td>
+                      <td>Lợi nhuận 1</td>
+                      <td class="text-right">+ 15,000,000</td>
                     </tr>
                     <tr>
-                      <td>abc</td>
-                      <td class="text-right">- 15,000,000</td>
+                      <td>Lợi nhuận 2</td>
+                      <td class="text-right">+ 15,000,000</td>
                     </tr>
                   </tbody>
                 </table>
@@ -152,28 +166,21 @@
 
         <div class="box box-primary">
           <div class="wrap">
-            <h6 class="box-title">Dòng tiền của tôi</h6>
+            <h6 class="box-title">Theo dõi tình hình kinh doanh</h6>
             <div class="box-search">
               <div class="filter-timeline">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="fromDate">Thời gian từ:</label>
-                    <input type="text" class="form-control" name="fromDate" id="fromDate"
-                      value="{{ old('fromDate') == '' ? $fromDate : old('fromDate') }}">
-                  </div>
-                  <div class="form-group">
-                    <label for="toDate">đến:</label>
-                    <input type="text" class="form-control" name="toDate" id="toDate"
-                      value="{{ old('toDate') == '' ? $toDate : old('toDate') }}">
-                  </div>
+                <div class="form-group">
+                  <label for="year">Năm:</label>
+                  <input type="text" class="form-control number" name="year" id="year" value="2022">
                 </div>
-                <button type="submit" class="btn btn-primary btn-filter">
+                {{-- <button type="submit" class="btn btn-primary btn-filter">
                   Lọc
                   <img class="icon" src="{{ asset('img/icon-filter.svg') }}" alt="">
-                </button>
+                </button> --}}
               </div>
             </div>
             <div class="my-cash">
+              <p class="chart-unit">ĐVT: triệu VND</p>
               <div id="chart5"></div>
             </div>
           </div>
