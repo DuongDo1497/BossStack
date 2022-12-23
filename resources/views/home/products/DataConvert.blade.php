@@ -60,17 +60,16 @@
           <div class="why-product__list">
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-11.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text"><b>Dữ liệu, thông tin lưu trữ không đồng bộ</b>, chồng chéo, khó
+              <span class="text">Dữ liệu, thông tin lưu trữ không đồng bộ, chồng chéo, khó
                 kiểm soát</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-12.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text"><b>Khó khăn</b> trong việc <b>bảo mật thông tin</b> tài liệu</span>
+              <span class="text">Khó khăn trong việc bảo mật thông tin tài liệu</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-13.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text"><b>Ra quyết định</b> thiếu chính xác vì không đủ dữ liệu báo
-                cáo</span>
+              <span class="text">Ra quyết định thiếu chính xác vì không đủ dữ liệu báo cáo</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-14.svg') }}" alt="icon" class="icon img-fluid">
@@ -79,7 +78,7 @@
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-15.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text"><b>Thất thoát dữ liệu</b> khi thay đổi nhân sự</span>
+              <span class="text">Thất thoát dữ liệu khi thay đổi nhân sự</span>
             </div>
           </div>
         </div>

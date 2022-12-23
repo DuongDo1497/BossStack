@@ -32,13 +32,13 @@
     </a>
     <ul class="menu-main__child animate__animated" style="visibility: hidden">
       <li>
+        <a href="{{ asset('/products/loss-control') }}">Kiểm soát thất thoát tài chính doanh nghiệp</a>
+      </li>
+      <li>
         <a href="{{ asset('/products/data-convert') }}">Chuyển đổi dữ liệu</a>
       </li>
       <li>
         <a href="{{ asset('/products/operate-digital') }}">Vận hành số chuyên sâu</a>
-      </li>
-      <li>
-        <a href="{{ asset('/products/loss-control') }}">Kiểm soát thất thoát doanh nghiệp</a>
       </li>
     </ul>
   </li>

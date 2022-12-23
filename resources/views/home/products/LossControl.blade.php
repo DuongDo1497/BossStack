@@ -13,7 +13,7 @@
             <img class="icon img-fluid" src="{{ asset('img/web/link-icon.svg') }}" alt="icon" />
             <span class="text">Sản phẩm</span>
           </div>
-          <h1 class="banner-default__title text-start">KIỂM SOÁT THẤT THOÁT DOANH NGHIỆP</h1>
+          <h1 class="banner-default__title text-start">KIỂM SOÁT THẤT THOÁT TÀI CHÍNH DOANH NGHIỆP</h1>
           <small>* Dành cho doanh nghiệp có doanh thu trên 100 tỷ/năm</small>
         </div>
       </div>
@@ -26,7 +26,7 @@
         <div class="benefits-product__list">
           <div class="benefits-product__item no-bg">
             <div class="benefits-product__content">
-              <h4 class="section-title">Lợi ích kiểm soát thất thoát doanh nghiệp</h4>
+              <h4 class="section-title">Lợi ích kiểm soát thất thoát tài chính doanh nghiệp</h4>
             </div>
           </div>
           <div class="benefits-product__item">
@@ -96,7 +96,7 @@
   <div class="section section-help help-product">
     <div class="container">
       <div class="wrap">
-        <h4 class="section-title">BossStack giúp doanh nghiệp kiểm soát thất thoát như thế nào?</h4>
+        <h4 class="section-title">BossStack giúp doanh nghiệp kiểm soát thất thoát tài chính như thế nào?</h4>
         <div class="help-product__process">
           <div class="help-product__list">
             <div class="help-product__item">

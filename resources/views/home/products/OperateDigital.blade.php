@@ -25,7 +25,7 @@
         <div class="benefits-product__list">
           <div class="benefits-product__item no-bg">
             <div class="benefits-product__content">
-              <h4 class="section-title">ĐIỂM KHÁC BIỆT CỦA GIẢI PHÁP VẬN HÀNH SỐ CHUYÊN SÂU</h4>
+              <h4 class="section-title">Điểm khác biệt của giải pháp vận hành số chuyên sâu</h4>
             </div>
           </div>
           <div class="benefits-product__item">
@@ -54,7 +54,7 @@
   <div class="section section-why why-product">
     <div class="container">
       <div class="wrap">
-        <h4 class="section-title">Tại sao chủ doanh nghiệp cần <br />GIẢI PHÁP VẬN HÀNH SỐ CHUYÊN SÂU?
+        <h4 class="section-title">Tại sao chủ doanh nghiệp<br />cần giải pháp vận hành số chuyên sâu?
         </h4>
         <div class="why-product__content">
           <div class="why-product__list">
@@ -88,8 +88,7 @@
   <div class="section section-help help-product">
     <div class="container">
       <div class="wrap">
-        <h4 class="section-title">BossStack giúp doanh nghiệp THỰC THI VẬN HÀNH SỐ CHUYÊN SÂU NHƯ THẾ
-          NÀO?</h4>
+        <h4 class="section-title">BossStack giúp doanh nghiệp giải pháp vận hành số chuyên sâu như thế nào?</h4>
         <div class="help-product__process">
           <div class="help-product__list">
             <div class="help-product__item">

@@ -52,11 +52,11 @@
         <p class="footer-item__title">Dịch vụ</p>
         <div class="footer-item__content">
           <ul>
+            <li>
+              <a href="{{ asset('/products/loss-control') }}">Kiểm soát thất thoát tài chính doanh nghiệp</a>
+            </li>
             <li><a href="{{ asset('/products/data-convert') }}">Chuyển đổi dữ liệu</a></li>
             <li><a href="{{ asset('/products/operate-digital') }}">Vận hành số chuyên sâu</a></li>
-            <li>
-              <a href="{{ asset('/products/loss-control') }}">Kiểm soát thất thoát doanh nghiệp</a>
-            </li>
           </ul>
           <div class="footer-item__social">
             <a href="https://www.facebook.com/bossstack.vn">
