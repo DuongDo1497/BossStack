@@ -29,6 +29,20 @@
   padding: 0;
 }
 
+.chart-list .chart-item #rptasset1 .c3-chart-arcs-title .second-title,
+.chart-list .chart-item #rptasset2 .c3-chart-arcs-title .second-title{
+  font-family: hm;
+  font-size: 14px;
+}
+
+.chart-list .chart-item #rptasset1 .c3-chart-arcs-title .second-title{
+  fill: #BC2C22;
+}
+
+.chart-list .chart-item #rptasset2 .c3-chart-arcs-title .second-title{
+  fill: #0A9A4A;
+}
+
 .chart-tab{
   display: none;
 }
