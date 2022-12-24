@@ -44,13 +44,12 @@
                       <p class="title-big">CÔNG TY TNHH LAM MINH ANH</p>
                       <p>
                         <span class="title">Địa chỉ:</span>
-                        <span class="text">L4-42.OT05, Landmark 81 Vinhomes Central Park, 720A
-                          Điện
-                          Biên Phủ, Phường 22, Quận Bình Thạnh, Tp Hồ Chí Minh.</span>
+                        <span class="text">LM81- 42.OT04 (Officetel), Landmark 81 Vinhomes Central Park, 720A Điện Biên
+                          Phủ, Phường 22, Quận Bình Thạnh, Tp Hồ Chí Minh.</span>
                       </p>
                       <p>
                         <span class="title">Điện thoại:</span>
-                        <span class="text">028.3636.4405</span>
+                        <span class="text"> 0918 90 55 00 hoặc 0819 04 89 98</span>
                       </p>
                     </div>
                   </div>
