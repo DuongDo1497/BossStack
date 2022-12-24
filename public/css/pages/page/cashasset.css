@@ -2,6 +2,10 @@
   --chart-count: 3;
 }
 
+.cashasset-index .box:last-child .noti-index{
+  display: none;
+}
+
 .cashasset-index .box-search .control{
   width: 100%;
 }
@@ -55,6 +59,10 @@
 
   .cashasset-index .box-search .control{
     justify-content: flex-end;
+  }
+
+  .cashasset-index .box:last-child .noti-index{
+    display: block;
   }
 
   .cashasset-index .table-wrap .table-content{

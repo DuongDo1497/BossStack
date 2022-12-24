@@ -28,7 +28,7 @@
             <tr>
               <th colspan="2" class="text-center">Doanh thu</th>
               <td>81,910,000,000 <span>VND</span></td>
-              <td>20%</td>
+              <td>--</td>
             </tr>
             <tr>
               <th rowspan="6">Chi phí</th>

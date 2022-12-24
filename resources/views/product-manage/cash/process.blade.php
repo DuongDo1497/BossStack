@@ -294,7 +294,7 @@
       <input type='hidden' name='typereport' value=''>
       <div class="box-content">
         <div class="box box-primary">
-          <div class="box-search">
+          {{-- <div class="box-search">
             <div class="filter-timeline">
               <div class="form-row">
                 <div class="form-group">
@@ -311,9 +311,9 @@
                 <img class="icon" src="{{ asset('img/icon-search.svg') }}" alt="">
               </button>
             </div>
-          </div>
+          </div> --}}
 
-          <div class="noti-index">
+          {{-- <div class="noti-index">
             <div class="noti-index__wrap">
               <div class="noti-index__item">
                 <p class="title">Số tiền các ví:</p>
@@ -328,7 +328,7 @@
                 <p class="number">-70,350,000</p>
               </div>
             </div>
-          </div>
+          </div> --}}
 
           <div class="cash-process__wrap">
             <ul class="nav nav-tabs">
@@ -664,7 +664,7 @@
                                     <th rowspan="2" class="fixed fixed-2">Số lượng ví tài chính</th>
                                     <th colspan="2">Số tiền</th>
                                     <th rowspan="2">Tiến độ</th>
-                                    <th rowspan="2">Tình trạng</th>
+                                    <th rowspan="2">Số tiền còn lại</th>
                                   </tr>
                                   <tr>
                                     <th></th>
@@ -678,7 +678,7 @@
                                     <td class="text-center fixed fixed-2">11</td>
                                     <td class="text-right">+1,500,000,000</td>
                                     <td class="text-right">+10,000,000</td>
-                                    <td class="text-right">
+                                    <td class="text-center">
                                       <div class="progress">
                                         <div class="progress-bar progress-bar-success" role="progressbar"
                                           aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
@@ -689,17 +689,16 @@
                                           50%
                                         </div>
                                       </div>
-                                    </td>
-                                    <td class="text-center">
                                       <span class="status status-success">Đang thực hiện tốt</span>
                                     </td>
+                                    <td class="text-right">+10,000,000</td>
                                   </tr>
                                   <tr>
                                     <td class="fixed fixed-1">Gia đình</td>
                                     <td class="text-center fixed fixed-2">11</td>
                                     <td class="text-right">+1,500,000,000</td>
                                     <td class="text-right">+10,000,000</td>
-                                    <td class="text-right">
+                                    <td class="text-center">
                                       <div class="progress">
                                         <div class="progress-bar progress-bar-success" role="progressbar"
                                           aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
@@ -710,17 +709,16 @@
                                           50%
                                         </div>
                                       </div>
-                                    </td>
-                                    <td class="text-center">
                                       <span class="status status-success">Đang thực hiện tốt</span>
                                     </td>
+                                    <td class="text-right">+10,000,000</td>
                                   </tr>
                                   <tr>
                                     <td class="fixed fixed-1">Đầu tư</td>
                                     <td class="text-center fixed fixed-2">11</td>
                                     <td class="text-right">+1,500,000,000</td>
                                     <td class="text-right">+10,000,000</td>
-                                    <td class="text-right">
+                                    <td class="text-center">
                                       <div class="progress">
                                         <div class="progress-bar progress-bar-success" role="progressbar"
                                           aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
@@ -731,17 +729,16 @@
                                           50%
                                         </div>
                                       </div>
-                                    </td>
-                                    <td class="text-center">
                                       <span class="status status-success">Đang thực hiện tốt</span>
                                     </td>
+                                    <td class="text-right">+10,000,000</td>
                                   </tr>
                                   <tr>
                                     <td class="fixed fixed-1">Kinh doanh</td>
                                     <td class="text-center fixed fixed-2">11</td>
                                     <td class="text-right">+1,500,000,000</td>
                                     <td class="text-right">+10,000,000</td>
-                                    <td class="text-right">
+                                    <td class="text-center">
                                       <div class="progress">
                                         <div class="progress-bar progress-bar-success" role="progressbar"
                                           aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
@@ -752,17 +749,16 @@
                                           50%
                                         </div>
                                       </div>
-                                    </td>
-                                    <td class="text-center">
                                       <span class="status status-success">Đang thực hiện tốt</span>
                                     </td>
+                                    <td class="text-right">+10,000,000</td>
                                   </tr>
                                   <tr>
                                     <td class="fixed fixed-1">Dòng tiền khác</td>
                                     <td class="text-center fixed fixed-2">11</td>
                                     <td class="text-right">+1,500,000,000</td>
                                     <td class="text-right">+10,000,000</td>
-                                    <td class="text-right">
+                                    <td class="text-center">
                                       <div class="progress">
                                         <div class="progress-bar progress-bar-success" role="progressbar"
                                           aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
@@ -773,17 +769,16 @@
                                           50%
                                         </div>
                                       </div>
-                                    </td>
-                                    <td class="text-center">
                                       <span class="status status-success">Đang thực hiện tốt</span>
                                     </td>
+                                    <td class="text-right">+10,000,000</td>
                                   </tr>
                                   <tr>
                                     <td class="fixed fixed-1"><b>Tổng cộng</b></td>
                                     <td class="text-center fixed fixed-2"><b>56</b></td>
                                     <td class="text-right">+1,500,000,000</td>
                                     <td class="text-right">+10,000,000</td>
-                                    <td class="text-right">
+                                    <td class="text-center">
                                       <div class="progress">
                                         <div class="progress-bar progress-bar-success" role="progressbar"
                                           aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
@@ -794,10 +789,9 @@
                                           50%
                                         </div>
                                       </div>
-                                    </td>
-                                    <td class="text-center">
                                       <span class="status status-error">Đang thiếu hụt</span>
                                     </td>
+                                    <td class="text-right">+10,000,000</td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -859,7 +853,7 @@
                                     <th rowspan="2" class="fixed fixed-1">Tên ví</th>
                                     <th colspan="2">Số tiền</th>
                                     <th rowspan="2">Tiến độ</th>
-                                    <th rowspan="2">Tình trạng</th>
+                                    <th rowspan="2">Số tiền còn lại</th>
                                   </tr>
                                   <tr>
                                     <th></th>
@@ -883,12 +877,12 @@
                                       $checkPlan = $checkAmountPlan > 0 ? 'status status-success' : 'status status-error';
                                       
                                       $checkText = $checkAmountPlan > 0 ? 'Đang thực hiện tốt' : 'Đang thiếu hụt ';
-                                      if ($cashplan->requireamount > 0){
+                                      if ($cashplan->requireamount > 0) {
                                           $percentProcess = round(($sumArray[$cashplan->id . '_realamount'] / $cashplan->requireamount) * 100, 0);
                                           if ($percentProcess >= 100) {
                                               $percentProcess = 100;
                                           }
-                                      }  
+                                      }
                                       
                                       //tong cong ke hoach, da thuc hien
                                       $total_requireamount += $cashplan->requireamount;
@@ -914,7 +908,7 @@
                                       </td>
                                       <td class="text-right">{!! formatNumberColorCustom($cashplan->requireamount, 1, 0, 0, 0) !!}</td>
                                       <td class="text-right">{!! formatNumberColorCustom($sumArray[$cashplan->id . '_realamount'], 1, 0, 0, 0) !!}</td>
-                                      <td>
+                                      <td class="text-center">
                                         <div class="progress">
                                           <div class="progress-bar progress-bar-success" role="progressbar"
                                             aria-valuenow="{{ formatNumber($percentProcess, 1, 2, 1) }}"
@@ -929,9 +923,10 @@
                                             {{ formatNumber(100 - $percentProcess, 1, 0, 1) }}%
                                           </div>
                                         </div>
-                                      </td>
-                                      <td class="text-center">
                                         <span class="{{ $checkPlan }}">{{ $checkText }}</span>
+                                      </td>
+                                      <td class="text-right">
+                                        +10,000,000
                                       </td>
                                     </tr>
                                   @endforeach

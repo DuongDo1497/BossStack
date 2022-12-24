@@ -24,7 +24,7 @@ class CashAssetController extends Controller
         $this->setViewPrefix('product-manage.cashasset.');
         $this->setRoutePrefix('cashassets-');
 
-        $this->view->setHeading('CÔNG CỤ QUẢN LÝ TÀI SẢN NỢ / CÓ');
+        $this->view->setHeading('QUẢN LÝ TÀI SẢN - NỢ');
 
         $now = Carbon::now();
         $this->view->month = $now->month;

@@ -59,7 +59,7 @@
 
   <div class="section cashasset-index">
     <div class="breadcrumb">
-      <span>Danh mục tài sản - nợ</span> / <span class="current">Công cụ quản lý tài sản nợ - có</span>
+      <span>Danh mục tài sản - nợ</span> / <span class="current">Quản lý tài sản - nợ</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
@@ -106,7 +106,7 @@
       </div>
 
       <div class="box box-primary">
-        <h6 class="box-title">Danh sách chi tiết tài sản</h6>
+        <h6 class="box-title">Danh sách Chi tiết</h6>
         <div class="noti-index">
           <div class="noti-index__wrap">
             <div class="noti-index__item">

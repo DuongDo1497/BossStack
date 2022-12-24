@@ -41,10 +41,10 @@
 
   <div class="section cashplan-analysis">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cashplans-index') }}">Thiết lập ví tài chính</a> /
-      <span class="current">Chi tiết kế hoạch {{ $model->description }}</span>
+      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cashplans-index') }}">Thiết lập dòng tiền</a> /
+      <span class="current">Chi tiết dòng tiền {{ $model->description }}</span>
     </div>
-    <p class="title-page text-uppercase">Chi tiết kế hoạch {{ $model->description }}</p>
+    <p class="title-page text-uppercase">Chi tiết dòng tiền {{ $model->description }}</p>
 
     <form role="form" action="{{ route('cashplans-update', ['id' => $model->id]) }}?continue=true" method="post"
       id="frm" name="frm">
@@ -72,6 +72,11 @@
                 value="{{ mb_strtoupper($plantypes[$model->plantype]) }}" readonly>
             </div>
             <div class="form-group">
+              <label for="">Tên dòng tiền<span>*</span>:</label>
+              <input type="text" class="form-control" name="" id="" value="{{ $model->description }}"
+                readonly>
+            </div>
+            <div class="form-group">
               <label for="">Ví<span>*</span>:</label>
               <input type="text" class="form-control" name="" id="" value="{{ $model->accountno }}"
                 readonly>
@@ -79,11 +84,6 @@
             <div class="form-group">
               <label for="">Tên ví<span>*</span>:</label>
               <input type="text" class="form-control" name="" id="" value="{{ $model->planname }}"
-                readonly>
-            </div>
-            <div class="form-group">
-              <label for="">Tên dòng tiền<span>*</span>:</label>
-              <input type="text" class="form-control" name="" id="" value="{{ $model->description }}"
                 readonly>
             </div>
             <div class="form-group">
