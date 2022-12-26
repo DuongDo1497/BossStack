@@ -76,10 +76,10 @@
             tin các khoản. Vui lòng xem <a href="{{ route('cashincomes-index') }}">[tại đây]</a></p>
           <div class="box-form">
             <div class="form-group">
-              <label for="incomedate">Ngày giao dịch<span>*</span>:</label>
+              <label>Ngày giao dịch<span>*</span>:</label>
               <div class="form-text text-right">{{ old('incomedate') == '' ? $incomedate : old('incomedate') }}</div>
-              {{-- <input type="text" class="form-control" name="incomedate" id="incomedate"
-                value="{{ old('incomedate') == '' ? $incomedate : old('incomedate') }}" required> --}}
+              <input type="hidden" name="incomedate" id="incomedate"
+                value="{{ old('incomedate') == '' ? $incomedate : old('incomedate') }}">
             </div>
             <div class="form-group">
               <label for="">Ví tiền:</label>

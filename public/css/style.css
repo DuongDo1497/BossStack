@@ -225,7 +225,7 @@ h6{
   }
 
   .sidebar-open .main-header .navbar {
-    margin-left: 241px;
+    margin-left: 258px;
   }
 
   .skin-blue .main-header .title-page{
@@ -496,17 +496,17 @@ h6{
 
 @media (max-width: 575.98px){
   .skin-blue .main-sidebar{
-    -webkit-transform: translate(-241px,0);
-    -ms-transform: translate(-241px,0);
-    -o-transform: translate(-241px,0);
-    transform: translate(-241px,0);
+    -webkit-transform: translate(-258px,0);
+    -ms-transform: translate(-258px,0);
+    -o-transform: translate(-258px,0);
+    transform: translate(-258px,0);
   }
 
   .skin-blue.sidebar-open .content-wrapper{
-    -webkit-transform: translate(241px,0);
-    -ms-transform: translate(241px,0);
-    -o-transform: translate(241px,0);
-    transform: translate(241px,0);
+    -webkit-transform: translate(258px,0);
+    -ms-transform: translate(258px,0);
+    -o-transform: translate(258px,0);
+    transform: translate(258px,0);
   }
 }
 

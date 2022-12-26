@@ -43,9 +43,10 @@
 
           <div class="box-form">
             <div class="form-group">
-              <label for="tranferdate">Ngày giao dịch<span>*</span>:</label>
-              <input type="text" class="form-control" name="tranferdate" id="tranferdate"
-                value="{{ old('tranferdate') == '' ? $tranferdate : old('tranferdate') }}" required>
+              <label>Ngày giao dịch<span>*</span>:</label>
+              <div class="form-text text-right">{{ old('tranferdate') == '' ? $tranferdate : old('tranferdate') }}</div>
+              <input type="hidden" name="tranferdate" id="tranferdate"
+                value="{{ old('tranferdate') == '' ? $tranferdate : old('tranferdate') }}">
             </div>
             <div class="form-group">
               <label for="cashaccount_id_send">Ví tiền nguồn<span>*</span>:</label>
@@ -116,7 +117,7 @@
                               ' - ' .
                               $item->accountname .
                               "
-                                                                                                                                                                  (Số dư: " .
+                                                                                                                                                                                            (Số dư: " .
                               formatNumber($item->amount, 1, 0, 1) .
                               ')' }}
                         </option>
@@ -126,7 +127,7 @@
                               ' - ' .
                               $item->accountname .
                               "
-                                                                                                                                                                  (Kế hoạch: " .
+                                                                                                                                                                                            (Kế hoạch: " .
                               formatNumber($item->requireamount, 1, 0, 0) .
                               ', Số dư: ' .
                               formatNumber($item->amount, 1, 0, 1) .
