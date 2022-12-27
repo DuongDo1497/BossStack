@@ -165,13 +165,11 @@
           <div class="control">
             <p class="count">4</p>
             <p class="text">Ví tài chính đang được chọn</p>
-            <a href="#" class="btn btn-export">
+            {{-- <a href="#" class="btn btn-export">
               <img src="{{ asset('img/icon-export.svg') }}" alt="">
-              Xuất file Excel
-            </a>
-            <a href="#" class="btn btn-delete">
+            </a> --}}
+            <a href="#" class="btn btn-gray btn-delete">
               <img src="{{ asset('img/icon-delete.svg') }}" alt="">
-              Xóa
             </a>
           </div>
           <div class="paging">

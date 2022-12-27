@@ -18,7 +18,7 @@
     <div class="box-content">
       <div class="box box-primary">
         <h6 class="box-title">Nhập số liệu tính toán</h6>
-        <p class="box-des">Nhập thông tin để tính lợi nhuận kinh doanh của bạn.</p>
+        {{-- <p class="box-des">Nhập thông tin để tính lợi nhuận kinh doanh của bạn.</p> --}}
         <div class="box-form">
           <div class="form-group">
             <label for="financialcosts">Chi phí tài chính<span>*</span>:</label>

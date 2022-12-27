@@ -117,7 +117,7 @@
       }
     });
   } else {
-    document.querySelector('#chart2').innerHTML = `<span class="text-error">Không có dữ liệu</span>`;
+    document.querySelector('#chart2').innerHTML = `<p>Vui lòng nhập dữ liệu thời gian</p>`;
   }
 
   //     var dataPie1 = [
@@ -175,7 +175,7 @@
 
     });
   } else {
-    document.querySelector('#chart3').innerHTML = `<span class="text-error">Không có dữ liệu</span>`;
+    document.querySelector('#chart3').innerHTML = `<p>Vui lòng nhập dữ liệu thời gian</p>`;
   }
 
   //      var listmonth = [
@@ -393,7 +393,7 @@
 
     });
   } else {
-    document.querySelector('#chart5').innerHTML = `<span class="text-error">Không có dữ liệu</span>`;
+    document.querySelector('#chart5').innerHTML = `<p>Vui lòng nhập dữ liệu thời gian</p>`;
   }
 
   //      var dataPie3 = [
@@ -451,7 +451,7 @@
 
     });
   } else {
-    document.querySelector('#chart6').innerHTML = `<span class="text-error">Không có dữ liệu</span>`;
+    document.querySelector('#chart6').innerHTML = `<p>Vui lòng nhập dữ liệu thời gian</p>`;
   }
 
 

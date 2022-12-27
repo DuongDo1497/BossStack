@@ -91,7 +91,7 @@
             <label for="ratio">Tỷ lệ GVHB/DT <span>*</span>:</label>
             <div class="input-group">
               <input type="text" class="form-control number" name="ratio" id="ratio" value=""
-                onkeyup="" placeholder="Nhập..." required>
+                onkeyup="" placeholder="Nhập..." title="Tỷ lệ Giá vốn hàng bán/Doanh thu" required>
               <span class="input-group-addon">&#37;</span>
             </div>
           </div>

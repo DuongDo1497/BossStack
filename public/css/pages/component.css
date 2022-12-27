@@ -7,29 +7,33 @@
 
 /* Button Style */
 .btn{
+  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 8px;
   font-size: 16px;
-  padding: 6px 16px;
+  padding: 0 12px;
   border-radius: 4px;
-  color: var(--white-cl);
 }
 
 .btn.btn-primary{
+  color: var(--white-cl);
   border: 1px solid #1890FF;
   background-color: #1890FF;
 }
 
-.btn.btn-export{
-  border: 1px solid #73C1E5;
-  background-color: #73C1E5;
+.btn.btn-gray{
+  color: var(--gray-cl-8);
+  border: 1px solid var(--gray-cl-1);
+  background-color: var(--gray-cl-1);
+  transition: all .5s ease 0s;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05)
 }
 
-.btn.btn-delete{
-  border: 1px solid #BC2C22;
-  background-color: #BC2C22;
+.btn.btn-gray:hover{
+  border: 1px solid var(--gray-cl-3);
+  background-color: var(--gray-cl-3);
 }
 
 .box-search{
@@ -45,7 +49,7 @@
   column-gap: 8px;
 }
 
-.box-search .control .btn-transfer{
+/* .box-search .control .btn-transfer{
   border: 1px solid var(--bg-cyan-cl-6);
   background-color: var(--bg-cyan-cl-6);
 }
@@ -58,7 +62,7 @@
 .box-search .control .btn-cost{
   border: 1px solid #DE6573;
   background-color: #DE6573;
-}
+} */
 
 @media (max-width: 575.98px){
   .box-search{

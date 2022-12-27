@@ -95,16 +95,16 @@
               </button>
             </div>
             <div class="control">
-              <a href="{{ route('cashtranfers-add') }}" class="btn btn-primary btn-transfer">
+              <a href="{{ route('cashtranfers-add') }}" class="btn btn-gray btn-transfer">
                 <img class="icon" src="{{ asset('img/icon-transfer.svg') }}" alt="">
                 Phân bổ
               </a>
-              <a href="{{ route('cashincomes-process', ['incomestatustype' => 0]) }}" class="btn btn-primary btn-income">
+              <a href="{{ route('cashincomes-process', ['incomestatustype' => 0]) }}" class="btn btn-gray btn-income">
                 <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
                 Thu nhập
               </a>
-              <a href="{{ route('cashincomes-process', ['incomestatustype' => 1]) }}" class="btn btn-primary btn-cost">
-                <img class="icon" src="{{ asset('img/icon-loss.svg') }}" alt="">
+              <a href="{{ route('cashincomes-process', ['incomestatustype' => 1]) }}" class="btn btn-gray btn-cost">
+                <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
                 Chi phí
               </a>
             </div>

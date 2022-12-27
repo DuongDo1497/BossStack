@@ -27,7 +27,7 @@
       <div class="box-content">
         <div class="box box-primary">
           <h6 class="box-title">Nhập số liệu tính toán</h6>
-          <p class="box-des">Nhập thông tin để tính số tiền nghỉ hưu tương lai của bạn.</p>
+          {{-- <p class="box-des">Nhập thông tin để tính số tiền nghỉ hưu tương lai của bạn.</p> --}}
           <div class="box-form">
             <div class="form-group">
               <label for="currentage">Tuổi hiện tại của bạn<span>*</span>:</label>
