@@ -75,7 +75,7 @@
                           </div>
                           <div class="item">
                             <span class="title">Hình thức thanh toán:</span>
-                            <span class="text">Tiền mặt/Chuyển khoản/Cà thẻ</span>
+                            <span class="text">Tiền mặt/Cà thẻ</span>
                           </div>
                         </div>
                       </div>
