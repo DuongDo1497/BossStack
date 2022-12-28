@@ -141,7 +141,7 @@ return [
     'PAYMENTMOTHOD' => [ 
             '0'=>_('Trực tiếp tại văn phòng'),
             '1'=>_('Chuyển khoản ngân hàng'),
-            '2'=>_('Thanh toán qua MOMO'),
+            '2'=>_('Thanh toán qua ngân lượng'),
           ],
 
     'ACCOUNTTYPE' => ['0'=>_('Mở'), 

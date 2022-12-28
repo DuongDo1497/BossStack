@@ -148,7 +148,7 @@ class CustomerController extends Controller
     {
         $contract_id = $request->cid;
         $ord_payment_method = $request->ord_payment_method;
-        if ($ord_payment_method == "0" or $ord_payment_method == "1" or $ord_payment_method == "2"){//Chon thanh toan truc tiep, chuyen khoan
+        if ($ord_payment_method == "0" or $ord_payment_method == "1"){//Chon thanh toan truc tiep, chuyen khoan
 
             $message = 'Đăng ký dịch vụ thành công. Vui lòng thanh toán để hoàn tất đơn hàng (bỏ qua thông báo này nếu bạn đã hoàn tất thanh toán).';
             $this->view->infor = $message;
@@ -175,12 +175,77 @@ class CustomerController extends Controller
             $jsonResult = processSendRequestToMOMO($orderId, $orderInfo, $amount, $returnUrl, $notifyurl);
             
             return redirect($jsonResult['payUrl']);
+
+        }elseif ($ord_payment_method == "2"){//Chon thanh toan qua vi ngan luong
+
+            $contract = app(ContractService::class)->find($contract_id);
+ 
+            $orderInfo = "Thanh toán gói dịch vụ " . $contract->service_product_name;
+            $amount = $contract->amount . "";
+            $orderId = $contract->contractno;
+            $customer_id = $contract->customer_id;
+            $customer = app(CustomerService::class)->find($customer_id);
+            $buyerName = ($customer->fullname == '' ? 'fullname' : $customer->fullname);
+            $buyerEmail = ($customer->email == '' ? 'email' : $customer->email);
+            $buyerPhone = ($customer->phone == '' ? 'phone' : $customer->phone);
+            $buyerAddress = ($customer->address == '' ? 'address' : $customer->address);
+
+            $url = config('app.urlhost');
+            $returnUrl = "$url/resultPaymentMomo";
+            $notifyurl = "$url/ipnPaymentMomo";
+
+            $result = processSendRequestToALEPAY($orderId, $orderInfo, $amount, $returnUrl, $notifyurl, $buyerName, $buyerEmail, $buyerPhone, $buyerAddress);
+           
+            if (!empty($result->code)) {
+
+                if ($result->code == '000') {//Xu ly alepay thanh cong
+
+                    return redirect($result->checkoutUrl);
+
+                } else {
+                    $error = 3;
+                    $message = $result->message;
+                    $this->view->errorCode = $error;
+                    $this->view->infor = $message;
+                    
+                    $this->view->setHeading('THÔNG TIN THANH TOÁN');
+                    $this->view->setSubHeading('Thanh toán qua ALEPAY');                
+            
+                    return $this->view('message');
+                }
+            }
+
         }
 
         return true;
     }    
 
     public function resultPaymentMomo(Request $request)
+    {
+        $errorCode = $request->errorCode;
+        $transactionCode = $request->transactionCode;
+
+        $retData = checkResultSendRequestToALEPAY($transactionCode);
+        $error = $retData['error'];
+        $message = $retData['message'];   
+        $orderId = $retData['orderCode'];
+
+        //Thanh toan thanh cong
+        if ($error == '0') {
+           $ret = app(ContractService::class)->updateContractPayment('1', '2', $orderId);//Cap nhat thanh toan thanh cong qua ALEPAY
+        }
+
+        $this->view->errorCode = $error;
+        $this->view->infor = $message;
+        
+        $this->view->setHeading('THÔNG TIN THANH TOÁN');
+        $this->view->setSubHeading('Thanh toán qua ALEPAY');                
+
+        return $this->view('message');
+
+    }    
+
+    public function resultPaymentMomoOld(Request $request)
     {
         $partnerCode = $request->partnerCode;
         $accessKey = $request->accessKey;
@@ -216,8 +281,8 @@ class CustomerController extends Controller
 
         return $this->view('message');
 
-    }    
-
+    } 
+    
     public function activeCoupon(Request $request)
     {
         $coupon_customer_id = $request->id;
@@ -365,7 +430,7 @@ class CustomerController extends Controller
         $this->view->listFamilyRelationship = $listFamilyRelationship;
 
         $this->view->model = $this->main_service->find($customer_id);
-        $this->view->setHeading('THÔNG TIN CÁ NHÂN');
+        $this->view->setHeading('THÔNG TIN KHÁCH HÀNG');
         $this->view->setSubHeading('Chỉnh sửa');
 
         return $this->view('editCustomer');

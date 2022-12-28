@@ -25,12 +25,12 @@ class CustomerStoreRequest extends FormRequest
     {
         return [
             'fullname' => 'required|max:255',
-            'birthday' => 'required',
-            'gender' => 'required',
-            'address' => 'required',
+//            'birthday' => 'required',
+//            'gender' => 'required',
+//            'address' => 'required',
             'email' => 'required|email|unique:customers,email,'.$this->id.'|unique:users,email',
             'phone' => 'required',
-            'customertype' => 'required',
+//            'customertype' => 'required',
         ];
     }
     

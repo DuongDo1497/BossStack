@@ -789,6 +789,58 @@ provided that both dates are after 1970. Also only works for dates up to the yea
 }
 
 /**
+ * Ham tao password voi ngau nhien phuc tap
+ *
+ * @author  linh
+ * @param   string $somecontent
+ * @access  public
+ * @date    April 19, 2020 3:10:43 PM
+ */
+function passGen($length,$nums){
+    $lowLet = "abcdefghijklmnopqrstuvwxyz";
+    $highLet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    $numbers = "123456789@#";
+    $pass = "";
+    $i = 1;
+    while ($i <= $length){
+        $type = rand(0,1);
+        if ($type == 0){
+            if (($length-$i+1) > $nums){
+                $type2 = rand(0,1);
+                if ($type2 == 0){
+                    $ran = rand(0,25);
+                    $pass .= $lowLet[$ran];
+                }else{
+                    $ran = rand(0,25);
+                    $pass .= $highLet[$ran];
+                }
+            }else{
+            $ran = rand(0,10);
+            $pass .= $numbers[$ran];
+            $nums--;
+            }
+        }else{
+            if ($nums > 0){
+                $ran = rand(0,10);
+                $pass .= $numbers[$ran];
+                $nums--;
+            }else{
+                $type2 = rand(0,1);
+                if ($type2 == 0){
+                    $ran = rand(0,25);
+                    $pass .= $lowLet[$ran];
+                }else{
+                    $ran = rand(0,25);
+                    $pass .= $highLet[$ran];
+                }
+            }
+        }
+        $i++;
+    }
+    return $pass;
+}
+
+/**
  * Thu vien thanh toan MOMO
  *
  * @author  linh
@@ -812,6 +864,34 @@ function execPostRequest($url, $data)
     //close connection
     curl_close($ch);
     return $result;
+}
+
+/**
+ * Thu vien makeSignature
+ *
+ * @author  linh
+ * @access  public
+ * @date    April 19, 2020 3:10:43 PM
+ */
+function makeSignature($data, $hash_key)
+{
+    $hash_data = '';
+    ksort($data);
+    $is_first_key = true;
+    foreach ($data as $key => $value) {
+        if (is_bool($value)) {
+            $value = $value ? 'true' : 'false';
+        }
+        if (!$is_first_key) {
+            $hash_data .= '&' . $key . '=' . $value;
+        } else {
+            $hash_data .= $key . '=' . $value;
+            $is_first_key = false;
+        }
+    }
+
+    $signature = hash_hmac('sha256', $hash_data, $hash_key);
+    return $signature;
 }
 
 /**
@@ -899,53 +979,89 @@ function checkResultSendRequestToMOMO($partnerCode, $accessKey, $requestId, $amo
 }
 
 /**
- * Ham tao password voi ngau nhien phuc tap
+ * Xu ly thong tin gui request toi he thong ALEPAY
  *
  * @author  linh
  * @param   string $somecontent
  * @access  public
  * @date    April 19, 2020 3:10:43 PM
  */
-function passGen($length,$nums){
-    $lowLet = "abcdefghijklmnopqrstuvwxyz";
-    $highLet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    $numbers = "123456789@#";
-    $pass = "";
-    $i = 1;
-    while ($i <= $length){
-        $type = rand(0,1);
-        if ($type == 0){
-            if (($length-$i+1) > $nums){
-                $type2 = rand(0,1);
-                if ($type2 == 0){
-                    $ran = rand(0,25);
-                    $pass .= $lowLet[$ran];
-                }else{
-                    $ran = rand(0,25);
-                    $pass .= $highLet[$ran];
-                }
-            }else{
-            $ran = rand(0,10);
-            $pass .= $numbers[$ran];
-            $nums--;
-            }
-        }else{
-            if ($nums > 0){
-                $ran = rand(0,10);
-                $pass .= $numbers[$ran];
-                $nums--;
-            }else{
-                $type2 = rand(0,1);
-                if ($type2 == 0){
-                    $ran = rand(0,25);
-                    $pass .= $lowLet[$ran];
-                }else{
-                    $ran = rand(0,25);
-                    $pass .= $highLet[$ran];
-                }
-            }
-        }
-        $i++;
+function processSendRequestToALEPAY($orderId, $orderInfo, $amount, $returnUrl, $notifyurl, $buyerName, $buyerEmail, $buyerPhone, $buyerAddress)
+{
+    //Thong tin key ma hoa lay tu config alepays
+    $apiKey = config('alepays.apiKey');
+    $encryptKey = config('alepays.encryptKey');
+    $checksumKey = config('alepays.checksumKey');
+    $url_request_payment = config('alepays.url_request_payment');
+ 
+    $data = array();
+    $data['tokenKey'] = $apiKey;
+    $data['returnUrl'] = $returnUrl;
+    $data['cancelUrl'] = $notifyurl;
+    $data['customMerchantId'] = 'Bossstack';
+    $data['amount'] = intval(preg_replace('@\D+@', '', $amount));
+    $data['orderCode'] = $orderId;
+    $data['currency'] = "VND";
+    $data['orderDescription'] = $orderInfo;
+    $data['totalItem'] = 1;
+    $data['buyerName'] = trim($buyerName);
+    $data['buyerEmail'] = trim($buyerEmail);
+    $data['buyerPhone'] = trim($buyerPhone);
+    $data['buyerAddress'] = trim($buyerAddress);
+    $data['buyerCity'] = trim('TP.HCM');
+    $data['buyerCountry'] = trim('VN');
+    $data['checkoutType'] = 4; // Thanh toán the quoc te, noi dia
+    $data['month'] = 3;
+    $data['paymentHours'] = 48; //48 tiếng :  Thời gian cho phép thanh toán (tính bằng giờ)
+    $data['allowDomestic'] = true;
+
+    $signature = makeSignature($data, $checksumKey);
+    $data['signature'] = $signature;
+
+    $result = execPostRequest($url_request_payment, json_encode($data));
+    $jsonResult = json_decode($result);  // decode json
+
+    return $jsonResult;
+    
+}
+
+/**
+ * Kiem tra ket qua sau khi thanh toan ALEPAY => thanh cong hay that bai
+ *
+ * @author  linh
+ * @param   string $somecontent
+ * @access  public
+ * @date    April 19, 2020 3:10:43 PM
+ */
+function checkResultSendRequestToALEPAY($transactionCode)
+{
+    //Thong tin key ma hoa lay tu config alepays
+    $apiKey = config('alepays.apiKey');
+    $encryptKey = config('alepays.encryptKey');
+    $checksumKey = config('alepays.checksumKey');
+    $url_request_payment = config('alepays.url_request_payment');
+    $url_get_transaction_info = config('alepays.url_get_transaction_info');    
+
+    $data = array();
+    $data['tokenKey'] = $apiKey;
+    $data['transactionCode'] = $transactionCode;
+    $signature = makeSignature($data, $checksumKey);
+    $data['signature'] = $signature;
+    
+    $result = execPostRequest($url_get_transaction_info, json_encode($data));
+    $jsonResult = json_decode($result);  // decode json
+    
+    $error = ''; $message = ''; $orderId = '';   
+    if ($jsonResult->code == '000') {
+        $error = '0';
+        $message = 'Thanh toán dịch vụ thành công.';
+        $orderCode = $jsonResult->orderCode;
+    } else {
+        $error = '2';
+        $message = 'Thanh toán lỗi: ' . $jsonResult->message;
     }
-    return $pass;
+
+    $data = ['error' => $error,'message' => $message,'orderCode' => $orderCode];
+
+    return $data;
 }

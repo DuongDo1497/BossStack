@@ -104,57 +104,18 @@
                   <div class="payment-option__item">
                     <div class="payment-option__header">
                       <div class="form-group">
-                        <input class="form-check-input" type="radio" name="ord_payment_method" value=""
+                        <input class="form-check-input" type="radio" name="ord_payment_method" value="2"
                           id="internetBanking" data-bs-toggle="collapse" href="#internet-banking">
                         <label class="form-check-label" for="internetBanking"></label>
                       </div>
                       <img class="img-fluid payment-icon" src="{{ asset('img/web/payment-icon-3.svg') }}"
                         alt="payment-icon">
-                      <p class="text">Internet Banking</p>
+                      <p class="text">Thanh toán qua ngân lượng</p>
                     </div>
                     <div class="payment-option__body collapse" id="internet-banking"
                       data-bs-parent="#accordion-parent">
                       <div class="content">
-                        <p class="payment-option__text">Để thanh toán bằng hình thức Internet Banking, bạn vui lòng xem
-                          hướng dẫn: <a href="#">Hướng dẫn thanh toán</a>.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="payment-option__item">
-                    <div class="payment-option__header">
-                      <div class="form-group">
-                        <input class="form-check-input" type="radio" name="ord_payment_method" value=""
-                          id="cardGlobal" data-bs-toggle="collapse" href="#card-global">
-                        <label class="form-check-label" for="cardGlobal"></label>
-                      </div>
-                      <img class="img-fluid payment-icon" src="{{ asset('img/web/payment-icon-4.svg') }}"
-                        alt="payment-icon">
-                      <p class="text">Thẻ Quốc tế và Nội địa</p>
-                    </div>
-                    <div class="payment-option__body collapse" id="card-global" data-bs-parent="#accordion-parent">
-                      <div class="content">
-                        <p class="payment-option__text">Để thanh toán bằng hình thức thẻ Quốc tế và Nội địa, bạn vui lòng
-                          xem hướng dẫn: <a href="#">Hướng dẫn thanh toán</a>.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="payment-option__item">
-                    <div class="payment-option__header">
-                      <div class="form-group">
-                        <input class="form-check-input" type="radio" name="ord_payment_method" value=""
-                          id="appBanking" data-bs-toggle="collapse" href="#app-banking">
-                        <label class="form-check-label" for="appBanking"></label>
-                      </div>
-                      <img class="img-fluid payment-icon" src="{{ asset('img/web/payment-icon-5.svg') }}"
-                        alt="payment-icon">
-                      <p class="text">App Mobile Banking</p>
-                    </div>
-                    <div class="payment-option__body collapse" id="app-banking" data-bs-parent="#accordion-parent">
-                      <div class="content">
-                        <p class="payment-option__text">Để thanh toán bằng hình thức app Mobile Banking, bạn vui lòng xem
-                          hướng dẫn: <a href="#">Hướng dẫn thanh toán</a>.</p>
+                        <p class="payment-option__text">Bạn có thể chọn thanh toán bằng Thẻ quốc tế (Visa - Mastercard - JCB), Thẻ ATM nội địa, App Mobile Banking (VNQR) & Ví điện tử hoặc qua Internet banking.</p>
                       </div>
                     </div>
                   </div>
