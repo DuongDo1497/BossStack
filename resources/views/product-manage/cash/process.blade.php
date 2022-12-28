@@ -689,7 +689,7 @@
                                           50%
                                         </div>
                                       </div>
-                                      <span class="status status-success">Đang thực hiện tốt</span>
+                                      <span class="text-success">Đang thực hiện tốt</span>
                                     </td>
                                     <td class="text-right">+10,000,000</td>
                                   </tr>
@@ -709,7 +709,7 @@
                                           50%
                                         </div>
                                       </div>
-                                      <span class="status status-success">Đang thực hiện tốt</span>
+                                      <span class="text-success">Đang thực hiện tốt</span>
                                     </td>
                                     <td class="text-right">+10,000,000</td>
                                   </tr>
@@ -729,7 +729,7 @@
                                           50%
                                         </div>
                                       </div>
-                                      <span class="status status-success">Đang thực hiện tốt</span>
+                                      <span class="text-success">Đang thực hiện tốt</span>
                                     </td>
                                     <td class="text-right">+10,000,000</td>
                                   </tr>
@@ -749,7 +749,7 @@
                                           50%
                                         </div>
                                       </div>
-                                      <span class="status status-success">Đang thực hiện tốt</span>
+                                      <span class="text-success">Đang thực hiện tốt</span>
                                     </td>
                                     <td class="text-right">+10,000,000</td>
                                   </tr>
@@ -769,7 +769,7 @@
                                           50%
                                         </div>
                                       </div>
-                                      <span class="status status-success">Đang thực hiện tốt</span>
+                                      <span class="text-success">Đang thực hiện tốt</span>
                                     </td>
                                     <td class="text-right">+10,000,000</td>
                                   </tr>
@@ -789,7 +789,7 @@
                                           50%
                                         </div>
                                       </div>
-                                      <span class="status status-error">Đang thiếu hụt</span>
+                                      <span class="text-error">Đang thiếu hụt</span>
                                     </td>
                                     <td class="text-right">+10,000,000</td>
                                   </tr>
@@ -874,7 +874,7 @@
                                   @foreach ($listcashplan as $cashplan)
                                     @php
                                       $checkAmountPlan = $sumArray[$cashplan->id . '_realamount'] - $sumArray[$cashplan->id . '_planamount'];
-                                      $checkPlan = $checkAmountPlan > 0 ? 'status status-success' : 'status status-error';
+                                      $checkPlan = $checkAmountPlan > 0 ? 'text-success' : 'text-error';
                                       
                                       $checkText = $checkAmountPlan > 0 ? 'Đang thực hiện tốt' : 'Đang thiếu hụt ';
                                       if ($cashplan->requireamount > 0) {

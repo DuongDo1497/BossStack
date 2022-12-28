@@ -226,7 +226,6 @@
                     <div id="chart3"></div>
                   </div>
                 </div>
-                <a class="read-more" href="{{ route('cashincomes-index') }}">Xem chi tiết &gt;&gt;</a>
               </div>
             </div>
             <div id="rptmonth" class="tab-pane fade">
@@ -241,9 +240,62 @@
                     <div id="chart6"></div>
                   </div>
                 </div>
-                <a class="read-more" href="{{ route('cashincomes-index') }}">Xem chi tiết &gt;&gt;</a>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="box box-primary">
+          <div class="cashFlow-manage">
+            <h6 class="box-title">Quản lý Thu nhập/Chi phí</h6>
+            <table class="table table-bordered table-list">
+              <thead>
+                <tr>
+                  <th rowspan="2" class="fixed fixed-1">
+                    <input type="checkbox" name="" id="">
+                  </th>
+                  <th rowspan="2" class="fixed fixed-2">STT</th>
+                  <th rowspan="2" class="fixed fixed-3">Phân loại</th>
+                  <th rowspan="2">Chi tiết</th>
+                  <th rowspan="2">Nội dung</th>
+                  <th rowspan="2">Ngày</th>
+                  <th colspan="2">Số tiền</th>
+                </tr>
+                <tr>
+                  {{-- <th class="draft"></th>
+                  <th class="draft"></th> --}}
+                  <th>Thu nhập</th>
+                  <th>Chi phí</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center fixed fixed-1">
+                    <input type="checkbox" name="" id="">
+                  </td>
+                  <td class="text-center fixed fixed-2">1</td>
+                  <td class="fixed fixed-3">Thu Nhập Lương/Tiết Kiệm</td>
+                  <td><a href="#">Thu nhập từ lương</a></td>
+                  <td class="text-center">demo</td>
+                  <td class="text-center">26/12/2022</td>
+                  <td class="text-right"><span class="text-success">+ 1,000,000</span></td>
+                  <td class="text-right"></td>
+                </tr>
+                <tr>
+                  <td class="text-center fixed fixed-1">
+                    <input type="checkbox" name="" id="">
+                  </td>
+                  <td class="text-center fixed fixed-2">1</td>
+                  <td class="fixed fixed-3">Thu Nhập Lương/Tiết Kiệm</td>
+                  <td><a href="#">Thu nhập từ lương</a></td>
+                  <td class="text-center">demo</td>
+                  <td class="text-center">26/12/2022</td>
+                  <td class="text-right"></td>
+                  <td class="text-right"><span class="text-error">+ 1,000,000</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <a class="read-more" href="{{ route('cashincomes-index') }}">Xem chi tiết</a>
           </div>
         </div>
       </div>

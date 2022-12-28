@@ -1,3 +1,25 @@
+.cashplan-index .box-search{
+  justify-content: flex-end;
+}
+
+.cashplan-index .filter-timeline{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 16px;
+}
+
+.cashplan-index .form-group{
+  --w-label: 130px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.cashplan-index .form-group label{
+  color: var(--gray-cl-5);
+}
+
 .cashplan-index .btn-add,
 .cashplan-analysis .btn-add{
   width: 182px;

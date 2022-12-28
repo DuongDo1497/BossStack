@@ -141,8 +141,18 @@
 }
 
 .box-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 0;
   margin-bottom: 32px;
+}
+
+.box-title .box-title__link{
+  font-size: 16px;
+  font-family: hr;
+  color: var(--primary-cl);
+  text-decoration: underline;
 }
 
 .box-des{
@@ -214,7 +224,8 @@
   flex-grow: 1;
 }
 
-.form-group .form-control.number{
+.form-group .form-control.number,
+.form-group .form-text.number{
   text-align: right;
 } 
 
@@ -248,8 +259,9 @@
   color: var(--gray-cl-4);
 }
 
-.input-group .input-group-addon{
-  font-family: hb;
+.input-group .input-group-addon,
+.form-text .form-text__unit{
+  font-family: hm;
   font-size: 16px;
   color: var(--gray-cl-7);
   border-left: 0;
@@ -296,17 +308,18 @@
 
 /* Status Notification Style */
 .status{
-  padding: 4px 10px;
+  padding: 2px 8px;
   font-family: hm;
-  font-size: 10px;
+  font-size: 12px;
+  line-height: 18px;
   border-radius: 8px;
   white-space: nowrap;
   display: inline-block;
-  color: var(--white-cl);
 }
 
 .status.status-error{
-  background-color: #BC2C22;
+  color: #BC2C22;
+  background: rgba(188, 44, 34, 0.2);
 }
 
 .status.status-warning{
@@ -314,7 +327,8 @@
 }
 
 .status.status-success{
-  background-color: #0A9A4A;
+  color: #0A9A4A;
+  background: rgba(10, 154, 74, 0.2);
 }
 
 /* Table Style */
@@ -613,15 +627,14 @@
   padding: 0;
   margin-right: 0;
   border-radius: 0;
-  color: var(--gray-cl-7);
+  color: var(--gray-cl-6);
   background-color: var(--gray-cl-1);
   border: 1px solid var(--gray-cl-3);
 }
 
 .nav-tabs li.active a{
   border: 0;
-  font-family: hm;
-  color: var(--gray-cl-8);
+  color: var(--gray-cl-7);
   background-color: var(--white-cl);
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
 }
