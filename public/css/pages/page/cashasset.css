@@ -15,16 +15,6 @@
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
 }
 
-.cashasset-index .box-search .btn-debt{
-  border: 1px solid #DE6573;
-  background-color: #DE6573;
-}
-
-.cashasset-index .box-search .btn-asset{
-  border: 1px solid #0A9A4A;
-  background-color: #0A9A4A;
-}
-
 .cashasset-index thead tr:last-child th:first-child{
   display: none;
 }

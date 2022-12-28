@@ -93,9 +93,21 @@
           </div>
         </div>
         <a href="{{ route('cashplans-add') }}" class="btn btn-primary btn-add">
-          <img src="{{ asset('img/icon-add.svg') }}" alt="">
+          <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
           Thêm dòng tiền
         </a>
+        <div class="box-search">
+          <div class="filter-timeline">
+            <div class="form-group">
+              <label for="status">Lọc dòng tiền theo</label>
+              <select class="form-control select2" name="status" id="status">
+                <option selected>Chọn trạng thái</option>
+                <option value="">Hoạt động</option>
+                <option value="">Tất toán</option>
+              </select>
+            </div>
+          </div>
+        </div>
         <div class="table-wrap">
           <div class="table-content">
             <table class="table table-bordered table-list">
@@ -165,9 +177,6 @@
           <div class="control">
             <p class="count">4</p>
             <p class="text">Ví tài chính đang được chọn</p>
-            {{-- <a href="#" class="btn btn-export">
-              <img src="{{ asset('img/icon-export.svg') }}" alt="">
-            </a> --}}
             <a href="#" class="btn btn-gray btn-delete">
               <img src="{{ asset('img/icon-delete.svg') }}" alt="">
             </a>

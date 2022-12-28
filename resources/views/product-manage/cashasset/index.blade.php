@@ -106,7 +106,10 @@
       </div>
 
       <div class="box box-primary">
-        <h6 class="box-title">Danh sách Chi tiết</h6>
+        <h6 class="box-title">
+          Danh sách Chi tiết
+          <a href="#" class="box-title__link">Lịch sử tài sản - nợ</a>
+        </h6>
         <div class="noti-index">
           <div class="noti-index__wrap">
             <div class="noti-index__item">
@@ -121,11 +124,11 @@
         </div>
         <div class="box-search">
           <div class="control">
-            <a href="{{ route('cashassets-process', ['assetstatustype' => 3]) }}" class="btn btn-primary btn-debt">
+            <a href="{{ route('cashassets-process', ['assetstatustype' => 3]) }}" class="btn btn-gray btn-debt">
               <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
               Nợ
             </a>
-            <a href="{{ route('cashassets-process', ['assetstatustype' => 4]) }}" class="btn btn-primary btn-asset">
+            <a href="{{ route('cashassets-process', ['assetstatustype' => 4]) }}" class="btn btn-gray btn-asset">
               <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
               Tài sản
             </a>
@@ -216,9 +219,11 @@
           <div class="control">
             <p class="count">4</p>
             <p class="text">Ví tài chính đang được chọn</p>
-            <a href="#" class="btn btn-delete">
+            <a href="#" class="btn btn-gray btn-delete">
               <img src="{{ asset('img/icon-delete.svg') }}" alt="">
-              Xóa
+            </a>
+            <a href="#" class="btn btn-gray btn-export">
+              <img src="{{ asset('img/icon-export.svg') }}" alt="">
             </a>
           </div>
           <div class="paging">

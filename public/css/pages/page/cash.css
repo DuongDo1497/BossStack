@@ -112,7 +112,7 @@
   color: var(--gray-cl-7);
 }
 
-.cash-index .box-primary:last-child{
+.cash-index .box-primary:nth-child(2){
   padding: 0;
   background-color: var(--white-cl);
 }
@@ -125,7 +125,7 @@
   border-radius: 16px;
 }
 
-.tab-pane__body .chart-item .chart-title{
+.tab-pane__body .chart-item p{
   font-family: hm;
 }
 
@@ -137,11 +137,17 @@
   color: #BC2C22;
 }
 
-.tab-pane__body .read-more{
+.cash-index .cashFlow-manage{
+  border-radius: 16px;
+  padding: 24px;
+  background-color: var(--white-cl);
+}
+
+.cash-index .cashFlow-manage .read-more{
   width: 120px;
-  margin-top: 24px;
-  margin-left: auto;
+  margin: 24px auto 0;
   display: block;
+  text-decoration: underline;
   color: var(--primary-cl);
 }
 
@@ -248,6 +254,15 @@
 #cash-dissection__detail tbody td:first-child span,
 #assessment__detail tbody td:first-child span{
   color: var(--gray-cl-6);
+}
+
+#assessment__dashboard tbody td:nth-child(5) span,
+#assessment__detail tbody td:nth-child(4) span{
+  font-family: hr;
+  font-size: 14px;
+  line-height: 21px;
+  display: inline-block;
+  margin-top: 8px;
 }
 
 #assessment__accordion .progress-bar__note{

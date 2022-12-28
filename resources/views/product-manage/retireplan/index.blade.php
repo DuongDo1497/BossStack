@@ -104,30 +104,30 @@
             </div>
             <div class="form-group">
               <label for="">Tổng số tiền đóng góp dự kiến cho kỳ nghỉ hưu</label>
-              <div class="form-text">
-                {!! formatNumberColorCustom($retirementamount_j, 1, 0, 1, 2) !!}
+              <div class="form-text number">
+                {!! formatNumberColorCustom($retirementamount_j, 1, 0, 1, 2) !!} <span class="form-text__unit">&#8363;</span>
               </div>
             </div>
             <div class="form-group">
               <label for="">Tiền chi phí dự kiến để sống khi nghỉ hưu (tháng)</label>
-              <div class="form-text">
-                {!! formatNumberColorCustom($expenseretirementamount_k, 1, 0, 1, 2) !!}
+              <div class="form-text number">
+                {!! formatNumberColorCustom($expenseretirementamount_k, 1, 0, 1, 2) !!} <span class="form-text__unit">&#8363;</span>
               </div>
             </div>
             <div class="form-group">
               <label for="">Tổng số tiền sinh hoạt phí dự kiến chúng ta cần cho kỳ nghỉ hưu
                 sẽ là</label>
-              <div class="form-text">
-                {!! formatNumberColorCustom($totalexpenseretirementamount_l, 1, 0, 1, 2) !!}
+              <div class="form-text number">
+                {!! formatNumberColorCustom($totalexpenseretirementamount_l, 1, 0, 1, 2) !!} <span class="form-text__unit">&#8363;</span>
               </div>
             </div>
             <div class="form-group">
               <label for="">Số tiền dư thừa khi nghỉ hưu</label>
-              <div class="form-text">
+              <div class="form-text number">
                 @if ($totalamount_m <= 0)
-                  {!! formatNumberColorCustom($totalamount_m, 1, 0, 0, 1) !!}
+                  {!! formatNumberColorCustom($totalamount_m, 1, 0, 0, 1) !!} <span class="form-text__unit">&#8363;</span>
                 @else
-                  {!! formatNumberColorCustom($totalamount_m, 1, 0, 0, 2) !!}
+                  {!! formatNumberColorCustom($totalamount_m, 1, 0, 0, 2) !!} <span class="form-text__unit">&#8363;</span>
                 @endif
               </div>
             </div>
