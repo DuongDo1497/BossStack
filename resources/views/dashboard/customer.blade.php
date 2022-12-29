@@ -54,7 +54,7 @@
             </div>
 
             <div class="overview-page__item add">
-              <a href="#">
+              <a href="{{ route('customers-addFunction') }}">
                 <img class="icon" src="{{ asset('img/dashboard-add.svg') }}" alt="">
                 <span class="text">Thêm tiện ích</span>
               </a>

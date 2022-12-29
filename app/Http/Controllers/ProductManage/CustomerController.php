@@ -783,5 +783,15 @@ class CustomerController extends Controller
             ->route('user.editUser')
             ->with(NotificationMessage::UPDATE_SUCCESS);
     }
-    
+
+    public function addFunction(Request $request)
+    {
+        $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+
+        $this->view->setHeading('THÔNG TIN TIỆN ÍCH');
+        $this->view->setSubHeading('Thêm tiện ích');                
+
+        return $this->view('addFunction');
+
+    }      
 }

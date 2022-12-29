@@ -324,5 +324,9 @@ class CashAssetController extends Controller
         return $this->view('modify');
     }
 
- 
+    public function history(Request $request)
+    {
+        $this->setView();
+        return $this->view('history');
+    } 
 }
