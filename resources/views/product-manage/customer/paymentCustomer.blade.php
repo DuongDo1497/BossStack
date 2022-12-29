@@ -18,7 +18,7 @@
   <div class="section section-payment payment">
     <div class="container">
       <div class="wrap">
-        <form role="form" action="{{ route('customers-processPaymentMomo') }}?continue=true" method="post"
+        <form role="form" action="{{ route('customers-processPayment') }}?continue=true" method="post"
           id="frm">
           {{ csrf_field() }}
           <input type='hidden' name='typereport' value=''>

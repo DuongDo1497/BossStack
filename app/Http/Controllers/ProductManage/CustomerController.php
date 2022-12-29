@@ -144,7 +144,7 @@ class CustomerController extends Controller
         return $this->view('paymentCustomer');
     }
 
-    public function processPaymentMomo(Request $request)
+    public function processPayment(Request $request)
     {
         $contract_id = $request->cid;
         $ord_payment_method = $request->ord_payment_method;
@@ -169,8 +169,8 @@ class CustomerController extends Controller
             $orderId = $contract->contractno;
     
             $url = config('app.urlhost');
-            $returnUrl = "$url/public/customers/resultPaymentMomo";
-            $notifyurl = "$url/public/customers/ipnPaymentMomo";
+            $returnUrl = "$url/public/customers/resultPayment";
+            $notifyurl = "$url/public/customers/ipnPayment";
 
             $jsonResult = processSendRequestToMOMO($orderId, $orderInfo, $amount, $returnUrl, $notifyurl);
             
@@ -191,8 +191,8 @@ class CustomerController extends Controller
             $buyerAddress = ($customer->address == '' ? '_' : $customer->address);
 
             $url = config('app.urlhost');
-            $returnUrl = "$url/resultPaymentMomo";
-            $notifyurl = "$url/ipnPaymentMomo";
+            $returnUrl = "$url/resultPayment";
+            $notifyurl = "$url/ipnPayment";
 
             $result = processSendRequestToALEPAY($orderId, $orderInfo, $amount, $returnUrl, $notifyurl, $buyerName, $buyerEmail, $buyerPhone, $buyerAddress);
            
@@ -220,7 +220,7 @@ class CustomerController extends Controller
         return true;
     }    
 
-    public function resultPaymentMomo(Request $request)
+    public function resultPayment(Request $request)
     {
         $errorCode = $request->errorCode;
         $transactionCode = $request->transactionCode;
@@ -237,6 +237,19 @@ class CustomerController extends Controller
 
         $this->view->errorCode = $error;
         $this->view->infor = $message;
+        
+        $this->view->setHeading('THÔNG TIN THANH TOÁN');
+        $this->view->setSubHeading('Thanh toán qua ALEPAY');                
+
+        return $this->view('message');
+
+    }    
+
+    public function ipnPayment(Request $request)
+    {
+
+        $this->view->errorCode = "2";
+        $this->view->infor = "Thanh toán bị hủy.";
         
         $this->view->setHeading('THÔNG TIN THANH TOÁN');
         $this->view->setSubHeading('Thanh toán qua ALEPAY');                

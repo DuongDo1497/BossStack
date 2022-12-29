@@ -18,7 +18,7 @@
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
-    <form role="form" action="{{ route('contracts-processPaymentMomo') }}?continue=true" method="post" id="frm">
+    <form role="form" action="{{ route('contracts-processPayment') }}?continue=true" method="post" id="frm">
       {{ csrf_field() }}
       <input type='hidden' name='typereport' value=''>
       <input type='hidden' name='cid' value='{{ $id }}'>

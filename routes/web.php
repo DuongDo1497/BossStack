@@ -90,9 +90,9 @@ Route::group(['namespace' => 'ProductManage'], function () {
     Route::get('/editCustomer', 'CustomerController@editCustomer')->name('customers-editCustomer');
     Route::any('/updateCustomer/{id}', 'CustomerController@updateCustomer')->name('customers-updateCustomer');
 
-    Route::post('/processPaymentMomo', 'CustomerController@processPaymentMomo')->name('customers-processPaymentMomo');
-    Route::get('/resultPaymentMomo', 'CustomerController@resultPaymentMomo')->name('customers-resultPaymentMomo');
-    Route::get('/ipnPaymentMomo', 'CustomerController@ipnPaymentMomo')->name('customers-ipnPaymentMomo');
+    Route::post('/processPayment', 'CustomerController@processPayment')->name('customers-processPayment');
+    Route::get('/resultPayment', 'CustomerController@resultPayment')->name('customers-resultPayment');
+    Route::get('/ipnPayment', 'CustomerController@ipnPayment')->name('customers-ipnPayment');
 
     Route::get('/forgotPassword', 'CustomerController@forgotPassword')->name('customers-forgotPassword');
     Route::post('/mailForgotPassword', 'CustomerController@mailForgotPassword')->name('customers-mailForgotPassword');
