@@ -188,7 +188,7 @@ class CustomerController extends Controller
             $buyerName = ($customer->fullname == '' ? 'fullname' : $customer->fullname);
             $buyerEmail = ($customer->email == '' ? 'email' : $customer->email);
             $buyerPhone = ($customer->phone == '' ? 'phone' : $customer->phone);
-            $buyerAddress = ($customer->address == '' ? 'address' : $customer->address);
+            $buyerAddress = ($customer->address == '' ? '_' : $customer->address);
 
             $url = config('app.urlhost');
             $returnUrl = "$url/resultPaymentMomo";
