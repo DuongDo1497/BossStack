@@ -83,8 +83,9 @@
   text-align: center;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .profit-index .btn-next, 
+  .profit-index .btn-analysis,
   .profit-add .btn-analysis{
     width: 100%;
     margin-left: 0;

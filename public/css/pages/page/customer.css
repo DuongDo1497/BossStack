@@ -52,7 +52,7 @@
   margin-bottom: 48px;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .customer-edit .box:nth-child(2){
     flex-wrap: wrap;
   }
@@ -63,6 +63,10 @@
 
   .customer-info .form-row .form-group{
     width: 50%;
+  }
+
+  .form-row .form-group:nth-child(2) .select2-container{
+    width: 100% !important;
   }
 
   .customer-edit .btn-update{

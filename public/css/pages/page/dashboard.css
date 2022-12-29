@@ -92,7 +92,7 @@
 }
 
 .dashboard-index .filter-timeline {
-  width: 40%;
+  width: 15%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -100,7 +100,7 @@
 }
 
 .dashboard-index .form-group{
-  --w-label: 92px;
+  --w-label: 35px;
   margin-bottom: 0;
 }
 
@@ -130,7 +130,7 @@
   color: var(--gray-cl-6);
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .box.box-primary{
     padding: 16px 0;
   }

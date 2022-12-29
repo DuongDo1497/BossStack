@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <a href="{{ route('customers-addUser') }}" class="btn btn-primary btn-add">
+        <a href="{{ route('customers-addUser') }}" class="btn btn-gray btn-add">
           <img src="{{ asset('img/icon-add.svg') }}" alt="">
           Tạo user mới
         </a>

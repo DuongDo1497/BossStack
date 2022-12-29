@@ -56,7 +56,7 @@
   font-size: 14px;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .cashplan-index .noti-index__wrap,
   .cashplan-analysis .noti-index__wrap{
     padding-left: 0;

@@ -64,7 +64,7 @@
   background-color: #DE6573;
 } */
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .box-search{
     flex-wrap: wrap;
     row-gap: 16px;
@@ -160,14 +160,16 @@
   color: var(--gray-cl-6);
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
+  .box.box-primary{
+    padding: 16px 15px;
+  }
+}
+
+@media (max-width: 767.98px){
   .content-wrapper .title-page,
   .content-wrapper .breadcrumb{
     display: none;
-  }
-
-  .box.box-primary{
-    padding: 16px 15px;
   }
 }
 
@@ -286,7 +288,7 @@
   color: var(--gray-cl-5);
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .box-form{
     --w-box-form: 100%
   }
@@ -300,10 +302,10 @@
     flex-wrap: wrap;
   }
 
-  .form-group .form-control,
+  /* .form-group .form-control,
   .form-group .select2-selection--single{
     border-radius: 8px !important;
-  }
+  } */
 }
 
 /* Status Notification Style */
@@ -350,6 +352,10 @@
   text-align: center;
 }
 
+.table-wrap tr th.draft{
+  display: none;
+}
+
 .table-list tbody tr td,
 .table-list tbody tr td a{
   color: var(--gray-cl-6);
@@ -369,7 +375,7 @@
   color: var(--gray-cl-7);
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .table-wrap{
     --w-fixed-col: 120px;
     position: relative;
@@ -394,6 +400,10 @@
     width: 150px;
     padding: 10px;
     background-color: var(--white-cl);
+  }
+
+  .table-wrap tr th.draft{
+    display: inline-table;
   }
   
   .table-wrap table td{
@@ -464,7 +474,7 @@
   font-family: hb;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .box-control{
     width: 100%;
     flex-direction: column;
@@ -526,7 +536,7 @@
   font-family: hm;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .note-content{
     display: none;
   }
@@ -573,7 +583,7 @@
   font-family: hb;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .noti-index__wrap{
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -643,7 +653,7 @@
   padding: 24px 28.5px 45px;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .nav-tabs__mobile{
     display: flex;
     padding: 2px;
@@ -767,7 +777,7 @@
   color: var(--primary-cl);
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .overview-page{
     --w-item: 120px;
     width: 100%;
@@ -802,7 +812,7 @@
   display: none;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .list-info{
     display: flex;
     flex-direction: column;

@@ -2,14 +2,6 @@
   width: 100%;
 }
 
-.cashincome-index .table-wrap tr th.draft{
-  display: none;
-}
-
-.cashincome-index .table-wrap tr:last-child th:first-child{
-  display: none;
-}
-
 .cashincome-index .table-wrap tr td:nth-child(7),
 .cashincome-index .table-wrap tr td:last-child{
   white-space: nowrap !important;
@@ -22,7 +14,7 @@
   margin-left: 237px;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .cashincome-add .btn-save,
   .cashincome-edit .btn-save{
     width: 100%;
@@ -49,10 +41,6 @@
 
   .cashincome-index .table-wrap table th.fixed{
     height: 102px;
-  }
-
-  .cashincome-index .table-wrap tr th.draft{
-    display: inline-table;
   }
 
   .cashincome-index .table-wrap tr:first-child th:last-child{

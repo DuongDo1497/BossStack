@@ -35,7 +35,7 @@
   width: auto;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .customer-user__dashboard .table-wrap .table-content{
     width: calc(100% - 192px); 
     margin-left: 192px;

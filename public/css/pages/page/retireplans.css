@@ -21,7 +21,7 @@
   background-color: var(--gray-cl-2);
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 991.98px){
   .retireplans .box-form{
     --w-box-form: 100%;
   }
