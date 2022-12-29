@@ -74,3 +74,104 @@
     margin-left: 0;
   }
 }
+
+/* Them tien ich */
+
+.extension-add .page-selected{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 0;
+  font-family: hm;
+  color: var(--gray-cl-8);
+}
+
+.extension-add .page-selected .selected-count{
+  font-family: hb;
+  font-size: 18px;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.extension-add .extension-group{
+  margin-bottom: 16px;
+}
+
+.extension-add .extension-group:last-child{
+  margin-bottom: 0;
+}
+
+.extension-add .extension-list{
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+}
+
+.extension-add .extension-list .item{
+  --w-item: 220px;
+  width: var(--w-item);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  position: relative;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-cl-3);
+}
+
+.extension-add .checkbox-group{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.extension-add .checkbox-group .select-item{
+  display: none;
+}
+
+.extension-add .checkbox-group label{
+  --w-label: 32px;
+  position: relative;
+  width: var(--w-label);
+  height: var(--w-label);
+  border-radius: 4px;
+  border: 1px solid var(--gray-cl-6);
+}
+
+.extension-add .checkbox-group .select-item:checked ~ label{
+  background-color: var(--gray-cl-6);
+}
+
+.extension-add .checkbox-group .select-item:checked ~ label::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 14px;
+  border: 1px solid var(--white-cl);
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.extension-add .extension-list .icon{
+  --w-icon: 80px;
+  width: var(--w-icon);
+  height: var(--w-icon);
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(151.68deg, #3563AC 6.57%, #73B0DD 112.14%);
+}
+
+.extension-add .extension-list .text{
+  text-align: center;
+  margin-top: 16px;
+  display: inline-block;
+}

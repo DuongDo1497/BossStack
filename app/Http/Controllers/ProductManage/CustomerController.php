@@ -788,7 +788,7 @@ class CustomerController extends Controller
     {
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
 
-        $this->view->setHeading('THÔNG TIN TIỆN ÍCH');
+        $this->view->setHeading('THÊM TIỆN ÍCH');
         $this->view->setSubHeading('Thêm tiện ích');                
 
         return $this->view('addFunction');
