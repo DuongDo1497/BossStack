@@ -25,7 +25,7 @@
                   <label for="profits"></label>
                 </div>
                 <img src="{{ asset('img/dashboard-1.svg') }}" alt="" class="icon">
-                <span class="text">Tính Lợi Nhuận Kinh Doanh</span>
+                <span class="text">Tính Lợi Nhuận<br>Kinh Doanh</span>
               </div>
 
               <div class="item">
@@ -34,7 +34,7 @@
                   <label for="retireplans"></label>
                 </div>
                 <img src="{{ asset('img/dashboard-2.svg') }}" alt="" class="icon">
-                <span class="text">Tính số tiền nghỉ hưu</span>
+                <span class="text">Tính số tiền<br>nghỉ hưu</span>
               </div>
 
               <div class="item">
@@ -43,7 +43,7 @@
                   <label for="cashplans"></label>
                 </div>
                 <img src="{{ asset('img/dashboard-3.svg') }}" alt="" class="icon">
-                <span class="text">Thiết lập dòng tiền</span>
+                <span class="text">Thiết lập<br>dòng tiền</span>
               </div>
 
               <div class="item">
@@ -52,7 +52,7 @@
                   <label for="cashs"></label>
                 </div>
                 <img src="{{ asset('img/dashboard-4.svg') }}" alt="" class="icon">
-                <span class="text">Thu chi ví tổng</span>
+                <span class="text">Thu chi<br>ví tổng</span>
               </div>
 
               <div class="item">
@@ -61,7 +61,7 @@
                   <label for="cashassets"></label>
                 </div>
                 <img src="{{ asset('img/dashboard-5.svg') }}" alt="" class="icon">
-                <span class="text">Danh mục tài sản - nợ</span>
+                <span class="text">Danh mục<br>tài sản - nợ</span>
               </div>
 
               <div class="item">
@@ -70,7 +70,7 @@
                   <label for="cashsprocess"></label>
                 </div>
                 <img src="{{ asset('img/dashboard-6.svg') }}" alt="" class="icon">
-                <span class="text">Bóc tách dòng tiền</span>
+                <span class="text">Bóc tách<br>dòng tiền</span>
               </div>
 
               <div class="item">
@@ -107,7 +107,7 @@
                   <label for="editCustomer"></label>
                 </div>
                 <img src="{{ asset('img/dashboard-9.svg') }}" alt="" class="icon">
-                <span class="text">Thông tin cá nhân</span>
+                <span class="text">Thông tin<br>cá nhân</span>
               </div>
 
               <div class="item">
@@ -125,9 +125,15 @@
                   <label for="formAdvisory"></label>
                 </div>
                 <img src="{{ asset('img/dashboard-6.svg') }}" alt="" class="icon">
-                <span class="text">Lịch sử truy cập</span>
+                <span class="text">Lịch sử<br>truy cập</span>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="box-search">
+          <div class="control">
+            <a href="#" class="btn btn-primary btn-cancel">Hủy bỏ</a>
+            <button type="submit" class="btn btn-primary btn-save">Lưu thay đổi</button>
           </div>
         </div>
       </div>

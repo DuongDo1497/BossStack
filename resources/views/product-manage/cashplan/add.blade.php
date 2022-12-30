@@ -94,14 +94,16 @@
             </div>
             <div class="form-group">
               <label for="plandate">Ngày lập:</label>
-              <input type="text" class="form-control" name="plandate" id="plandate"
-                value="{{ old('plandate') == '' ? $plandate : old('plandate') }}" readonly>
+              <div class="form-text number">{{ old('plandate') == '' ? $plandate : old('plandate') }}</div>
+              <input type="hidden" class="form-control" name="plandate" id="plandate"
+                value="{{ old('plandate') == '' ? $plandate : old('plandate') }}">
             </div>
             <div class="form-group">
               <label for="currentage">Tuổi hiện tại:</label>
-              <input type="text" class="form-control number" name="currentage" id="currentage"
+              <div class="form-text number">{{ $currentage == null ? old('currentage') : $currentage }}</div>
+              <input type="hidden" class="form-control number" name="currentage" id="currentage"
                 value="{{ $currentage == null ? old('currentage') : $currentage }}"
-                onkeyup="this.value=formatNumberDecimal(this.value)" readonly>
+                onkeyup="this.value=formatNumberDecimal(this.value)">
             </div>
             <div class="form-group">
               <label for="planage">Tuổi hoàn thành mục tiêu<span>*</span>:</label>

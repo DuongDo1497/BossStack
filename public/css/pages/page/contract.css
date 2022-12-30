@@ -199,6 +199,13 @@
   color: var(--gray-cl-6);
 }
 
+@media (max-width: 1199.98px){
+  .package-list{
+    --package-count: 2;
+    row-gap: 28px;
+  }
+}
+
 @media (max-width: 991.98px){
   .package-list{
     flex-wrap: wrap;

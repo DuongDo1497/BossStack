@@ -327,6 +327,8 @@ class CashAssetController extends Controller
     public function history(Request $request)
     {
         $this->setView();
+
+        $this->view->setHeading('LỊCH SỬ TÀI SẢN - NỢ');
         return $this->view('history');
     } 
 }

@@ -94,13 +94,11 @@
           <div class="box-form">
             <div class="form-group">
               <label for="">Số năm còn làm việc</label>
-              <input type="text" class="form-control" name="" id="" value="{{ $workage_d }} năm"
-                readonly>
+              <div class="form-text number">{{ $workage_d }} năm</div>
             </div>
             <div class="form-group">
               <label for="">Số năm nghỉ hưu</label>
-              <input type="text" class="form-control" name="" id=""
-                value="{{ $retirementyear_e }} năm" readonly>
+              <div class="form-text number">{{ $retirementyear_e }} năm</div>
             </div>
             <div class="form-group">
               <label for="">Tổng số tiền đóng góp dự kiến cho kỳ nghỉ hưu</label>

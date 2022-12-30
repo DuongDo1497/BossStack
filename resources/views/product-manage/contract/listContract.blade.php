@@ -116,9 +116,8 @@
           <div class="control">
             <p class="count">4</p>
             <p class="text">Hàng tài chính đang được chọn</p>
-            <a href="#" class="btn btn-delete">
+            <a href="#" class="btn btn-gray btn-delete">
               <img src="{{ asset('img/icon-delete.svg') }}" alt="">
-              Xóa
             </a>
           </div>
           <div class="paging">

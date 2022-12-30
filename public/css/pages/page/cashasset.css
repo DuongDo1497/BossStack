@@ -109,4 +109,37 @@
     margin-top: 24px;
     margin-left: 0;
   }
+
+  .cashasset-history .table-wrap .table-content{
+    width: calc(100% - 382px); 
+    margin-left: 382px;
+    margin-right: 0;
+  }
+
+  .cashasset-history .table-wrap table th.fixed{
+    height: 40px;
+  }
+
+  .cashasset-history .table-wrap table td:not(.fixed){
+    background-color: var(--gray-cl-3);
+  }
+
+  .cashasset-history .table-wrap table .fixed:first-child{
+    width: 32px;
+  }
+
+  .cashasset-history .table-wrap table .fixed-2 {
+    width: 212px;
+    left: 32px; 
+  }
+
+  .cashasset-history .table-wrap table .fixed-3 {
+    width: 138px;
+    left: 244px; 
+  }
+
+  .cashasset-history .table-wrap table td.fixed-2{
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }

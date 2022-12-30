@@ -117,7 +117,7 @@
   justify-content:center;
   flex-direction:column;
   position: relative;
-  padding: 16px 24px;
+  padding: 16px 0;
   border-radius: 8px;
   border: 1px solid var(--gray-cl-3);
 }
@@ -138,6 +138,7 @@
   width: var(--w-label);
   height: var(--w-label);
   border-radius: 4px;
+  margin-bottom: 0;
   border: 1px solid var(--gray-cl-6);
 }
 
@@ -174,4 +175,61 @@
   text-align: center;
   margin-top: 16px;
   display: inline-block;
+  text-transform: capitalize;
+}
+
+.extension-add .box-search{
+  justify-content: center;
+  margin: 24px 0 0;
+}
+
+.extension-add .box-search .btn{
+  width: auto;
+}
+
+.extension-add .box-search .btn-cancel{
+  color: #1890FF;
+  background-color: transparent;
+}
+
+@media (max-width: 991.98px){
+  .extension-add .extension-list{
+    width: 92%;
+    gap: 8px;
+  }
+
+  .extension-add .extension-list .item{
+    --w-item: 100px;
+    padding: 8px 0;
+    justify-content: flex-start;
+  }
+
+  .extension-add .checkbox-group{
+    top: 6px;
+    right: 6px;
+  }
+
+  .extension-add .checkbox-group label{
+    --w-label: 20px;
+  }
+
+  .extension-add .checkbox-group .select-item:checked ~ label::after{
+    width: 5px;
+    height: 10px;
+  }
+
+  .extension-add .extension-list .icon{
+    --w-icon: 36px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .extension-add .extension-list .text{
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .box-search .control{
+    justify-content: center;
+  }
 }

@@ -26,7 +26,7 @@
     --w-box-form: 100%;
   }
 
-  .retireplans .box:first-child .form-group:last-child label,
+  .retireplans .form-group label,
   .retireplans .box:last-child .form-group label{
     --w-label: 50%;
   }
@@ -39,5 +39,15 @@
   .retireplans .btn-analysis{
     width: 100%;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 767.98px){
+  .retireplans .box:last-child .form-group{
+    column-gap: 0;
+  }
+
+  .retireplans .box:last-child .form-group label{
+    --w-label: 100%;
   }
 }

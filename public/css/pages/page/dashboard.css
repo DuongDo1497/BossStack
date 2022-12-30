@@ -130,6 +130,32 @@
   color: var(--gray-cl-6);
 }
 
+@media (max-width: 1199.98px){
+  .spending-history__list{
+    width: calc(60% - 8px);
+  }
+
+  .spending-history__sort{
+    width: calc(40% - 8px);
+  }
+
+  .chart-list{
+    display: none;
+  }
+
+  .chart-tab{
+    display: block;
+  }
+
+  .chart-tab .nav-tabs__mobile{
+    margin-bottom: 40px;
+  }
+
+  .dashboard-index .filter-timeline{
+    width: 20%;
+  }
+}
+
 @media (max-width: 991.98px){
   .box.box-primary{
     padding: 16px 0;
@@ -145,18 +171,6 @@
     width: 100%;
   }
 
-  .chart-list{
-    display: none;
-  }
-
-  .chart-tab{
-    display: block;
-  }
-
-  .chart-tab .nav-tabs__mobile{
-    margin-bottom: 40px;
-  }
-
   .spending-history__sort .line{
     margin: 16px 0;
   }
@@ -168,9 +182,7 @@
   }
 
   .dashboard-index .form-group{
-    /* --w-label: 100%; */
-    width: calc(50% - 8px);
-    /* flex-wrap: wrap; */
+    width: calc(30% - 8px);
   }
 
   .dashboard-index .filter-timeline .btn.btn-primary{
@@ -178,6 +190,14 @@
   }
 
   .my-cash #chart5 .c3-axis-y-label{
-  transform: translate(0, -40px);
+    transform: translate(0, -40px);
+  }
 }
+
+@media (max-width: 767.98px){
+  .dashboard-index .form-group{
+    /* --w-label: 100%; */
+    width: calc(50% - 8px);
+    /* flex-wrap: wrap; */
+  }
 }

@@ -252,17 +252,20 @@
           <div class="box-form">
             <div class="form-group">
               <label for="oldpassword">Mật khẩu cũ:</label>
-              <input type="password" class="form-control" name="oldpassword" id="oldpassword">
+              <input type="password" class="form-control" name="oldpassword" id="oldpassword"
+                placeholder="Nhập mật khẩu cũ...">
             </div>
 
             <div class="form-group">
               <label for="newpassword">Mật khẩu mới:</label>
-              <input type="password" class="form-control" name="newpassword" id="newpassword">
+              <input type="password" class="form-control" name="newpassword" id="newpassword"
+                placeholder="Nhập mật khẩu mới...">
             </div>
 
             <div class="form-group">
               <label for="confirmnewpassword">Nhập lại mật khẩu mới:</label>
-              <input type="password" class="form-control" name="confirmnewpassword" id="confirmnewpassword">
+              <input type="password" class="form-control" name="confirmnewpassword" id="confirmnewpassword"
+                placeholder="Nhập lại mật khẩu mới...">
             </div>
           </div>
         </div>

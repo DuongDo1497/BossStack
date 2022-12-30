@@ -70,9 +70,9 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="{{ asset('js/commons.js') }}"></script>
   <script src="{{ asset('js/web/main.js') }}"></script>
   <script src="{{ asset('js/web/carousel.js') }}"></script>
-  <script src="{{ asset('js/commons.js') }}"></script>
   @yield('scripts')
 </body>
 

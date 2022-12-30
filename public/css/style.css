@@ -494,6 +494,29 @@ h6{
   color: #fff !important;
 }
 
+@media (max-width: 1299.98px) and (min-width: 768px){
+  .skin-blue .main-sidebar,
+  .main-sidebar .sidebar{
+    width: 210px;
+  }
+
+  .main-sidebar .sidebar .user-panel .user-panel-info .info p,
+  .skin-blue .sidebar-menu > li.header.header-system,
+  .skin-blue .sidebar-menu li.treeview > a, 
+  .skin-blue .sidebar-menu li.list-menu > a,
+  .skin-blue .sidebar-menu > li > .treeview-menu > li > a{
+    font-size: 13px;
+  }
+
+  .sidebar-menu li > a > .pull-right-container > .fa-angle-left{
+    margin: 0 !important;
+  }
+
+  .content-wrapper{
+    margin-left: 210px !important;
+  }
+}
+
 @media (max-width: 575.98px){
   .skin-blue .main-sidebar{
     -webkit-transform: translate(-258px,0);

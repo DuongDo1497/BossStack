@@ -63,6 +63,10 @@
     padding-right: 0;
   }
 
+  .cashplan-index .filter-timeline{
+    width: 60%;
+  }
+
   .cashplan-index .table-wrap .table-content{
     width: calc(100% - 192px); 
     margin-left: 192px;
