@@ -1010,7 +1010,7 @@ function processSendRequestToALEPAY($orderId, $orderInfo, $amount, $returnUrl, $
     $data['buyerAddress'] = trim($buyerAddress);
     $data['buyerCity'] = trim('TP.HCM');
     $data['buyerCountry'] = trim('VN');
-    $data['checkoutType'] = 4; // Thanh toán the quoc te, noi dia
+    $data['checkoutType'] = 3; // Thanh toán the quoc te, noi dia, tra gop
     $data['month'] = 3;
     $data['paymentHours'] = 48; //48 tiếng :  Thời gian cho phép thanh toán (tính bằng giờ)
     $data['allowDomestic'] = true;
