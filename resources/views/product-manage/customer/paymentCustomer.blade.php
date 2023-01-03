@@ -104,7 +104,7 @@
                   <div class="payment-option__item">
                     <div class="payment-option__header">
                       <div class="form-group">
-                        <input class="form-check-input" type="radio" name="ord_payment_method" value="2"
+                        <input class="form-check-input" type="radio" name="ord_payment_method" checked="checked" value="2"
                           id="internetBanking" data-bs-toggle="collapse" href="#internet-banking">
                         <label class="form-check-label" for="internetBanking"></label>
                       </div>
