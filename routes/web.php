@@ -78,7 +78,7 @@ Route::group(['middleware' => ['auth','web','checkauth']], function() {
     Route::get('/manage', 'DashboardController@manage')->name('dashboard-manage');
 });
     
-// Hỗ trợ tư vấn KH
+
 Route::group(['namespace' => 'ProductManage'], function () {
     Route::group(['prefix' => 'advisorys'], function () {
         Route::post('/advisory-submit/{type}', 'AdvisoryController@submitformAdvisory')->name('advisorys-submit'); // form KH submit
@@ -98,6 +98,7 @@ Route::group(['namespace' => 'ProductManage'], function () {
     Route::post('/mailForgotPassword', 'CustomerController@mailForgotPassword')->name('customers-mailForgotPassword');
 
     Route::get('/activeCoupon/{id}/{key}', 'CustomerController@activeCoupon')->name('customers-activeCoupon');
+    Route::get('/addFunction', 'CustomerController@addFunction')->name('customers-addFunction');
 });
 
 //API admin
@@ -370,6 +371,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::delete('/delete/{id}', 'CashAssetController@delete')->name('cashassets-delete');
         Route::get('/list/{month}/{year}', 'CashAssetController@list')->name('cashassets-list');
         Route::any('/modify', 'CashAssetController@modify')->name('cashassets-modify');
+        Route::get('/history', 'CashAssetController@history')->name('cashassets-history');
     });
     
     // Tiết kiệm
