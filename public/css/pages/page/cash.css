@@ -13,8 +13,15 @@
 
 .cash-index .form-group,
 .cash-process .form-group{
-  --w-label: 92px;
   margin-bottom: 0;
+}
+
+.cash-index .form-group{
+  --w-label: 90px;
+}
+
+.cash-process .form-group{
+  --w-label: 78px;
 }
 
 .filter-timeline .form-group:last-child{

@@ -444,6 +444,12 @@
   color: var(--gray-cl-6);
 }
 
+.listContractQueue tbody td .text-error,
+.listContractQueue tbody td .text-success{
+  font-family: hm;
+  font-size: 12px;
+}
+
 @media (max-width: 991.98px){
   .listContractQueue .table-wrap .table-content{
     width: calc(100% - 236px); 

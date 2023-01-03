@@ -34,7 +34,7 @@
           </div>
         </div>
         <a href="{{ route('customers-addUser') }}" class="btn btn-primary btn-add">
-          <img src="{{ asset('img/icon-add.svg') }}" alt="">
+          <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
           Tạo user mới
         </a>
         <div class="table-wrap">
@@ -95,9 +95,8 @@
           <div class="control">
             <p class="count">4</p>
             <p class="text">Ví tài chính đang được chọn</p>
-            <a href="#" class="btn btn-delete">
+            <a href="#" class="btn btn-gray btn-delete">
               <img src="{{ asset('img/icon-delete.svg') }}" alt="">
-              Xóa
             </a>
           </div>
           <div class="paging">

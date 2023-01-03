@@ -88,15 +88,15 @@
                     <td class="text-center">
                       @if ($contract->service_product_price != 0)
                         @if ($contract->payment == null or $contract->payment == '0')
-                          <div class="status status-error">{{ $paymenttype[0] }}</div>
+                          <div class="text-error">{{ $paymenttype[0] }}</div>
                         @elseif($contract->payment == '1')
-                          <div class="status status-success">{{ $paymenttype[1] }}</div>
+                          <div class="text-success">{{ $paymenttype[1] }}</div>
                         @endif
                       @endif
                     </td>
                     <td class="text-center">
                       @if ($contract->contractstatustype == 1)
-                        <div class="status status-warning">
+                        <div class="status status-new">
                           {{ $contractstatustype[$contract->contractstatustype] }}</div>
                       @elseif($contract->contractstatustype == 2)
                         <div class="status status-success">

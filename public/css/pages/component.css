@@ -340,6 +340,11 @@
   background: rgba(10, 154, 74, 0.2);
 }
 
+.status.status-new{
+  color: #1DB8FF;
+  background: rgba(29, 184, 255, 0.2);
+}
+
 /* Table Style */
 .table-list{
   margin-bottom: 0;

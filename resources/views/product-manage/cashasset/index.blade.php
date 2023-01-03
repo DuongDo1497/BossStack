@@ -86,9 +86,9 @@
           </div>
         </div>
         <h6 class="box-title">Biểu đồ tỷ trọng tài sản</h6>
-        <p class="box-des">Chức năng quản lý tài sản - nợ của phần mềm BossStack là công cụ hữu ích để
+        {{-- <p class="box-des">Chức năng quản lý tài sản - nợ của phần mềm BossStack là công cụ hữu ích để
           hỗ
-          trợ bạn đánh giá và xem lại việc quản lý tài sản của mình.</p>
+          trợ bạn đánh giá và xem lại việc quản lý tài sản của mình.</p> --}}
         <div class="chart-list">
           <div class="chart-item">
             <p class="chart-title">Nợ</p>
