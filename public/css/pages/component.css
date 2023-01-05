@@ -141,6 +141,7 @@
 }
 
 .box-title{
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -273,6 +274,7 @@
 
 .form-group .form-control:read-only,
 .form-group .form-control:read-only ~ .input-group-addon{
+  cursor: no-drop;
   background-color: var(--gray-cl-2);
 }
 
@@ -780,12 +782,14 @@
 }
 
 .overview-page__item .text{
+  font-family: hm;
   text-align: center;
   color: var(--gray-cl-7);
   text-transform: capitalize;
 }
 
 .overview-page__item.add .text{
+  font-family: hb;
   color: var(--primary-cl);
 }
 

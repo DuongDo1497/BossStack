@@ -17,14 +17,16 @@
 }
 
 .profit-add .box:first-child .box-form{
-  padding: 16px 24px;
+  padding: 16px 0;
   border-radius: 8px;
-  background-color: var(--gray-cl-1);
-  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
 }
 
 .profit-add .box:first-child .box-form .form-group:last-child{
   margin-bottom: 0;
+}
+
+.profit-add .box:first-child .box-form .form-group:last-child label{
+  font-family: hb;
 }
 
 .profit-add .box:first-child .box-form .form-control{
@@ -36,19 +38,52 @@
   max-width: 754px;
 }
 
+.profit-result table thead th,
 .profit-result table tbody th,
+.profit-result table tbody td,
+.profit-result table tfoot th,
+.profit-result table tfoot td{
+  padding: 12px 24px;
+  vertical-align: middle;
+  border: 1px solid var(--gray-cl-4) !important;
+}
+
+.profit-result table thead th,
+.profit-result table tfoot th,
+.profit-result table tfoot td{
+  font-family: hb;
+}
+
+.profit-result table tbody th{
+  font-family: hm;
+  font-weight: inherit;
+}
+
+.profit-result table tbody td{
+  font-family: hr;
+  color: var(--gray-cl-8);
+}
+
+.profit-result table tbody td span{
+  font-family: hm;
+  color: var(--gray-cl-7);
+}
+
+/* .profit-result table tbody th,
 .profit-result table tbody td{
   padding: 12px 24px;
   vertical-align: middle;
   border: 1px solid var(--gray-cl-4) !important;
 }
 
-.profit-result table tbody th{
-  font-family: hm;
+.profit-result table tbody tr:first-child th,
+.profit-result table tbody tr:last-child th,
+.profit-result table tbody tr:last-child td{
+  font-family: hb;
 }
 
-.profit-result table tbody th.light{
-  font-family: hl;
+.profit-result table tbody th.regular{
+  font-family: hr;
 }
 
 .profit-result table tbody th .text-small{
@@ -69,9 +104,14 @@
   text-align: center;
 }
 
+.profit-result table tr td span{
+  font-family: hm;
+} */
+
 .profit-result .box-search{
   max-width: 754px;
   justify-content: center;
+  margin-top: 24px;
   margin-bottom: 0;
 }
 

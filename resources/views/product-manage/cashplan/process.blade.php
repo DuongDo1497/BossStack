@@ -57,10 +57,10 @@
 
       <div class="box-content">
         <div class="box box-primary">
-          {{-- <a href="{{ route('cashplans-add') }}" class="btn btn-primary btn-add">
-            <img src="{{ asset('img/icon-add.svg') }}" alt="">
-            Thêm ví tài chính
-          </a> --}}
+          <a href="{{ route('cashplans-add') }}" class="btn btn-primary btn-add">
+            <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
+            Thêm dòng tiền khác
+          </a>
           <div class="box-form">
             <div class="form-group">
               <label for="">Phân loại<span>*</span>:</label>
@@ -88,18 +88,29 @@
             </div>
             <div class="form-group">
               <label for="">Ngày lập<span>*</span>:</label>
-              <input type="text" class="form-control" name="" id=""
-                value="{{ $model->plandate == '' ? '' : ConvertSQLDate($model->plandate) }}" readonly>
+              <div class="input-group">
+                <input type="text" class="form-control" name="" id=""
+                  value="{{ $model->plandate == '' ? '' : ConvertSQLDate($model->plandate) }}" readonly>
+                <span class="input-group-addon">
+                  <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                </span>
+              </div>
             </div>
             <div class="form-group">
               <label for="">Tuổi hiện tại<span>*</span>:</label>
-              <input type="text" class="form-control number" name="" id=""
-                value="{{ $model->currentage }}" readonly>
+              <div class="input-group">
+                <input type="text" class="form-control" name="" id="" value="{{ $model->currentage }}"
+                  readonly>
+                <span class="input-group-addon">tuổi</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="">Tuổi hoàn thành mục tiêu<span>*</span>:</label>
-              <input type="text" class="form-control number" name="" id=""
-                value="{{ $model->planage == '' ? 50 : $model->planage }}" readonly>
+              <div class="input-group">
+                <input type="text" class="form-control" name="" id=""
+                  value="{{ $model->planage == '' ? 50 : $model->planage }}" readonly>
+                <span class="input-group-addon">tuổi</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="">Số tiền mục tiêu<span>*</span>:</label>
@@ -111,8 +122,13 @@
             </div>
             <div class="form-group">
               <label for="">Ngày dự kiến hoàn thành:</label>
-              <input type="text" class="form-control" name="" id=""
-                value="{{ $model->finishdate == '' ? '' : ConvertSQLDate($model->finishdate) }}" readonly>
+              <div class="input-group">
+                <input type="text" class="form-control" name="" id=""
+                  value="{{ $model->finishdate == '' ? '' : ConvertSQLDate($model->finishdate) }}" readonly>
+                <span class="input-group-addon">
+                  <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                </span>
+              </div>
             </div>
           </div>
         </div>

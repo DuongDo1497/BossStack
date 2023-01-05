@@ -22,7 +22,6 @@
 
 .cashplan-index .btn-add,
 .cashplan-analysis .btn-add{
-  width: 182px;
   display: flex;
   align-items: center;
   column-gap: 8px;
@@ -30,9 +29,17 @@
   margin-bottom: 24px;
 }
 
+.cashplan-index .btn-add{
+  width: 182px;
+}
+
 .cashplan-add  .btn-add{
   margin-top: 22px;
   margin-left: calc(227px + 16px);
+}
+
+.cashplan-analysis .btn-add{
+  width: 220px;
 }
 
 .cashplan-analysis .box-primary:last-child{

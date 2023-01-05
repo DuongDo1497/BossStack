@@ -48,12 +48,12 @@
       types: {
         'Tiền tích lũy hằng năm': 'bar',
         'Số dư tích lũy': 'bar',
-        'Mục tiêu': 'area'
+        'Mục tiêu': 'spline'
       },
       colors: {
-        'Tiền tích lũy hằng năm': '#979AE9',
-        'Số dư tích lũy': '#8BD6C5',
-        'Mục tiêu': '#618D83'
+        'Tiền tích lũy hằng năm': '#85C88A',
+        'Số dư tích lũy': '#DE6573',
+        'Mục tiêu': '#FBC540'
       },
     },
     point: {

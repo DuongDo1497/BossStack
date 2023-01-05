@@ -44,9 +44,13 @@
           <div class="box-form">
             <div class="form-group">
               <label>Ngày giao dịch<span>*</span>:</label>
-              <div class="form-text text-right">{{ old('tranferdate') == '' ? $tranferdate : old('tranferdate') }}</div>
-              <input type="hidden" name="tranferdate" id="tranferdate"
-                value="{{ old('tranferdate') == '' ? $tranferdate : old('tranferdate') }}">
+              <div class="input-group">
+                <input type="text" class="form-control" name="tranferdate" id="tranferdate"
+                  value="{{ old('tranferdate') == '' ? $tranferdate : old('tranferdate') }}" readonly>
+                <span class="input-group-addon">
+                  <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                </span>
+              </div>
             </div>
             <div class="form-group">
               <label for="cashaccount_id_send">Ví tiền nguồn<span>*</span>:</label>
@@ -68,7 +72,7 @@
             <div class="form-group">
               <label for="">Số dư khả dụng:</label>
               <input type='hidden' name='cashaccount_amount_send' value='{{ $cashaccount_amount_send }}'>
-              <div class="form-text text-right">{!! $cashaccount_amount_send === '' ? '0' : formatNumberColor($cashaccount_amount_send, 1, 0, 1) !!}</div>
+              <div class="form-text text-right">{!! $cashaccount_amount_send === '' ? '0' : formatNumberColor($cashaccount_amount_send, 1, 0, 1) !!} &#8363;</div>
             </div>
             @php
               $check = '';
@@ -117,7 +121,7 @@
                               ' - ' .
                               $item->accountname .
                               "
-                                                                                                                                                                                            (Số dư: " .
+                                                                                                                                                                                                                                                                                                    (Số dư: " .
                               formatNumber($item->amount, 1, 0, 1) .
                               ')' }}
                         </option>
@@ -127,7 +131,7 @@
                               ' - ' .
                               $item->accountname .
                               "
-                                                                                                                                                                                            (Kế hoạch: " .
+                                                                                                                                                                                                                                                                                                    (Kế hoạch: " .
                               formatNumber($item->requireamount, 1, 0, 0) .
                               ', Số dư: ' .
                               formatNumber($item->amount, 1, 0, 1) .

@@ -32,16 +32,16 @@
           <tbody>
             <tr>
               <td>01</td>
-              <td><span class="text-error">18,010,000,000</span> VND</td>
-              <td><span class="text-success">18,010,000,000</span> VND</td>
-              <td>18,010,000,000 VND</td>
-              <td><span class="text-success">18,010,000,000</span> VND</td>
+              <td><span class="text-error">18,010,000,000</span> &#8363;</td>
+              <td><span class="text-success">18,010,000,000</span> &#8363;</td>
+              <td>18,010,000,000 &#8363;</td>
+              <td><span class="text-success">18,010,000,000</span> &#8363;</td>
               <td>24/11/2022 09:58:24</td>
             </tr>
           </tbody>
         </table>
 
-        <div class="list-info">
+        {{-- <div class="list-info">
           <div class="item">
             <div class="box-form">
               <div class="form-group">
@@ -128,7 +128,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>
   </div>

@@ -77,17 +77,22 @@
           <div class="box-form">
             <div class="form-group">
               <label>Ngày giao dịch<span>*</span>:</label>
-              <div class="form-text text-right">{{ old('incomedate') == '' ? $incomedate : old('incomedate') }}</div>
-              <input type="hidden" name="incomedate" id="incomedate"
-                value="{{ old('incomedate') == '' ? $incomedate : old('incomedate') }}">
+              <div class="input-group">
+                <input type="text" class="form-control" name="incomedate" id="incomedate"
+                  value="{{ old('incomedate') == '' ? $incomedate : old('incomedate') }}" readonly>
+                <span class="input-group-addon">
+                  <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                </span>
+              </div>
             </div>
             <div class="form-group">
-              <label for="">Ví tiền:</label>
-              <div class="form-text text-right">{{ $cashaccount_name . ' [ ' . $cashaccountno . ' ]' }}</div>
+              <label>Ví tiền:</label>
+              <input type="text" class="form-control" name="" id=""
+                value="{{ $cashaccount_name . ' [ ' . $cashaccountno . ' ]' }}" readonly>
             </div>
             <div class="form-group">
               <label for="">Số dư khả dụng:</label>
-              <div class="form-text text-right">{!! formatNumberColor($cashaccount_amount, 1, 0, 1) !!}</div>
+              <div class="form-text text-right">{!! formatNumberColor($cashaccount_amount, 1, 0, 1) !!} &#8363;</div>
             </div>
             <div class="form-group">
               <label for="incometype">Loại<span>*</span>:</label>

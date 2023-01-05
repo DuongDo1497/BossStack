@@ -83,7 +83,7 @@
             <label for="profitother">Doanh thu TC + TN khác<span>*</span>:</label>
             <div class="input-group">
               <input type="text" class="form-control number" name="profitother" id="profitother" value=""
-                onkeyup="" placeholder="Nhập..." required>
+                onkeyup="" placeholder="Nhập..." title="Doanh thu Tài Chính + Thu Nhập khác" required>
               <span class="input-group-addon">&#8363;</span>
             </div>
           </div>
@@ -96,7 +96,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="expectedprofit">Tỉ suất Lợi Nhuận kì vọng <span>*</span>:</label>
+            <label for="expectedprofit">Tỷ suất Lợi Nhuận kỳ vọng <span>*</span>:</label>
             <div class="input-group">
               <input type="text" class="form-control number" name="expectedprofit" id="expectedprofit"
                 value="" onkeyup="" placeholder="Nhập..." required>

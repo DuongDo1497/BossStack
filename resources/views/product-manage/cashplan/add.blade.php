@@ -90,25 +90,35 @@
             <div class="form-group">
               <label for="description">Tên dòng tiền<span>*</span>:</label>
               <input type="text" class="form-control" name="description" id="description"
-                value="{{ old('description') }}" placeholder="Nhập..." required>
+                value="{{ old('description') }}" placeholder="Nhập tên dòng tiền" required>
             </div>
             <div class="form-group">
               <label for="plandate">Ngày lập:</label>
-              <div class="form-text number">{{ old('plandate') == '' ? $plandate : old('plandate') }}</div>
-              <input type="hidden" class="form-control" name="plandate" id="plandate"
-                value="{{ old('plandate') == '' ? $plandate : old('plandate') }}">
+              <div class="input-group">
+                <input type="text" class="form-control" name="plandate" id="plandate"
+                  value="{{ old('plandate') == '' ? $plandate : old('plandate') }}" readonly>
+                <span class="input-group-addon">
+                  <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                </span>
+              </div>
             </div>
             <div class="form-group">
               <label for="currentage">Tuổi hiện tại:</label>
-              <div class="form-text number">{{ $currentage == null ? old('currentage') : $currentage }}</div>
-              <input type="hidden" class="form-control number" name="currentage" id="currentage"
-                value="{{ $currentage == null ? old('currentage') : $currentage }}"
-                onkeyup="this.value=formatNumberDecimal(this.value)">
+              <div class="input-group">
+                <input type="text" class="form-control" name="currentage" id="currentage"
+                  value="{{ $currentage == null ? old('currentage') : $currentage }}"
+                  onkeyup="this.value=formatNumberDecimal(this.value)" readonly>
+                <span class="input-group-addon">tuổi</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="planage">Tuổi hoàn thành mục tiêu<span>*</span>:</label>
-              <input type="text" class="form-control number" name="planage" id="planage"
-                value="{{ old('planage') == '' ? '' : old('planage') }}" placeholder="Nhập..." required>
+              <div class="input-group">
+                <input type="text" class="form-control" name="planage" id="planage"
+                  value="{{ old('planage') == '' ? '' : old('planage') }}" placeholder="Nhập tuổi hoàn thành mục tiêu"
+                  required>
+                <span class="input-group-addon">tuổi</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="requireamount">Số tiền mục tiêu<span>*</span>:</label>
@@ -121,8 +131,13 @@
             </div>
             <div class="form-group">
               <label for="finishdate">Ngày dự kiến hoàn thành:</label>
-              <input type="text" class="form-control" name="finishdate" id="finishdate" value=""
-                placeholder="Nhập...">
+              <div class="input-group">
+                <input type="text" class="form-control" name="finishdate" id="finishdate" value=""
+                  placeholder="Chọn ngày dự kiến hoàn thành">
+                <span class="input-group-addon">
+                  <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                </span>
+              </div>
             </div>
             <div class="form-group">
               <label for="">Hóa đơn, chứng từ kèm theo:</label>
