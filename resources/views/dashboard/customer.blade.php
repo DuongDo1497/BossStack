@@ -171,7 +171,12 @@
               <div class="filter-timeline">
                 <div class="form-group">
                   <label for="year">Năm:</label>
-                  <input type="text" class="form-control number" name="year" id="year" value="2022">
+                  <div class="input-group">
+                    <input type="text" class="form-control number" name="year" id="year" value="2022">
+                    <span class="input-group-addon">
+                      <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                    </span>
+                  </div>
                 </div>
                 {{-- <button type="submit" class="btn btn-primary btn-filter">
                   Lọc

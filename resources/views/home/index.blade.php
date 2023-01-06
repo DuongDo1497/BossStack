@@ -40,7 +40,7 @@
             <div class="card-body">
               <h6 class="card-body__title">BÓC TÁCH DÒNG TIỀN</h6>
               <div class="card-body__content">
-                <p>Xử lý và bóc tách các mảnh ghép trong dòng tiền tổng quan cá nhân bằng phần mềm BossStack</p>
+                <p>Bóc tách dòng tiền cá nhân chủ doanh nghiệp và doanh nghiệp​</p>
               </div>
             </div>
             <div class="card-link">
@@ -55,7 +55,8 @@
             <div class="card-body">
               <h6 class="card-body__title">THỰC THI DÒNG TIỀN DOANH NGHIỆP</h6>
               <div class="card-body__content">
-                <p>Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, tự doanh, dòng tiền doanh nghiệp</p>
+                <p>Đề xuất và thực thi những phương án về quản trị dòng tiền, quản trị rủi ro và cung cấp một cái nhìn
+                  tổng quan về tài chính doanh nghiệp​</p>
               </div>
             </div>
             <div class="card-link">

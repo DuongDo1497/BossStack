@@ -99,11 +99,11 @@
   --align-items: stretch;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .help-product__item{
-  --w-item: calc((100% / 3) - 20px);
+  --w-item: calc((100% / 4) - 15px);
   --pd-item: 40px 34px;
   border-radius: 16px;
   background-color: var(--gray-cl-1);
@@ -111,7 +111,7 @@
 }
 
 .help-product__item .icon{
-  --size-icon: 300px;
+  --size-icon: 234px;
   --border-radius-icon: 0;
   --transform-rotate: none;
 }

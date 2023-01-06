@@ -62,7 +62,7 @@
     c3.generate({
       bindto: '#rptasset1',
       data: {
-        type: 'pie',
+        type: 'donut',
         onmouseover: function(d, i) {
           console.log("onmouseover", d, i, this);
         },
@@ -86,10 +86,11 @@
           label: 'Petal.Width'
         }
       },
-      pie: {
+      donut: {
         label: {
           show: false
-        }
+        },
+        width: 25,
       },
       size: {
         height: 220,
@@ -99,6 +100,9 @@
         right: 50
       }
     });
+
+    d3.select("#rptasset1 .c3-chart-arcs-title").append("tspan").attr("dy", 5).attr("x", 0).attr("class",
+      "second-title").text(formatNumberDecimal("8421179444", 0));
 
     var listasset = [];
     var i = 0;
@@ -119,7 +123,7 @@
     c3.generate({
       bindto: '#rptasset2',
       data: {
-        type: 'pie',
+        type: 'donut',
         onmouseover: function(d, i) {
           console.log("onmouseover", d, i, this);
         },
@@ -143,10 +147,11 @@
           label: 'Petal.Width'
         }
       },
-      pie: {
+      donut: {
         label: {
           show: false
-        }
+        },
+        width: 25,
       },
       size: {
         height: 220,
@@ -156,6 +161,9 @@
         right: 50
       }
     });
+
+    d3.select("#rptasset2 .c3-chart-arcs-title").append("tspan").attr("dy", 5).attr("x", 0).attr("class",
+      "second-title").text(formatNumberDecimal("8421179444", 0));
 
     var listasset = [
       ["Nợ", total_asset_0],

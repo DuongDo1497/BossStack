@@ -66,9 +66,13 @@
           <div class="box-form">
             <div class="form-group">
               <label for="assetdate">Ngày:</label>
-              <div class="form-text text-right">{{ ConvertSQLDate($model->assetdate) }}</div>
-              {{-- <input type="text" class="form-control" name="assetdate" id="assetdate"
-                            value="{{ ConvertSQLDate($model->assetdate) }}" required> --}}
+              <div class="input-group">
+                <input type="text" class="form-control" name="assetdate" id="assetdate"
+                  value="{{ ConvertSQLDate($model->assetdate) }}" readonly>
+                <span class="input-group-addon">
+                  <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                </span>
+              </div>
             </div>
             <div class="form-group">
               <label for="assetname">Tài sản<span>*</span>:</label>
@@ -124,7 +128,7 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-primary btn-save" onclick="processReports('frm', 'update')">Lưu</button>
+          <button class="btn btn-primary btn-save" onclick="processReports('frm', 'update')">Lưu thay đổi</button>
         </div>
       </div>
     </form>

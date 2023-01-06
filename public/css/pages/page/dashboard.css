@@ -92,7 +92,7 @@
 }
 
 .dashboard-index .filter-timeline {
-  width: 15%;
+  width: 190px;
   display: flex;
   align-items: center;
   justify-content: flex-end;

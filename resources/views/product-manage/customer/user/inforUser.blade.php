@@ -40,36 +40,25 @@
           </div>
           <div class="form-group">
             <label for="birthday">Ngày sinh<span>*</span>:</label>
-            <input type="text" class="form-control" name="birthday" id="birthday" value="15/11/1998" readonly>
+            <div class="input-group">
+              <input type="text" class="form-control" name="birthday" id="birthday" value="15/11/1998" readonly>
+              <span class="input-group-addon">
+                <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+              </span>
+            </div>
           </div>
           <div class="form-group">
             <label for="">Phân loại<span>*</span>:</label>
-            <select class="form-select select2" name="" id="">
-              <option>Chọn loại</option>
-              <option value="" selected>Gia đình</option>
-              <option value="">Kinh doanh</option>
-            </select>
+            <input type="text" class="form-control" name="" id="" value="Gia đình" readonly>
           </div>
           <div class="form-group">
             <label for="">Mối quan hệ<span>*</span>:</label>
-            <select class="form-select select2" name="relationship" id="relationship">
-              <option>Chọn loại</option>
-              <option value="" selected>Vợ/Chồng</option>
-              <option value="">Con</option>
-              <option value="">Anh/em</option>
-              <option value="">Cháu</option>
-              <option value="">Quản gia</option>
-              <option value="">Người thân khác</option>
-            </select>
+            <input type="text" class="form-control" name="relationship" id="relationship" value="Vợ/Chồng" readonly>
           </div>
 
           <div class="form-group">
             <label for="">Phân quyền<span>*</span>:</label>
-            <select class="form-select select2" name="" id="">
-              <option>Chọn loại</option>
-              <option value="" selected>User Admin</option>
-              <option value="">User Thành viên</option>
-            </select>
+            <input type="text" class="form-control" name="" id="" value="User Admin" readonly>
           </div>
 
           <div class="form-group">

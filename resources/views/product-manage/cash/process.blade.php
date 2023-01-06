@@ -356,7 +356,12 @@
                             <div class="filter-timeline">
                               <div class="form-group">
                                 <label for="year">Chọn năm:</label>
-                                <input type="text" class="form-control" name="year" id="year" value="2022">
+                                <div class="input-group">
+                                  <input type="text" class="form-control" name="year" id="year" value="2022">
+                                  <span class="input-group-addon">
+                                    <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                                  </span>
+                                </div>
                               </div>
                               <button type="submit" class="btn btn-primary btn-filter">
                                 Lọc
@@ -364,6 +369,7 @@
                               </button>
                             </div>
                           </div>
+                          <p class="note-date">Năm 2022</p>
                           <div class="table-wrap">
                             <div class="table-content">
                               <table class="table table-bordered table-list">
@@ -425,10 +431,10 @@
                                   <tr>
                                     <td class="fixed fixed-1"><b>Tổng cộng</b></td>
                                     <td class="text-center fixed fixed-2"><b>56</b></td>
-                                    <td class="text-right">+1,500,000,000</td>
-                                    <td class="text-right">+10,000,000</td>
-                                    <td class="text-right">+800,000,000</td>
-                                    <td class="text-right">-10,000,000</td>
+                                    <td class="text-right"><b>+1,500,000,000</b></td>
+                                    <td class="text-right"><b>+10,000,000</b></td>
+                                    <td class="text-right"><b>+800,000,000</b></td>
+                                    <td class="text-right"><b>-10,000,000</b></td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -463,8 +469,13 @@
                                 </div>
                                 <div class="form-group">
                                   <label for="month">Chọn tháng:</label>
-                                  <input type="text" class="form-control" name="month" id="month"
-                                    value="11/2022">
+                                  <div class="input-group">
+                                    <input type="text" class="form-control" name="month" id="month"
+                                      value="11/2022">
+                                    <span class="input-group-addon">
+                                      <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
                               <button type="submit" class="btn btn-primary btn-filter">
@@ -473,7 +484,7 @@
                               </button>
                             </div>
                           </div>
-
+                          <p class="note-date">Tháng 11 năm 2022</p>
                           <div class="table-wrap">
                             <div class="table-content">
                               <table class="table table-bordered table-list">
@@ -636,8 +647,13 @@
                             <div class="filter-timeline">
                               <div class="form-group">
                                 <label for="year">Chọn năm:</label>
-                                <input type="text" class="form-control" name="year" id="year"
-                                  value="2022">
+                                <div class="input-group">
+                                  <input type="text" class="form-control" name="year" id="year"
+                                    value="2022">
+                                  <span class="input-group-addon">
+                                    <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                                  </span>
+                                </div>
                               </div>
                               <button type="submit" class="btn btn-primary btn-filter">
                                 Lọc
@@ -645,14 +661,17 @@
                               </button>
                             </div>
                           </div>
-                          <div class="progress-bar__note">
-                            <div class="item">
-                              <span class="square success"></span>
-                              <span class="text">Đã thực hiện</span>
-                            </div>
-                            <div class="item">
-                              <span class="square error"></span>
-                              <span class="text">Chưa thực hiện</span>
+                          <div class="note-group">
+                            <p class="note-date">Năm 2022</p>
+                            <div class="progress-bar__note">
+                              <div class="item">
+                                <span class="square success"></span>
+                                <span class="text">Đã thực hiện</span>
+                              </div>
+                              <div class="item">
+                                <span class="square error"></span>
+                                <span class="text">Chưa thực hiện</span>
+                              </div>
                             </div>
                           </div>
                           <div class="table-wrap">
@@ -776,8 +795,8 @@
                                   <tr>
                                     <td class="fixed fixed-1"><b>Tổng cộng</b></td>
                                     <td class="text-center fixed fixed-2"><b>56</b></td>
-                                    <td class="text-right">+1,500,000,000</td>
-                                    <td class="text-right">+10,000,000</td>
+                                    <td class="text-right"><b>+1,500,000,000</b></td>
+                                    <td class="text-right"><b>+10,000,000</b></td>
                                     <td class="text-center">
                                       <div class="progress">
                                         <div class="progress-bar progress-bar-success" role="progressbar"
@@ -791,7 +810,7 @@
                                       </div>
                                       <span class="text-error">Đang thiếu hụt</span>
                                     </td>
-                                    <td class="text-right">+10,000,000</td>
+                                    <td class="text-right"><b>+10,000,000</b></td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -825,8 +844,13 @@
                                 </div>
                                 <div class="form-group">
                                   <label for="month">Chọn tháng:</label>
-                                  <input type="text" class="form-control" name="month" id="month"
-                                    value="11/2022">
+                                  <div class="input-group">
+                                    <input type="text" class="form-control" name="month" id="month"
+                                      value="11/2022">
+                                    <span class="input-group-addon">
+                                      <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
                               <button type="submit" class="btn btn-primary btn-filter">
@@ -835,14 +859,17 @@
                               </button>
                             </div>
                           </div>
-                          <div class="progress-bar__note">
-                            <div class="item">
-                              <span class="square success"></span>
-                              <span class="text">Đã thực hiện</span>
-                            </div>
-                            <div class="item">
-                              <span class="square error"></span>
-                              <span class="text">Chưa thực hiện</span>
+                          <div class="note-group">
+                            <p class="note-date">Tháng 11 năm 2022</p>
+                            <div class="progress-bar__note">
+                              <div class="item">
+                                <span class="square success"></span>
+                                <span class="text">Đã thực hiện</span>
+                              </div>
+                              <div class="item">
+                                <span class="square error"></span>
+                                <span class="text">Chưa thực hiện</span>
+                              </div>
                             </div>
                           </div>
                           <div class="table-wrap">

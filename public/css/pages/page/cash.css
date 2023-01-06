@@ -186,8 +186,8 @@
 }
 
 .cash-dissection .panel-default{
-  background-color: var(--gray-cl-1);
-  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-cl);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
 }
 
 .cash-dissection .panel-heading{
@@ -225,6 +225,23 @@
 
 .cash-dissection .filter-timeline .form-group:last-child{
   --w-label: 90px;
+}
+
+.cash-dissection .note-group{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cash-dissection .note-date{
+  width: 160px;
+  padding: 4px 8px;
+  margin-bottom: 16px;
+  font-family: hm;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--white-cl);
+  background-color: var(--primary-cl);
 }
 
 #cash-dissection__dashboard .table-wrap thead tr:last-child th:first-child,

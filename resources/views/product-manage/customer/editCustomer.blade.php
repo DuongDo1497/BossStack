@@ -90,14 +90,15 @@
           <div class="box-form">
             <div class="form-group">
               <label for="fullname">Tên đầy đủ:</label>
-              <input type="text" class="form-control" name="fullname" id="fullname" value="{{ $model->fullname }}">
+              <input type="text" class="form-control" name="fullname" id="fullname" value="{{ $model->fullname }}"
+                readonly>
             </div>
 
             <div class="form-group">
               <label for="idaccess">ID truy cập:</label>
               <div class="form-div">
                 <input type="text" class="form-control" name="idaccess" id="idaccess"
-                  value="{{ $model->user()->first() == null ? '' : $model->user()->first()->email }}">
+                  value="{{ $model->user()->first() == null ? '' : $model->user()->first()->email }}" readonly>
                 <small>ID truy cập là tài khoản dùng để đăng nhập vào các dịch vụ trên hệ
                   thống</small>
               </div>
@@ -107,7 +108,7 @@
               <label for="currentage">Email:</label>
               <div class="form-div">
                 <input type="text" class="form-control" name="currentage" id="currentage"
-                  value="{{ $model->user()->first() == null ? '' : $model->user()->first()->email }}">
+                  value="{{ $model->user()->first() == null ? '' : $model->user()->first()->email }}" readonly>
                 <small>Địa chỉ email được sử dụng để đăng nhập và lấy lại thông tin mật khẩu khi bị
                   mất,
                   nhận tất cả các email thông báo, thông tin từ hệ thống</small>
@@ -122,7 +123,7 @@
 
             <div class="form-group">
               <label for="currentage">Mật khẩu:</label>
-              <input type="password" class="form-control" name="currentage" id="currentage" value="*********">
+              <input type="password" class="form-control" name="currentage" id="currentage" value="*********" readonly>
               <a class="change-pass" data-toggle="collapse" data-parent="#accordion-customers" href="#changepassword">[Đổi
                 mật khẩu]</a>
             </div>
@@ -132,23 +133,23 @@
         <div class="box box-primary collapse" id="customerinfo">
           <div class="box-item">
             <div class="customer-info">
-              <h6 class="box-title">Thông tin khách hàng</h6>
+              <h6 class="box-title">Thông tin khách hàng </h6>
               <div class="box-form">
                 <div class="form-group">
-                  <label for="fullname">Họ & tên:</label>
-                  <input type="text" class="form-control" name="fullname" id="fullname"
-                    value="{{ $model->fullname }}">
+                  <label for="fullname">Họ & tên<span>*</span>:</label>
+                  <input type="text" class="form-control" name="fullname" id="fullname" value="{{ $model->fullname }}"
+                    required>
                 </div>
 
                 <div class="form-row">
                   <div class="form-group">
-                    <label for="birthday">Ngày sinh:</label>
+                    <label for="birthday">Ngày sinh<span>*</span>:</label>
                     <input type="text" class="form-control" name="birthday" id="birthday"
-                      value="{{ ConvertSQLDate($model->birthday) }}">
+                      value="{{ ConvertSQLDate($model->birthday) }}" required>
                   </div>
                   <div class="form-group">
-                    <label for="gender">Giới tính:</label>
-                    <select class="form-control select2" name="gender">
+                    <label for="gender">Giới tính<span>*</span>:</label>
+                    <select class="form-control select2" name="gender" required>
                       @foreach ($gendertype as $key => $value)
                         @if ($key == $model->gender)
                           <option value="{{ $key }}" selected>{{ $value }}</option>
@@ -164,20 +165,21 @@
 
                 <div class="form-row">
                   <div class="form-group">
-                    <label for="phone">Điện thoại:</label>
-                    <input type="text" class="form-control" name="phone" id="phone" value="{{ $model->phone }}">
+                    <label for="phone">Điện thoại<span>*</span>:</label>
+                    <input type="text" class="form-control" name="phone" id="phone" value="{{ $model->phone }}"
+                      required>
                   </div>
                   <div class="form-group">
-                    <label for="email">Email:</label>
+                    <label for="email">Email<span>*</span>:</label>
                     <input type="text" class="form-control" name="email" id="email"
-                      value="{{ $model->user()->first() == null ? '' : $model->user()->first()->email }}">
+                      value="{{ $model->user()->first() == null ? '' : $model->user()->first()->email }}" required>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="address">Địa chỉ:</label>
+                  <label for="address">Địa chỉ<span>*</span>:</label>
                   <input type="text" class="form-control" name="address" id="address"
-                    value="{{ $model->address }}">
+                    value="{{ $model->address }}" required>
                 </div>
 
                 <div class="form-row">
@@ -193,8 +195,8 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="currentage">Nhóm khách hàng:</label>
-                  <select class="form-control select2" name="customertype">
+                  <label for="currentage">Nhóm khách hàng<span>*</span>:</label>
+                  <select class="form-control select2" name="customertype" required>
                     @foreach ($customertype as $key => $value)
                       @if ($key == $model->customertype)
                         <option value="{{ $key }}" selected>{{ $value }}</option>

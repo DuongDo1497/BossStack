@@ -75,9 +75,13 @@
           <div class="box-form">
             <div class="form-group">
               <label for="assetdate">Ngày:</label>
-              <div class="form-text text-right">{{ old('assetdate') == '' ? $assetdate : old('assetdate') }}</div>
-              {{-- <input type="text" class="form-control" name="assetdate" id="assetdate"
-                value="{{ old('assetdate') == '' ? $assetdate : old('assetdate') }}" required> --}}
+              <div class="input-group">
+                <input type="text" class="form-control" name="assetdate" id="assetdate"
+                  value="{{ old('assetdate') == '' ? $assetdate : old('assetdate') }}" readonly>
+                <span class="input-group-addon">
+                  <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                </span>
+              </div>
             </div>
             <div class="form-group">
               <label for="assetname">Tài sản<span>*</span>:</label>

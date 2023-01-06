@@ -31,8 +31,7 @@
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-cyan-cl">
               <img src="{{ asset('img/web/cash-dissection-1.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Bóc tách dòng tiền cá nhân ra khỏi dòng tiền đầu tư, tự doanh, dòng tiền doanh nghiệp
-              </p>
+              <p>Bóc tách dòng tiền cá nhân chủ doanh nghiệp và dòng tiền doanh nghiệp​</p>
             </div>
           </div>
           <div class="benefits-product__item">
@@ -44,9 +43,7 @@
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
               <img src="{{ asset('img/web/cash-dissection-3.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Phân tích nền tảng dòng tiền, xử lý và bóc tách các mảnh ghép trong dòng tiền tổng
-                quan
-                cá nhân</p>
+              <p>Quản lý và điều chỉnh kịp thời sự biến động dòng tiền của chủ doanh nghiệp và doanh nghiệp​</p>
             </div>
           </div>
         </div>
@@ -62,22 +59,19 @@
           <div class="why-product__list">
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-1.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Làm mãi không dư</span>
+              <span class="text">Làm mãi không dư, tưởng lời nhưng lỗ​</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-2.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Luôn bất an vì không biết cách kiểm soát dòng tiền, dự phòng
-                tiền cho tương lai</span>
+              <span class="text">Luôn bất an vì không biết cách kiểm soát dòng tiền, dự phòng tiền kinh doanh​</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-3.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Lẫn lộn tiền bạc gia đình, cá nhân và đầu tư, kinh
-                doanh</span>
+              <span class="text">Tách bạch dòng tiền để không sử dụng dòng vốn ngắn hạn cho trung và dài hạn ​</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-4.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Không có công cụ để xử lý dòng tiền cá nhân, tự doanh và
-                doanh nghiệp</span>
+              <span class="text">Không có công cụ để xử lý các dòng tiền trong kinh doanh, đầu tư​</span>
             </div>
           </div>
         </div>
@@ -97,14 +91,13 @@
               <div class="icon">
                 <img src="{{ asset('img/web/help-icon-1.svg') }}" alt="help-icon" class="img-fluid">
               </div>
-              <p>Hỗ trợ khách hàng xử lý các tình huống thực tế</p>
+              <p>Cung cấp cho khách hàng các mẫu tình huống thực tế​</p>
             </div>
             <div class="help-product__item">
               <div class="icon">
                 <img src="{{ asset('img/web/help-icon-2.svg') }}" alt="help-icon" class="img-fluid">
               </div>
-              <p>Chuyên gia BossStack đồng hành cùng khách hàng trong suốt quá trình thực hiện
-                giải pháp</p>
+              <p>BossStack đồng hành cùng khách hàng trong suốt quá trình thực hiện giải pháp​</p>
             </div>
             <div class="help-product__item">
               <div class="icon">

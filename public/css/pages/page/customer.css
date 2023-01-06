@@ -12,7 +12,7 @@
 }
 
 .form-row .form-group:nth-child(2) label{
-  --w-label: 78px;
+  --w-label: 80px;
 }
 
 .form-row .form-group:nth-child(2) .select2-container{

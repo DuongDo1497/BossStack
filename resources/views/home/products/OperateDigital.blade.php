@@ -13,7 +13,7 @@
             <img class="icon img-fluid" src="{{ asset('img/web/link-icon.svg') }}" alt="icon" />
             <span class="text">Dịch vụ</span>
           </div>
-          <h1 class="banner-default__title text-start">GIẢI PHÁP VẬN HÀNH SỐ CHUYÊN SÂU</h1>
+          <h1 class="banner-default__title text-start">GIẢI PHÁP VẬN HÀNH SỐ<br />CHUYÊN SÂU</h1>
         </div>
       </div>
     </div>
@@ -116,13 +116,13 @@
               <p>Chuyển giao bộ kế hoạch vận hành số chi tiết và bộ hướng dẫn sử dụng phần mềm
                 Microsoft</p>
             </div>
-            <div class="help-product__item">
+            {{-- <div class="help-product__item">
               <div class="icon">
                 <img src="{{ asset('img/web/help-icon-18.png') }}" alt="help-icon" class="img-fluid">
               </div>
               <p>Phân tích, đánh giá tổng quan và lên kế hoạch chi tiết giải pháp vận hành số bằng
                 phần mềm Microsoft và đội ngũ chuyên gia BossStack</p>
-            </div>
+            </div> --}}
           </div>
         </div>
       </div>

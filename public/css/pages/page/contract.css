@@ -247,6 +247,10 @@
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
 }
 
+.contract-add .service-info__table{
+  max-width: 706px;
+}
+
 .contract-add .service-info__list,
 .contract-detail .service-info__list{
   display: none;
@@ -280,13 +284,16 @@
   text-align: left;
 }
 
+.contract-add .service-info__table td:last-child{
+  text-align: right;
+}
+
 .contract-add .service-info__table tfoot td,
 .contract-detail .service-info__table tfoot td{
   padding-top: 36px;
   border-bottom: 0;
 }
 
-.contract-add .service-info__table tfoot td:first-child,
 .contract-detail .service-info__table tfoot td:first-child{
   text-align: right;
 }

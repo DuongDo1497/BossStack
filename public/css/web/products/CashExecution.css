@@ -2,11 +2,7 @@
 
 .benefits-product__item{
   --w-item: calc((100% / 3) - 27px);
-  --h-item: 480px;
-}
-
-.benefits-product__item:nth-child(3){
-  margin-top: 60px;
+  --h-item: 396px;
 }
 
 .benefits-product__item.no-bg{
@@ -51,8 +47,17 @@
   width: 580px;
 }
 
+.why-product .section-title{
+  font-family: mb;
+}
+
 .why-product.reverse .section-title{
   text-align: right;
+}
+
+.why-product .section-title span{
+  font-family: mm;
+  font-size: 32px;
 }
 
 .why-product.reverse .why-product__list{

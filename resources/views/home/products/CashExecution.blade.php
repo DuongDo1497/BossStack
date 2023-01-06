@@ -31,21 +31,19 @@
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-cyan-cl">
               <img src="{{ asset('img/web/cash-dissection-6.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Doanh nghiệp có nhu cầu tăng vốn giúp mở rộng, phát triển kinh doanh, IPO và có nhu cầu mời các nhà đầu
-                tư hỗ trợ doanh nghiệp​</p>
+              <p>Doanh nghiệp thiếu hụt nguồn vốn kinh doanh có nhu cầu dự phóng dòng vốn​​</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-purple-cl">
               <img src="{{ asset('img/web/cash-dissection-16.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Doanh nghiệp có nhu cầu mua lại hoặc sáp nhập với một doanh nghiệp khác nhằm mở rộng lĩnh vực kinh doanh,
-                phát triển thị trường​</p>
+              <p>Doanh nghiệp có nhu cầu xây dựng hệ thống phát triển dòng tiền bền vững​​</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
               <img src="{{ asset('img/web/cash-dissection-5.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Doanh nghiệp cần có chiến lược quản trị và bóc tách các dòng tiền kinh doanh, dòng tiền tài chính</p>
+              <p>Doanh nghiệp cần minh bạch dòng tiền cho nhu cầu gọi vốn, IPO, M&A​</p>
             </div>
           </div>
         </div>
@@ -61,18 +59,17 @@
           <div class="why-product__list">
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-20.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Tiết kiệm 87% thời gian quản lý, xử lý và đưa ra các quyết định về tiền</span>
+              <span class="text">Cung cấp cho chủ doanh nghiệp công cụ, kỹ năng và mindset quản trị dòng tiền cá nhân và
+                doanh nghiệp​</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-21.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Hệ thống <b>phần mềm BossStack</b> tùy chỉnh phù hợp với tình hình tài chính của từng
-                khách
-                hàng</span>
+              <span class="text"><b>Phần mềm BossStack</b> hỗ trợ doanh nghiệp thực thi các dòng tiền hiệu quả</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-22.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Cung cấp bức tranh tài chính tổng thể​<br />Quản trị dòng tiền hoạt động​​<br />Kiểm
-                soát rủi ro tài chính​</span>
+              <span class="text">Doanh nghiệp được cung cấp bộ tài liệu và hướng dẫn chi tiết thực thi dòng tiền​
+                ​</span>
             </div>
           </div>
         </div>
@@ -86,22 +83,20 @@
     <div class="container">
       <div class="wrap">
         <div class="why-product__content">
-          <h4 class="section-title">Tại sao chủ doanh nghiệp cần giải pháp thực thi dòng tiền doanh nghiệp?</h4>
+          <h4 class="section-title"><span>Tại sao chủ doanh nghiệp cần</span><br />Giải pháp thực thi dòng tiền doanh
+            nghiệp?</h4>
           <div class="why-product__list">
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-2.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Doanh nghiệp chưa có bức tranh tài chính tổng thể, không quản trị được dòng tiền hoạt
-                động và rủi ro tài chính​.</span>
+              <span class="text">Doanh nghiệp cần kiểm soát các rủi ro khi đầu tư dòng tiền</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-5.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Không quản lý được nguồn vốn doanh nghiệp gây thiếu hụt vốn và mất
-                nhiều cơ hội kinh doanh.</span>
+              <span class="text">Dòng tiền doanh nghiệp hoạt động không hiệu quả gây ra tổn thất lớn​</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-4.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Thiếu công cụ phân bổ dòng tiền ảnh hưởng đến hoạt động doanh
-                nghiệp, đặc biệt trong thị trường nhiều biến động.</span>
+              <span class="text">Thiếu kiến thức và kỹ năng, công cụ để xây dựng hệ thống dòng tiền</span>
             </div>
           </div>
         </div>
@@ -114,7 +109,7 @@
   <div class="section section-help help-product">
     <div class="container">
       <div class="wrap">
-        <h4 class="section-title">BossStack giúp bạn thực thi dòng tiền doanh nghiệp như thế nào?</h4>
+        <h4 class="section-title">BossStack giúp doanh nghiệp thực thi dòng tiền như thế nào?​</h4>
         <div class="help-product__process">
           <div class="help-product__list">
             <div class="help-product__item">

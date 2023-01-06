@@ -12,71 +12,12 @@
 
   <div class="section dashboard-index no-bg">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <span class="current">Tổng quan tài khoản</span>
+      <span>Quản lý tài khoản</span> / <a href="#" class="prev">Tổng quan user - Gia đình</a> / <a href="#"
+        class="prev">Thông tin user</a> / <span class="current">Nguyễn Văn A</span>
     </div>
-    <p class="title-page">{{ $title->heading }}</p>
+    <p class="title-page">{{ $title->heading }} - Nguyễn Văn A</p>
 
     <div class="box-content">
-      <div class="box box-primary">
-        <div class="overview-page">
-          <div class="overview-page__item">
-            <a href="{{ route('profits-index') }}">
-              <img class="icon" src="{{ asset('img/dashboard-1.svg') }}" alt="">
-              <span class="text">Tính lợi nhuận<br />kinh doanh</span>
-            </a>
-          </div>
-
-          <div class="overview-page__item">
-            <a href="{{ route('retireplans-index') }}">
-              <img class="icon" src="{{ asset('img/dashboard-2.svg') }}" alt="">
-              <span class="text">Tính số tiền<br />nghỉ hưu</span>
-            </a>
-          </div>
-
-          <div class="overview-page__item">
-            <a href="{{ route('cashplans-index') }}">
-              <img class="icon" src="{{ asset('img/dashboard-3.svg') }}" alt="">
-              <span class="text">Thiết lập ví tài chính</span>
-            </a>
-          </div>
-
-          <div class="overview-page__item add">
-            <a href="{{ route('customers-addFunction') }}">
-              <img class="icon" src="{{ asset('img/dashboard-add.svg') }}" alt="">
-              <span class="text">Thêm tiện ích</span>
-            </a>
-          </div>
-
-          {{-- <div class="overview-page__item">
-              <a href="{{ route('cash-index') }}">
-                <img class="icon" src="{{ asset('img/dashboard-4.svg') }}" alt="">
-                <span class="text">Thu chi ví tổng</span>
-              </a>
-            </div>
-
-            <div class="overview-page__item">
-              <a href="{{ route('cashassets-index') }}">
-                <img class="icon" src="{{ asset('img/dashboard-5.svg') }}" alt="">
-                <span class="text">Danh mục<br />tài sản - nợ</span>
-              </a>
-            </div>
-
-            <div class="overview-page__item">
-              <a href="{{ route('cash-process') }}">
-                <img class="icon" src="{{ asset('img/dashboard-6.svg') }}" alt="">
-                <span class="text">Bóc tách dòng tiền</span>
-              </a>
-            </div>
-
-            <div class="overview-page__item">
-              <a href="{{ route('cash-process') }}">
-                <img class="icon" src="{{ asset('img/dashboard-6.svg') }}" alt="">
-                <span class="text">Bóc tách dòng tiền</span>
-              </a>
-            </div> --}}
-        </div>
-      </div>
-
       <div class="box box-primary">
         <div class="spending-history">
           <div class="spending-history__list">
@@ -158,7 +99,12 @@
             <div class="filter-timeline">
               <div class="form-group">
                 <label for="year">Năm:</label>
-                <input type="text" class="form-control number" name="year" id="year" value="2022">
+                <div class="input-group">
+                  <input type="text" class="form-control number" name="year" id="year" value="2022">
+                  <span class="input-group-addon">
+                    <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                  </span>
+                </div>
               </div>
               {{-- <button type="submit" class="btn btn-primary btn-filter">
                   Lọc
