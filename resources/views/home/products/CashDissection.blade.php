@@ -31,7 +31,7 @@
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-cyan-cl">
               <img src="{{ asset('img/web/cash-dissection-1.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Bóc tách dòng tiền cá nhân chủ doanh nghiệp và dòng tiền doanh nghiệp​</p>
+              <p>Bóc tách dòng tiền chủ doanh nghiệp và dòng tiền doanh nghiệp​​</p>
             </div>
           </div>
           <div class="benefits-product__item">
@@ -67,7 +67,7 @@
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-3.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Tách bạch dòng tiền để không sử dụng dòng vốn ngắn hạn cho trung và dài hạn ​</span>
+              <span class="text">Tách bạch dòng tiền để không sử dụng dòng vốn ngắn hạn cho trung dài hạn​​</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-4.svg') }}" alt="icon" class="icon img-fluid">

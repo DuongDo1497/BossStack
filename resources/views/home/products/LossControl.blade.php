@@ -56,7 +56,7 @@
     <div class="container">
       <div class="wrap">
         <div class="why-product__content">
-          <h4 class="section-title">Tại sao chủ doanh nghiệp cần kiểm soát thất thoát tài chính ?</h4>
+          <h4 class="section-title">Tại sao doanh nghiệp cần kiểm soát thất thoát tài chính ?</h4>
           <div class="why-product__list">
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-6.svg') }}" alt="icon" class="icon img-fluid">

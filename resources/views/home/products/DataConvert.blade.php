@@ -31,19 +31,20 @@
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-cyan-cl">
               <img src="{{ asset('img/web/cash-dissection-10.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>BossStack giúp doanh nghiệp phân tích sản phẩm lõi và xác định mô hình kinh doanh</p>
+              <p>Thiết lập hệ thống dữ liệu doanh nghiệp, hạn chế đứt gãy kinh doanh vì nhân sự​</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-purple-cl">
               <img src="{{ asset('img/web/cash-dissection-11.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Hệ thống hóa và quản trị dữ liệu bằng phần mềm Microsoft 365 Business</p>
+              <p>Cải tiến hệ thống, kiểm soát rủi ro trong các khâu vận hành nhằm gia tăng lợi nhuận​</p>
             </div>
           </div>
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
               <img src="{{ asset('img/web/cash-dissection-12.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Thiết lập luồng cơ bản dữ liệu doanh nghiệp</p>
+              <p>Giải phóng thời gian chủ doanh nghiệp và các vị trí chủ chốt trong vận hành để tăng trưởng các chỉ số
+                khác​</p>
             </div>
           </div>
         </div>
@@ -54,7 +55,7 @@
   <div class="section section-why why-product">
     <div class="container">
       <div class="wrap">
-        <h4 class="section-title">Tại sao chủ doanh nghiệp cần <br />giải pháp chuyển đổi dữ liệu?
+        <h4 class="section-title">Tại sao doanh nghiệp cần <br />giải pháp chuyển đổi dữ liệu?
         </h4>
         <div class="why-product__content">
           <div class="why-product__list">

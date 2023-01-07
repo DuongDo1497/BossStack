@@ -83,20 +83,20 @@
     <div class="container">
       <div class="wrap">
         <div class="why-product__content">
-          <h4 class="section-title"><span>Tại sao chủ doanh nghiệp cần</span><br />Giải pháp thực thi dòng tiền doanh
+          <h4 class="section-title"><span>Tại sao doanh nghiệp cần</span><br />Giải pháp thực thi dòng tiền doanh
             nghiệp?</h4>
           <div class="why-product__list">
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-2.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Doanh nghiệp cần kiểm soát các rủi ro khi đầu tư dòng tiền</span>
+              <span class="text">Doanh nghiệp cần kiểm soát các loại dòng tiền trong hoạt động kinh doanh​</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-5.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Dòng tiền doanh nghiệp hoạt động không hiệu quả gây ra tổn thất lớn​</span>
+              <span class="text">Thiếu kiến thức, kỹ năng và công cụ để xây dựng hệ thống dòng tiền​</span>
             </div>
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-4.svg') }}" alt="icon" class="icon img-fluid">
-              <span class="text">Thiếu kiến thức và kỹ năng, công cụ để xây dựng hệ thống dòng tiền</span>
+              <span class="text">Kiểm soát và loại bỏ các dòng tiền không hiệu quả​</span>
             </div>
           </div>
         </div>

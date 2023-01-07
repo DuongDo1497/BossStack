@@ -40,7 +40,7 @@
             <div class="card-body">
               <h6 class="card-body__title">BÓC TÁCH DÒNG TIỀN</h6>
               <div class="card-body__content">
-                <p>Bóc tách dòng tiền cá nhân chủ doanh nghiệp và doanh nghiệp​</p>
+                <p>Bóc tách dòng tiền chủ doanh nghiệp và doanh nghiệp​</p>
               </div>
             </div>
             <div class="card-link">
