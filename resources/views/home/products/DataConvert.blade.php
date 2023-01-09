@@ -43,8 +43,7 @@
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
               <img src="{{ asset('img/web/cash-dissection-12.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Giải phóng thời gian chủ doanh nghiệp và các vị trí chủ chốt trong vận hành để tăng trưởng các chỉ số
-                khác​</p>
+              <p>Giải phóng thời gian chủ doanh nghiệp và các vị trí chủ chốt trong vận hành​</p>
             </div>
           </div>
         </div>

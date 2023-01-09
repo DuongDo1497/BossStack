@@ -13,7 +13,7 @@
             <img class="icon img-fluid" src="{{ asset('img/web/link-icon.svg') }}" alt="icon" />
             <span class="text">Sản phẩm</span>
           </div>
-          <h1 class="banner-default__title text-start">KIỂM SOÁT THẤT THOÁT TÀI CHÍNH DOANH NGHIỆP</h1>
+          <h1 class="banner-default__title text-start">KIỂM SOÁT THẤT THOÁT</h1>
           <small>* Dành cho doanh nghiệp có doanh thu trên 100 tỷ/năm</small>
         </div>
       </div>
@@ -26,7 +26,7 @@
         <div class="benefits-product__list">
           <div class="benefits-product__item no-bg">
             <div class="benefits-product__content">
-              <h4 class="section-title">Lợi ích kiểm soát thất thoát tài chính doanh nghiệp</h4>
+              <h4 class="section-title">Lợi ích kiểm soát thất thoát</h4>
             </div>
           </div>
           <div class="benefits-product__item">
@@ -44,7 +44,7 @@
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
               <img src="{{ asset('img/web/cash-dissection-19.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Rà soát và thiếp lập lại các lỗ hổng tài chính doanh nghiệp​</p>
+              <p>Rà soát và thiếp lập lại các lỗ hổng​</p>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
     <div class="container">
       <div class="wrap">
         <div class="why-product__content">
-          <h4 class="section-title">Tại sao doanh nghiệp cần kiểm soát thất thoát tài chính ?</h4>
+          <h4 class="section-title">Tại sao doanh nghiệp cần kiểm soát thất thoát ?</h4>
           <div class="why-product__list">
             <div class="why-product__item">
               <img src="{{ asset('img/web/why-product-6.svg') }}" alt="icon" class="icon img-fluid">
@@ -96,7 +96,7 @@
   <div class="section section-help help-product">
     <div class="container">
       <div class="wrap">
-        <h4 class="section-title">BossStack giúp doanh nghiệp kiểm soát thất thoát tài chính như thế nào?</h4>
+        <h4 class="section-title">BossStack giúp doanh nghiệp kiểm soát thất thoát như thế nào?</h4>
         <div class="help-product__process">
           <div class="help-product__list">
             <div class="help-product__item">
@@ -138,7 +138,7 @@
       <div class="wrap">
         <div class="advice-left">
           <h4>SẢN PHẨM</h4>
-          <h3>KIỂM SOÁT THẤT THOÁT TÀI CHÍNH DOANH NGHIỆP </h3>
+          <h3>KIỂM SOÁT THẤT THOÁT</h3>
         </div>
         <div class="advice-right">
           <h6>ĐĂNG KÝ NHẬN TƯ VẤN</h6>

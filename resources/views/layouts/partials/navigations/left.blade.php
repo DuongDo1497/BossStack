@@ -35,16 +35,15 @@
             @foreach ($module['applicationfunctiongroups'] as $functiongroups)
               <li class="treeview">
                 @if (isset($functiongroups['filename']) and $functiongroups['filename'] != '')
-              <li class="list-menu"><a href="{{ route($functiongroups['filename']) }}"
-                  data-name="{{ $functiongroups['filename'] }}"><i
-                    class="{{ $functiongroups['image'] }}"></i>{{ $functiongroups['name'] }}</a>
+              <li class="list-menu">
+                <a href="{{ route($functiongroups['filename']) }}" data-name="{{ $functiongroups['filename'] }}">
+                  <img src="{{ asset($functiongroups['image']) }}" />{{ $functiongroups['name'] }}
+                </a>
               </li>
             @else
               <a href="#">
-                <i
-                  class="{{ $functiongroups['image'] }}"></i><span>{{ $functiongroups['name'] }}</span>
-                @if (isset($functiongroups['functionassignment']) and
-                    count($functiongroups['functionassignment']) != 0)
+                <img src="{{ asset($functiongroups['image']) }}" /><span>{{ $functiongroups['name'] }}</span>
+                @if (isset($functiongroups['functionassignment']) and count($functiongroups['functionassignment']) != 0)
                   <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
                   </span>
@@ -55,7 +54,7 @@
             <ul class="treeview-menu">
               @foreach ($functiongroups['functionassignment'] as $functionassignment)
                 <li><a href="{{ route($functionassignment['filename']) }}"
-                    data-name="{{ $functiongroups['filename'] }}><i class="{{ $functionassignment['image'] }}"></i>{{ $functionassignment['name'] }}</a>
+                    data-name="{{ $functiongroups['filename'] }}">{{ $functionassignment['name'] }}</a>
                 </li>
               @endforeach
             </ul>
@@ -70,7 +69,7 @@
       <!-- <li class="list-menu"><a href="#" data-name=""><i class="fa fa-cog"></i>Cài đặt</a></li> -->
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-cog"></i><span>Cài đặt</span>
+          <img src="{{ asset('img/icon-sidebar-14.svg') }}" /><span>Cài đặt</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
@@ -85,8 +84,7 @@
                             ">
               Đăng xuất</i>
             </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST"
-              style="display: none;">
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               @csrf
             </form>
           </li>
