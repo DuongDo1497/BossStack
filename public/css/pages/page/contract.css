@@ -284,7 +284,8 @@
   text-align: left;
 }
 
-.contract-add .service-info__table td:last-child{
+.contract-add .service-info__table td:last-child,
+.contract-detail .service-info__table td:last-child{
   text-align: right;
 }
 
@@ -294,7 +295,7 @@
   border-bottom: 0;
 }
 
-.contract-detail .service-info__table tfoot td:first-child{
+.contract-detail .service-info__table tfoot td:last-child{
   text-align: right;
 }
 
@@ -452,9 +453,16 @@
 }
 
 .listContractQueue tbody td .text-error,
+.listContractQueue tbody td .text-success,
+.listContractQueue tbody td .status-new,
+.listContractQueue tbody td .status-error,
+.listContractQueue tbody td .status-success{
+  font-size: 14px;
+}
+
+.listContractQueue tbody td .text-error,
 .listContractQueue tbody td .text-success{
   font-family: hm;
-  font-size: 12px;
 }
 
 @media (max-width: 991.98px){

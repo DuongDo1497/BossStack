@@ -453,6 +453,7 @@
 .text-error,
 .text-success{
   font-family: hm;
+  white-space: nowrap;
 }
 
 .text-error{

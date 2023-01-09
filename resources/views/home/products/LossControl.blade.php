@@ -44,7 +44,7 @@
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
               <img src="{{ asset('img/web/cash-dissection-19.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Rà soát và thiếp lập lại các lỗ hổng tài chính cho doanh nghiệp​</p>
+              <p>Rà soát và thiếp lập lại các lỗ hổng tài chính doanh nghiệp​</p>
             </div>
           </div>
         </div>

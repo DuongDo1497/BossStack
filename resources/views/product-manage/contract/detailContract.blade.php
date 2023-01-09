@@ -55,16 +55,16 @@
               </thead>
               <tbody>
                 <td><b>Gói {{ $model->service_product_name }}</b>
-                  <br />{{ formatNumber($model->service_product_price, 1, 0, 1) }} đồng/tháng
+                  <br />{{ formatNumber($model->service_product_price, 1, 0, 1) }} &#8363;/tháng
                 </td>
                 <td>{{ $model->term }} tháng</td>
                 <td>{{ $model->discount }} %</td>
-                <td>{{ formatNumber($model->amount, 1, 0, 1) }} đồng</td>
+                <td>{{ formatNumber($model->amount, 1, 0, 1) }} &#8363;</td>
               </tbody>
               <tfoot>
                 <tr>
                   <td colspan="3"><b>Thành tiền</b></td>
-                  <td><b>{{ formatNumber($model->amount, 1, 0, 1) }} đồng</b></td>
+                  <td><b>{{ formatNumber($model->amount, 1, 0, 1) }} &#8363;</b></td>
                 </tr>
               </tfoot>
             </table>

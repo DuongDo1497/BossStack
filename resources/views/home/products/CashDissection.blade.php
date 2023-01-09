@@ -43,7 +43,7 @@
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
               <img src="{{ asset('img/web/cash-dissection-3.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Quản lý và điều chỉnh kịp thời sự biến động dòng tiền của chủ doanh nghiệp và doanh nghiệp​</p>
+              <p>Quản lý và điều chỉnh kịp thời sự biến động dòng tiền bằng cảnh báo của phần mềm BossStack​</p>
             </div>
           </div>
         </div>

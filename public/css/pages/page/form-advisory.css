@@ -39,16 +39,16 @@
 }
 
 .form-advisory__contact .form-group{
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-bottom: 18px;
 }
 
-.form-advisory__contact .form-group:last-child{
-  margin-bottom: 0;
+.form-advisory__contact form .form-group:nth-child(6){
+  align-items: flex-start;
 }
 
 .form-advisory__contact .form-group label{
-  --w-label: 100%;
+  /* --w-label: 100%; */
   font-size: 14px;
   font-family: hb;
   margin-bottom: 8px;

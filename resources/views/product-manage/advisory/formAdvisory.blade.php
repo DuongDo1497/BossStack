@@ -64,8 +64,11 @@
             </ul>
           </div>
         </div>
+      </div>
+
+      <div class="box box-primary">
+        <h6 class="box-title">Hoặc vui lòng gửi thông tin cho chúng tôi</h6>
         <div class="form-advisory__contact">
-          <p>Hoặc vui lòng gửi thông tin cho chúng tôi</p>
           <form role="form" action="{{ route('advisorys-submit', ['type' => 1]) }}" method="post">
             @csrf
             <div class="form-group">
