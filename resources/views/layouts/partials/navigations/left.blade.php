@@ -66,29 +66,15 @@
     </div>
 
     <ul class="sidebar-menu sidebar-setting" data-widget="tree">
-      <!-- <li class="list-menu"><a href="#" data-name=""><i class="fa fa-cog"></i>Cài đặt</a></li> -->
-      <li class="treeview">
-        <a href="#">
-          <img src="{{ asset('img/icon-sidebar-14.svg') }}" /><span>Cài đặt</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
+      <li class="list-menu">
+        <a href="{{ route('logout') }}"
+          onclick=" event.preventDefault(); document.getElementById('logout-form').submit();">
+          <img src="{{ asset('img/icon-sidebar-14.svg') }}"> Đăng xuất
         </a>
 
-        <ul class="treeview-menu">
-          <li>
-            <a href="{{ route('logout') }}"
-              onclick="
-                                event.preventDefault();
-                                document.getElementById('logout-form').submit();
-                            ">
-              Đăng xuất</i>
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-              @csrf
-            </form>
-          </li>
-        </ul>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+          @csrf
+        </form>
       </li>
     </ul>
   </section>

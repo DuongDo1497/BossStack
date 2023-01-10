@@ -43,7 +43,7 @@
           <div class="benefits-product__item">
             <div class="benefits-product__content bg-green-cl">
               <img src="{{ asset('img/web/cash-dissection-5.svg') }}" alt="cash-dissection" class="icon img-fluid">
-              <p>Doanh nghiệp cần minh bạch dòng tiền cho nhu cầu gọi vốn, IPO, M&A​</p>
+              <p>Doanh nghiệp cần minh bạch dòng tiền cho nhu cầu Vay Ngân hàng, Gọi vốn, IPO, M&A​</p>
             </div>
           </div>
         </div>
