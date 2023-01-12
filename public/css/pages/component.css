@@ -300,8 +300,9 @@
   }
 
   .form-group .select2-container--default{
-    --w-select: calc(100% - var(--w-label));
-    width: calc(var(--w-select) - 16px) !important;
+    /* --w-select: calc(100% - var(--w-label)); */
+    --w-select: 100%;
+    width: var(--w-select) !important;
   }
 
   /* .form-group .form-control,
