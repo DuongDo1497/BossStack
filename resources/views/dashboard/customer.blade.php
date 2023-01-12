@@ -49,7 +49,7 @@
             <div class="overview-page__item">
               <a href="{{ route('cashplans-index') }}">
                 <img class="icon" src="{{ asset('img/dashboard-3.svg') }}" alt="">
-                <span class="text">Thiết lập ví tài chính</span>
+                <span class="text">Thiết lập<br />dòng tiền</span>
               </a>
             </div>
 
