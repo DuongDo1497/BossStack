@@ -13,7 +13,7 @@
     @include('layouts.partials.messages.infor')
   @endif
 
-  <div class="section customer-user__dashboard">
+  <div class="section customer-user__dashboard customer-main">
     <div class="breadcrumb">
       <span>Quản lý user</span> / <span class="current">Tổng quan user</span>
     </div>

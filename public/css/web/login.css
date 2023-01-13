@@ -107,7 +107,19 @@
 }
 
 @media (max-width: 767.98px){
+  .login-form{
+    width: 100%;
+    padding: 30px 20px;
+  }
 
+  .form-group .form-control{
+    font-size: 18px;
+    padding: 8px 20px;
+  }
+
+  .form-password .icon-show{
+    top: 46px;
+  }
 }
 
 @media (max-width: 575.98px){

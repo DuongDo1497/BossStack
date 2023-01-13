@@ -43,6 +43,10 @@
   }
 
   .table-wrap table th.fixed{
+    height: 40px;
+  }
+
+  .customer-main .table-wrap table th.fixed{
     height: 63px;
   }
 

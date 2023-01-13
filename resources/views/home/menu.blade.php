@@ -12,6 +12,9 @@
       <li>
         <a href="{{ asset('/products/cash-flow-execution') }}">Thực thi dòng tiền doanh nghiệp</a>
       </li>
+      <li>
+        <a href="{{ asset('/products/loss-control') }}">Kiểm soát thất thoát</a>
+      </li>
     </ul>
   </li>
   <li class="menu-main__item">
@@ -31,9 +34,6 @@
       <img class="icon-w img-fluid" src="{{ asset('img/web/icon-down-w.svg') }}" alt="icon">
     </a>
     <ul class="menu-main__child animate__animated" style="visibility: hidden">
-      <li>
-        <a href="{{ asset('/products/loss-control') }}">Kiểm soát thất thoát</a>
-      </li>
       <li>
         <a href="{{ asset('/products/data-convert') }}">Chuyển đổi dữ liệu</a>
       </li>
