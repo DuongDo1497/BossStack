@@ -10,7 +10,7 @@
         <a href="{{ asset('/products/cash-flow-dissection') }}">Bóc tách dòng tiền</a>
       </li>
       <li>
-        <a href="{{ asset('/products/cash-flow-execution') }}">Thực thi dòng tiền doanh nghiệp</a>
+        <a href="{{ asset('/products/cash-flow-execution') }}">Thực thi dòng tiền</a>
       </li>
       <li>
         <a href="{{ asset('/products/loss-control') }}">Kiểm soát thất thoát</a>
