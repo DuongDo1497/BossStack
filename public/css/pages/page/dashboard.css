@@ -201,3 +201,13 @@
     /* flex-wrap: wrap; */
   }
 }
+
+
+
+/* DASHBOARD ADMIN */
+
+.dashboard-admin.no-bg .breadcrumb, 
+.dashboard-admin.no-bg .title-page,
+.dashboard-admin .noti-index__wrap{
+  background-color: var(--white-cl);
+}

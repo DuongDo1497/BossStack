@@ -181,6 +181,7 @@ class DashboardController extends Controller
         }
         $this->view->listContractByMonth = $listContractByMonth;
         
+        $this->view->setHeading('TỔNG QUAN KHÁCH HÀNG');
 
         return $this->view('manage');
     }        

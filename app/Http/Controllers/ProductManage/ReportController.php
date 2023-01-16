@@ -96,6 +96,8 @@ class ReportController extends Controller
         $this->view->course = $course;
         $this->view->solution = $solution;
                 
+        $this->view->setHeading('BÓC TÁCH DÒNG TIỀN');
+        $this->view->setSubHeading('Bóc tách dòng tiền');
         return $this->view('manage');
     }
 
@@ -109,6 +111,8 @@ class ReportController extends Controller
         $this->view->course = $course;
         $this->view->solution = $solution;
                 
+        $this->view->setHeading('THỰC THI DÒNG TIỀN');
+        $this->view->setSubHeading('Thực thi dòng tiền');
         return $this->view('manage');
     }
 
@@ -122,6 +126,8 @@ class ReportController extends Controller
         $this->view->course = $course;
         $this->view->solution = $solution;
                 
+        $this->view->setHeading('KIỂM SOÁT THẤT THOÁT');
+        $this->view->setSubHeading('Kiểm soát thất thoát');
         return $this->view('manage');
     }
 
@@ -135,6 +141,8 @@ class ReportController extends Controller
         $this->view->course = $course;
         $this->view->solution = $solution;
                 
+        $this->view->setHeading('CHUYỂN ĐỔI DỮ LIỆU');
+        $this->view->setSubHeading('Chuyển đổi dữ liệu');
         return $this->view('manage');
     }
 
@@ -148,6 +156,8 @@ class ReportController extends Controller
         $this->view->course = $course;
         $this->view->solution = $solution;
                 
+        $this->view->setHeading('VẬN HÀNH SỐ');
+        $this->view->setSubHeading('Vận hành số');
         return $this->view('manage');
     }
 

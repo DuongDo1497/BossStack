@@ -77,6 +77,8 @@ class StatisticController extends Controller
 
         $this->view->listCustomerByMonth = $listCustomerByMonth;
 
+        $this->view->setHeading('ĐỐI TƯỢNG KHÁCH HÀNG');
+
         return $this->view('customer');
     }
     
@@ -153,7 +155,7 @@ class StatisticController extends Controller
         $this->view->totalContractInvestMonth = $totalContractInvestMonth;
         $this->view->totalContractSavingMonth = $totalContractSavingMonth;
 
-
+        $this->view->setHeading('SẢN PHẨM, DỊCH VỤ, GIẢI PHÁP');
                         
         return $this->view('product');
     }    
