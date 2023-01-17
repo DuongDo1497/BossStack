@@ -24,7 +24,7 @@
     @include('layouts.partials.messages.infor')
   @endif
 
-  <div class="section form-advisory">
+  <div class="section invest-index">
     <div class="breadcrumb">
       <span>Quản lý tài khoản</span> / <span class="current">Khuyến nghị</span>
     </div>

@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('head')
-<link rel="stylesheet" href="{{ asset('css/pages/page/invests.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/pages/page/invests.css') }}">
 
-{{--
+  {{--
 <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
 
 <style type="text/css">
@@ -16,79 +16,79 @@
 @endsection
 
 @section('content')
-@if (session()->has('success'))
-@include('layouts.partials.messages.success')
-@endif
-@if (isset($infor))
-@include('layouts.partials.messages.infor')
-@endif
+  @if (session()->has('success'))
+    @include('layouts.partials.messages.success')
+  @endif
+  @if (isset($infor))
+    @include('layouts.partials.messages.infor')
+  @endif
 
-<div class="section form-advisory">
-  <div class="breadcrumb">
-    <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('invests-index') }}">Khuyến nghị</a> / <span
-      class="current">{{ $model->newstitle }}</span>
-  </div>
-  <p class="title-page">{{ $title->heading }}</p>
+  <div class="section invest-detail">
+    <div class="breadcrumb">
+      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('invests-index') }}">Khuyến nghị</a> / <span
+        class="current">{{ $model->newstitle }}</span>
+    </div>
+    <p class="title-page">{{ $title->heading }}</p>
 
-  <div class="box-content">
-    <div class="box box-primary">
-      <div class="single-post">
-        <div class="single-post__wrap">
-          <h4 class="single-post__title">{{ $model->newstitle }}</h4>
-          <p class="single-post__info">
-            <span class="single-post__author">{{ $model->author }}</span>, <span class="single-post__date">{{
-              ConvertSQLDate($model->newsdate) }}</span>
-          </p>
-          <div class="single-post__image">
-            <img src="{{ asset($pathimage . $model->newsimage) }}" alt="">
+    <div class="box-content">
+      <div class="box box-primary">
+        <div class="single-post">
+          <div class="single-post__wrap">
+            <h4 class="single-post__title">{{ $model->newstitle }}</h4>
+            <p class="single-post__info">
+              <span class="single-post__author">{{ $model->author }}</span>, <span
+                class="single-post__date">{{ ConvertSQLDate($model->newsdate) }}</span>
+            </p>
+            <div class="single-post__image">
+              <img src="{{ asset($pathimage . $model->newsimage) }}" alt="">
+            </div>
+            <div class="single-post__content">{!! $model->content !!}</div>
+            <p class="single-post__slogan">
+              BossStack - Xây dựng chiến lược quản lý tài chính và gia tăng lợi nhuận lâu dài.
+            </p>
           </div>
-          <div class="single-post__content">{!! $model->content !!}</div>
-          <p class="single-post__slogan">
-            BossStack - Xây dựng chiến lược quản lý tài chính và gia tăng lợi nhuận lâu dài.
-          </p>
-        </div>
-        <div class="single-post__tag">
-          <span class="item">#Dòng tiền</span>
-          <span class="item">#Doanh nghiệp</span>
-          <span class="item">#Quản lý tài chính</span>
-        </div>
-      </div>
-      <div class="news-related">
-        <p class="news-related__title">Bài viết liên quan</p>
-        <div class="news">
-          @php
-          $i = 0;
-          @endphp
-          @foreach ($collections_0 as $model)
-          @php
-          $i++;
-          if ($i >= 4) {
-          break;
-          }
-          @endphp
-          <div class="news-item">
-            <a href="{{ route('invests-detail', ['id' => $model->id]) }}">
-              <div class="news-image">
-                <img src="{{ asset($pathimage . $model->newsimage) }}" alt="">
-              </div>
-              <div class="news-content">
-                <p class="news-title">{{ $model->newstitle }}</p>
-                <div class="news-des">{!! $model->shortcontent !!}</div>
-                <div class="news-info">
-                  <span class="news-author">{{ $model->author }}</span>
-                  <span class="news-date">{{ ConvertSQLDate($model->newsdate)}}</span>
-                </div>
-              </div>
-            </a>
+          <div class="single-post__tag">
+            <span class="item">#Dòng tiền</span>
+            <span class="item">#Doanh nghiệp</span>
+            <span class="item">#Quản lý tài chính</span>
           </div>
-          @endforeach
+        </div>
+        <div class="news-related">
+          <p class="news-related__title">Bài viết liên quan</p>
+          <div class="news">
+            @php
+              $i = 0;
+            @endphp
+            @foreach ($collections_0 as $model)
+              @php
+                $i++;
+                if ($i >= 4) {
+                    break;
+                }
+              @endphp
+              <div class="news-item">
+                <a href="{{ route('invests-detail', ['id' => $model->id]) }}">
+                  <div class="news-image">
+                    <img src="{{ asset($pathimage . $model->newsimage) }}" alt="">
+                  </div>
+                  <div class="news-content">
+                    <p class="news-title">{{ $model->newstitle }}</p>
+                    <div class="news-des">{!! $model->shortcontent !!}</div>
+                    <div class="news-info">
+                      <span class="news-author">{{ $model->author }}</span>
+                      <span class="news-date">{{ ConvertSQLDate($model->newsdate) }}</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            @endforeach
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-{{-- <div class="single-post">
+  {{-- <div class="single-post">
   <div class="single-post-detail">
     <div class="content-single-post">
       <header>

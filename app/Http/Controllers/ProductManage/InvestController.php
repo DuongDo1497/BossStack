@@ -107,7 +107,7 @@ class InvestController extends Controller
     public function manage(Request $request)
     {
         $this->setView($request);
-        $this->view->setHeading('QUẢN LÝ TIN TỨC ĐẦU TƯ');
+        $this->view->setHeading('BLOG');
 
         return $this->view('manage');
     }    
@@ -117,6 +117,8 @@ class InvestController extends Controller
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
         $this->view->newstypes = config('rbooks.NEWSTYPE');
         $this->view->newsdate = getCurrentDate('d');    
+
+        $this->view->setHeading('THÊM MỚI BLOG');
     }
 
     public function store(InvestStoreRequest $request)
