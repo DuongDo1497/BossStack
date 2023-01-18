@@ -1,0 +1,61 @@
+/* COUPON ADMIN */
+
+.coupon-index.no-bg .breadcrumb,
+.coupon-index.no-bg .title-page{
+  background-color: var(--white-cl);
+}
+
+.coupon-index .box-primary .wrap{
+  border-radius: 16px;
+  padding: 24px;
+  background-color: var(--white-cl);
+}
+
+.coupon-index .box-search{
+  flex-wrap: wrap;
+}
+
+.coupon-index .box-search form,
+.coupon-index .box-search .filter-timeline,
+.coupon-index .box-search .control{
+  width: 100%;
+}
+
+.coupon-index .filter-timeline .form-group{
+  --w-label: 135px;
+  width: calc(50% - 8px);
+}
+
+.coupon-index .control .btn-refresh{
+  background-color: var(--gray-cl-2);
+}
+
+.coupon-index .box:last-child .box-title.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coupon-index .table-list tbody td:nth-child(6) ul{
+  padding-left: 20px;
+  margin: 0;
+}
+
+.coupon-add .control,
+.coupon-edit .control,
+.coupon-mail .control{
+  margin-top: 24px;
+  margin-left: 159px;
+}
+
+.coupon-add .control .btn-cancel,
+.coupon-edit .control .btn-cancel,
+.coupon-mail .control .btn-cancel{
+  width: auto;
+  color: #1890FF;
+  background-color: transparent;
+}
+
+.coupon-mail .control .btn-save{
+  width: auto;
+}

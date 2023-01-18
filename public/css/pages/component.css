@@ -348,6 +348,11 @@
   background: rgba(29, 184, 255, 0.2);
 }
 
+.status.status-normal{
+  color: var(--gray-cl-7);
+  background: rgba(60, 66, 72, 0.2);
+}
+
 /* Table Style */
 .table-list{
   margin-bottom: 0;

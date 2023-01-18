@@ -142,6 +142,7 @@ class InvestController extends Controller
         $this->viewInit();
         $this->view->model = $this->main_service->find($id);
 
+        $this->view->setHeading('CHỈNH SỬA BLOG');
         $this->view->setSubHeading('Chỉnh sửa');
 
         return $this->view('edit');

@@ -17,7 +17,8 @@
         </div>
         <div class="form-group">
           <label for="searchValue">Nội dung tìm kiếm:</label>
-          <input type="text" class="form-control" name="searchValue" id="searchValue" value="{{ $searchValue }}">
+          <input type="text" class="form-control" name="searchValue" id="searchValue" value="{{ $searchValue }}"
+            placeholder="Nhập nội dung tìm kiếm">
         </div>
       </div>
     </div>

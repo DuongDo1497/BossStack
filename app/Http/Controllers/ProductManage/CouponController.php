@@ -35,6 +35,7 @@ class CouponController extends Controller
 
         $this->view->collections = $this->main_service->getListCouponBySearch($searchField, $searchValue)->paginate($this->view->filter['limit']);
         
+        $this->view->setHeading('COUPON');
         $this->view->setSubHeading('Danh sách');
         return $this->view('index');
     }
@@ -45,6 +46,7 @@ class CouponController extends Controller
         $this->view->coupontypes = config('rbooks.COUPONTYPE');
         $this->view->couponstatus = config('rbooks.COUPONSTATUS');
         
+        $this->view->setHeading('THÊM MỚI COUPON');
         $this->view->setSubHeading('Thêm mới');
         return $this->view('add');
     }
@@ -57,6 +59,7 @@ class CouponController extends Controller
         
         $this->view->model = $this->main_service->find($id);
 
+        $this->view->setHeading('CHỈNH SỬA COUPON');
         $this->view->setSubHeading('Chỉnh sửa');
         return $this->view('edit');
     }
@@ -69,7 +72,8 @@ class CouponController extends Controller
         
         $this->view->model = $this->main_service->find($id);
 
-        $this->view->setSubHeading('Chỉnh sửa');
+        $this->view->setHeading('GỬI MAIL KHÁCH HÀNG MÃ KHUYẾN MÃI');
+        // $this->view->setSubHeading('Chỉnh sửa');
         return $this->view('mail');
     }
 
