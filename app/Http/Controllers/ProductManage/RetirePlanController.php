@@ -171,16 +171,19 @@ class RetirePlanController extends Controller
             
             if ($totalamount_m <= 0){
                 $alert = "text-success";
-            	$message = "Bạn đã tính đủ số tiền cho kỳ nghỉ hưu với đóng góp dự kiến hiện tại. Tuy nhiên, bạn nên đóng góp nhiều hơn nữa để đề phòng những rủi ro khác và sống đời sống hưu trí dư dả hơn.";
+            	$message = "Bạn đã tính đủ số tiền cho kỳ nghỉ hưu với đóng góp dự kiến hiện tại.";
+                $message_ = "Tuy nhiên, bạn nên đóng góp nhiều hơn nữa để đề phòng những rủi ro khác và sống đời sống hưu trí dư dả hơn.";
                 $error = 2;
             }else{
-                $message = "Bạn đang thiếu hụt số tiền " . formatNumber(abs($totalamount_m), 1, 0, 1) . " đồng, hãy thực hiện cắt giảm chi phí, tăng thu nhập để bổ sung thêm nguồn tiền vào quỹ hưu trí của bạn.";        	
+                $message = "Bạn đang thiếu hụt số tiền " . formatNumber(abs($totalamount_m), 1, 0, 1) . " đồng. ";        	
+                $message_ = "Bạn hãy thực hiện cắt giảm chi phí, tăng thu nhập để bổ sung thêm nguồn tiền vào quỹ hưu trí của bạn.";
                 $error = 2;
                 $alert = "text-error";
             }
     
             $this->view->error = $error;
             $this->view->infor = $message;
+            $this->view->infor_ = $message_;
             $this->view->alert = $alert;        
     
             $this->view->currentage = $currentage;

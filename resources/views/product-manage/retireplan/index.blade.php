@@ -130,7 +130,7 @@
               </div>
             </div>
             @if (isset($infor) and $error == 2)
-              <p class="notification">{{ $infor }}</p>
+              <p class="notification"><span class='{{$alert}}'>{{ $infor }}</span> {{ $infor_ }}</p>
             @endif
           </div>
         </div>
