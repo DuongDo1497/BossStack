@@ -65,3 +65,62 @@
   height: 109px;
   resize: none;
 }
+
+/* ADVISORY ADMIN */
+
+.advisory-index.no-bg .breadcrumb, 
+.advisory-index.no-bg .title-page,
+.advisory-index.no-bg .noti-index__wrap{
+  background-color: var(--white-cl);
+}
+
+.advisory-index.no-bg .box.box-primary{
+  margin-bottom: 0;
+}
+
+.advisory-index .box-primary .wrap {
+  border-radius: 16px;
+  padding: 24px;
+  background-color: var(--white-cl);
+}
+
+.advisory-index .box-search{
+  flex-wrap: wrap;
+}
+
+.advisory-index .box-search .filter-timeline,
+.advisory-index .box-search .control {
+  width: 100%;
+}
+
+.advisory-index .filter-timeline .form-group {
+  --w-label: 150px;
+  width: calc(50% - 8px);
+}
+
+.advisory-index.no-bg .noti-index__wrap{
+  margin-bottom: 0;
+}
+
+.advisory-index .box-primary:last-child{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.advisory-index .nav-tabs{
+  --tab-count: 2;
+}
+
+.advisory-index .tab-content{
+  background-color: var(--white-cl);
+}
+
+.advisory-index .advisory-answers{
+  border: 1px solid transparent;
+  color: var(--primary-cl);
+  background-color: transparent;
+}
+
+.advisory-index .advisory-answers:hover{
+  background-color: transparent;
+}

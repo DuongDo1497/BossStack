@@ -18,7 +18,68 @@
 
     <div class="box-content">
       <div class="box box-primary">
+        <table class="table table-bordered table-list">
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" name="" id="">
+              </th>
+              <th>STT</th>
+              <th>Tên khách hàng</th>
+              <th>Email</th>
+              <th>Điện thoại</th>
+              <th>Ngày đăng ký</th>
+              <th>Công ty</th>
+              <th>Quy mô</th>
+              <th>Chức vụ</th>
+              <th>Khóa học</th>
+              <th>Giải pháp</th>
+            </tr>
+          </thead>
 
+          <tbody>
+            @if ($collections->count() === 0)
+              <tr>
+                <td colspan="11"><b>Không có dữ liệu!!!</b></td>
+              </tr>
+            @endif
+            @php
+              $i = 1;
+            @endphp
+            @foreach ($collections as $customer)
+              <tr>
+                <td class="text-center fixed fixed-1">
+                  <input type="checkbox" name="" id="">
+                </td>
+                <td class="text-center">{{ $i++ }}</td>
+                <td class="text-center">{{ $customer->fullname }}</td>
+                <td class="text-center">{{ $customer->email }}</td>
+                <td class="text-center">{{ $customer->phone }}</td>
+                <td class="text-center">
+                  {{ $customer->registerdate == null ? '' : ConvertSQLDate($customer->registerdate) }}
+                </td>
+                <td class="text-center">{{ $customer->content }}</td>
+                <td class="text-center">{{ $companytypes[$customer->companytype] }}</td>
+                <td class="text-center">{{ $customer->title }}</td>
+                <td class="text-center">{{ $coursetype[$customer->course] }}</td>
+                <td class="text-center">{{ $coursetypedetail[$customer->solution] }}</td>
+              </tr>
+            @endforeach
+          </tbody>
+        </table>
+
+        <div class="box-control">
+          <div class="control">
+            <p class="count">4</p>
+            <p class="text">User khách hàng đang được chọn</p>
+            <a href="#" class="btn btn-gray btn-delete">
+              <img src="{{ asset('img/icon-delete.svg') }}" alt="">
+            </a>
+          </div>
+          <div class="paging">
+            {{ $collections->links() }}
+          </div>
+        </div>
       </div>
     </div>
   </div>

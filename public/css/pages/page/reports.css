@@ -1,0 +1,4 @@
+/* REPORT ADMIN */
+.report-contact .table-list tbody td:nth-child(3){
+  white-space: nowrap !important;
+}

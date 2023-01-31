@@ -24,8 +24,6 @@ class ReportController extends Controller
         $this->setViewPrefix('product-manage.report.');
         $this->setRoutePrefix('report-');
 
-        $this->view->setHeading('COACHING DÀNH CHO CÁ NHÂN HOẶC DOANH NGHIỆP');
-
     }
 
     /**
@@ -171,6 +169,8 @@ class ReportController extends Controller
         $this->view->course = $course;
         $this->view->solution = $solution;
                 
+        $this->view->setHeading('LIÊN HỆ');
+
         return $this->view('contact');
     }
         

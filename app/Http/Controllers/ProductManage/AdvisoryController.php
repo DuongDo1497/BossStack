@@ -60,6 +60,8 @@ class AdvisoryController extends Controller
         // Chưa xử lý
         $this->view->totalRequesting = $this->main_service->getListStatusAdvisory('0');
 
+        $this->view->setHeading('CHAT 24/7');
+
         return $this->view('index');
     }
 
