@@ -32,6 +32,7 @@ Route::get('boctachdongtien', 'HomeController@cashFlowDissection')->name('boctac
 Route::get('dulieuso', 'HomeController@digitalData')->name('dulieuso');
 Route::get('boctachdongtien', 'HomeController@cashConvert')->name('boctachdongtien');
 Route::get('chuyendoivanhanh', 'HomeController@operateConvert')->name('chuyendoivanhanh');
+Route::get('talkshowseries1', 'HomeController@talkShow')->name('talkshowseries1');
 
 
 

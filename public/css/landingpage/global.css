@@ -67,6 +67,11 @@ ul{
   list-style: none;
 }
 
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+
 .main{
   overflow: hidden;
   position: relative;

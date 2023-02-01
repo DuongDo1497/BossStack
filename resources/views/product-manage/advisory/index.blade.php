@@ -148,7 +148,7 @@
                         <p><b>Nội dung: </b>{{ $advisory->contentadvisory }}</p>
                       </td>
                       <td class="text-center">
-                        <a data-toggle="modal" class="advisory-answers"
+                        <a data-toggle="modal" class="btn btn-primary advisory-answers"
                           data-route="{{ route('advisory-answers', ['id' => $website->id]) }}" href="#answerEmail">
                           <img class="icon" src="{{ asset('img/icon-reply.svg') }}" alt="">
                           Trả lời

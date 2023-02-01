@@ -124,3 +124,45 @@
 .advisory-index .advisory-answers:hover{
   background-color: transparent;
 }
+
+#formAnswer .modal-dialog{
+  width: 739px;
+}
+
+#formAnswer .modal-content{
+  padding: 24px;
+  border-radius: 16px;
+}
+
+#formAnswer .modal-content .modal-header,
+#formAnswer .modal-content .modal-body,
+#formAnswer .modal-content .modal-footer{
+  padding: 0;
+}
+
+#formAnswer .modal-content .modal-header,
+#formAnswer .modal-content .modal-body{
+  margin-bottom: 24px;
+}
+
+#formAnswer .modal-content .modal-header{
+  border-bottom: 0;
+}
+
+#formAnswer .modal-content .modal-footer{
+  border-top: 0;
+}
+
+#formAnswer .modal-body .box-form{
+  --w-box-form: auto;
+}
+
+#formAnswer .modal-footer .box-search{
+  margin-bottom: 0;
+  justify-content: center;
+}
+
+#formAnswer .modal-footer .btn-close{
+  color: var(--primary-cl);
+  background-color: transparent;
+}
