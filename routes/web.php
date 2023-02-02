@@ -364,7 +364,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
 
     // Quan ly tai san no, co
     Route::group(['prefix' => 'cashassets'], function (){
-        Route::get('/', 'CashAssetController@index')->name('cashassets-index');
+        Route::any('/', 'CashAssetController@index')->name('cashassets-index');
         Route::any('/process/{assetstatustype}', 'CashAssetController@process')->name('cashassets-process');
         Route::get('/add', 'CashAssetController@add')->name('cashassets-add');
         Route::post('/store', 'CashAssetController@store')->name('cashassets-store');
