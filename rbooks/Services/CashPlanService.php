@@ -12,6 +12,7 @@ use RBooks\Services\CashPlanDetailService;
 use RBooks\Services\CashAccountService;
 use RBooks\Services\CashTranferService;
 use RBooks\Repositories\CashAccountRepository;
+use RBooks\Services\ConfigTypeService;
 
 class CashPlanService extends BaseService
 {
@@ -28,8 +29,14 @@ class CashPlanService extends BaseService
         $customer_id = $request->customer_id;
         $customer_id_decrypt = Crypt::decrypt($customer_id);
 
-        $plantypes = config('rbooks.PLANTYPES');
-        $planname = 'Ví ' . $plantypes[$request->plantype];
+        $plantype = quote_smart($request->incometype);
+        $plantypedetail = quote_smart($request->incometypedetail);
+
+        $configType = app(ConfigTypeService::class)->getConfigTypeFromId($plantype);
+        $plantypename = $configType->first()->name;
+        $configTypeDetail = app(ConfigTypeService::class)->getConfigTypeDetailFromConfigTypeDetailId($plantypedetail);
+        $plantypedetailname = $configTypeDetail->first()->name;
+        $planname = 'Ví ' . $plantypename . " - " . $plantypedetailname;
 
         $customercode = (Auth::user()->customer() == null ? "" : Auth::user()->customer()->first()->customercode);
         $defaultUserImage = config('app.folderdocument') . $customercode . "/";
@@ -44,7 +51,6 @@ class CashPlanService extends BaseService
             $image->move(public_path($defaultUserImage), $imageName);
         }
                 
-        $plantype = quote_smart($request->plantype);
         $plandate = ($request->plandate==""?quote_smart("0000-00-00"):quote_smart(FormatDateForSQL($request->plandate)));
         $finishdate = ($request->finishdate==""?quote_smart("0000-00-00"):quote_smart(FormatDateForSQL($request->finishdate)));
                 
@@ -80,6 +86,7 @@ class CashPlanService extends BaseService
             'customer_id' => $customer_id_decrypt,
             'planname' => $planname,
             'plantype' => $plantype,
+            'plantypedetail' => $plantypedetail,
             'plandate' => $plandate,
             'finishdate' => $finishdate,
             'currency' => $currency,
@@ -136,7 +143,8 @@ class CashPlanService extends BaseService
         }
 
         $planname = quote_smart($request->planname);
-        $plantype = quote_smart($request->plantype);
+        $plantype = quote_smart($request->incometype);
+        $plantypedetail = quote_smart($request->incometypedetail);
         $plandate = ($request->plandate==""?quote_smart("0000-00-00"):quote_smart(FormatDateForSQL($request->plandate)));
         $finishdate = ($request->finishdate==""?quote_smart("0000-00-00"):quote_smart(FormatDateForSQL($request->finishdate)));
 
@@ -162,6 +170,7 @@ class CashPlanService extends BaseService
         $data = [
             'plantype' => $plantype,
             'plandate' => $plandate,
+            'plantypedetail' => $plantypedetail,
             'finishdate' => $finishdate,
             'currency' => $currency,
             'currentage' => $currentage,
@@ -191,9 +200,11 @@ class CashPlanService extends BaseService
     {
         $searchField = ($request->searchField == null ? 'planname' : $request->searchField);
         $searchValue = ($request->searchValue == null ? '' : $request->searchValue);
+        
         $listData = DB::table('cash_plans')->leftjoin('customers', 'customers.id', '=', 'cash_plans.customer_id')
                         ->leftjoin('cash_accounts', 'cash_plans.accountno', '=', 'cash_accounts.accountno')
-                        ->select('cash_plans.id','cash_plans.customer_id','fullname','plantype','planname','plandate','cash_plans.currency','currentage','planage','planamount','currentamount','requireamount','planamountunittype','currentamountunittype','requireamountunittype','cash_plans.description','document','cash_plans.accountno','cash_accounts.amount','cash_plans.finish','cash_plans.finishdate')
+                        ->leftjoin('config_types', 'cash_plans.plantype', '=', 'config_types.id')
+                        ->select('cash_plans.id','cash_plans.customer_id','fullname','plantype','plantypedetail','config_types.name','planname','plandate','cash_plans.currency','currentage','planage','planamount','currentamount','requireamount','planamountunittype','currentamountunittype','requireamountunittype','cash_plans.description','document','cash_plans.accountno','cash_accounts.amount','cash_plans.finish','cash_plans.finishdate')
                         ->where('cash_plans.customer_id', '=', "$customer_id")
                         ->where('cash_plans.deleted_at', '=', null)
                         ->where($searchField, 'like', "%$searchValue%")

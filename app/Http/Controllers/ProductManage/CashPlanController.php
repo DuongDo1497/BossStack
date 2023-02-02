@@ -11,6 +11,7 @@ use RBooks\Services\CashPlanDetailService;
 use RBooks\Services\CashAccountService;
 use RBooks\Services\CashTranferService;
 use RBooks\Services\UserService;
+use RBooks\Services\ConfigTypeService;
 use App\Http\Requests\CashPlanStoreRequest;
 use RBooks\Models\CashPlan;
 use Illuminate\Support\Facades\Crypt;
@@ -37,8 +38,24 @@ class CashPlanController extends Controller
             return app(APIAdminService::class)->authorizeRolePage(0); //chuyen den trang thong bao loi truy cap
         } 
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
-        
+
         $customer_id = (Auth::user()->customer() == null ? "-1" : Auth::user()->customer()->first()->id);
+        $selectaccountstatustype = ($request->selectaccountstatustype == null ? '-1' : $request->selectaccountstatustype);
+        $this->view->selectaccountstatustype = $selectaccountstatustype;
+        
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $ret = $this->main_service->deleteCashPlan($id);                    
+            }
+        }
+
+        if ($typereport == "selectstatus" and $selectaccountstatustype != "-1"){
+            $request->searchField = 'cash_plans.finish';
+            $request->searchValue = $selectaccountstatustype;
+        }
         $collections = $this->main_service->getListAccountPlanFromCustomer($customer_id, $request)->paginate($this->view->filter['limit']);
         $this->view->collections = $collections;
 
@@ -47,7 +64,7 @@ class CashPlanController extends Controller
         $this->view->pathdocument = $defaultUserImage;
         $this->view->plantypes = config('rbooks.PLANTYPES');
         $this->view->accountstatustype = config('rbooks.ACCOUNTSTATUSTYPE');
-                
+
         return $this->view('index');
     }
 
@@ -113,6 +130,25 @@ class CashPlanController extends Controller
         $this->setViewInit();
     }
 
+    public function processAdd(Request $request)
+    {
+        $this->setViewInit();        
+
+        //Lay danh sach cac phan loai dong tien
+        $this->view->incomestatustype = $request->incomestatustype;
+        $this->view->incometypes = app(ConfigTypeService::class)->getConfigTypeFromType($request->incomestatustype);
+
+        //Lay danh sach chi tiet cac muc cua phan loai dong tien
+        $incometype = ($request->incometype == null ? '' : $request->incometype);
+        $this->view->incometype = $incometype;
+        $this->view->incometypedetails = app(ConfigTypeService::class)->getConfigTypeDetailFromId($incometype);
+
+        $incometypedetail = ($request->incometypedetail == null ? '' : $request->incometypedetail);
+        $this->view->incometypedetail = $incometypedetail;
+
+        return $this->view('add');
+    }
+    
     /**
      * process
      * Luu va phan tich ke hoach tai chinh
@@ -223,6 +259,20 @@ class CashPlanController extends Controller
         $model = $this->main_service->find($id);
         $this->view->model = $model;
 
+        $plantype = $model->plantype;
+        $plantypedetail = $model->plantypedetail;
+        $plantypename = '';
+        if ($plantype != ''){
+            $configType = app(ConfigTypeService::class)->getConfigTypeFromId($plantype);
+            $plantypename = $configType->first()->name;
+        }
+        $plantypedetailname = '';
+        if ($plantypedetail != ''){
+            $configTypeDetail = app(ConfigTypeService::class)->getConfigTypeDetailFromConfigTypeDetailId($plantypedetail);
+            $plantypedetailname = $configTypeDetail->first()->name;
+        }
+        $this->view->plantypename = $plantypename;
+        $this->view->plantypedetailname = $plantypedetailname;
         $timeplan = $model->planage - $model->currentage; 
         $requireamount = $model->requireamount*intval($model->requireamountunittype);        
         $amountplan = $requireamount - $model->totalcurrentamount; 
@@ -352,5 +402,6 @@ class CashPlanController extends Controller
         $this->processPlan($id);
         
         return $this->view('processManage');
-    }              
+    }
+
 }

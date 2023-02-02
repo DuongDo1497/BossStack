@@ -336,7 +336,8 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
 
     // Ke hoach tai chinh tuong lai
     Route::group(['prefix' => 'cashplans'], function (){
-        Route::get('/', 'CashPlanController@index')->name('cashplans-index');
+        Route::any('/', 'CashPlanController@index')->name('cashplans-index');
+        Route::any('/processAdd/{incomestatustype}', 'CashPlanController@processAdd')->name('cashplans-processAdd');
         Route::get('/add', 'CashPlanController@add')->name('cashplans-add');
         Route::post('/store', 'CashPlanController@store')->name('cashplans-store');
         Route::get('/edit/{id}', 'CashPlanController@edit')->name('cashplans-edit');

@@ -62,12 +62,15 @@
     @include('layouts.partials.messages.infor')
   @endif
 
+<form role="form" action="{{ route('cashplans-index') }}?continue=true" method="post" name="frm" id="frm">
+{{ csrf_field() }}
+<input type='hidden' name='typereport' value=''>
+
   <div class="section cashplan-index">
     <div class="breadcrumb">
       <span>Quản lý tài khoản</span> / <span class="current">Thiết lập dòng tiền</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
-
     <div class="box-content">
       <div class="box box-primary">
         <div class="noti-index">
@@ -92,7 +95,7 @@
             </div>
           </div>
         </div>
-        <a href="{{ route('cashplans-add') }}" class="btn btn-primary btn-add">
+        <a href="{{ route('cashplans-processAdd', ['incomestatustype' => 5]) }}" class="btn btn-primary btn-add">
           <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
           Thêm dòng tiền
         </a>
@@ -100,11 +103,16 @@
           <div class="filter-timeline">
             <div class="form-group">
               <label for="status">Lọc dòng tiền theo</label>
-              <select class="form-control select2" name="status" id="status">
-                <option selected>Chọn trạng thái</option>
-                <option value="">Hoạt động</option>
-                <option value="">Tất toán</option>
-              </select>
+                <select class="form-control select2" name="selectaccountstatustype" onchange="processReports('frm', 'selectstatus')">
+                    <option value="">Chọn trạng thái</option>
+                    @foreach($accountstatustype as $key=>$value)
+                        @if($key == $selectaccountstatustype)
+                            <option value="{{ $key }}" selected>{{ $value }}</option>
+                        @else
+                            <option value="{{ $key }}">{{ $value }}</option>                                                                    
+                        @endif
+                    @endforeach
+                </select>
             </div>
           </div>
         </div>
@@ -114,7 +122,7 @@
               <thead>
                 <tr>
                   <th class="text-center fixed fixed-1">
-                    <input type="checkbox" name="" id="">
+                    <input name="allbox" type="checkbox" id="allbox" onclick="CheckAll(this)">
                   </th>
                   <th class="fixed fixed-2">STT</th>
                   <th class="fixed fixed-3">Tên dòng tiền</th>
@@ -139,7 +147,7 @@
                 @foreach ($collections as $cashplan)
                   <tr>
                     <td class="text-center fixed fixed-1">
-                      <input type="checkbox" name="" id="">
+                      <input type='checkbox' name='ids[]' id='ids[]' value="{{ $cashplan->id }}" onclick="CheckId(this)">
                     </td>
                     <td class="text-center fixed fixed-2">{{ $i++ }}</td>
                     <td class="fixed fixed-3">
@@ -151,7 +159,7 @@
                             style="margin-right: 10px;"></i></a>
                       @endif
                     </td>
-                    <td class="text-center">Text</td>
+                    <td class="text-left">{{ $cashplan->name }}</td>
                     <td class="text-center">
                       {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}</td>
                     <td class="text-center">{{ formatNumber($cashplan->planage, 1, 0, 0) }}</td>
@@ -175,9 +183,9 @@
         </div>
         <div class="box-control">
           <div class="control">
-            <p class="count">4</p>
+            <p class="count"><span id="checklabel">0</span></p>
             <p class="text">Ví tài chính đang được chọn</p>
-            <a href="#" class="btn btn-gray btn-delete">
+            <a href="javascript:processDeleteReports('frm', 'delete')" class="btn btn-gray btn-delete">
               <img src="{{ asset('img/icon-delete.svg') }}" alt="">
             </a>
           </div>
@@ -196,7 +204,7 @@
     </div>
 
   </div>
-
+</form>
   {{-- <div class="row">
   <div class="col-xs-12">
     <div class="box">

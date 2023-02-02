@@ -35,6 +35,14 @@ class ConfigTypeService extends BaseService
         return $listData;    
     }
 
+    public function getConfigTypeDetailFromConfigTypeDetailId($id)
+    {
+        $search = array('id'=>$id);
+        $listData = app(ConfigTypeDetailRepository::class)->findWhere($search);
+
+        return $listData;    
+    }
+
     public function getConfigTypeDetailFromId($configtype_id)
     {
         $search = array('config_type_id'=>$configtype_id);

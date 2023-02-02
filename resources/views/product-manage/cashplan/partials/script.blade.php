@@ -12,6 +12,37 @@
     $('#plandate').datepicker(param);
   });
 </script>
+<script language="javascript">
+function CheckAll(parent){
+    var countcheck = 0;
+    var ids = document.getElementsByTagName('input');
+    for(var i=0; i<ids.length; i++){
+        if(ids[i].name == "ids[]"){
+            countcheck++;
+            ids[i].checked = parent.checked;
+        }
+    }
+    var checklabel = document.getElementById("checklabel");
+    checklabel.innerHTML = countcheck;    
+}
+
+function CheckId(parent){
+    var countcheck = 0;
+    var checklabel = document.getElementById("checklabel");
+    var ids = document.getElementsByTagName('input');
+    for(var i=0; i<ids.length; i++){
+        if(ids[i].name == "ids[]" && ids[i].checked == true){
+            countcheck++;
+        }
+    }
+
+    var allbox = document.getElementById("allbox");
+    allbox.checked = false;
+    
+    checklabel.innerHTML = countcheck;    
+}
+
+</script>
 <script>
   $(function() {
     $('.btn-delete').click(function() {
@@ -26,7 +57,7 @@
         .then((value) => {
           console.log(value);
           if (value) {
-            document.forms['form-delete-' + id].submit();
+            document.forms['frm'].submit();
           }
         });
     });

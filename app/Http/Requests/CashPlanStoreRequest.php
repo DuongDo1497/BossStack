@@ -19,7 +19,8 @@ class CashPlanStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'plantype' => 'required',
+            'incometype' => 'required',
+            'incometypedetail' => 'required',
             'plandate' => 'required',
             'currentage' => 'required',
             'planage' => 'required|gt:currentage',
@@ -31,8 +32,9 @@ class CashPlanStoreRequest extends FormRequest
     public function messages()
     {
         return [
+            'incometype.required' => "Bạn chưa chọn phân loại dòng tiền.",
+            'incometypedetail.required' => "Bạn chưa chọn chi tiết mục tiêu.",
             'description.required' => "Bạn chưa nhập chi tiết mục tiêu.",
-            'plantype.required' => "Bạn chưa chọn mục tiêu tài chính.",
             'plandate.required' => "Bạn chưa nhập ngày lập mục tiêu.",
             'currentage.required' => "Bạn chưa nhập số tuổi hiện tại.",
             'planage.required' => "Bạn chưa nhập số tuổi đạt được mục đích tài chính.",

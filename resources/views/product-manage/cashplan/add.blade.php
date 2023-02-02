@@ -53,44 +53,53 @@
       <input type='hidden' name='customer_id' value='{{ $customer_id }}'>
       <input type="hidden" name="currentamountunittype" id="currentamountunittype" value="1">
       <input type="hidden" name="requireamountunittype" id="requireamountunittype" value="1">
+      <input type='hidden' name='incomestatustype' value='{{ $incomestatustype }}'>
 
       <div class="box-content">
         <div class="box box-primary">
           <div class="box-form">
+
             <div class="form-group">
-              <label for="">Phân loại<span>*</span>:</label>
-              <select class="form-select select2" name="" id="">
+              <label for="incometype">Phân loại<span>*</span>:</label>
+              <select class="form-select select2" name="incometype" id="incometype"
+                onChange="processSubmitOpenWindow('frm', 'view', '_top', '{{ route('cashplans-processAdd', ['incomestatustype' => $incomestatustype]) }}', '1')"
+                required>
                 <option selected>Chọn loại</option>
-                <option value="">Cá nhân</option>
-                <option value="">Gia đình</option>
-                <option value="">Đầu tư</option>
-                <option value="">Kinh doanh</option>
-                <option value="">Dòng tiền khác</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="">Mục tiêu<span>*</span>:</label>
-              <select class="form-select select2" name="plantype" id="plantype" required>
-                @foreach ($plantypes as $key => $value)
-                  @if ($key == old('plantype'))
-                    <option value="{{ $key }}" selected>{{ $value }}</option>
+                @foreach ($incometypes as $item)
+                  @if ($item->id == $incometype or $item->id == old('incometype'))
+                    <option value="{{ $item->id }}" selected>{{ $item->name }}</option>
                   @else
-                    @if (Auth()->user()->service_product_id == 3)
-                      <option value="{{ $key }}">{{ $value }}</option>
-                    @else
-                      @if ($key == 9 or $key == 13)
-                      @else
-                        <option value="{{ $key }}">{{ $value }}</option>
-                      @endif
-                    @endif
+                    <option value="{{ $item->id }}">{{ $item->name }}</option>
                   @endif
                 @endforeach
               </select>
+              @if ($errors->has('incometype'))
+                <span class="text-danger">{{ $errors->first('incometype') }}</span>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="incometypedetail">Mục tiêu<span>*</span>:</label>
+              <select class="form-select select2" name="incometypedetail" id="incometypedetail"
+                required>
+                @foreach ($incometypedetails as $item)
+                  @if ($item->id == $incometypedetail or $item->id == old('incometypedetail'))
+                    <option value="{{ $item->id }}" selected>{{ $item->name }}</option>
+                  @else
+                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                  @endif
+                @endforeach
+              </select>
+              @if ($errors->has('incometypedetail'))
+                <span class="text-danger">{{ $errors->first('incometypedetail') }}</span>
+              @endif
             </div>
             <div class="form-group">
               <label for="description">Tên dòng tiền<span>*</span>:</label>
               <input type="text" class="form-control" name="description" id="description"
                 value="{{ old('description') }}" placeholder="Nhập tên dòng tiền" required>
+              @if ($errors->has('description'))
+                <span class="text-danger">{{ $errors->first('description') }}</span>
+              @endif
             </div>
             <div class="form-group">
               <label for="plandate">Ngày lập:</label>
@@ -100,6 +109,9 @@
                 <span class="input-group-addon">
                   <img src="{{ asset('img/icon-calender.svg') }}" alt="">
                 </span>
+                  @if ($errors->has('plandate'))
+                    <span class="text-danger">{{ $errors->first('plandate') }}</span>
+                  @endif
               </div>
             </div>
             <div class="form-group">
@@ -109,6 +121,9 @@
                   value="{{ $currentage == null ? old('currentage') : $currentage }}"
                   onkeyup="this.value=formatNumberDecimal(this.value)" readonly>
                 <span class="input-group-addon">tuổi</span>
+                  @if ($errors->has('currentage'))
+                    <span class="text-danger">{{ $errors->first('currentage') }}</span>
+                  @endif
               </div>
             </div>
             <div class="form-group">
@@ -118,6 +133,9 @@
                   value="{{ old('planage') == '' ? '' : old('planage') }}" placeholder="Nhập tuổi hoàn thành mục tiêu"
                   required>
                 <span class="input-group-addon">tuổi</span>
+                  @if ($errors->has('planage'))
+                    <span class="text-danger">{{ $errors->first('planage') }}</span>
+                  @endif
               </div>
             </div>
             <div class="form-group">

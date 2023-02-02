@@ -57,19 +57,19 @@
 
       <div class="box-content">
         <div class="box box-primary">
-          <a href="{{ route('cashplans-add') }}" class="btn btn-primary btn-add">
+          <a href="{{ route('cashplans-processAdd', ['incomestatustype' => 5]) }}" class="btn btn-primary btn-add">
             <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
             Thêm dòng tiền khác
           </a>
           <div class="box-form">
             <div class="form-group">
               <label for="">Phân loại<span>*</span>:</label>
-              <input type="text" class="form-control" name="" id="" value="Cá nhân" readonly>
+              <input type="text" class="form-control" name="" id="" value="{{ $plantypename }}" readonly>
             </div>
             <div class="form-group">
               <label for="">Mục tiêu<span>*</span>:</label>
               <input type="text" class="form-control" name="" id=""
-                value="{{ mb_strtoupper($plantypes[$model->plantype]) }}" readonly>
+                value="{{ $plantypedetailname }}" readonly>
             </div>
             <div class="form-group">
               <label for="">Tên dòng tiền<span>*</span>:</label>

@@ -1,3 +1,6 @@
+function processDeleteReports(frm_id, type_value){
+	document.all["typereport"].value = type_value;
+}
 
 function processReports(frm_id, type_value){
 	document.all["typereport"].value = type_value;
