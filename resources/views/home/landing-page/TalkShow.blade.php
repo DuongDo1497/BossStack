@@ -271,7 +271,7 @@
             <div class="schedule-item">
               <p class="schedule-time">16 : 50</p>
               <div class="schedule-content">
-                <p class="schedule-title"><span class="highlight">Panel Discussion: </span>Startups
+                <p class="schedule-title"><span class="highlight">Panel Discussion: </span>SMEs
                   2023 - Tồn tại và phát triển bền vững</p>
               </div>
               <span class="schedule-highligth"></span>
