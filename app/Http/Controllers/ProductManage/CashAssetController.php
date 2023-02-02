@@ -36,6 +36,15 @@ class CashAssetController extends Controller
     {
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
         $this->view->assetstatustypes = config('rbooks.ASSETSTATUSTYPES');
+
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $ret = $this->main_service->delete($id);                    
+            }
+        }
         
         $customer_id = (Auth::user()->customer() == null ? "-1" : Auth::user()->customer()->first()->id);
         $collections = $this->main_service->getListAccountAssetFromCustomer($customer_id, "", "")->paginate();

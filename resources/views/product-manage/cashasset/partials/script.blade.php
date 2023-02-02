@@ -7,6 +7,35 @@
     id.checked = true;
   }
 </script>
+<script language="javascript">
+function CheckAll(parent){
+    var countcheck = 0;
+    var ids = document.getElementsByTagName('input');
+    for(var i=0; i<ids.length; i++){
+        if(ids[i].name == "ids[]"){
+            countcheck++;
+            ids[i].checked = parent.checked;
+        }
+    }
+    var checklabel = document.getElementById("checklabel");
+    checklabel.innerHTML = countcheck;    
+}
+
+function CheckId(parent){
+    var countcheck = 0;
+    var checklabel = document.getElementById("checklabel");
+    var ids = document.getElementsByTagName('input');
+    for(var i=0; i<ids.length; i++){
+        if(ids[i].name == "ids[]" && ids[i].checked == true){
+            countcheck++;
+        }
+    }
+    var allbox = document.getElementById("allbox");
+    allbox.checked = false;
+    
+    checklabel.innerHTML = countcheck;    
+}
+</script>
 <script>
   $(function() {
     $('.btn-delete').click(function() {
@@ -21,7 +50,7 @@
         .then((value) => {
           console.log(value);
           if (value) {
-            document.forms['form-delete-' + id].submit();
+            document.forms['frm'].submit();
           }
         });
     });
@@ -102,7 +131,7 @@
     });
 
     d3.select("#rptasset1 .c3-chart-arcs-title").append("tspan").attr("dy", 5).attr("x", 0).attr("class",
-      "second-title").text(formatNumberDecimal("8421179444", 0));
+      "second-title").text(formatNumberDecimal(total_asset_0, 0));
 
     var listasset = [];
     var i = 0;
@@ -163,7 +192,7 @@
     });
 
     d3.select("#rptasset2 .c3-chart-arcs-title").append("tspan").attr("dy", 5).attr("x", 0).attr("class",
-      "second-title").text(formatNumberDecimal("8421179444", 0));
+      "second-title").text(formatNumberDecimal(total_asset_1, 0));
 
     var listasset = [
       ["Nợ", total_asset_0],

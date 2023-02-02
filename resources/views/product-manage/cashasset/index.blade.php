@@ -57,6 +57,10 @@
     @endif
   @endif
 
+<form role="form" action="{{ route('cashassets-index') }}?continue=true" method="post" name="frm" id="frm">
+{{ csrf_field() }}
+<input type='hidden' name='typereport' value=''>
+
   <div class="section cashasset-index">
     <div class="breadcrumb">
       <span>Danh mục tài sản - nợ</span> / <span class="current">Quản lý tài sản - nợ</span>
@@ -69,19 +73,19 @@
           <div class="noti-index__wrap">
             <div class="noti-index__item">
               <p class="title">Tổng nợ</p>
-              <p class="number">-1,720,000,000</p>
+              <p class="number"><span id="tongno">0</span></p>
             </div>
             <div class="noti-index__item">
               <p class="title">Tổng tài sản</p>
-              <p class="number">+20,000,000</p>
+              <p class="number"><span id="tongtaisan">0</span></p>
             </div>
             <div class="noti-index__item">
               <p class="title">Tỷ lệ nợ/tài sản</p>
-              <p class="number">24%</p>
+              <p class="number"><span id="tileno_taisan">0</span></p>
             </div>
             <div class="noti-index__item">
               <p class="title">Tổng tài sản thực</p>
-              <p class="number">+16,350,000</p>
+              <p class="number"><span id="tongtaisanthuc">0</span></p>
             </div>
           </div>
         </div>
@@ -108,7 +112,7 @@
       <div class="box box-primary">
         <h6 class="box-title">
           Danh sách Chi tiết
-          <a href="#" class="box-title__link">Lịch sử tài sản - nợ</a>
+          <a href="{{ route('cashassets-history') }}" class="box-title__link">Lịch sử tài sản - nợ</a>
         </h6>
         <div class="noti-index">
           <div class="noti-index__wrap">
@@ -140,7 +144,7 @@
               <thead>
                 <tr>
                   <th rowspan="2" class="fixed fixed-1">
-                    <input type="checkbox" name="" id="">
+                    <input name="allbox" type="checkbox" id="allbox" onclick="CheckAll(this)">
                   </th>
                   <th rowspan="2" class="fixed fixed-2">STT</th>
                   <th rowspan="2" class="fixed fixed-3">Tài sản</th>
@@ -176,7 +180,7 @@
                   @endphp
                   <tr>
                     <td class="text-center fixed fixed-1">
-                      <input type="checkbox" name="" id="">
+                      <input type='checkbox' name='ids[]' id='ids[]' value="{{ $cashasset->id }}" onclick="CheckId(this)">
                     </td>
                     <td class="text-center fixed fixed-2">{{ $i++ }}</td>
                     <td class="fixed fixed-3">
@@ -204,6 +208,38 @@
                     @endif
                   </tr>
                 @endforeach
+
+                @foreach ($listaccounts as $cashasset)
+                @php
+                $total_expense += $cashasset->amount;
+
+                $requireamount = 0; $cashname = "Ví mục tiêu";
+                if($cashasset->accountno == $primaryaccount){
+                $requireamount = $cashasset->amount;
+                $cashname = "Ví tổng";
+                }else{
+                $requireamount = $cashasset->requireamount;
+                $cashname = "Ví mục tiêu";
+                }
+                @endphp
+                <tr class="table-cashasset">
+                    <td></td>
+                    <td style="text-align: center;" class="text-nowrap">{{ $i++ }}</td>
+                    <td style="text-align: left;" class="text-nowrap">{{ $cashasset->accountname }}
+                        &nbsp;&nbsp;&nbsp;
+                        <br>Số tiền: {{ formatNumber($requireamount, 1, 0, 1) }}
+                    </td>
+                    <td style="text-align: left;" class="text-nowrap">{{ $cashname }}</td>
+                    <td style="text-align: left;" class="text-nowrap">Mã ví {{ $cashasset->accountno
+                        }} </td>
+                    <td style="text-align: center;" class="text-nowrap">{{ $cashasset->accountdate ==
+                        null ? "" : ConvertSQLDate($cashasset->accountdate) }}</td>
+                    <td style="text-align: right;" class="text-nowrap"></td>
+                    <td style="text-align: right;" class="text-nowrap">{!!
+                        formatNumberColorCustom($cashasset->amount, 1, 0, 0, 0) !!}</td>
+                </tr>
+                @endforeach
+                                               
               </tbody>
               <tfoot>
                 <tr>
@@ -217,13 +253,10 @@
         </div>
         <div class="box-control">
           <div class="control">
-            <p class="count">4</p>
-            <p class="text">Ví tài chính đang được chọn</p>
-            <a href="#" class="btn btn-gray btn-delete">
+            <p class="count"><span id="checklabel">0</span></p>
+            <p class="text">Tài sản đang được chọn</p>
+            <a href="javascript:processDeleteReports('frm', 'delete')" class="btn btn-gray btn-delete">
               <img src="{{ asset('img/icon-delete.svg') }}" alt="">
-            </a>
-            <a href="#" class="btn btn-gray btn-export">
-              <img src="{{ asset('img/icon-export.svg') }}" alt="">
             </a>
           </div>
           <div class="paging">
@@ -233,7 +266,7 @@
       </div>
     </div>
   </div>
-
+</form>
   {{-- <div class="row">
     <form role="form" action="{{ route('cashassets-modify') }}?continue=true" method="post" id="frm">
         {{ csrf_field() }}
@@ -465,5 +498,19 @@
 @endsection
 
 @section('scripts')
+<script>
+    var tongno = document.getElementById("tongno");
+    tongno.innerHTML = '{{ formatNumber($total_asset, 1, 0, 1) }}';    
+
+    var tongtaisan = document.getElementById("tongtaisan");
+    tongtaisan.innerHTML = '{{ formatNumber($total_expense, 1, 0, 1) }}';    
+
+    var tileno_taisan = document.getElementById("tileno_taisan");
+    tileno_taisan.innerHTML = '{{ ($total_expense == 0 ? 0 : formatNumber(($total_asset/$total_expense)*100, 1, 2, 1)) }}' + ' %';    
+
+    var tongtaisanthuc = document.getElementById("tongtaisanthuc");
+    tongtaisanthuc.innerHTML = '{{ formatNumber($total_expense-$total_asset, 1, 0, 1) }}';    
+
+</script>
   @include('product-manage.cashasset.partials.script')
 @endsection
