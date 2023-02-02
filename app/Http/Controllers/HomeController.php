@@ -256,6 +256,7 @@ class HomeController extends Controller
                 '7'=> 'contact',
                 '8'=> 'landing-page.CashConvert',
                 '9'=> 'landing-page.OperateConvert',
+                '10'=> 'landing-page.TalkShow',
               ];
 
         $typereport = $request->typereport;

@@ -220,6 +220,7 @@ return [
             '7'=>_('Liên hệ'),
             '8'=>_('Chuyển đổi dòng tiền'),
             '9'=>_('Chuyển đổi vận hành'),
+            '10'=>_('TalkShow'),
           ],
     'COURSETYPEDETAIL' => [ 
             ''=>_(''),

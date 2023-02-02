@@ -335,11 +335,26 @@
           <div class="wrap">
             <h4>Mua vé</h4>
             <div class="ticket-wrap">
-              <form class="ticket-register">
+              <form class="ticket-register" role="form" action="{{ route('coaching-store') }}?continue=true" method="post"
+                id="frm">
+                {{ csrf_field() }}
+                <input type='hidden' name='course' value='10'>
+                <input type='hidden' name='typereport' value='0'>
                 <div class="form-info">
                   <input type="text" class="form-control" name="fullname" placeholder="Họ và tên *" required>
+                  @if ($errors->has('fullname'))
+                  <span class="text-danger">{{ $errors->first('fullname') }}</span>
+                  @endif
                   <input type="text" class="form-control" name="phone" placeholder="Số điện thoại *" required>
+                  @if ($errors->has('phone'))
+                  <span class="text-danger">{{ $errors->first('phone') }}</span>
+                  @endif
+
                   <input type="email" class="form-control" name="email" placeholder="Email *" required>
+                  @if ($errors->has('email'))
+                  <span class="text-danger">{{ $errors->first('email') }}</span>
+                  @endif
+
                   <input type="text" class="form-control" name="content" placeholder="Công ty *" required>
                   <input type="text" class="form-control" name="title" placeholder="Chức vụ *" required>
                 </div>
