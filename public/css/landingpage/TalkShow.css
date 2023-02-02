@@ -8,6 +8,10 @@
   background: rgba(88, 105, 249, 0.3);
 }
 
+.header.fixed{
+  background: #132AA1;
+}
+
 .header .logo{
   width: 25.9rem;
 }
@@ -21,6 +25,16 @@
 
 .header .menu-link{
   color: var(--white-cl);
+}
+
+@media (max-width: 575.98px){
+  .header .wrap{
+    justify-content: center;
+  }
+
+  .header .menu{
+    display: none;
+  }
 }
 
 /* Banner */
@@ -86,6 +100,16 @@
   background-color: var(--white-cl);
 }
 
+@media (max-width: 575.98px){
+  .banner .wrap{
+    padding: 15rem 0;
+  }
+
+  .banner .banner-top span.text{
+    font-size: 1.2rem;
+  }
+}
+
 /* Main */
 
 .main h4{
@@ -111,6 +135,13 @@
   color: #C5FFFF;
 }
 
+@media (max-width: 575.98px) {
+  .section-about .about-wrap{
+    row-gap: 3rem;
+    flex-direction: column;
+  }
+}
+
 /* Main - Speakers */
 
 .section-speakers{
@@ -124,12 +155,12 @@
 .speakers-list{
   display: flex;
   flex-wrap: wrap;
-  row-gap: 6rem;
-  justify-content: space-between;
+  gap: 6rem 1.8rem;
+  /* justify-content: space-between; */
 }
 
 .speakers-list .speakers-item{
-  max-width: calc(25% - 13px);
+  max-width: calc(25% - 14px);
 }
 
 .speakers-list .speakers-avt{
@@ -149,6 +180,16 @@
 
 .speakers-list .speakers-position{
   color: #C5FFFF;
+}
+
+@media (max-width: 575.98px){
+  .speakers-list{
+    flex-direction: column;
+  }
+
+  .speakers-list .speakers-item{
+    max-width: 100%;
+  }
 }
 
 /* Main - Schedule */
@@ -179,7 +220,7 @@
 }
 
 .schedule-list{
-  height: 78rem;
+  height: 66rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -208,7 +249,6 @@
 
 .schedule-item .schedule-title .highlight{
   color: #F4BB44;
-  text-transform: none;
 }
 
 .schedule-content .schedule-info p{
@@ -225,6 +265,24 @@
   display: inline-block;
   transform: translateY(-50%);
   background: radial-gradient(50% 50% at 50% 50%, #C5FFFF 0%, rgba(197, 255, 255, 0) 100%);
+}
+
+@media (max-width: 575.98px){
+  .schedule-list{
+    height: auto;
+  }
+
+  .section-schedule h4{
+    font-size: 2.3rem;
+  }
+
+  .section-schedule h4 span:nth-child(2){
+    height: 3rem;
+  }
+
+  .schedule-list .schedule-item{
+    width: 100%;
+  }
 }
 
 /* Main - Level Ticket */
@@ -365,6 +423,26 @@
   background-color: var(--white-cl);
 }
 
+@media (max-width: 575.98px){
+  .ticket-wrap{
+    flex-direction: column-reverse;
+  }
+
+  .ticket-register,
+  .ticket-about{
+    width: 100%;
+    padding: 4rem 2rem;
+  }
+
+  .ticket-register .btn-register{
+    padding: 1.5rem 3rem;
+  }
+
+  .ticket-about__subtitle span.text{
+    font-size: 1.2rem;
+  }
+}
+
 /* Main - Introduction Event */
 
 .section-introduction{
@@ -446,6 +524,21 @@
   margin-bottom: 0;
 }
 
+@media (max-width: 575.98px){
+  .introduction-top span.text{
+    font-size: 1.2rem;
+  }
+
+  .introduction-address{
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  .introduction-address__img img{
+    width: 70%;
+  }
+}
+
 /* Footer */
 
 .footer{
@@ -456,6 +549,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.footer .logo{
+  margin-bottom: 0;
 }
 
 .footer .footer-follow p,
@@ -479,4 +576,11 @@
 .footer .copyright{
   font-size: 1.5rem;
   line-height: 1;
+}
+
+@media (max-width: 575.98px){
+  .footer .wrap{
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
 }
