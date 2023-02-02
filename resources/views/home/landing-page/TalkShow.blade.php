@@ -340,6 +340,11 @@
                 {{ csrf_field() }}
                 <input type='hidden' name='course' value='10'>
                 <input type='hidden' name='typereport' value='0'>
+                @if (isset($infor))
+                <div class="alert alert-success">
+                  {{ $infor }}
+                </div>
+                @endif
                 <div class="form-info">
                   <input type="text" class="form-control" name="fullname" placeholder="Họ và tên *" required>
                   @if ($errors->has('fullname'))
