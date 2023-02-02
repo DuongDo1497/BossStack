@@ -1,0 +1,482 @@
+/* Header */
+
+.header{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(88, 105, 249, 0.3);
+}
+
+.header .logo{
+  width: 25.9rem;
+}
+
+.header .menu{
+  width: 68.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .menu-link{
+  color: var(--white-cl);
+}
+
+/* Banner */
+
+.banner{
+  background: url('../../img/landing-page/talkshow/banner-bg.jpg') center center/cover no-repeat;
+}
+
+.banner .wrap{
+  padding: 24rem 0 31.3rem;
+}
+
+.banner .banner-content{
+  max-width: 53.2rem;
+}
+
+.banner .banner-top,
+.banner .banner-img,
+.banner .banner-content p{
+  margin-bottom: 16px;
+}
+
+.banner .banner-top{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.banner .banner-top span{
+  display: inline-block;
+}
+
+.banner .banner-top span.text{
+  font-family: mr;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: -1.5%;
+  color: var(--white-cl);
+  text-transform: uppercase;
+}
+
+.banner .banner-top span:first-child{
+  font-family: mb;
+}
+
+.banner .banner-top span:nth-child(2){
+  width: 1px;
+  height: 2.4rem;
+  background-color: var(--white-cl);
+}
+
+.banner .banner-content p{
+  font-size: 2rem;
+  color: #C5FFFF;
+}
+
+.banner .buy-ticket,
+.section-level .buy-ticket{
+  font-size: 2rem;
+  padding: 1.4rem 2rem;
+  border-radius: 4.2rem;
+  color: #000000;
+  background-color: var(--white-cl);
+}
+
+/* Main */
+
+.main h4{
+  font-family: mb;
+  margin-bottom: 6rem;
+  color: var(--white-cl);
+  text-transform: uppercase;
+}
+
+/* Main - About */
+
+.section-about{
+  background: radial-gradient(50% 50% at 50% 50%, #1B39B7 5.03%, #132AA1 37.81%, #00076F 100%);
+}
+
+.section-about .about-wrap{
+  display: flex;
+  align-items: center;
+  column-gap: 3.6rem;
+}
+
+.section-about p{
+  color: #C5FFFF;
+}
+
+/* Main - Speakers */
+
+.section-speakers{
+  background: url('../../img/landing-page/talkshow/speakers-bg.jpg') center center/cover no-repeat;
+}
+
+.section-speakers h4{
+  text-align: center;
+}
+
+.speakers-list{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 6rem;
+  justify-content: space-between;
+}
+
+.speakers-list .speakers-item{
+  max-width: calc(25% - 13px);
+}
+
+.speakers-list .speakers-avt{
+  margin-bottom: 1.6rem;
+  transition: all .5s ease 0s;
+}
+
+.speakers-list .speakers-item:hover .speakers-avt{
+  filter: drop-shadow(0px 16px 40px #0088EA);
+}
+
+.speakers-list .speakers-name{
+  font-family: mb;
+  color: var(--white-cl);
+  margin-bottom: 1.6rem;
+}
+
+.speakers-list .speakers-position{
+  color: #C5FFFF;
+}
+
+/* Main - Schedule */
+
+.section-schedule{
+  background: radial-gradient(50% 50% at 50% 50%, #1B39B7 5.03%, #132AA1 37.81%, #00076F 100%);
+}
+
+.section-schedule h4{
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.section-schedule h4 span{
+  display: inline-block;
+}
+
+.section-schedule h4 span:nth-child(2){
+  width: 1px;
+  height: 7.2rem;
+  background-color: var(--white-cl);
+}
+
+.section-schedule h4 span:last-child{
+  font-family: mr;
+  text-transform: lowercase;
+}
+
+.schedule-list{
+  height: 78rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 1.6rem;
+}
+
+.schedule-list .schedule-item{
+  width: 45.5rem;
+  position: relative;
+  border-radius: 1rem;
+  padding: 2.7rem 3.6rem;
+  background: rgba(15, 52, 248, 0.4);
+}
+
+.schedule-item .schedule-time,
+.schedule-item .schedule-title{
+  color: var(--white-cl);
+}
+
+.schedule-item .schedule-time{
+  font-family: mb;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  margin-bottom: 8px;
+}
+
+.schedule-item .schedule-title .highlight{
+  color: #F4BB44;
+  text-transform: none;
+}
+
+.schedule-content .schedule-info p{
+  color: #C5FFFF;
+  margin-bottom: 0;
+}
+
+.schedule-item .schedule-highligth{
+  width: 6px;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: -3px;
+  display: inline-block;
+  transform: translateY(-50%);
+  background: radial-gradient(50% 50% at 50% 50%, #C5FFFF 0%, rgba(197, 255, 255, 0) 100%);
+}
+
+/* Main - Level Ticket */
+
+.section-level{
+  background: url('../../img/landing-page/talkshow/level-bg.jpg') center center/cover no-repeat;
+}
+
+.section-level h4{
+  text-align: center;
+}
+
+.level-wrap{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 6rem;
+}
+
+/* Main - Event venue and Buy ticket */
+
+.section-group{
+  background: radial-gradient(50% 50% at 50% 50%, #1B39B7 5.03%, #132AA1 37.81%, #00076F 100%);
+}
+
+.section-venue{
+  margin-bottom: 12rem;
+}
+
+.venue-info{
+  max-width: 67.4rem;
+  margin-bottom: 6rem;
+}
+
+.venue-item{
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.venue-item:first-child{
+  align-items: flex-start;
+}
+
+.venue-item:last-child{
+  margin-bottom: 0;
+}
+
+.venue-item p{
+  color: var(--white-cl);
+  margin-bottom: 0;
+}
+
+.venue-img{
+  margin: 0 auto;
+}
+
+.ticket-wrap{
+  display: flex;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+
+.ticket-register{
+  width: 46rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 6rem 4rem;
+  background-color: var(--white-cl);
+}
+
+.ticket-register .form-info{
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.ticket-register .form-info .form-control{
+  font-size: 1.8rem;
+  padding: 1.2rem 1.6rem;
+  border-radius: 5px;
+  margin-bottom: 2.4rem;
+  background-color: #F4F5F7;
+  border: 0;
+}
+
+.ticket-register .form-info .form-control:last-child{
+  margin-bottom: 0;
+}
+
+.ticket-register .form-info .form-control::placeholder{
+  color: #6F818C;
+}
+
+.ticket-register .btn-register{
+  padding: 1.9rem 3rem;
+  border-radius: 3.4rem;
+}
+
+.ticket-about{
+  width: calc(100% - 46rem);
+  padding: 7.6rem 6.5rem;
+  background: url('../../img/landing-page/talkshow/ticket-img-1.jpg') center center/cover no-repeat;
+}
+
+.ticket-about .ticket-about__logo{
+  margin: 0 auto 2.8rem;
+}
+
+.ticket-about__subtitle{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 1.2rem;
+}
+
+.ticket-about__subtitle span{
+  display: inline-block;
+}
+
+.ticket-about__subtitle span.text{
+  font-family: mr;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: -1.5%;
+  color: var(--white-cl);
+  text-transform: uppercase;
+}
+
+.ticket-about__subtitle span:first-child{
+  font-family: mb;
+}
+
+.ticket-about__subtitle span:nth-child(2){
+  width: 1px;
+  height: 2.4rem;
+  background-color: var(--white-cl);
+}
+
+/* Main - Introduction Event */
+
+.section-introduction{
+  background: url('../../img/landing-page/talkshow/speakers-bg.jpg') center center/cover no-repeat;
+}
+
+.introduction-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  margin-bottom: 1.6rem;
+}
+
+.introduction-top span{
+  display: inline-block;
+}
+
+.introduction-top span.text{
+  font-family: mr;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: -1.5%;
+  color: var(--white-cl);
+  text-transform: uppercase;
+}
+
+.introduction-top span:first-child{
+  font-family: mb;
+}
+
+.introduction-top span:nth-child(2){
+  width: 1px;
+  height: 2.4rem;
+  background-color: var(--white-cl);
+}
+
+.introduction-img{
+  margin: 0 auto 6rem;
+}
+
+.introduction-address{
+  display: flex;
+  justify-content: space-between;
+}
+
+.introduction-address__item{
+  max-width: 47.6rem;
+}
+
+.introduction-address__img{
+  width: 100%;
+  height: 19.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  background: rgba(15, 52, 248, 0.4);
+  margin-bottom: 3rem;
+}
+
+.introduction-address__info .item{
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.introduction-address__info .item:first-child{
+  align-items: flex-start;
+}
+
+.introduction-address__info .item:last-child{
+  margin-bottom: 0;
+}
+
+.introduction-address__info .item p{
+  color: var(--white-cl);
+  margin-bottom: 0;
+}
+
+/* Footer */
+
+.footer{
+  background-color: #132AA1;
+}
+
+.footer .wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .footer-follow p,
+.footer .copyright{
+  color: #C5FFFF;
+  margin-bottom: 0;
+}
+
+.footer .footer-follow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer .footer-follow p{
+  font-family: mb;
+  line-height: 4.6rem;
+  text-transform: uppercase;
+}
+
+.footer .copyright{
+  font-size: 1.5rem;
+  line-height: 1;
+}

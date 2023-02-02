@@ -239,6 +239,11 @@ class HomeController extends Controller
         return $this->view('landing-page.OperateConvert');
     }
 
+    public function talkShow()
+    {
+        return $this->view('landing-page.TalkShow');
+    }
+
     public function store(ReportStoreRequest $request)
     {
         $courseview = [ 
