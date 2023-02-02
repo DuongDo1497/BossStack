@@ -134,6 +134,11 @@
 
 .speakers-list .speakers-avt{
   margin-bottom: 1.6rem;
+  transition: all .5s ease 0s;
+}
+
+.speakers-list .speakers-item:hover .speakers-avt{
+  filter: drop-shadow(0px 16px 40px #0088EA);
 }
 
 .speakers-list .speakers-name{
@@ -274,6 +279,10 @@
   margin-bottom: 0;
 }
 
+.venue-img{
+  margin: 0 auto;
+}
+
 .ticket-wrap{
   display: flex;
   border-radius: 1.6rem;
@@ -322,6 +331,152 @@
   background: url('../../img/landing-page/talkshow/ticket-img-1.jpg') center center/cover no-repeat;
 }
 
-.ticket-about img:first-child{
+.ticket-about .ticket-about__logo{
   margin: 0 auto 2.8rem;
+}
+
+.ticket-about__subtitle{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 1.2rem;
+}
+
+.ticket-about__subtitle span{
+  display: inline-block;
+}
+
+.ticket-about__subtitle span.text{
+  font-family: mr;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: -1.5%;
+  color: var(--white-cl);
+  text-transform: uppercase;
+}
+
+.ticket-about__subtitle span:first-child{
+  font-family: mb;
+}
+
+.ticket-about__subtitle span:nth-child(2){
+  width: 1px;
+  height: 2.4rem;
+  background-color: var(--white-cl);
+}
+
+/* Main - Introduction Event */
+
+.section-introduction{
+  background: url('../../img/landing-page/talkshow/speakers-bg.jpg') center center/cover no-repeat;
+}
+
+.introduction-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  margin-bottom: 1.6rem;
+}
+
+.introduction-top span{
+  display: inline-block;
+}
+
+.introduction-top span.text{
+  font-family: mr;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: -1.5%;
+  color: var(--white-cl);
+  text-transform: uppercase;
+}
+
+.introduction-top span:first-child{
+  font-family: mb;
+}
+
+.introduction-top span:nth-child(2){
+  width: 1px;
+  height: 2.4rem;
+  background-color: var(--white-cl);
+}
+
+.introduction-img{
+  margin: 0 auto 6rem;
+}
+
+.introduction-address{
+  display: flex;
+  justify-content: space-between;
+}
+
+.introduction-address__item{
+  max-width: 47.6rem;
+}
+
+.introduction-address__img{
+  width: 100%;
+  height: 19.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  background: rgba(15, 52, 248, 0.4);
+  margin-bottom: 3rem;
+}
+
+.introduction-address__info .item{
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.introduction-address__info .item:first-child{
+  align-items: flex-start;
+}
+
+.introduction-address__info .item:last-child{
+  margin-bottom: 0;
+}
+
+.introduction-address__info .item p{
+  color: var(--white-cl);
+  margin-bottom: 0;
+}
+
+/* Footer */
+
+.footer{
+  background-color: #132AA1;
+}
+
+.footer .wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .footer-follow p,
+.footer .copyright{
+  color: #C5FFFF;
+  margin-bottom: 0;
+}
+
+.footer .footer-follow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer .footer-follow p{
+  font-family: mb;
+  line-height: 4.6rem;
+  text-transform: uppercase;
+}
+
+.footer .copyright{
+  font-size: 1.5rem;
+  line-height: 1;
 }
