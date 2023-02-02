@@ -194,8 +194,8 @@
                       </p>
                       <p>Số tiền: {{ formatNumber($cashasset->amount, 1, 0, 1) }}</p>
                     </td>
-                    <td>{{ $cashasset->config_types_name }}</td>
-                    <td class="text-center">{{ $cashasset->config_type_details_name }}</td>
+                    <td class="text-left">{{ $cashasset->config_types_name }}</td>
+                    <td class="text-left">{{ $cashasset->config_type_details_name }}</td>
                     <td class="text-center">
                       {{ $cashasset->assetdate == null ? '' : ConvertSQLDate($cashasset->assetdate) }}
                     </td>
