@@ -7,9 +7,9 @@
   --gray-cl-7: #3C4248;
 }
 
-* {
+/* * {
   user-select: none;
-}
+} */
 
 html{
   font-size: 62.5%;

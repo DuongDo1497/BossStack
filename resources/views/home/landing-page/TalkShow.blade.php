@@ -99,7 +99,7 @@
                 phó với những biến động bất ngờ của nền kinh tế, các Doanh nghiệp thường không có sự chuẩn bị kịp thời
                 và không có một kế hoạch phù hợp để ứng phó bao gồm cả việc quản trị dòng tiền kém hiệu quả.</p>
               <p>Để hiểu hơn về vấn đề này, Talkshow Series 1 - CHIẾN LƯỢC DÒNG TIỀN dành cho các Doanh nghiệp SMEs THỜI
-                KỲ SUY THOÁI với các phiên thảo luận do Đơn vị tổ chức Rbooks đồng hành cùng nhà tài trợ chính BossStack
+                KỲ SUY THOÁI với các phiên thảo luận do Đơn vị tổ chức RBooks đồng hành cùng nhà tài trợ chính BossStack
                 sẽ giúp các Doanh nghiệp SMEs chuẩn bị trước những rủi ro, tránh khỏi các mất mát không đáng có về vấn
                 đề dòng tiền.</p>
             </div>
@@ -115,26 +115,16 @@
           <h4>Diễn giả</h4>
           <div class="speakers-wrap">
             <div class="speakers-list">
-              <div class="speakers-item">
-                <div class="speakers-avt">
-                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-1.jpg') }}"
-                    alt="Chau Pham">
-                </div>
-                <div class="speakers-content">
-                  <p class="speakers-name">Bà Châu Phạm</p>
-                  <p class="speakers-position">CEO RBooks đồng thời là Chuyên gia cố vấn Tài chính chiến lược cấp cao
-                    tại BossStack</p>
-                </div>
-              </div>
+              <div class="speakers-item"></div>
 
               <div class="speakers-item">
                 <div class="speakers-avt">
-                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-2.jpg') }}"
+                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-7.jpg') }}"
                     alt="Chau Pham">
                 </div>
                 <div class="speakers-content">
-                  <p class="speakers-name">Ông Nam Nguyễn</p>
-                  <p class="speakers-position">CEO Opla Consulting</p>
+                  <p class="speakers-name">Bà Lê Mỹ Nga</p>
+                  <p class="speakers-position">Giám đốc WeAngles Capital</p>
                 </div>
               </div>
 
@@ -156,7 +146,7 @@
                 </div>
                 <div class="speakers-content">
                   <p class="speakers-name">Tiến sĩ Trần Quý</p>
-                  <p class="speakers-position">Viện trưởng Viện kinh tế số</p>
+                  <p class="speakers-position">Viện trưởng Viện phát triển kinh tế số</p>
                 </div>
               </div>
 
@@ -166,9 +156,31 @@
                     alt="Chau Pham">
                 </div>
                 <div class="speakers-content">
-                  <p class="speakers-name">Ông Nguyễn Xuân Thành</p>
-                  <p class="speakers-position">Giảng viên Trường Chính sách công và quản lý FullBright, thành viên Tổ
-                    tư vấn Kinh tế Chính phủ</p>
+                  <p class="speakers-name">Bà Châu Phạm</p>
+                  <p class="speakers-position">CEO RBooks đồng thời là Chuyên gia cố vấn Tài chính chiến lược cấp cao
+                    tại BossStack</p>
+                </div>
+              </div>
+
+              <div class="speakers-item">
+                <div class="speakers-avt">
+                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-8.jpg') }}"
+                    alt="Chau Pham">
+                </div>
+                <div class="speakers-content">
+                  <p class="speakers-name">Bà Hoàng Thúy</p>
+                  <p class="speakers-position">Founder & CEO Tập đoàn<br />Núi Xanh</p>
+                </div>
+              </div>
+
+              <div class="speakers-item">
+                <div class="speakers-avt">
+                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-2.jpg') }}"
+                    alt="Chau Pham">
+                </div>
+                <div class="speakers-content">
+                  <p class="speakers-name">Ông Nam Nguyễn</p>
+                  <p class="speakers-position">CEO Opla Consulting</p>
                 </div>
               </div>
 
@@ -179,31 +191,21 @@
                 </div>
                 <div class="speakers-content">
                   <p class="speakers-name">Ông Quốc Khánh</p>
-                  <p class="speakers-position">CEO VietSuccess</p>
+                  <p class="speakers-position">CEO Vietsuccess</p>
                 </div>
               </div>
 
-              <div class="speakers-item">
+              {{-- <div class="speakers-item">
                 <div class="speakers-avt">
                   <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-1.jpg') }}"
                     alt="Chau Pham">
                 </div>
                 <div class="speakers-content">
-                  <p class="speakers-name">Bà Lê Mỹ Nga</p>
-                  <p class="speakers-position">Giám đốc Quỹ We Angle</p>
+                  <p class="speakers-name">Ông Nguyễn Xuân Thành</p>
+                  <p class="speakers-position">Giảng viên Trường Chính sách công và quản lý FullBright, thành viên Tổ
+                    tư vấn Kinh tế Chính phủ</p>
                 </div>
-              </div>
-
-              <div class="speakers-item">
-                <div class="speakers-avt">
-                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-8.jpg') }}"
-                    alt="Chau Pham">
-                </div>
-                <div class="speakers-content">
-                  <p class="speakers-name">Doanh nhân Thúy Núi Xanh</p>
-                  <p class="speakers-position">CEO & Founder Tập đoàn Núi Xanh</p>
-                </div>
-              </div>
+              </div> --}}
             </div>
           </div>
         </div>
@@ -246,13 +248,13 @@
             <div class="schedule-item">
               <p class="schedule-time">14 : 15</p>
               <div class="schedule-content">
-                <p class="schedule-title text-uppercase"><span class="highlight">Key note Speaker:</span><br />Ứng
+                <p class="schedule-title"><span class="highlight">Key note Speaker:</span><br />Ứng
                   dụng công nghệ
-                  trong việc quản trị và bóc tác dòng tiền</p>
-                <div class="schedule-info">
+                  trong việc quản trị và bóc tách dòng tiền</p>
+                {{-- <div class="schedule-info">
                   <p>Diễn giả : Bà Châu Phạm - CEO RBooks</p>
                   <p>- Chuyên gia Cố Vấn Tài Chính chiến lược cấp cao thương hiệu BossStack</p>
-                </div>
+                </div> --}}
               </div>
               <span class="schedule-highligth"></span>
             </div>
@@ -260,7 +262,7 @@
             <div class="schedule-item">
               <p class="schedule-time">15 : 45</p>
               <div class="schedule-content">
-                <p class="schedule-title text-uppercase"><span class="highlight">Panel Discussion:</span><br />Ứng phó
+                <p class="schedule-title"><span class="highlight">Panel Discussion:</span><br />Ứng phó
                   với khủng hoảng</p>
               </div>
               <span class="schedule-highligth"></span>
@@ -269,7 +271,7 @@
             <div class="schedule-item">
               <p class="schedule-time">16 : 50</p>
               <div class="schedule-content">
-                <p class="schedule-title text-uppercase"><span class="highlight">Panel Discussion: </span>Startups
+                <p class="schedule-title"><span class="highlight">Panel Discussion: </span>Startups
                   2023 - Tồn tại và phát triển bền vững</p>
               </div>
               <span class="schedule-highligth"></span>
@@ -438,13 +440,13 @@
             <a href="https://www.facebook.com/bossstack.vietnam">
               <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/icon-fb.svg') }}" alt="facebook">
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/company/bossstack/">
               <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/icon-linkedin.svg') }}"
                 alt="linkedin">
             </a>
           </div>
         </div>
-        <p class="copyright">© 2022 Bản quyền thuộc về Rbooks</p>
+        <p class="copyright">© 2022 Bản quyền thuộc về RBooks</p>
       </div>
     </div>
   </footer>
