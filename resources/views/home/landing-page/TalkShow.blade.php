@@ -72,11 +72,11 @@
           <div class="banner-top">
             <span class="text">talkshow</span>
             <span></span>
-            <span class="text">series 1: Tài chính và dòng tiền</span>
+            <span class="text">series 1: bóc tách dòng tiền</span>
           </div>
           <img class="img-fluid banner-img" src="{{ asset('img/landing-page/talkshow/banner-img-1.png') }}"
             alt="BossStack">
-          <p>CHIẾN LƯỢC DÒNG TIỀN DÀNH CHO DOANH NGHIỆP SMEs THỜI KỲ SUY THOÁI" lần đầu tiên được tổ chức với mong muốn
+          <p>CHIẾN LƯỢC DÒNG TIỀN DÀNH CHO DOANH NGHIỆP SMEs" lần đầu tiên được tổ chức với mong muốn
             giúp các Doanh nghiệp đưa ra những cái nhìn khách quan về tài chính từ đó có cái nhìn chuyên sâu trong việc
             quản trị dòng tiền hiệu quả.<br /><br />Đây là cơ hội để các Doanh nghiệp SMEs lắng nghe, trao đổi và kết
             nối cùng các chuyên gia trong ngành tài
@@ -100,8 +100,8 @@
                 thường có quy mô nhỏ và hoạt động trong thời gian ngắn. Việc hạn chế nguồn lực và kinh nghiệm trong ứng
                 phó với những biến động bất ngờ của nền kinh tế, các Doanh nghiệp thường không có sự chuẩn bị kịp thời
                 và không có một kế hoạch phù hợp để ứng phó bao gồm cả việc quản trị dòng tiền kém hiệu quả.</p>
-              <p>Để hiểu hơn về vấn đề này, Talkshow Series 1 - CHIẾN LƯỢC DÒNG TIỀN dành cho Doanh nghiệp SMEs THỜI
-                KỲ SUY THOÁI với các phiên thảo luận do Đơn vị tổ chức RBooks đồng hành cùng nhà tài trợ chính BossStack
+              <p>Để hiểu hơn về vấn đề này, Talkshow Series 1 - CHIẾN LƯỢC DÒNG TIỀN dành cho Doanh nghiệp SMEs với các
+                phiên thảo luận do Đơn vị tổ chức RBooks đồng hành cùng nhà tài trợ chính BossStack
                 sẽ giúp các Doanh nghiệp SMEs chuẩn bị trước những rủi ro, tránh khỏi các mất mát không đáng có về vấn
                 đề dòng tiền.</p>
             </div>
@@ -263,8 +263,8 @@
             <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
               <p class="schedule-time">15 : 45</p>
               <div class="schedule-content">
-                <p class="schedule-title"><span class="highlight">Panel Discussion:</span><br />Ứng phó
-                  với khủng hoảng</p>
+                <p class="schedule-title"><span class="highlight">Panel Discussion:</span><br />Cắt giảm để tăng
+                  trưởng</p>
               </div>
               <span class="schedule-highligth"></span>
             </div>
@@ -372,7 +372,7 @@
                 <div class="ticket-about__subtitle">
                   <span class="text">talkshow</span>
                   <span></span>
-                  <span class="text">series 1: Tài chính và dòng tiền</span>
+                  <span class="text">series 1: bóc tách dòng tiền</span>
                 </div>
                 <img class="img-fluid banner-img" src="{{ asset('img/landing-page/talkshow/banner-img-1.png') }}"
                   alt="BossStack">
@@ -389,7 +389,7 @@
           <div class="introduction-top">
             <span class="text">talkshow</span>
             <span></span>
-            <span class="text">series 1: Tài chính và dòng tiền</span>
+            <span class="text">series 1: bóc tách dòng tiền</span>
           </div>
 
           <img class="img-fluid introduction-img" src="{{ asset('img/landing-page/talkshow/banner-img-2.png') }}"

@@ -1,0 +1,41 @@
+/* User Customer List */
+.user-customer.no-bg .breadcrumb,
+.user-customer.no-bg .title-page{
+  background-color: var(--white-cl);
+}
+
+.user-customer .box-primary{
+  margin-bottom: 0;
+}
+
+.user-customer .box-primary .wrap {
+  border-radius: 16px;
+  padding: 24px;
+  background-color: var(--white-cl);
+}
+
+.user-customer .box-primary:first-child .wrap{
+  display: flex;
+  column-gap: 158px;
+}
+
+.user-customer .box-primary:first-child .box-title{
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.user-customer .box-search{
+  margin-bottom: 0;
+}
+
+.user-customer .box-search form{
+  width: 100%;
+  display: flex;
+  column-gap: 24px;
+}
+
+.user-customer .filter-timeline .form-group{
+  --w-label: 102px;
+  width: calc(50% - 8px);
+  margin-bottom: 0;
+}
