@@ -7,8 +7,8 @@
 @section('content')
   <div class="section cashasset-history">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <a href="#" class="prev">Danh mục tài sản - nợ</a> / <span
-        class="current">Lịch sử tài sản - nợ</span>
+      <span>Danh mục tài sản - nợ</span> / <a href="{{ route('cashassets-index') }}" class="prev">Quản lý tài sản - nợ</a>
+      / <span class="current">Lịch sử tài sản - nợ</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 

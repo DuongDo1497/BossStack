@@ -79,8 +79,7 @@
             </div>
             <div class="form-group">
               <label for="incometypedetail">Mục tiêu<span>*</span>:</label>
-              <select class="form-select select2" name="incometypedetail" id="incometypedetail"
-                required>
+              <select class="form-select select2" name="incometypedetail" id="incometypedetail" required>
                 @foreach ($incometypedetails as $item)
                   @if ($item->id == $incometypedetail or $item->id == old('incometypedetail'))
                     <option value="{{ $item->id }}" selected>{{ $item->name }}</option>
@@ -103,16 +102,11 @@
             </div>
             <div class="form-group">
               <label for="plandate">Ngày lập:</label>
-              <div class="input-group">
-                <input type="text" class="form-control" name="plandate" id="plandate"
-                  value="{{ old('plandate') == '' ? $plandate : old('plandate') }}" readonly>
-                <span class="input-group-addon">
-                  <img src="{{ asset('img/icon-calender.svg') }}" alt="">
-                </span>
-                  @if ($errors->has('plandate'))
-                    <span class="text-danger">{{ $errors->first('plandate') }}</span>
-                  @endif
-              </div>
+              <input type="text" class="form-control" name="plandate" id="plandate"
+                value="{{ old('plandate') == '' ? $plandate : old('plandate') }}" readonly>
+              @if ($errors->has('plandate'))
+                <span class="text-danger">{{ $errors->first('plandate') }}</span>
+              @endif
             </div>
             <div class="form-group">
               <label for="currentage">Tuổi hiện tại:</label>
@@ -121,9 +115,9 @@
                   value="{{ $currentage == null ? old('currentage') : $currentage }}"
                   onkeyup="this.value=formatNumberDecimal(this.value)" readonly>
                 <span class="input-group-addon">tuổi</span>
-                  @if ($errors->has('currentage'))
-                    <span class="text-danger">{{ $errors->first('currentage') }}</span>
-                  @endif
+                @if ($errors->has('currentage'))
+                  <span class="text-danger">{{ $errors->first('currentage') }}</span>
+                @endif
               </div>
             </div>
             <div class="form-group">
@@ -133,9 +127,9 @@
                   value="{{ old('planage') == '' ? '' : old('planage') }}" placeholder="Nhập tuổi hoàn thành mục tiêu"
                   required>
                 <span class="input-group-addon">tuổi</span>
-                  @if ($errors->has('planage'))
-                    <span class="text-danger">{{ $errors->first('planage') }}</span>
-                  @endif
+                @if ($errors->has('planage'))
+                  <span class="text-danger">{{ $errors->first('planage') }}</span>
+                @endif
               </div>
             </div>
             <div class="form-group">
@@ -149,13 +143,8 @@
             </div>
             <div class="form-group">
               <label for="finishdate">Ngày dự kiến hoàn thành:</label>
-              <div class="input-group">
-                <input type="text" class="form-control" name="finishdate" id="finishdate" value=""
-                  placeholder="Chọn ngày dự kiến hoàn thành">
-                <span class="input-group-addon">
-                  <img src="{{ asset('img/icon-calender.svg') }}" alt="">
-                </span>
-              </div>
+              <input type="text" class="form-control" name="finishdate" id="finishdate" value=""
+                placeholder="dd/mm/yyyy">
             </div>
             <div class="form-group">
               <label for="">Hóa đơn, chứng từ kèm theo:</label>

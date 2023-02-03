@@ -7,7 +7,8 @@
 @section('content')
   <div class="section extension-add">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <a class="prev" href="#">Tổng quan tài khoản</a> / <span class="current">Thêm
+      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('dashboard-customer') }}">Tổng quan tài khoản</a> /
+      <span class="current">Thêm
         tiện ích</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>

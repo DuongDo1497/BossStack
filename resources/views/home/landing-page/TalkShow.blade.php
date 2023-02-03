@@ -91,19 +91,22 @@
     <div class="section section-about">
       <div class="container">
         <div class="wrap">
-          <h4>Giới thiệu về chương trình</h4>
+          <h4 data-aos="fade-down" data-aos-duration="500" data-aos-anchor-placement="center-center">Giới thiệu về
+            chương trình</h4>
           <div class="about-wrap">
-            <div class="about-content">
+            <div class="about-content" data-aos="fade-right" data-aos-duration="500"
+              data-aos-anchor-placement="bottom-bottom">
               <p>Năm 2022, theo báo cáo do Cục Quản lý kinh doanh nhận định rằng đa phần các Doanh nghiệp vừa và nhỏ
                 thường có quy mô nhỏ và hoạt động trong thời gian ngắn. Việc hạn chế nguồn lực và kinh nghiệm trong ứng
                 phó với những biến động bất ngờ của nền kinh tế, các Doanh nghiệp thường không có sự chuẩn bị kịp thời
                 và không có một kế hoạch phù hợp để ứng phó bao gồm cả việc quản trị dòng tiền kém hiệu quả.</p>
-              <p>Để hiểu hơn về vấn đề này, Talkshow Series 1 - CHIẾN LƯỢC DÒNG TIỀN dành cho các Doanh nghiệp SMEs THỜI
+              <p>Để hiểu hơn về vấn đề này, Talkshow Series 1 - CHIẾN LƯỢC DÒNG TIỀN dành cho Doanh nghiệp SMEs THỜI
                 KỲ SUY THOÁI với các phiên thảo luận do Đơn vị tổ chức RBooks đồng hành cùng nhà tài trợ chính BossStack
                 sẽ giúp các Doanh nghiệp SMEs chuẩn bị trước những rủi ro, tránh khỏi các mất mát không đáng có về vấn
                 đề dòng tiền.</p>
             </div>
-            <img class="img-fluid about-image" src="{{ asset('img/landing-page/talkshow/about-img-1.jpg') }}" />
+            <img class="img-fluid about-image" src="{{ asset('img/landing-page/talkshow/about-img-1.jpg') }}"
+              data-aos="fade-left" data-aos-duration="500" data-aos-anchor-placement="bottom-bottom" />
           </div>
         </div>
       </div>
@@ -115,8 +118,6 @@
           <h4>Diễn giả</h4>
           <div class="speakers-wrap">
             <div class="speakers-list">
-              <div class="speakers-item"></div>
-
               <div class="speakers-item">
                 <div class="speakers-avt">
                   <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-7.jpg') }}"
@@ -152,13 +153,25 @@
 
               <div class="speakers-item">
                 <div class="speakers-avt">
+                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-5.jpg') }}"
+                    alt="Chau Pham">
+                </div>
+                <div class="speakers-content">
+                  <p class="speakers-name">Ông Nguyễn Xuân Thành</p>
+                  <p class="speakers-position">Giảng viên Trường Chính sách công và quản lý FullBright, thành viên Tổ
+                    tư vấn Kinh tế Chính phủ</p>
+                </div>
+              </div>
+
+              <div class="speakers-item">
+                <div class="speakers-avt">
                   <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-1.jpg') }}"
                     alt="Chau Pham">
                 </div>
                 <div class="speakers-content">
                   <p class="speakers-name">Bà Châu Phạm</p>
-                  <p class="speakers-position">CEO RBooks đồng thời là Chuyên gia cố vấn Tài chính chiến lược cấp cao
-                    tại BossStack</p>
+                  <p class="speakers-position">CEO RBooks<br />Chuyên gia cố vấn Tài chính chiến lược cấp cao BossStack
+                  </p>
                 </div>
               </div>
 
@@ -194,18 +207,6 @@
                   <p class="speakers-position">CEO Vietsuccess</p>
                 </div>
               </div>
-
-              {{-- <div class="speakers-item">
-                <div class="speakers-avt">
-                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-1.jpg') }}"
-                    alt="Chau Pham">
-                </div>
-                <div class="speakers-content">
-                  <p class="speakers-name">Ông Nguyễn Xuân Thành</p>
-                  <p class="speakers-position">Giảng viên Trường Chính sách công và quản lý FullBright, thành viên Tổ
-                    tư vấn Kinh tế Chính phủ</p>
-                </div>
-              </div> --}}
             </div>
           </div>
         </div>
@@ -221,7 +222,7 @@
             <span class="text">từ 13:30 - 17:00</span>
           </h4>
           <div class="schedule-list">
-            <div class="schedule-item">
+            <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
               <p class="schedule-time">13 : 30</p>
               <div class="schedule-content">
                 <p class="schedule-title">Đón khách | Giao lưu - Kết nối</p>
@@ -229,7 +230,7 @@
               <span class="schedule-highligth"></span>
             </div>
 
-            <div class="schedule-item">
+            <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
               <p class="schedule-time">14 : 00</p>
               <div class="schedule-content">
                 <p class="schedule-title">Khai mạc Chương trình</p>
@@ -237,7 +238,7 @@
               <span class="schedule-highligth"></span>
             </div>
 
-            <div class="schedule-item">
+            <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
               <p class="schedule-time">14 : 05</p>
               <div class="schedule-content">
                 <p class="schedule-title">Đại diện ban tổ chức phát biểu</p>
@@ -245,7 +246,7 @@
               <span class="schedule-highligth"></span>
             </div>
 
-            <div class="schedule-item">
+            <div class="schedule-item" data-aos="flip-left" ata-aos-anchor-placement="bottom-bottom">
               <p class="schedule-time">14 : 15</p>
               <div class="schedule-content">
                 <p class="schedule-title"><span class="highlight">Key note Speaker:</span><br />Ứng
@@ -259,7 +260,7 @@
               <span class="schedule-highligth"></span>
             </div>
 
-            <div class="schedule-item">
+            <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
               <p class="schedule-time">15 : 45</p>
               <div class="schedule-content">
                 <p class="schedule-title"><span class="highlight">Panel Discussion:</span><br />Ứng phó
@@ -268,7 +269,7 @@
               <span class="schedule-highligth"></span>
             </div>
 
-            <div class="schedule-item">
+            <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
               <p class="schedule-time">16 : 50</p>
               <div class="schedule-content">
                 <p class="schedule-title"><span class="highlight">Panel Discussion: </span>SMEs
@@ -277,7 +278,7 @@
               <span class="schedule-highligth"></span>
             </div>
 
-            <div class="schedule-item">
+            <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
               <p class="schedule-time">16 : 55</p>
               <div class="schedule-content">
                 <p class="schedule-title">Kết thúc</p>
@@ -335,29 +336,29 @@
           <div class="wrap">
             <h4>Mua vé</h4>
             <div class="ticket-wrap">
-              <form class="ticket-register" role="form" action="{{ route('coaching-store') }}?continue=true" method="post"
-                id="frm">
+              <form class="ticket-register" role="form" action="{{ route('coaching-store') }}?continue=true"
+                method="post" id="frm">
                 {{ csrf_field() }}
                 <input type='hidden' name='course' value='10'>
                 <input type='hidden' name='typereport' value='0'>
                 @if (isset($infor))
-                <div class="alert alert-success">
-                  {{ $infor }}
-                </div>
+                  <div class="alert alert-success">
+                    {{ $infor }}
+                  </div>
                 @endif
                 <div class="form-info">
                   <input type="text" class="form-control" name="fullname" placeholder="Họ và tên *" required>
                   @if ($errors->has('fullname'))
-                  <span class="text-danger">{{ $errors->first('fullname') }}</span>
+                    <span class="text-danger">{{ $errors->first('fullname') }}</span>
                   @endif
                   <input type="text" class="form-control" name="phone" placeholder="Số điện thoại *" required>
                   @if ($errors->has('phone'))
-                  <span class="text-danger">{{ $errors->first('phone') }}</span>
+                    <span class="text-danger">{{ $errors->first('phone') }}</span>
                   @endif
 
                   <input type="email" class="form-control" name="email" placeholder="Email *" required>
                   @if ($errors->has('email'))
-                  <span class="text-danger">{{ $errors->first('email') }}</span>
+                    <span class="text-danger">{{ $errors->first('email') }}</span>
                   @endif
 
                   <input type="text" class="form-control" name="content" placeholder="Công ty *" required>
@@ -395,7 +396,8 @@
             alt="BossStack">
 
           <div class="introduction-address">
-            <div class="introduction-address__item">
+            <div class="introduction-address__item" data-aos="zoom-in-right" data-aos-duration="1000"
+              data-aos-easing="ease-in-sine">
               <div class="introduction-address__img">
                 <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/logo-intro-1.svg') }}"
                   alt="">
@@ -404,7 +406,7 @@
                 <div class="item">
                   <img class="img-fluid icon" src="{{ asset('img/landing-page/talkshow/icon-pin.svg') }}"
                     alt="icon" />
-                  <p> 720A Điện Biên Phủ, Phường 22, Quận Bình Thạnh, Tp Hồ Chí Minh.</p>
+                  <p> 720A Điện Biên Phủ, Phường 22, Quận Bình Thạnh, Tp Hồ Chí Minh</p>
                 </div>
                 <div class="item">
                   <img class="img-fluid icon" src="{{ asset('img/landing-page/talkshow/icon-phone.svg') }}"
@@ -419,7 +421,8 @@
               </div>
             </div>
 
-            <div class="introduction-address__item">
+            <div class="introduction-address__item" data-aos="zoom-in-left" data-aos-duration="1000"
+              data-aos-easing="ease-in-sine">
               <div class="introduction-address__img">
                 <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/logo-intro-2.svg') }}"
                   alt="">
@@ -457,10 +460,10 @@
         <div class="footer-follow">
           <p>Theo dõi chúng tôi</p>
           <div class="social">
-            <a href="https://www.facebook.com/bossstack.vietnam">
+            <a href="https://www.facebook.com/bossstack.vietnam" target="_blank">
               <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/icon-fb.svg') }}" alt="facebook">
             </a>
-            <a href="https://www.linkedin.com/company/bossstack/">
+            <a href="https://www.linkedin.com/company/bossstack/" target="_blank">
               <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/icon-linkedin.svg') }}"
                 alt="linkedin">
             </a>

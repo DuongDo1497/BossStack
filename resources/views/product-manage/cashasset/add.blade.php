@@ -54,7 +54,8 @@
 
   <div class="section cashasset-add">
     <div class="breadcrumb">
-      <span>Danh mục tài sản - nợ</span> / <span class="current">Thêm mới
+      <span>Danh mục tài sản - nợ</span> / <a href="{{ route('cashassets-index') }}" class="prev">Quản lý tài sản - nợ</a>
+      / <span class="current">Thêm mới
         {{ $assetstatustypes[$assetstatustype] }}</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
@@ -69,19 +70,14 @@
       <input type='hidden' name='cashaccount_amount' value='{{ $cashaccount_amount }}'>
       <div class="box-content">
         <div class="box box-primary">
-          <p class="box-des">Nhập thông tin chi tiết các tài sản - nợ của khách hàng. Để xem lại thông tin chi
+          {{-- <p class="box-des">Nhập thông tin chi tiết các tài sản - nợ của khách hàng. Để xem lại thông tin chi
             tiết
-            các tài sản - nợ. Vui lòng xem <a href="#">[tại đây]</a></p>
+            các tài sản - nợ. Vui lòng xem <a href="#">[tại đây]</a></p> --}}
           <div class="box-form">
             <div class="form-group">
-              <label for="assetdate">Ngày:</label>
-              <div class="input-group">
-                <input type="text" class="form-control" name="assetdate" id="assetdate"
-                  value="{{ old('assetdate') == '' ? $assetdate : old('assetdate') }}" readonly>
-                <span class="input-group-addon">
-                  <img src="{{ asset('img/icon-calender.svg') }}" alt="">
-                </span>
-              </div>
+              <label for="assetdate">Ngày lập:</label>
+              <input type="text" class="form-control" name="assetdate" id="assetdate"
+                value="{{ old('assetdate') == '' ? $assetdate : old('assetdate') }}" readonly>
             </div>
             <div class="form-group">
               <label for="assetname">Tài sản<span>*</span>:</label>

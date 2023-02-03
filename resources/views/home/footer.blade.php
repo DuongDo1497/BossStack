@@ -67,9 +67,9 @@
             </a>
           </div>
           <div class="footer-item__img">
-            <a href="#">
+            {{-- <a href="#">
               <img class="img-fluid" src="{{ asset('img/web/bct-img.png') }}" alt="Bộ Công thương">
-            </a>
+            </a> --}}
             <a href="#">
               <img class="img-fluid" src="{{ asset('img/web/dmca-img.png') }}" alt="dmca">
             </a>
