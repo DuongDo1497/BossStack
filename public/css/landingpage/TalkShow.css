@@ -482,6 +482,7 @@
 }
 
 .introduction-img{
+  max-width: 50%;
   margin: 0 auto 6rem;
 }
 

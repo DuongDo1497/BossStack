@@ -72,11 +72,11 @@
           <div class="banner-top">
             <span class="text">talkshow</span>
             <span></span>
-            <span class="text">series 1: bóc tách dòng tiền</span>
+            <span class="text">series 1: chiến lược dòng tiền</span>
           </div>
           <img class="img-fluid banner-img" src="{{ asset('img/landing-page/talkshow/banner-img-1.png') }}"
             alt="BossStack">
-          <p>CHIẾN LƯỢC DÒNG TIỀN DÀNH CHO DOANH NGHIỆP SMEs" lần đầu tiên được tổ chức với mong muốn
+          <p>"BÓC TÁCH DÒNG TIỀN dành cho Doanh nghiệp SMEs" lần đầu tiên được tổ chức với mong muốn
             giúp các Doanh nghiệp đưa ra những cái nhìn khách quan về tài chính từ đó có cái nhìn chuyên sâu trong việc
             quản trị dòng tiền hiệu quả.<br /><br />Đây là cơ hội để các Doanh nghiệp SMEs lắng nghe, trao đổi và kết
             nối cùng các chuyên gia trong ngành tài
@@ -120,34 +120,12 @@
             <div class="speakers-list">
               <div class="speakers-item">
                 <div class="speakers-avt">
-                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-7.jpg') }}"
-                    alt="Chau Pham">
-                </div>
-                <div class="speakers-content">
-                  <p class="speakers-name">Bà Lê Mỹ Nga</p>
-                  <p class="speakers-position">Giám đốc WeAngles Capital</p>
-                </div>
-              </div>
-
-              <div class="speakers-item">
-                <div class="speakers-avt">
                   <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-3.jpg') }}"
                     alt="Chau Pham">
                 </div>
                 <div class="speakers-content">
                   <p class="speakers-name">Ông Lâm Minh Chánh</p>
                   <p class="speakers-position">CEO Học viện Kinh doanh & Tài chính BizUni</p>
-                </div>
-              </div>
-
-              <div class="speakers-item">
-                <div class="speakers-avt">
-                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-4.jpg') }}"
-                    alt="Chau Pham">
-                </div>
-                <div class="speakers-content">
-                  <p class="speakers-name">Tiến sĩ Trần Quý</p>
-                  <p class="speakers-position">Viện trưởng Viện phát triển kinh tế số</p>
                 </div>
               </div>
 
@@ -160,18 +138,6 @@
                   <p class="speakers-name">Ông Nguyễn Xuân Thành</p>
                   <p class="speakers-position">Giảng viên Trường Chính sách công và quản lý FullBright, thành viên Tổ
                     tư vấn Kinh tế Chính phủ</p>
-                </div>
-              </div>
-
-              <div class="speakers-item">
-                <div class="speakers-avt">
-                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-1.jpg') }}"
-                    alt="Chau Pham">
-                </div>
-                <div class="speakers-content">
-                  <p class="speakers-name">Bà Châu Phạm</p>
-                  <p class="speakers-position">CEO RBooks<br />Chuyên gia cố vấn Tài chính chiến lược cấp cao BossStack
-                  </p>
                 </div>
               </div>
 
@@ -194,6 +160,40 @@
                 <div class="speakers-content">
                   <p class="speakers-name">Ông Nam Nguyễn</p>
                   <p class="speakers-position">CEO Opla Consulting</p>
+                </div>
+              </div>
+
+              <div class="speakers-item">
+                <div class="speakers-avt">
+                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-7.jpg') }}"
+                    alt="Chau Pham">
+                </div>
+                <div class="speakers-content">
+                  <p class="speakers-name">Bà Lê Mỹ Nga</p>
+                  <p class="speakers-position">Giám đốc WeAngles Capital</p>
+                </div>
+              </div>
+
+              <div class="speakers-item">
+                <div class="speakers-avt">
+                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-4.jpg') }}"
+                    alt="Chau Pham">
+                </div>
+                <div class="speakers-content">
+                  <p class="speakers-name">Tiến sĩ Trần Quý</p>
+                  <p class="speakers-position">Viện trưởng Viện phát triển kinh tế số</p>
+                </div>
+              </div>
+
+              <div class="speakers-item">
+                <div class="speakers-avt">
+                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-1.jpg') }}"
+                    alt="Chau Pham">
+                </div>
+                <div class="speakers-content">
+                  <p class="speakers-name">Bà Châu Phạm</p>
+                  <p class="speakers-position">CEO RBooks<br />Chuyên gia cố vấn Tài chính chiến lược cấp cao BossStack
+                  </p>
                 </div>
               </div>
 
@@ -372,7 +372,7 @@
                 <div class="ticket-about__subtitle">
                   <span class="text">talkshow</span>
                   <span></span>
-                  <span class="text">series 1: bóc tách dòng tiền</span>
+                  <span class="text">series 1: chiến lược dòng tiền</span>
                 </div>
                 <img class="img-fluid banner-img" src="{{ asset('img/landing-page/talkshow/banner-img-1.png') }}"
                   alt="BossStack">
@@ -389,7 +389,7 @@
           <div class="introduction-top">
             <span class="text">talkshow</span>
             <span></span>
-            <span class="text">series 1: bóc tách dòng tiền</span>
+            <span class="text">series 1: chiến lược dòng tiền</span>
           </div>
 
           <img class="img-fluid introduction-img" src="{{ asset('img/landing-page/talkshow/banner-img-2.png') }}"
