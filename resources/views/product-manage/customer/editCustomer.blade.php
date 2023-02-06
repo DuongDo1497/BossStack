@@ -69,21 +69,19 @@
 @endsection
 
 @section('content')
-  @if (session()->has('success'))
-    @include('layouts.partials.messages.success')
-  @endif
-
   <div class="section customer-edit">
     <div class="breadcrumb">
       <span>Thông tin tài khoản</span> / <span class="current">Thông tin cá nhân</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
-
-    <form role="form" action="{{ route('customers-updateCustomer', ['id' => $model->id]) }}?continue=true" method="post"
-      id="customer-form" enctype="multipart/form-data">
-      {{ csrf_field() }}
-      {{ method_field('put') }}
-
+@if(isset($infor))
+<div class="alert {{$alert}}">
+    {{ $infor }}
+</div>
+@endif
+@if(session()->has('success'))
+    @include('layouts.partials.messages.success')
+@endif
       <div class="box-content" id="accordion-customers">
         <div class="box box-primary">
           <h6 class="box-title">Tài khoản và email</h6>
@@ -131,6 +129,11 @@
         </div>
 
         <div class="box box-primary collapse" id="customerinfo">
+        <form role="form" action="{{ route('customers-updateCustomer', ['id' => $model->id]) }}?continue=true" method="post"
+          id="customer-form" enctype="multipart/form-data">
+          {{ csrf_field() }}
+          {{ method_field('put') }}
+
           <div class="box-item">
             <div class="customer-info">
               <h6 class="box-title">Thông tin khách hàng </h6>
@@ -190,7 +193,7 @@
                   </div>
                   <div class="form-group">
                     <label for="">Điện thoại:</label>
-                    <input type="text" class="form-control" name="" id="" value="">
+                    <input type="text" class="form-control" name="contactphone" id="contactphone" value="{{ $model->contactphone }}">
                   </div>
                 </div>
 
@@ -247,34 +250,45 @@
               </div>
             </div>
           </div>
+        <button type="submit" class="btn btn-primary btn-update">Cập nhật</button>
+        </form>
         </div>
 
         <div class="box box-primary collapse" id="changepassword">
+        <form role="form" action="{{ route('customers-updateSecurityCustomer') }}?continue=true" method="post" id="customer-form">
+          {{ csrf_field() }}
+          <input type='hidden' name='typereport' value=''>
+          <input type='hidden' name='customer_id' value='{{ $customer_id }}'>                
+
           <h6 class="box-title">Thay đổi mật khẩu</h6>
           <div class="box-form">
             <div class="form-group">
               <label for="oldpassword">Mật khẩu cũ:</label>
               <input type="password" class="form-control" name="oldpassword" id="oldpassword"
                 placeholder="Nhập mật khẩu cũ...">
+              @if($errors->has('oldpassword'))<span class="text-danger">{{ $errors->first('oldpassword') }}</span>@endif
             </div>
 
             <div class="form-group">
               <label for="newpassword">Mật khẩu mới:</label>
               <input type="password" class="form-control" name="newpassword" id="newpassword"
                 placeholder="Nhập mật khẩu mới...">
+                @if($errors->has('newpassword'))<span class="text-danger">{{ $errors->first('newpassword') }}</span>@endif
             </div>
 
             <div class="form-group">
               <label for="confirmnewpassword">Nhập lại mật khẩu mới:</label>
               <input type="password" class="form-control" name="confirmnewpassword" id="confirmnewpassword"
                 placeholder="Nhập lại mật khẩu mới...">
+              @if($errors->has('confirmnewpassword'))<span class="text-danger">{{ $errors->first('confirmnewpassword') }}</span>@endif                
             </div>
           </div>
         </div>
 
         <button type="submit" class="btn btn-primary btn-update">Cập nhật</button>
+      </form>
       </div>
-    </form>
+
   </div>
 
   {{-- <div class="row">

@@ -433,6 +433,8 @@ class CustomerController extends Controller
     {
 
         $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
+        $customer_id_encrypt = Crypt::encrypt($customer_id);
+        $this->view->customer_id = $customer_id_encrypt;
         
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
         $this->view->gendertype = config('rbooks.GENDERTYPE');
@@ -523,7 +525,16 @@ class CustomerController extends Controller
         $this->view->infor = $message;
         $this->view->alert = $alert;
 
-        return $this->view('securityCustomer');
+        $this->view->gendertype = config('rbooks.GENDERTYPE');
+        $this->view->customertype = config('rbooks.CUSTOMERTYPE');
+        $this->view->relationshiptype = config('rbooks.RELATIONSHIPTYPE');
+
+        $listFamilyRelationship = app(FamilyRelationshipService::class)->getListFamilyRelationshipFromCustomerId($customer_id);
+        $this->view->listFamilyRelationship = $listFamilyRelationship;
+
+        $this->view->model = $this->main_service->find($customer_id);
+
+        return $this->view('editCustomer');
     }  
         
     public function historyCustomer()
