@@ -266,10 +266,16 @@ h6{
 }
 
 .main-sidebar .sidebar .user-panel {
+  --gap: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 8px;
+  margin: 0 0 0 calc(-1 * var(--gap));
+  width: calc(100% + var(--gap));
+}
+
+.main-sidebar .sidebar .user-panel > * {
+  margin: 0 0 0 var(--gap);
 }
 
 .main-sidebar .sidebar .user-panel .user-panel-avt .image {
@@ -322,9 +328,13 @@ h6{
 .skin-blue .sidebar-menu li.list-menu > a {
   display: flex;
   align-items: center;
-  column-gap: 5px;
   color: var(--gray-cl-3);
   padding: 8px 16px;
+}
+
+.skin-blue .sidebar-menu li.treeview > a img,
+.skin-blue .sidebar-menu li.list-menu > a img{
+  margin-right: 5px;
 }
 
 .skin-blue .sidebar-menu li.list-menu > a{

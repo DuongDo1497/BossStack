@@ -363,9 +363,9 @@
                                   </span>
                                 </div>
                               </div>
-                              <button type="submit" class="btn btn-primary btn-filter">
+                              <button type="submit" class="btn btn-primary btn-filter text">
                                 Lọc
-                                <img class="icon" src="{{ asset('img/icon-filter.svg') }}" alt="">
+                                <img class="icon last" src="{{ asset('img/icon-filter.svg') }}" alt="">
                               </button>
                             </div>
                           </div>
@@ -478,9 +478,9 @@
                                   </div>
                                 </div>
                               </div>
-                              <button type="submit" class="btn btn-primary btn-filter">
+                              <button type="submit" class="btn btn-primary btn-filter text">
                                 Lọc
-                                <img class="icon" src="{{ asset('img/icon-filter.svg') }}" alt="">
+                                <img class="icon last" src="{{ asset('img/icon-filter.svg') }}" alt="">
                               </button>
                             </div>
                           </div>
@@ -655,9 +655,9 @@
                                   </span>
                                 </div>
                               </div>
-                              <button type="submit" class="btn btn-primary btn-filter">
+                              <button type="submit" class="btn btn-primary btn-filter text">
                                 Lọc
-                                <img class="icon" src="{{ asset('img/icon-filter.svg') }}" alt="">
+                                <img class="icon last" src="{{ asset('img/icon-filter.svg') }}" alt="">
                               </button>
                             </div>
                           </div>
@@ -853,9 +853,9 @@
                                   </div>
                                 </div>
                               </div>
-                              <button type="submit" class="btn btn-primary btn-filter">
+                              <button type="submit" class="btn btn-primary btn-filter text">
                                 Lọc
-                                <img class="icon" src="{{ asset('img/icon-filter.svg') }}" alt="">
+                                <img class="icon last" src="{{ asset('img/icon-filter.svg') }}" alt="">
                               </button>
                             </div>
                           </div>

@@ -57,216 +57,218 @@
     @endif
   @endif
 
-<form role="form" action="{{ route('cashassets-index') }}?continue=true" method="post" name="frm" id="frm">
-{{ csrf_field() }}
-<input type='hidden' name='typereport' value=''>
+  <form role="form" action="{{ route('cashassets-index') }}?continue=true" method="post" name="frm" id="frm">
+    {{ csrf_field() }}
+    <input type='hidden' name='typereport' value=''>
 
-  <div class="section cashasset-index">
-    <div class="breadcrumb">
-      <span>Danh mục tài sản - nợ</span> / <span class="current">Quản lý tài sản - nợ</span>
-    </div>
-    <p class="title-page">{{ $title->heading }}</p>
+    <div class="section cashasset-index">
+      <div class="breadcrumb">
+        <span>Danh mục tài sản - nợ</span> / <span class="current">Quản lý tài sản - nợ</span>
+      </div>
+      <p class="title-page">{{ $title->heading }}</p>
 
-    <div class="box-content">
-      <div class="box box-primary">
-        <div class="noti-index">
-          <div class="noti-index__wrap">
-            <div class="noti-index__item">
-              <p class="title">Tổng nợ</p>
-              <p class="number"><span id="tongno">0</span></p>
-            </div>
-            <div class="noti-index__item">
-              <p class="title">Tổng tài sản</p>
-              <p class="number"><span id="tongtaisan">0</span></p>
-            </div>
-            <div class="noti-index__item">
-              <p class="title">Tỷ lệ nợ/tài sản</p>
-              <p class="number"><span id="tileno_taisan">0</span></p>
-            </div>
-            <div class="noti-index__item">
-              <p class="title">Tổng tài sản thực</p>
-              <p class="number"><span id="tongtaisanthuc">0</span></p>
+      <div class="box-content">
+        <div class="box box-primary">
+          <div class="noti-index">
+            <div class="noti-index__wrap">
+              <div class="noti-index__item">
+                <p class="title">Tổng nợ</p>
+                <p class="number"><span id="tongno">0</span></p>
+              </div>
+              <div class="noti-index__item">
+                <p class="title">Tổng tài sản</p>
+                <p class="number"><span id="tongtaisan">0</span></p>
+              </div>
+              <div class="noti-index__item">
+                <p class="title">Tỷ lệ nợ/tài sản</p>
+                <p class="number"><span id="tileno_taisan">0</span></p>
+              </div>
+              <div class="noti-index__item">
+                <p class="title">Tổng tài sản thực</p>
+                <p class="number"><span id="tongtaisanthuc">0</span></p>
+              </div>
             </div>
           </div>
-        </div>
-        <h6 class="box-title">Biểu đồ tỷ trọng tài sản</h6>
-        {{-- <p class="box-des">Chức năng quản lý tài sản - nợ của phần mềm BossStack là công cụ hữu ích để
+          <h6 class="box-title">Biểu đồ tỷ trọng tài sản</h6>
+          {{-- <p class="box-des">Chức năng quản lý tài sản - nợ của phần mềm BossStack là công cụ hữu ích để
           hỗ
           trợ bạn đánh giá và xem lại việc quản lý tài sản của mình.</p> --}}
-        <div class="chart-list">
-          <div class="chart-item">
-            <p class="chart-title">Nợ</p>
-            <div id="rptasset1"></div>
-          </div>
-          <div class="chart-item">
-            <p class="chart-title">Tài sản</p>
-            <div id="rptasset2"></div>
-          </div>
-          <div class="chart-item">
-            <p class="chart-title">Tổng tài sản thực</p>
-            <div id="rptasset3"></div>
+          <div class="chart-list">
+            <div class="chart-item">
+              <p class="chart-title">Nợ</p>
+              <div id="rptasset1"></div>
+            </div>
+            <div class="chart-item">
+              <p class="chart-title">Tài sản</p>
+              <div id="rptasset2"></div>
+            </div>
+            <div class="chart-item">
+              <p class="chart-title">Tổng tài sản thực</p>
+              <div id="rptasset3"></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="box box-primary">
-        <h6 class="box-title">
-          Danh sách Chi tiết
-          <a href="{{ route('cashassets-history') }}" class="box-title__link">Lịch sử tài sản - nợ</a>
-        </h6>
-        <div class="noti-index">
-          <div class="noti-index__wrap">
-            <div class="noti-index__item">
-              <p class="title">Tổng Tài sản nợ</p>
-              <p class="number">- 1,300,000,000</p>
-            </div>
-            <div class="noti-index__item">
-              <p class="title">Tổng Tài sản có</p>
-              <p class="number">+ 3,500,000,000</p>
+        <div class="box box-primary">
+          <h6 class="box-title">
+            Danh sách Chi tiết
+            <a href="{{ route('cashassets-history') }}" class="box-title__link">Lịch sử tài sản - nợ</a>
+          </h6>
+          <div class="noti-index">
+            <div class="noti-index__wrap">
+              <div class="noti-index__item">
+                <p class="title">Tổng Tài sản nợ</p>
+                <p class="number">- 1,300,000,000</p>
+              </div>
+              <div class="noti-index__item">
+                <p class="title">Tổng Tài sản có</p>
+                <p class="number">+ 3,500,000,000</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="box-search">
-          <div class="control">
-            <a href="{{ route('cashassets-process', ['assetstatustype' => 3]) }}" class="btn btn-gray btn-debt">
-              <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
-              Nợ
-            </a>
-            <a href="{{ route('cashassets-process', ['assetstatustype' => 4]) }}" class="btn btn-gray btn-asset">
-              <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
-              Tài sản
-            </a>
+          <div class="box-search">
+            <div class="control">
+              <a href="{{ route('cashassets-process', ['assetstatustype' => 3]) }}" class="btn btn-gray btn-debt text">
+                <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
+                Nợ
+              </a>
+              <a href="{{ route('cashassets-process', ['assetstatustype' => 4]) }}" class="btn btn-gray btn-asset text">
+                <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
+                Tài sản
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="table-wrap">
-          <div class="table-content">
-            <table class="table table-bordered table-list">
-              <thead>
-                <tr>
-                  <th rowspan="2" class="fixed fixed-1">
-                    <input name="allbox" type="checkbox" id="allbox" onclick="CheckAll(this)">
-                  </th>
-                  <th rowspan="2" class="fixed fixed-2">STT</th>
-                  <th rowspan="2" class="fixed fixed-3">Tài sản</th>
-                  <th rowspan="2">Phân loại</th>
-                  <th rowspan="2">Chi tiết</th>
-                  <th rowspan="2">Ngày</th>
-                  <th colspan="2">Tài sản</th>
-                </tr>
-                <tr>
-                  <th></th>
-                  <th>Nợ</th>
-                  <th>Có</th>
-                </tr>
-              </thead>
-              <tbody>
-                @if ($collections->count() === 0)
+          <div class="table-wrap">
+            <div class="table-content">
+              <table class="table table-bordered table-list">
+                <thead>
                   <tr>
-                    <td colspan="7"><b>Không có dữ liệu!!!</b></td>
+                    <th rowspan="2" class="fixed fixed-1">
+                      <input name="allbox" type="checkbox" id="allbox" onclick="CheckAll(this)">
+                    </th>
+                    <th rowspan="2" class="fixed fixed-2">STT</th>
+                    <th rowspan="2" class="fixed fixed-3">Tài sản</th>
+                    <th rowspan="2">Phân loại</th>
+                    <th rowspan="2">Chi tiết</th>
+                    <th rowspan="2">Ngày</th>
+                    <th colspan="2">Tài sản</th>
                   </tr>
-                @endif
-                @php
-                  $i = 1;
-                  $total_asset = 0;
-                  $total_expense = 0;
-                @endphp
-                @foreach ($collections as $cashasset)
+                  <tr>
+                    <th></th>
+                    <th>Nợ</th>
+                    <th>Có</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @if ($collections->count() === 0)
+                    <tr>
+                      <td colspan="7"><b>Không có dữ liệu!!!</b></td>
+                    </tr>
+                  @endif
                   @php
-                    if ($cashasset->assetstatustype == 3) {
-                        $total_asset += $cashasset->remainamount;
-                    } elseif ($cashasset->assetstatustype == 4) {
-                        $total_expense += $cashasset->remainamount;
-                    }
+                    $i = 1;
+                    $total_asset = 0;
+                    $total_expense = 0;
                   @endphp
-                  <tr>
-                    <td class="text-center fixed fixed-1">
-                      <input type='checkbox' name='ids[]' id='ids[]' value="{{ $cashasset->id }}" onclick="CheckId(this)">
-                    </td>
-                    <td class="text-center fixed fixed-2">{{ $i++ }}</td>
-                    <td class="fixed fixed-3">
-                      <p>
-                        <a href="{{ route('cashassets-edit', ['id' => $cashasset->id]) }}">{{ $cashasset->assetname }}</a>
-                        @if ($cashasset->document != '')
-                          <a target="_blank" href="{{ $pathdocument . $cashasset->document }}"
-                            title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
-                              style="margin-right: 10px;"></i></a>
-                        @endif
-                      </p>
-                      <p>Số tiền: {{ formatNumber($cashasset->amount, 1, 0, 1) }}</p>
-                    </td>
-                    <td class="text-left">{{ $cashasset->config_types_name }}</td>
-                    <td class="text-left">{{ $cashasset->config_type_details_name }}</td>
-                    <td class="text-center">
-                      {{ $cashasset->assetdate == null ? '' : ConvertSQLDate($cashasset->assetdate) }}
-                    </td>
-                    @if ($cashasset->assetstatustype == 3)
-                      <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 3) !!}</td>
-                      <td class="text-right"></td>
-                    @elseif($cashasset->assetstatustype == 4)
-                      <td class="text-right"></td>
-                      <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 0) !!}</td>
-                    @endif
-                  </tr>
-                @endforeach
+                  @foreach ($collections as $cashasset)
+                    @php
+                      if ($cashasset->assetstatustype == 3) {
+                          $total_asset += $cashasset->remainamount;
+                      } elseif ($cashasset->assetstatustype == 4) {
+                          $total_expense += $cashasset->remainamount;
+                      }
+                    @endphp
+                    <tr>
+                      <td class="text-center fixed fixed-1">
+                        <input type='checkbox' name='ids[]' id='ids[]' value="{{ $cashasset->id }}"
+                          onclick="CheckId(this)">
+                      </td>
+                      <td class="text-center fixed fixed-2">{{ $i++ }}</td>
+                      <td class="fixed fixed-3">
+                        <p>
+                          <a
+                            href="{{ route('cashassets-edit', ['id' => $cashasset->id]) }}">{{ $cashasset->assetname }}</a>
+                          @if ($cashasset->document != '')
+                            <a target="_blank" href="{{ $pathdocument . $cashasset->document }}"
+                              title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
+                                style="margin-right: 10px;"></i></a>
+                          @endif
+                        </p>
+                        <p>Số tiền: {{ formatNumber($cashasset->amount, 1, 0, 1) }}</p>
+                      </td>
+                      <td class="text-left">{{ $cashasset->config_types_name }}</td>
+                      <td class="text-left">{{ $cashasset->config_type_details_name }}</td>
+                      <td class="text-center">
+                        {{ $cashasset->assetdate == null ? '' : ConvertSQLDate($cashasset->assetdate) }}
+                      </td>
+                      @if ($cashasset->assetstatustype == 3)
+                        <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 3) !!}</td>
+                        <td class="text-right"></td>
+                      @elseif($cashasset->assetstatustype == 4)
+                        <td class="text-right"></td>
+                        <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 0) !!}</td>
+                      @endif
+                    </tr>
+                  @endforeach
 
-                @foreach ($listaccounts as $cashasset)
-                @php
-                $total_expense += $cashasset->amount;
-
-                $requireamount = 0; $cashname = "Ví mục tiêu";
-                if($cashasset->accountno == $primaryaccount){
-                $requireamount = $cashasset->amount;
-                $cashname = "Ví tổng";
-                }else{
-                $requireamount = $cashasset->requireamount;
-                $cashname = "Ví mục tiêu";
-                }
-                @endphp
-                <tr class="table-cashasset">
-                    <td></td>
-                    <td style="text-align: center;" class="text-nowrap">{{ $i++ }}</td>
-                    <td style="text-align: left;" class="text-nowrap">{{ $cashasset->accountname }}
+                  @foreach ($listaccounts as $cashasset)
+                    @php
+                      $total_expense += $cashasset->amount;
+                      
+                      $requireamount = 0;
+                      $cashname = 'Ví mục tiêu';
+                      if ($cashasset->accountno == $primaryaccount) {
+                          $requireamount = $cashasset->amount;
+                          $cashname = 'Ví tổng';
+                      } else {
+                          $requireamount = $cashasset->requireamount;
+                          $cashname = 'Ví mục tiêu';
+                      }
+                    @endphp
+                    <tr class="table-cashasset">
+                      <td></td>
+                      <td style="text-align: center;" class="text-nowrap">{{ $i++ }}</td>
+                      <td style="text-align: left;" class="text-nowrap">{{ $cashasset->accountname }}
                         &nbsp;&nbsp;&nbsp;
                         <br>Số tiền: {{ formatNumber($requireamount, 1, 0, 1) }}
-                    </td>
-                    <td style="text-align: left;" class="text-nowrap">{{ $cashname }}</td>
-                    <td style="text-align: left;" class="text-nowrap">Mã ví {{ $cashasset->accountno
-                        }} </td>
-                    <td style="text-align: center;" class="text-nowrap">{{ $cashasset->accountdate ==
-                        null ? "" : ConvertSQLDate($cashasset->accountdate) }}</td>
-                    <td style="text-align: right;" class="text-nowrap"></td>
-                    <td style="text-align: right;" class="text-nowrap">{!!
-                        formatNumberColorCustom($cashasset->amount, 1, 0, 0, 0) !!}</td>
-                </tr>
-                @endforeach
-                                               
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td colspan="6">Tổng cộng</td>
-                  <td class="text-right">{!! formatNumberColorCustom($total_asset, 1, 0, 0, 3) !!}</td>
-                  <td class="text-right">{!! formatNumberColorCustom($total_expense, 1, 0, 0, 0) !!}</td>
-                </tr>
-              </tfoot>
-            </table>
+                      </td>
+                      <td style="text-align: left;" class="text-nowrap">{{ $cashname }}</td>
+                      <td style="text-align: left;" class="text-nowrap">Mã ví {{ $cashasset->accountno }} </td>
+                      <td style="text-align: center;" class="text-nowrap">
+                        {{ $cashasset->accountdate == null ? '' : ConvertSQLDate($cashasset->accountdate) }}
+                      </td>
+                      <td style="text-align: right;" class="text-nowrap"></td>
+                      <td style="text-align: right;" class="text-nowrap">{!! formatNumberColorCustom($cashasset->amount, 1, 0, 0, 0) !!}</td>
+                    </tr>
+                  @endforeach
+
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="6">Tổng cộng</td>
+                    <td class="text-right">{!! formatNumberColorCustom($total_asset, 1, 0, 0, 3) !!}</td>
+                    <td class="text-right">{!! formatNumberColorCustom($total_expense, 1, 0, 0, 0) !!}</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
           </div>
-        </div>
-        <div class="box-control">
-          <div class="control">
-            <p class="count"><span id="checklabel">0</span></p>
-            <p class="text">Tài sản đang được chọn</p>
-            <a href="javascript:processDeleteReports('frm', 'delete')" class="btn btn-gray btn-delete">
-              <img src="{{ asset('img/icon-delete.svg') }}" alt="">
-            </a>
-          </div>
-          <div class="paging">
-            {{ $collections->links() }}
+          <div class="box-control">
+            <div class="control">
+              <p class="count"><span id="checklabel">0</span></p>
+              <p class="text">Tài sản đang được chọn</p>
+              <a href="javascript:processDeleteReports('frm', 'delete')" class="btn btn-gray btn-delete">
+                <img src="{{ asset('img/icon-delete.svg') }}" alt="">
+              </a>
+            </div>
+            <div class="paging">
+              {{ $collections->links() }}
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</form>
+  </form>
   {{-- <div class="row">
     <form role="form" action="{{ route('cashassets-modify') }}?continue=true" method="post" id="frm">
         {{ csrf_field() }}
@@ -498,19 +500,19 @@
 @endsection
 
 @section('scripts')
-<script>
+  <script>
     var tongno = document.getElementById("tongno");
-    tongno.innerHTML = '{{ formatNumber($total_asset, 1, 0, 1) }}';    
+    tongno.innerHTML = '{{ formatNumber($total_asset, 1, 0, 1) }}';
 
     var tongtaisan = document.getElementById("tongtaisan");
-    tongtaisan.innerHTML = '{{ formatNumber($total_expense, 1, 0, 1) }}';    
+    tongtaisan.innerHTML = '{{ formatNumber($total_expense, 1, 0, 1) }}';
 
     var tileno_taisan = document.getElementById("tileno_taisan");
-    tileno_taisan.innerHTML = '{{ ($total_expense == 0 ? 0 : formatNumber(($total_asset/$total_expense)*100, 1, 2, 1)) }}' + ' %';    
+    tileno_taisan.innerHTML =
+      '{{ $total_expense == 0 ? 0 : formatNumber(($total_asset / $total_expense) * 100, 1, 2, 1) }}' + ' %';
 
     var tongtaisanthuc = document.getElementById("tongtaisanthuc");
-    tongtaisanthuc.innerHTML = '{{ formatNumber($total_expense-$total_asset, 1, 0, 1) }}';    
-
-</script>
+    tongtaisanthuc.innerHTML = '{{ formatNumber($total_expense - $total_asset, 1, 0, 1) }}';
+  </script>
   @include('product-manage.cashasset.partials.script')
 @endsection

@@ -3,11 +3,10 @@
 }
 
 .cashplan-index .filter-timeline{
-  width: 30%;
+  width: 35%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  column-gap: 16px;
 }
 
 .cashplan-index .form-group{
@@ -24,7 +23,6 @@
 .cashplan-analysis .btn-add{
   display: flex;
   align-items: center;
-  column-gap: 8px;
   margin-left: auto;
   margin-bottom: 24px;
 }

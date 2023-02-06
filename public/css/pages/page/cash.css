@@ -2,9 +2,15 @@
 
 .cash-index .filter-timeline,
 .cash-process .filter-timeline{
+  --gap: 16px;
   display: flex;
   align-items: center;
-  column-gap: 16px;
+  margin: 0 0 0 calc(-1 * var(--gap));
+}
+
+.cash-index .filter-timeline > *,
+.cash-process .filter-timeline > *{
+  margin: 0 0 0 var(--gap);
 }
 
 .cash-index .filter-timeline{
@@ -219,7 +225,7 @@
 }
 
 .cash-dissection .filter-timeline{
-  width: 100%;
+  width: calc(100% + var(--gap));
   justify-content: flex-end;
 }
 
