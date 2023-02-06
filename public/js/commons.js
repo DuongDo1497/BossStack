@@ -229,6 +229,12 @@ function setDDMMYYY(date) {
     var y = date.getFullYear(),
         m = date.getMonth() + 1,
         d = date.getDate();
+    if (d < 10){
+        d = "0" + d;
+    }
+    if (m < 10){
+        m = "0" + m;
+    }
     dates = d + "/" + m + "/" + y;
     return dates; 
 }

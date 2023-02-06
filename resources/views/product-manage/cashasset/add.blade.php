@@ -77,7 +77,7 @@
             <div class="form-group">
               <label for="assetdate">Ngày lập:</label>
               <input type="text" class="form-control" name="assetdate" id="assetdate"
-                value="{{ old('assetdate') == '' ? $assetdate : old('assetdate') }}" readonly>
+                value="{{ old('assetdate') == '' ? $assetdate : old('assetdate') }}">
             </div>
             <div class="form-group">
               <label for="assetname">Tài sản<span>*</span>:</label>
