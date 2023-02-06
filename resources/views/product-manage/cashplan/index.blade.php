@@ -62,149 +62,151 @@
     @include('layouts.partials.messages.infor')
   @endif
 
-<form role="form" action="{{ route('cashplans-index') }}?continue=true" method="post" name="frm" id="frm">
-{{ csrf_field() }}
-<input type='hidden' name='typereport' value=''>
+  <form role="form" action="{{ route('cashplans-index') }}?continue=true" method="post" name="frm" id="frm">
+    {{ csrf_field() }}
+    <input type='hidden' name='typereport' value=''>
 
-  <div class="section cashplan-index">
-    <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <span class="current">Thiết lập dòng tiền</span>
-    </div>
-    <p class="title-page">{{ $title->heading }}</p>
-    <div class="box-content">
-      <div class="box box-primary">
-        <div class="noti-index">
-          <div class="noti-index__wrap">
-            <div class="noti-index__item">
-              <p class="title">Số dòng tiền:</p>
-              <p class="number">{{ $collections->count() }}</p>
-            </div>
-            <div class="noti-index__item">
-              <p class="title">Tổng số tiền mục tiêu:</p>
-              <p class="number">{!! formatNumberColor($collections->sum('requireamount'), 1, 0, 0) !!}</p>
-            </div>
-            <div class="noti-index__item">
-              <p class="title">Tổng số tiền đang thực hiện:</p>
-              <p class="number">{!! formatNumberColor($collections->sum('amount'), 1, 0, 1) !!}</p>
-            </div>
-            <div class="noti-index__item">
-              <p class="title">Tổng số tiền còn lại:</p>
-              <p class="number">
-                {!! formatNumberColor($collections->sum('requireamount') - $collections->sum('amount'), 1, 0, 1) !!}
-              </p>
+    <div class="section cashplan-index">
+      <div class="breadcrumb">
+        <span>Quản lý tài khoản</span> / <span class="current">Thiết lập dòng tiền</span>
+      </div>
+      <p class="title-page">{{ $title->heading }}</p>
+      <div class="box-content">
+        <div class="box box-primary">
+          <div class="noti-index">
+            <div class="noti-index__wrap">
+              <div class="noti-index__item">
+                <p class="title">Số dòng tiền:</p>
+                <p class="number">{{ $collections->count() }}</p>
+              </div>
+              <div class="noti-index__item">
+                <p class="title">Tổng số tiền mục tiêu:</p>
+                <p class="number">{!! formatNumberColor($collections->sum('requireamount'), 1, 0, 0) !!}</p>
+              </div>
+              <div class="noti-index__item">
+                <p class="title">Tổng số tiền đang thực hiện:</p>
+                <p class="number">{!! formatNumberColor($collections->sum('amount'), 1, 0, 1) !!}</p>
+              </div>
+              <div class="noti-index__item">
+                <p class="title">Tổng số tiền còn lại:</p>
+                <p class="number">
+                  {!! formatNumberColor($collections->sum('requireamount') - $collections->sum('amount'), 1, 0, 1) !!}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <a href="{{ route('cashplans-processAdd', ['incomestatustype' => 5]) }}" class="btn btn-primary btn-add">
-          <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
-          Thêm dòng tiền
-        </a>
-        <div class="box-search">
-          <div class="filter-timeline">
-            <div class="form-group">
-              <label for="status">Lọc dòng tiền theo</label>
-                <select class="form-control select2" name="selectaccountstatustype" onchange="processReports('frm', 'selectstatus')">
-                    <option value="">Chọn trạng thái</option>
-                    @foreach($accountstatustype as $key=>$value)
-                        @if($key == $selectaccountstatustype)
-                            <option value="{{ $key }}" selected>{{ $value }}</option>
-                        @else
-                            <option value="{{ $key }}">{{ $value }}</option>                                                                    
-                        @endif
-                    @endforeach
+          <a href="{{ route('cashplans-processAdd', ['incomestatustype' => 5]) }}" class="btn btn-primary btn-add text">
+            <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
+            Thêm dòng tiền
+          </a>
+          <div class="box-search">
+            <div class="filter-timeline">
+              <div class="form-group">
+                <label for="status">Lọc dòng tiền theo</label>
+                <select class="form-control select2" name="selectaccountstatustype"
+                  onchange="processReports('frm', 'selectstatus')">
+                  <option value="">Chọn trạng thái</option>
+                  @foreach ($accountstatustype as $key => $value)
+                    @if ($key == $selectaccountstatustype)
+                      <option value="{{ $key }}" selected>{{ $value }}</option>
+                    @else
+                      <option value="{{ $key }}">{{ $value }}</option>
+                    @endif
+                  @endforeach
                 </select>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="table-wrap">
-          <div class="table-content">
-            <table class="table table-bordered table-list">
-              <thead>
-                <tr>
-                  <th class="text-center fixed fixed-1">
-                    <input name="allbox" type="checkbox" id="allbox" onclick="CheckAll(this)">
-                  </th>
-                  <th class="fixed fixed-2">STT</th>
-                  <th class="fixed fixed-3">Tên dòng tiền</th>
-                  <th>Phân loại</th>
-                  <th>Ngày lập</th>
-                  <th>Số tuổi đạt mục tiêu</th>
-                  <th>Số tiền mục tiêu</th>
-                  <th>Đang thực hiện</th>
-                  <th>Còn lại</th>
-                  <th>Trạng thái</th>
-                </tr>
-              </thead>
-              <tbody>
-                @if ($collections->count() === 0)
+          <div class="table-wrap">
+            <div class="table-content">
+              <table class="table table-bordered table-list">
+                <thead>
                   <tr>
-                    <td colspan="10"><b>Không có dữ liệu!!!</b></td>
+                    <th class="text-center fixed fixed-1">
+                      <input name="allbox" type="checkbox" id="allbox" onclick="CheckAll(this)">
+                    </th>
+                    <th class="fixed fixed-2">STT</th>
+                    <th class="fixed fixed-3">Tên dòng tiền</th>
+                    <th>Phân loại</th>
+                    <th>Ngày lập</th>
+                    <th>Số tuổi đạt mục tiêu</th>
+                    <th>Số tiền mục tiêu</th>
+                    <th>Đang thực hiện</th>
+                    <th>Còn lại</th>
+                    <th>Trạng thái</th>
                   </tr>
-                @endif
-                @php
-                  $i = 1;
-                @endphp
-                @foreach ($collections as $cashplan)
-                  <tr>
-                    <td class="text-center fixed fixed-1">
-                      <input type='checkbox' name='ids[]' id='ids[]' value="{{ $cashplan->id }}" onclick="CheckId(this)">
-                    </td>
-                    <td class="text-center fixed fixed-2">{{ $i++ }}</td>
-                    <td class="fixed fixed-3">
-                      <a
-                        href="{{ route('cashplans-analysis', ['id' => $cashplan->id]) }}">{{ $cashplan->description }}</a>
-                      @if ($cashplan->document != '')
-                        <a style="color: #1b1464;" target="_blank" href="{{ $pathdocument . $cashplan->document }}"
-                          title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
-                            style="margin-right: 10px;"></i></a>
-                      @endif
-                    </td>
-                    <td class="text-left">{{ $cashplan->name }}</td>
-                    <td class="text-center">
-                      {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}</td>
-                    <td class="text-center">{{ formatNumber($cashplan->planage, 1, 0, 0) }}</td>
-                    <td class="text-right">{!! formatNumberColor($cashplan->requireamount, 1, 0, 0) !!}</td>
-                    <td class="text-right">{!! formatNumberColor($cashplan->amount, 1, 0, 1) !!}</td>
-                    <td class="text-right">{!! formatNumberColor($cashplan->requireamount - $cashplan->amount, 1, 0, 1) !!}</td>
-                    <td class="text-center">
-                      @if ($cashplan->finish == 1)
-                        <div class="status status-error">{{ $accountstatustype[$cashplan->finish] }}
-                        </div>
-                      @else
-                        <div class="status status-success">{{ $accountstatustype[$cashplan->finish] }}
-                        </div>
-                      @endif
-                    </td>
-                  </tr>
-                @endforeach
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  @if ($collections->count() === 0)
+                    <tr>
+                      <td colspan="10"><b>Không có dữ liệu!!!</b></td>
+                    </tr>
+                  @endif
+                  @php
+                    $i = 1;
+                  @endphp
+                  @foreach ($collections as $cashplan)
+                    <tr>
+                      <td class="text-center fixed fixed-1">
+                        <input type='checkbox' name='ids[]' id='ids[]' value="{{ $cashplan->id }}"
+                          onclick="CheckId(this)">
+                      </td>
+                      <td class="text-center fixed fixed-2">{{ $i++ }}</td>
+                      <td class="fixed fixed-3">
+                        <a
+                          href="{{ route('cashplans-analysis', ['id' => $cashplan->id]) }}">{{ $cashplan->description }}</a>
+                        @if ($cashplan->document != '')
+                          <a style="color: #1b1464;" target="_blank" href="{{ $pathdocument . $cashplan->document }}"
+                            title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"
+                              style="margin-right: 10px;"></i></a>
+                        @endif
+                      </td>
+                      <td class="text-left">{{ $cashplan->name }}</td>
+                      <td class="text-center">
+                        {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}</td>
+                      <td class="text-center">{{ formatNumber($cashplan->planage, 1, 0, 0) }}</td>
+                      <td class="text-right">{!! formatNumberColor($cashplan->requireamount, 1, 0, 0) !!}</td>
+                      <td class="text-right">{!! formatNumberColor($cashplan->amount, 1, 0, 1) !!}</td>
+                      <td class="text-right">{!! formatNumberColor($cashplan->requireamount - $cashplan->amount, 1, 0, 1) !!}</td>
+                      <td class="text-center">
+                        @if ($cashplan->finish == 1)
+                          <div class="status status-error">{{ $accountstatustype[$cashplan->finish] }}
+                          </div>
+                        @else
+                          <div class="status status-success">{{ $accountstatustype[$cashplan->finish] }}
+                          </div>
+                        @endif
+                      </td>
+                    </tr>
+                  @endforeach
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-        <div class="box-control">
-          <div class="control">
-            <p class="count"><span id="checklabel">0</span></p>
-            <p class="text">Ví tài chính đang được chọn</p>
-            <a href="javascript:processDeleteReports('frm', 'delete')" class="btn btn-gray btn-delete">
-              <img src="{{ asset('img/icon-delete.svg') }}" alt="">
-            </a>
+          <div class="box-control">
+            <div class="control">
+              <p class="count"><span id="checklabel">0</span></p>
+              <p class="text">Ví tài chính đang được chọn</p>
+              <a href="javascript:processDeleteReports('frm', 'delete')" class="btn btn-gray btn-delete">
+                <img src="{{ asset('img/icon-delete.svg') }}" alt="">
+              </a>
+            </div>
+            <div class="paging">
+              {{ $collections->links() }}
+            </div>
           </div>
-          <div class="paging">
-            {{ $collections->links() }}
+          <div class="note-content">
+            <p>* Một số lưu ý khi thao tác :</p>
+            <p>- Bạn có thể thiết lập, chỉnh sửa và xem lại các dòng tiền sau khi lập.
+            </p>
+            <p>- Số dư hiện có trong dòng tiền sẽ mặc định được chuyển về ví tổng sau
+              khi bạn thực hiện thao tác xóa dòng tiền.</p>
           </div>
-        </div>
-        <div class="note-content">
-          <p>* Một số lưu ý khi thao tác :</p>
-          <p>- Bạn có thể thiết lập, chỉnh sửa và xem lại các dòng tiền sau khi lập.
-          </p>
-          <p>- Số dư hiện có trong dòng tiền sẽ mặc định được chuyển về ví tổng sau
-            khi bạn thực hiện thao tác xóa dòng tiền.</p>
         </div>
       </div>
-    </div>
 
-  </div>
-</form>
+    </div>
+  </form>
   {{-- <div class="row">
   <div class="col-xs-12">
     <div class="box">

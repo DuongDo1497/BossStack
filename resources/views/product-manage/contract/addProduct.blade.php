@@ -85,9 +85,9 @@
 
       </div>
 
-      <button class="btn btn-primary btn-pay" onclick="processReports('frm', 'store')">
-        <span class="text">Thanh toán</span>
-        <span class="icon"><i class="fa fa-arrow-right"></i></span>
+      <button class="btn btn-primary btn-pay text" onclick="processReports('frm', 'store')">
+        Tiếp tục thanh toán
+        <img class="last" src="{{ asset('img/icon-arrow-right.svg') }}" alt="">
       </button>
     </form>
   </div>

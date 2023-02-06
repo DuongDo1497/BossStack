@@ -65,15 +65,15 @@
         </div>
         <div class="box-search">
           <div class="control">
-            <a href="{{ route('cashtranfers-add') }}" class="btn btn-gray btn-transfer">
+            <a href="{{ route('cashtranfers-add') }}" class="btn btn-gray btn-transfer text">
               <img class="icon" src="{{ asset('img/icon-transfer.svg') }}" alt="">
               Phân bổ
             </a>
-            <a href="{{ route('cashincomes-process', ['incomestatustype' => 0]) }}" class="btn btn-gray btn-income">
+            <a href="{{ route('cashincomes-process', ['incomestatustype' => 0]) }}" class="btn btn-gray btn-income text">
               <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
               Thu nhập
             </a>
-            <a href="{{ route('cashincomes-process', ['incomestatustype' => 1]) }}" class="btn btn-gray btn-cost">
+            <a href="{{ route('cashincomes-process', ['incomestatustype' => 1]) }}" class="btn btn-gray btn-cost text">
               <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
               Chi phí
             </a>
