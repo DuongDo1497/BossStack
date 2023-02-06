@@ -122,7 +122,7 @@
             <div class="form-group">
               <label for="">Số tiền dư thừa khi nghỉ hưu</label>
               <div class="form-text number">
-                @if ($totalamount_m <= 0)
+                @if ($totalamount_m > 0)
                   {!! formatNumberColorCustom($totalamount_m, 1, 0, 0, 1) !!} <span class="form-text__unit">&#8363;</span>
                 @else
                   {!! formatNumberColorCustom($totalamount_m, 1, 0, 0, 2) !!} <span class="form-text__unit">&#8363;</span>
