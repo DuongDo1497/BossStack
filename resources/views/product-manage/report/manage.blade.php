@@ -9,6 +9,10 @@
     @include('layouts.partials.messages.success')
   @endif
 
+<form role="form" action="{{ route($routeaction) }}?continue=true" method="post" name="frm" id="frm">
+{{ csrf_field() }}
+<input type='hidden' name='typereport' value=''>
+
   <div class="section report-manage">
     <div class="breadcrumb">
       <span>Quản lý khách hàng</span> / <a href="#" class="prev">Sản phẩm</a> / <span
@@ -22,7 +26,7 @@
           <thead>
             <tr>
               <th>
-                <input type="checkbox" name="" id="">
+                <input name="allbox" type="checkbox" id="allbox" onclick="CheckAll(this)">
               </th>
               <th>STT</th>
               <th>Tên khách hàng</th>
@@ -49,20 +53,20 @@
             @foreach ($collections as $customer)
               <tr>
                 <td class="text-center fixed fixed-1">
-                  <input type="checkbox" name="" id="">
+                  <input type='checkbox' name='ids[]' id='ids[]' value="{{ $customer->id }}" onclick="CheckId(this)">
                 </td>
                 <td class="text-center">{{ $i++ }}</td>
-                <td class="text-center">{{ $customer->fullname }}</td>
-                <td class="text-center">{{ $customer->email }}</td>
-                <td class="text-center">{{ $customer->phone }}</td>
+                <td class="text-left">{{ $customer->fullname }}</td>
+                <td class="text-left">{{ $customer->email }}</td>
+                <td class="text-left">{{ $customer->phone }}</td>
                 <td class="text-center">
                   {{ $customer->registerdate == null ? '' : ConvertSQLDate($customer->registerdate) }}
                 </td>
-                <td class="text-center">{{ $customer->content }}</td>
-                <td class="text-center">{{ $companytypes[$customer->companytype] }}</td>
-                <td class="text-center">{{ $customer->title }}</td>
-                <td class="text-center">{{ $coursetype[$customer->course] }}</td>
-                <td class="text-center">{{ $coursetypedetail[$customer->solution] }}</td>
+                <td class="text-left">{{ $customer->content }}</td>
+                <td class="text-left">{{ $companytypes[$customer->companytype] }}</td>
+                <td class="text-left">{{ $customer->title }}</td>
+                <td class="text-left">{{ $coursetype[$customer->course] }}</td>
+                <td class="text-left">{{ $coursetypedetail[$customer->solution] }}</td>
               </tr>
             @endforeach
           </tbody>
@@ -70,9 +74,9 @@
 
         <div class="box-control">
           <div class="control">
-            <p class="count">4</p>
-            <p class="text">User khách hàng đang được chọn</p>
-            <a href="#" class="btn btn-gray btn-delete">
+            <p class="count"><span id="checklabel">0</span></p>
+            <p class="text">Mục đang được chọn</p>
+            <a href="javascript:processDeleteReports('frm', 'delete')" class="btn btn-gray btn-delete">
               <img src="{{ asset('img/icon-delete.svg') }}" alt="">
             </a>
           </div>
@@ -83,7 +87,7 @@
       </div>
     </div>
   </div>
-
+</form>
   {{-- <div class="row">
     <div class="col-xs-12">
       <div class="box">

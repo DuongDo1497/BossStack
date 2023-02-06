@@ -414,11 +414,12 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
         Route::get('/edit/{id}', 'ReportController@edit')->name('report-edit');
         Route::put('/update/{id}', 'ReportController@update')->name('report-update');
         Route::delete('/delete/{id}', 'ReportController@delete')->name('report-delete');
-        Route::get('/listCashConvert', 'ReportController@listCashConvert')->name('report-listcashconvert');
-        Route::get('/listCashConvertLevel', 'ReportController@listCashConvertLevel')->name('report-listcashconvertlevel');
-        Route::get('/listLostControl', 'ReportController@listLostControl')->name('report-listlostcontrol');
-        Route::get('/listOperateConvert', 'ReportController@listOperateConvert')->name('report-listoperateconvert');
-        Route::get('/listOperateConvertLevel', 'ReportController@listOperateConvertLevel')->name('report-listoperateconvertlevel');
+        Route::any('/listCashConvert', 'ReportController@listCashConvert')->name('report-listcashconvert');
+        Route::any('/listCashConvertLevel', 'ReportController@listCashConvertLevel')->name('report-listcashconvertlevel');
+        Route::any('/listLostControl', 'ReportController@listLostControl')->name('report-listlostcontrol');
+        Route::any('/listOperateConvert', 'ReportController@listOperateConvert')->name('report-listoperateconvert');
+        Route::any('/listOperateConvertLevel', 'ReportController@listOperateConvertLevel')->name('report-listoperateconvertlevel');
+        Route::any('/listTalkShowSeries1', 'ReportController@listTalkShowSeries1')->name('report-listtalkshowseries1');
         Route::get('/listContact', 'ReportController@listContact')->name('report-listcontact');
         Route::get('/export/{course}/{solution}', 'ReportController@export')->name('report-export');
 

@@ -87,6 +87,19 @@ class ReportController extends Controller
     public function listCashConvert(Request $request)
     {
         $this->setViewInit();
+
+        $routeaction = 'report-listcashconvert';
+        $this->view->routeaction = $routeaction;
+
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $ret = $this->main_service->delete($id);                    
+            }
+        }
+
         $course = '8';
         $solution = '1';
         $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
@@ -102,6 +115,19 @@ class ReportController extends Controller
     public function listCashConvertLevel(Request $request)
     {
         $this->setViewInit();
+
+        $routeaction = 'report-listcashconvertlevel';
+        $this->view->routeaction = $routeaction;
+
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $ret = $this->main_service->delete($id);                    
+            }
+        }
+
         $course = '8';
         $solution = '2';
         $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
@@ -117,6 +143,18 @@ class ReportController extends Controller
     public function listLostControl(Request $request)
     {
         $this->setViewInit();
+        $routeaction = 'report-listlostcontrol';
+        $this->view->routeaction = $routeaction;
+
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $ret = $this->main_service->delete($id);                    
+            }
+        }
+
         $course = '8';
         $solution = '5';
         $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
@@ -132,6 +170,19 @@ class ReportController extends Controller
     public function listOperateConvert(Request $request)
     {
         $this->setViewInit();
+
+        $routeaction = 'report-listoperateconvert';
+        $this->view->routeaction = $routeaction;
+
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $ret = $this->main_service->delete($id);                    
+            }
+        }
+
         $course = '9';
         $solution = '3';
         $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
@@ -147,6 +198,19 @@ class ReportController extends Controller
     public function listOperateConvertLevel(Request $request)
     {
         $this->setViewInit();
+
+        $routeaction = 'report-listoperateconvertlevel';
+        $this->view->routeaction = $routeaction;
+
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $ret = $this->main_service->delete($id);                    
+            }
+        }
+
         $course = '9';
         $solution = '4';
         $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
@@ -159,6 +223,34 @@ class ReportController extends Controller
         return $this->view('manage');
     }
 
+    public function listTalkShowSeries1(Request $request)
+    {
+        $this->setViewInit();
+
+        $routeaction = 'report-listtalkshowseries1';
+        $this->view->routeaction = $routeaction;
+
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $ret = $this->main_service->delete($id);                    
+            }
+        }
+
+        $course = '10';
+        $solution = '';
+        $collections = $this->main_service->getListCoachings($course, $solution)->paginate($this->view->filter['limit']);        
+        $this->view->collections = $collections;
+        $this->view->course = $course;
+        $this->view->solution = $solution;
+
+        $this->view->setHeading('TALKSHOW SERIES 1: CHIẾN LƯỢC DÒNG TIỀN');
+        $this->view->setSubHeading('TALKSHOW SERIES 1');
+        return $this->view('manage');
+    }
+    
     public function listContact(Request $request)
     {
         $this->setViewInit();
