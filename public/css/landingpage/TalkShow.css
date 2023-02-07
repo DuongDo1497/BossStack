@@ -196,11 +196,18 @@
 
 @media (max-width: 575.98px){
   .speakers-list{
+    width: 100%;
+    margin: 0;
     flex-direction: column;
   }
 
   .speakers-list .speakers-item{
-    max-width: 100%;
+    width: 100%;
+    margin: 0 0 1.6rem 0;
+  }
+
+  .speakers-list .speakers-item:last-child{
+    margin: 0;
   }
 }
 
@@ -554,9 +561,18 @@
     font-size: 1.2rem;
   }
 
+  .introduction-img{
+    max-width: 100%;
+    margin: 0 0 3rem 0;
+  }
+
   .introduction-address{
     flex-direction: column;
     row-gap: 3rem;
+  }
+
+  .introduction-address__item{
+    max-width: 100%;
   }
 
   .introduction-address__img img{
