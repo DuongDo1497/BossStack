@@ -143,8 +143,17 @@
 
 @media (max-width: 575.98px) {
   .section-about .about-wrap{
-    row-gap: 3rem;
+    width: 100%;
+    margin: 0;
     flex-direction: column;
+  }
+
+  .section-about .about-wrap > *{
+    margin: 0;
+  }
+
+  .section-about .about-wrap .about-content{
+    margin-bottom: 3rem;
   }
 }
 
