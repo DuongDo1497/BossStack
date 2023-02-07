@@ -22,23 +22,56 @@
                   <th class="fixed fixed-1">STT</th>
                   <th class="fixed fixed-2">Tài sản</th>
                   <th class="fixed fixed-3">Phân loại</th>
-                  <th>Ví</th>
                   <th>Chi tiết</th>
                   <th>Ngày</th>
                 </tr>
               </thead>
               <tbody>
+                @php
+                  $i = 1;
+                @endphp
+                @foreach ($collections as $cashasset)
+                  <tr>
+                    <td class="text-center fixed fixed-2">{{ $i++ }}</td>
+                    <td class="fixed fixed-3">
+                      <p>
+                        {{ $cashasset->assetname }}
+                      </p>
+                      <p>Số tiền: {{ formatNumber($cashasset->amount, 1, 0, 1) }}</p>
+                    </td>
+                    <td class="text-left">{{ $cashasset->config_types_name }}</td>
+                    <td class="text-left">{{ $cashasset->config_type_details_name }}</td>
+                    <td class="text-center">
+                      {{ $cashasset->assetdate == null ? '' : ConvertSQLDate($cashasset->assetdate) }}
+                    </td>
+                  </tr>
+                @endforeach
+
+                @foreach ($listaccounts as $cashasset)
+                @php
+                $cashname = "Ví mục tiêu";
+                if($cashasset->accountno == $primaryaccount){
+                $requireamount = $cashasset->amount;
+                $cashname = "Ví tổng";
+                }else{
+                $requireamount = $cashasset->requireamount;
+                $cashname = "Ví mục tiêu";
+                }
+                @endphp
                 <tr>
-                  <td class="text-center fixed fixed-1">1</td>
-                  <td class="fixed fixed-2">
-                    <p>Xe máy</p>
-                    <p>Số tiền: 10.000.000</p>
-                  </td>
-                  <td class="fixed fixed-3">Nợ tín chấp</td>
-                  <td class="text-center">1322163965</td>
-                  <td>Nợ vay mua nhà</td>
-                  <td class="text-center">24/11/2022</td>
-              </tbody>
+                    <td style="text-align: center;" class="text-nowrap">{{ $i++ }}</td>
+                    <td style="text-align: left;" class="text-nowrap">{{ $cashasset->accountname }}
+                        &nbsp;&nbsp;&nbsp;
+                        <br>Số tiền: {{ formatNumber($requireamount, 1, 0, 1) }}
+                    </td>
+                    <td style="text-align: left;" class="text-nowrap">{{ $cashname }}</td>
+                    <td style="text-align: left;" class="text-nowrap">Mã ví {{ $cashasset->accountno
+                        }} </td>
+                    <td style="text-align: center;" class="text-nowrap">{{ $cashasset->accountdate ==
+                        null ? "" : ConvertSQLDate($cashasset->accountdate) }}</td>
+                </tr>
+                @endforeach
+                </tbody>
             </table>
           </div>
         </div>

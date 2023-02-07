@@ -337,6 +337,15 @@ class CashAssetController extends Controller
     {
         $this->setView();
 
+        $customer_id = (Auth::user()->customer() == null ? "-1" : Auth::user()->customer()->first()->id);
+        $collections = $this->main_service->getListAccountAssetFromCustomerStatus($customer_id, "", "", "0")->paginate();
+        $this->view->collections = $collections;
+
+        $accountno = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->customercode) . "0000";
+        $this->view->primaryaccount = $accountno;
+        $listaccounts = app(CashAccountService::class)->getListAccountDetailStatus($customer_id, "", "0")->paginate();
+        $this->view->listaccounts = $listaccounts;
+
         $this->view->setHeading('LỊCH SỬ TÀI SẢN - NỢ');
         return $this->view('history');
     } 

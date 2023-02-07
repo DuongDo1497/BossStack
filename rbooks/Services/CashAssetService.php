@@ -185,6 +185,7 @@ class CashAssetService extends BaseService
         $check = [
                     ['cash_assets.deleted_at', '=', null],
                     ['cash_assets.customer_id', '=', "$customer_id"],
+                    ['cash_assets.remainamount', '!=', "0"],
                  ];
         if($sfromDate != ""){
             $check[] = ['cash_assets.assetdate', '>=', "$sfromDate"];   
@@ -202,6 +203,43 @@ class CashAssetService extends BaseService
 
         return $listData;    
     }
+
+    /**
+     * getListAccountAssetFromCustomerStatus
+     * Lay danh sach tai san cua khach hang
+     * 
+     * @author  linh
+     * @return  string
+     * @access  public
+     * @date    03 14, 2020 5:18:52 PM
+     */
+    public function getListAccountAssetFromCustomerStatus($customer_id, $sfromDate, $stoDate, $status)
+    {
+
+        $check = [
+                    ['cash_assets.deleted_at', '=', null],
+                    ['cash_assets.customer_id', '=', "$customer_id"],
+                 ];
+        if($sfromDate != ""){
+            $check[] = ['cash_assets.assetdate', '>=', "$sfromDate"];   
+        }
+        if($stoDate != ""){
+            $check[] = ['cash_assets.assetdate', '<=', "$stoDate"];   
+        }
+        if($status != ""){
+            $check[] = ['cash_assets.remainamount', '=', "$status"];   
+        }
+
+        $listData = DB::table('cash_assets')->leftjoin('customers', 'customers.id', '=', 'cash_assets.customer_id')
+                        ->leftjoin('config_types', 'config_types.id', '=', 'cash_assets.assettype')
+                        ->leftjoin('config_type_details', 'config_type_details.id', '=', 'cash_assets.assettypedetail')
+                        ->select('cash_assets.id','fullname','assetname','assettype','assettypedetail','assetdate','assetstatustype','amount','remainamount','currency','config_types.name as config_types_name','config_type_details.name as config_type_details_name','document')
+                        ->where($check)
+                        ->orderBy('cash_assets.assetdate', 'desc');
+
+        return $listData;    
+    }
+
 
     /**
      * getListAccountAssetFromCustomerByAssetStatusType

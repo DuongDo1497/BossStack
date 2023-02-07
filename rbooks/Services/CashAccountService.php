@@ -163,11 +163,26 @@ class CashAccountService extends BaseService
                         ->where('cash_accounts.customer_id', '=', "$customer_id")
                         ->where('cash_accounts.deleted_at', '=', null)
                         ->where('cash_accounts.accountno', '<>', "$accountno")
+                        ->where('cash_accounts.amount', '!=', "0")
                         ->orderBy('plandate', 'ASC');
 
         return $listData;    
     }
 
+    public function getListAccountDetailStatus($customer_id, $accountno, $status)
+    {
+        $listData = DB::table('cash_accounts')
+                        ->leftjoin('cash_plans', 'cash_accounts.accountno', '=', 'cash_plans.accountno')
+                        ->select('cash_plans.id','cash_plans.customer_id','plantype','planname','plandate','cash_plans.currency','currentage','planage','planamount','currentamount','requireamount','planamountunittype','currentamountunittype','requireamountunittype','cash_plans.description','document','cash_accounts.accountno','cash_accounts.accountname','cash_accounts.accountdate','cash_accounts.amount')
+                        ->where('cash_accounts.customer_id', '=', "$customer_id")
+                        ->where('cash_accounts.deleted_at', '=', null)
+                        ->where('cash_accounts.accountno', '<>', "$accountno")
+                        ->where('cash_accounts.amount', '=', "$status")
+                        ->orderBy('plandate', 'ASC');
+
+        return $listData;    
+    }
+    
     public function getListCashTransactionFromCustomerIdAccountNo($customer_id, $accountno, $accountstatustype, $fromdate, $todate)
     {
         $search = [
