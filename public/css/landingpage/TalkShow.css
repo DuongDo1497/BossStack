@@ -27,6 +27,12 @@
   color: var(--white-cl);
 }
 
+@media (max-width: 1199.98px){
+  .header .menu{
+    width: 50rem;
+  }
+}
+
 @media (max-width: 575.98px){
   .header .wrap{
     justify-content: center;
@@ -80,12 +86,6 @@
   font-family: mb;
 }
 
-.banner .banner-top span:nth-child(2){
-  width: 1px;
-  height: 2.4rem;
-  background-color: var(--white-cl);
-}
-
 .banner .banner-content p{
   font-size: 2rem;
   color: #C5FFFF;
@@ -128,7 +128,13 @@
 .section-about .about-wrap{
   display: flex;
   align-items: center;
-  column-gap: 3.6rem;
+  --gap: 3.6rem;
+  margin: 0 0 0 calc(-1 * var(--gap));
+  width: calc(100% + var(--gap));
+}
+
+.section-about .about-wrap > *{
+  margin: 0 0 0 var(--gap);
 }
 
 .section-about p{
@@ -153,15 +159,21 @@
 }
 
 .speakers-list{
+  --row-gap: 6rem;
+  --col-gap: 1.8rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 6rem 1.8rem;
-  /* justify-content: space-between; */
+  /* gap: 6rem 1.8rem; */
+  margin: calc(-1 * var(--row-gap)) 0 0 calc(-1 * var(--col-gap));
+  width: calc(100% + var(--col-gap));
 }
 
 .speakers-list .speakers-item{
-  max-width: calc(25% - 14px);
+  width: calc(25% - 18px);
+  margin: var(--row-gap) 0 0 var(--col-gap);
 }
+
+.speakers-list .speakers-item
 
 .speakers-list .speakers-avt{
   margin-bottom: 1.6rem;
@@ -220,11 +232,10 @@
 }
 
 .schedule-list{
-  height: 66rem;
+  height: 70rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  row-gap: 1.6rem;
 }
 
 .schedule-list .schedule-item{
@@ -232,6 +243,7 @@
   position: relative;
   border-radius: 1rem;
   padding: 2.7rem 3.6rem;
+  margin-bottom: 1.6rem;
   background: rgba(15, 52, 248, 0.4);
 }
 
@@ -299,7 +311,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  row-gap: 6rem;
+}
+
+.level-wrap .level-img{
+  margin-bottom: 6rem;
 }
 
 /* Main - Event venue and Buy ticket */
@@ -418,10 +433,18 @@
   font-family: mb;
 }
 
-.ticket-about__subtitle span:nth-child(2){
-  width: 1px;
-  height: 2.4rem;
-  background-color: var(--white-cl);
+@media (max-width: 1199.98px){
+  .ticket-wrap{
+    --w-ticket-about: 50%;
+  }
+
+  .ticket-about{
+    padding: 7.6rem 3rem;
+  }
+
+  .ticket-about__subtitle span.text{
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width: 575.98px){
@@ -475,12 +498,6 @@
   font-family: mb;
 }
 
-.introduction-top span:nth-child(2){
-  width: 1px;
-  height: 2.4rem;
-  background-color: var(--white-cl);
-}
-
 .introduction-img{
   max-width: 50%;
   margin: 0 auto 6rem;
@@ -524,6 +541,12 @@
 .introduction-address__info .item p{
   color: var(--white-cl);
   margin-bottom: 0;
+}
+
+@media (max-width: 1199.98px){
+  .introduction-address__item{
+    max-width: 45%;
+  }
 }
 
 @media (max-width: 575.98px){

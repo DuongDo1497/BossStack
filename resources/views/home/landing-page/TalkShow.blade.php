@@ -70,13 +70,12 @@
       <div class="wrap">
         <div class="banner-content">
           <div class="banner-top">
-            <span class="text">talkshow</span>
-            <span></span>
-            <span class="text">series 1: chiến lược dòng tiền</span>
+            <span class="text">series talkshow:</span>
+            <span class="text">chiến lược dòng tiền</span>
           </div>
           <img class="img-fluid banner-img" src="{{ asset('img/landing-page/talkshow/banner-img-1.png') }}"
             alt="BossStack">
-          <p>"BÓC TÁCH DÒNG TIỀN dành cho Doanh nghiệp SMEs" lần đầu tiên được tổ chức với mong muốn
+          <p>"BÓC TÁCH DÒNG TIỀN trong Doanh nghiệp SMEs" lần đầu tiên được tổ chức với mong muốn
             giúp các Doanh nghiệp đưa ra những cái nhìn khách quan về tài chính từ đó có cái nhìn chuyên sâu trong việc
             quản trị dòng tiền hiệu quả.<br /><br />Đây là cơ hội để các Doanh nghiệp SMEs lắng nghe, trao đổi và kết
             nối cùng các chuyên gia trong ngành tài
@@ -100,7 +99,7 @@
                 thường có quy mô nhỏ và hoạt động trong thời gian ngắn. Việc hạn chế nguồn lực và kinh nghiệm trong ứng
                 phó với những biến động bất ngờ của nền kinh tế, các Doanh nghiệp thường không có sự chuẩn bị kịp thời
                 và không có một kế hoạch phù hợp để ứng phó bao gồm cả việc quản trị dòng tiền kém hiệu quả.</p>
-              <p>Để hiểu hơn về vấn đề này, Talkshow Series 1 - CHIẾN LƯỢC DÒNG TIỀN dành cho Doanh nghiệp SMEs với các
+              <p>Để hiểu hơn về vấn đề này, Series Talkshow - CHIẾN LƯỢC DÒNG TIỀN dành cho Doanh nghiệp SMEs với các
                 phiên thảo luận do Đơn vị tổ chức RBooks đồng hành cùng nhà tài trợ chính BossStack
                 sẽ giúp các Doanh nghiệp SMEs chuẩn bị trước những rủi ro, tránh khỏi các mất mát không đáng có về vấn
                 đề dòng tiền.</p>
@@ -131,18 +130,6 @@
 
               <div class="speakers-item">
                 <div class="speakers-avt">
-                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-5.jpg') }}"
-                    alt="Chau Pham">
-                </div>
-                <div class="speakers-content">
-                  <p class="speakers-name">Ông Nguyễn Xuân Thành</p>
-                  <p class="speakers-position">Giảng viên Trường Chính sách công và quản lý FullBright, thành viên Tổ
-                    tư vấn Kinh tế Chính phủ</p>
-                </div>
-              </div>
-
-              <div class="speakers-item">
-                <div class="speakers-avt">
                   <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-8.jpg') }}"
                     alt="Chau Pham">
                 </div>
@@ -161,6 +148,18 @@
                   <p class="speakers-name">Ông Nam Nguyễn</p>
                   <p class="speakers-position">CEO Opla Consulting</p>
                 </div>
+              </div>
+
+              <div class="speakers-item">
+                {{-- <div class="speakers-avt">
+                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-5.jpg') }}"
+                    alt="Chau Pham">
+                </div>
+                <div class="speakers-content">
+                  <p class="speakers-name">Ông Nguyễn Xuân Thành</p>
+                  <p class="speakers-position">Giảng viên Trường Chính sách công và quản lý FullBright, thành viên Tổ
+                    tư vấn Kinh tế Chính phủ</p>
+                </div> --}}
               </div>
 
               <div class="speakers-item">
@@ -263,8 +262,8 @@
             <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
               <p class="schedule-time">15 : 45</p>
               <div class="schedule-content">
-                <p class="schedule-title"><span class="highlight">Panel Discussion:</span><br />Cắt giảm để tăng
-                  trưởng</p>
+                <p class="schedule-title"><span class="highlight">Panel Discussion:</span><br />Ứng phó trước nguy cơ
+                  suy thoái</p>
               </div>
               <span class="schedule-highligth"></span>
             </div>
@@ -272,8 +271,8 @@
             <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
               <p class="schedule-time">16 : 50</p>
               <div class="schedule-content">
-                <p class="schedule-title"><span class="highlight">Panel Discussion: </span>SMEs
-                  2023 - Tồn tại và phát triển bền vững</p>
+                <p class="schedule-title"><span class="highlight">Panel Discussion: </span>SMEs 2023 - Phát triển bền
+                  vững</p>
               </div>
               <span class="schedule-highligth"></span>
             </div>
@@ -370,9 +369,8 @@
                 <img class="img-fluid ticket-about__logo" src="{{ asset('img/landing-page/talkshow/logo.svg') }}"
                   alt="BossStack">
                 <div class="ticket-about__subtitle">
-                  <span class="text">talkshow</span>
-                  <span></span>
-                  <span class="text">series 1: chiến lược dòng tiền</span>
+                  <span class="text">series talkshow:</span>
+                  <span class="text">chiến lược dòng tiền</span>v
                 </div>
                 <img class="img-fluid banner-img" src="{{ asset('img/landing-page/talkshow/banner-img-1.png') }}"
                   alt="BossStack">
@@ -387,9 +385,8 @@
       <div class="container">
         <div class="wrap">
           <div class="introduction-top">
-            <span class="text">talkshow</span>
-            <span></span>
-            <span class="text">series 1: chiến lược dòng tiền</span>
+            <span class="text">series talkshow:</span>
+            <span class="text">chiến lược dòng tiền</span>
           </div>
 
           <img class="img-fluid introduction-img" src="{{ asset('img/landing-page/talkshow/banner-img-2.png') }}"

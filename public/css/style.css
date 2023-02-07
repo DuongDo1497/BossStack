@@ -42,6 +42,13 @@ body {
   color: var(--gray-cl-7);
 }
 
+@media (max-width: 1199.98px){
+  body{
+    font-size: 13px !important;
+    line-height: calc(20 / 13);
+  }
+}
+
 *::-webkit-scrollbar {
   width: 8px;
 }

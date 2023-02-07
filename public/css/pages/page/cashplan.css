@@ -61,15 +61,9 @@
   font-size: 14px;
 }
 
-@media (max-width: 991.98px){
-  .cashplan-index .noti-index__wrap,
-  .cashplan-analysis .noti-index__wrap{
-    padding-left: 0;
-    padding-right: 0;
-  }
-
+@media (max-width: 1199.98px){
   .cashplan-index .filter-timeline{
-    width: 60%;
+    width: 318px;
   }
 
   .cashplan-index .table-wrap .table-content{
@@ -96,6 +90,18 @@
 
   .cashplan-index .table-wrap table .fixed-3 {
     left: 71px; 
+  }
+}
+
+@media (max-width: 991.98px){
+  .cashplan-index .noti-index__wrap,
+  .cashplan-analysis .noti-index__wrap{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cashplan-index .filter-timeline{
+    width: 60%;
   }
 
   .cashplan-add  .btn-add{
