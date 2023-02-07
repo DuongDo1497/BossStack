@@ -14,25 +14,7 @@
   margin-left: 237px;
 }
 
-@media (max-width: 991.98px){
-  .cashincome-add .btn-save,
-  .cashincome-edit .btn-save{
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .cashincome-index .noti-index__wrap{
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .cashincome-index .control .btn{
-    --w-btn: calc(100% / 3);
-    width: var(--w-btn);
-    font-size: 14px;
-    column-gap: 5px;
-  }
-
+@media (max-width: 1199.98px){
   .cashincome-index .table-wrap .table-content{
     width: calc(100% - 192px); 
     margin-left: 192px;
@@ -40,7 +22,7 @@
   }
 
   .cashincome-index .table-wrap table th.fixed{
-    height: 102px;
+    height: 75px;
   }
 
   .cashincome-index .table-wrap tr:first-child th:last-child{
@@ -69,5 +51,25 @@
 
   .cashincome-index .table-wrap table .fixed-3 {
     left: 71px; 
+  }
+}
+
+@media (max-width: 991.98px){
+  .cashincome-add .btn-save,
+  .cashincome-edit .btn-save{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .cashincome-index .noti-index__wrap{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cashincome-index .control .btn{
+    --w-btn: calc(100% / 3);
+    width: var(--w-btn);
+    font-size: 14px;
+    column-gap: 5px;
   }
 }

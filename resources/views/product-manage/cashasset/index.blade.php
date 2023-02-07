@@ -226,19 +226,22 @@
                       }
                     @endphp
                     <tr class="table-cashasset">
-                      <td></td>
-                      <td style="text-align: center;" class="text-nowrap">{{ $i++ }}</td>
-                      <td style="text-align: left;" class="text-nowrap">{{ $cashasset->accountname }}
-                        &nbsp;&nbsp;&nbsp;
-                        <br>Số tiền: {{ formatNumber($requireamount, 1, 0, 1) }}
+                      <td class="text-center fixed fixed-1">
+                        <input type='checkbox' name='ids[]' id='ids[]' value="{{ $cashasset->id }}"
+                          onclick="CheckId(this)">
                       </td>
-                      <td style="text-align: left;" class="text-nowrap">{{ $cashname }}</td>
-                      <td style="text-align: left;" class="text-nowrap">Mã ví {{ $cashasset->accountno }} </td>
-                      <td style="text-align: center;" class="text-nowrap">
+                      <td class="text-center fixed fixed-2">{{ $i++ }}</td>
+                      <td class="fixed fixed-3">
+                        <p>{{ $cashasset->accountname }}</p>
+                        <p>Số tiền: {{ formatNumber($requireamount, 1, 0, 1) }}</p>
+                      </td>
+                      <td class="text-left">{{ $cashname }}</td>
+                      <td class="text-left">Mã ví {{ $cashasset->accountno }} </td>
+                      <td class="text-center">
                         {{ $cashasset->accountdate == null ? '' : ConvertSQLDate($cashasset->accountdate) }}
                       </td>
-                      <td style="text-align: right;" class="text-nowrap"></td>
-                      <td style="text-align: right;" class="text-nowrap">{!! formatNumberColorCustom($cashasset->amount, 1, 0, 0, 0) !!}</td>
+                      <td class="text-right"></td>
+                      <td class="text-right">{!! formatNumberColorCustom($cashasset->amount, 1, 0, 0, 0) !!}</td>
                     </tr>
                   @endforeach
 
