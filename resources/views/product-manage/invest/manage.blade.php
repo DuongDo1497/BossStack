@@ -33,19 +33,21 @@
               Tạo mới
             </a>
           </h6>
-
+<form role="form" action="{{ route('invests-manage') }}?continue=true" method="post" name="frm" id="frm">
+{{ csrf_field() }}
+<input type='hidden' name='typereport' value=''>
           <table class="table table-bordered table-list">
             <thead>
               <tr>
                 <th>
-                  <input type="checkbox" name="" id="">
+                  <input name="allbox" type="checkbox" id="allbox" onclick="CheckAll(this)">
                 </th>
                 <th>STT</th>
                 <th>Tiêu đề</th>
                 <th>Loại</th>
                 <th>Ngày đăng</th>
                 <th>Tác giả</th>
-                <th>Hiển thị</th>
+                <th>Ẩn/Hiển thị</th>
               </tr>
             </thead>
 
@@ -61,7 +63,7 @@
               @foreach ($collections as $model)
                 <tr>
                   <td class="text-center fixed fixed-1">
-                    <input type="checkbox" name="" id="">
+                    <input type='checkbox' name='ids[]' id='ids[]' value="{{ $model->id }}" onclick="CheckId(this)">
                   </td>
                   <td class="text-center">{{ $i++ }}</td>
                   <td>
@@ -79,20 +81,18 @@
           </table>
 
           <div class="box-control">
-            <div class="control">
-              <p class="count">4</p>
-              <p class="text">Ví tài chính đang được chọn</p>
-              <a href="#" class="btn btn-gray btn-delete">
-                <img src="{{ asset('img/icon-delete.svg') }}" alt="">
-              </a>
-              <a href="#" class="btn btn-gray btn-edit">
-                <img src="{{ asset('img/icon-edit.svg') }}" alt="">
-              </a>
-            </div>
+          <div class="control">
+            <p class="count"><span id="checklabel">0</span></p>
+            <p class="text">Tài sản đang được chọn</p>
+            <a href="javascript:processDeleteReports('frm', 'delete')" class="btn btn-gray btn-delete">
+              <img src="{{ asset('img/icon-delete.svg') }}" alt="">
+            </a>
+          </div>
             <div class="paging">
               {{ $collections->render('product-manage.invest.partials.pagination') }}
             </div>
           </div>
+</form>          
         </div>
       </div>
     </div>

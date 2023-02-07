@@ -19,69 +19,89 @@
     <form role="form" action="{{ route('invests-store') }}?index=true" method="post" id="frm"
       enctype="multipart/form-data">
       {{ csrf_field() }}
-
+      <input type='hidden' name='typereport' value=''>
       <div class="box-content">
         <div class="box box-primary">
           <div class="box-form">
             <div class="form-group">
               <label for="newsdate">Ngày đăng<span>*</span>:</label>
               <input type="text" class="form-control" name="newsdate" id="newsdate"
-                value="{{ old('newsdate') == '' ? $newsdate : old('newsdate') }}" readonly>
+                value="{{ old('newsdate') == '' ? $newsdate : old('newsdate') }}">
+              @if ($errors->has('newsdate'))
+                <span class="text-danger">{{ $errors->first('newsdate') }}</span>
+              @endif
             </div>
             <div class="form-group">
               <label for="newstype">Loại<span>*</span>:</label>
               <select class="form-select select2" name="newstype" id="newstype">
                 <option selected>Chọn loại</option>
                 @foreach ($newstypes as $key => $value)
-                  @if ($key == old('newstype'))
+                  @if (old('newstype') != '' and $key == old('newstype'))
                     <option value="{{ $key }}" selected>{{ $value }}</option>
                   @else
                     <option value="{{ $key }}">{{ $value }}</option>
                   @endif
                 @endforeach
               </select>
+              @if ($errors->has('newstype'))
+                <span class="text-danger">{{ $errors->first('newstype') }}</span>
+              @endif
             </div>
             <div class="form-group">
               <label for="newstitle">Tiêu đề<span>*</span>:</label>
               <input type="text" class="form-control" name="newstitle" id="newstitle" value="{{ old('newstitle') }}"
                 placeholder="Nhập tiêu đề..." required>
+              @if ($errors->has('newstitle'))
+                <span class="text-danger">{{ $errors->first('newstitle') }}</span>
+              @endif
             </div>
             <div class="form-group">
               <label for="fImages">Ảnh giới thiệu<span>*</span>:</label>
               <div class="form-div">
                 <input type="hidden" name="newsimage" value="">
-                <input type="file" class="form-control" name="fImages" id="fImages" required>
+                <input type="file" class="form-control" name="fImages" id="fImages">
                 <small>Lưu ý: Tải hình ảnh có kích thước 500 x 500 (px) và dung lượng hình dưới 2MB</small>
               </div>
             </div>
             <div class="form-group">
               <label for="importFile">Tải tệp đính kèm:</label>
               <div class="form-div">
-                <input type="hidden" name="" value="">
-                <input type="file" class="form-control" name="importFile" id="importFile" multiple>
+                <input type="file" class="form-control" name="importFile" id="importFile">
                 <small>Lưu ý: Tải file .pdf hoặc .docx</small>
               </div>
             </div>
             <div class="form-group">
               <label for="shortcontent">Mô tả<span>*</span>:</label>
               <textarea name="shortcontent" id="shortcontent" required>{{ old('shortcontent') }}</textarea>
+              @if ($errors->has('shortcontent'))
+                  <span class="text-danger">{{ $errors->first('shortcontent') }}</span>
+              @endif          
             </div>
             <div class="form-group">
               <label for="content">Nội dung<span>*</span>:</label>
               <textarea name="content" id="content" required>{{ old('content') }}</textarea>
+              @if ($errors->has('content'))
+                <span class="text-danger">{{ $errors->first('content') }}</span>
+              @endif        
             </div>
             <div class="form-group">
               <label for="author">Tác giả<span>*</span>:</label>
               <input type="text" class="form-control" name="author" id="author" value="{{ old('author') }}"
                 placeholder="Nhập tên tác giả..." required>
+              @if ($errors->has('author'))
+                <span class="text-danger">{{ $errors->first('author') }}</span>
+              @endif
             </div>
             <div class="form-group">
-              <label for="chk-hidden">Hiển thị<span>*</span>:</label>
+              <label for="chk-hidden">Ẩn/Hiển thị<span>*</span>: <br><font size='2'>(Chọn: Ẩn, Không chọn: Hiển thị)</font></label>
               <input type="checkbox" name="hidden" value="1" id="chk-hidden"
-                {{ old('hidden') == 1 ? 'checked' : '' }} required>
+                {{ old('hidden') == 1 ? 'checked' : '' }} required> 
+              @if ($errors->has('hidden'))
+                <span class="text-danger">{{ $errors->first('hidden') }}</span>
+              @endif
             </div>
           </div>
-          <button class="btn btn-primary btn-add" onclick="processReports('frm', 'process')">
+          <button class="btn btn-primary btn-add" onclick="processReports('frm', 'store')">
             Thêm blog
           </button>
         </div>

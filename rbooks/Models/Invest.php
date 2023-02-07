@@ -13,7 +13,7 @@ class Invest extends BaseModel
      * @var array
      */
     protected $fillable = [
-        'newsdate', 'newstype', 'newstitle', 'newsimage' , 'shortcontent', 'content', 'newsorder', 'author', 'hidden', 'created_user_id', 'created_at', 'updated_user_id', 'updated_at' 
+        'newsdate', 'newstype', 'newstitle', 'newsimage', 'importfile' , 'shortcontent', 'content', 'newsorder', 'author', 'hidden', 'created_user_id', 'created_at', 'updated_user_id', 'updated_at' 
     ];
 
 

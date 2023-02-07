@@ -33,6 +33,17 @@ class InvestService extends BaseService
             $image->move(public_path($defaultUserImage), $imageName);
         }
 
+        $importFileName = "";
+        $importFile = $request->file('importFile');
+        if($importFile == null) {
+            $imageN = "";
+            $importFileName = "";
+        } else {
+            $imageN = $importFile->getClientOriginalName();
+            $importFileName = $defaultUserImage.$imageN;
+            $importFile->move(public_path($defaultUserImage), $importFileName);
+        }
+
         $newsdate = ($request->newsdate==""?quote_smart("0000-00-00"):quote_smart(FormatDateForSQL($request->newsdate)));
         $newstype = quote_smart($request->newstype);
         $newstitle = quote_smart($request->newstitle);
@@ -54,6 +65,7 @@ class InvestService extends BaseService
             'newstype' => $newstype,
             'newstitle' => $newstitle,
             'newsimage' => $imageName,
+            'importfile' => $importFileName,
             'shortcontent' => $shortcontent,
             'content' => $content,
             'newsorder' => $newsorder,
@@ -80,6 +92,17 @@ class InvestService extends BaseService
             $image->move(public_path($defaultUserImage), $imageName);
         }
 
+        $importFileName = "";
+        $importFile = $request->file('importFile');
+        if($importFile == null) {
+            $imageN = $request->importfile;
+            $importFileName = $imageN;
+        } else {
+            $imageN = $importFile->getClientOriginalName();
+            $importFileName = $defaultUserImage.$imageN;
+            $importFile->move(public_path($defaultUserImage), $importFileName);
+        }
+
         $newsdate = ($request->newsdate==""?quote_smart("0000-00-00"):quote_smart(FormatDateForSQL($request->newsdate)));
         $newstype = quote_smart($request->newstype);
         $newstitle = quote_smart($request->newstitle);
@@ -98,6 +121,7 @@ class InvestService extends BaseService
             'newstype' => $newstype,
             'newstitle' => $newstitle,
             'newsimage' => $imageName,
+            'importfile' => $importFileName,
             'shortcontent' => $shortcontent,
             'content' => $content,
             'newsorder' => $newsorder,
@@ -113,10 +137,9 @@ class InvestService extends BaseService
     {
         $listData = app(Invest::class)
                             ->where('newstype', 'like', "%$searchField%")
-                            ->where('shortcontent', 'LIKE', "%$searchValue%")
+                            ->where('shortcontent', 'like', "%$searchValue%")
                             ->where('deleted_at', '=', null)
                             ->orderBy('created_at', 'desc');
-                                        
         return $listData;    
     }            
 
@@ -124,7 +147,7 @@ class InvestService extends BaseService
     {
         $listData = app(Invest::class)
                             ->where('newstype', 'like', "%$searchField%")
-                            ->where('shortcontent', 'LIKE', "%$searchValue%")
+                            ->where('shortcontent', 'like', "%$searchValue%")
                             ->where('hidden', '=', '0')
                             ->where('deleted_at', '=', null)
                             ->orderBy('created_at', 'desc');

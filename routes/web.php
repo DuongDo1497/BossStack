@@ -385,7 +385,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
     // Đầu tư
     Route::group(['prefix' => 'invests'], function (){
         Route::get('/', 'InvestController@index')->name('invests-index');
-        Route::get('/manage', 'InvestController@manage')->name('invests-manage');
+        Route::any('/manage', 'InvestController@manage')->name('invests-manage');
         Route::get('/add', 'InvestController@add')->name('invests-add');
         Route::post('/store', 'InvestController@store')->name('invests-store');
         Route::get('/edit/{id}', 'InvestController@edit')->name('invests-edit');

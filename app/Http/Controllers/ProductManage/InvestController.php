@@ -106,6 +106,15 @@ class InvestController extends Controller
     
     public function manage(Request $request)
     {
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $ret = $this->main_service->delete($id);                    
+            }
+        }
+
         $this->setView($request);
         $this->view->setHeading('BLOG');
 
