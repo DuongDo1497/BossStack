@@ -207,7 +207,6 @@
 /* DASHBOARD ADMIN */
 
 .dashboard-admin.no-bg .breadcrumb, 
-.dashboard-admin.no-bg .title-page,
-.dashboard-admin .noti-index__wrap{
+.dashboard-admin.no-bg .title-page{
   background-color: var(--white-cl);
 }

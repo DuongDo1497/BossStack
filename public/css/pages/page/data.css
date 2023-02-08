@@ -58,3 +58,21 @@
 .user-customer .box-primary:last-child .filter-timeline .form-group label{
   font-size: 16px;
 }
+
+.user-customer__add .box-form .form-row .form-group:last-child{
+  --w-label: 85px;
+}
+
+.user-customer__add .box-search .btn{
+  width: auto;
+}
+
+.user-customer__add .box-search{
+  margin-top: 24px;
+  margin-left: 143px;
+}
+
+.user-customer__add .box-search .btn-cancel{
+  color: #1890FF;
+  background-color: transparent;
+}

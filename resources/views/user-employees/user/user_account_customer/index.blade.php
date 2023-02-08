@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="control">
-                  <a href="#" class="btn btn-primary btn-add">
+                  <a href="{{ route('usercustomers-add') }}" class="btn btn-primary btn-add text">
                     <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
                     Tạo mới
                   </a>
@@ -90,7 +90,8 @@
                   <td class="text-center">{{ $user->email }}</td>
                   <td class="text-center">{{ $user->role }}</td>
                   <td class="text-center">{{ $user->created_at == null ? '' : ConvertSQLDate($user->created_at, 1) }}</td>
-                  <td class="text-center">{{ $user->updated_at == null ? '' : ConvertSQLDate($user->updated_at, 1) }}</td>
+                  <td class="text-center">{{ $user->updated_at == null ? '' : ConvertSQLDate($user->updated_at, 1) }}
+                  </td>
                 </tr>
                 @php
                   $i++;

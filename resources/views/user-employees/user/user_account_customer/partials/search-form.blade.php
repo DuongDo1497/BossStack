@@ -27,7 +27,7 @@
     </div>
 
     <div class="control">
-      <button type="submit" class="btn btn-primary btn-search">
+      <button type="submit" class="btn btn-primary btn-search text">
         <img class="icon" src="{{ asset('img/icon-search.svg') }}" alt="">
         Tìm kiếm
       </button>
