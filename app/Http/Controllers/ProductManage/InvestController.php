@@ -172,6 +172,7 @@ class InvestController extends Controller
         $collections_2 = $this->main_service->getListNews('2', '')->paginate($this->view->filter['limit']);        
         $this->view->collections_2 = $collections_2;
 
+        $this->view->setHeading('CHI TIẾT BLOG');
         $this->view->setSubHeading('Chi tiết');
 
         return $this->view('detail');

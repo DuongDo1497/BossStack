@@ -74,191 +74,189 @@
       <span>Thông tin tài khoản</span> / <span class="current">Thông tin cá nhân</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
-@if(isset($infor))
-<div class="alert {{$alert}}">
-    {{ $infor }}
-</div>
-@endif
-@if(session()->has('success'))
-    @include('layouts.partials.messages.success')
-@endif
-      <div class="box-content" id="accordion-customers">
-        <div class="box box-primary">
-          <h6 class="box-title">Tài khoản và email</h6>
-          <div class="box-form">
-            <div class="form-group">
-              <label for="fullname">Tên đầy đủ:</label>
-              <input type="text" class="form-control" name="fullname" id="fullname" value="{{ $model->fullname }}"
-                readonly>
-            </div>
+    @if (isset($infor))
+      <div class="alert {{ $alert }}">
+        {{ $infor }}
+      </div>
+    @endif
+    @if (session()->has('success'))
+      @include('layouts.partials.messages.success')
+    @endif
+    <div class="box-content" id="accordion-customers">
+      <div class="box box-primary">
+        <h6 class="box-title">Tài khoản và email</h6>
+        <div class="box-form">
+          <div class="form-group">
+            <label for="fullname">Tên đầy đủ:</label>
+            <input type="text" class="form-control" name="fullname" id="fullname" value="{{ $model->fullname }}"
+              readonly>
+          </div>
 
-            <div class="form-group">
-              <label for="idaccess">ID truy cập:</label>
-              <div class="form-div">
-                <input type="text" class="form-control" name="idaccess" id="idaccess"
-                  value="{{ $model->user()->first() == null ? '' : $model->user()->first()->email }}" readonly>
-                <small>ID truy cập là tài khoản dùng để đăng nhập vào các dịch vụ trên hệ
-                  thống</small>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="currentage">Email:</label>
-              <div class="form-div">
-                <input type="text" class="form-control" name="currentage" id="currentage"
-                  value="{{ $model->user()->first() == null ? '' : $model->user()->first()->email }}" readonly>
-                <small>Địa chỉ email được sử dụng để đăng nhập và lấy lại thông tin mật khẩu khi bị
-                  mất,
-                  nhận tất cả các email thông báo, thông tin từ hệ thống</small>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="currentage">Quản lý thông tin cá nhân:</label>
-              <p class="form-text">Thông tin chi tiết khách hàng <a data-toggle="collapse"
-                  data-parent="#accordion-customers" href="#customerinfo">[Sửa]</a></p>
-            </div>
-
-            <div class="form-group">
-              <label for="currentage">Mật khẩu:</label>
-              <input type="password" class="form-control" name="currentage" id="currentage" value="*********" readonly>
-              <a class="change-pass" data-toggle="collapse" data-parent="#accordion-customers" href="#changepassword">[Đổi
-                mật khẩu]</a>
+          <div class="form-group">
+            <label for="idaccess">ID truy cập:</label>
+            <div class="form-div">
+              <input type="text" class="form-control" name="idaccess" id="idaccess"
+                value="{{ $model->user()->first() == null ? '' : $model->user()->first()->email }}" readonly>
+              <small>ID truy cập là tài khoản dùng để đăng nhập vào các dịch vụ trên hệ
+                thống</small>
             </div>
           </div>
-        </div>
 
-        <div class="box box-primary collapse" id="customerinfo">
-        <form role="form" action="{{ route('customers-updateCustomer', ['id' => $model->id]) }}?continue=true" method="post"
-          id="customer-form" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="currentage">Email:</label>
+            <div class="form-div">
+              <input type="text" class="form-control" name="currentage" id="currentage"
+                value="{{ $model->user()->first() == null ? '' : $model->user()->first()->email }}" readonly>
+              <small>Địa chỉ email được sử dụng để đăng nhập và lấy lại thông tin mật khẩu khi bị
+                mất,
+                nhận tất cả các email thông báo, thông tin từ hệ thống</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="currentage">Quản lý thông tin cá nhân:</label>
+            <p class="form-text">Thông tin chi tiết khách hàng <a data-toggle="collapse"
+                data-parent="#accordion-customers" href="#customerinfo">[Sửa]</a></p>
+          </div>
+
+          <div class="form-group">
+            <label for="currentage">Mật khẩu:</label>
+            <input type="password" class="form-control" name="currentage" id="currentage" value="*********" readonly>
+            <a class="change-pass" data-toggle="collapse" data-parent="#accordion-customers" href="#changepassword">[Đổi
+              mật khẩu]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="box box-primary collapse" id="customerinfo">
+        <form role="form" action="{{ route('customers-updateCustomer', ['id' => $model->id]) }}?continue=true"
+          method="post" id="customer-form" enctype="multipart/form-data">
           {{ csrf_field() }}
           {{ method_field('put') }}
 
-          <div class="box-item">
-            <div class="customer-info">
-              <h6 class="box-title">Thông tin khách hàng </h6>
-              <div class="box-form">
-                <div class="form-group">
-                  <label for="fullname">Họ & tên<span>*</span>:</label>
-                  <input type="text" class="form-control" name="fullname" id="fullname" value="{{ $model->fullname }}"
-                    required>
-                </div>
-
-                <div class="form-row">
+          <div class="box-wrap">
+            <div class="box-item">
+              <div class="customer-info">
+                <h6 class="box-title">Thông tin khách hàng </h6>
+                <div class="box-form">
                   <div class="form-group">
-                    <label for="birthday">Ngày sinh<span>*</span>:</label>
-                    <input type="text" class="form-control" name="birthday" id="birthday"
-                      value="{{ ConvertSQLDate($model->birthday) }}" required>
+                    <label for="fullname">Họ & tên<span>*</span>:</label>
+                    <input type="text" class="form-control" name="fullname" id="fullname"
+                      value="{{ $model->fullname }}" required>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="birthday">Ngày sinh<span>*</span>:</label>
+                      <input type="text" class="form-control" name="birthday" id="birthday"
+                        value="{{ ConvertSQLDate($model->birthday) }}" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="gender">Giới tính<span>*</span>:</label>
+                      <select class="form-control select2" name="gender" required>
+                        @foreach ($gendertype as $key => $value)
+                          @if ($key == $model->gender)
+                            <option value="{{ $key }}" selected>{{ $value }}</option>
+                          @else
+                            <option value="{{ $key }}">{{ $value }}</option>
+                          @endif
+                        @endforeach
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="phone">Điện thoại<span>*</span>:</label>
+                      <input type="text" class="form-control" name="phone" id="phone"
+                        value="{{ $model->phone }}" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email<span>*</span>:</label>
+                      <input type="text" class="form-control" name="email" id="email"
+                        value="{{ $model->user()->first() == null ? '' : $model->user()->first()->email }}" required>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="gender">Giới tính<span>*</span>:</label>
-                    <select class="form-control select2" name="gender" required>
-                      @foreach ($gendertype as $key => $value)
-                        @if ($key == $model->gender)
+                    <label for="address">Địa chỉ<span>*</span>:</label>
+                    <input type="text" class="form-control" name="address" id="address"
+                      value="{{ $model->address }}" required>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="contactname">Người liên lạc khi cần:</label>
+                      <input type="text" class="form-control" name="contactname" id="contactname"
+                        value="{{ $model->contactname }}">
+                    </div>
+                    <div class="form-group">
+                      <label for="">Điện thoại:</label>
+                      <input type="text" class="form-control" name="contactphone" id="contactphone"
+                        value="{{ $model->contactphone }}">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="currentage">Nhóm khách hàng<span>*</span>:</label>
+                    <select class="form-control select2" name="customertype" required>
+                      @foreach ($customertype as $key => $value)
+                        @if ($key == $model->customertype)
                           <option value="{{ $key }}" selected>{{ $value }}</option>
                         @else
                           <option value="{{ $key }}">{{ $value }}</option>
                         @endif
                       @endforeach
                     </select>
-                    {{-- <input type="text" class="form-control" name="gender" id="gender"
-                      value="{{ $model->gender }}"> --}}
                   </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="phone">Điện thoại<span>*</span>:</label>
-                    <input type="text" class="form-control" name="phone" id="phone" value="{{ $model->phone }}"
-                      required>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email<span>*</span>:</label>
-                    <input type="text" class="form-control" name="email" id="email"
-                      value="{{ $model->user()->first() == null ? '' : $model->user()->first()->email }}" required>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="address">Địa chỉ<span>*</span>:</label>
-                  <input type="text" class="form-control" name="address" id="address"
-                    value="{{ $model->address }}" required>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="contactname">Người liên lạc khi cần:</label>
-                    <input type="text" class="form-control" name="contactname" id="contactname"
-                      value="{{ $model->contactname }}">
-                  </div>
-                  <div class="form-group">
-                    <label for="">Điện thoại:</label>
-                    <input type="text" class="form-control" name="contactphone" id="contactphone" value="{{ $model->contactphone }}">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="currentage">Nhóm khách hàng<span>*</span>:</label>
-                  <select class="form-control select2" name="customertype" required>
-                    @foreach ($customertype as $key => $value)
-                      @if ($key == $model->customertype)
-                        <option value="{{ $key }}" selected>{{ $value }}</option>
-                      @else
-                        <option value="{{ $key }}">{{ $value }}</option>
-                      @endif
-                    @endforeach
-                  </select>
                 </div>
               </div>
+              {{-- <div class="customer-social">
+                <h6 class="box-title">Nguồn thông tin biết đến chương trình</h6>
+                <div class="box-form">
+                  <div class="form-group">
+                    <label for="introduction_facebook">Facebook:</label>
+                    <input type="text" class="form-control" name="introduction_facebook" id="introduction_facebook"
+                      value="{{ $model->introduction_facebook }}">
+                  </div>
+                  <div class="form-group">
+                    <label for="introduction_email">Email:</label>
+                    <input type="text" class="form-control" name="introduction_email" id="introduction_email"
+                      value="{{ $model->introduction_email }}">
+                  </div>
+                  <div class="form-group">
+                    <label for="introduction_user">Giới thiệu:</label>
+                    <input type="text" class="form-control" name="introduction_user" id="introduction_user"
+                      value="{{ $model->introduction_user }}">
+                  </div>
+                  <div class="form-group">
+                    <label for="introduction_orther">Khác:</label>
+                    <input type="text" class="form-control" name="introduction_orther" id="introduction_orther"
+                      value="{{ $model->introduction_orther }}">
+                  </div>
+                </div>
+              </div> --}}
             </div>
-            {{-- <div class="customer-social">
-            <h6 class="box-title">Nguồn thông tin biết đến chương trình</h6>
-            <div class="box-form">
-              <div class="form-group">
-                <label for="introduction_facebook">Facebook:</label>
-                <input type="text" class="form-control" name="introduction_facebook" id="introduction_facebook"
-                  value="{{ $model->introduction_facebook }}">
+            <div class="box-item">
+              <div class="customer-avatar">
+                <img src="{{ asset(empty($model->avatar) ? NO_IMAGE_URL : $model->avatar) }}"
+                  alt="{{ $model->fullname }}">
               </div>
               <div class="form-group">
-                <label for="introduction_email">Email:</label>
-                <input type="text" class="form-control" name="introduction_email" id="introduction_email"
-                  value="{{ $model->introduction_email }}">
-              </div>
-              <div class="form-group">
-                <label for="introduction_user">Giới thiệu:</label>
-                <input type="text" class="form-control" name="introduction_user" id="introduction_user"
-                  value="{{ $model->introduction_user }}">
-              </div>
-              <div class="form-group">
-                <label for="introduction_orther">Khác:</label>
-                <input type="text" class="form-control" name="introduction_orther" id="introduction_orther"
-                  value="{{ $model->introduction_orther }}">
-              </div>
-            </div>
-          </div> --}}
-          </div>
-          <div class="box-item">
-            <div class="customer-avatar">
-              <img src="{{ asset(empty($model->avatar) ? NO_IMAGE_URL : $model->avatar) }}"
-                alt="{{ $model->fullname }}">
-            </div>
-            <div class="form-group">
-              <div class="form-div">
-                <input type="file" class="form-control" name="fImages" id="fImages">
-                <small>Lưu ý: Tải hình ảnh có kích thước 500 x 500 (px) và dung lượng hình dưới
-                  2MB</small>
+                <div class="form-div">
+                  <input type="file" class="form-control" name="fImages" id="fImages">
+                  <small>Lưu ý: Tải hình ảnh có kích thước 500 x 500 (px) và dung lượng hình dưới
+                    2MB</small>
+                </div>
               </div>
             </div>
           </div>
-        <button type="submit" class="btn btn-primary btn-update">Cập nhật</button>
+          <button type="submit" class="btn btn-primary btn-update">Cập nhật</button>
         </form>
-        </div>
+      </div>
 
-        <div class="box box-primary collapse" id="changepassword">
-        <form role="form" action="{{ route('customers-updateSecurityCustomer') }}?continue=true" method="post" id="customer-form">
+      <div class="box box-primary collapse" id="changepassword">
+        <form role="form" action="{{ route('customers-updateSecurityCustomer') }}?continue=true" method="post"
+          id="customer-form">
           {{ csrf_field() }}
           <input type='hidden' name='typereport' value=''>
-          <input type='hidden' name='customer_id' value='{{ $customer_id }}'>                
+          <input type='hidden' name='customer_id' value='{{ $customer_id }}'>
 
           <h6 class="box-title">Thay đổi mật khẩu</h6>
           <div class="box-form">
@@ -266,29 +264,33 @@
               <label for="oldpassword">Mật khẩu cũ:</label>
               <input type="password" class="form-control" name="oldpassword" id="oldpassword"
                 placeholder="Nhập mật khẩu cũ...">
-              @if($errors->has('oldpassword'))<span class="text-danger">{{ $errors->first('oldpassword') }}</span>@endif
+              @if ($errors->has('oldpassword'))
+                <span class="text-danger">{{ $errors->first('oldpassword') }}</span>
+              @endif
             </div>
 
             <div class="form-group">
               <label for="newpassword">Mật khẩu mới:</label>
               <input type="password" class="form-control" name="newpassword" id="newpassword"
                 placeholder="Nhập mật khẩu mới...">
-                @if($errors->has('newpassword'))<span class="text-danger">{{ $errors->first('newpassword') }}</span>@endif
+              @if ($errors->has('newpassword'))
+                <span class="text-danger">{{ $errors->first('newpassword') }}</span>
+              @endif
             </div>
 
             <div class="form-group">
               <label for="confirmnewpassword">Nhập lại mật khẩu mới:</label>
               <input type="password" class="form-control" name="confirmnewpassword" id="confirmnewpassword"
                 placeholder="Nhập lại mật khẩu mới...">
-              @if($errors->has('confirmnewpassword'))<span class="text-danger">{{ $errors->first('confirmnewpassword') }}</span>@endif                
+              @if ($errors->has('confirmnewpassword'))
+                <span class="text-danger">{{ $errors->first('confirmnewpassword') }}</span>
+              @endif
             </div>
           </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-update">Cập nhật</button>
-      </form>
+          <button type="submit" class="btn btn-primary btn-update">Cập nhật</button>
+        </form>
       </div>
-
+    </div>
   </div>
 
   {{-- <div class="row">

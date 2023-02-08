@@ -25,7 +25,7 @@
 
   <div class="section invest-detail">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('invests-index') }}">Khuyến nghị</a> / <span
+      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('invests-index') }}">Blog</a> / <span
         class="current">{{ $model->newstitle }}</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
@@ -44,7 +44,7 @@
             </div>
             <div class="single-post__content">{!! $model->content !!}</div>
             <p class="single-post__slogan">
-              BossStack - Xây dựng chiến lược quản lý tài chính và gia tăng lợi nhuận lâu dài.
+              BossStack - The easiest way to control business accurately and effciently
             </p>
           </div>
           <div class="single-post__tag">
@@ -62,7 +62,7 @@
             @foreach ($collections_0 as $model)
               @php
                 $i++;
-                if ($i >= 4) {
+                if ($i >= 3) {
                     break;
                 }
               @endphp

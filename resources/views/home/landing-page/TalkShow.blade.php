@@ -75,7 +75,7 @@
           </div>
           <img class="img-fluid banner-img" src="{{ asset('img/landing-page/talkshow/banner-img-1.png') }}"
             alt="BossStack">
-          <p>"BÓC TÁCH DÒNG TIỀN trong Doanh nghiệp SMEs" lần đầu tiên được tổ chức với mong muốn
+          <p>"BÓC TÁCH DÒNG TIỀN dành cho Doanh nghiệp SMEs" lần đầu tiên được tổ chức với mong muốn
             giúp các Doanh nghiệp đưa ra những cái nhìn khách quan về tài chính từ đó có cái nhìn chuyên sâu trong việc
             quản trị dòng tiền hiệu quả.<br /><br />Đây là cơ hội để các Doanh nghiệp SMEs lắng nghe, trao đổi và kết
             nối cùng các chuyên gia trong ngành tài
@@ -222,9 +222,9 @@
           </h4>
           <div class="schedule-list">
             <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
-              <p class="schedule-time">13 : 30</p>
+              <p class="schedule-time">13 : 00</p>
               <div class="schedule-content">
-                <p class="schedule-title">Đón khách | Giao lưu - Kết nối</p>
+                <p class="schedule-title">Đón khách</p>
               </div>
               <span class="schedule-highligth"></span>
             </div>
@@ -237,20 +237,11 @@
               <span class="schedule-highligth"></span>
             </div>
 
-            <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
-              <p class="schedule-time">14 : 05</p>
-              <div class="schedule-content">
-                <p class="schedule-title">Đại diện ban tổ chức phát biểu</p>
-              </div>
-              <span class="schedule-highligth"></span>
-            </div>
-
             <div class="schedule-item" data-aos="flip-left" ata-aos-anchor-placement="bottom-bottom">
               <p class="schedule-time">14 : 15</p>
               <div class="schedule-content">
-                <p class="schedule-title"><span class="highlight">Key note Speaker:</span><br />Ứng
-                  dụng công nghệ
-                  trong việc quản trị và bóc tách dòng tiền</p>
+                <p class="schedule-title"><span class="highlight">Key note Speaker:</span><br />Ứng dụng công nghệ
+                  trong quản trị dòng tiền</p>
                 {{-- <div class="schedule-info">
                   <p>Diễn giả : Bà Châu Phạm - CEO RBooks</p>
                   <p>- Chuyên gia Cố Vấn Tài Chính chiến lược cấp cao thương hiệu BossStack</p>
@@ -260,7 +251,7 @@
             </div>
 
             <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
-              <p class="schedule-time">15 : 45</p>
+              <p class="schedule-time">14 : 50</p>
               <div class="schedule-content">
                 <p class="schedule-title"><span class="highlight">Panel Discussion:</span><br />Ứng phó trước nguy cơ
                   suy thoái</p>
@@ -269,18 +260,19 @@
             </div>
 
             <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
-              <p class="schedule-time">16 : 50</p>
+              <p class="schedule-time">15 : 50</p>
               <div class="schedule-content">
-                <p class="schedule-title"><span class="highlight">Panel Discussion: </span>SMEs 2023 - Phát triển bền
+                <p class="schedule-title"><span class="highlight">Panel Discussion: </span><br />SMEs 2023 - Phát
+                  triển bền
                   vững</p>
               </div>
               <span class="schedule-highligth"></span>
             </div>
 
             <div class="schedule-item" data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
-              <p class="schedule-time">16 : 55</p>
+              <p class="schedule-time">17 : 00</p>
               <div class="schedule-content">
-                <p class="schedule-title">Kết thúc</p>
+                <p class="schedule-title">Cảm ơn và chào kết</p>
               </div>
               <span class="schedule-highligth"></span>
             </div>
