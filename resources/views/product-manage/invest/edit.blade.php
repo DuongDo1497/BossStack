@@ -71,8 +71,10 @@
             <div class="form-group">
               <label for="importFile">Tải tệp đính kèm:</label>
               <div class="form-div">
+                @if ($model->importfile != '')
                 <a target='blank' href='{{ asset(empty($model->importfile) ? '' : $model->importfile) }}' title='Click để download file về máy'><i class="fa fa-paperclip"></i> 
                 {{ mb_substr($model->importfile, strrpos($model->importfile, '/', 1)+1) }}</a>
+                @endif
                 <input type="hidden" name="importfile" value="{{ $model->importfile }}">
                 <input type="file" class="form-control" name="importFile" id="importFile">
                 <small>Lưu ý: Tải file .pdf hoặc .docx</small>

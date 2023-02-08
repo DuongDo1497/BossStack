@@ -34,7 +34,6 @@
             <div class="form-group">
               <label for="newstype">Loại<span>*</span>:</label>
               <select class="form-select select2" name="newstype" id="newstype">
-                <option selected>Chọn loại</option>
                 @foreach ($newstypes as $key => $value)
                   @if (old('newstype') != '' and $key == old('newstype'))
                     <option value="{{ $key }}" selected>{{ $value }}</option>
