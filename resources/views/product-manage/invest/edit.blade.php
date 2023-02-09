@@ -21,7 +21,6 @@
       {{ csrf_field() }}
       {{ method_field('put') }}
       <input type='hidden' name='typereport' value=''>
-
       <div class="box-content">
         <div class="box box-primary">
           <div class="box-form">

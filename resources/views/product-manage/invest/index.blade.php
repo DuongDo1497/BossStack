@@ -64,7 +64,7 @@
     </div>
   </div>
 
- <div class="news">
+  {{-- <div class="news">
   <div class="news-list">
     <div class="news-latest">
       <h3 class="title-category"><span>NHẬN ĐỊNH CHỨNG KHOÁN</span></h3>
@@ -208,7 +208,7 @@
       @endforeach
     </div>
   </div>
-</div>
+</div> --}}
 @endsection
 
 

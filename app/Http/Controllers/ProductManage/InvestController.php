@@ -92,14 +92,14 @@ class InvestController extends Controller
 
         $this->viewInit();
                 
-        $collections_0 = $this->main_service->getListNews('0', '')->paginate($this->view->filter['limit']);        
+        $collections_0 = $this->main_service->getListNews('', '')->paginate($this->view->filter['limit']);        
         $this->view->collections_0 = $collections_0;
                 
-        $collections_1 = $this->main_service->getListNews('1', '')->paginate($this->view->filter['limit']);        
-        $this->view->collections_1 = $collections_1;
-
-        $collections_2 = $this->main_service->getListNews('2', '')->paginate($this->view->filter['limit']);        
-        $this->view->collections_2 = $collections_2;
+//        $collections_1 = $this->main_service->getListNews('1', '')->paginate($this->view->filter['limit']);        
+//        $this->view->collections_1 = $collections_1;
+//
+//        $collections_2 = $this->main_service->getListNews('2', '')->paginate($this->view->filter['limit']);        
+//        $this->view->collections_2 = $collections_2;
                        
         return $this->view('index');
     }
@@ -172,7 +172,6 @@ class InvestController extends Controller
         $collections_2 = $this->main_service->getListNews('2', '')->paginate($this->view->filter['limit']);        
         $this->view->collections_2 = $collections_2;
 
-        $this->view->setHeading('CHI TIẾT BLOG');
         $this->view->setSubHeading('Chi tiết');
 
         return $this->view('detail');
