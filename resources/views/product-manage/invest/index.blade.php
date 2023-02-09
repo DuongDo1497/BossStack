@@ -39,7 +39,7 @@
           @foreach ($collections_0 as $model)
             @php
               $i++;
-              if ($i >= 7) {
+              if ($i >= 50) {
                   break;
               }
             @endphp

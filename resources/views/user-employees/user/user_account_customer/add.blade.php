@@ -108,7 +108,9 @@
           <div class="box-search">
             <div class="control">
               <a href="{{ route('usercustomers-index') }}" class="btn btn-primary btn-cancel">Hủy bỏ</a>
-              <button type="submit" class="btn btn-primary btn-save">Lưu</button>
+              <button type="submit" class="btn btn-primary btn-save" onclick="processReports('frm', 'save')">Lưu</button>
+              <button type="submit" class="btn btn-primary btn-save" onclick="processReports('frm', 'mail')">Lưu & Gửi
+                mail</button>
             </div>
           </div>
         </div>
@@ -301,5 +303,5 @@
 @endsection
 
 @section('scripts')
-  @include('user-employees.user.user_account_customer.partials.script');
+  @include('user-employees.user.user_account_customer.partials.script')
 @endsection

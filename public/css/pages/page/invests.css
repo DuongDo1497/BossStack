@@ -1,6 +1,6 @@
 .news{
   --gap: 32px;
-  --item-count: 3;
+  --item-count: 4;
   display: flex;
   flex-wrap: wrap;
   margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
@@ -33,7 +33,7 @@
 
 .news-item .news-image{
   width: 100%;
-  height: 202px;
+  height: 280px;
 }
 
 .news-item .news-image img{
@@ -48,6 +48,7 @@
 
 .news-content .news-title,
 .news-content .news-des{
+  height: 66px;
   display:-webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -147,8 +148,23 @@
   margin: 0 auto 16px;
 }
 
+@media (max-width: 1399.98px){
+  .news{
+    --item-count: 3;
+  }
+}
+
+@media (max-width: 1199.98px){
+  .news{
+    --item-count: 2;
+  }
+}
+
 @media (max-width: 991.98px){
-  .news-item,
+  .news{
+    --item-count: 1;
+  }
+
   .single-post__content, 
   .single-post__slogan{
     width: 100%;

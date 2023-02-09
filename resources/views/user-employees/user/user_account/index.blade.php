@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('head')
+  <link rel="stylesheet" href="{{ asset('css/pages/page/data.css') }}">
   {{-- <link rel="stylesheet" href="{{ asset('bower_components/select2/dist/css/select2.min.css') }}">
   <link rel="stylesheet" href="{{ asset('plugins/iCheck/all.css') }}">
   <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}"> --}}
@@ -12,6 +13,109 @@
   @if (session()->has('errors'))
     @include('layouts.partials.messages.errors')
   @endif
+
+  <div class="section user-admin no-bg">
+    <div class="breadcrumb">
+      <span>Quản lý Data</span> / <span class="current">Danh sách User khách hàng</span>
+    </div>
+    <p class="title-page">{{ $title->heading }}</p>
+
+    <div class="box-content">
+      <div class="box box-primary">
+        <div class="wrap">
+          <h6 class="box-title">Tìm kiếm</h6>
+          @include('user-employees.user.user_account.partials.search-form')
+        </div>
+      </div>
+
+      <div class="box box-primary">
+        <div class="wrap">
+          <h6 class="box-title">
+            Danh sách
+            <div class="box-search">
+              <form action="#" method="GET">
+                <div class="filter-timeline">
+                  <div class="form-group">
+                    <label for="">Lọc theo:</label>
+                    <select class="form-control select2" name="" id="">
+                      <option selected>Chọn</option>
+                      <option value="">10 dòng / trang</option>
+                      <option value="">25 dòng / trang</option>
+                      <option value="">50 dòng / trang</option>
+                      <option value="">100 dòng / trang</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="control">
+                  <a href="{{ route('users-add') }}" class="btn btn-primary btn-add text">
+                    <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
+                    Tạo mới
+                  </a>
+                </div>
+              </form>
+            </div>
+          </h6>
+
+          <table class="table table-bordered table-list">
+            <thead>
+              <tr>
+                <th>
+                  <input name="" type="checkbox" id="" onclick="">
+                </th>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Email</th>
+                <th>Quyền truy cập</th>
+                <th>Ngày khởi tạo</th>
+                <th>Ngày chỉnh sửa</th>
+              </tr>
+            </thead>
+            <tbody>
+              @if ($collections->count() === 0)
+                <tr>
+                  <td colspan="7"><b>Không có dữ liệu!!!</b></td>
+                </tr>
+              @endif
+              @php
+                $i = 1;
+              @endphp
+              @foreach ($collections as $user)
+                <tr>
+                  <td class="text-center">
+                    <input type='checkbox' name='' id='' value="" onclick="">
+                  </td>
+                  <td class="text-center">{{ $i }}</td>
+                  <td><a href="{{ route('users-edit', ['id' => $user->id]) }}">{{ $user->name }}</a></td>
+                  <td class="text-center">{{ $user->email }}</td>
+                  <td class="text-center">{{ $user->role }}</td>
+                  <td class="text-center">{{ $user->created_at == null ? '' : ConvertSQLDate($user->created_at, 1) }}</td>
+                  <td class="text-center">{{ $user->updated_at == null ? '' : ConvertSQLDate($user->updated_at, 1) }}
+                  </td>
+                </tr>
+                @php
+                  $i++;
+                @endphp
+              @endforeach
+            </tbody>
+          </table>
+
+          <div class="box-control">
+            <div class="control">
+              <p class="count"><span id="checklabel">0</span></p>
+              <p class="text">User admin đang được chọn</p>
+              <a href="#" class="btn btn-gray btn-delete">
+                <img src="{{ asset('img/icon-delete.svg') }}" alt="">
+              </a>
+            </div>
+            <div class="paging">
+              {{ $collections->appends(['searchField' => $searchField, 'searchValue' => $searchValue])->links() }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   {{-- @include('user-employees.user.user_account.partials.search-form') --}}
   {{-- <div class="row">

@@ -54,7 +54,7 @@
   <div class="section section-why why-product">
     <div class="container">
       <div class="wrap">
-        <h4 class="section-title">Tại sao doanh nghiệp<br />cần giải pháp vận hành số chuyên sâu?
+        <h4 class="section-title">Tại sao doanh nghiệp<br /> cần giải pháp vận hành số chuyên sâu?
         </h4>
         <div class="why-product__content">
           <div class="why-product__list">

@@ -55,6 +55,7 @@ class UserController extends Controller
         $this->view->applicationroles = app(ApplicationRolesService::class)->getAll();
         $this->view->accounttypes = config('rbooks.ACCOUNTTYPE');
         
+        $this->view->setHeading('Thêm mới User quản trị');
         $this->view->setSubHeading('Thêm mới tài khoản đăng nhập');
         return $this->view('user_account.add');
     }
@@ -67,6 +68,7 @@ class UserController extends Controller
         $this->view->accounttypes = config('rbooks.ACCOUNTTYPE');
                 
         // Setup title
+        $this->view->setHeading('Chỉnh sửa User quản trị');
         $this->view->setSubHeading('Chỉnh sửa');
         return $this->view('user_account.edit');
     }

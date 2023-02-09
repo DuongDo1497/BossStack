@@ -57,7 +57,9 @@ class UserCustomerController extends Controller
         $this->view->accountproductstatus = config('rbooks.ACCOUNTPRODUCTSTATUS');        
         $this->view->serviceproduct = app(ServiceProductService::class)->getListServiceProduct(1);
                 
+        $this->view->setHeading('Thêm mới User khách hàng');
         $this->view->setSubHeading('Thêm mới tài khoản đăng nhập');
+
         return $this->view('user_account_customer.add');
     }
     
@@ -73,6 +75,7 @@ class UserCustomerController extends Controller
         $this->view->serviceproduct = app(ServiceProductService::class)->getListServiceProduct(1);
                         
         // Setup title
+        $this->view->setHeading('Chỉnh sửa User khách hàng');
         $this->view->setSubHeading('Chỉnh sửa');
         return $this->view('user_account_customer.edit');
     }

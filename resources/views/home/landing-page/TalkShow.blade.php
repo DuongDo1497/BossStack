@@ -130,6 +130,18 @@
 
               <div class="speakers-item">
                 <div class="speakers-avt">
+                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-5.jpg') }}"
+                    alt="Chau Pham">
+                </div>
+                <div class="speakers-content">
+                  <p class="speakers-name">Ông Nguyễn Xuân Thành</p>
+                  <p class="speakers-position">Giảng viên Trường Chính sách công và quản lý FullBright, thành viên Tổ
+                    tư vấn Kinh tế Chính phủ</p>
+                </div>
+              </div>
+
+              <div class="speakers-item">
+                <div class="speakers-avt">
                   <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-8.jpg') }}"
                     alt="Chau Pham">
                 </div>
@@ -148,18 +160,6 @@
                   <p class="speakers-name">Ông Nam Nguyễn</p>
                   <p class="speakers-position">CEO Opla Consulting</p>
                 </div>
-              </div>
-
-              <div class="speakers-item">
-                {{-- <div class="speakers-avt">
-                  <img class="img-fluid" src="{{ asset('img/landing-page/talkshow/speakers-5.jpg') }}"
-                    alt="Chau Pham">
-                </div>
-                <div class="speakers-content">
-                  <p class="speakers-name">Ông Nguyễn Xuân Thành</p>
-                  <p class="speakers-position">Giảng viên Trường Chính sách công và quản lý FullBright, thành viên Tổ
-                    tư vấn Kinh tế Chính phủ</p>
-                </div> --}}
               </div>
 
               <div class="speakers-item">
@@ -203,7 +203,7 @@
                 </div>
                 <div class="speakers-content">
                   <p class="speakers-name">Ông Quốc Khánh</p>
-                  <p class="speakers-position">CEO Vietsuccess</p>
+                  <p class="speakers-position">CEO VietSuccess</p>
                 </div>
               </div>
             </div>

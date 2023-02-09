@@ -37,8 +37,8 @@
 
 body {
   font-family: hr !important;
-  font-size: 16px !important;
-  line-height: calc(24 / 16);
+  font-size: 14px !important;
+  line-height: calc(22 / 14);
   color: var(--gray-cl-7);
 }
 
@@ -336,7 +336,7 @@ h6{
   display: flex;
   align-items: center;
   color: var(--gray-cl-3);
-  padding: 8px 16px;
+  padding: 6px 16px;
 }
 
 .skin-blue .sidebar-menu li.treeview > a img,
@@ -411,8 +411,8 @@ h6{
 .skin-blue .sidebar-menu > li > .treeview-menu > li > a {
   color: var(--gray-cl-3);
   padding-left: 40px;
-  padding-top: 7.5px;
-  padding-bottom: 7.5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   font-size: 14px;
   transition: all 0.4s ease 0s;
 }
