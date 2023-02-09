@@ -47,11 +47,6 @@
               BossStack - The easiest way to control business accurately and effciently
             </p>
           </div>
-          <div class="single-post__tag">
-            <span class="item">#Dòng tiền</span>
-            <span class="item">#Doanh nghiệp</span>
-            <span class="item">#Quản lý tài chính</span>
-          </div>
         </div>
         <div class="news-related">
           <p class="news-related__title">Bài viết liên quan</p>
