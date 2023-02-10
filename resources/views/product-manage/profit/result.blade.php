@@ -31,7 +31,7 @@
             <tr>
               <th colspan="2">Tổng doanh thu</th>
               <td class="text-right">{{ formatNumber($doanhthu, 1, 0, 1) }} <span>&#8363;</span></td>
-              <td class="text-right">0 <span>%</span></td>
+              <td class="text-right"></td>
             </tr>
             <tr>
               <th colspan="2">Tổng chi phí</th>
@@ -67,6 +67,11 @@
               <td class="text-right">{{ formatNumber($tilechiphikhac, 1, 2, 1) }} <span>%</span></td>
             </tr>
             <tr>
+              <th colspan="2">Lợi nhuận trước thuế</th>
+              <td class="text-right">0 <span>&#8363;</span></td>
+              <td class="text-right">0 <span>%</span></td>
+            </tr>
+            <tr>
               <th colspan="2">Thuế thu nhập doanh nghiệp (20%)</th>
               <td class="text-right">{{ formatNumber($thuethunhapdoanhnghiep, 1, 0, 1) }} <span>&#8363;</span></td>
               <td class="text-right">{{ formatNumber($tilethuethunhapdoanhnghiep, 1, 2, 1) }} <span>%</span></td>
@@ -75,7 +80,7 @@
 
           <tfoot>
             <tr>
-              <th colspan="2">Lợi nhuận</th>
+              <th colspan="2">Lợi nhuận sau thuế</th>
               <td class="text-right">{{ formatNumber($loinhuan, 1, 0, 1) }} <span>&#8363;</span></td>
               <td class="text-right">{{ formatNumber($tileloinhuan, 1, 2, 2) }} <span>%</span></td>
             </tr>
