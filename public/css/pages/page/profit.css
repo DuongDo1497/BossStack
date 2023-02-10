@@ -119,6 +119,12 @@
   width: auto;
 }
 
+.profit-history .btn-add{
+  width: 255px;
+  margin-left: auto;
+  margin-bottom: 24px;
+}
+
 .profit-history table tbody td{
   text-align: center;
 }

@@ -18,6 +18,10 @@
 
     <div class="box-content">
       <div class="box box-primary">
+        <a href="#" class="btn btn-primary btn-add text">
+          <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
+          Tính lợi nhuận kinh doanh
+        </a>
         <table class="table table-bordered table-list">
           <thead>
             <tr>
