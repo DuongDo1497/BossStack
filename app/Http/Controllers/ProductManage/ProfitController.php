@@ -48,11 +48,14 @@ class ProfitController extends Controller
     public function index(Request $request)
     {
         $this->setViewInit();
-
         $customer_id = Auth::user()->customer()->first()->id;
         $profitbusinessconfig = app(ProfitBusinessConfigService::class)->getProfitBusinessConfigFromCustomerId($customer_id)->first();
-        $check = $profitbusinessconfig->count();
-        $this->view->profitbusinessconfig = $profitbusinessconfig;
+        $check = 0;
+        if ($profitbusinessconfig != null){
+            $check = $profitbusinessconfig->count();
+            $this->view->profitbusinessconfig = $profitbusinessconfig;
+        }
+
         if ($check != 0){
         	return $this->view('add');
         }else{
@@ -65,6 +68,14 @@ class ProfitController extends Controller
         $result = app(ProfitBusinessConfigService::class)->create($request);
 
         $this->setViewInit();
+        $customer_id = Auth::user()->customer()->first()->id;
+        $profitbusinessconfig = app(ProfitBusinessConfigService::class)->getProfitBusinessConfigFromCustomerId($customer_id)->first();
+        $check = 0;
+        if ($profitbusinessconfig != null){
+            $check = $profitbusinessconfig->count();
+            $this->view->profitbusinessconfig = $profitbusinessconfig;
+        }
+
         return $this->view('add');
     }
 
@@ -153,22 +164,23 @@ class ProfitController extends Controller
         $this->view->tileloinhuan = $tileloinhuan;
 
         $error = 0; $message = ""; $message_ = ""; $alert = "alert-success";
-        if ($tileloinhuan >= 200){
+        $kehoach = ($tileloinhuan/$tisuatloinhuankyvong)*100;
+        if ($kehoach >= 200){
             $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ vượt hơn 200% so với kế hoạch ($tisuatloinhuankyvong %).";
             $message_ = "Bạn rất tuyệt vời. Hãy cố gắng giữ vững !";
             $error = 1;
             $alert = "alert-info";
-        }elseif ($tileloinhuan >= 100 and $tileloinhuan < 200){
+        }elseif ($kehoach >= 100 and $kehoach < 200){
             $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ vượt hơn 100% so với kế hoạch ($tisuatloinhuankyvong %).";
             $message_ = "Bạn đã làm rất tốt. Hãy cố gắng phát huy !";
             $error = 1;
             $alert = "alert-success";
-        }elseif ($tileloinhuan >= 0 and $tileloinhuan < 100){
+        }elseif ($kehoach >= 0 and $kehoach < 100){
             $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ thấp hơn so với kế hoạch ($tisuatloinhuankyvong %).";
             $message_ = "Bạn làm chưa tốt. Hãy tập trung để đạt được lợi nhuận tốt hơn !";
             $error = 1;
             $alert = "alert-warning";
-        }elseif ($tileloinhuan < 0){
+        }elseif ($kehoach < 0){
             $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ.";
             $message_ = "Bạn đang LỖ. Hãy nỗ lực cải thiện để đạt được kết quả tốt hơn !";
             $error = 1;
@@ -260,22 +272,23 @@ class ProfitController extends Controller
         $this->view->tileloinhuan = $tileloinhuan;
 
         $error = 0; $message = ""; $message_ = ""; $alert = "alert-success";
-        if ($tileloinhuan >= 200){
+        $kehoach = ($tileloinhuan/$tisuatloinhuankyvong)*100;
+        if ($kehoach >= 200){
             $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ vượt hơn 200% so với kế hoạch ($tisuatloinhuankyvong %).";
             $message_ = "Bạn rất tuyệt vời. Hãy cố gắng giữ vững !";
             $error = 1;
             $alert = "alert-info";
-        }elseif ($tileloinhuan >= 100 and $tileloinhuan < 200){
+        }elseif ($kehoach >= 100 and $kehoach < 200){
             $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ vượt hơn 100% so với kế hoạch ($tisuatloinhuankyvong %).";
             $message_ = "Bạn đã làm rất tốt. Hãy cố gắng phát huy !";
             $error = 1;
             $alert = "alert-success";
-        }elseif ($tileloinhuan >= 0 and $tileloinhuan < 100){
+        }elseif ($kehoach >= 0 and $kehoach < 100){
             $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ thấp hơn so với kế hoạch ($tisuatloinhuankyvong %).";
             $message_ = "Bạn làm chưa tốt. Hãy tập trung để đạt được lợi nhuận tốt hơn !";
             $error = 1;
             $alert = "alert-warning";
-        }elseif ($tileloinhuan < 0){
+        }elseif ($kehoach < 0){
             $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ.";
             $message_ = "Bạn đang LỖ. Hãy nỗ lực cải thiện để đạt được kết quả tốt hơn !";
             $error = 1;
