@@ -47,6 +47,10 @@ class ProfitController extends Controller
 
     public function index(Request $request)
     {
+        if (app(APIAdminService::class)->hasUserAccessPage(Auth()->user()->role, 'profits-index', Auth()->user()->service_product_id, Auth()->user()->approved_product) == 0){
+            return app(APIAdminService::class)->authorizeRolePage(0); //chuyen den trang thong bao loi truy cap
+        } 
+
         $this->setViewInit();
         $customer_id = Auth::user()->customer()->first()->id;
         $profitbusinessconfig = app(ProfitBusinessConfigService::class)->getProfitBusinessConfigFromCustomerId($customer_id)->first();
@@ -313,8 +317,12 @@ class ProfitController extends Controller
         return $this->view('result');
     }
 
-    public function history()
+    public function history(Request $request)
     {
+        if (app(APIAdminService::class)->hasUserAccessPage(Auth()->user()->role, 'profits-index', Auth()->user()->service_product_id, Auth()->user()->approved_product) == 0){
+            return app(APIAdminService::class)->authorizeRolePage(0); //chuyen den trang thong bao loi truy cap
+        } 
+
         $this->setViewInit();
         $this->view->setHeading('LỊCH SỬ');
         $customer_id = Auth::user()->customer()->first()->id;
