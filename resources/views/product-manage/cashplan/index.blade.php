@@ -145,7 +145,7 @@
                     </th>
                     <th class="fixed fixed-2">STT</th>
                     <th class="fixed fixed-3">Tên dòng tiền</th>
-                    <th style="width: 10%;">Phân loại</th>
+                    <th>Phân loại</th>
                     <th>Mục tiêu</th>
                     <th>Ngày lập</th>
                     <th>Số tuổi đạt mục tiêu</th>

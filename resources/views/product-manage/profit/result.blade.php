@@ -29,12 +29,17 @@
 
           <tbody>
             <tr>
-              <th colspan="2" class="text-center">Doanh thu</th>
+              <th colspan="2">Tổng doanh thu</th>
               <td class="text-right">{{ formatNumber($doanhthu, 1, 0, 1) }} <span>&#8363;</span></td>
-              <td class="text-right"></td>
+              <td class="text-right">0 <span>%</span></td>
             </tr>
             <tr>
-              <th rowspan="6">Chi phí</th>
+              <th colspan="2">Tổng chi phí</th>
+              <td class="text-right">0 <span>&#8363;</span></td>
+              <td class="text-right">0 <span>%</span></td>
+            </tr>
+            <tr>
+              <th rowspan="6">Chi tiết chi phí</th>
             </tr>
             <tr>
               <th>Giá vốn hàng bán</th>
@@ -62,7 +67,7 @@
               <td class="text-right">{{ formatNumber($tilechiphikhac, 1, 2, 1) }} <span>%</span></td>
             </tr>
             <tr>
-              <th colspan="2" class="text-center">Thuế thu nhập doanh nghiệp (20%)</th>
+              <th colspan="2">Thuế thu nhập doanh nghiệp (20%)</th>
               <td class="text-right">{{ formatNumber($thuethunhapdoanhnghiep, 1, 0, 1) }} <span>&#8363;</span></td>
               <td class="text-right">{{ formatNumber($tilethuethunhapdoanhnghiep, 1, 2, 1) }} <span>%</span></td>
             </tr>
@@ -70,7 +75,7 @@
 
           <tfoot>
             <tr>
-              <th colspan="2" class="text-center">Lợi nhuận</th>
+              <th colspan="2">Lợi nhuận</th>
               <td class="text-right">{{ formatNumber($loinhuan, 1, 0, 1) }} <span>&#8363;</span></td>
               <td class="text-right">{{ formatNumber($tileloinhuan, 1, 2, 2) }} <span>%</span></td>
             </tr>
@@ -78,15 +83,16 @@
         </table>
         <br>
         @if ($error == 1)
-            <div class="alert {{ $alert }}">
+          <div class="alert {{ $alert }}">
             {{ $infor }} <br>
-            <strong>{{ $infor_ }}</strong>          
-            </div>
+            <strong>{{ $infor_ }}</strong>
+          </div>
         @endif
 
         <div class="box-search">
           <div class="control">
-            <a href="{{ route('profits-edit', ['id' => $profitbusiness_id]) }}" class="btn btn-primary btn-edit">Chỉnh sửa</a>
+            <a href="{{ route('profits-edit', ['id' => $profitbusiness_id]) }}" class="btn btn-primary btn-edit">Chỉnh
+              sửa</a>
             <a href="{{ route('profits-history') }}" class="btn btn-primary btn-save">Lưu kết quả</a>
           </div>
         </div>
