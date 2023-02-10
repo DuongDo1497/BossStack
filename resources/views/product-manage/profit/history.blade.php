@@ -22,10 +22,11 @@
           <thead>
             <tr>
               <th>STT</th>
-              <th>Tổng chi phí</th>
               <th>Tổng doanh thu</th>
+              <th>Tổng chi phí</th>
               <th>Thuế TNDN (20%)</th>
-              <th>Lợi nhuận</th>
+              <th>Lợi nhuận sau thuế</th>
+              <th>Tỉ suất LN/TDT (%)</th>
               <th>Thời gian</th>
             </tr>
           </thead>
@@ -37,13 +38,14 @@
               <tr>
                 <td class="text-center">{{ $i++ }}</td>
                 <td style="text-align: right;"><span
+                    class="text-success">{{ formatNumber($item->doanhthu, 1, 0, 1) }}</span> &#8363;</td>
+                <td style="text-align: right;"><span
                     class="text-error">{{ formatNumber($item->chiphitaichinh + $item->chiphibanhang + $item->chiphiquanlydoanhnghiep + $item->chiphikhac, 1, 0, 1) }}</span>
                   &#8363;</td>
-                <td style="text-align: right;"><span
-                    class="text-success">{{ formatNumber($item->doanhthu, 1, 0, 1) }}</span> &#8363;</td>
                 <td style="text-align: right;">{{ formatNumber($item->thuethunhapdoanhnghiep, 1, 0, 1) }}</td>
                 <td style="text-align: right;"><span
                     class="text-success">{{ formatNumber($item->loinhuan, 1, 0, 1) }}</span> &#8363;</td>
+                <td class="text-center">20%</td>
                 <td class="text-center">
                   {{ $item->transdate == null ? '' : ConvertSQLDate($item->transdate) }}
                 </td>
