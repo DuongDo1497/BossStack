@@ -204,9 +204,9 @@ return [
           ],
 
     'PRODUCTACCESSPAGES' => [ 
-            '1' => ['retireplans-index', 'cash-index', 'cashplans-index', 'cash-process', 'cashassets-index'],//Goi ca nhan
-            '2' => ['retireplans-index', 'cash-index', 'cashplans-index', 'cash-process', 'cashassets-index'],//Goi doanh nghiep
-            '3' => ['retireplans-index', 'cash-index', 'cashplans-index', 'invests-index', 'managetransactions-index', 'cash-process', 'cashassets-index'],//Goi vip
+            '1' => ['retireplans-index', 'cash-index', 'cashplans-index', 'cash-process', 'cashassets-index', 'profits-index'],//Goi ca nhan
+            '2' => ['retireplans-index', 'cash-index', 'cashplans-index', 'cash-process', 'cashassets-index', 'profits-index'],//Goi doanh nghiep
+            '3' => ['retireplans-index', 'cash-index', 'cashplans-index', 'invests-index', 'managetransactions-index', 'cash-process', 'cashassets-index', 'profits-index'],//Goi vip
             '4' => ['retireplans-index', 'cash-index', 'cashassets-index'],//Goi mien phi
           ],
 
