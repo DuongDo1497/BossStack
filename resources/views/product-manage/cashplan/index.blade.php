@@ -106,11 +106,15 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="status">Lọc dòng tiền theo</label>
-                  <select class="form-control select2" name="" onchange="">
-                    <option selected>Chọn phân loại</option>
-                    <option value="">Cá nhân</option>
-                    <option value="">Gia đình</option>
-                    <option value="">Đầu tư</option>
+                  <select class="form-control select2" name="incometype" onchange="processReports('frm', 'selectstatus')">
+                    <option value="">Chọn phân loại</option>
+                    @foreach ($incometypes as $item)
+                      @if ($incometype != '' and $item->id == $incometype)
+                        <option value="{{ $item->id }}" selected>{{ $item->name }}</option>
+                      @else
+                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                      @endif
+                    @endforeach
                   </select>
                 </div>
 
@@ -119,7 +123,7 @@
                     onchange="processReports('frm', 'selectstatus')">
                     <option value="">Chọn trạng thái</option>
                     @foreach ($accountstatustype as $key => $value)
-                      @if ($key == $selectaccountstatustype)
+                      @if ($selectaccountstatustype != '' and $key == $selectaccountstatustype)
                         <option value="{{ $key }}" selected>{{ $value }}</option>
                       @else
                         <option value="{{ $key }}">{{ $value }}</option>
@@ -154,7 +158,7 @@
                 <tbody>
                   @if ($collections->count() === 0)
                     <tr>
-                      <td colspan="10"><b>Không có dữ liệu!!!</b></td>
+                      <td colspan="11"><b>Không có dữ liệu!!!</b></td>
                     </tr>
                   @endif
                   @php
@@ -176,8 +180,8 @@
                               style="margin-right: 10px;"></i></a>
                         @endif
                       </td>
-                      <td>Demo</td>
                       <td class="text-left">{{ $cashplan->name }}</td>
+                      <td class="text-left">{{ $cashplan->config_type_details_name }}</td>
                       <td class="text-center">
                         {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}</td>
                       <td class="text-center">{{ formatNumber($cashplan->planage, 1, 0, 0) }}</td>

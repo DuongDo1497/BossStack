@@ -39,9 +39,15 @@ class CashPlanController extends Controller
         } 
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
 
-        $customer_id = (Auth::user()->customer() == null ? "-1" : Auth::user()->customer()->first()->id);
-        $selectaccountstatustype = ($request->selectaccountstatustype == null ? '-1' : $request->selectaccountstatustype);
+        $customer_id = (Auth::user()->customer() == null ? "" : Auth::user()->customer()->first()->id);
+        $selectaccountstatustype = ($request->selectaccountstatustype == null ? '' : $request->selectaccountstatustype);
         $this->view->selectaccountstatustype = $selectaccountstatustype;
+
+        //Lay danh sach cac phan loai dong tien
+        $incomestatustype = 5;
+        $this->view->incometypes = app(ConfigTypeService::class)->getConfigTypeFromType($incomestatustype);
+        $incometype = ($request->incometype == null ? '' : $request->incometype);
+        $this->view->incometype = $incometype;
         
         $typereport = ($request->typereport == null ? '' : $request->typereport);
         if ($typereport == "delete"){
@@ -52,8 +58,8 @@ class CashPlanController extends Controller
             }
         }
 
-        if ($typereport == "selectstatus" and $selectaccountstatustype != "-1"){
-            $request->searchField = 'cash_plans.finish';
+        if ($typereport == "selectstatus" and ($incometype != "" or $selectaccountstatustype != "")){
+            $request->searchField = $incometype;
             $request->searchValue = $selectaccountstatustype;
         }
         $collections = $this->main_service->getListAccountPlanFromCustomer($customer_id, $request)->paginate($this->view->filter['limit']);

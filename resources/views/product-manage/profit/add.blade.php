@@ -14,53 +14,56 @@
       <span>Quản lý tài khoản</span> / <span class="current">Tính lợi nhuận kinh doanh</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
+    <form role="form" action="{{ route('profits-process') }}?continue=true" method="post" id="frm">
+    {{ csrf_field() }}
+    <input type='hidden' name='typereport' value=''>
+    <input type='hidden' name='customer_id' value='{{ $customer_id }}'>
 
     <div class="box-content">
       <div class="box box-primary">
         <div class="box-search">
           <div class="control">
-            <a href="{{ route('profits-index') }}" class="btn btn-primary btn-edit">Chỉnh sửa</a>
-            {{-- <a href="{{ route('profits-history') }}" class="btn btn-primary btn-history">Lịch sử</a> --}}
+            <a href="{{ route('profits-editConfig', ['id' => $profitbusinessconfig->id]) }}" class="btn btn-primary btn-edit">Chỉnh sửa</a>
           </div>
         </div>
         <div class="box-form">
           <div class="form-group">
             <label for="financialcosts">Chi phí tài chính:</label>
             <div class="input-group">
-              <input type="text" class="form-control number" name="financialcosts" id="financialcosts"
-                value="18,010,000,000" onkeyup="" placeholder="Nhập..." readonly>
+              <input type="text" class="form-control number" name="chiphitaichinh" id="chiphitaichinh" value="{{ formatNumber($profitbusinessconfig->chiphitaichinh, 1, 0, 0) }}"
+                placeholder="Nhập..." onkeyup='this.value=formatNumberDecimal(this.value)' readonly>
               <span class="input-group-addon">&#8363;</span>
             </div>
           </div>
           <div class="form-group">
             <label for="sellingcosts">Chi phí bán hàng:</label>
             <div class="input-group">
-              <input type="text" class="form-control number" name="sellingcosts" id="sellingcosts"
-                value="18,010,000,000" onkeyup="" placeholder="Nhập..." readonly>
+              <input type="text" class="form-control number" name="chiphibanhang" id="chiphibanhang" value="{{ formatNumber($profitbusinessconfig->chiphibanhang, 1, 0, 0) }}"
+                onkeyup='this.value=formatNumberDecimal(this.value)' readonly placeholder="Nhập...">
               <span class="input-group-addon">&#8363;</span>
             </div>
           </div>
           <div class="form-group">
             <label for="managementcosts">Chi phí quản lý doanh nghiệp:</label>
             <div class="input-group">
-              <input type="text" class="form-control number" name="managementcosts" id="managementcosts"
-                value="18,010,000,000" onkeyup="" placeholder="Nhập..." readonly>
+              <input type="text" class="form-control number" name="chiphiquanlydoanhnghiep" id="chiphiquanlydoanhnghiep" value="{{ formatNumber($profitbusinessconfig->chiphiquanlydoanhnghiep, 1, 0, 0) }}"
+                onkeyup='this.value=formatNumberDecimal(this.value)' readonly placeholder="Nhập...">
               <span class="input-group-addon">&#8363;</span>
             </div>
           </div>
           <div class="form-group">
             <label for="othercosts">Chi phí khác:</label>
             <div class="input-group">
-              <input type="text" class="form-control number" name="othercosts" id="othercosts" value="18,010,000,000"
-                onkeyup="" placeholder="Nhập..." readonly>
+              <input type="text" class="form-control number" name="chiphikhac" id="chiphikhac" value="{{ formatNumber($profitbusinessconfig->chiphikhac, 1, 0, 0) }}"
+                onkeyup='this.value=formatNumberDecimal(this.value)' readonly placeholder="Nhập...">
               <span class="input-group-addon">&#8363;</span>
             </div>
           </div>
           <div class="form-group">
             <label for="total">Tổng cộng:</label>
             <div class="input-group">
-              <input type="text" class="form-control number" name="total" id="total" value="18,010,000,000"
-                onkeyup="" placeholder="Nhập..." readonly>
+              <input type="text" class="form-control number" name="tongcong" id="tongcong" value="{{ formatNumber($profitbusinessconfig->chiphitaichinh+$profitbusinessconfig->chiphibanhang+$profitbusinessconfig->chiphiquanlydoanhnghiep+$profitbusinessconfig->chiphikhac, 1, 0, 0) }}"
+                onkeyup='this.value=formatNumberDecimal(this.value)' readonly placeholder="Nhập...">
               <span class="input-group-addon">&#8363;</span>
             </div>
           </div>
@@ -74,38 +77,39 @@
           <div class="form-group">
             <label for="turnover">Doanh thu thuần<span>*</span>:</label>
             <div class="input-group">
-              <input type="text" class="form-control number" name="turnover" id="turnover" value=""
-                onkeyup="" placeholder="Nhập..." required>
+              <input type="text" class="form-control number" name="doanhthuthuan" id="doanhthuthuan" value=""
+                placeholder="Nhập..." onkeyup='this.value=formatNumberDecimal(this.value)' required>
               <span class="input-group-addon">&#8363;</span>
             </div>
           </div>
           <div class="form-group">
             <label for="profitother">Doanh thu TC + TN khác<span>*</span>:</label>
             <div class="input-group">
-              <input type="text" class="form-control number" name="profitother" id="profitother" value=""
-                onkeyup="" placeholder="Nhập..." title="Doanh thu Tài Chính + Thu Nhập khác" required>
+              <input type="text" class="form-control number" name="doanhthutc_tnkhac" id="doanhthutc_tnkhac" value=""
+                placeholder="Nhập..." onkeyup='this.value=formatNumberDecimal(this.value)' required>
               <span class="input-group-addon">&#8363;</span>
             </div>
           </div>
           <div class="form-group">
             <label for="ratio">Tỷ lệ GVHB/DT <span>*</span>:</label>
             <div class="input-group">
-              <input type="text" class="form-control number" name="ratio" id="ratio" value=""
-                onkeyup="" placeholder="Nhập..." title="Tỷ lệ Giá vốn hàng bán/Doanh thu" required>
+              <input type="text" class="form-control number" name="tylegvhb_dt" id="tylegvhb_dt" value=""
+                placeholder="Nhập..." onkeyup='this.value=formatNumberDecimal(this.value)' required>
               <span class="input-group-addon">&#37;</span>
             </div>
           </div>
           <div class="form-group">
             <label for="expectedprofit">Tỷ suất Lợi Nhuận kỳ vọng <span>*</span>:</label>
             <div class="input-group">
-              <input type="text" class="form-control number" name="expectedprofit" id="expectedprofit"
-                value="" onkeyup="" placeholder="Nhập..." required>
+              <input type="text" class="form-control number" name="tisuatloinhuankyvong" id="tisuatloinhuankyvong" value=""
+                placeholder="Nhập..." onkeyup='this.value=formatNumberDecimal(this.value)' required>
               <span class="input-group-addon">&#37;</span>
             </div>
           </div>
         </div>
-        <a href="{{ route('profits-result', ['id' => 0]) }}" class="btn btn-primary btn-analysis">Phân tích</a>
+        <button type="submit" class="btn btn-primary btn-analysis">Phân tích</button>
       </div>
     </div>
+    </form>
   </div>
 @endsection

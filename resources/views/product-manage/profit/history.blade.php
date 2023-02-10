@@ -30,105 +30,24 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>01</td>
-              <td><span class="text-error">18,010,000,000</span> &#8363;</td>
-              <td><span class="text-success">18,010,000,000</span> &#8363;</td>
-              <td>18,010,000,000 &#8363;</td>
-              <td><span class="text-success">18,010,000,000</span> &#8363;</td>
-              <td>24/11/2022 09:58:24</td>
-            </tr>
+            @php
+              $i = 1;
+            @endphp
+            @foreach ($collections as $item)
+              <tr>
+                <td class="text-center">{{ $i++ }}</td>
+                <td style="text-align: right;"><span class="text-error">{{ formatNumber($item->chiphitaichinh + $item->chiphibanhang + $item->chiphiquanlydoanhnghiep + $item->chiphikhac, 1, 0, 1) }}</span> &#8363;</td>
+                <td style="text-align: right;"><span class="text-success">{{formatNumber($item->doanhthu, 1, 0, 1) }}</span> &#8363;</td>
+                <td style="text-align: right;">{{ formatNumber($item->thuethunhapdoanhnghiep, 1, 0, 1) }}</td>
+                <td style="text-align: right;"><span class="text-success">{{formatNumber($item->loinhuan, 1, 0, 1) }}</span> &#8363;</td>
+                <td class="text-center">
+                  {{ $item->transdate == null ? '' : ConvertSQLDate($item->transdate) }}
+                </td>
+              </tr>
+            @endforeach
+
           </tbody>
         </table>
-
-        {{-- <div class="list-info">
-          <div class="item">
-            <div class="box-form">
-              <div class="form-group">
-                <label class="title-primary">Ngày lập</label>
-                <p class="form-text text-primary">24/11/2022 09:58:24</p>
-              </div>
-
-              <div class="form-group">
-                <label>Doanh thu</label>
-                <p class="form-text">18,010,000,000 VND</p>
-              </div>
-
-              <div class="form-group">
-                <label>Chi phí</label>
-                <p class="form-text">18,010,000,000 VND</p>
-              </div>
-
-              <div class="form-group">
-                <label>Thuế TNDN (20%)</label>
-                <p class="form-text">18,010,000,000 VND</p>
-              </div>
-
-              <div class="form-group">
-                <label>Lợi nhuận</label>
-                <p class="form-text">18,010,000,000 VND</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="box-form">
-              <div class="form-group">
-                <label class="title-primary">Ngày lập</label>
-                <p class="form-text text-primary">24/11/2022 09:58:24</p>
-              </div>
-
-              <div class="form-group">
-                <label>Doanh thu</label>
-                <p class="form-text">18,010,000,000 VND</p>
-              </div>
-
-              <div class="form-group">
-                <label>Chi phí</label>
-                <p class="form-text">18,010,000,000 VND</p>
-              </div>
-
-              <div class="form-group">
-                <label>Thuế TNDN (20%)</label>
-                <p class="form-text">18,010,000,000 VND</p>
-              </div>
-
-              <div class="form-group">
-                <label>Lợi nhuận</label>
-                <p class="form-text">18,010,000,000 VND</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="box-form">
-              <div class="form-group">
-                <label class="title-primary">Ngày lập</label>
-                <p class="form-text text-primary">24/11/2022 09:58:24</p>
-              </div>
-
-              <div class="form-group">
-                <label>Doanh thu</label>
-                <p class="form-text">18,010,000,000 VND</p>
-              </div>
-
-              <div class="form-group">
-                <label>Chi phí</label>
-                <p class="form-text">18,010,000,000 VND</p>
-              </div>
-
-              <div class="form-group">
-                <label>Thuế TNDN (20%)</label>
-                <p class="form-text">18,010,000,000 VND</p>
-              </div>
-
-              <div class="form-group">
-                <label>Lợi nhuận</label>
-                <p class="form-text">18,010,000,000 VND</p>
-              </div>
-            </div>
-          </div>
-        </div> --}}
       </div>
     </div>
   </div>

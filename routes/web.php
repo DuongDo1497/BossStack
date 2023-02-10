@@ -440,7 +440,12 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
     // Lợi nhuận
     Route::group(['prefix' => 'profits'], function (){
         Route::get('/', 'ProfitController@index')->name('profits-index');
+        Route::post('/addConfig', 'ProfitController@addConfig')->name('profits-addConfig');
+        Route::get('/editConfig/{id}', 'ProfitController@editConfig')->name('profits-editConfig');
+        Route::put('/updateConfig/{id}', 'ProfitController@updateConfig')->name('profits-updateConfig');
         Route::get('/add', 'ProfitController@add')->name('profits-add');
+        Route::post('/process', 'ProfitController@process')->name('profits-process');
+        
         Route::post('/store', 'ProfitController@store')->name('profits-store');
         Route::get('/edit/{id}', 'ProfitController@edit')->name('profits-edit');
         Route::put('/update/{id}', 'ProfitController@update')->name('profits-update');

@@ -198,16 +198,19 @@ class CashPlanService extends BaseService
 
     public function getListAccountPlanFromCustomer($customer_id, $request)
     {
-        $searchField = ($request->searchField == null ? 'planname' : $request->searchField);
+        $searchField = ($request->searchField == null ? '' : $request->searchField);
         $searchValue = ($request->searchValue == null ? '' : $request->searchValue);
-        
+        addToLog('aaa=' . $searchField);
+        addToLog('bbb=' . $searchValue);
         $listData = DB::table('cash_plans')->leftjoin('customers', 'customers.id', '=', 'cash_plans.customer_id')
                         ->leftjoin('cash_accounts', 'cash_plans.accountno', '=', 'cash_accounts.accountno')
                         ->leftjoin('config_types', 'cash_plans.plantype', '=', 'config_types.id')
-                        ->select('cash_plans.id','cash_plans.customer_id','fullname','plantype','plantypedetail','config_types.name','planname','plandate','cash_plans.currency','currentage','planage','planamount','currentamount','requireamount','planamountunittype','currentamountunittype','requireamountunittype','cash_plans.description','document','cash_plans.accountno','cash_accounts.amount','cash_plans.finish','cash_plans.finishdate')
+                        ->leftjoin('config_type_details', 'cash_plans.plantypedetail', '=', 'config_type_details.id')
+                        ->select('cash_plans.id','cash_plans.customer_id','fullname','plantype','plantypedetail','config_types.name','config_type_details.name as config_type_details_name','planname','plandate','cash_plans.currency','currentage','planage','planamount','currentamount','requireamount','planamountunittype','currentamountunittype','requireamountunittype','cash_plans.description','document','cash_plans.accountno','cash_accounts.amount','cash_plans.finish','cash_plans.finishdate')
                         ->where('cash_plans.customer_id', '=', "$customer_id")
                         ->where('cash_plans.deleted_at', '=', null)
-                        ->where($searchField, 'like', "%$searchValue%")
+                        ->where('cash_plans.plantype', 'like', "%$searchField%")
+                        ->where('cash_plans.finish', 'like', "%$searchValue%")
                         ->orderBy('plandate', 'ASC');
 
         return $listData;    
