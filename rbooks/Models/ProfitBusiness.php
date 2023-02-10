@@ -14,7 +14,7 @@ class ProfitBusiness extends BaseModel
     protected $table = 'profit_business';
          
     protected $fillable = [
-        'customer_id','transdate','chiphitaichinh','chiphibanhang','chiphiquanlydoanhnghiep','chiphikhac','doanhthuthuan','doanhthutc_tnkhac','tylegvhb_dt','tisuatloinhuankyvong','doanhthu','giavonhangban','thuethunhapdoanhnghiep','loinhuan','description','created_user_id','created_at','updated_user_id','updated_at'
+        'customer_id','transdate','chiphitaichinh','chiphibanhang','chiphiquanlydoanhnghiep','chiphikhac','doanhthuthuan','doanhthutc_tnkhac','tylegvhb_dt','tisuatloinhuankyvong','doanhthu','chiphi','giavonhangban','thuethunhapdoanhnghiep','loinhuantruocthue','loinhuansauthue','description','created_user_id','created_at','updated_user_id','updated_at'
     ];
 
 }

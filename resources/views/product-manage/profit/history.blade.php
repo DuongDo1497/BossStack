@@ -40,12 +40,12 @@
                 <td style="text-align: right;"><span
                     class="text-success">{{ formatNumber($item->doanhthu, 1, 0, 1) }}</span> &#8363;</td>
                 <td style="text-align: right;"><span
-                    class="text-error">{{ formatNumber($item->chiphitaichinh + $item->chiphibanhang + $item->chiphiquanlydoanhnghiep + $item->chiphikhac, 1, 0, 1) }}</span>
+                    class="text-error">{{ formatNumber($item->chiphi, 1, 0, 1) }}</span>
                   &#8363;</td>
                 <td style="text-align: right;">{{ formatNumber($item->thuethunhapdoanhnghiep, 1, 0, 1) }}</td>
                 <td style="text-align: right;"><span
-                    class="text-success">{{ formatNumber($item->loinhuan, 1, 0, 1) }}</span> &#8363;</td>
-                <td class="text-center">20%</td>
+                    class="text-success">{{ formatNumber($item->loinhuansauthue, 1, 0, 1) }}</span> &#8363;</td>
+                <td class="text-center">{{ formatNumber(($item->loinhuansauthue/$item->doanhthu)*100, 1, 2, 1) }} %</td>
                 <td class="text-center">
                   {{ $item->transdate == null ? '' : ConvertSQLDate($item->transdate) }}
                 </td>

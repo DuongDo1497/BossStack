@@ -36,11 +36,12 @@ class ProfitBusinessService extends BaseService
         $tylegvhb_dt = (removeFormatNumber($request->tylegvhb_dt) == '' ? '0' : removeFormatNumber($request->tylegvhb_dt));
         $tisuatloinhuankyvong = (removeFormatNumber($request->tisuatloinhuankyvong) == '' ? '0' : removeFormatNumber($request->tisuatloinhuankyvong));
 
-        $tongcongchiphi = $chiphitaichinh + $chiphibanhang + $chiphiquanlydoanhnghiep + $chiphikhac;
         $doanhthu = $doanhthuthuan + $doanhthutc_tnkhac;
         $giavonhangban = $tylegvhb_dt*$doanhthuthuan/100;
+        $tongcongchiphi = $giavonhangban + $chiphitaichinh + $chiphibanhang + $chiphiquanlydoanhnghiep + $chiphikhac;
         $thuethunhapdoanhnghiep = ($doanhthu - $tongcongchiphi)*20/100;
-        $loinhuan = $doanhthu - $tongcongchiphi - $thuethunhapdoanhnghiep;
+        $loinhuantruocthue = $doanhthu - $tongcongchiphi;
+        $loinhuansauthue = $loinhuantruocthue - $thuethunhapdoanhnghiep;
 
         $created_user_id = quote_smart(Auth()->user()->id);
         $updated_user_id = quote_smart(Auth()->user()->id);
@@ -57,9 +58,11 @@ class ProfitBusinessService extends BaseService
             'tylegvhb_dt' => $tylegvhb_dt,
             'tisuatloinhuankyvong' => $tisuatloinhuankyvong,
             'doanhthu' => $doanhthu,
+            'chiphi' => $tongcongchiphi,
             'giavonhangban' => $giavonhangban,
             'thuethunhapdoanhnghiep' => $thuethunhapdoanhnghiep,
-            'loinhuan' => $loinhuan,
+            'loinhuantruocthue' => $loinhuantruocthue,
+            'loinhuansauthue' => $loinhuansauthue,
             'created_user_id' => $created_user_id,
             'updated_user_id' => $updated_user_id,
         ];
@@ -81,17 +84,17 @@ class ProfitBusinessService extends BaseService
         $tylegvhb_dt = (removeFormatNumber($request->tylegvhb_dt) == '' ? '0' : removeFormatNumber($request->tylegvhb_dt));
         $tisuatloinhuankyvong = (removeFormatNumber($request->tisuatloinhuankyvong) == '' ? '0' : removeFormatNumber($request->tisuatloinhuankyvong));
 
-        $tongcongchiphi = $chiphitaichinh + $chiphibanhang + $chiphiquanlydoanhnghiep + $chiphikhac;
         $doanhthu = $doanhthuthuan + $doanhthutc_tnkhac;
         $giavonhangban = $tylegvhb_dt*$doanhthuthuan/100;
+        $tongcongchiphi = $giavonhangban + $chiphitaichinh + $chiphibanhang + $chiphiquanlydoanhnghiep + $chiphikhac;
         $thuethunhapdoanhnghiep = ($doanhthu - $tongcongchiphi)*20/100;
-        $loinhuan = $doanhthu - $tongcongchiphi - $thuethunhapdoanhnghiep;
+        $loinhuantruocthue = $doanhthu - $tongcongchiphi;
+        $loinhuansauthue = $loinhuantruocthue - $thuethunhapdoanhnghiep;
 
         $created_user_id = quote_smart(Auth()->user()->id);
         $updated_user_id = quote_smart(Auth()->user()->id);
 
         $data = [
-            'transdate' => $transdate,
             'chiphitaichinh' => $chiphitaichinh,
             'chiphibanhang' => $chiphibanhang,
             'chiphiquanlydoanhnghiep' => $chiphiquanlydoanhnghiep,
@@ -101,9 +104,11 @@ class ProfitBusinessService extends BaseService
             'tylegvhb_dt' => $tylegvhb_dt,
             'tisuatloinhuankyvong' => $tisuatloinhuankyvong,
             'doanhthu' => $doanhthu,
+            'chiphi' => $tongcongchiphi,
             'giavonhangban' => $giavonhangban,
             'thuethunhapdoanhnghiep' => $thuethunhapdoanhnghiep,
-            'loinhuan' => $loinhuan,
+            'loinhuantruocthue' => $loinhuantruocthue,
+            'loinhuansauthue' => $loinhuansauthue,
             'updated_user_id' => $updated_user_id,
         ];
 
@@ -113,7 +118,7 @@ class ProfitBusinessService extends BaseService
     public function getListProfitBusinessFromCustomerId($customer_id)
     {
         $listData = DB::table('profit_business')
-                        ->select('customer_id','transdate','chiphitaichinh','chiphibanhang','chiphiquanlydoanhnghiep','chiphikhac','doanhthuthuan','doanhthutc_tnkhac','tylegvhb_dt','tisuatloinhuankyvong','doanhthu','giavonhangban','thuethunhapdoanhnghiep','loinhuan','description')
+                        ->select('customer_id','transdate','chiphitaichinh','chiphibanhang','chiphiquanlydoanhnghiep','chiphikhac','doanhthuthuan','doanhthutc_tnkhac','tylegvhb_dt','tisuatloinhuankyvong','doanhthu','giavonhangban','thuethunhapdoanhnghiep','chiphi','loinhuantruocthue','loinhuansauthue','description')
                         ->where('customer_id', '=', "$customer_id")
                         ->where('deleted_at', '=', null)
                         ->orderBy('transdate', 'ASC');

@@ -118,7 +118,6 @@ class ProfitController extends Controller
         $chiphibanhang = $model->chiphibanhang;
         $chiphiquanlydoanhnghiep = $model->chiphiquanlydoanhnghiep;
         $chiphikhac = $model->chiphikhac;
-        $tongcongchiphi = $chiphitaichinh + $chiphibanhang + $chiphiquanlydoanhnghiep + $chiphikhac;
 
         $doanhthuthuan = $model->doanhthuthuan;
         $doanhthutc_tnkhac = $model->doanhthutc_tnkhac;
@@ -128,18 +127,21 @@ class ProfitController extends Controller
         $doanhthu = $model->doanhthu;
         $giavonhangban = $model->giavonhangban;
         $thuethunhapdoanhnghiep = $model->thuethunhapdoanhnghiep;
-        $loinhuan = $model->loinhuan;
+        $tongcongchiphi = $model->chiphi;
+        $loinhuantruocthue = $model->loinhuantruocthue;
+        $loinhuansauthue = $model->loinhuansauthue;
         
+        $tiletongcongchiphi = $tongcongchiphi*100/$doanhthu;
         $tilegiavonhangban = $giavonhangban*100/$doanhthu;
         $tilechiphitaichinh = $chiphitaichinh*100/$doanhthu;
         $tilechiphibanhang = $chiphibanhang*100/$doanhthu;
         $tilechiphiquanlydoanhnghiep = $chiphiquanlydoanhnghiep*100/$doanhthu;
         $tilechiphikhac = $chiphikhac*100/$doanhthu;
         $tilethuethunhapdoanhnghiep = $thuethunhapdoanhnghiep*100/$doanhthu;
-        $tileloinhuan = $loinhuan*100/$doanhthu;
+        $tileloinhuantruocthue = $loinhuantruocthue*100/$doanhthu;
+        $tileloinhuansauthue = $loinhuansauthue*100/$doanhthu;
 
         $this->view->profitbusiness_id = $profitbusiness_id;
-
         $this->view->chiphitaichinh = $chiphitaichinh;
         $this->view->chiphibanhang = $chiphibanhang;
         $this->view->chiphiquanlydoanhnghiep = $chiphiquanlydoanhnghiep;
@@ -153,7 +155,8 @@ class ProfitController extends Controller
         $this->view->doanhthu = $doanhthu;
         $this->view->giavonhangban = $giavonhangban;
         $this->view->thuethunhapdoanhnghiep = $thuethunhapdoanhnghiep;
-        $this->view->loinhuan = $loinhuan;
+        $this->view->loinhuantruocthue = $loinhuantruocthue;
+        $this->view->loinhuansauthue = $loinhuansauthue;
 
         $this->view->tilegiavonhangban = $tilegiavonhangban;
         $this->view->tilechiphitaichinh = $tilechiphitaichinh;
@@ -161,27 +164,29 @@ class ProfitController extends Controller
         $this->view->tilechiphiquanlydoanhnghiep = $tilechiphiquanlydoanhnghiep;
         $this->view->tilechiphikhac = $tilechiphikhac;
         $this->view->tilethuethunhapdoanhnghiep = $tilethuethunhapdoanhnghiep;
-        $this->view->tileloinhuan = $tileloinhuan;
+        $this->view->tiletongcongchiphi = $tiletongcongchiphi;
+        $this->view->tileloinhuantruocthue = $tileloinhuantruocthue;
+        $this->view->tileloinhuansauthue = $tileloinhuansauthue;
 
         $error = 0; $message = ""; $message_ = ""; $alert = "alert-success";
-        $kehoach = ($tileloinhuan/$tisuatloinhuankyvong)*100;
+        $kehoach = ($tileloinhuansauthue/$tisuatloinhuankyvong)*100;
         if ($kehoach >= 200){
-            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ vượt hơn 200% so với kế hoạch ($tisuatloinhuankyvong %).";
+            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuansauthue, 1, 0, 1) . " đ vượt hơn 200% so với kế hoạch ($tisuatloinhuankyvong %).";
             $message_ = "Bạn rất tuyệt vời. Hãy cố gắng giữ vững !";
             $error = 1;
             $alert = "alert-info";
         }elseif ($kehoach >= 100 and $kehoach < 200){
-            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ vượt hơn 100% so với kế hoạch ($tisuatloinhuankyvong %).";
+            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuansauthue, 1, 0, 1) . " đ vượt hơn 100% so với kế hoạch ($tisuatloinhuankyvong %).";
             $message_ = "Bạn đã làm rất tốt. Hãy cố gắng phát huy !";
             $error = 1;
             $alert = "alert-success";
         }elseif ($kehoach >= 0 and $kehoach < 100){
-            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ thấp hơn so với kế hoạch ($tisuatloinhuankyvong %).";
+            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuansauthue, 1, 0, 1) . " đ thấp hơn so với kế hoạch ($tisuatloinhuankyvong %).";
             $message_ = "Bạn làm chưa tốt. Hãy tập trung để đạt được lợi nhuận tốt hơn !";
             $error = 1;
             $alert = "alert-warning";
         }elseif ($kehoach < 0){
-            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ.";
+            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuansauthue, 1, 0, 1) . " đ.";
             $message_ = "Bạn đang LỖ. Hãy nỗ lực cải thiện để đạt được kết quả tốt hơn !";
             $error = 1;
             $alert = "alert-danger";
@@ -226,7 +231,6 @@ class ProfitController extends Controller
         $chiphibanhang = $model->chiphibanhang;
         $chiphiquanlydoanhnghiep = $model->chiphiquanlydoanhnghiep;
         $chiphikhac = $model->chiphikhac;
-        $tongcongchiphi = $chiphitaichinh + $chiphibanhang + $chiphiquanlydoanhnghiep + $chiphikhac;
 
         $doanhthuthuan = $model->doanhthuthuan;
         $doanhthutc_tnkhac = $model->doanhthutc_tnkhac;
@@ -236,18 +240,21 @@ class ProfitController extends Controller
         $doanhthu = $model->doanhthu;
         $giavonhangban = $model->giavonhangban;
         $thuethunhapdoanhnghiep = $model->thuethunhapdoanhnghiep;
-        $loinhuan = $model->loinhuan;
+        $tongcongchiphi = $model->chiphi;
+        $loinhuantruocthue = $model->loinhuantruocthue;
+        $loinhuansauthue = $model->loinhuansauthue;
         
+        $tiletongcongchiphi = $tongcongchiphi*100/$doanhthu;
         $tilegiavonhangban = $giavonhangban*100/$doanhthu;
         $tilechiphitaichinh = $chiphitaichinh*100/$doanhthu;
         $tilechiphibanhang = $chiphibanhang*100/$doanhthu;
         $tilechiphiquanlydoanhnghiep = $chiphiquanlydoanhnghiep*100/$doanhthu;
         $tilechiphikhac = $chiphikhac*100/$doanhthu;
         $tilethuethunhapdoanhnghiep = $thuethunhapdoanhnghiep*100/$doanhthu;
-        $tileloinhuan = $loinhuan*100/$doanhthu;
+        $tileloinhuantruocthue = $loinhuantruocthue*100/$doanhthu;
+        $tileloinhuansauthue = $loinhuansauthue*100/$doanhthu;
 
         $this->view->profitbusiness_id = $profitbusiness_id;
-
         $this->view->chiphitaichinh = $chiphitaichinh;
         $this->view->chiphibanhang = $chiphibanhang;
         $this->view->chiphiquanlydoanhnghiep = $chiphiquanlydoanhnghiep;
@@ -261,7 +268,8 @@ class ProfitController extends Controller
         $this->view->doanhthu = $doanhthu;
         $this->view->giavonhangban = $giavonhangban;
         $this->view->thuethunhapdoanhnghiep = $thuethunhapdoanhnghiep;
-        $this->view->loinhuan = $loinhuan;
+        $this->view->loinhuantruocthue = $loinhuantruocthue;
+        $this->view->loinhuansauthue = $loinhuansauthue;
 
         $this->view->tilegiavonhangban = $tilegiavonhangban;
         $this->view->tilechiphitaichinh = $tilechiphitaichinh;
@@ -269,27 +277,29 @@ class ProfitController extends Controller
         $this->view->tilechiphiquanlydoanhnghiep = $tilechiphiquanlydoanhnghiep;
         $this->view->tilechiphikhac = $tilechiphikhac;
         $this->view->tilethuethunhapdoanhnghiep = $tilethuethunhapdoanhnghiep;
-        $this->view->tileloinhuan = $tileloinhuan;
+        $this->view->tiletongcongchiphi = $tiletongcongchiphi;
+        $this->view->tileloinhuantruocthue = $tileloinhuantruocthue;
+        $this->view->tileloinhuansauthue = $tileloinhuansauthue;
 
         $error = 0; $message = ""; $message_ = ""; $alert = "alert-success";
-        $kehoach = ($tileloinhuan/$tisuatloinhuankyvong)*100;
+        $kehoach = ($tileloinhuansauthue/$tisuatloinhuankyvong)*100;
         if ($kehoach >= 200){
-            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ vượt hơn 200% so với kế hoạch ($tisuatloinhuankyvong %).";
+            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuansauthue, 1, 0, 1) . " đ vượt hơn 200% so với kế hoạch ($tisuatloinhuankyvong %).";
             $message_ = "Bạn rất tuyệt vời. Hãy cố gắng giữ vững !";
             $error = 1;
             $alert = "alert-info";
         }elseif ($kehoach >= 100 and $kehoach < 200){
-            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ vượt hơn 100% so với kế hoạch ($tisuatloinhuankyvong %).";
+            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuansauthue, 1, 0, 1) . " đ vượt hơn 100% so với kế hoạch ($tisuatloinhuankyvong %).";
             $message_ = "Bạn đã làm rất tốt. Hãy cố gắng phát huy !";
             $error = 1;
             $alert = "alert-success";
         }elseif ($kehoach >= 0 and $kehoach < 100){
-            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ thấp hơn so với kế hoạch ($tisuatloinhuankyvong %).";
+            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuansauthue, 1, 0, 1) . " đ thấp hơn so với kế hoạch ($tisuatloinhuankyvong %).";
             $message_ = "Bạn làm chưa tốt. Hãy tập trung để đạt được lợi nhuận tốt hơn !";
             $error = 1;
             $alert = "alert-warning";
         }elseif ($kehoach < 0){
-            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuan, 1, 0, 1) . " đ.";
+            $message = "Lợi nhuận của bạn là: " . formatNumber($loinhuansauthue, 1, 0, 1) . " đ.";
             $message_ = "Bạn đang LỖ. Hãy nỗ lực cải thiện để đạt được kết quả tốt hơn !";
             $error = 1;
             $alert = "alert-danger";
