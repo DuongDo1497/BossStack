@@ -1,9 +1,12 @@
 /* Banner Home */
 
 .banner-home{
+  height: 100vh;
   position: relative;
   overflow: hidden;
-  padding: 230px 0;
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
 }
 
 .banner-home .banner-body{
