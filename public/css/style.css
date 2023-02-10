@@ -525,10 +525,10 @@ h6{
 }
 
 @media (max-width: 1299.98px) and (min-width: 768px){
-  .skin-blue .main-sidebar,
+  /* .skin-blue .main-sidebar,
   .main-sidebar .sidebar{
     width: 210px;
-  }
+  } */
 
   .main-sidebar .sidebar .user-panel .user-panel-info .info p,
   .skin-blue .sidebar-menu > li.header.header-system,
@@ -542,9 +542,9 @@ h6{
     margin: 0 !important;
   }
 
-  .content-wrapper{
+  /* .content-wrapper{
     margin-left: 210px !important;
-  }
+  } */
 }
 
 @media (max-width: 575.98px){

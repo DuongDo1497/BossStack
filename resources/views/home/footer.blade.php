@@ -59,10 +59,10 @@
             <li><a href="{{ asset('/products/operate-digital') }}">Vận hành số chuyên sâu</a></li>
           </ul>
           <div class="footer-item__social">
-            <a href="https://www.facebook.com/bossstack.vn">
+            <a href="https://www.facebook.com/bossstack.chuyendoiso" target="_blank">
               <img class="img-fluid" src="{{ asset('img/web/fb-icon.svg') }}" alt="icon">
             </a>
-            <a href="https://www.linkedin.com/company/82513104/admin/">
+            <a href="https://www.linkedin.com/company/82513104/admin/" target="_blank">
               <img class="img-fluid" src="{{ asset('img/web/linkedin-icon.svg') }}" alt="icon">
             </a>
           </div>

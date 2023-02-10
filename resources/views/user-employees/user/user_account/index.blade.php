@@ -112,6 +112,13 @@
               {{ $collections->appends(['searchField' => $searchField, 'searchValue' => $searchValue])->links() }}
             </div>
           </div>
+
+          <div class="note-content">
+            <p>* Ghi chú:</p>
+            <p>- Nhấn nút "Lưu" hệ thống sẽ lưu thông tin chỉnh sửa tài khoản vào hệ thống.</p>
+            <p>- Nhấn nút “Lưu & Gửi mail” hệ thống sẽ lưu và gửi mail thông báo mật khẩu đăng nhập mới về địa chỉ email
+              đăng nhập của khách hàng đã đăng ký.</p>
+          </div>
         </div>
       </div>
     </div>

@@ -95,28 +95,42 @@
               </div>
             </div>
           </div>
+
           <a href="{{ route('cashplans-processAdd', ['incomestatustype' => 5]) }}" class="btn btn-primary btn-add text">
             <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
             Thêm dòng tiền
           </a>
+
           <div class="box-search">
             <div class="filter-timeline">
-              <div class="form-group">
-                <label for="status">Lọc dòng tiền theo</label>
-                <select class="form-control select2" name="selectaccountstatustype"
-                  onchange="processReports('frm', 'selectstatus')">
-                  <option value="">Chọn trạng thái</option>
-                  @foreach ($accountstatustype as $key => $value)
-                    @if ($key == $selectaccountstatustype)
-                      <option value="{{ $key }}" selected>{{ $value }}</option>
-                    @else
-                      <option value="{{ $key }}">{{ $value }}</option>
-                    @endif
-                  @endforeach
-                </select>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="status">Lọc dòng tiền theo</label>
+                  <select class="form-control select2" name="" onchange="">
+                    <option selected>Chọn phân loại</option>
+                    <option value="">Cá nhân</option>
+                    <option value="">Gia đình</option>
+                    <option value="">Đầu tư</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <select class="form-control select2" name="selectaccountstatustype"
+                    onchange="processReports('frm', 'selectstatus')">
+                    <option value="">Chọn trạng thái</option>
+                    @foreach ($accountstatustype as $key => $value)
+                      @if ($key == $selectaccountstatustype)
+                        <option value="{{ $key }}" selected>{{ $value }}</option>
+                      @else
+                        <option value="{{ $key }}">{{ $value }}</option>
+                      @endif
+                    @endforeach
+                  </select>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="table-wrap">
             <div class="table-content">
               <table class="table table-bordered table-list">
@@ -127,7 +141,8 @@
                     </th>
                     <th class="fixed fixed-2">STT</th>
                     <th class="fixed fixed-3">Tên dòng tiền</th>
-                    <th>Phân loại</th>
+                    <th style="width: 10%;">Phân loại</th>
+                    <th>Mục tiêu</th>
                     <th>Ngày lập</th>
                     <th>Số tuổi đạt mục tiêu</th>
                     <th>Số tiền mục tiêu</th>
@@ -161,6 +176,7 @@
                               style="margin-right: 10px;"></i></a>
                         @endif
                       </td>
+                      <td>Demo</td>
                       <td class="text-left">{{ $cashplan->name }}</td>
                       <td class="text-center">
                         {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}</td>
@@ -183,6 +199,7 @@
               </table>
             </div>
           </div>
+
           <div class="box-control">
             <div class="control">
               <p class="count"><span id="checklabel">0</span></p>
