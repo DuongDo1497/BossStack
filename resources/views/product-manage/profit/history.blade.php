@@ -31,7 +31,7 @@
               <th>Thuế TNDN (20%)</th>
               <th>Lợi nhuận sau thuế</th>
               <th>Tỉ suất LN/TDT (%)</th>
-              <th>Thời gian (mm/yyyy)</th>
+              <th>Tháng</th>
               <th>Ngày nhập</th>
             </tr>
           </thead>
