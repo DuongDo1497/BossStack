@@ -31,7 +31,8 @@
               <th>Thuế TNDN (20%)</th>
               <th>Lợi nhuận sau thuế</th>
               <th>Tỉ suất LN/TDT (%)</th>
-              <th>Thời gian</th>
+              <th>Thời gian (mm/yyyy)</th>
+              <th>Ngày nhập</th>
             </tr>
           </thead>
           <tbody>
@@ -43,13 +44,14 @@
                 <td class="text-center">{{ $i++ }}</td>
                 <td style="text-align: right;"><span
                     class="text-success">{{ formatNumber($item->doanhthu, 1, 0, 1) }}</span> &#8363;</td>
-                <td style="text-align: right;"><span
-                    class="text-error">{{ formatNumber($item->chiphi, 1, 0, 1) }}</span>
+                <td style="text-align: right;"><span class="text-error">{{ formatNumber($item->chiphi, 1, 0, 1) }}</span>
                   &#8363;</td>
                 <td style="text-align: right;">{{ formatNumber($item->thuethunhapdoanhnghiep, 1, 0, 1) }}</td>
                 <td style="text-align: right;"><span
                     class="text-success">{{ formatNumber($item->loinhuansauthue, 1, 0, 1) }}</span> &#8363;</td>
-                <td class="text-center">{{ formatNumber(($item->loinhuansauthue/$item->doanhthu)*100, 1, 2, 1) }} %</td>
+                <td class="text-center">{{ formatNumber(($item->loinhuansauthue / $item->doanhthu) * 100, 1, 2, 1) }} %
+                </td>
+                <td class="text-center">02/2023</td>
                 <td class="text-center">
                   {{ $item->transdate == null ? '' : ConvertSQLDate($item->transdate) }}
                 </td>

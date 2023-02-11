@@ -84,6 +84,18 @@
           <h6 class="box-title">Nhập số liệu tính toán</h6>
           <p class="box-des">Nhập thông tin để tính lợi nhuận kinh doanh của bạn.</p>
           <div class="box-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="">Tháng:</label>
+                <input type="text" class="form-control" name="" id="" value=""
+                  placeholder="Nhập..." onkeyup=''>
+              </div>
+              <div class="form-group">
+                <label for="">Năm:</label>
+                <input type="text" class="form-control" name="" id="" value=""
+                  placeholder="Nhập..." onkeyup=''>
+              </div>
+            </div>
             <div class="form-group">
               <label for="turnover">Doanh thu thuần<span>*</span>:</label>
               <div class="input-group">
