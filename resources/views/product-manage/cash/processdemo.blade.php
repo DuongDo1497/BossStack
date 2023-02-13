@@ -1,9 +1,7 @@
 @extends('layouts.master')
 
 @section('head')
-  <link rel="stylesheet" href="{{ asset('css/pages/page/cash.css') }}">
-
-  {{-- <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/pages/products.css') }}">
 
   <style type="text/css">
     .synthetic-table {
@@ -275,434 +273,14 @@
         display: none;
       }
     }
-  </style> --}}
+  </style>
 @endsection
 @section('content')
   @if (session()->has('success'))
     @include('layouts.partials.messages.success')
   @endif
 
-  <div class="section cash-process">
-    <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <span class="current">Bóc tách dòng tiền</span>
-    </div>
-    <p class="title-page">{{ $title->heading }}</p>
-
-    <form role="form" action="{{ route('cash-processPlan') }}" method="post" id="frm" name="frm">
-      {{ csrf_field() }}
-      <input type='hidden' name='typereport' value=''>
-      <div class="box-content">
-        <div class="box box-primary">
-          <div class="box-search">
-            <div class="filter-timeline">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="fromdate">Thời gian từ:</label>
-                  <input type="text" class="form-control" name="fromdate" id="fromdate" value="{{ $fromdate }}">
-                </div>
-                <div class="form-group">
-                  <label for="todate">đến:</label>
-                  <input type="text" class="form-control" name="todate" id="todate" value="{{ $todate }}">
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary btn-filter text">
-                Tìm kiếm
-                <img class="icon last" src="{{ asset('img/icon-search.svg') }}" alt="">
-              </button>
-            </div>
-          </div>
-
-          <div class="noti-index">
-            <div class="noti-index__wrap">
-              <div class="noti-index__item">
-                <p class="title">Số tiền các ví:</p>
-                @php
-                  $i = 1;
-                  $total = 0;
-                @endphp
-                @foreach ($listaccounts as $item)
-                  @php
-                    $total += $item->amount;
-                  @endphp
-                @endforeach
-                <p class="number">{!! formatNumberColor($total, 1, 0, 0) !!}</p>
-              </div>
-              <div class="noti-index__item">
-                <p class="title">Tổng tài sản:</p>
-                @php
-                  $i = 1;
-                  $total = 0;
-                @endphp
-                @foreach ($asset_1 as $cashasset)
-                  @php
-                    $total += $cashasset->amount;
-                  @endphp
-                @endforeach
-                <p class="number">{!! formatNumberColor($total + $totallistaccounts->sum('amount'), 1, 0, 0) !!}</p>
-              </div>
-              <div class="noti-index__item">
-                <p class="title">Tổng nợ:</p>
-                @php
-                  $i = 1;
-                  $total = 0;
-                @endphp
-                @foreach ($asset_0 as $cashasset)
-                  @php
-                    $total += $cashasset->remainamount;
-                  @endphp
-                @endforeach
-                <p class="number">{!! formatNumberColorCustom($total, 1, 0, 0, 1) !!}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="box box-primary">
-          <h6 class="box-title">Dòng tiền cá nhân theo kế hoạch</h6>
-          <div class="cash-process__wrap plan">
-            <ul class="nav nav-tabs">
-              @for ($i = 0; $i < count($yearArray); $i++)
-                <li class="{{ $i == 0 ? ' active' : '' }}">
-                  <a data-toggle="pill" class="hash-tab" href="#schedulemonth_{{ $i }}"><b>Năm thứ
-                      {{ $i + 1 }}</b></a>
-                </li>
-              @endfor
-            </ul>
-            <div class="tab-content">
-              @for ($i = 0; $i < count($yearArray); $i++)
-                <div id="schedulemonth_{{ $i }}" class="tab-pane fade {{ $i == 0 ? ' in active' : '' }}">
-                  <table class="table table-bordered table-list" id="tablecashkehoach_{{ $i }}">
-                    <thead>
-                      @php
-                        $icash = 1;
-                      @endphp
-                      <tr>
-                        <th rowspan="4">STT</th>
-                        <th rowspan="4">Tháng</th>
-                        <th rowspan="4">Thu Nhập</th>
-                        <th rowspan="4">Chi Phí</th>
-                        <th rowspan="4">Chi Trả Nợ</th>
-                        @foreach ($listcashplan as $cashplan)
-                          <th class="bg-gray">Mục tiêu {{ $icash++ }}</th>
-                        @endforeach
-                        <th rowspan="4" colspan="2">Chênh Lệch Dòng Tiền <br>(dự kiến)</th>
-                      </tr>
-
-                      <tr>
-                        @foreach ($listcashplan as $cashplan)
-                          <th class="text-left bg-gray">{{ $cashplan->planname }} <br> {{ $cashplan->description }}
-                            <br>Ngày lập:
-                            {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}
-                          </th>
-                        @endforeach
-                      </tr>
-
-                      <tr>
-                        @foreach ($listcashplan as $cashplan)
-                          <th class="text-right bg-gray">
-                            {{ formatNumber($cashplan->requireamount, 1, 0, 0) }}
-                          </th>
-                        @endforeach
-                      </tr>
-
-                      <tr>
-                        @foreach ($listcashplan as $cashplan)
-                          <th class="text-left bg-gray">Kế hoạch:
-                            {{ formatNumber($cashplan->planage - $cashplan->currentage, 1, 0, 0) }}
-                            năm</th>
-                        @endforeach
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      @php
-                        $stt = 1;
-                      @endphp
-                      @foreach ($monthArray as $key => $value)
-                        @if ($yearArray[$i] == $value)
-                          <tr>
-                            <td class="text-center">{{ $stt++ }}</td>
-                            <td class="text-center">
-                              {{ str_replace('_', '/', $key) }}
-                            </td>
-                            <td class="text-right">{!! formatNumberColorCustom($dataArray[$key]['income'], 1, 0, 0, 0) !!}
-                            </td>
-                            <td class="text-right">{!! formatNumberColorCustom($dataArray[$key]['expense'], 1, 0, 0, 1) !!}
-                            </td>
-                            <td class="text-right">{!! formatNumberColorCustom($dataArray[$key]['bank'], 1, 0, 0, 1) !!}
-                            </td>
-
-                            @foreach ($listcashplan as $cashplan)
-                              <td class="text-right bg-gray">{!! formatNumberColorCustom($dataArray[$key][$cashplan->id . '_planamount'], 1, 0, 0, 1) !!}</td>
-                            @endforeach
-
-                            @php
-                              $color = '#000000';
-                              if ($dataArray[$key]['process_planamount'] < 0) {
-                                  $color = '#ff0000';
-                              }
-                            @endphp
-                            <td colspan="2" style="color: {{ $color }};" class="text-right">
-                              {!! formatNumber($dataArray[$key]['process_planamount'], 1, 0, 0) !!}
-                            </td>
-                          </tr>
-                        @endif
-                      @endforeach
-                    </tbody>
-
-                    @if ($i + 1 == count($yearArray))
-                      <tfoot>
-                        <tr>
-                          <td class="text-left" colspan='2'>Tổng cộng
-                          </td>
-                          <td class="text-right">{!! formatNumberColorCustom($sumArray['income'], 1, 0, 0, 0) !!}</td>
-                          <td class="text-right">{!! formatNumberColorCustom($sumArray['expense'], 1, 0, 0, 1) !!}</td>
-                          <td class="text-right">{!! formatNumberColorCustom($sumArray['bank'], 1, 0, 0, 1) !!}</td>
-
-                          @foreach ($listcashplan as $cashplan)
-                            <td class="text-right bg-gray">{!! formatNumberColorCustom($sumArray[$cashplan->id . '_planamount'], 1, 0, 0, 1) !!}</td>
-                          @endforeach
-
-                          @php
-                            $color = '#000000';
-                            if ($sumArray['process_planamount'] < 0) {
-                                $color = '#ff0000';
-                          } @endphp
-                          <td colspan="2" style="color: {{ $color }}" class="text-right">
-                            {!! formatNumber($sumArray['process_planamount'], 1, 0, 0) !!}</td>
-                        </tr>
-                      </tfoot>
-                    @endif
-                  </table>
-                </div>
-              @endfor
-            </div>
-          </div>
-        </div>
-
-        <div class="box box-primary">
-          <h6 class="box-title">Dòng tiền cá nhân đang thực hiện</h6>
-          <div class="cash-process__wrap processing">
-            <ul class="nav nav-tabs">
-              @for ($i = 0; $i < count($yearArray); $i++)
-                <li class="{{ $i == 0 ? ' active' : '' }}">
-                  <a data-toggle="pill" class="hash-tab" href="#schedulemonthreal_{{ $i }}"><b>Năm thứ
-                      {{ $i + 1 }}</b></a>
-                </li>
-              @endfor
-            </ul>
-            <div class="tab-content">
-              @for ($i = 0; $i < count($yearArray); $i++)
-                <div id="schedulemonthreal_{{ $i }}"
-                  class="tab-pane fade {{ $i == 0 ? ' in active' : '' }}">
-                  <table class="table table-bordered table-list" id="tablecash_{{ $i }}">
-                    <thead>
-                      @php
-                        $icash = 1;
-                      @endphp
-                      <tr>
-                        <th rowspan="4">STT</th>
-                        <th rowspan="4">Tháng</th>
-                        <th rowspan="4">Thu Nhập</th>
-                        <th rowspan="4">Chi Phí</th>
-                        <th rowspan="4">Chi Trả Nợ</th>
-                        @foreach ($listcashplan as $cashplan)
-                          <th class="bg-gray">Mục tiêu {{ $icash++ }}</th>
-                        @endforeach
-                        <th rowspan="4">Chênh Lệch Dòng Tiền</th>
-                      </tr>
-
-                      <tr>
-                        @foreach ($listcashplan as $cashplan)
-                          <th class="bg-gray">{{ $cashplan->planname }} <br> {{ $cashplan->description }}
-                            <br>Ngày lập:
-                            {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}
-                          </th>
-                        @endforeach
-                      </tr>
-
-                      <tr>
-                        @foreach ($listcashplan as $cashplan)
-                          <th class="bg-gray">{{ formatNumber($cashplan->requireamount, 1, 0, 0) }}</th>
-                        @endforeach
-                      </tr>
-
-                      <tr>
-                        @foreach ($listcashplan as $cashplan)
-                          <th class="bg-gray">Kế hoạch:
-                            {{ formatNumber($cashplan->planage - $cashplan->currentage, 1, 0, 0) }} năm
-                          </th>
-                        @endforeach
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      @php
-                        $stt = 1;
-                      @endphp
-                      @foreach ($monthArray as $key => $value)
-                        @if ($yearArray[$i] == $value)
-                          <tr>
-                            <td class="text-center">
-                              {{ $stt++ }}</td>
-                            <td class="text-center">
-                              {{ str_replace('_', '/', $key) }}</td>
-                            <td class="text-right">{!! formatNumberColorCustom($dataArray[$key]['income'], 1, 0, 0, 0) !!}</td>
-                            <td class="text-right">{!! formatNumberColorCustom($dataArray[$key]['expense'], 1, 0, 0, 1) !!}
-                            </td>
-                            <td class="text-right">{!! formatNumberColorCustom($dataArray[$key]['bank'], 1, 0, 0, 1) !!}</td>
-
-                            @foreach ($listcashplan as $cashplan)
-                              <td class="text-right bg-gray">{!! formatNumberColorCustom($dataArray[$key][$cashplan->id . '_realamount'], 1, 0, 0, 1) !!}</td>
-                            @endforeach
-
-                            @php
-                              $color = '#000000';
-                              if ($dataArray[$key]['process_planamount'] < 0) {
-                                  $color = '#ff0000';
-                              }
-                            @endphp <td style="color: {{ $color }};" class="text-right">
-                              {!! formatNumber($dataArray[$key]['process_realamount'], 1, 0, 0) !!}</td>
-                          </tr>
-                        @endif
-                      @endforeach
-                    </tbody>
-
-                    @if ($i + 1 == count($yearArray))
-                      <tfoot>
-                        <tr>
-                          <td class="text-left" colspan='2'>Tổng cộng</td>
-                          <td class="text-right">{!! formatNumberColorCustom($sumArray['income'], 1, 0, 0, 0) !!}</td>
-                          <td class="text-right">{!! formatNumberColorCustom($sumArray['expense'], 1, 0, 0, 1) !!}</td>
-                          <td class="text-right">{!! formatNumberColorCustom($sumArray['bank'], 1, 0, 0, 1) !!}</td>
-
-                          @foreach ($listcashplan as $cashplan)
-                            <td class="text-right bg-gray">{!! formatNumberColorCustom($sumArray[$cashplan->id . '_realamount'], 1, 0, 0, 1) !!}</td>
-                          @endforeach
-
-                          @php
-                            $color = '#000000';
-                            if ($sumArray['process_realamount'] < 0) {
-                                $color = '#ff0000';
-                          } @endphp
-                          <td style="color: {{ $color }}" class="text-right">{!! formatNumber($sumArray['process_realamount'], 1, 0, 0) !!}</td>
-                        </tr>
-                      </tfoot>
-                    @endif
-                  </table>
-                </div>
-              @endfor
-            </div>
-          </div>
-        </div>
-
-        <div class="box box-primary">
-          <h6 class="box-title">Dòng tiền cá nhân đang thực hiện</h6>
-          <div class="evaluate-performance">
-            <div class="note-group">
-              <div class="progress-bar__note">
-                <div class="item">
-                  <span class="square success"></span>
-                  <span class="text">Đã thực hiện</span>
-                </div>
-                <div class="item">
-                  <span class="square error"></span>
-                  <span class="text">Chưa thực hiện</span>
-                </div>
-              </div>
-            </div>
-            <div class="table-wrap">
-              <div class="table-content">
-                <table class="table table-bordered table-list">
-                  <thead>
-                    <tr>
-                      <th rowspan="2" class="fixed fixed-1">Tên ví</th>
-                      <th colspan="2">Số tiền</th>
-                      <th rowspan="2">Tiến độ</th>
-                      {{-- <th rowspan="2">Số tiền còn lại</th> --}}
-                    </tr>
-                    <tr>
-                      <th></th>
-                      <th>Kế hoạch</th>
-                      <th>Đã thực hiện</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @php
-                      $icash = 1;
-                      $total_requireamount = 0;
-                      $total_realamount = 0;
-                      $checkTotalPlan = '';
-                      $checkTotalText = '';
-                      $percentTotalProcess = 0;
-                      $percentProcess = 0;
-                    @endphp
-                    @foreach ($listcashplan as $cashplan)
-                      @php
-                        $checkAmountPlan = $sumArray[$cashplan->id . '_realamount'] - $sumArray[$cashplan->id . '_planamount'];
-                        $checkPlan = $checkAmountPlan > 0 ? 'text-success' : 'text-error';
-                        
-                        $checkText = $checkAmountPlan > 0 ? 'Đang thực hiện tốt' : 'Đang thiếu hụt ';
-                        if ($cashplan->requireamount > 0) {
-                            $percentProcess = round(($sumArray[$cashplan->id . '_realamount'] / $cashplan->requireamount) * 100, 0);
-                            if ($percentProcess >= 100) {
-                                $percentProcess = 100;
-                            }
-                        }
-                        
-                        //tong cong ke hoach, da thuc hien
-                        $total_requireamount += $cashplan->requireamount;
-                        $total_realamount += $sumArray[$cashplan->id . '_realamount'];
-                        
-                        $checkTotalAmountPlan = $total_realamount - $total_requireamount;
-                        $checkTotalPlan = $checkTotalAmountPlan > 0 ? 'label label-success' : 'label label-danger';
-                        
-                        $checkTotalText = $checkTotalAmountPlan > 0 ? 'Đang thực hiện tốt' : 'Đang thiếu hụt ';
-                        
-                        $percentTotalProcess = round(($total_realamount / $total_requireamount) * 100, 0);
-                        if ($percentTotalProcess >= 100) {
-                            $percentTotalProcess = 100;
-                        }
-                      @endphp
-                      <tr>
-                        <td class="fixed fixed-1">
-                          <p><b>{{ $cashplan->planname }}</b></p>
-                          <p><span>Ngày lập:</span>
-                            {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}
-                          </p>
-                          <p><span>Kế hoạch:</span> {!! formatNumberColorCustom($cashplan->requireamount, 1, 0, 0, 0) !!}</p>
-                        </td>
-                        <td class="text-right">{!! formatNumberColorCustom($cashplan->requireamount, 1, 0, 0, 0) !!}</td>
-                        <td class="text-right">{!! formatNumberColorCustom($sumArray[$cashplan->id . '_realamount'], 1, 0, 0, 0) !!}</td>
-                        <td class="text-center">
-                          <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar"
-                              aria-valuenow="{{ formatNumber($percentProcess, 1, 2, 1) }}" aria-valuemin="0"
-                              aria-valuemax="100" style="width: {{ formatNumber($percentProcess, 1, 2, 1) }}%">
-                              {{ formatNumber($percentProcess, 1, 0, 1) }}%
-                            </div>
-                            <div class="progress-bar progress-bar-danger" role="progressbar"
-                              aria-valuenow="{{ formatNumber(100 - $percentProcess, 1, 2, 1) }}" aria-valuemin="0"
-                              aria-valuemax="100" style="width: {{ formatNumber(100 - $percentProcess, 1, 2, 1) }}%">
-                              {{ formatNumber(100 - $percentProcess, 1, 0, 1) }}%
-                            </div>
-                          </div>
-                          <span class="{{ $checkPlan }}">{{ $checkText }}</span>
-                        </td>
-                        {{-- <td class="text-right">0</td> --}}
-                      </tr>
-                    @endforeach
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-
-  {{-- <form role="form" action="{{ route('cash-processPlan') }}" method="post" id="frm" name="frm">
+  <form role="form" action="{{ route('cash-processPlan') }}" method="post" id="frm" name="frm">
     {{ csrf_field() }}
     <input type='hidden' name='typereport' value=''>
 
@@ -748,12 +326,11 @@
           </div>
 
           <br>
-          <!-- <p style="margin-left:0px;font-size:18pt;margin-top:20px;font-weight:bold;color:#ff0000;">TỔNG QUAN VỀ CHI TIÊU</p>
-                  <p style="text-align: right;margin-right:20px;font-size:10pt;font-weight:bold;color:#000000;">Đơn vị tính: đồng</p> -->
+
 
           <div class="row" style="margin-bottom: 20px;">
             <div class="col-md-4 col-xs-12">
-              <!-- <p style="margin-left:1px;font-size:14pt;color:#312f90;"><b>SỐ TIỀN CÁC VÍ:</b> <span>11,000,000</span> VND</p> -->
+
               <div class="row synthetic" style="display: none;">
                 <div class="col-md-12">
                   <div class="synthetic-table">
@@ -806,7 +383,7 @@
             </div>
 
             <div class="col-md-4 col-xs-12">
-              <!-- <p style="margin-left:1px;font-size:14pt;color:#312f90;"><b>TỔNG TÀI SẢN:</b> <span>11,000,000</span> VND</p> -->
+
               <div class="row synthetic" style="display: none;">
                 <div class="col-md-12">
                   <div class="synthetic-table">
@@ -869,7 +446,7 @@
             </div>
 
             <div class="col-md-4 col-xs-12">
-              <!-- <p style="margin-left:1px;font-size:14pt;color:#312f90;;"><b>TỔNG NỢ:</b> <span>11,000,000</span> VND</p> -->
+
               <div class="row synthetic" style="display: none;">
                 <div class="col-md-12">
                   <div class="synthetic-table">
@@ -1013,19 +590,6 @@
                                 năm</th>
                             @endforeach
                           </tr>
-
-                          <!-- <tr>
-                                                  <th style="text-align: center;vertical-align: top; background: #dddddd;" class="text-nowrap" width="1%">STT</th>
-                                                  <th style="text-align: center;vertical-align: top; background: #dddddd;" class="text-nowrap" width="12%">Tháng</th>
-                                                  <th style="text-align: center;vertical-align: top; background: #dddddd;" class="text-nowrap" width="12%">Thu nhập</th>
-                                                  <th style="text-align: center;vertical-align: top; background: #dddddd;" class="text-nowrap" width="12%">Chi phí</th>
-                                                  <th style="text-align: center;vertical-align: top; background: #dddddd;" class="text-nowrap" width="12%">Chi phí trả các khoản nợ</th>
-                                                  @foreach ($listcashplan as $cashplan)
-  <th style="text-align: left; background: #dddddd;" class="text-nowrap" width="15%">Mục tiêu tài chính {{ $icash++ }}<br>{{ $cashplan->planname }}: {{ formatNumber($cashplan->requireamount, 1, 0, 0) }}<br>Kế hoạch: {{ formatNumber($cashplan->planage - $cashplan->currentage, 1, 0, 0) }} năm</th>
-  @endforeach
-                                                  <th style="text-align: center;vertical-align: top; background: #dddddd;" class="text-nowrap">Chênh lệch dòng tiền <br>(dự kiến)</th>
-                                                  <th style="text-align: center;vertical-align: top; background: #ffffff;" class="text-nowrap" width="4%">&nbsp;</th>
-                                              </tr> -->
                         </thead>
                         <tbody>
                           @php
@@ -1175,25 +739,6 @@
                               </th>
                             @endforeach
                           </tr>
-
-                          <!-- <tr>
-                                                  <th></th>
-                                                  <th></th>
-                                                  <th><font color='#ff0000'>Thực tế</font></th>
-                                                  <th><font color='#ff0000'>Thực tế</font></th>
-                                                  <th><font color='#ff0000'>Thực tế</font></th>
-                                                  <th><font color='#ff0000'>Thực tế</font></th>
-                                                  <th><font color='#ff0000'>Thực tế</font></th>
-                                                  <th><font color='#ff0000'>Thực tế</font></th>
-                                                  <th><font color='#ff0000'>Thực tế</font></th>
-                                                  <th><font color='#ff0000'>Thực tế</font></th>
-                                                  <th><font color='#ff0000'>Thực tế</font></th>
-                                                  <th><font color='#ff0000'>Thực tế</font></th>
-                                                  <th><font color='#ff0000'>Thực tế</font></th>
-                                                  <th><font color='#ff0000'>Thực tế</font></th>
-                                                  <th></th>
-                                              </tr>
-       -->
                         </thead>
                         <tbody>
                           @php
@@ -1370,19 +915,6 @@
                     </td>
                     <td class="text-nowrap"></td>
                     <td class="text-nowrap"></td>
-                    <!-- <td class="text-nowrap text-center"><span class="{{ $checkTotalPlan }}" style="font-size: 100%;">{{ $checkTotalText }}</span></td>
-                                  <td class="text-nowrap text-left">
-                                      <div class="progress" style="margin-bottom: 20px;">
-                                          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ formatNumber($percentTotalProcess, 1, 2, 1) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ formatNumber($percentProcess, 1, 2, 1) }}%">
-                                              {{ formatNumber($percentTotalProcess, 1, 0, 1) }}%
-                                          </div>
-                                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ formatNumber(100 - $percentTotalProcess, 1, 2, 1) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ formatNumber(100 - $percentProcess, 1, 2, 1) }}%">
-                                              {{ formatNumber(100 - $percentTotalProcess, 1, 0, 1) }}%
-                                          </div>
-                                      </div>
-                                      <p style="margin-bottom: 5px; display: inline-block; margin-right: 20px;"><span class="square success"></span>Đã thực hiện: {{ formatNumber($percentTotalProcess, 1, 0, 1) }}%</p>
-                                      <p style="margin-bottom: 0; display: inline-block;"><span class="square danger"></span>Chưa thực hiện: {{ formatNumber(100 - $percentTotalProcess, 1, 0, 1) }}%</p>
-                                  </td> -->
                   </tr>
                 </tbody>
               @endif
@@ -1394,7 +926,7 @@
       </div>
     </div>
 
-  </form> --}}
+  </form>
 @endsection
 @section('scripts')
   @include('product-manage.cash.partials.script_process')
