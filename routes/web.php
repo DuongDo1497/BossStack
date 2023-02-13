@@ -325,7 +325,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
 
     // Thu nhap, chi phi, cac khoan no khach hang
     Route::group(['prefix' => 'cashincomes'], function (){
-        Route::get('/', 'CashIncomeController@index')->name('cashincomes-index');
+        Route::any('/', 'CashIncomeController@index')->name('cashincomes-index');
         Route::any('/process/{incomestatustype}', 'CashIncomeController@process')->name('cashincomes-process');
         Route::get('/add', 'CashIncomeController@add')->name('cashincomes-add');
         Route::post('/store', 'CashIncomeController@store')->name('cashincomes-store');
