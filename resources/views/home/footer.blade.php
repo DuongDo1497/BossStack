@@ -73,7 +73,7 @@
             <a class="dmca-badge" href="//www.dmca.com/Protection/Status.aspx?ID=8e853efb-6c16-457c-82de-028afb4111c1"
               title="DMCA.com Protection Status">
               <img class="img-fluid"
-                src="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=8e853efb-6c16-457c-82de-028afb4111c1"
+                src="https://images.dmca.com/Badges/_dmca_premi_badge_4.png?ID=8e853efb-6c16-457c-82de-028afb4111c1"
                 alt="DMCA.com Protection Status">
             </a>
           </div>
