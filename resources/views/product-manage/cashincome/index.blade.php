@@ -45,28 +45,6 @@
 
     <div class="box-content">
       <div class="box box-primary">
-        <div class="noti-index">
-          <div class="noti-index__wrap">
-            <div class="noti-index__item">
-              <p class="title">Số ví tài chính:</p>
-              <p class="number">{{ $collections->count() }}</p>
-            </div>
-            <div class="noti-index__item">
-              <p class="title">Tổng số tiền mục tiêu:</p>
-              <p class="number">{!! formatNumberColor($collections->sum('requireamount'), 1, 0, 0) !!}</p>
-            </div>
-            <div class="noti-index__item">
-              <p class="title">Tổng số tiền đang thực hiện:</p>
-              <p class="number">{!! formatNumberColor($collections->sum('amount'), 1, 0, 1) !!}</p>
-            </div>
-            <div class="noti-index__item">
-              <p class="title">Tổng số tiền còn lại:</p>
-              <p class="number">
-                {!! formatNumberColor($collections->sum('requireamount') - $collections->sum('amount'), 1, 0, 1) !!}
-              </p>
-            </div>
-          </div>
-        </div>
         <div class="box-search">
           <div class="control">
             <a href="{{ route('cashtranfers-add') }}" class="btn btn-gray btn-transfer text">
@@ -170,13 +148,6 @@
           <div class="paging">
             {{ $collections->links() }}
           </div>
-        </div>
-        <div class="note-content">
-          <p>* Một số lưu ý khi thao tác :</p>
-          <p>- Bạn có thể thiết lập, chỉnh sửa và xem lại các ví tài chính sau khi lập.
-          </p>
-          <p>- Số dư hiện có trong ví tài chính sẽ mặc định được chuyển về ví tổng sau
-            khi bạn thực hiện thao tác xóa ví tài chính.</p>
         </div>
       </div>
     </div>
