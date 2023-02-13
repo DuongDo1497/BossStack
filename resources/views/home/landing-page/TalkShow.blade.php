@@ -169,7 +169,7 @@
                 </div>
                 <div class="speakers-content">
                   <p class="speakers-name">Bà Lê Mỹ Nga</p>
-                  <p class="speakers-position">Giám đốc WeAngles Capital</p>
+                  <p class="speakers-position">Giám đốc WeAngels Capital</p>
                 </div>
               </div>
 

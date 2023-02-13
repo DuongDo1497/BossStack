@@ -218,7 +218,7 @@
           </div>
           <div class="note-content">
             <p>* Một số lưu ý khi thao tác :</p>
-            <p>- Bạn có thể thiết lập, chỉnh sửa và xem lại các dòng tiền sau khi lập.
+            <p>- Bạn có thể thiết lập, phân bổ và xem lại các dòng tiền sau khi lập.
             </p>
             <p>- Số dư hiện có trong dòng tiền sẽ mặc định được chuyển về ví tổng sau
               khi bạn thực hiện thao tác xóa dòng tiền.</p>

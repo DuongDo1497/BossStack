@@ -354,22 +354,36 @@
                         <div class="panel-body">
                           <div class="box-search">
                             <div class="filter-timeline">
-                              <div class="form-group">
-                                <label for="year">Chọn năm:</label>
-                                <div class="input-group">
-                                  <input type="text" class="form-control" name="year" id="year" value="2022">
-                                  <span class="input-group-addon">
-                                    <img src="{{ asset('img/icon-calender.svg') }}" alt="">
-                                  </span>
+                              <div class="form-row">
+                                <div class="form-group">
+                                  <label for="">Chọn từ:</label>
+                                  <div class="input-group">
+                                    <input type="text" class="form-control" name="" id=""
+                                      value="09/2022">
+                                    <span class="input-group-addon">
+                                      <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="">đến:</label>
+                                  <div class="input-group">
+                                    <input type="text" class="form-control" name="" id=""
+                                      value="11/2022">
+                                    <span class="input-group-addon">
+                                      <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
+
                               <button type="submit" class="btn btn-primary btn-filter text">
                                 Lọc
                                 <img class="icon last" src="{{ asset('img/icon-filter.svg') }}" alt="">
                               </button>
                             </div>
                           </div>
-                          <p class="note-date">Năm 2022</p>
+                          <p class="note-date">09/2022 đến 11/2022</p>
                           <div class="table-wrap">
                             <div class="table-content">
                               <table class="table table-bordered table-list">
@@ -460,17 +474,19 @@
                             <div class="filter-timeline">
                               <div class="form-row">
                                 <div class="form-group">
-                                  <label for="type">Phân loại:</label>
-                                  <select class="form-control select2" name="" id="">
-                                    <option selected>Chọn loại</option>
-                                    <option value="">Demo</option>
-                                    <option value="">Demo</option>
-                                  </select>
+                                  <label for="">Chọn từ:</label>
+                                  <div class="input-group">
+                                    <input type="text" class="form-control" name="" id=""
+                                      value="09/2022">
+                                    <span class="input-group-addon">
+                                      <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                                    </span>
+                                  </div>
                                 </div>
                                 <div class="form-group">
-                                  <label for="month">Chọn tháng:</label>
+                                  <label for="">đến:</label>
                                   <div class="input-group">
-                                    <input type="text" class="form-control" name="month" id="month"
+                                    <input type="text" class="form-control" name="" id=""
                                       value="11/2022">
                                     <span class="input-group-addon">
                                       <img src="{{ asset('img/icon-calender.svg') }}" alt="">
@@ -484,7 +500,7 @@
                               </button>
                             </div>
                           </div>
-                          <p class="note-date">Tháng 11 năm 2022</p>
+                          <p class="note-date">09/2022 đến 11/2022</p>
                           <div class="table-wrap">
                             <div class="table-content">
                               <table class="table table-bordered table-list">
@@ -645,14 +661,26 @@
                         <div class="panel-body">
                           <div class="box-search">
                             <div class="filter-timeline">
-                              <div class="form-group">
-                                <label for="year">Chọn năm:</label>
-                                <div class="input-group">
-                                  <input type="text" class="form-control" name="year" id="year"
-                                    value="2022">
-                                  <span class="input-group-addon">
-                                    <img src="{{ asset('img/icon-calender.svg') }}" alt="">
-                                  </span>
+                              <div class="form-row">
+                                <div class="form-group">
+                                  <label for="">Chọn từ:</label>
+                                  <div class="input-group">
+                                    <input type="text" class="form-control" name="" id=""
+                                      value="09/2022">
+                                    <span class="input-group-addon">
+                                      <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="">đến:</label>
+                                  <div class="input-group">
+                                    <input type="text" class="form-control" name="" id=""
+                                      value="11/2022">
+                                    <span class="input-group-addon">
+                                      <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
                               <button type="submit" class="btn btn-primary btn-filter text">
@@ -662,7 +690,7 @@
                             </div>
                           </div>
                           <div class="note-group">
-                            <p class="note-date">Năm 2022</p>
+                            <p class="note-date">09/2022 đến 11/2022</p>
                             <div class="progress-bar__note">
                               <div class="item">
                                 <span class="square success"></span>
@@ -835,17 +863,19 @@
                             <div class="filter-timeline">
                               <div class="form-row">
                                 <div class="form-group">
-                                  <label for="type">Phân loại:</label>
-                                  <select class="form-control select2" name="" id="">
-                                    <option selected>Chọn loại</option>
-                                    <option value="">Demo</option>
-                                    <option value="">Demo</option>
-                                  </select>
+                                  <label for="">Chọn từ:</label>
+                                  <div class="input-group">
+                                    <input type="text" class="form-control" name="" id=""
+                                      value="09/2022">
+                                    <span class="input-group-addon">
+                                      <img src="{{ asset('img/icon-calender.svg') }}" alt="">
+                                    </span>
+                                  </div>
                                 </div>
                                 <div class="form-group">
-                                  <label for="month">Chọn tháng:</label>
+                                  <label for="">đến:</label>
                                   <div class="input-group">
-                                    <input type="text" class="form-control" name="month" id="month"
+                                    <input type="text" class="form-control" name="" id=""
                                       value="11/2022">
                                     <span class="input-group-addon">
                                       <img src="{{ asset('img/icon-calender.svg') }}" alt="">
@@ -860,7 +890,7 @@
                             </div>
                           </div>
                           <div class="note-group">
-                            <p class="note-date">Tháng 11 năm 2022</p>
+                            <p class="note-date">09/2022 đến 11/2022</p>
                             <div class="progress-bar__note">
                               <div class="item">
                                 <span class="square success"></span>
