@@ -33,8 +33,17 @@ class CashIncomeController extends Controller
 
     public function index(Request $request)
     {
-        $this->setViewInit();
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $ret = $this->main_service->delete($id);                    
+            }
+        }
         
+        $this->setViewInit();
+
         return $this->view('index');
     }
  
