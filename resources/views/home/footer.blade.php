@@ -70,8 +70,11 @@
             {{-- <a href="#">
               <img class="img-fluid" src="{{ asset('img/web/bct-img.png') }}" alt="Bộ Công thương">
             </a> --}}
-            <a href="#">
-              <img class="img-fluid" src="{{ asset('img/web/dmca-img.png') }}" alt="dmca">
+            <a class="dmca-badge" href="//www.dmca.com/Protection/Status.aspx?ID=8e853efb-6c16-457c-82de-028afb4111c1"
+              title="DMCA.com Protection Status">
+              <img class="img-fluid"
+                src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=8e853efb-6c16-457c-82de-028afb4111c1"
+                alt="DMCA.com Protection Status">
             </a>
           </div>
         </div>
