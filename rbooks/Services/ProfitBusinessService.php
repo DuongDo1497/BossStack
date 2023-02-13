@@ -26,6 +26,9 @@ class ProfitBusinessService extends BaseService
 
         $transdate = getCurrentDate('d');
         $transdate = quote_smart(FormatDateForSQL($transdate));
+        $month = quote_smart($request->month);
+        $year = quote_smart($request->year);
+
         $chiphitaichinh = (removeFormatNumber($request->chiphitaichinh) == '' ? '0' : removeFormatNumber($request->chiphitaichinh));
         $chiphibanhang = (removeFormatNumber($request->chiphibanhang) == '' ? '0' : removeFormatNumber($request->chiphibanhang));
         $chiphiquanlydoanhnghiep = (removeFormatNumber($request->chiphiquanlydoanhnghiep) == '' ? '0' : removeFormatNumber($request->chiphiquanlydoanhnghiep));
@@ -49,6 +52,8 @@ class ProfitBusinessService extends BaseService
         $data = [
             'customer_id' => $customer_id_decrypt,
             'transdate' => $transdate,
+            'month' => $month,
+            'year' => $year,
             'chiphitaichinh' => $chiphitaichinh,
             'chiphibanhang' => $chiphibanhang,
             'chiphiquanlydoanhnghiep' => $chiphiquanlydoanhnghiep,
@@ -74,6 +79,9 @@ class ProfitBusinessService extends BaseService
     {
         $transdate = getCurrentDate('d');
         $transdate = quote_smart(FormatDateForSQL($transdate));
+        $month = quote_smart($request->month);
+        $year = quote_smart($request->year);
+
         $chiphitaichinh = (removeFormatNumber($request->chiphitaichinh) == '' ? '0' : removeFormatNumber($request->chiphitaichinh));
         $chiphibanhang = (removeFormatNumber($request->chiphibanhang) == '' ? '0' : removeFormatNumber($request->chiphibanhang));
         $chiphiquanlydoanhnghiep = (removeFormatNumber($request->chiphiquanlydoanhnghiep) == '' ? '0' : removeFormatNumber($request->chiphiquanlydoanhnghiep));
@@ -95,6 +103,8 @@ class ProfitBusinessService extends BaseService
         $updated_user_id = quote_smart(Auth()->user()->id);
 
         $data = [
+            'month' => $month,
+            'year' => $year,
             'chiphitaichinh' => $chiphitaichinh,
             'chiphibanhang' => $chiphibanhang,
             'chiphiquanlydoanhnghiep' => $chiphiquanlydoanhnghiep,
@@ -118,10 +128,10 @@ class ProfitBusinessService extends BaseService
     public function getListProfitBusinessFromCustomerId($customer_id)
     {
         $listData = DB::table('profit_business')
-                        ->select('customer_id','transdate','chiphitaichinh','chiphibanhang','chiphiquanlydoanhnghiep','chiphikhac','doanhthuthuan','doanhthutc_tnkhac','tylegvhb_dt','tisuatloinhuankyvong','doanhthu','giavonhangban','thuethunhapdoanhnghiep','chiphi','loinhuantruocthue','loinhuansauthue','description')
+                        ->select('customer_id','transdate','month','year','chiphitaichinh','chiphibanhang','chiphiquanlydoanhnghiep','chiphikhac','doanhthuthuan','doanhthutc_tnkhac','tylegvhb_dt','tisuatloinhuankyvong','doanhthu','giavonhangban','thuethunhapdoanhnghiep','chiphi','loinhuantruocthue','loinhuansauthue','description')
                         ->where('customer_id', '=', "$customer_id")
                         ->where('deleted_at', '=', null)
-                        ->orderBy('transdate', 'ASC');
+                        ->orderBy('transdate', 'DESC');
 
         return $listData;   
   

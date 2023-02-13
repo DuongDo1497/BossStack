@@ -11,14 +11,14 @@
 
   <div class="section profit-history">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('profits-add') }}">Tính lợi nhuận kinh doanh</a> /
+      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('profits-index') }}">Tính lợi nhuận kinh doanh</a> /
       <span class="current">Lịch sử</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
     <div class="box-content">
       <div class="box box-primary">
-        <a href="#" class="btn btn-primary btn-add text">
+        <a href="{{ route('profits-index') }}" class="btn btn-primary btn-add text">
           <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
           Tính lợi nhuận kinh doanh
         </a>
@@ -51,16 +51,18 @@
                     class="text-success">{{ formatNumber($item->loinhuansauthue, 1, 0, 1) }}</span> &#8363;</td>
                 <td class="text-center">{{ formatNumber(($item->loinhuansauthue / $item->doanhthu) * 100, 1, 2, 1) }} %
                 </td>
-                <td class="text-center">02/2023</td>
+                <td class="text-center">{{ $item->month }}/{{ $item->year }}</td>
                 <td class="text-center">
                   {{ $item->transdate == null ? '' : ConvertSQLDate($item->transdate) }}
                 </td>
               </tr>
             @endforeach
-
           </tbody>
         </table>
       </div>
+    <div class="box-footer clearfix text-right">
+        {{ $collections->links() }}
+    </div>      
     </div>
   </div>
 @endsection

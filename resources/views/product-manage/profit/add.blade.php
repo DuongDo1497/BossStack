@@ -84,13 +84,13 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="">Tháng:</label>
-                <input type="text" class="form-control" name="" id="" value=""
-                  placeholder="Nhập..." onkeyup=''>
+                <input type="text" class="form-control" name="month" id="month" value=""
+                  placeholder="Nhập..." onkeypress='return numbersonly(this, event)' required>
               </div>
               <div class="form-group">
                 <label for="">Năm:</label>
-                <input type="text" class="form-control" name="" id="" value=""
-                  placeholder="Nhập..." onkeyup=''>
+                <input type="text" class="form-control" name="year" id="year" value=""
+                  placeholder="Nhập..." onkeypress='return numbersonly(this, event)' required>
               </div>
             </div>
             <div class="form-group">
