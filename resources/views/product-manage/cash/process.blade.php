@@ -472,6 +472,14 @@
                         <div class="panel-body">
                           <div class="box-search">
                             <div class="filter-timeline">
+                              <div class="form-group">
+                                <label for="type">Phân loại:</label>
+                                <select class="form-control select2" name="" id="">
+                                  <option selected>Chọn loại</option>
+                                  <option value="">Demo</option>
+                                  <option value="">Demo</option>
+                                </select>
+                              </div>
                               <div class="form-row">
                                 <div class="form-group">
                                   <label for="">Chọn từ:</label>
@@ -861,6 +869,14 @@
                         <div class="panel-body">
                           <div class="box-search">
                             <div class="filter-timeline">
+                              <div class="form-group">
+                                <label for="type">Phân loại:</label>
+                                <select class="form-control select2" name="" id="">
+                                  <option selected>Chọn loại</option>
+                                  <option value="">Demo</option>
+                                  <option value="">Demo</option>
+                                </select>
+                              </div>
                               <div class="form-row">
                                 <div class="form-group">
                                   <label for="">Chọn từ:</label>

@@ -135,7 +135,7 @@
                 </div>
                 <div class="speakers-content">
                   <p class="speakers-name">Ông Nguyễn Xuân Thành</p>
-                  <p class="speakers-position">Giảng viên Trường Chính sách công và quản lý FullBright, thành viên Tổ
+                  <p class="speakers-position">Giảng viên Trường Chính sách công và quản lý Fulbright, thành viên Tổ
                     tư vấn Kinh tế Chính phủ</p>
                 </div>
               </div>
