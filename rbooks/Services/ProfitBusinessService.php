@@ -136,4 +136,85 @@ class ProfitBusinessService extends BaseService
         return $listData;   
   
     }
+
+    public function getListProfitBusinessFromCustomerIdSortBy($customer_id, $fieldSort, $sortBy)
+    {
+        $listData = DB::table('profit_business')
+                        ->select('customer_id','transdate','month','year','chiphitaichinh','chiphibanhang','chiphiquanlydoanhnghiep','chiphikhac','doanhthuthuan','doanhthutc_tnkhac','tylegvhb_dt','tisuatloinhuankyvong','doanhthu','giavonhangban','thuethunhapdoanhnghiep','chiphi','loinhuantruocthue','loinhuansauthue','description')
+                        ->where('customer_id', '=', "$customer_id")
+                        ->where('deleted_at', '=', null)
+                        ->orderBy($fieldSort, $sortBy);
+
+        return $listData;   
+  
+    }
+
+    /**
+     * 
+     * Lay loi nhuan cua khach hang theo thang / nam
+     * 
+     * @author  linh
+     * @return  string
+     * @access  public
+     * @date    03 14, 2020 5:18:52 PM
+     */
+    public function getSumProfitBusinessFromCustomerIdByMonthInYear($customer_id, $month, $year)
+    {
+        $ret = array();
+         
+        $result = DB::table('profit_business')
+                        ->select(DB::raw('sum(doanhthu) as doanhthu, sum(chiphi) as chiphi, sum(loinhuantruocthue) as loinhuan'))
+                        ->where('customer_id', '=', $customer_id)
+                        ->where('month', '=', $month)
+                        ->where('year', '=', $year)
+                        ->where('deleted_at', '=', null)
+                        ->groupBy('month')
+                        ->get();
+        $doanhthu = 0; $chiphi = 0; $loinhuan = 0;
+        if ($result->count() > 0) {
+            $doanhthu = $result->first()->doanhthu;
+            $chiphi = $result->first()->chiphi;
+            $loinhuan = $result->first()->loinhuan;
+        }
+        $ret = [
+            'doanhthu' => $doanhthu,
+            'chiphi' => $chiphi,
+            'loinhuan' => $loinhuan,
+        ];
+
+        return $ret;    
+    } 
+    
+    /**
+     * Lay tong so loi nhuan theo tung thang trong nam -> ve bieu do bar
+     *
+     * @author  linh
+     * @param   string $somecontent
+     * @access  public
+     * @date    Jul 19, 2006 3:10:43 PM
+     */       
+    public function getListProfitBusinessFromCustomerIdByMonthInYear($customer_id, $searchyear)
+    {
+        $ret = array();
+        $year = $searchyear;
+        for($i=1; $i<=12; $i++){
+            $smonth = "$i";
+            if ($i<10){
+                $smonth = "0$i";
+            }
+            $searchDateMonth =  $year . "-" . $smonth . "-" . "01";
+
+            $profit = $this->getSumProfitBusinessFromCustomerIdByMonthInYear($customer_id, $smonth, $year);
+
+            $dataItem = [
+                'doanhthu' => $profit['doanhthu'],
+                'chiphi' => $profit['chiphi'],
+                'loinhuan' => $profit['loinhuan'],
+            ];
+
+            $ret["$searchDateMonth"] = $dataItem;
+        }
+
+        return $ret;  
+    }    
 }

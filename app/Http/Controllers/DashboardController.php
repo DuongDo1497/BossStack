@@ -8,6 +8,7 @@ use RBooks\Services\CashIncomeService;
 use RBooks\Services\CashPlanService;
 use RBooks\Services\CashAssetService;
 use RBooks\Services\StatisticService;
+use RBooks\Services\ProfitBusinessService;
 use Illuminate\Support\Facades\Crypt;
 use \Auth;
 use Carbon\Carbon;
@@ -59,6 +60,12 @@ class DashboardController extends Controller
         $sfromDate = FormatDateForSQL($fromDate);
         $stoDate = FormatDateForSQL($toDate);
 
+        $currentdate = getCurrentDate('d');
+        $dateArray = explode('/', $currentdate);
+        $day = $dateArray[0]; $month = $dateArray[1]; $year = $dateArray[2];
+        $year = ($request->year == null ? $year : $request->year);
+        $this->view->year = $year;
+
         $this->view->incometypes = config('rbooks.INCOMETYPES');
         $this->view->unittypes = config('rbooks.UNITTYPES');
         $this->view->plantypes = config('rbooks.PLANTYPES');
@@ -89,6 +96,43 @@ class DashboardController extends Controller
         $asset_1 = app(CashAssetService::class)->getListAssetExpenseFromCustomerIdByAssetStatusType($customer_id, '4');
         $this->view->asset_1 = $asset_1;
 
+        $listprofits = app(ProfitBusinessService::class)->getListProfitBusinessFromCustomerIdSortBy($customer_id, 'loinhuantruocthue', 'DESC')->paginate();
+        $i = 0; $loinhuan_1 = 0; $loinhuan_2 = 0;
+        foreach($listprofits as $item){
+            if ($i == 0){
+                $loinhuan_1 = $item->loinhuantruocthue;            	
+            }
+            if ($i == 1){
+                $loinhuan_2 = $item->loinhuantruocthue;             
+            }
+            if ($i == 2){
+                break;	
+            }                         
+            $i++;
+        }        
+        $this->view->loinhuan_1 = $loinhuan_1;
+        $this->view->loinhuan_2 = $loinhuan_2;            
+
+        $listprofits = app(ProfitBusinessService::class)->getListProfitBusinessFromCustomerIdSortBy($customer_id, 'loinhuantruocthue', 'ASC')->paginate();
+        $i = 0; $loinhuanthapnhat_1 = 0; $loinhuanthapnhat_2 = 0;
+        foreach($listprofits as $item){
+            if ($i == 0){
+                $loinhuanthapnhat_1 = $item->loinhuantruocthue;             
+            }
+            if ($i == 1){
+                $loinhuanthapnhat_2 = $item->loinhuantruocthue;             
+            }
+            if ($i == 2){
+                break;  
+            }                         
+            $i++;
+        }        
+        $this->view->loinhuanthapnhat_1 = $loinhuanthapnhat_1;
+        $this->view->loinhuanthapnhat_2 = $loinhuanthapnhat_2; 
+
+        $listprofitsbymonthyear = app(ProfitBusinessService::class)->getListProfitBusinessFromCustomerIdByMonthInYear($customer_id, $year);
+        $this->view->listprofitsbymonthyear = $listprofitsbymonthyear;
+                
         return $this->view('customer');
     }
     

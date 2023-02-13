@@ -200,8 +200,6 @@ class CashPlanService extends BaseService
     {
         $searchField = ($request->searchField == null ? '' : $request->searchField);
         $searchValue = ($request->searchValue == null ? '' : $request->searchValue);
-        addToLog('aaa=' . $searchField);
-        addToLog('bbb=' . $searchValue);
         $listData = DB::table('cash_plans')->leftjoin('customers', 'customers.id', '=', 'cash_plans.customer_id')
                         ->leftjoin('cash_accounts', 'cash_plans.accountno', '=', 'cash_accounts.accountno')
                         ->leftjoin('config_types', 'cash_plans.plantype', '=', 'config_types.id')
