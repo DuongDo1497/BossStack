@@ -28,6 +28,7 @@ class ProfitBusinessService extends BaseService
         $transdate = quote_smart(FormatDateForSQL($transdate));
         $month = quote_smart($request->month);
         $year = quote_smart($request->year);
+        $month = addPadding($month, 2, '0');
 
         $chiphitaichinh = (removeFormatNumber($request->chiphitaichinh) == '' ? '0' : removeFormatNumber($request->chiphitaichinh));
         $chiphibanhang = (removeFormatNumber($request->chiphibanhang) == '' ? '0' : removeFormatNumber($request->chiphibanhang));
@@ -81,6 +82,7 @@ class ProfitBusinessService extends BaseService
         $transdate = quote_smart(FormatDateForSQL($transdate));
         $month = quote_smart($request->month);
         $year = quote_smart($request->year);
+        $month = addPadding($month, 2, '0');
 
         $chiphitaichinh = (removeFormatNumber($request->chiphitaichinh) == '' ? '0' : removeFormatNumber($request->chiphitaichinh));
         $chiphibanhang = (removeFormatNumber($request->chiphibanhang) == '' ? '0' : removeFormatNumber($request->chiphibanhang));
