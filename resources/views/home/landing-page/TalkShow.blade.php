@@ -180,7 +180,7 @@
                 </div>
                 <div class="speakers-content">
                   <p class="speakers-name">Tiến sĩ Trần Quý</p>
-                  <p class="speakers-position">Viện trưởng Viện phát triển kinh tế số</p>
+                  <p class="speakers-position">Viện trưởng Viện phát triển Kinh tế số</p>
                 </div>
               </div>
 

@@ -15,6 +15,7 @@
   <meta property="og:site_name" content="BossStack">
   <link rel="canonical" href="https://bossstack.vn" />
   <meta name="google-site-verification" content="-k2SmRCFohBmfol7XucRrxczosxFvyGEsHG9WVmd8-A" />
+  <meta name='dmca-site-verification' content='aUQwaFMza2hpbExhMTRFYlN6bjZYUT090' />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
