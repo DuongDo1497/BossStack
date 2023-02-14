@@ -352,7 +352,7 @@
                       </div>
                       <div id="cash-dissection__dashboard" class="panel-collapse collapse in">
                         <div class="panel-body">
-                          <div class="box-search">
+                          {{-- <div class="box-search">
                             <div class="filter-timeline">
                               <div class="form-group">
                                 <label for="year">Chọn tháng:</label>
@@ -369,7 +369,7 @@
                                 <img class="icon last" src="{{ asset('img/icon-filter.svg') }}" alt="">
                               </button>
                             </div>
-                          </div>
+                          </div> --}}
                           <p class="note-date">Tháng 11/2022</p>
                           <div class="table-wrap">
                             <div class="table-content">
@@ -635,8 +635,7 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">
-                          <a data-toggle="collapse" data-parent="#assessment__accordion1"
-                            href="#assessment__dashboard">
+                          <a data-toggle="collapse" data-parent="#assessment__accordion1" href="#assessment__dashboard">
                             Tổng quan
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
                           </a>
@@ -644,7 +643,7 @@
                       </div>
                       <div id="assessment__dashboard" class="panel-collapse collapse in">
                         <div class="panel-body">
-                          <div class="box-search">
+                          {{-- <div class="box-search">
                             <div class="filter-timeline">
                               <div class="form-group">
                                 <label for="year">Chọn tháng:</label>
@@ -661,7 +660,7 @@
                                 <img class="icon last" src="{{ asset('img/icon-filter.svg') }}" alt="">
                               </button>
                             </div>
-                          </div>
+                          </div> --}}
                           <div class="note-group">
                             <p class="note-date">Tháng 11/2022</p>
                             <div class="progress-bar__note">
@@ -832,7 +831,7 @@
                       </div>
                       <div id="assessment__detail" class="panel-collapse collapse">
                         <div class="panel-body">
-                          <div class="box-search">
+                          {{-- <div class="box-search">
                             <div class="filter-timeline">
                               <div class="form-row">
                                 <div class="form-group">
@@ -859,7 +858,7 @@
                                 <img class="icon last" src="{{ asset('img/icon-filter.svg') }}" alt="">
                               </button>
                             </div>
-                          </div>
+                          </div> --}}
                           <div class="note-group">
                             <p class="note-date">Tháng 11/2022</p>
                             <div class="progress-bar__note">
