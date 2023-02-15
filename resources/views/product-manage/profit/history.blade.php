@@ -60,9 +60,9 @@
           </tbody>
         </table>
       </div>
-    <div class="box-footer clearfix text-right">
+      {{-- <div class="box-footer clearfix text-right">
         {{ $collections->links() }}
-    </div>      
+      </div>       --}}
     </div>
   </div>
 @endsection

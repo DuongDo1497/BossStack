@@ -148,7 +148,7 @@
                     <th>Phân loại</th>
                     <th>Mục tiêu</th>
                     <th>Ngày lập</th>
-                    <th>Số tuổi đạt mục tiêu</th>
+                    <th>Thời gian</th>
                     <th>Số tiền mục tiêu</th>
                     <th>Đang thực hiện</th>
                     <th>Còn lại</th>
