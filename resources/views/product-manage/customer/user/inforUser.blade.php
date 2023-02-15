@@ -25,23 +25,23 @@
         <div class="box-form">
           <div class="form-group">
             <label for="fullname">Họ và tên<span>*</span>:</label>
-            <input type="text" class="form-control" name="fullname" id="fullname" value="Nguyễn Văn A"
+            <input type="text" class="form-control" name="fullname" id="fullname" value="{{ $model->fullname }}"
               placeholder="Nhập..." readonly>
           </div>
           <div class="form-group">
             <label for="phone">Số điện thoại<span>*</span>:</label>
-            <input type="text" class="form-control" name="phone" id="phone" value="0912345678"
+            <input type="text" class="form-control" name="phone" id="phone" value="{{ $model->phone }}"
               placeholder="Nhập..." readonly>
           </div>
           <div class="form-group">
             <label for="email">Email<span>*</span>:</label>
-            <input type="text" class="form-control" name="email" id="email" value="anguyen@bossstack.vn"
+            <input type="text" class="form-control" name="email" id="email" value="{{ $model->email }}"
               placeholder="Nhập..." readonly>
           </div>
           <div class="form-group">
             <label for="birthday">Ngày sinh<span>*</span>:</label>
             <div class="input-group">
-              <input type="text" class="form-control" name="birthday" id="birthday" value="15/11/1998" readonly>
+              <input type="text" class="form-control" name="birthday" id="birthday" value="{{ $model->birthday == null ? '' : ConvertSQLDate($model->birthday) }}" readonly>
               <span class="input-group-addon">
                 <img src="{{ asset('img/icon-calender.svg') }}" alt="">
               </span>
@@ -49,32 +49,32 @@
           </div>
           <div class="form-group">
             <label for="">Phân loại<span>*</span>:</label>
-            <input type="text" class="form-control" name="" id="" value="Gia đình" readonly>
+            <input type="text" class="form-control" name="usercustomertype" id="usercustomertype" value="{{ $model->usercustomertype == '' ? '' : $usercustomertypes[$model->usercustomertype] }}" readonly>
           </div>
           <div class="form-group">
             <label for="">Mối quan hệ<span>*</span>:</label>
-            <input type="text" class="form-control" name="relationship" id="relationship" value="Vợ/Chồng" readonly>
+            <input type="text" class="form-control" name="relationshiptype" id="relationshiptype" value="{{ $model->relationshiptype == '' ? '' : $relationshiptypes[$model->relationshiptype] }}" readonly>
           </div>
 
           <div class="form-group">
             <label for="">Phân quyền<span>*</span>:</label>
-            <input type="text" class="form-control" name="" id="" value="User Admin" readonly>
+            <input type="text" class="form-control" name="" id="" value="{{ $model->role_member == '' ? '' : $rolemembertypes[$model->role_member] }}" readonly>
           </div>
 
           <div class="form-group">
             <label for=""></label>
             <div class="form-text">
-              <input type="checkbox" name="" id="" checked>
+              <input type="checkbox" name="" id="" {{ $model->dependent==1 ? 'checked="checked"' : '' }}>
               Người phụ thuộc
             </div>
           </div>
         </div>
         <div class="box-search">
           <div class="control">
-            <a href="{{ route('customers-editUser', ['id' => 0]) }}" class="btn btn-primary btn-edit">
+            <a href="{{ route('customers-editUser', ['id' => $model->customer_id]) }}" class="btn btn-primary btn-edit">
               Chỉnh sửa
             </a>
-            <a href="{{ route('customers-indexUser') }}" class="btn btn-primary btn-view">
+            <a href="{{ route('customers-dashboardMain') }}" class="btn btn-primary btn-view">
               Xem tài khoản
             </a>
           </div>

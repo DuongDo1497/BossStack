@@ -159,26 +159,6 @@ return [
             '4'=>_('Tài sản có'),
           ],
                       
-    'RELATIONSHIPTYPE' => [
-            '0'=>_('Cha'), 
-            '1'=>_('Mẹ'),
-            '2'=>_('Chồng'),
-            '3'=>_('Vợ'),
-            '4'=>_('Con'),
-            '5'=>_('Anh'),
-            '6'=>_('Chị'),
-            '7'=>_('Em'),
-            '8'=>_('Ông'),
-            '9'=>_('Bà'),
-            '10'=>_('Cô'),
-            '11'=>_('Dì'),
-            '12'=>_('Chú'),
-            '13'=>_('Bác'),
-            '14'=>_('Cậu'),
-            '15'=>_('Mợ'),
-            '16'=>_('Khác'),
-          ],
-
     'NEWSTYPE' => [ 
             '0'=>_('Nhận định chứng khoán'),
             '1'=>_('Kiến thức tài chính đầu tư'),
@@ -204,9 +184,9 @@ return [
           ],
 
     'PRODUCTACCESSPAGES' => [ 
-            '1' => ['retireplans-index', 'cash-index', 'cashplans-index', 'cash-process', 'cashassets-index', 'profits-index'],//Goi ca nhan
-            '2' => ['retireplans-index', 'cash-index', 'cashplans-index', 'cash-process', 'cashassets-index', 'profits-index'],//Goi doanh nghiep
-            '3' => ['retireplans-index', 'cash-index', 'cashplans-index', 'invests-index', 'managetransactions-index', 'cash-process', 'cashassets-index', 'profits-index'],//Goi vip
+            '1' => ['retireplans-index', 'cash-index', 'cashplans-index', 'cash-process', 'cashassets-index', 'profits-index', 'customers-dashboardMain', 'customers-dashboardUser', 'customers-dashboardUserBusiness'],//Goi ca nhan
+            '2' => ['retireplans-index', 'cash-index', 'cashplans-index', 'cash-process', 'cashassets-index', 'profits-index', 'customers-dashboardMain', 'customers-dashboardUser', 'customers-dashboardUserBusiness'],//Goi doanh nghiep
+            '3' => ['retireplans-index', 'cash-index', 'cashplans-index', 'invests-index', 'managetransactions-index', 'cash-process', 'cashassets-index', 'profits-index', 'customers-dashboardMain', 'customers-dashboardUser', 'customers-dashboardUserBusiness'],//Goi vip
             '4' => ['retireplans-index', 'cash-index', 'cashassets-index'],//Goi mien phi
           ],
 
@@ -237,4 +217,25 @@ return [
             '3'=>_('Từ 50 - 100 nhân viên'),
             '4'=>_('Trên 100 nhân viên'),
           ],
+    'RELATIONSHIPTYPE' => [
+            '0'=>_('Vợ/Chồng'), 
+            '1'=>_('Con'),
+            '2'=>_('Anh/Em'),
+            '3'=>_('Cháu'),
+            '4'=>_('Quản gia'),
+            '5'=>_('Người thân khác'),
+          ],
+    'USERTYPES' => [ 
+            '0'=>_('User chính'),
+            '1'=>_('User phụ'),
+          ],  
+    'USERCUSTOMERTYPES' => [ 
+            '0'=>_('Gia đình'),
+            '1'=>_('Kinh doanh'),
+          ],  
+    'ROLEMEMBERTYPES' => [ 
+            '0'=>_('User Admin'),
+            '1'=>_('User Thành viên'),
+          ],  
+
 ];

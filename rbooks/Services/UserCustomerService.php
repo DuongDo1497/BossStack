@@ -49,6 +49,10 @@ class UserCustomerService extends BaseService
             $approved_product = $request->approved_product;
             $begin_at_product = ($request->begin_at_product==""?"":quote_smart(FormatDateForSQL($request->begin_at_product)));
             $finish_at_product = ($request->finish_at_product==""?"":quote_smart(FormatDateForSQL($request->finish_at_product)));
+
+            $type_user = ($request->type_user == "" ? "0" : $request->type_user);
+            $customer_id_parent = ($request->customer_id_parent == "" ? "" : $request->customer_id_parent);
+            $role_member = ($request->role_member == "" ? "0" : $request->role_member);
     
             $data = [
                 'name' => $request->name,
@@ -64,6 +68,9 @@ class UserCustomerService extends BaseService
                 'approved_product' => $approved_product,
                 'begin_at_product' => $begin_at_product,
                 'finish_at_product' => $finish_at_product,
+                'type_user' => $type_user,
+                'customer_id_parent' => $customer_id_parent,
+                'role_member' => $role_member,
             ];
     
             $user = $this->repository->create($data);
@@ -164,6 +171,10 @@ class UserCustomerService extends BaseService
         $begin_at_product = ($request->begin_at_product==""?"":quote_smart(FormatDateForSQL($request->begin_at_product)));
         $finish_at_product = ($request->finish_at_product==""?"":quote_smart(FormatDateForSQL($request->finish_at_product)));
 
+        $type_user = ($request->type_user == "" ? "0" : $request->type_user);
+        $customer_id_parent = ($request->customer_id_parent == "" ? "" : $request->customer_id_parent);
+        $role_member = ($request->role_member == "" ? "0" : $request->role_member);
+
         $customer_id = "";
         if ($request->customer_id != ""){
             $dateArray = explode('-', $customer);
@@ -187,6 +198,9 @@ class UserCustomerService extends BaseService
                 'approved_product' => $approved_product,
                 'begin_at_product' => $begin_at_product,
                 'finish_at_product' => $finish_at_product,
+                'type_user' => $type_user,
+                'customer_id_parent' => $customer_id_parent,
+                'role_member' => $role_member,
             ];
         }else{
             $data = [
@@ -202,6 +216,9 @@ class UserCustomerService extends BaseService
                 'approved_product' => $approved_product,
                 'begin_at_product' => $begin_at_product,
                 'finish_at_product' => $finish_at_product,
+                'type_user' => $type_user,
+                'customer_id_parent' => $customer_id_parent,
+                'role_member' => $role_member,
             ];
         }
         $user = $this->repository->update($data, $id);

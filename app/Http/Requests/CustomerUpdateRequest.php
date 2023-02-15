@@ -25,12 +25,8 @@ class CustomerUpdateRequest extends FormRequest
     {
         return [
             'fullname' => 'required|max:255',
-            'birthday' => 'required',
-            'gender' => 'required',
-            'address' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
-            'customertype' => 'required',
         ];
     }
     
@@ -38,13 +34,9 @@ class CustomerUpdateRequest extends FormRequest
     {
         return [
             'fullname.required' => "Bạn chưa nhập tên khách hàng.",
-            'birthday.required' => "Bạn chưa nhập ngày sinh.",
-            'gender.required' => "Bạn chưa chọn giới tính.",
-            'address.required' => "Bạn chưa nhập thông tin địa chỉ.",
             'email.required' => "Bạn chưa nhập địa chỉ email.",
             'email.email' => "Địa chỉ email không hợp lệ.",
             'phone.required' => "Bạn chưa nhập số điện thoại.",
-            'customertype.required' => "Bạn chưa chọn nhóm khách hàng.",
         ];
     }      
 }

@@ -11,7 +11,7 @@ class UserCustomer extends Authenticatable
 {
     use Notifiable;
     use EntrustUserTrait;
-    //use SoftDeletes;
+//    use SoftDeletes;
 
     protected $table = 'users';
 
@@ -28,7 +28,7 @@ class UserCustomer extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'role', 'customer_id', 'service_product_id', 'last_login_at', 'blocked', 'begin_at', 'finish_at', 'begin_at_product', 'finish_at_product', 'approved_product', 
+        'name', 'email', 'password', 'role', 'customer_id', 'service_product_id', 'last_login_at', 'blocked', 'begin_at', 'finish_at', 'begin_at_product', 'finish_at_product', 'approved_product', 'type_user', 'customer_id_parent', 'role_member', 
     ];
 
     /**

@@ -439,7 +439,7 @@ class CustomerController extends Controller
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
         $this->view->gendertype = config('rbooks.GENDERTYPE');
         $this->view->customertype = config('rbooks.CUSTOMERTYPE');
-        $this->view->relationshiptype = config('rbooks.RELATIONSHIPTYPE');
+        $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
 
         $listFamilyRelationship = app(FamilyRelationshipService::class)->getListFamilyRelationshipFromCustomerId($customer_id);
         $this->view->listFamilyRelationship = $listFamilyRelationship;
@@ -527,7 +527,7 @@ class CustomerController extends Controller
 
         $this->view->gendertype = config('rbooks.GENDERTYPE');
         $this->view->customertype = config('rbooks.CUSTOMERTYPE');
-        $this->view->relationshiptype = config('rbooks.RELATIONSHIPTYPE');
+        $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
 
         $listFamilyRelationship = app(FamilyRelationshipService::class)->getListFamilyRelationshipFromCustomerId($customer_id);
         $this->view->listFamilyRelationship = $listFamilyRelationship;
@@ -582,7 +582,7 @@ class CustomerController extends Controller
         $this->view->model = $this->main_service->find($customer_id);
                 
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
-        $this->view->relationshiptype = config('rbooks.RELATIONSHIPTYPE');
+        $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
 
         $this->view->setHeading('THÔNG TIN MỐI QUAN HỆ');
         $this->view->setSubHeading('Thêm mới');
@@ -637,7 +637,7 @@ class CustomerController extends Controller
         $this->view->familyRelationship = app(FamilyRelationshipService::class)->find($id);
                 
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
-        $this->view->relationshiptype = config('rbooks.RELATIONSHIPTYPE');
+        $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
 
         $this->view->setSubHeading('Chỉnh sửa');
 
@@ -662,61 +662,165 @@ class CustomerController extends Controller
             ->with(NotificationMessage::UPDATE_SUCCESS);
     }
 
-    public function dashboardMain()
+    public function dashboardMain(Request $request)
     {
+        if (app(APIAdminService::class)->hasUserAccessPage(Auth()->user()->role, 'customers-dashboardMain', Auth()->user()->service_product_id, Auth()->user()->approved_product) == 0){
+            return app(APIAdminService::class)->authorizeRolePage(0); //chuyen den trang thong bao loi truy cap
+        } 
+
         $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
-        $this->view->model = $this->main_service->find($customer_id);
-                
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
 
+        $service_product_id = (Auth::user() == null ? "" : Auth::user()->service_product_id);
+        $serviceproduct = app(ServiceProductService::class)->getServiceProductFromId($service_product_id, '1')->first();
+        $service_product_name = $serviceproduct->name;
+        $service_product_numuser = $serviceproduct->numuser;                
+        $this->view->service_product_name = $service_product_name;//San pham da chon
+        $this->view->service_product_numuser = $service_product_numuser;//San pham da chon
+
         $this->view->setHeading('TỔNG QUAN USER');
+        $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
+        $this->view->usercustomertypes = config('rbooks.USERCUSTOMERTYPES');
+        $this->view->rolemembertypes = config('rbooks.ROLEMEMBERTYPES');
+
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $user_ret = app(UserService::class)->find($id);
+                $customer_id_delete = $user_ret->customer_id;
+                $ret = app(UserService::class)->delete($id);                    
+                $ret = app(CustomerService::class)->delete($customer_id_delete);                    
+            }
+        }
+
+        $collections = $this->main_service->getListCustomerFromCustomerIdParent($customer_id, "")->paginate($this->view->filter['limit']);
+        $this->view->collections = $collections;
 
         return $this->view('user.dashboardMain');
     }
 
-    public function dashboardUser()
+    public function dashboardUser(Request $request)
     {
+        if (app(APIAdminService::class)->hasUserAccessPage(Auth()->user()->role, 'customers-dashboardUser', Auth()->user()->service_product_id, Auth()->user()->approved_product) == 0){
+            return app(APIAdminService::class)->authorizeRolePage(0); //chuyen den trang thong bao loi truy cap
+        } 
+
         $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
-        $this->view->model = $this->main_service->find($customer_id);
-                
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
 
+        $service_product_id = (Auth::user() == null ? "" : Auth::user()->service_product_id);
+        $serviceproduct = app(ServiceProductService::class)->getServiceProductFromId($service_product_id, '1')->first();
+        $service_product_name = $serviceproduct->name;
+        $service_product_numuser = $serviceproduct->numuser;                
+        $this->view->service_product_name = $service_product_name;//San pham da chon
+        $this->view->service_product_numuser = $service_product_numuser;//San pham da chon
+
         $this->view->setHeading('TỔNG QUAN USER');
+        $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
+        $this->view->usercustomertypes = config('rbooks.USERCUSTOMERTYPES');
+        $this->view->rolemembertypes = config('rbooks.ROLEMEMBERTYPES');
+
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $user_ret = app(UserService::class)->find($id);
+                $customer_id_delete = $user_ret->customer_id;
+                $ret = app(UserService::class)->delete($id);                    
+                $ret = app(CustomerService::class)->delete($customer_id_delete);                    
+            }
+        }
+
+        $collections = $this->main_service->getListCustomerFromCustomerIdParent($customer_id, "0")->paginate($this->view->filter['limit']);
+        $this->view->collections = $collections;
+
+        return $this->view('user.dashboardUser');
+    }
+
+    public function dashboardUserBusiness(Request $request)
+    {
+        if (app(APIAdminService::class)->hasUserAccessPage(Auth()->user()->role, 'customers-dashboardUserBusiness', Auth()->user()->service_product_id, Auth()->user()->approved_product) == 0){
+            return app(APIAdminService::class)->authorizeRolePage(0); //chuyen den trang thong bao loi truy cap
+        } 
+
+        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
+        $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+
+        $service_product_id = (Auth::user() == null ? "" : Auth::user()->service_product_id);
+        $serviceproduct = app(ServiceProductService::class)->getServiceProductFromId($service_product_id, '1')->first();
+        $service_product_name = $serviceproduct->name;
+        $service_product_numuser = $serviceproduct->numuser;                
+        $this->view->service_product_name = $service_product_name;//San pham da chon
+        $this->view->service_product_numuser = $service_product_numuser;//San pham da chon
+
+        $this->view->setHeading('TỔNG QUAN USER');
+        $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
+        $this->view->usercustomertypes = config('rbooks.USERCUSTOMERTYPES');
+        $this->view->rolemembertypes = config('rbooks.ROLEMEMBERTYPES');
+
+        $typereport = ($request->typereport == null ? '' : $request->typereport);
+        if ($typereport == "delete"){
+            $ids = $request->ids;
+            for($i=0; $i < count($ids); $i++){
+                $id = $ids[$i];
+                $user_ret = app(UserService::class)->find($id);
+                $customer_id_delete = $user_ret->customer_id;
+                $ret = app(UserService::class)->delete($id);                    
+                $ret = app(CustomerService::class)->delete($customer_id_delete);                    
+            }
+        }
+
+        $collections = $this->main_service->getListCustomerFromCustomerIdParent($customer_id, "1")->paginate($this->view->filter['limit']);
+        $this->view->collections = $collections;
 
         return $this->view('user.dashboardUser');
     }
 
     public function addUser()
     {
-        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
-        $this->view->model = $this->main_service->find($customer_id);
-                
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+        $typereport = (Auth::user() == null ? "" : Auth::user()->service_product_id);
+        $this->view->typereport = $typereport;//San pham da chon
+        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
+        $this->view->customer_id = $customer_id;
 
         $this->view->setHeading('THÊM MỚI USER THÀNH VIÊN');
         $this->view->setSubHeading('Thêm mới');
+        $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
+        $this->view->usercustomertypes = config('rbooks.USERCUSTOMERTYPES');
+        $this->view->rolemembertypes = config('rbooks.ROLEMEMBERTYPES');
 
         return $this->view('user.addUser');
     }
 
-    public function storeUser(FamilyRelationshipStoreRequest $request)
+    public function storeUser(CustomerStoreRequest $request)
     {
-        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
-
-        $result = app(FamilyRelationshipService::class)->createFamilyRelationship($request, $customer_id);
-
         $message = "";
-        if ($result){
-            $message = "Thông tin đã được cập nhật thành công !";
+        $result = $this->main_service->createCustomerFromUser($request);
+        if ($result != ""){
+            $message = "Thông tin đã được thêm mới thành công !";
         }else{
             $message = "Lỗi lưu dữ liệu !";
         }
         
         $this->view->infor = $message;
 
-        return redirect()
-            ->route('user.editUser')
-            ->with(NotificationMessage::UPDATE_SUCCESS);
+        $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+        $typereport = (Auth::user() == null ? "" : Auth::user()->service_product_id);
+        $this->view->typereport = $typereport;//San pham da chon
+        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
+        $this->view->customer_id = $customer_id;
+
+        $this->view->setHeading('THÊM MỚI USER THÀNH VIÊN');
+        $this->view->setSubHeading('Thêm mới');
+        $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
+        $this->view->usercustomertypes = config('rbooks.USERCUSTOMERTYPES');
+        $this->view->rolemembertypes = config('rbooks.ROLEMEMBERTYPES');
+
+        return $this->view('user.addUser');
     }
 
     public function deleteUser($id)
@@ -741,10 +845,12 @@ class CustomerController extends Controller
 
     public function editUser($id)
     {
-        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
-
-               
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+        $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
+        $this->view->usercustomertypes = config('rbooks.USERCUSTOMERTYPES');
+        $this->view->rolemembertypes = config('rbooks.ROLEMEMBERTYPES');
+
+        $this->view->model = $this->main_service->find($id);
 
         $this->view->setHeading('CHỈNH SỬA USER CON');
         $this->view->setSubHeading('Chỉnh sửa');
@@ -754,13 +860,13 @@ class CustomerController extends Controller
 
     public function inforUser($id)
     {
-        $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
-
-               
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
-
         $this->view->setHeading('THÔNG TIN USER CON');
-        // $this->view->setSubHeading('Chỉnh sửa');
+        $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
+        $this->view->usercustomertypes = config('rbooks.USERCUSTOMERTYPES');
+        $this->view->rolemembertypes = config('rbooks.ROLEMEMBERTYPES');
+
+        $this->view->model = $this->main_service->getCustomerFromCustomerId($id)->first();
 
         return $this->view('user.inforUser');
     }
@@ -778,8 +884,10 @@ class CustomerController extends Controller
         return $this->view('user.indexUser');
     }
 
-    public function updateUser(FamilyRelationshipStoreRequest $request, $id)
+    public function updateUser(CustomerUpdateRequest $request, $id)
     {
+
+        $result = $this->main_service->updateCustomer($request, $id);
 
         $message = "";
         if ($result){
@@ -790,9 +898,14 @@ class CustomerController extends Controller
         
         $this->view->infor = $message;
 
-        return redirect()
-            ->route('user.editUser')
-            ->with(NotificationMessage::UPDATE_SUCCESS);
+        $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
+        $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
+        $this->view->usercustomertypes = config('rbooks.USERCUSTOMERTYPES');
+        $this->view->rolemembertypes = config('rbooks.ROLEMEMBERTYPES');
+
+        $this->view->model = $this->main_service->find($id);
+
+        return $this->view('user.editUser');
     }
 
     public function addFunction(Request $request)

@@ -13,7 +13,7 @@ class ServiceProduct extends BaseModel
      * @var array
      */
     protected $fillable = [
-        'code','name','price','termtype','productdate','description','numtime','orderproduct','created_user_id','created_at','updated_user_id','updated_at'
+        'code','name','price','termtype','productdate','description','numtime','numuser','orderproduct','created_user_id','created_at','updated_user_id','updated_at'
     ];
 
 }
