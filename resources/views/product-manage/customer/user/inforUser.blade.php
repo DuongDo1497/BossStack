@@ -39,9 +39,10 @@
               placeholder="Nhập..." readonly>
           </div>
           <div class="form-group">
-            <label for="birthday">Ngày sinh<span>*</span>:</label>
+            <label for="birthday">Ngày bắt đầu<span>*</span>:</label>
             <div class="input-group">
-              <input type="text" class="form-control" name="birthday" id="birthday" value="{{ $model->birthday == null ? '' : ConvertSQLDate($model->birthday) }}" readonly>
+              <input type="text" class="form-control" name="birthday" id="birthday"
+                value="{{ $model->birthday == null ? '' : ConvertSQLDate($model->birthday) }}" readonly>
               <span class="input-group-addon">
                 <img src="{{ asset('img/icon-calender.svg') }}" alt="">
               </span>
@@ -49,25 +50,28 @@
           </div>
           <div class="form-group">
             <label for="">Phân loại<span>*</span>:</label>
-            <input type="text" class="form-control" name="usercustomertype" id="usercustomertype" value="{{ $model->usercustomertype == '' ? '' : $usercustomertypes[$model->usercustomertype] }}" readonly>
+            <input type="text" class="form-control" name="usercustomertype" id="usercustomertype"
+              value="{{ $model->usercustomertype == '' ? '' : $usercustomertypes[$model->usercustomertype] }}" readonly>
           </div>
           <div class="form-group">
-            <label for="">Mối quan hệ<span>*</span>:</label>
-            <input type="text" class="form-control" name="relationshiptype" id="relationshiptype" value="{{ $model->relationshiptype == '' ? '' : $relationshiptypes[$model->relationshiptype] }}" readonly>
+            <label for="">Chức vụ<span>*</span>:</label>
+            <input type="text" class="form-control" name="relationshiptype" id="relationshiptype"
+              value="{{ $model->relationshiptype == '' ? '' : $relationshiptypes[$model->relationshiptype] }}" readonly>
           </div>
 
           <div class="form-group">
             <label for="">Phân quyền<span>*</span>:</label>
-            <input type="text" class="form-control" name="" id="" value="{{ $model->role_member == '' ? '' : $rolemembertypes[$model->role_member] }}" readonly>
+            <input type="text" class="form-control" name="" id=""
+              value="{{ $model->role_member == '' ? '' : $rolemembertypes[$model->role_member] }}" readonly>
           </div>
 
-          <div class="form-group">
+          {{-- <div class="form-group">
             <label for=""></label>
             <div class="form-text">
               <input type="checkbox" name="" id="" {{ $model->dependent==1 ? 'checked="checked"' : '' }}>
               Người phụ thuộc
             </div>
-          </div>
+          </div> --}}
         </div>
         <div class="box-search">
           <div class="control">
