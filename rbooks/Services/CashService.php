@@ -33,7 +33,7 @@ class CashService extends BaseService
         return $this->repository->update($data, $id);
     }
 
-    public function getListCashFromCustomer($customer_id, $fromdate, $todate)
+    public function getListCashFromCustomer($customer_id, $fromdate, $todate, $incometype)
     {
         $retArray = array();//array tra ket qua
 
@@ -55,7 +55,7 @@ class CashService extends BaseService
         }
 
         //Lay thong tin cac muc tieu tai chinh
-        $listcashplan = app(CashPlanService::class)->getListCashPlanFromCustomerId($customer_id);
+        $listcashplan = app(CashPlanService::class)->getListCashPlanFromCustomerId($customer_id, $incometype)->paginate();
         //Khoi tao gia tri mang tong
         $sumArray = array();//array chua tong 
         $sumArray['income'] = 0;

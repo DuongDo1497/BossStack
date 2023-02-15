@@ -13,6 +13,7 @@ use RBooks\Services\CashPlanService;
 use RBooks\Services\CashPlanDetailService;
 use RBooks\Services\CashAssetService;
 use RBooks\Services\StatisticService;
+use RBooks\Services\ConfigTypeService;
 use RBooks\Models\Cash;
 use Illuminate\Support\Facades\Crypt;
 use \Auth;
@@ -176,6 +177,10 @@ class CashController extends Controller
         $todate = ($request->todate == null ? $stodate : $request->todate);
         $this->view->fromdate = $fromdate;
         $this->view->todate = $todate;
+
+        $this->view->incometypes = app(ConfigTypeService::class)->getConfigTypeFromType('5');
+        $incometype = ($request->incometype == null ? '' : $request->incometype);
+        $this->view->incometype = $incometype;
                 
         $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
         $customer_id_encrypt = Crypt::encrypt($customer_id);
@@ -189,13 +194,12 @@ class CashController extends Controller
         $asset_1 = app(CashAssetService::class)->getListAccountAssetFromCustomerByAssetStatusType($customer_id, '4');
         $this->view->asset_1 = $asset_1;
 
-        $retArray = $this->main_service->getListCashFromCustomer($customer_id, $fromdate, $todate);
+        $retArray = $this->main_service->getListCashFromCustomer($customer_id, $fromdate, $todate, $incometype);
         $this->view->yearArray = $retArray[0];
         $this->view->monthArray = $retArray[1];
         $this->view->dataArray = $retArray[2];
         $this->view->listcashplan = $retArray[3];
         $this->view->sumArray = $retArray[4];
-
 
         $accountno = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->customercode) . "0000";
         $listaccounts = app(CashAccountService::class)->getListAccountDetail($customer_id, $accountno)->paginate();;
@@ -220,6 +224,10 @@ class CashController extends Controller
         $todate = ($request->todate == null ? $stodate : $request->todate);
         $this->view->fromdate = $fromdate;
         $this->view->todate = $todate;
+
+        $this->view->incometypes = app(ConfigTypeService::class)->getConfigTypeFromType('5');
+        $incometype = ($request->incometype == null ? '' : $request->incometype);
+        $this->view->incometype = $incometype;
                 
         $customer_id = (Auth::user() == null ? "-1" : Auth::user()->customer()->first()->id);
         $customer_id_encrypt = Crypt::encrypt($customer_id);
@@ -245,7 +253,7 @@ class CashController extends Controller
             }        
         }
 
-        $retArray = $this->main_service->getListCashFromCustomer($customer_id, $fromdate, $todate);
+        $retArray = $this->main_service->getListCashFromCustomer($customer_id, $fromdate, $todate, $incometype);
         $this->view->yearArray = $retArray[0];
         $this->view->monthArray = $retArray[1];
         $this->view->dataArray = $retArray[2];

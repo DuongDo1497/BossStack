@@ -289,47 +289,11 @@
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
-    <form role="form" action="{{ route('cash-processPlan') }}" method="post" id="frm" name="frm">
+    <form role="form" action="{{ route('cash-process') }}" method="post" id="frm" name="frm">
       {{ csrf_field() }}
       <input type='hidden' name='typereport' value=''>
       <div class="box-content">
         <div class="box box-primary">
-          {{-- <div class="box-search">
-            <div class="filter-timeline">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="fromdate">Thời gian từ:</label>
-                  <input type="text" class="form-control" name="fromdate" id="fromdate" value="{{ $fromdate }}">
-                </div>
-                <div class="form-group">
-                  <label for="todate">đến:</label>
-                  <input type="text" class="form-control" name="todate" id="todate" value="{{ $todate }}">
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary btn-filter">
-                Tìm kiếm
-                <img class="icon" src="{{ asset('img/icon-search.svg') }}" alt="">
-              </button>
-            </div>
-          </div> --}}
-
-          {{-- <div class="noti-index">
-            <div class="noti-index__wrap">
-              <div class="noti-index__item">
-                <p class="title">Số tiền các ví:</p>
-                <p class="number">+20,000,000</p>
-              </div>
-              <div class="noti-index__item">
-                <p class="title">Tổng tài sản:</p>
-                <p class="number">+20,000,000</p>
-              </div>
-              <div class="noti-index__item">
-                <p class="title">Tổng nợ:</p>
-                <p class="number">-70,350,000</p>
-              </div>
-            </div>
-          </div> --}}
-
           <div class="cash-process__wrap">
             <ul class="nav nav-tabs">
               <li class="active"><a data-toggle="tab" href="#cashFlowDissection">Bóc tách dòng tiền</a></li>
@@ -352,24 +316,6 @@
                       </div>
                       <div id="cash-dissection__dashboard" class="panel-collapse collapse in">
                         <div class="panel-body">
-                          {{-- <div class="box-search">
-                            <div class="filter-timeline">
-                              <div class="form-group">
-                                <label for="year">Chọn tháng:</label>
-                                <div class="input-group">
-                                  <input type="text" class="form-control" name="year" id="year"
-                                    value="11/2022">
-                                  <span class="input-group-addon">
-                                    <img src="{{ asset('img/icon-calender.svg') }}" alt="">
-                                  </span>
-                                </div>
-                              </div>
-                              <button type="submit" class="btn btn-primary btn-filter text">
-                                Lọc
-                                <img class="icon last" src="{{ asset('img/icon-filter.svg') }}" alt="">
-                              </button>
-                            </div>
-                          </div> --}}
                           <p class="note-date">Tháng 11/2022</p>
                           <div class="table-wrap">
                             <div class="table-content">
@@ -406,30 +352,6 @@
                                     <td class="text-right">-10,000,000</td>
                                   </tr>
                                   <tr>
-                                    <td class="fixed fixed-1">Đầu tư</td>
-                                    <td class="text-center fixed fixed-2">11</td>
-                                    <td class="text-right">+1,500,000,000</td>
-                                    <td class="text-right">+10,000,000</td>
-                                    <td class="text-right">+800,000,000</td>
-                                    <td class="text-right">-10,000,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="fixed fixed-1">Kinh doanh</td>
-                                    <td class="text-center fixed fixed-2">11</td>
-                                    <td class="text-right">+1,500,000,000</td>
-                                    <td class="text-right">+10,000,000</td>
-                                    <td class="text-right">+800,000,000</td>
-                                    <td class="text-right">-10,000,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="fixed fixed-1">Dòng tiền khác</td>
-                                    <td class="text-center fixed fixed-2">11</td>
-                                    <td class="text-right">+1,500,000,000</td>
-                                    <td class="text-right">+10,000,000</td>
-                                    <td class="text-right">+800,000,000</td>
-                                    <td class="text-right">-10,000,000</td>
-                                  </tr>
-                                  <tr>
                                     <td class="fixed fixed-1"><b>Tổng cộng</b></td>
                                     <td class="text-center fixed fixed-2"><b>56</b></td>
                                     <td class="text-right"><b>+1,500,000,000</b></td>
@@ -445,192 +367,12 @@
                       </div>
                     </div>
 
-                    {{-- <div class="panel panel-default">
-                      <div class="panel-heading">
-                        <h4 class="panel-title">
-                          <a data-toggle="collapse" data-parent="#cash-dissection__accordion2"
-                            href="#cash-dissection__detail">
-                            Chi tiết
-                            <i class="fa fa-caret-down" aria-hidden="true"></i>
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="cash-dissection__detail" class="panel-collapse collapse">
-                        <div class="panel-body">
-                          <div class="box-search">
-                            <div class="filter-timeline">
-                              <div class="form-row">
-                                <div class="form-group">
-                                  <label for="type">Phân loại:</label>
-                                  <select class="form-control select2" name="" id="">
-                                    <option selected>Chọn loại</option>
-                                    <option value="">Demo</option>
-                                    <option value="">Demo</option>
-                                  </select>
-                                </div>
-                                <div class="form-group">
-                                  <label for="month">Chọn tháng:</label>
-                                  <div class="input-group">
-                                    <input type="text" class="form-control" name="month" id="month"
-                                      value="11/2022">
-                                    <span class="input-group-addon">
-                                      <img src="{{ asset('img/icon-calender.svg') }}" alt="">
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                              <button type="submit" class="btn btn-primary btn-filter text">
-                                Lọc
-                                <img class="icon last" src="{{ asset('img/icon-filter.svg') }}" alt="">
-                              </button>
-                            </div>
-                          </div>
-                          <p class="note-date">Tháng 11 năm 2022</p>
-                          <div class="table-wrap">
-                            <div class="table-content">
-                              <table class="table table-bordered table-list">
-                                <thead>
-                                  <tr>
-                                    <th rowspan="2" class="fixed fixed-1">Tên ví</th>
-                                    <th colspan="3">Số tiền</th>
-                                    <th rowspan="2">Còn thiếu</th>
-                                  </tr>
-                                  <tr>
-                                    <th></th>
-                                    <th>Mục tiêu</th>
-                                    <th>Cần phân bổ</th>
-                                    <th>Đã thực hiện</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td class="fixed fixed-1">
-                                      <p><b>Ví mục tiêu quỹ dự phòng Ví mục tiêu quỹ dự phòng</b></p>
-                                      <p><span>Ngày lập:</span> 28/11/2022</p>
-                                      <p><span>Kế hoạch:</span> 26 năm</p>
-                                    </td>
-                                    <td class="text-right">+1,500,000,000</td>
-                                    <td class="text-right">+10,000,000</td>
-                                    <td class="text-right">+800,000,000</td>
-                                    <td class="text-right">-10,000,000</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div> --}}
-                  </div>
+                    </div>
                 </div>
               </div>
 
               <div id="assessment" class="tab-pane fade">
                 <div class="tab-pane__body">
-                  {{-- <table class="table table-bordered table-list">
-                    <thead>
-                      <tr>
-                        <th>STT</th>
-                        <th>Mục Tiêu</th>
-                        <th>Tên Mục Tiêu</th>
-                        <th>Kế hoạch</th>
-                        <th>Số tiền đã thực hiện</th>
-                        <th width="10%">Tình Trạng</th>
-                        <th width="30%">Tiến Độ</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      @php
-                        $icash = 1;
-                        $total_requireamount = 0;
-                        $total_realamount = 0;
-                        $checkTotalPlan = '';
-                        $checkTotalText = '';
-                        $percentTotalProcess = 0;
-                        $percentProcess = 0;
-                      @endphp
-                      @foreach ($listcashplan as $cashplan)
-                        @php
-                          $checkAmountPlan = $sumArray[$cashplan->id . '_realamount'] - $sumArray[$cashplan->id . '_planamount'];
-                          $checkPlan = $checkAmountPlan > 0 ? 'status status-success' : 'status status-error';
-                          
-                          $checkText = $checkAmountPlan > 0 ? 'Đang thực hiện tốt' : 'Đang thiếu hụt ';
-                          
-                          if ($cashplan->requireamount > 0){
-                              $percentProcess = round(($sumArray[$cashplan->id . '_realamount'] / $cashplan->requireamount) * 100, 0);
-                              if ($percentProcess >= 100) {
-                                  $percentProcess = 100;
-                              }
-                          }
-                          
-                          //tong cong ke hoach, da thuc hien
-                          $total_requireamount += $cashplan->requireamount;
-                          $total_realamount += $sumArray[$cashplan->id . '_realamount'];
-                          
-                          $checkTotalAmountPlan = $total_realamount - $total_requireamount;
-                          $checkTotalPlan = $checkTotalAmountPlan > 0 ? 'label label-success' : 'label label-danger';
-                          
-                          $checkTotalText = $checkTotalAmountPlan > 0 ? 'Đang thực hiện tốt' : 'Đang thiếu hụt ';
-                          
-                          $percentTotalProcess = round(($total_realamount / $total_requireamount) * 100, 0);
-                          if ($percentTotalProcess >= 100) {
-                              $percentTotalProcess = 100;
-                          }
-                        @endphp
-
-                        <tr>
-                          <td class="text-center">{{ $icash }}</td>
-                          <td class="text-center">Mục tiêu {{ $icash++ }}</td>
-                          <td><b>{{ $cashplan->planname }}</b> <br> {{ $cashplan->description }}
-                            <br>Ngày lập: {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}
-                          </td>
-                          <td class="text-right">{!! formatNumberColorCustom($cashplan->requireamount, 1, 0, 0, 0) !!}</td>
-                          <td class="text-right">{!! formatNumberColorCustom($sumArray[$cashplan->id . '_realamount'], 1, 0, 0, 0) !!}</td>
-                          <td class="text-center">
-                            <span class="{{ $checkPlan }}">{{ $checkText }}</span>
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar progress-bar-success" role="progressbar"
-                                aria-valuenow="{{ formatNumber($percentProcess, 1, 2, 1) }}" aria-valuemin="0"
-                                aria-valuemax="100" style="width: {{ formatNumber($percentProcess, 1, 2, 1) }}%">
-                                {{ formatNumber($percentProcess, 1, 0, 1) }}%
-                              </div>
-                              <div class="progress-bar progress-bar-danger" role="progressbar"
-                                aria-valuenow="{{ formatNumber(100 - $percentProcess, 1, 2, 1) }}" aria-valuemin="0"
-                                aria-valuemax="100" style="width: {{ formatNumber(100 - $percentProcess, 1, 2, 1) }}%">
-                                {{ formatNumber(100 - $percentProcess, 1, 0, 1) }}%
-                              </div>
-                            </div>
-                            <p>
-                              <span class="square status-success"></span>
-                              Đã thực hiện: {{ formatNumber($percentProcess, 1, 0, 1) }}%
-                            </p>
-                            <p>
-                              <span class="square status-error"></span>
-                              Chưa thực hiện: {{ formatNumber(100 - $percentProcess, 1, 0, 1) }}%
-                            </p>
-                          </td>
-                        </tr>
-                      @endforeach
-                    </tbody>
-                    @if ($checkTotalText != '')
-                      <tfoot>
-                        <tr>
-                          <td colspan="3"><b>Tổng cộng</b></td>
-                          <td class="text-right" style="white-space: nowrap !important;">
-                            {!! formatNumberColorCustom($total_requireamount, 1, 0, 0, 0) !!}
-                          </td>
-                          <td class="text-right" style="white-space: nowrap !important;">
-                            {!! formatNumberColorCustom($total_realamount, 1, 0, 0, 0) !!}
-                          </td>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                      </tfoot>
-                    @endif
-                  </table> --}}
-
                   <div class="cash-dissection" id="assessment__accordion">
                     <div class="panel panel-default">
                       <div class="panel-heading">
@@ -643,24 +385,6 @@
                       </div>
                       <div id="assessment__dashboard" class="panel-collapse collapse in">
                         <div class="panel-body">
-                          {{-- <div class="box-search">
-                            <div class="filter-timeline">
-                              <div class="form-group">
-                                <label for="year">Chọn tháng:</label>
-                                <div class="input-group">
-                                  <input type="text" class="form-control" name="year" id="year"
-                                    value="11/2022">
-                                  <span class="input-group-addon">
-                                    <img src="{{ asset('img/icon-calender.svg') }}" alt="">
-                                  </span>
-                                </div>
-                              </div>
-                              <button type="submit" class="btn btn-primary btn-filter text">
-                                Lọc
-                                <img class="icon last" src="{{ asset('img/icon-filter.svg') }}" alt="">
-                              </button>
-                            </div>
-                          </div> --}}
                           <div class="note-group">
                             <p class="note-date">Tháng 11/2022</p>
                             <div class="progress-bar__note">
@@ -694,66 +418,6 @@
                                 <tbody>
                                   <tr>
                                     <td class="fixed fixed-1">Cá nhân</td>
-                                    <td class="text-center fixed fixed-2">11</td>
-                                    <td class="text-right">+1,500,000,000</td>
-                                    <td class="text-right">+10,000,000</td>
-                                    <td class="text-center">
-                                      <div class="progress">
-                                        <div class="progress-bar progress-bar-success" role="progressbar"
-                                          aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                          50%
-                                        </div>
-                                        <div class="progress-bar progress-bar-danger" role="progressbar"
-                                          aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                          50%
-                                        </div>
-                                      </div>
-                                      <span class="text-success">Đang thực hiện tốt</span>
-                                    </td>
-                                    <td class="text-right">+10,000,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="fixed fixed-1">Gia đình</td>
-                                    <td class="text-center fixed fixed-2">11</td>
-                                    <td class="text-right">+1,500,000,000</td>
-                                    <td class="text-right">+10,000,000</td>
-                                    <td class="text-center">
-                                      <div class="progress">
-                                        <div class="progress-bar progress-bar-success" role="progressbar"
-                                          aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                          50%
-                                        </div>
-                                        <div class="progress-bar progress-bar-danger" role="progressbar"
-                                          aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                          50%
-                                        </div>
-                                      </div>
-                                      <span class="text-success">Đang thực hiện tốt</span>
-                                    </td>
-                                    <td class="text-right">+10,000,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="fixed fixed-1">Đầu tư</td>
-                                    <td class="text-center fixed fixed-2">11</td>
-                                    <td class="text-right">+1,500,000,000</td>
-                                    <td class="text-right">+10,000,000</td>
-                                    <td class="text-center">
-                                      <div class="progress">
-                                        <div class="progress-bar progress-bar-success" role="progressbar"
-                                          aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                          50%
-                                        </div>
-                                        <div class="progress-bar progress-bar-danger" role="progressbar"
-                                          aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                          50%
-                                        </div>
-                                      </div>
-                                      <span class="text-success">Đang thực hiện tốt</span>
-                                    </td>
-                                    <td class="text-right">+10,000,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="fixed fixed-1">Kinh doanh</td>
                                     <td class="text-center fixed fixed-2">11</td>
                                     <td class="text-right">+1,500,000,000</td>
                                     <td class="text-right">+10,000,000</td>
@@ -836,10 +500,15 @@
                               <div class="form-row">
                                 <div class="form-group">
                                   <label for="type">Phân loại:</label>
-                                  <select class="form-control select2" name="" id="">
-                                    <option selected>Chọn loại</option>
-                                    <option value="">Demo</option>
-                                    <option value="">Demo</option>
+                                  <select class="form-control select2" name="incometype">
+                                    <option value="">Chọn phân loại</option>
+                                    @foreach ($incometypes as $item)
+                                      @if ($incometype != '' and $item->id == $incometype)
+                                        <option value="{{ $item->id }}" selected>{{ $item->name }}</option>
+                                      @else
+                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                      @endif
+                                    @endforeach
                                   </select>
                                 </div>
                                 {{-- <div class="form-group">
@@ -860,7 +529,7 @@
                             </div>
                           </div>
                           <div class="note-group">
-                            <p class="note-date">Tháng 11/2022</p>
+                            <!--p class="note-date">Tháng 11/2022</p-->
                             <div class="progress-bar__note">
                               <div class="item">
                                 <span class="square success"></span>
@@ -932,9 +601,9 @@
                                         <p><span>Ngày lập:</span>
                                           {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}
                                         </p>
-                                        <p><span>Kế hoạch:</span> -- năm</p>
+                                        <p><span>Kế hoạch:</span> {{ ($cashplan->planage - $cashplan->currentage) }} năm</p>
                                       </td>
-                                      <td>Demo</td>
+                                      <td>{{ $cashplan->name }}</td>
                                       <td class="text-right">{!! formatNumberColorCustom($cashplan->requireamount, 1, 0, 0, 0) !!}</td>
                                       <td class="text-right">{!! formatNumberColorCustom($sumArray[$cashplan->id . '_realamount'], 1, 0, 0, 0) !!}</td>
                                       <td class="text-center">
@@ -955,7 +624,7 @@
                                         <span class="{{ $checkPlan }}">{{ $checkText }}</span>
                                       </td>
                                       <td class="text-right">
-                                        +10,000,000
+                                        {!! formatNumberColorCustom($cashplan->requireamount - $sumArray[$cashplan->id . '_realamount'], 1, 0, 0, 0) !!}
                                       </td>
                                     </tr>
                                   @endforeach

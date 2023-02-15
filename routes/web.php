@@ -296,7 +296,7 @@ Route::group(['namespace' => 'ProductManage', 'middleware' => ['auth','web','che
     Route::group(['prefix' => 'cashs'], function (){
         Route::get('/', 'CashController@index')->name('cash-index');
         Route::get('/manage', 'CashController@manage')->name('cash-manage');
-        Route::get('/process', 'CashController@process')->name('cash-process');
+        Route::any('/process', 'CashController@process')->name('cash-process');
         Route::post('/processPlan', 'CashController@processPlan')->name('cash-processPlan');
 
     });
