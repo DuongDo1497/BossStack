@@ -296,12 +296,12 @@
         <div class="box box-primary">
           <div class="cash-process__wrap">
             <ul class="nav nav-tabs">
-              <li class="active"><a data-toggle="tab" href="#cashFlowDissection">Bóc tách dòng tiền</a></li>
-              <li><a data-toggle="tab" href="#assessment">Đánh giá khả năng thực hiện</a></li>
+              {{-- <li class="active"><a data-toggle="tab" href="#cashFlowDissection">Bóc tách dòng tiền</a></li> --}}
+              <li class="active"><a data-toggle="tab" href="#assessment">Đánh giá khả năng thực hiện</a></li>
             </ul>
 
             <div class="tab-content">
-              <div id="cashFlowDissection" class="tab-pane fade in active">
+              {{-- <div id="cashFlowDissection" class="tab-pane fade in active">
                 <div class="tab-pane__body">
                   <div class="cash-dissection" id="cash-dissection__accordion">
                     <div class="panel panel-default">
@@ -369,12 +369,12 @@
 
                     </div>
                 </div>
-              </div>
+              </div> --}}
 
-              <div id="assessment" class="tab-pane fade">
+              <div id="assessment" class="tab-pane fade in active">
                 <div class="tab-pane__body">
                   <div class="cash-dissection" id="assessment__accordion">
-                    <div class="panel panel-default">
+                    {{-- <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">
                           <a data-toggle="collapse" data-parent="#assessment__accordion1" href="#assessment__dashboard">
@@ -482,7 +482,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> --}}
 
                     <div class="panel panel-default">
                       <div class="panel-heading">
@@ -493,7 +493,7 @@
                           </a>
                         </h4>
                       </div>
-                      <div id="assessment__detail" class="panel-collapse collapse">
+                      <div id="assessment__detail" class="panel-collapse collapse in">
                         <div class="panel-body">
                           <div class="box-search">
                             <div class="filter-timeline">
@@ -601,7 +601,8 @@
                                         <p><span>Ngày lập:</span>
                                           {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}
                                         </p>
-                                        <p><span>Kế hoạch:</span> {{ ($cashplan->planage - $cashplan->currentage) }} năm</p>
+                                        <p><span>Kế hoạch:</span> {{ $cashplan->planage - $cashplan->currentage }} năm
+                                        </p>
                                       </td>
                                       <td>{{ $cashplan->name }}</td>
                                       <td class="text-right">{!! formatNumberColorCustom($cashplan->requireamount, 1, 0, 0, 0) !!}</td>
