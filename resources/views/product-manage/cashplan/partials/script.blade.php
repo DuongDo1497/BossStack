@@ -13,35 +13,36 @@
   });
 </script>
 <script language="javascript">
-function CheckAll(parent){
+  function CheckAll(parent) {
     var countcheck = 0;
     var ids = document.getElementsByTagName('input');
-    for(var i=0; i<ids.length; i++){
-        if(ids[i].name == "ids[]"){
-            countcheck++;
-            ids[i].checked = parent.checked;
-        }
+
+    for (var i = 0; i < ids.length; i++) {
+      if (ids[i].name == "ids[]") {
+        countcheck++;
+        ids[i].checked = parent.checked;
+      }
     }
     var checklabel = document.getElementById("checklabel");
-    checklabel.innerHTML = countcheck;    
-}
+    checklabel.innerHTML = countcheck;
+  }
 
-function CheckId(parent){
+  function CheckId(parent) {
     var countcheck = 0;
     var checklabel = document.getElementById("checklabel");
     var ids = document.getElementsByTagName('input');
-    for(var i=0; i<ids.length; i++){
-        if(ids[i].name == "ids[]" && ids[i].checked == true){
-            countcheck++;
-        }
+
+    for (var i = 0; i < ids.length; i++) {
+      if (ids[i].name == "ids[]" && ids[i].checked == true) {
+        countcheck++;
+      }
     }
 
     var allbox = document.getElementById("allbox");
     allbox.checked = false;
-    
-    checklabel.innerHTML = countcheck;    
-}
 
+    checklabel.innerHTML = countcheck;
+  }
 </script>
 <script>
   $(function() {
@@ -116,7 +117,7 @@ function CheckId(parent){
     checkcurrentamount = parseFloat(removeCharacter(currentamount.value, ',')) * parseInt(currentamountunittype
       .value) + parseFloat(amount);
     checkrequireamount = parseFloat(removeCharacter(requireamount.value, ',')) * parseInt(requireamountunittype
-    .value);
+      .value);
     if (checkcurrentamount > checkrequireamount) {
       checkamountlabel.innerHTML = "Số tiền thiết lập mục tiêu tài chính phải lớn hơn số tiền tích lũy hiện tại !!!";
     } else {
@@ -145,7 +146,7 @@ function CheckId(parent){
     checkcurrentamount = parseFloat(removeCharacter(currentamount.value, ',')) * parseInt(currentamountunittype
       .value) + parseFloat(amount);
     checkrequireamount = parseFloat(removeCharacter(requireamount.value, ',')) * parseInt(requireamountunittype
-    .value);
+      .value);
     if (checkcurrentamount > checkrequireamount) {
       checkamountlabel.innerHTML = "Số tiền thiết lập mục tiêu tài chính phải lớn hơn số tiền tích lũy hiện tại !!!";
     } else {
@@ -159,7 +160,7 @@ function CheckId(parent){
     checkcurrentamount = parseFloat(removeCharacter(currentamount.value, ',')) * parseInt(currentamountunittype
       .value) + parseFloat(amount);
     checkrequireamount = parseFloat(removeCharacter(requireamount.value, ',')) * parseInt(requireamountunittype
-    .value);
+      .value);
     if (checkcurrentamount > checkrequireamount) {
       checkamountlabel.innerHTML = "Số tiền thiết lập mục tiêu tài chính phải lớn hơn số tiền tích lũy hiện tại !!!";
     } else {

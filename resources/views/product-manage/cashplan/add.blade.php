@@ -61,7 +61,7 @@
 
             <div class="form-group">
               <label for="incometype">Phân loại<span>*</span>:</label>
-              <select class="form-select select2" name="incometype" id="incometype"
+              <select class="form-select select2" tabindex="-1" name="incometype" id="incometype"
                 onChange="processSubmitOpenWindow('frm', 'view', '_top', '{{ route('cashplans-processAdd', ['incomestatustype' => $incomestatustype]) }}', '1')"
                 required>
                 <option selected>Chọn loại</option>
@@ -79,7 +79,7 @@
             </div>
             <div class="form-group">
               <label for="incometypedetail">Mục tiêu<span>*</span>:</label>
-              <select class="form-select select2" name="incometypedetail" id="incometypedetail" required>
+              <select class="form-select select2" tabindex="-1" name="incometypedetail" id="incometypedetail" required>
                 @foreach ($incometypedetails as $item)
                   @if ($item->id == $incometypedetail or $item->id == old('incometypedetail'))
                     <option value="{{ $item->id }}" selected>{{ $item->name }}</option>
@@ -94,7 +94,7 @@
             </div>
             <div class="form-group">
               <label for="description">Tên dòng tiền<span>*</span>:</label>
-              <input type="text" class="form-control" name="description" id="description"
+              <input type="text" class="form-control" tabindex="-1" name="description" id="description"
                 value="{{ old('description') }}" placeholder="Nhập tên dòng tiền" required>
               @if ($errors->has('description'))
                 <span class="text-danger">{{ $errors->first('description') }}</span>
@@ -102,13 +102,13 @@
             </div>
             <div class="form-group">
               <label for="plandate">Ngày lập:</label>
-              <input type="text" class="form-control" name="plandate" id="plandate"
+              <input type="text" class="form-control" tabindex="-1" name="plandate" id="plandate"
                 value="{{ old('plandate') == '' ? $plandate : old('plandate') }}" readonly>
               @if ($errors->has('plandate'))
                 <span class="text-danger">{{ $errors->first('plandate') }}</span>
               @endif
             </div>
-            <div class="form-group">
+            {{-- <div class="form-group">
               <label for="currentage">Tuổi hiện tại:</label>
               <div class="input-group">
                 <input type="text" class="form-control" name="currentage" id="currentage"
@@ -119,23 +119,20 @@
                   <span class="text-danger">{{ $errors->first('currentage') }}</span>
                 @endif
               </div>
-            </div>
+            </div> --}}
             <div class="form-group">
-              <label for="planage">Tuổi hoàn thành mục tiêu<span>*</span>:</label>
-              <div class="input-group">
-                <input type="text" class="form-control" name="planage" id="planage"
-                  value="{{ old('planage') == '' ? '' : old('planage') }}" placeholder="Nhập tuổi hoàn thành mục tiêu"
-                  required>
-                <span class="input-group-addon">tuổi</span>
-                @if ($errors->has('planage'))
-                  <span class="text-danger">{{ $errors->first('planage') }}</span>
-                @endif
-              </div>
+              <label for="planage">Thời gian hoàn thành mục tiêu<span>*</span>:</label>
+              <input type="text" class="form-control" tabindex="-1" name="planage" id="planage"
+                value="{{ old('planage') == '' ? '' : old('planage') }}" placeholder="Nhập thời gian hoàn thành mục tiêu"
+                required>
+              @if ($errors->has('planage'))
+                <span class="text-danger">{{ $errors->first('planage') }}</span>
+              @endif
             </div>
             <div class="form-group">
               <label for="requireamount">Số tiền mục tiêu<span>*</span>:</label>
               <div class="input-group">
-                <input type="text" class="form-control number" name="requireamount" id="requireamount"
+                <input type="text" class="form-control number" tabindex="-1" name="requireamount" id="requireamount"
                   value="{{ old('requireamount') == '' ? 0 : old('requireamount') }}"
                   onkeyup="this.value=formatNumberDecimal(this.value)" required>
                 <span class="input-group-addon">&#8363;</span>
@@ -143,16 +140,16 @@
             </div>
             <div class="form-group">
               <label for="finishdate">Ngày dự kiến hoàn thành:</label>
-              <input type="text" class="form-control" name="finishdate" id="finishdate" value=""
+              <input type="text" class="form-control" tabindex="-1" name="finishdate" id="finishdate" value=""
                 placeholder="dd/mm/yyyy">
             </div>
             <div class="form-group">
               <label for="">Hóa đơn, chứng từ kèm theo:</label>
-              <input type="file" class="form-control" name="fImages" id="" value="" onkeyup=""
-                placeholder="">
+              <input type="file" class="form-control" tabindex="-1" name="fImages" id="" value=""
+                onkeyup="" placeholder="">
             </div>
           </div>
-          <button class="btn btn-primary btn-add" onclick="processReports('frm', 'process')">
+          <button class="btn btn-primary btn-add" tabindex="-1" onclick="processReports('frm', 'process')">
             Thêm dòng tiền
           </button>
         </div>
