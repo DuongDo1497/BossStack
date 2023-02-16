@@ -23,7 +23,7 @@
 
   <div class="section cashtranfer-add">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cash-index') }}">Thu chi ví tổng</a> / <span
+      <span>Quản lý kinh doanh</span> / <a class="prev" href="{{ route('cash-index') }}">Quản lý tiền mặt</a> / <span
         class="current">Phân bổ</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
@@ -53,11 +53,11 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="cashaccount_id_send">Ví tiền nguồn<span>*</span>:</label>
+              <label for="cashaccount_id_send">Dòng tiền nguồn<span>*</span>:</label>
               <select class="form-select select2" name="cashaccount_id_send" id="cashaccount_id_send"
                 onChange="processSubmitOpenWindow('frm', 'view', '_top', '{{ route('cashtranfers-process') }}', '1')"
                 required>
-                <option selected>Chọn ví tiền nguồn</option>
+                <option selected>Chọn dòng tiền nguồn</option>
                 @foreach ($listaccounts as $item)
                   @if ($item->id == $cashaccount_id_send or $item->id == old('cashaccount_id_send'))
                     <option value="{{ $item->id }}" selected>
@@ -91,10 +91,10 @@
               </div>
             @endif
             <div class="form-group">
-              <label for="cashaccount_id_receive">Thông tin ví tiền hưởng<span>*</span>:</label>
+              <label for="cashaccount_id_receive">Thông tin dòng tiền hưởng<span>*</span>:</label>
               <select class="form-select select2" name="cashaccount_id_receive" id="cashaccount_id_receive" onChange=""
                 required>
-                <option selected>Chọn ví tiền hưởng</option>
+                <option selected>Chọn dòng tiền hưởng</option>
                 @foreach ($listaccounts as $item)
                   @if ($item->id != $cashaccount_id_send)
                     @if ($item->id == $cashaccount_id_receive or $item->id == old('cashaccount_id_receive'))
@@ -121,7 +121,7 @@
                               ' - ' .
                               $item->accountname .
                               "
-                                                                                                                                                                                                                                                                                                    (Số dư: " .
+                                                                                                                                                                                                                                                                                                                              (Số dư: " .
                               formatNumber($item->amount, 1, 0, 1) .
                               ')' }}
                         </option>
@@ -131,7 +131,7 @@
                               ' - ' .
                               $item->accountname .
                               "
-                                                                                                                                                                                                                                                                                                    (Kế hoạch: " .
+                                                                                                                                                                                                                                                                                                                              (Kế hoạch: " .
                               formatNumber($item->requireamount, 1, 0, 0) .
                               ', Số dư: ' .
                               formatNumber($item->amount, 1, 0, 1) .

@@ -50,13 +50,13 @@
 
                 @foreach ($listaccounts as $cashasset)
                   @php
-                    $cashname = 'Ví mục tiêu';
+                    $cashname = 'Dòng tiền mục tiêu';
                     if ($cashasset->accountno == $primaryaccount) {
                         $requireamount = $cashasset->amount;
-                        $cashname = 'Ví tổng';
+                        $cashname = 'Dòng tiền tổng';
                     } else {
                         $requireamount = $cashasset->requireamount;
-                        $cashname = 'Ví mục tiêu';
+                        $cashname = 'Dòng tiền mục tiêu';
                     }
                   @endphp
                   <tr>

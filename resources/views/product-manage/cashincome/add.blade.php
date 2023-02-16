@@ -57,7 +57,7 @@
 
   <div class="section cashincome-add">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cash-index') }}">Thu chi ví tổng</a> / <span
+      <span>Quản lý kinh doanh</span> / <a class="prev" href="{{ route('cash-index') }}">Quản lý tiền mặt</a> / <span
         class="current">{{ $title->sub_heading }}</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
@@ -86,7 +86,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label>Ví tiền:</label>
+              <label>Dòng tiền:</label>
               <input type="text" class="form-control" name="" id=""
                 value="{{ $cashaccount_name . ' [ ' . $cashaccountno . ' ]' }}" readonly>
             </div>

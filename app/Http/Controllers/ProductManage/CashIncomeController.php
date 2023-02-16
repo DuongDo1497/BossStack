@@ -28,7 +28,7 @@ class CashIncomeController extends Controller
         $this->setViewPrefix('product-manage.cashincome.');
         $this->setRoutePrefix('cashincomes-');
 
-        $this->view->setHeading('QUẢN LÝ THU NHẬP / CHI PHÍ');
+        $this->view->setHeading('QUẢN LÝ THU/CHI ');
     }
 
     public function index(Request $request)

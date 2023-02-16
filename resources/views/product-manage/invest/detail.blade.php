@@ -25,7 +25,7 @@
 
   <div class="section invest-detail">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('invests-index') }}">Blog</a> / <span
+      <span>Quản lý kinh doanh</span> / <a class="prev" href="{{ route('invests-index') }}">Blog</a> / <span
         class="current">{{ $model->newstitle }}</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>

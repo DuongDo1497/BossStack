@@ -26,7 +26,7 @@
 
   <div class="section invest-index">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <span class="current">Blog</span>
+      <span>Quản lý kinh doanh</span> / <span class="current">Blog</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 

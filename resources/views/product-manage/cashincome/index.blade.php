@@ -32,112 +32,112 @@
     @endif
   @endif
 
-<form role="form" action="{{ route('cashincomes-index') }}?continue=true" method="post" name="frm" id="frm">
-{{ csrf_field() }}
-<input type='hidden' name='typereport' value=''>
-  <div class="section cashincome-index">
-    <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cash-index') }}">Thu chi ví tổng</a> / <span
-        class="current">Quản lý Thu nhập/Chi
-        phí</span>
-    </div>
-    <p class="title-page">{{ $title->heading }}</p>
+  <form role="form" action="{{ route('cashincomes-index') }}?continue=true" method="post" name="frm" id="frm">
+    {{ csrf_field() }}
+    <input type='hidden' name='typereport' value=''>
+    <div class="section cashincome-index">
+      <div class="breadcrumb">
+        <span>Quản lý kinh doanh</span> / <a class="prev" href="{{ route('cash-index') }}">Quản lý tiền mặt</a> / <span
+          class="current">Quản lý Thu/Chi</span>
+      </div>
+      <p class="title-page">{{ $title->heading }}</p>
 
-    <div class="box-content">
-      <div class="box box-primary">
-        <div class="box-search">
-          <div class="control">
-            <a href="{{ route('cashtranfers-add') }}" class="btn btn-gray btn-transfer text">
-              <img class="icon" src="{{ asset('img/icon-transfer.svg') }}" alt="">
-              Phân bổ
-            </a>
-            <a href="{{ route('cashincomes-process', ['incomestatustype' => 0]) }}" class="btn btn-gray btn-income text">
-              <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
-              Thu nhập
-            </a>
-            <a href="{{ route('cashincomes-process', ['incomestatustype' => 1]) }}" class="btn btn-gray btn-cost text">
-              <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
-              Chi phí
-            </a>
+      <div class="box-content">
+        <div class="box box-primary">
+          <div class="box-search">
+            <div class="control">
+              <a href="{{ route('cashtranfers-add') }}" class="btn btn-gray btn-transfer text">
+                <img class="icon" src="{{ asset('img/icon-transfer.svg') }}" alt="">
+                Phân bổ
+              </a>
+              <a href="{{ route('cashincomes-process', ['incomestatustype' => 0]) }}"
+                class="btn btn-gray btn-income text">
+                <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
+                Thu
+              </a>
+              <a href="{{ route('cashincomes-process', ['incomestatustype' => 1]) }}" class="btn btn-gray btn-cost text">
+                <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
+                Chi
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="table-wrap">
-          <div class="table-content">
-            <table class="table table-bordered table-list">
-              <thead>
-                <tr>
-                  <th rowspan="2" class="fixed fixed-1">
-                    <input name="allbox" type="checkbox" id="allbox" onclick="CheckAll(this)">
-                  </th>
-                  <th rowspan="2" class="fixed fixed-2">STT</th>
-                  <th rowspan="2" class="fixed fixed-3">Phân loại</th>
-                  <th rowspan="2">Chi tiết</th>
-                  <th rowspan="2">Nội dung</th>
-                  <th rowspan="2">Ngày</th>
-                  <th colspan="2">Số tiền</th>
-                </tr>
-                <tr>
-                  <th class="draft"></th>
-                  <th class="draft"></th>
-                  <th>Thu nhập</th>
-                  <th>Chi phí</th>
-                </tr>
-              </thead>
-              <tbody>
-                @if ($collections->count() === 0)
+          <div class="table-wrap">
+            <div class="table-content">
+              <table class="table table-bordered table-list">
+                <thead>
                   <tr>
-                    <td colspan="8"><b>Không có dữ liệu!!!</b></td>
+                    <th rowspan="2" class="fixed fixed-1">
+                      <input name="allbox" type="checkbox" id="allbox" onclick="CheckAll(this)">
+                    </th>
+                    <th rowspan="2" class="fixed fixed-2">STT</th>
+                    <th rowspan="2" class="fixed fixed-3">Phân loại</th>
+                    <th rowspan="2">Chi tiết</th>
+                    <th rowspan="2">Nội dung</th>
+                    <th rowspan="2">Ngày</th>
+                    <th colspan="2">Số tiền</th>
                   </tr>
-                @endif
-                @php
-                  $i = 1;
-                  $total_income = 0;
-                  $total_expense = 0;
-                @endphp
-                @foreach ($collections as $cashincome)
-                  @php
-                    if ($cashincome->incomestatustype == 0) {
-                        $total_income += $cashincome->amount;
-                    } elseif ($cashincome->incomestatustype == 1) {
-                        $total_expense += $cashincome->amount;
-                    } elseif ($cashincome->incomestatustype == 2) {
-                        $total_expense += $cashincome->amount;
-                    }
-                  @endphp
                   <tr>
-                    <td class="text-center fixed fixed-1">
+                    <th class="draft"></th>
+                    <th class="draft"></th>
+                    <th>Thu</th>
+                    <th>Chi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @if ($collections->count() === 0)
+                    <tr>
+                      <td colspan="8"><b>Không có dữ liệu!!!</b></td>
+                    </tr>
+                  @endif
+                  @php
+                    $i = 1;
+                    $total_income = 0;
+                    $total_expense = 0;
+                  @endphp
+                  @foreach ($collections as $cashincome)
+                    @php
+                      if ($cashincome->incomestatustype == 0) {
+                          $total_income += $cashincome->amount;
+                      } elseif ($cashincome->incomestatustype == 1) {
+                          $total_expense += $cashincome->amount;
+                      } elseif ($cashincome->incomestatustype == 2) {
+                          $total_expense += $cashincome->amount;
+                      }
+                    @endphp
+                    <tr>
+                      <td class="text-center fixed fixed-1">
                         <input type='checkbox' name='ids[]' id='ids[]' value="{{ $cashincome->id }}"
                           onclick="CheckId(this)">
-                    </td>
-                    <td class="text-center fixed fixed-2">{{ $i++ }}</td>
-                    <td class="fixed fixed-3">
-                      {{ $cashincome->config_types_name }}
-                      @if ($cashincome->document != '')
-                        <a target="_blank" href="{{ $pathdocument . $cashincome->document }}"
-                          title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"></i></a>
+                      </td>
+                      <td class="text-center fixed fixed-2">{{ $i++ }}</td>
+                      <td class="fixed fixed-3">
+                        {{ $cashincome->config_types_name }}
+                        @if ($cashincome->document != '')
+                          <a target="_blank" href="{{ $pathdocument . $cashincome->document }}"
+                            title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"></i></a>
+                        @endif
+                      </td>
+                      <td><a
+                          href="{{ route('cashincomes-edit', ['id' => $cashincome->id]) }}">{{ $cashincome->config_type_details_name }}</a>
+                      </td>
+                      <td class="text-center">{{ $cashincome->assetname }}</td>
+                      <td class="text-center">
+                        {{ $cashincome->incomedate == null ? '' : ConvertSQLDate($cashincome->incomedate) }}
+                      </td>
+                      @if ($cashincome->incomestatustype == 0)
+                        <td class="text-right"></td>
+                        <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 0, 0) !!}</td>
+                      @elseif($cashincome->incomestatustype == 1 or $cashincome->incomestatustype == 2)
+                        <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 0, 3) !!}</td>
+                        <td class="text-right"></td>
                       @endif
-                    </td>
-                    <td><a
-                        href="{{ route('cashincomes-edit', ['id' => $cashincome->id]) }}">{{ $cashincome->config_type_details_name }}</a>
-                    </td>
-                    <td class="text-center">{{ $cashincome->assetname }}</td>
-                    <td class="text-center">
-                      {{ $cashincome->incomedate == null ? '' : ConvertSQLDate($cashincome->incomedate) }}
-                    </td>
-                    @if ($cashincome->incomestatustype == 0)
-                      <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 0, 0) !!}</td>
-                      <td class="text-right"></td>
-                    @elseif($cashincome->incomestatustype == 1 or $cashincome->incomestatustype == 2)
-                      <td class="text-right"></td>
-                      <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 0, 3) !!}</td>
-                    @endif
-                  </tr>
-                @endforeach
-              </tbody>
-            </table>
+                    </tr>
+                  @endforeach
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-        <div class="box-control">
+          <div class="box-control">
             <div class="control">
               <p class="count"><span id="checklabel">0</span></p>
               <p class="text">mục đang được chọn</p>
@@ -145,14 +145,14 @@
                 <img src="{{ asset('img/icon-delete.svg') }}" alt="">
               </a>
             </div>
-          <div class="paging">
-            {{ $collections->links() }}
+            <div class="paging">
+              {{ $collections->links() }}
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</form>
+  </form>
   {{-- <div class="row">
     <div class="col-xs-12">
         <div class="box">

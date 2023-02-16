@@ -28,7 +28,7 @@ class CashController extends Controller
         $this->setViewPrefix('product-manage.cash.');
         $this->setRoutePrefix('cashs-');
 
-        $this->view->setHeading('THU CHI VÍ TỔNG');
+        $this->view->setHeading('QUẢN LÝ TIỀN MẶT');
 
     }
 
