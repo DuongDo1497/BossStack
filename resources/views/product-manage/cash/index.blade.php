@@ -254,8 +254,8 @@
                 <table class="table table-bordered table-list">
                   <thead>
                     <tr>
-                      <th rowspan="2" class="fixed fixed-2">STT</th>
-                      <th rowspan="2" class="fixed fixed-3">Phân loại</th>
+                      <th rowspan="2" class="fixed fixed-1">STT</th>
+                      <th rowspan="2" class="fixed fixed-2">Phân loại</th>
                       <th rowspan="2">Chi tiết</th>
                       <th rowspan="2">Nội dung</th>
                       <th rowspan="2">Ngày</th>
@@ -290,8 +290,8 @@
                         }
                       @endphp
                       <tr>
-                        <td class="text-center fixed fixed-2">{{ $i++ }}</td>
-                        <td class="fixed fixed-3">
+                        <td class="text-center fixed fixed-1">{{ $i++ }}</td>
+                        <td class="fixed fixed-2">
                           {{ $cashincome->config_types_name }}
                           @if ($cashincome->document != '')
                             <a target="_blank" href="{{ $pathdocument . $cashincome->document }}"

@@ -487,8 +487,8 @@
   }
 
   .cash-index .table-wrap .table-content{
-    width: calc(100% - 192px); 
-    margin-left: 192px;
+    width: calc(100% - 153px); 
+    margin-left: 153px;
     margin-right: 0;
   }
 
@@ -510,10 +510,6 @@
 
   .cash-index .table-wrap table .fixed:first-child{
     width: 32px;
-  }
-
-  .cash-index .table-wrap table .fixed:nth-child(2){
-    width: 39px;
   }
 
   .cash-index .table-wrap table .fixed-2 {
@@ -592,21 +588,22 @@
 
   .cash-process #cash-dissection__detail .table-wrap thead tr:first-child th:nth-child(2),
   .cash-process #assessment__detail .table-wrap thead tr:first-child th:nth-child(2){
-    width: 430px;
+    width: 250px;
   }
 
-  .cash-process #assessment__detail .table-wrap thead tr:first-child th:nth-child(3){
+  .cash-process #assessment__detail .table-wrap thead tr:first-child th:nth-child(3),
+  .cash-process #assessment__detail .table-wrap thead tr:first-child th:nth-child(4){
     width: 250px;
   }
 
   .cash-process #cash-dissection__detail .table-wrap thead tr:last-child th:first-child,
   .cash-process #assessment__detail .table-wrap thead tr:last-child th:first-child{
-    display: block;
+    display: inline-table;
   }
 
   .cash-process #cash-dissection__detail .table-wrap table td,
   .cash-process #assessment__detail .table-wrap table td{
-    height: 140px;
+    height: 110px;
   }
 
   .cash-process #cash-dissection__detail .table-wrap table td:not(.fixed),
