@@ -92,7 +92,7 @@ class CashController extends Controller
         $this->view->sumprofitmonth = $sumprofitmonth;
         $this->view->sumdebtmonth = $sumdebtmonth;
 
-        $listcashplans = app(CashPlanService::class)->getListCashPlanFromCustomerId($customer_id);
+        $listcashplans = app(CashPlanService::class)->getListCashPlanFromCustomerId($customer_id, '')->paginate();
         $this->view->listcashplans = $listcashplans;
                         
         return $this->view('index');
