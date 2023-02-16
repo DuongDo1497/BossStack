@@ -351,7 +351,7 @@
 
   // var width_chart5 = $('#chart5').width();
 
-  if (dataPie.length !== 0) {
+  if (dataPie2.length !== 0) {
     c3.generate({
       bindto: '#chart5',
       data: {
@@ -409,7 +409,7 @@
 
   // var width_chart6 = $('#chart6').width();
 
-  if (dataPie.length !== 0) {
+  if (dataPie3.length !== 0) {
     c3.generate({
       bindto: '#chart6',
       data: {
