@@ -68,7 +68,7 @@
                 readonly>
             </div>
             <div class="form-group">
-              <label for="">Mục tiêu<span>*</span>:</label>
+              <label for="">Kế hoạch<span>*</span>:</label>
               <input type="text" class="form-control" name="" id="" value="{{ $plantypedetailname }}"
                 readonly>
             </div>
@@ -78,12 +78,12 @@
                 readonly>
             </div>
             <div class="form-group">
-              <label for="">Ví<span>*</span>:</label>
+              <label for="">Dòng tiền<span>*</span>:</label>
               <input type="text" class="form-control" name="" id="" value="{{ $model->accountno }}"
                 readonly>
             </div>
             <div class="form-group">
-              <label for="">Tên ví<span>*</span>:</label>
+              <label for="">Tên dòng tiền<span>*</span>:</label>
               <input type="text" class="form-control" name="" id="" value="{{ $model->planname }}"
                 readonly>
             </div>
@@ -106,7 +106,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="">Tuổi hoàn thành mục tiêu<span>*</span>:</label>
+              <label for="">Tuổi hoàn thành kế hoạch<span>*</span>:</label>
               <div class="input-group">
                 <input type="text" class="form-control" name="" id=""
                   value="{{ $model->planage == '' ? 50 : $model->planage }}" readonly>
@@ -114,7 +114,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="">Số tiền mục tiêu<span>*</span>:</label>
+              <label for="">Số tiền kế hoạch<span>*</span>:</label>
               <div class="input-group">
                 <input type="text" class="form-control number" name="" id=""
                   value="{{ $model->requireamount == '' ? 0 : formatNumber($model->requireamount, 1, 0, 0) }}" readonly>
@@ -147,7 +147,7 @@
                 <div class="noti-index">
                   <div class="noti-index__wrap">
                     <div class="noti-index__item">
-                      <p class="title">Để đạt được mục tiêu tài chính:</p>
+                      <p class="title">Để đạt được kế hoạch tài chính:</p>
                       <p class="number">{{ formatNumber($model->requireamount, 1, 0, 0) }} VND</p>
                     </div>
                     <div class="noti-index__item">
@@ -184,7 +184,7 @@
                 <div class="noti-index">
                   <div class="noti-index__wrap">
                     <div class="noti-index__item">
-                      <p class="title">Để đạt được mục tiêu tài chính:</p>
+                      <p class="title">Để đạt được kế hoạch tài chính:</p>
                       <p class="number">{{ formatNumber($model->requireamount, 1, 0, 0) }} VND</p>
                     </div>
                     <div class="noti-index__item">
@@ -242,7 +242,7 @@
                 <div class="noti-index">
                   <div class="noti-index__wrap">
                     <div class="noti-index__item">
-                      <p class="title">Để đạt được mục tiêu tài chính:</p>
+                      <p class="title">Để đạt được kế hoạch tài chính:</p>
                       <p class="number">{{ formatNumber($model->requireamount, 1, 0, 0) }} VND</p>
                     </div>
                     <div class="noti-index__item">
