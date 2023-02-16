@@ -128,13 +128,13 @@
           </div>
           <div class="box-search">
             <div class="control">
-              <a href="{{ route('cashassets-process', ['assetstatustype' => 3]) }}" class="btn btn-gray btn-debt text">
-                <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
-                Dòng tiền ra
-              </a>
               <a href="{{ route('cashassets-process', ['assetstatustype' => 4]) }}" class="btn btn-gray btn-asset text">
                 <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
                 Dòng tiền vào
+              </a>
+              <a href="{{ route('cashassets-process', ['assetstatustype' => 3]) }}" class="btn btn-gray btn-debt text">
+                <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
+                Dòng tiền ra
               </a>
             </div>
           </div>
