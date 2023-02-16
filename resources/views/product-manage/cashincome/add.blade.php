@@ -72,7 +72,7 @@
       <input type='hidden' name='cashaccount_amount' value='{{ $cashaccount_amount }}'>
       <div class="box-content">
         <div class="box box-primary">
-          <p class="box-des">Nhập thông tin các khoản thu nhập/chi phí và các khoản nợ cá nhân. Để xem lại thông
+          <p class="box-des">Nhập thông tin các khoản thu/chi và các khoản nợ cá nhân. Để xem lại thông
             tin các khoản. Vui lòng xem <a href="{{ route('cashincomes-index') }}">[tại đây]</a></p>
           <div class="box-form">
             <div class="form-group">

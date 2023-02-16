@@ -1,25 +1,25 @@
 <script>
-$(function () {
-    param = {   
-                format: "yyyy",
-                minViewMode: 2,
-                viewMode: 'months',
-                autoclose: true,
-                todayHighlight: true,
-                todayBtn: "linked",
-                language: "vi",
-            };
+  $(function() {
+    param = {
+      format: "yyyy",
+      minViewMode: 2,
+      viewMode: 'months',
+      autoclose: true,
+      todayHighlight: true,
+      todayBtn: "linked",
+      language: "vi",
+    };
     $('#year').datepicker(param);
-});
+  });
 </script>
 <script>
-  var listmonth = [];  
+  var listmonth = [];
   var i = 1;
   listmonth[0] = ['x'];
   listmonth[1] = ['Doanh thu'];
   listmonth[2] = ['Chi phí'];
   listmonth[3] = ['Lợi nhuận'];
-  @foreach($listprofitsbymonthyear as $key=>$item)
+  @foreach ($listprofitsbymonthyear as $key => $item)
     listmonth[0][i] = '{{ "$key" }}';
     listmonth[1][i] = {{ $item['doanhthu'] }};
     listmonth[2][i] = {{ $item['chiphi'] }};
@@ -27,86 +27,86 @@ $(function () {
     i++;
   @endforeach
 
-   var width_chart5 = $('#chart5').width();
-   c3.generate({
-     bindto: '#chart5',
-     data: {
-       type: 'bar',
-       types: {
+  var width_chart5 = $('#chart5').width();
+  c3.generate({
+    bindto: '#chart5',
+    data: {
+      type: 'bar',
+      types: {
         'Doanh thu': 'bar',
         'Chi phí': 'bar',
         'Lợi nhuận': 'spline',
-       },
-       x: 'x',
-       y: 'y',
-       columns: listmonth,
-       names: {
-         sample: 'Doanh thu',
-         sample1: 'Chi phí',
-         sample2: 'Lợi nhuận',
-       },
-       selection: {
-         enabled: true
-       }
-     },
-     color: {
-         pattern: ['#85C88A', '#DE6573', '#FBC540']
-     },
-     axis: {
-       x: {
-         type: 'timeseries',
-         tick: {
-           format: "%m/%y"
-         },
-         label:{
-           text: 'Thời gian',
-           position: 'outer-right'
-         },
-       },
-       y : {
-         tick: {
-             format: d3.format(",")
-         },
-         label:{
-           text: 'ĐVT: VND',
-           position: 'inner-top'
-         } 
-       }
-     },
-     size: {
-         height: 500,
-         width: width_chart5
-     },
-     padding: {
-       left: 100,
-       right: 30,
-       top: 50,
-       bottom: 0
-     }       
-   });
+      },
+      x: 'x',
+      y: 'y',
+      columns: listmonth,
+      names: {
+        sample: 'Doanh thu',
+        sample1: 'Chi phí',
+        sample2: 'Lợi nhuận',
+      },
+      selection: {
+        enabled: true
+      }
+    },
+    color: {
+      pattern: ['#85C88A', '#DE6573', '#FBC540']
+    },
+    axis: {
+      x: {
+        type: 'timeseries',
+        tick: {
+          format: "%m/%y"
+        },
+        label: {
+          text: 'Thời gian',
+          position: 'outer-right'
+        },
+      },
+      y: {
+        tick: {
+          format: d3.format(",")
+        },
+        label: {
+          text: 'ĐVT: VND',
+          position: 'inner-top'
+        }
+      }
+    },
+    size: {
+      height: 500,
+      width: width_chart5
+    },
+    padding: {
+      left: 100,
+      right: 30,
+      top: 50,
+      bottom: 0
+    }
+  });
 
-//  c3.generate({
-//    bindto: '#chart5',
-//    data: {
-//      columns: listmonth,
-//      types: {
-//        data1: 'bar',
-//        data2: 'bar',
-//        data3: 'spline',
-//      },
-//      names: {
-//        data1: 'Doanh thu',
-//        data2: 'Chi phí',
-//        data3: 'Lợi nhuận',
-//      },
-//      selection: {
-//        enabled: true
-//      }
-//    },
-//    color: {
-//        pattern: ['#85C88A', '#DE6573', '#FBC540']
-//    },      
-//  });
+  //  c3.generate({
+  //    bindto: '#chart5',
+  //    data: {
+  //      columns: listmonth,
+  //      types: {
+  //        data1: 'bar',
+  //        data2: 'bar',
+  //        data3: 'spline',
+  //      },
+  //      names: {
+  //        data1: 'Doanh thu',
+  //        data2: 'Chi phí',
+  //        data3: 'Lợi nhuận',
+  //      },
+  //      selection: {
+  //        enabled: true
+  //      }
+  //    },
+  //    color: {
+  //        pattern: ['#85C88A', '#DE6573', '#FBC540']
+  //    },      
+  //  });
 
   // Tạm ẩn
   // var listmonth = [];  
@@ -114,65 +114,65 @@ $(function () {
   // listmonth[0] = ['x'];
   // listmonth[1] = ['Thu'];
   // listmonth[2] = ['Chi'];
-  // @foreach($listmonth as $key=>$item)
+  // @foreach ($listmonth as $key => $item)
   //   listmonth[0][i] = '{{ "$key" }}';
   //   listmonth[1][i] = {{ $item['income_amount'] }};
   //   listmonth[2][i] = {{ $item['expense_amount'] }};
   //   i++;
   // @endforeach
 
-//   var width_chart5 = $('#chart5').width();
-//
-//   c3.generate({
-//     bindto: '#chart5',
-//     data: {
-//       type: 'line',
-//       x: 'x',
-//       y: 'y',
-//       columns: listmonth,
-//       names: {
-//         sample: 'Thu',
-//         sample1: 'Chi',
-//       },
-//       selection: {
-//         enabled: true
-//       }
-//     },
-//     color: {
-//         pattern: ['#979AE9', '#8BD6C5']
-//     },
-//     axis: {
-//       x: {
-//         type: 'timeseries',
-//         tick: {
-//           format: "%d/%m"
-//         },
-//         label:{
-//           text: 'Thời gian',
-//           position: 'outer-right'
-//         },
-//       },
-//       y : {
-//         tick: {
-//             format: d3.format(",")
-//         },
-//         label:{
-//           text: 'ĐVT: VND',
-//           position: 'inner-top'
-//         } 
-//       }
-//     },
-//     size: {
-//         height: 500,
-//         width: width_chart5
-//     },
-//     padding: {
-//       left: 100,
-//       right: 30,
-//       top: 50,
-//       bottom: 0
-//     }       
-//   });
+  //   var width_chart5 = $('#chart5').width();
+  //
+  //   c3.generate({
+  //     bindto: '#chart5',
+  //     data: {
+  //       type: 'line',
+  //       x: 'x',
+  //       y: 'y',
+  //       columns: listmonth,
+  //       names: {
+  //         sample: 'Thu',
+  //         sample1: 'Chi',
+  //       },
+  //       selection: {
+  //         enabled: true
+  //       }
+  //     },
+  //     color: {
+  //         pattern: ['#979AE9', '#8BD6C5']
+  //     },
+  //     axis: {
+  //       x: {
+  //         type: 'timeseries',
+  //         tick: {
+  //           format: "%d/%m"
+  //         },
+  //         label:{
+  //           text: 'Thời gian',
+  //           position: 'outer-right'
+  //         },
+  //       },
+  //       y : {
+  //         tick: {
+  //             format: d3.format(",")
+  //         },
+  //         label:{
+  //           text: 'ĐVT: VND',
+  //           position: 'inner-top'
+  //         } 
+  //       }
+  //     },
+  //     size: {
+  //         height: 500,
+  //         width: width_chart5
+  //     },
+  //     padding: {
+  //       left: 100,
+  //       right: 30,
+  //       top: 50,
+  //       bottom: 0
+  //     }       
+  //   });
 
   // var width_chart5_mb = $('#chart5_mb').width();
 
@@ -182,13 +182,13 @@ $(function () {
   // listmonth_mb[0] = ['x'];
   // listmonth_mb[1] = ['Thu'];
   // listmonth_mb[2] = ['Chi'];
-  // @foreach($listmonth as $key=>$item)
+  // @foreach ($listmonth as $key => $item)
   //   listmonth_mb[0][i] = '{{ "$key" }}';
   //   listmonth_mb[1][i] = {{ $item['income_amount'] }};
   //   listmonth_mb[2][i] = {{ $item['expense_amount'] }};
   //   i++;
   // @endforeach
-    
+
 
   // c3.generate({
   //   bindto: '#chart5_mb',
@@ -245,7 +245,6 @@ $(function () {
   //   $('#chart5').show();
   //   $('#chart5_mb').hide();
   // }
-
 </script>
 <script>
   @if (isset($collections) and isset($asset_0) and isset($asset_1))
@@ -318,7 +317,7 @@ $(function () {
       total_account += {{ $cashasset->amount }};
     @endforeach
 
-    listasset[i++] = ['Ví mục tiêu', total_account];
+    listasset[i++] = ['Kế hoạch dòng tiền', total_account];
     total_asset_1 += total_account;
 
     var width_chart2 = $('#rptasset2').width();
@@ -368,8 +367,8 @@ $(function () {
       "second-title").text(formatNumberDecimal(total_asset_1, 0));
 
     var listasset = [
-      ["Nợ", total_asset_0],
-      ["Tài sản", total_asset_1],
+      ["Dòng tiền ra", total_asset_0],
+      ["Dòng tiền vào", total_asset_1],
     ];
 
     var width_chart2 = $('#rptasset3').width();
@@ -389,12 +388,12 @@ $(function () {
         },
         columns: listasset,
         colors: {
-          "Nợ": '#F4BE37',
-          "Tài sản": '#5388D8',
+          "Dòng tiền ra": '#F4BE37',
+          "Dòng tiền vào": '#5388D8',
         }
       },
       donut: {
-        title: "Tổng tài sản thực",
+        title: "Dòng tiền ròng",
         label: {
           show: false
         },
@@ -484,7 +483,7 @@ $(function () {
       total_account += {{ $cashasset->amount }};
     @endforeach
 
-    listasset[i++] = ['Ví mục tiêu', total_account];
+    listasset[i++] = ['Kế hoạch dòng tiền', total_account];
     total_asset_1 += total_account;
 
     var width_chart2 = $('#rptasset2mb').width();
@@ -534,8 +533,8 @@ $(function () {
       "second-title").text(formatNumberDecimal(total_asset_1, 0));
 
     var listasset = [
-      ["Nợ", total_asset_0],
-      ["Tài sản", total_asset_1],
+      ["Dòng tiền ra", total_asset_0],
+      ["Dòng tiền vào", total_asset_1],
     ];
 
     var width_chart2 = $('#rptasset3mb').width();
@@ -555,12 +554,12 @@ $(function () {
         },
         columns: listasset,
         colors: {
-          "Nợ": '#F4BE37',
-          "Tài sản": '#5388D8',
+          "Dòng tiền ra": '#F4BE37',
+          "Dòng tiền vào": '#5388D8',
         }
       },
       donut: {
-        title: "Tổng tài sản thực",
+        title: "Dòng tiền ròng",
         label: {
           show: false
         },

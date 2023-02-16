@@ -8,33 +8,33 @@
   }
 </script>
 <script language="javascript">
-function CheckAll(parent){
+  function CheckAll(parent) {
     var countcheck = 0;
     var ids = document.getElementsByTagName('input');
-    for(var i=0; i<ids.length; i++){
-        if(ids[i].name == "ids[]"){
-            countcheck++;
-            ids[i].checked = parent.checked;
-        }
+    for (var i = 0; i < ids.length; i++) {
+      if (ids[i].name == "ids[]") {
+        countcheck++;
+        ids[i].checked = parent.checked;
+      }
     }
     var checklabel = document.getElementById("checklabel");
-    checklabel.innerHTML = countcheck;    
-}
+    checklabel.innerHTML = countcheck;
+  }
 
-function CheckId(parent){
+  function CheckId(parent) {
     var countcheck = 0;
     var checklabel = document.getElementById("checklabel");
     var ids = document.getElementsByTagName('input');
-    for(var i=0; i<ids.length; i++){
-        if(ids[i].name == "ids[]" && ids[i].checked == true){
-            countcheck++;
-        }
+    for (var i = 0; i < ids.length; i++) {
+      if (ids[i].name == "ids[]" && ids[i].checked == true) {
+        countcheck++;
+      }
     }
     var allbox = document.getElementById("allbox");
     allbox.checked = false;
-    
-    checklabel.innerHTML = countcheck;    
-}
+
+    checklabel.innerHTML = countcheck;
+  }
 </script>
 <script>
   $(function() {
@@ -145,7 +145,7 @@ function CheckId(parent){
       total_account += {{ $cashasset->amount }};
     @endforeach
 
-    listasset[i++] = ['Ví mục tiêu', total_account];
+    listasset[i++] = ['Kế hoạch dòng tiền', total_account];
     total_asset_1 += total_account;
 
     var width_chart2 = $('#rptasset2').width();
@@ -165,7 +165,7 @@ function CheckId(parent){
         columns: listasset,
         colors: {
           "Tài Sản Vô Hình": '#F4BE37',
-          "Ví mục tiêu": '#5388D8',
+          "Kế hoạch dòng tiền": '#5388D8',
         }
       },
       axis: {
@@ -195,8 +195,8 @@ function CheckId(parent){
       "second-title").text(formatNumberDecimal(total_asset_1, 0));
 
     var listasset = [
-      ["Nợ", total_asset_0],
-      ["Tài sản", total_asset_1],
+      ["Dòng tiền ra", total_asset_0],
+      ["Dòng tiền vào", total_asset_1],
     ];
 
     var width_chart2 = $('#rptasset3').width();
@@ -216,12 +216,12 @@ function CheckId(parent){
         },
         columns: listasset,
         colors: {
-          "Nợ": '#F4BE37',
-          "Tài sản": '#5388D8',
+          "Dòng tiền ra": '#F4BE37',
+          "Dòng tiền vào": '#5388D8',
         }
       },
       donut: {
-        title: "Tổng tài sản thực",
+        title: "Dòng tiền ròng",
         label: {
           show: false
         },

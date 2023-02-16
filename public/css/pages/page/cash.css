@@ -24,6 +24,7 @@
 
 .cash-index .form-group{
   --w-label: 90px;
+  margin-left: 0 !important;
 }
 
 .cash-process .form-group{
