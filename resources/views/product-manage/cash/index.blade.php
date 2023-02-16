@@ -254,9 +254,6 @@
                 <table class="table table-bordered table-list">
                   <thead>
                     <tr>
-                      <th rowspan="2" class="fixed fixed-1">
-                        <input type="checkbox" name="" id="">
-                      </th>
                       <th rowspan="2" class="fixed fixed-2">STT</th>
                       <th rowspan="2" class="fixed fixed-3">Phân loại</th>
                       <th rowspan="2">Chi tiết</th>
@@ -272,30 +269,51 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td class="text-center fixed fixed-1">
-                        <input type="checkbox" name="" id="">
-                      </td>
-                      <td class="text-center fixed fixed-2">1</td>
-                      <td class="fixed fixed-3">Thu Nhập Lương/Tiết Kiệm</td>
-                      <td><a href="#">Thu nhập từ lương</a></td>
-                      <td class="text-center">demo</td>
-                      <td class="text-center">26/12/2022</td>
-                      <td class="text-right"><span class="text-success">+ 1,000,000</span></td>
-                      <td class="text-right"></td>
-                    </tr>
-                    <tr>
-                      <td class="text-center fixed fixed-1">
-                        <input type="checkbox" name="" id="">
-                      </td>
-                      <td class="text-center fixed fixed-2">1</td>
-                      <td class="fixed fixed-3">Thu Nhập Lương/Tiết Kiệm</td>
-                      <td><a href="#">Thu nhập từ lương</a></td>
-                      <td class="text-center">demo</td>
-                      <td class="text-center">26/12/2022</td>
-                      <td class="text-right"></td>
-                      <td class="text-right"><span class="text-error">+ 1,000,000</span></td>
-                    </tr>
+                    @if ($listcashincomes->count() === 0)
+                      <tr>
+                        <td colspan="7"><b>Không có dữ liệu!!!</b></td>
+                      </tr>
+                    @endif
+                    @php
+                      $i = 1;
+                      $total_income = 0;
+                      $total_expense = 0;
+                    @endphp
+                    @foreach ($listcashincomes as $cashincome)
+                      @php
+                        if ($cashincome->incomestatustype == 0) {
+                            $total_income += $cashincome->amount;
+                        } elseif ($cashincome->incomestatustype == 1) {
+                            $total_expense += $cashincome->amount;
+                        } elseif ($cashincome->incomestatustype == 2) {
+                            $total_expense += $cashincome->amount;
+                        }
+                      @endphp
+                      <tr>
+                        <td class="text-center fixed fixed-2">{{ $i++ }}</td>
+                        <td class="fixed fixed-3">
+                          {{ $cashincome->config_types_name }}
+                          @if ($cashincome->document != '')
+                            <a target="_blank" href="{{ $pathdocument . $cashincome->document }}"
+                              title='Hình ảnh, hóa đơn, chứng từ ...'><i class="fa fa-paperclip"></i></a>
+                          @endif
+                        </td>
+                        <td><a
+                            href="{{ route('cashincomes-edit', ['id' => $cashincome->id]) }}">{{ $cashincome->config_type_details_name }}</a>
+                        </td>
+                        <td class="text-center">{{ $cashincome->assetname }}</td>
+                        <td class="text-center">
+                          {{ $cashincome->incomedate == null ? '' : ConvertSQLDate($cashincome->incomedate) }}
+                        </td>
+                        @if ($cashincome->incomestatustype == 0)
+                          <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 0, 0) !!}</td>
+                          <td class="text-right"></td>
+                        @elseif($cashincome->incomestatustype == 1 or $cashincome->incomestatustype == 2)
+                          <td class="text-right"></td>
+                          <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 0, 3) !!}</td>
+                        @endif
+                      </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>

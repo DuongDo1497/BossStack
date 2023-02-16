@@ -94,6 +94,10 @@ class CashController extends Controller
 
         $listcashplans = app(CashPlanService::class)->getListCashPlanFromCustomerId($customer_id, '')->paginate();
         $this->view->listcashplans = $listcashplans;
+
+        $listcashincomes = app(CashIncomeService::class)->getListAccountIncomeFromCustomer($customer_id, $sfromDate, $stoDate)->paginate($this->view->filter['limit']);
+        $this->view->listcashincomes = $listcashincomes;
+
                         
         return $this->view('index');
     }
