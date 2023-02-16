@@ -28,7 +28,7 @@ class CashPlanController extends Controller
         $this->setViewPrefix('product-manage.cashplan.');
         $this->setRoutePrefix('cashplans-');
 
-        $this->view->setHeading('THIẾT LẬP DÒNG TIỀN');
+        $this->view->setHeading('KẾ HOẠCH DÒNG TIỀN');
 
     }
 

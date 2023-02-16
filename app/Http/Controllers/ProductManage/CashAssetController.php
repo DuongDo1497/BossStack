@@ -24,7 +24,7 @@ class CashAssetController extends Controller
         $this->setViewPrefix('product-manage.cashasset.');
         $this->setRoutePrefix('cashassets-');
 
-        $this->view->setHeading('QUẢN LÝ TÀI SẢN - NỢ');
+        $this->view->setHeading('LƯU CHUYỂN TIỀN TỆ');
 
         $now = Carbon::now();
         $this->view->month = $now->month;
@@ -174,11 +174,11 @@ class CashAssetController extends Controller
         //Lay danh sach cac tai san no hoac co
         $this->view->assetstatustype = $request->assetstatustype;
         if($request->assetstatustype == '3'){
-            $this->view->setHeading('THÊM MỚI TÀI SẢN NỢ');
+            $this->view->setHeading('THÊM MỚI DÒNG TIỀN RA');
         }
 
         if($request->assetstatustype == '4'){
-            $this->view->setHeading('THÊM MỚI TÀI SẢN CÓ');
+            $this->view->setHeading('THÊM MỚI DÒNG TIỀN VÀO');
         }
         $this->view->assettypes = app(ConfigTypeService::class)->getConfigTypeFromType($request->assetstatustype);
 
@@ -346,7 +346,7 @@ class CashAssetController extends Controller
         $listaccounts = app(CashAccountService::class)->getListAccountDetailStatus($customer_id, "", "0")->paginate();
         $this->view->listaccounts = $listaccounts;
 
-        $this->view->setHeading('LỊCH SỬ TÀI SẢN - NỢ');
+        $this->view->setHeading('LỊCH SỬ LƯU CHUYỂN TIỀN TỆ');
         return $this->view('history');
     } 
 }

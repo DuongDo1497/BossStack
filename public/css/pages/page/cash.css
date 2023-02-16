@@ -182,7 +182,7 @@
 }
 
 .cash-process__wrap .nav-tabs{
-  --tab-count: 2;
+  --tab-count: 1;
 }
 
 .cash-dissection .panel-default,
@@ -235,7 +235,7 @@
 
 .cash-dissection .note-group{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .cash-dissection .note-date{
