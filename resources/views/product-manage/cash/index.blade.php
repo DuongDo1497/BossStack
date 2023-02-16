@@ -65,7 +65,7 @@
 
   <div class="section cash-index no-bg">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <span class="current">Thu chi ví tổng</span>
+      <span>Quản lý kinh doanh</span> / <span class="current">Quản lý tiền mặt</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
@@ -102,18 +102,18 @@
               <a href="{{ route('cashincomes-process', ['incomestatustype' => 0]) }}"
                 class="btn btn-gray btn-income text">
                 <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
-                Thu nhập
+                Thu
               </a>
               <a href="{{ route('cashincomes-process', ['incomestatustype' => 1]) }}" class="btn btn-gray btn-cost text">
                 <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
-                Chi phí
+                Chi
               </a>
             </div>
           </div>
           <div class="spending-history">
             <div class="spending-history__list">
               <div class="spending-history__result">
-                <span class="text">Ví tổng</span>
+                <span class="text">Dòng tiền tổng</span>
                 <span class="number">{!! formatNumberColor($accountno_primary->amount, 1, 0, 1) !!}</span>
               </div>
               <div class="spending-history__table">
@@ -154,7 +154,7 @@
             </div>
             <div class="spending-history__sort">
               <div class="income-highest">
-                <p>Thu nhập cao nhất</p>
+                <p>Thu cao nhất</p>
                 <table class="table table-bordered table-list">
                   <tbody>
                     @php
@@ -180,7 +180,7 @@
               </div>
               <div class="line"></div>
               <div class="cost-highest">
-                <p>Chi phí cao nhất</p>
+                <p>Chi cao nhất</p>
                 <table class="table table-bordered table-list">
                   <tbody>
                     @php
@@ -219,11 +219,11 @@
               <div class="tab-pane__body">
                 <div class="chart-list">
                   <div class="chart-item">
-                    <p class="chart-title">Thu nhập</p>
+                    <p class="chart-title">Thu</p>
                     <div id="chart2"></div>
                   </div>
                   <div class="chart-item">
-                    <p class="chart-title">Chi phí</p>
+                    <p class="chart-title">Chi</p>
                     <div id="chart3"></div>
                   </div>
                 </div>
@@ -233,11 +233,11 @@
               <div class="tab-pane__body">
                 <div class="chart-list">
                   <div class="chart-item">
-                    <p class="chart-title">Thu nhập</p>
+                    <p class="chart-title">Thu</p>
                     <div id="chart5"></div>
                   </div>
                   <div class="chart-item">
-                    <p class="chart-title">Chi phí</p>
+                    <p class="chart-title">Chi</p>
                     <div id="chart6"></div>
                   </div>
                 </div>
@@ -248,7 +248,7 @@
 
         <div class="box box-primary">
           <div class="cashFlow-manage">
-            <h6 class="box-title">Quản lý Thu nhập/Chi phí</h6>
+            <h6 class="box-title">Quản lý Thu/Chi</h6>
             <div class="table-wrap">
               <div class="table-content">
                 <table class="table table-bordered table-list">
@@ -264,8 +264,8 @@
                     <tr>
                       <th class="draft"></th>
                       <th class="draft"></th>
-                      <th>Thu nhập</th>
-                      <th>Chi phí</th>
+                      <th>Thu</th>
+                      <th>Chi</th>
                     </tr>
                   </thead>
                   <tbody>

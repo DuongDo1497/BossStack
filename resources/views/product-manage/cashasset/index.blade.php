@@ -155,8 +155,8 @@
                   </tr>
                   <tr>
                     <th></th>
-                    <th>Ra</th>
                     <th>Vào</th>
+                    <th>Ra</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -202,11 +202,11 @@
                         {{ $cashasset->assetdate == null ? '' : ConvertSQLDate($cashasset->assetdate) }}
                       </td>
                       @if ($cashasset->assetstatustype == 3)
+                        <td class="text-right"></td>
                         <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 3) !!}</td>
-                        <td class="text-right"></td>
                       @elseif($cashasset->assetstatustype == 4)
-                        <td class="text-right"></td>
                         <td class="text-right">{!! formatNumberColorCustom($cashasset->remainamount, 1, 0, 0, 0) !!}</td>
+                        <td class="text-right"></td>
                       @endif
                     </tr>
                   @endforeach
@@ -216,13 +216,13 @@
                       $total_expense += $cashasset->amount;
                       
                       $requireamount = 0;
-                      $cashname = 'Ví mục tiêu';
+                      $cashname = 'Dòng tiền mục tiêu';
                       if ($cashasset->accountno == $primaryaccount) {
                           $requireamount = $cashasset->amount;
-                          $cashname = 'Ví tổng';
+                          $cashname = 'Dòng tiền tổng';
                       } else {
                           $requireamount = $cashasset->requireamount;
-                          $cashname = 'Ví mục tiêu';
+                          $cashname = 'Dòng tiền mục tiêu';
                       }
                     @endphp
                     <tr class="table-cashasset">
@@ -240,8 +240,8 @@
                       <td class="text-center">
                         {{ $cashasset->accountdate == null ? '' : ConvertSQLDate($cashasset->accountdate) }}
                       </td>
-                      <td class="text-right"></td>
                       <td class="text-right">{!! formatNumberColorCustom($cashasset->amount, 1, 0, 0, 0) !!}</td>
+                      <td class="text-right"></td>
                     </tr>
                   @endforeach
 
@@ -249,8 +249,8 @@
                 <tfoot>
                   <tr>
                     <td colspan="6">Tổng cộng</td>
-                    <td class="text-right">{!! formatNumberColorCustom($total_asset, 1, 0, 0, 3) !!}</td>
                     <td class="text-right">{!! formatNumberColorCustom($total_expense, 1, 0, 0, 0) !!}</td>
+                    <td class="text-right">{!! formatNumberColorCustom($total_asset, 1, 0, 0, 3) !!}</td>
                   </tr>
                 </tfoot>
               </table>
@@ -259,7 +259,7 @@
           <div class="box-control">
             <div class="control">
               <p class="count"><span id="checklabel">0</span></p>
-              <p class="text">Tài sản đang được chọn</p>
+              <p class="text">Dòng tiền đang được chọn</p>
               <a href="javascript:processDeleteReports('frm', 'delete')" class="btn btn-gray btn-delete">
                 <img src="{{ asset('img/icon-delete.svg') }}" alt="">
               </a>

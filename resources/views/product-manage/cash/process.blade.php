@@ -285,7 +285,7 @@
 
   <div class="section cash-process">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <span class="current">Bóc tách dòng tiền</span>
+      <span>Quản lý kinh doanh</span> / <span class="current">Bóc tách dòng tiền</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
@@ -546,11 +546,12 @@
                               <table class="table table-bordered table-list">
                                 <thead>
                                   <tr>
-                                    <th rowspan="2" class="fixed fixed-1">Tên ví</th>
+                                    <th rowspan="2" class="fixed fixed-1">Tên dòng tiền</th>
                                     <th rowspan="2">Phân loại</th>
                                     <th colspan="2">Số tiền</th>
                                     <th rowspan="2">Tiến độ</th>
                                     <th rowspan="2">Số tiền còn lại</th>
+                                    <th rowspan="2">Ngày dự kiến hoàn thành</th>
                                   </tr>
                                   <tr>
                                     <th></th>
@@ -627,6 +628,7 @@
                                       <td class="text-right">
                                         {!! formatNumberColorCustom($cashplan->requireamount - $sumArray[$cashplan->id . '_realamount'], 1, 0, 0, 0) !!}
                                       </td>
+                                      <td class="text-center">20/2/2023</td>
                                     </tr>
                                   @endforeach
                                 </tbody>
