@@ -338,34 +338,38 @@
                   </div>
                 @endif
                 <div class="form-info">
-                  <input type="text" class="form-control" name="fullname" placeholder="Họ và tên *" required>
+                  <input type="text" class="form-control" name="fullname" placeholder="Họ và tên *" required
+                    disabled>
                   @if ($errors->has('fullname'))
                     <span class="text-danger">{{ $errors->first('fullname') }}</span>
                   @endif
-                  <input type="text" class="form-control" name="phone" placeholder="Số điện thoại *" required>
+                  <input type="text" class="form-control" name="phone" placeholder="Số điện thoại *" required
+                    disabled>
                   @if ($errors->has('phone'))
                     <span class="text-danger">{{ $errors->first('phone') }}</span>
                   @endif
 
-                  <input type="email" class="form-control" name="email" placeholder="Email *" required>
+                  <input type="email" class="form-control" name="email" placeholder="Email *" required disabled>
                   @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                   @endif
 
-                  <input type="text" class="form-control" name="content" placeholder="Công ty *" required>
-                  <input type="text" class="form-control" name="title" placeholder="Chức vụ *" required>
+                  <input type="text" class="form-control" name="content" placeholder="Công ty *" required
+                    disabled>
+                  <input type="text" class="form-control" name="title" placeholder="Chức vụ *" required
+                    disabled>
                 </div>
-                <button type="submit" class="btn btn-primary btn-register">Đăng ký ngay</button>
+                <button type="submit" class="btn btn-primary btn-register" disabled>Đăng ký ngay</button>
               </form>
               <div class="ticket-about">
-                <img class="img-fluid ticket-about__logo" src="{{ asset('img/landing-page/talkshow/logo.svg') }}"
+                {{-- <img class="img-fluid ticket-about__logo" src="{{ asset('img/landing-page/talkshow/logo.svg') }}"
                   alt="BossStack">
                 <div class="ticket-about__subtitle">
                   <span class="text">series talkshow:</span>
                   <span class="text">chiến lược dòng tiền</span>v
                 </div>
                 <img class="img-fluid banner-img" src="{{ asset('img/landing-page/talkshow/banner-img-1.png') }}"
-                  alt="BossStack">
+                  alt="BossStack"> --}}
               </div>
             </div>
           </div>

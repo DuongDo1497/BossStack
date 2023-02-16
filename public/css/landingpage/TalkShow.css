@@ -415,10 +415,15 @@
   border-radius: 3.4rem;
 }
 
+.ticket-register .form-info .form-control:disabled,
+.ticket-register .btn-register:disabled{
+  cursor: not-allowed;
+}
+
 .ticket-about{
   width: var(--w-ticket-about);
   padding: 7.6rem 6.5rem;
-  background: url('../../img/landing-page/talkshow/ticket-img-1.jpg') center center/cover no-repeat;
+  background: url('../../img/landing-page/talkshow/sold-out.png') center center/contain no-repeat;
 }
 
 .ticket-about .ticket-about__logo{

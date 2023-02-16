@@ -82,17 +82,17 @@
               </div>
               <div class="chart-tab">
                 <ul class="nav nav-tabs nav-tabs__mobile">
-                  <li class="active"><a data-toggle="tab" href="#chart1">Nợ</a></li>
-                  <li><a data-toggle="tab" href="#chart2">Tài sản</a></li>
-                  <li><a data-toggle="tab" href="#chart3">Tổng tài sản thực</a></li>
+                  <li class="active"><a data-toggle="tab" href="#chart2">Dòng tiền vào</a></li>
+                  <li><a data-toggle="tab" href="#chart1">Dòng tiền ra</a></li>
+                  <li><a data-toggle="tab" href="#chart3">Dòng tiền ròng</a></li>
                 </ul>
 
                 <div class="tab-content">
-                  <div id="chart1" class="tab-pane fade in active">
-                    <div id="rptasset1mb"></div>
-                  </div>
                   <div id="chart2" class="tab-pane fade">
                     <div id="rptasset2mb"></div>
+                  </div>
+                  <div id="chart1" class="tab-pane fade in active">
+                    <div id="rptasset1mb"></div>
                   </div>
                   <div id="chart3" class="tab-pane fade">
                     <div id="rptasset3mb"></div>

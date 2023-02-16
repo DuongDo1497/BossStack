@@ -137,7 +137,7 @@ h6{
   border: 1px solid #1b1464 !important;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .content-wrapper{
     margin-left: 0 !important;
   }
@@ -224,7 +224,7 @@ h6{
   }
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 767.98px){
   .skin-blue .main-header .navbar{
     display: flex;
     align-items: center;
@@ -547,7 +547,7 @@ h6{
   } */
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 767.98px){
   .skin-blue .main-sidebar{
     -webkit-transform: translate(-258px,0);
     -ms-transform: translate(-258px,0);
