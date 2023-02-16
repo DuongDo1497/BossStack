@@ -195,9 +195,16 @@
 }
 
 .form-row{
+  --gap: 16px;
   display: flex;
   justify-content: space-between;
-  column-gap: 16px;
+  /* column-gap: 16px; */
+  margin: 0 0 16px calc(-1 * var(--gap));
+  width: calc(auto + var(--gap));
+}
+
+.form-row > *{
+  margin: 0 0 0 var(--gap) !important;
 }
 
 .form-group{

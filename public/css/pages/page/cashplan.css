@@ -3,7 +3,7 @@
 }
 
 .cashplan-index .filter-timeline{
-  width: 470px;
+  width: 485px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -21,6 +21,10 @@
 
 .cashplan-index .form-group label{
   color: var(--gray-cl-5);
+}
+
+.cashplan-index .form-group:last-child > *{
+  margin: 0 !important;
 }
 
 .cashplan-index .btn-add,
@@ -66,9 +70,9 @@
 }
 
 @media (max-width: 1199.98px){
-  .cashplan-index .filter-timeline{
-    width: 318px;
-  }
+  /* .cashplan-index .filter-timeline{
+    width: 460px;
+  } */
 
   .cashplan-index .table-wrap .table-content{
     width: calc(100% - 192px); 
