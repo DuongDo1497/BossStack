@@ -628,7 +628,7 @@
                                       <td class="text-right">
                                         {!! formatNumberColorCustom($cashplan->requireamount - $sumArray[$cashplan->id . '_realamount'], 1, 0, 0, 0) !!}
                                       </td>
-                                      <td class="text-center">20/2/2023</td>
+                                      <td class="text-center">{{ $cashplan->finishdate == null ? '' : ConvertSQLDate($cashplan->finishdate) }}</td>
                                     </tr>
                                   @endforeach
                                 </tbody>
