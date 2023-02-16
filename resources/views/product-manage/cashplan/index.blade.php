@@ -68,7 +68,7 @@
 
     <div class="section cashplan-index">
       <div class="breadcrumb">
-        <span>Quản lý tài khoản</span> / <span class="current">Thiết lập dòng tiền</span>
+        <span>Quản lý kinh doanh</span> / <span class="current">Kế hoạch dòng tiền</span>
       </div>
       <p class="title-page">{{ $title->heading }}</p>
       <div class="box-content">
@@ -80,7 +80,7 @@
                 <p class="number">{{ $collections->count() }}</p>
               </div>
               <div class="noti-index__item">
-                <p class="title">Tổng số tiền mục tiêu:</p>
+                <p class="title">Tổng số tiền kế hoạch:</p>
                 <p class="number">{!! formatNumberColor($collections->sum('requireamount'), 1, 0, 0) !!}</p>
               </div>
               <div class="noti-index__item">
@@ -98,7 +98,7 @@
 
           <a href="{{ route('cashplans-processAdd', ['incomestatustype' => 5]) }}" class="btn btn-primary btn-add text">
             <img src="{{ asset('img/icon-add-w.svg') }}" alt="">
-            Thêm dòng tiền
+            Thêm kế hoạch dòng tiền
           </a>
 
           <div class="box-search">
@@ -146,10 +146,10 @@
                     <th class="fixed fixed-2">STT</th>
                     <th class="fixed fixed-3">Tên dòng tiền</th>
                     <th>Phân loại</th>
-                    <th>Mục tiêu</th>
+                    <th>Kế hoạch</th>
                     <th>Ngày lập</th>
                     <th>Thời gian</th>
-                    <th>Số tiền mục tiêu</th>
+                    <th>Số tiền kế hoạch</th>
                     <th>Đang thực hiện</th>
                     <th>Còn lại</th>
                     <th>Trạng thái</th>
@@ -184,7 +184,8 @@
                       <td class="text-left">{{ $cashplan->config_type_details_name }}</td>
                       <td class="text-center">
                         {{ $cashplan->plandate == null ? '' : ConvertSQLDate($cashplan->plandate) }}</td>
-                      <td class="text-center">{{ formatNumber($cashplan->planage - $cashplan->currentage, 1, 0, 0) }}</td>
+                      <td class="text-center">{{ formatNumber($cashplan->planage - $cashplan->currentage, 1, 0, 0) }}
+                      </td>
                       <td class="text-right">{!! formatNumberColor($cashplan->requireamount, 1, 0, 0) !!}</td>
                       <td class="text-right">{!! formatNumberColor($cashplan->amount, 1, 0, 1) !!}</td>
                       <td class="text-right">{!! formatNumberColor($cashplan->requireamount - $cashplan->amount, 1, 0, 1) !!}</td>

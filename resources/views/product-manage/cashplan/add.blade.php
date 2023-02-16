@@ -78,7 +78,7 @@
               @endif
             </div>
             <div class="form-group">
-              <label for="incometypedetail">Mục tiêu<span>*</span>:</label>
+              <label for="incometypedetail">Kế hoạch<span>*</span>:</label>
               <select class="form-select select2" tabindex="-1" name="incometypedetail" id="incometypedetail" required>
                 @foreach ($incometypedetails as $item)
                   @if ($item->id == $incometypedetail or $item->id == old('incometypedetail'))
@@ -108,8 +108,10 @@
                 <span class="text-danger">{{ $errors->first('plandate') }}</span>
               @endif
             </div>
-            <input type="hidden" class="form-control" name="currentage" id="currentage" value="{{ $currentage == null ? old('currentage') : $currentage }}">
-            <input type="hidden" class="form-control" name="planage" id="planage" value="{{ old('planage') == '' ? '' : old('planage') }}">
+            <input type="hidden" class="form-control" name="currentage" id="currentage"
+              value="{{ $currentage == null ? old('currentage') : $currentage }}">
+            <input type="hidden" class="form-control" name="planage" id="planage"
+              value="{{ old('planage') == '' ? '' : old('planage') }}">
             {{-- <div class="form-group">
               <label for="currentage">Tuổi hiện tại:</label>
               <div class="input-group">
@@ -123,13 +125,13 @@
               </div>
             </div> --}}
             <div class="form-group">
-              <label for="planage">Thời gian hoàn thành mục tiêu<span>*</span>:</label>
+              <label for="planage">Thời gian hoàn thành kế hoạch<span>*</span>:</label>
               <input type="text" class="form-control" tabindex="-1" name="numage" id="numage"
                 value="{{ old('numage') == '' ? '' : old('numage') }}" placeholder="Nhập thời gian hoàn thành mục tiêu"
                 required>
             </div>
             <div class="form-group">
-              <label for="requireamount">Số tiền mục tiêu<span>*</span>:</label>
+              <label for="requireamount">Số tiền kế hoạch<span>*</span>:</label>
               <div class="input-group">
                 <input type="text" class="form-control number" tabindex="-1" name="requireamount" id="requireamount"
                   value="{{ old('requireamount') == '' ? 0 : old('requireamount') }}"
@@ -139,8 +141,8 @@
             </div>
             <div class="form-group">
               <label for="finishdate">Ngày dự kiến hoàn thành:</label>
-              <input type="text" class="form-control" tabindex="-1" name="finishdate" id="finishdate" value=""
-                placeholder="dd/mm/yyyy">
+              <input type="text" class="form-control" tabindex="-1" name="finishdate" id="finishdate"
+                value="" placeholder="dd/mm/yyyy">
             </div>
             <div class="form-group">
               <label for="">Hóa đơn, chứng từ kèm theo:</label>
@@ -149,7 +151,7 @@
             </div>
           </div>
           <button class="btn btn-primary btn-add" tabindex="-1" onclick="processReports('frm', 'process')">
-            Thêm dòng tiền
+            Thêm kế hoạch dòng tiền
           </button>
         </div>
       </div>

@@ -87,7 +87,7 @@ class CashPlanController extends Controller
     {
         $customer_id = Auth::user()->customer()->first()->id;
 
-        $this->view->setHeading('THÊM DÒNG TIỀN');
+        $this->view->setHeading('THÊM KẾ HOẠCH DÒNG TIỀN');
         $this->viewInit($customer_id);
     }
 
