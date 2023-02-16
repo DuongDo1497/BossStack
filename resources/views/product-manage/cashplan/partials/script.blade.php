@@ -69,12 +69,15 @@
 
   });
 
+  var numage = document.getElementById("numage");
+
   var currentage = document.getElementById("currentage");
   var plandate = document.getElementById("plandate");
   var planage = document.getElementById("planage");
   var finishdate = document.getElementById("finishdate");
 
-  planage.oninput = function() {
+  numage.oninput = function() {
+    planage.value = parseInt(numage.value) + parseInt(currentage.value);
     amount = parseInt(planage.value) - parseInt(currentage.value);
     finishdate.value = DateAdd(plandate.value, "y", amount);
   }

@@ -108,6 +108,8 @@
                 <span class="text-danger">{{ $errors->first('plandate') }}</span>
               @endif
             </div>
+            <input type="hidden" class="form-control" name="currentage" id="currentage" value="{{ $currentage == null ? old('currentage') : $currentage }}">
+            <input type="hidden" class="form-control" name="planage" id="planage" value="{{ old('planage') == '' ? '' : old('planage') }}">
             {{-- <div class="form-group">
               <label for="currentage">Tuổi hiện tại:</label>
               <div class="input-group">
@@ -122,12 +124,9 @@
             </div> --}}
             <div class="form-group">
               <label for="planage">Thời gian hoàn thành mục tiêu<span>*</span>:</label>
-              <input type="text" class="form-control" tabindex="-1" name="planage" id="planage"
-                value="{{ old('planage') == '' ? '' : old('planage') }}" placeholder="Nhập thời gian hoàn thành mục tiêu"
+              <input type="text" class="form-control" tabindex="-1" name="numage" id="numage"
+                value="{{ old('numage') == '' ? '' : old('numage') }}" placeholder="Nhập thời gian hoàn thành mục tiêu"
                 required>
-              @if ($errors->has('planage'))
-                <span class="text-danger">{{ $errors->first('planage') }}</span>
-              @endif
             </div>
             <div class="form-group">
               <label for="requireamount">Số tiền mục tiêu<span>*</span>:</label>
