@@ -31,7 +31,7 @@
           <div class="box-form">
             <div class="form-group">
               <label for="fullname">Họ và tên<span>*</span>:</label>
-              <input type="text" class="form-control" name="fullname" id="fullname" value="{{ old('fullname') }}"
+              <input type="text" class="form-control" name="fullname" id="fullname" value="{{ old('fullname') == '' ? $fullname : old('fullname') }}"
                 placeholder="Nhập..." required>
               @if ($errors->has('fullname'))
                 <span class="text-danger">{{ $errors->first('fullname') }}</span>
@@ -39,7 +39,7 @@
             </div>
             <div class="form-group">
               <label for="phone">Số điện thoại<span>*</span>:</label>
-              <input type="text" class="form-control" name="phone" id="phone" value="{{ old('phone') }}"
+              <input type="text" class="form-control" name="phone" id="phone" value="{{ old('phone') == '' ? $phone : old('phone') }}"
                 placeholder="Nhập..." required>
               @if ($errors->has('phone'))
                 <span class="text-danger">{{ $errors->first('phone') }}</span>
@@ -47,7 +47,7 @@
             </div>
             <div class="form-group">
               <label for="email">Email<span>*</span>:</label>
-              <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}"
+              <input type="email" class="form-control" name="email" id="email" value="{{ old('email') == '' ? $email : old('email') }}"
                 placeholder="Nhập..." required>
               @if ($errors->has('email'))
                 <span class="text-danger">{{ $errors->first('email') }}</span>
@@ -55,7 +55,7 @@
             </div>
             <div class="form-group">
               <label for="birthday">Ngày bắt đầu<span>*</span>:</label>
-              <input type="text" class="form-control" name="birthday" id="birthday" value="{{ old('birthday') }}"
+              <input type="text" class="form-control" name="birthday" id="birthday" value="{{ old('birthday') == '' ? $birthday : old('birthday') }}"
                 placeholder="Nhập..." required>
               @if ($errors->has('birthday'))
                 <span class="text-danger">{{ $errors->first('birthday') }}</span>
@@ -63,10 +63,10 @@
             </div>
             <div class="form-group">
               <label for="">Phân loại<span>*</span>:</label>
-              <select class="form-select select2" id="usercustomertype" name="usercustomertype" required>
+              <select class="form-select select2" id="usercustomertype" name="usercustomertype" required onChange="processSubmitOpenWindow('frm', 'view', '_top', '{{ route('customers-addUser') }}', '1')">
                 <option value="">Chọn phân loại</option>
                 @foreach ($usercustomertypes as $key => $value)
-                  @if (old('usercustomertype') != '' and $key == old('usercustomertype'))
+                  @if ((old('usercustomertype') != '' and $key == old('usercustomertype')) or ($usercustomertype != '' and $key == $usercustomertype))
                     <option value="{{ $key }}" selected>{{ $value }}</option>
                   @else
                     <option value="{{ $key }}">{{ $value }}</option>
@@ -76,14 +76,26 @@
             </div>
             <div class="relationship">
               <div class="form-group">
-                <label for="">Chức vụ<span>*</span>:</label>
+                <label for="">Quan hệ<span>*</span>:</label>
                 <select class="form-select select2" id="relationshiptype" name="relationshiptype" required>
                   <option value="">Chọn</option>
                   @foreach ($relationshiptypes as $key => $value)
-                    @if (old('relationshiptype') != '' and $key == old('relationshiptype'))
-                      <option value="{{ $key }}" selected>{{ $value }}</option>
-                    @else
-                      <option value="{{ $key }}">{{ $value }}</option>
+                    @if (old('usercustomertype') == "0" or $usercustomertype == "0")
+                        @if ($key < 10)
+                            @if ((old('relationshiptype') != '' and $key == old('relationshiptype')) or ($relationshiptype != '' and $key == $relationshiptype))
+                              <option value="{{ $key }}" selected>{{ $value }}</option>
+                            @else
+                              <option value="{{ $key }}">{{ $value }}</option>
+                            @endif
+                        @endif
+                    @elseif (old('usercustomertype') == "1" or $usercustomertype == "1")
+                        @if ($key >= 10)
+                            @if ((old('relationshiptype') != '' and $key == old('relationshiptype')) or ($relationshiptype != '' and $key == $relationshiptype))
+                              <option value="{{ $key }}" selected>{{ $value }}</option>
+                            @else
+                              <option value="{{ $key }}">{{ $value }}</option>
+                            @endif
+                        @endif
                     @endif
                   @endforeach
                 </select>
@@ -112,7 +124,7 @@
             </div> --}}
             </div>
           </div>
-          <button type="submit" class="btn btn-primary btn-save">
+          <button class="btn btn-primary btn-save" onclick="processSubmitOpenWindow('frm', 'add', '_top', '{{ route('customers-storeUser') }}?continue=true', '1')">
             Tạo user
           </button>
         </div>

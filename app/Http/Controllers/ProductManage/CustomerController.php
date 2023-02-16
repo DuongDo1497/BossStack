@@ -779,7 +779,7 @@ class CustomerController extends Controller
         return $this->view('user.dashboardUser');
     }
 
-    public function addUser()
+    public function addUser(Request $request)
     {
         $this->view->leftmenu = app(APIAdminService::class)->setLeftMenu();
         $typereport = (Auth::user() == null ? "" : Auth::user()->service_product_id);
@@ -792,6 +792,20 @@ class CustomerController extends Controller
         $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
         $this->view->usercustomertypes = config('rbooks.USERCUSTOMERTYPES');
         $this->view->rolemembertypes = config('rbooks.ROLEMEMBERTYPES');
+
+        $fullname = ($request->fullname == null ? '' : $request->fullname);
+        $this->view->fullname = $fullname;
+        $phone = ($request->phone == null ? '' : $request->phone);
+        $this->view->phone = $phone;
+        $email = ($request->email == null ? '' : $request->email);
+        $this->view->email = $email;
+        $birthday = ($request->birthday == null ? '' : $request->birthday);
+        $this->view->birthday = $birthday;
+
+        $usercustomertype = ($request->usercustomertype == null ? '' : $request->usercustomertype);
+        $this->view->usercustomertype = $usercustomertype;
+        $relationshiptype = ($request->relationshiptype == null ? '' : $request->relationshiptype);
+        $this->view->relationshiptype = $relationshiptype;
 
         return $this->view('user.addUser');
     }
@@ -819,6 +833,13 @@ class CustomerController extends Controller
         $this->view->relationshiptypes = config('rbooks.RELATIONSHIPTYPE');
         $this->view->usercustomertypes = config('rbooks.USERCUSTOMERTYPES');
         $this->view->rolemembertypes = config('rbooks.ROLEMEMBERTYPES');
+
+        $this->view->fullname = '';
+        $this->view->phone = '';
+        $this->view->email = '';
+        $this->view->birthday = '';
+        $this->view->usercustomertype = '';
+        $this->view->relationshiptype = '';
 
         return $this->view('user.addUser');
     }
