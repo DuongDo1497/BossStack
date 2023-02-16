@@ -44,7 +44,7 @@
 
   <div class="section cashasset-edit">
     <div class="breadcrumb">
-      <span>Danh mục tài sản - nợ</span> / <span class="current">Chỉnh sửa
+      <span>Lưu chuyển tiền tệ</span> / <span class="current">Chỉnh sửa
         {{ $assetstatustypes[$model->assetstatustype] }}</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
@@ -60,9 +60,8 @@
       <input type='hidden' name='cashaccount_amount' value='{{ $cashaccount_amount }}'>
       <div class="box-content">
         <div class="box box-primary">
-          <p class="box-des">Nhập thông tin chi tiết các tài sản - nợ của khách hàng. Để xem lại thông tin chi
-            tiết
-            các tài sản - nợ. Vui lòng xem <a href="#">[tại đây]</a></p>
+          <p class="box-des">Nhập thông tin chi tiết các dòng tiền của khách hàng. Để xem lại thông tin chi
+            tiết các tài dòng tiền. Vui lòng xem <a href="#">[tại đây]</a></p>
           <div class="box-form">
             <div class="form-group">
               <label for="assetdate">Ngày:</label>
@@ -75,7 +74,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="assetname">Tài sản<span>*</span>:</label>
+              <label for="assetname">Dòng tiền<span>*</span>:</label>
               <input type="text" class="form-control" name="assetname" id="assetname" value="{{ $model->assetname }}"
                 required>
             </div>

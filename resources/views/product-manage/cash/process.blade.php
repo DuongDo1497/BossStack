@@ -495,7 +495,7 @@
                       </div>
                       <div id="assessment__detail" class="panel-collapse collapse in">
                         <div class="panel-body">
-                          <div class="box-search">
+                          {{-- <div class="box-search">
                             <div class="filter-timeline">
                               <div class="form-row">
                                 <div class="form-group">
@@ -511,7 +511,7 @@
                                     @endforeach
                                   </select>
                                 </div>
-                                {{-- <div class="form-group">
+                                <div class="form-group">
                                   <label for="month">Chọn tháng:</label>
                                   <div class="input-group">
                                     <input type="text" class="form-control" name="month" id="month"
@@ -520,16 +520,16 @@
                                       <img src="{{ asset('img/icon-calender.svg') }}" alt="">
                                     </span>
                                   </div>
-                                </div> --}}
+                                </div>
                               </div>
                               <button type="submit" class="btn btn-primary btn-filter text">
                                 Lọc
                                 <img class="icon last" src="{{ asset('img/icon-filter.svg') }}" alt="">
                               </button>
                             </div>
-                          </div>
+                          </div> --}}
                           <div class="note-group">
-                            <!--p class="note-date">Tháng 11/2022</p-->
+                            {{-- <p class="note-date">Tháng 11/2022</p> --}}
                             <div class="progress-bar__note">
                               <div class="item">
                                 <span class="square success"></span>
@@ -610,8 +610,8 @@
                                       <td class="text-center">
                                         <div class="progress">
                                           <div class="progress-bar progress-bar-success" role="progressbar"
-                                            aria-valuenow="{{ formatNumber($percentProcess, 1, 2, 1) }}"
-                                            aria-valuemin="0" aria-valuemax="100"
+                                            aria-valuenow="{{ formatNumber($percentProcess, 1, 2, 1) }}" aria-valuemin="0"
+                                            aria-valuemax="100"
                                             style="width: {{ formatNumber($percentProcess, 1, 2, 1) }}%">
                                             {{ formatNumber($percentProcess, 1, 0, 1) }}%
                                           </div>

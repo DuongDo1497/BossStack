@@ -41,7 +41,7 @@
 
   <div class="section cashplan-add">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <a class="prev" href="{{ route('cashplans-index') }}">Thiết lập
+      <span>Quản lý kinh doanh</span> / <a class="prev" href="{{ route('cashplans-index') }}">Kế hoạch
         dòng tiền</a> / <span class="current">Thêm dòng tiền</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>

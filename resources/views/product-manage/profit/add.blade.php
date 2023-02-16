@@ -11,7 +11,8 @@
 
   <div class="section profit-add">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <span class="current">Tính lợi nhuận kinh doanh</span>
+      <span>Quản lý kinh doanh</span> / <span>Hoạt động kinh doanh</span> / <span class="current">Tính lợi nhuận kinh
+        doanh</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
     <form role="form" action="{{ route('profits-process') }}?continue=true" method="post" id="frm">

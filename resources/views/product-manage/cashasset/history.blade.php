@@ -7,8 +7,9 @@
 @section('content')
   <div class="section cashasset-history">
     <div class="breadcrumb">
-      <span>Danh mục tài sản - nợ</span> / <a href="{{ route('cashassets-index') }}" class="prev">Quản lý tài sản - nợ</a>
-      / <span class="current">Lịch sử tài sản - nợ</span>
+      <span>Lưu chuyển tiền tệ</span> / <a href="{{ route('cashassets-index') }}" class="prev">Quản lý Lưu chuyển tiền
+        tệ</a>
+      / <span class="current">Lịch sử Lưu chuyển tiền tệ</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
@@ -20,7 +21,7 @@
               <thead>
                 <tr>
                   <th class="fixed fixed-1">STT</th>
-                  <th class="fixed fixed-2">Tài sản</th>
+                  <th class="fixed fixed-2">Dòng tiền</th>
                   <th class="fixed fixed-3">Phân loại</th>
                   <th>Chi tiết</th>
                   <th>Ngày</th>
@@ -48,30 +49,30 @@
                 @endforeach
 
                 @foreach ($listaccounts as $cashasset)
-                @php
-                $cashname = "Ví mục tiêu";
-                if($cashasset->accountno == $primaryaccount){
-                $requireamount = $cashasset->amount;
-                $cashname = "Ví tổng";
-                }else{
-                $requireamount = $cashasset->requireamount;
-                $cashname = "Ví mục tiêu";
-                }
-                @endphp
-                <tr>
+                  @php
+                    $cashname = 'Ví mục tiêu';
+                    if ($cashasset->accountno == $primaryaccount) {
+                        $requireamount = $cashasset->amount;
+                        $cashname = 'Ví tổng';
+                    } else {
+                        $requireamount = $cashasset->requireamount;
+                        $cashname = 'Ví mục tiêu';
+                    }
+                  @endphp
+                  <tr>
                     <td style="text-align: center;" class="text-nowrap">{{ $i++ }}</td>
                     <td style="text-align: left;" class="text-nowrap">{{ $cashasset->accountname }}
-                        &nbsp;&nbsp;&nbsp;
-                        <br>Số tiền: {{ formatNumber($requireamount, 1, 0, 1) }}
+                      &nbsp;&nbsp;&nbsp;
+                      <br>Số tiền: {{ formatNumber($requireamount, 1, 0, 1) }}
                     </td>
                     <td style="text-align: left;" class="text-nowrap">{{ $cashname }}</td>
-                    <td style="text-align: left;" class="text-nowrap">Mã ví {{ $cashasset->accountno
-                        }} </td>
-                    <td style="text-align: center;" class="text-nowrap">{{ $cashasset->accountdate ==
-                        null ? "" : ConvertSQLDate($cashasset->accountdate) }}</td>
-                </tr>
+                    <td style="text-align: left;" class="text-nowrap">Mã ví {{ $cashasset->accountno }} </td>
+                    <td style="text-align: center;" class="text-nowrap">
+                      {{ $cashasset->accountdate == null ? '' : ConvertSQLDate($cashasset->accountdate) }}
+                    </td>
+                  </tr>
                 @endforeach
-                </tbody>
+              </tbody>
             </table>
           </div>
         </div>

@@ -22,7 +22,7 @@
 
   <div class="section dashboard-index no-bg">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <span class="current">Tổng quan tài khoản</span>
+      <span>Quản lý kinh doanh</span> / <span class="current">Tổng quan kinh doanh</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
 
@@ -35,49 +35,48 @@
             <div class="overview-page__item">
               <a href="{{ route('profits-index') }}">
                 <img class="icon" src="{{ asset('img/dashboard-1.svg') }}" alt="">
-                <span class="text">Tính lợi nhuận<br />kinh doanh</span>
-              </a>
-            </div>
-
-            <div class="overview-page__item">
-              <a href="{{ route('retireplans-index') }}">
-                <img class="icon" src="{{ asset('img/dashboard-2.svg') }}" alt="">
-                <span class="text">Tính số tiền<br />nghỉ hưu</span>
+                <span class="text">Hoạt động<br />kinh doanh</span>
               </a>
             </div>
 
             <div class="overview-page__item">
               <a href="{{ route('cashplans-index') }}">
                 <img class="icon" src="{{ asset('img/dashboard-3.svg') }}" alt="">
-                <span class="text">Thiết lập<br />dòng tiền</span>
+                <span class="text">Kế hoạch<br />dòng tiền</span>
               </a>
             </div>
-<!--
-            <div class="overview-page__item add">
+
+            <div class="overview-page__item">
+              <a href="{{ route('cash-process') }}">
+                <img class="icon" src="{{ asset('img/dashboard-6.svg') }}" alt="">
+                <span class="text">Bóc tách dòng tiền</span>
+              </a>
+            </div>
+
+            {{-- <div class="overview-page__item add">
               <a href="{{ route('customers-addFunction') }}">
                 <img class="icon" src="{{ asset('img/dashboard-add.svg') }}" alt="">
                 <span class="text">Thêm tiện ích</span>
               </a>
-            </div>
--->
+            </div> --}}
           </div>
         </div>
 
         <div class="box box-primary">
           <div class="spending-history">
             <div class="spending-history__list">
-              <h6 class="box-title">Theo dõi tổng tài sản - nợ</h6>
+              <h6 class="box-title">Lưu chuyển tiền tệ</h6>
               <div class="chart-list">
                 <div class="chart-item">
-                  <p class="chart-title">Nợ</p>
-                  <div id="rptasset1"></div>
-                </div>
-                <div class="chart-item">
-                  <p class="chart-title">Tài sản</p>
+                  <p class="chart-title">Dòng tiền vào</p>
                   <div id="rptasset2"></div>
                 </div>
                 <div class="chart-item">
-                  <p class="chart-title">Tổng tài sản thực</p>
+                  <p class="chart-title">Dòng tiền ra</p>
+                  <div id="rptasset1"></div>
+                </div>
+                <div class="chart-item">
+                  <p class="chart-title">Dòng tiền ròng</p>
                   <div id="rptasset3"></div>
                 </div>
               </div>
@@ -107,13 +106,13 @@
                 <table class="table table-bordered table-list">
                   <tbody>
                     <tr>
-                      <td>Lợi nhuận 1</td>
-                      <td class="text-right">{!! formatNumberColor($loinhuan_1, 1, 0, 0) !!}</td>
+                      {{-- <td>Lợi nhuận 1</td> --}}
+                      <td class="text-center" style="font-size: 20px;">{!! formatNumberColor($loinhuan_1, 1, 0, 0) !!} đồng</td>
                     </tr>
-                    <tr>
+                    {{-- <tr>
                       <td>Lợi nhuận 2</td>
                       <td class="text-right">{!! formatNumberColor($loinhuan_2, 1, 0, 0) !!}</td>
-                    </tr>
+                    </tr> --}}
                   </tbody>
                 </table>
               </div>
@@ -123,13 +122,13 @@
                 <table class="table table-bordered table-list">
                   <tbody>
                     <tr>
-                      <td>Lợi nhuận 1</td>
-                      <td class="text-right">{!! formatNumberColor($loinhuanthapnhat_1, 1, 0, 0) !!}</td>
+                      {{-- <td>Lợi nhuận 1</td> --}}
+                      <td class="text-center" style="font-size: 20px;">{!! formatNumberColor($loinhuanthapnhat_1, 1, 0, 0) !!} đồng</td>
                     </tr>
-                    <tr>
+                    {{-- <tr>
                       <td>Lợi nhuận 2</td>
                       <td class="text-right">{!! formatNumberColor($loinhuanthapnhat_2, 1, 0, 0) !!}</td>
-                    </tr>
+                    </tr> --}}
                   </tbody>
                 </table>
               </div>
@@ -145,7 +144,8 @@
                 <div class="form-group">
                   <label for="year">Năm:</label>
                   <div class="input-group">
-                    <input type='text' class="form-control" name="year" id='year' value="{{ $year }}" onchange='document.frm.submit();'/>                    
+                    <input type='text' class="form-control" name="year" id='year' value="{{ $year }}"
+                      onchange='document.frm.submit();' />
                     <span class="input-group-addon">
                       <img src="{{ asset('img/icon-calender.svg') }}" alt="">
                     </span>

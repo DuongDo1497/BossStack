@@ -54,7 +54,8 @@
 
   <div class="section cashasset-add">
     <div class="breadcrumb">
-      <span>Danh mục tài sản - nợ</span> / <a href="{{ route('cashassets-index') }}" class="prev">Quản lý tài sản - nợ</a>
+      <span>Lưu chuyển tiền tệ</span> / <a href="{{ route('cashassets-index') }}" class="prev">Quản lý Lưu chuyển tiền
+        tệ</a>
       / <span class="current">Thêm mới
         {{ $assetstatustypes[$assetstatustype] }}</span>
     </div>
@@ -80,7 +81,7 @@
                 value="{{ old('assetdate') == '' ? $assetdate : old('assetdate') }}">
             </div>
             <div class="form-group">
-              <label for="assetname">Tài sản<span>*</span>:</label>
+              <label for="assetname">Dòng tiền<span>*</span>:</label>
               <input type="text" class="form-control" name="assetname" id="assetname"
                 value="{{ old('assetname') == '' ? $assetname : old('assetname') }}" placeholder="Nhập..." required>
             </div>

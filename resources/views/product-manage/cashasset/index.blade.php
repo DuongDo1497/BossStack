@@ -63,20 +63,20 @@
 
     <div class="section cashasset-index">
       <div class="breadcrumb">
-        <span>Danh mục tài sản - nợ</span> / <span class="current">Quản lý tài sản - nợ</span>
+        <span>Lưu chuyển tiền tệ</span> / <span class="current">Quản lý Lưu chuyển tiền tệ</span>
       </div>
       <p class="title-page">{{ $title->heading }}</p>
 
       <div class="box-content">
         <div class="box box-primary">
-          <div class="noti-index">
+          {{-- <div class="noti-index">
             <div class="noti-index__wrap">
               <div class="noti-index__item">
-                <p class="title">Tổng nợ</p>
+                <p class="title">Dòng tiền ra</p>
                 <p class="number"><span id="tongno">0</span></p>
               </div>
               <div class="noti-index__item">
-                <p class="title">Tổng tài sản</p>
+                <p class="title">Dòng tiền vào</p>
                 <p class="number"><span id="tongtaisan">0</span></p>
               </div>
               <div class="noti-index__item">
@@ -84,26 +84,26 @@
                 <p class="number"><span id="tileno_taisan">0</span></p>
               </div>
               <div class="noti-index__item">
-                <p class="title">Tổng tài sản thực</p>
+                <p class="title">Dòng tiền ròng</p>
                 <p class="number"><span id="tongtaisanthuc">0</span></p>
               </div>
             </div>
-          </div>
-          <h6 class="box-title">Biểu đồ tỷ trọng tài sản</h6>
+          </div> --}}
+          {{-- <h6 class="box-title">Biểu đồ</h6> --}}
           {{-- <p class="box-des">Chức năng quản lý tài sản - nợ của phần mềm BossStack là công cụ hữu ích để
           hỗ
           trợ bạn đánh giá và xem lại việc quản lý tài sản của mình.</p> --}}
           <div class="chart-list">
             <div class="chart-item">
-              <p class="chart-title">Nợ</p>
-              <div id="rptasset1"></div>
-            </div>
-            <div class="chart-item">
-              <p class="chart-title">Tài sản</p>
+              <p class="chart-title">Dòng tiền vào</p>
               <div id="rptasset2"></div>
             </div>
             <div class="chart-item">
-              <p class="chart-title">Tổng tài sản thực</p>
+              <p class="chart-title">Dòng tiền ra</p>
+              <div id="rptasset1"></div>
+            </div>
+            <div class="chart-item">
+              <p class="chart-title">Dòng tiền ròng</p>
               <div id="rptasset3"></div>
             </div>
           </div>
@@ -112,7 +112,7 @@
         <div class="box box-primary">
           <h6 class="box-title">
             Danh sách Chi tiết
-            <a href="{{ route('cashassets-history') }}" class="box-title__link">Lịch sử tài sản - nợ</a>
+            <a href="{{ route('cashassets-history') }}" class="box-title__link">Lịch sử lưu chuyển tiền tệ</a>
           </h6>
           <div class="noti-index">
             <div class="noti-index__wrap">
@@ -130,11 +130,11 @@
             <div class="control">
               <a href="{{ route('cashassets-process', ['assetstatustype' => 3]) }}" class="btn btn-gray btn-debt text">
                 <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
-                Nợ
+                Dòng tiền ra
               </a>
               <a href="{{ route('cashassets-process', ['assetstatustype' => 4]) }}" class="btn btn-gray btn-asset text">
                 <img class="icon" src="{{ asset('img/icon-add.svg') }}" alt="">
-                Tài sản
+                Dòng tiền vào
               </a>
             </div>
           </div>
@@ -147,16 +147,16 @@
                       <input name="allbox" type="checkbox" id="allbox" onclick="CheckAll(this)">
                     </th>
                     <th rowspan="2" class="fixed fixed-2">STT</th>
-                    <th rowspan="2" class="fixed fixed-3">Tài sản</th>
+                    <th rowspan="2" class="fixed fixed-3">Dòng tiền</th>
                     <th rowspan="2">Phân loại</th>
                     <th rowspan="2">Chi tiết</th>
                     <th rowspan="2">Ngày</th>
-                    <th colspan="2">Tài sản</th>
+                    <th colspan="2">Dòng tiền</th>
                   </tr>
                   <tr>
                     <th></th>
-                    <th>Nợ</th>
-                    <th>Có</th>
+                    <th>Ra</th>
+                    <th>Vào</th>
                   </tr>
                 </thead>
                 <tbody>

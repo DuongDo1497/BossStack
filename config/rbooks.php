@@ -155,8 +155,8 @@ return [
           ],
 
     'ASSETSTATUSTYPES' => [ 
-            '3'=>_('Tài sản nợ'),
-            '4'=>_('Tài sản có'),
+            '3'=>_('Dòng tiền ra'),
+            '4'=>_('Dòng tiền vào'),
           ],
                       
     'NEWSTYPE' => [ 

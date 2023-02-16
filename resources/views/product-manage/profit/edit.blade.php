@@ -11,7 +11,8 @@
 
   <div class="section profit-add">
     <div class="breadcrumb">
-      <span>Quản lý tài khoản</span> / <span class="current">Tính lợi nhuận kinh doanh</span>
+      <span>Quản lý kinh doanh</span> / <span>Hoạt động kinh doanh</span> / <span class="current">Tính lợi nhuận kinh
+        doanh</span>
     </div>
     <p class="title-page">{{ $title->heading }}</p>
     <form role="form" action="{{ route('profits-update', ['id' => $model->id]) }}?continue=true" method="post"
@@ -88,12 +89,12 @@
               <div class="form-group">
                 <label for="">Tháng:</label>
                 <input type="text" class="form-control" name="month" id="month" value="{{ $model->month }}"
-                  placeholder="Nhập..." onkeypress='return numbersonly(this, event)'  required>
+                  placeholder="Nhập..." onkeypress='return numbersonly(this, event)' required>
               </div>
               <div class="form-group">
                 <label for="">Năm:</label>
                 <input type="text" class="form-control" name="year" id="year" value="{{ $model->year }}"
-                  placeholder="Nhập..." onkeypress='return numbersonly(this, event)'  required>
+                  placeholder="Nhập..." onkeypress='return numbersonly(this, event)' required>
               </div>
             </div>
             <div class="form-group">
