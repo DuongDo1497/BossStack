@@ -20,7 +20,7 @@ class DashboardController extends Controller
         parent::__construct(null);
 
         $this->setViewPrefix('dashboard.');
-        $this->view->setHeading('TỔNG QUAN KINH DOANH');
+        $this->view->setHeading('TỔNG QUAN TÀI KHOẢN');
     }
 
     public function index(Request $request)
@@ -100,10 +100,10 @@ class DashboardController extends Controller
         $i = 0; $loinhuan_1 = 0; $loinhuan_2 = 0;
         foreach($listprofits as $item){
             if ($i == 0){
-                $loinhuan_1 = $item->loinhuantruocthue;            	
+                $loinhuan_1 = $item->loinhuansauthue;            	
             }
             if ($i == 1){
-                $loinhuan_2 = $item->loinhuantruocthue;             
+                $loinhuan_2 = $item->loinhuansauthue;             
             }
             if ($i == 2){
                 break;	
@@ -117,10 +117,10 @@ class DashboardController extends Controller
         $i = 0; $loinhuanthapnhat_1 = 0; $loinhuanthapnhat_2 = 0;
         foreach($listprofits as $item){
             if ($i == 0){
-                $loinhuanthapnhat_1 = $item->loinhuantruocthue;             
+                $loinhuanthapnhat_1 = $item->loinhuansauthue;             
             }
             if ($i == 1){
-                $loinhuanthapnhat_2 = $item->loinhuantruocthue;             
+                $loinhuanthapnhat_2 = $item->loinhuansauthue;             
             }
             if ($i == 2){
                 break;  
