@@ -78,7 +78,7 @@
               <div class="form-group">
                 <label for="">Chức vụ<span>*</span>:</label>
                 <select class="form-select select2" id="relationshiptype" name="relationshiptype" required>
-                  <option value="">Chọn mối quan hệ</option>
+                  <option value="">Chọn</option>
                   @foreach ($relationshiptypes as $key => $value)
                     @if (old('relationshiptype') != '' and $key == old('relationshiptype'))
                       <option value="{{ $key }}" selected>{{ $value }}</option>
@@ -90,18 +90,18 @@
               </div>
 
               <!--div class="form-group">
-                  <label for="">Phân quyền<span>*</span>:</label>
-                    <select class="form-select select2" id="rolemembertype" name="rolemembertype" required>
-                      <option value="">Chọn phân quyền</option>
-                      @foreach ($rolemembertypes as $key => $value)
+                    <label for="">Phân quyền<span>*</span>:</label>
+                      <select class="form-select select2" id="rolemembertype" name="rolemembertype" required>
+                        <option value="">Chọn phân quyền</option>
+                        @foreach ($rolemembertypes as $key => $value)
   @if (old('rolemembertype') != '' and $key == old('rolemembertype'))
   <option value="{{ $key }}" selected>{{ $value }}</option>
 @else
   <option value="{{ $key }}">{{ $value }}</option>
   @endif
   @endforeach
-                    </select>
-                </div-->
+                      </select>
+                  </div-->
 
               {{-- <div class="form-group">
               <label for=""></label>

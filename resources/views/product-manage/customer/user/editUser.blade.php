@@ -76,7 +76,7 @@
             <div class="form-group">
               <label for="">Chức vụ<span>*</span>:</label>
               <select class="form-select select2" id="relationshiptype" name="relationshiptype" required>
-                <option value="">Chọn mối quan hệ</option>
+                <option value="">Chọn</option>
                 @foreach ($relationshiptypes as $key => $value)
                   @if ($model->relationshiptype != '' and $key == $model->relationshiptype)
                     <option value="{{ $key }}" selected>{{ $value }}</option>
