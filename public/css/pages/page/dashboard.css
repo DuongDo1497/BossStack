@@ -163,12 +163,16 @@
 
   .spending-history{
     flex-wrap: wrap;
-    row-gap: 16px;
+    /* row-gap: 16px; */
   }
 
   .spending-history__list,
   .spending-history__sort{
     width: 100%;
+  }
+
+  .spending-history__list{
+    margin-bottom: 16px;
   }
 
   .spending-history__sort .line{

@@ -34,6 +34,10 @@
   text-align: right;
 } 
 
+.profit-add .box:last-child .form-row .form-group:first-child{
+  margin-left: 0 !important;
+}
+
 .profit-add .box:last-child .form-row .form-group:last-child{
   --w-label: auto;
 }

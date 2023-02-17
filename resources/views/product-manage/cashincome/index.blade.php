@@ -125,11 +125,11 @@
                         {{ $cashincome->incomedate == null ? '' : ConvertSQLDate($cashincome->incomedate) }}
                       </td>
                       @if ($cashincome->incomestatustype == 0)
-                        <td class="text-right"></td>
                         <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 0, 0) !!}</td>
-                      @elseif($cashincome->incomestatustype == 1 or $cashincome->incomestatustype == 2)
-                        <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 0, 3) !!}</td>
                         <td class="text-right"></td>
+                      @elseif($cashincome->incomestatustype == 1 or $cashincome->incomestatustype == 2)
+                        <td class="text-right"></td>
+                        <td class="text-right">{!! formatNumberColorCustom($cashincome->amount, 1, 0, 0, 3) !!}</td>
                       @endif
                     </tr>
                   @endforeach
