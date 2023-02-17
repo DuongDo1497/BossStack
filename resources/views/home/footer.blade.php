@@ -67,11 +67,11 @@
             </a>
           </div>
           <div class="footer-item__img">
-            {{-- <a href="#">
+            <a href="#" target="_blank">
               <img class="img-fluid" src="{{ asset('img/web/bct-img.png') }}" alt="Bộ Công thương">
-            </a> --}}
+            </a>
             <a class="dmca-badge" href="//www.dmca.com/Protection/Status.aspx?ID=8e853efb-6c16-457c-82de-028afb4111c1"
-              title="DMCA.com Protection Status">
+              title="DMCA.com Protection Status" target="_blank">
               <img class="img-fluid"
                 src="https://images.dmca.com/Badges/_dmca_premi_badge_4.png?ID=8e853efb-6c16-457c-82de-028afb4111c1"
                 alt="DMCA.com Protection Status">
