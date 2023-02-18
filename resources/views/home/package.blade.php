@@ -24,8 +24,7 @@
       <div class="container">
         <div class="wrap">
           <div class="package-list">
-
-            <div class="package-item">
+            {{-- <div class="package-item">
               <h6 class="package-name">Free</h6>
               <div class="package-control">
                 <div class="package-price">
@@ -69,7 +68,7 @@
                   <li>Đặt các chính sách về tạo mật khẩu</li>
                 </ul>
               </div>
-            </div>
+            </div> --}}
 
             <div class="package-item">
               <h6 class="package-name">Basic</h6>

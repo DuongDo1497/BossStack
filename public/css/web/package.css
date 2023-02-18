@@ -14,7 +14,7 @@
 }
 
 .package-list{
-  --package-count: 4;
+  --package-count: 3;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -28,7 +28,7 @@
   background-color: var(--white-cl);
 }
 
-.package-item:nth-child(3){
+.package-item:nth-child(2){
   height: 1355px;
   background-color: var(--primary-cl-4);
   box-shadow: 0px 0px 45px rgba(53, 99, 172, 0.8);
@@ -57,11 +57,11 @@
   background-color: var(--primary-cl-2);
 }
 
-.package-item:nth-child(2) .package-name{
+/* .package-item:nth-child(2) .package-name{
   background-color: var(--primary-cl-3);
-}
+} */
 
-.package-item:nth-child(3) .package-name{
+.package-item:nth-child(2) .package-name{
   background-color: var(--primary-cl-6);
 }
 
@@ -103,10 +103,10 @@
   color: var(--gray-cl-7);
 }
 
-.package-item:nth-child(3) .package-price .user-type,
-.package-item:nth-child(3) .package-price .amount,
-.package-item:nth-child(3) .package-price .unit,
-.package-item:nth-child(3) .package-price .note{
+.package-item:nth-child(2) .package-price .user-type,
+.package-item:nth-child(2) .package-price .amount,
+.package-item:nth-child(2) .package-price .unit,
+.package-item:nth-child(2) .package-price .note{
   color: var(--white-cl);
 }
 
@@ -140,7 +140,7 @@
   background-color: transparent;
 }
 
-.package-item:nth-child(3) .package-option .btn-buy{
+.package-item:nth-child(2) .package-option .btn-buy{
   color: #121314;
 }
 
@@ -171,7 +171,7 @@
   margin-bottom: 24px;
 }
 
-.package-item:nth-child(3) .package-policy small{
+.package-item:nth-child(2) .package-policy small{
   color: var(--white-cl);
 }
 
@@ -191,7 +191,7 @@
   color: var(--gray-cl-7);
 }
 
-.package-item:nth-child(3) .package-info li{
+.package-item:nth-child(2) .package-info li{
   color: var(--white-cl);
 }
 
@@ -201,7 +201,7 @@
 }
 
 @media (max-width: 1399.98px){
-  .package-item:nth-child(3){
+  .package-item:nth-child(2){
     height: 1440px;
   }
 
@@ -220,7 +220,7 @@
     row-gap: 36px;
   }
 
-  .package-item:nth-child(3){
+  .package-item:nth-child(2){
     height: 1135px;
   }
 
@@ -234,7 +234,7 @@
 }
 
 @media (max-width: 991.98px){
-  .package-item:nth-child(3){
+  .package-item:nth-child(2){
     height: 1338px;
   }
 
@@ -257,7 +257,7 @@
     width: var(--w-item);
   }
 
-  .package-item:nth-child(3),
+  .package-item:nth-child(2),
   .package-service,
   .package-policy{
     height: auto;
