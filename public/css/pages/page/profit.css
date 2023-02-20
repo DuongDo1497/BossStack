@@ -32,10 +32,10 @@
 .profit-add .box:first-child .box-form .form-control{
   font-family: hm;
   text-align: right;
-} 
+}
 
 .profit-add .box:last-child .form-row .form-group:first-child{
-  margin-left: 0 !important;
+  flex: 1.5;
 }
 
 .profit-add .box:last-child .form-row .form-group:last-child{

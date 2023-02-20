@@ -2,19 +2,17 @@
 
 .cash-index .filter-timeline,
 .cash-process .filter-timeline{
-  --gap: 16px;
   display: flex;
   align-items: center;
-  margin: 0 0 0 calc(-1 * var(--gap));
-}
-
-.cash-index .filter-timeline > *,
-.cash-process .filter-timeline > *{
-  margin: 0 0 0 var(--gap);
 }
 
 .cash-index .filter-timeline{
   width: 51%;
+}
+
+.cash-index .filter-timeline .form-row,
+.cash-process .filter-timeline .form-row{
+  margin-right: 16px;
 }
 
 .cash-index .form-group,
@@ -24,7 +22,6 @@
 
 .cash-index .form-group{
   --w-label: 90px;
-  margin-left: 0 !important;
 }
 
 .cash-process .form-group{

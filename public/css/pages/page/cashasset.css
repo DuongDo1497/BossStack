@@ -6,6 +6,10 @@
   display: none;
 }
 
+.cashasset-index .box-search{
+  justify-content: flex-end;
+}
+
 .cashasset-index .box-search .control{
   width: 100%;
 }
