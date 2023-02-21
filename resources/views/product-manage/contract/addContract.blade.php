@@ -54,7 +54,7 @@
           {{ csrf_field() }}
           <input type='hidden' name='typereport' value=''>
           <div class="package-list">
-            <div class="package-item">
+            {{-- <div class="package-item">
               <h6 class="package-name">Free</h6>
               <div class="package-control">
                 <div class="package-price">
@@ -103,7 +103,7 @@
                   <li>Đặt các chính sách về tạo mật khẩu</li>
                 </ul>
               </div>
-            </div>
+            </div> --}}
 
             <div class="package-item">
               <h6 class="package-name">Basic</h6>
@@ -157,7 +157,7 @@
               </div>
             </div>
 
-            <div class="package-item">
+            <div class="package-item package-seller">
               <h6 class="package-name">
                 Standard
                 <img src="{{ asset('img/web/best-seller.svg') }}" alt="best-seller" class="img-fluid seller">

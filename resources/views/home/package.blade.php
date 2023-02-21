@@ -123,7 +123,7 @@
               </div>
             </div>
 
-            <div class="package-item">
+            <div class="package-item package-seller">
               <h6 class="package-name">
                 Standard
                 <img src="{{ asset('img/web/best-seller.svg') }}" alt="best-seller" class="img-fluid seller">

@@ -1,7 +1,7 @@
 /* Contract package */
 
 .package-list{
-  --package-count: 4;
+  --package-count: 3;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -18,7 +18,7 @@
   box-shadow: 0px 5px 10px rgba(53, 99, 172, 0.3);
 }
 
-.package-item:nth-child(3){
+.package-item.package-seller{
   z-index: 1;
   background-color: var(--primary-cl-4);
   box-shadow: 0px 0px 45px rgba(53, 99, 172, 0.8);
@@ -38,11 +38,11 @@
   background-color: var(--primary-cl-2);
 }
 
-.package-item:nth-child(2) .package-name{
+/* .package-item:nth-child(2) .package-name{
   background-color: var(--primary-cl-3);
-}
+} */
 
-.package-item:nth-child(3) .package-name{
+.package-item.package-seller .package-name{
   background-color: var(--primary-cl-6);
 }
 
@@ -79,7 +79,7 @@
   margin-bottom: 24px;
 }
 
-.package-item:nth-child(3) .package-price .info{
+.package-item.package-seller .package-price .info{
   align-items: flex-end;
   flex-direction: row;
   column-gap: 4px;
@@ -109,10 +109,10 @@
   color: var(--gray-cl-7);
 }
 
-.package-item:nth-child(3) .package-price .user-type,
-.package-item:nth-child(3) .package-price .amount,
-.package-item:nth-child(3) .package-price .unit,
-.package-item:nth-child(3) .package-price .note{
+.package-item.package-seller .package-price .user-type,
+.package-item.package-seller .package-price .amount,
+.package-item.package-seller .package-price .unit,
+.package-item.package-seller .package-price .note{
   color: var(--white-cl);
 }
 
@@ -144,7 +144,7 @@
   background-color: var(--second-cl);
 }
 
-.package-item:nth-child(3) .package-option .btn-buy{
+.package-item.package-seller .package-option .btn-buy{
   color: #121314;
 }
 
@@ -170,7 +170,7 @@
   margin-bottom: 24px;
 }
 
-.package-item:nth-child(3) .package-policy small{
+.package-item.package-seller .package-policy small{
   color: var(--white-cl);
 }
 
@@ -190,7 +190,7 @@
   color: var(--gray-cl-7);
 }
 
-.package-item:nth-child(3) .package-info li{
+.package-item.package-seller .package-info li{
   color: var(--white-cl);
 }
 
@@ -206,7 +206,7 @@
   }
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 767.98px){
   .package-list{
     flex-wrap: wrap;
     row-gap: 40px;
