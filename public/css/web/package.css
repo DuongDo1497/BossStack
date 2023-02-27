@@ -1,19 +1,19 @@
-.banner-default__title p{
+.banner-default__title p {
   font-family: hl;
   display: inline-block;
   text-transform: none;
 }
 
-.banner-default__title p .highlight{
+.banner-default__title p .highlight {
   font-family: hb;
   color: var(--second-cl);
 }
 
-.package{
+.package {
   background-color: var(--primary-cl-1);
 }
 
-.package-list{
+.package-list {
   --package-count: 3;
   display: flex;
   flex-wrap: wrap;
@@ -21,14 +21,14 @@
   justify-content: space-between;
 }
 
-.package-item{
+.package-item {
   --w-item: calc(100% / var(--package-count));
   width: calc(var(--w-item) - 18px);
   border-radius: 16px;
   background-color: var(--white-cl);
 }
 
-.package-item.package-seller{
+.package-item.package-seller {
   height: 1355px;
   background-color: var(--primary-cl-4);
   box-shadow: 0px 0px 45px rgba(53, 99, 172, 0.8);
@@ -37,14 +37,14 @@
 .package-item .package-control,
 .package-control .package-price,
 .package-control .package-price .info,
-.package-control .package-option{
+.package-control .package-option {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.package-item .package-name{
+.package-item .package-name {
   padding: 10px;
   text-align: center;
   position: relative;
@@ -53,7 +53,7 @@
   border-top-right-radius: 16px;
 }
 
-.package-item:first-child .package-name{
+.package-item:first-child .package-name {
   background-color: var(--primary-cl-2);
 }
 
@@ -61,66 +61,71 @@
   background-color: var(--primary-cl-3);
 } */
 
-.package-item.package-seller .package-name{
+.package-item.package-seller .package-name {
   background-color: var(--primary-cl-6);
 }
 
-.package-item:last-child .package-name{
+.package-item:last-child .package-name {
   background-color: var(--primary-cl);
 }
 
-.package-item .package-name .seller{
+.package-item .package-name .seller {
   position: absolute;
   top: -30px;
   right: -17px;
 }
 
-.package-item .package-control{
+.package-item .package-control {
   height: 315px;
   padding: 24px 14px;
 }
 
-.package-control .package-price{
+.package-control .package-price {
   width: 100%;
   height: 135px;
   padding: 16px 0;
   margin-bottom: 24px;
 }
 
-.package-price .amount{
+.package-price .info p {
+  color: var(--gray-cl-7);
+}
+
+.package-price .amount {
   color: var(--gray-cl-7);
   line-height: 42px;
 }
 
-.package-price .unit{
+.package-price .unit {
   color: var(--gray-cl-6);
   line-height: 28px;
 }
 
-.package-price .note{
+.package-price .note {
   font-family: hm;
   text-align: center;
   color: var(--gray-cl-7);
 }
 
+.package-item.package-seller .package-price .info p,
 .package-item.package-seller .package-price .user-type,
 .package-item.package-seller .package-price .amount,
 .package-item.package-seller .package-price .unit,
-.package-item.package-seller .package-price .note{
+.package-item.package-seller .package-price .note {
   color: var(--white-cl);
 }
 
 .package-option,
-.package-option .form-select{
+.package-option .form-select {
   width: 100%;
 }
 
-.package-control .package-option{
+.package-control .package-option {
   flex-grow: 1;
   justify-content: flex-end;
 }
 
-.package-option .form-select{
+.package-option .form-select {
   font-size: 18px;
   padding: 4px 8px;
   margin-bottom: 16px;
@@ -129,39 +134,39 @@
   background-color: var(--gray-cl-1);
 }
 
-.package-option .form-select:focus{
+.package-option .form-select:focus {
   box-shadow: none;
 }
 
-.package-option .form-select:disabled{
+.package-option .form-select:disabled {
   cursor: no-drop;
   color: var(--gray-cl-4);
   border: 1px solid var(--gray-cl-4);
   background-color: transparent;
 }
 
-.package-item.package-seller .package-option .btn-buy{
+.package-item.package-seller .package-option .btn-buy {
   color: #121314;
 }
 
-.package-service{
+.package-service {
   height: 274px;
 }
 
-.package-service .package-info li a{
+.package-service .package-info li a {
   color: var(--second-cl);
   text-decoration: underline;
 }
 
-.package-policy{
+.package-policy {
   height: 246px;
 }
 
-.package-policy .package-info{
+.package-policy .package-info {
   padding-bottom: 8px;
 }
 
-.package-policy small{
+.package-policy small {
   font-family: hri;
   font-size: 16px;
   padding: 0 16px;
@@ -171,99 +176,98 @@
   margin-bottom: 24px;
 }
 
-.package-item.package-seller .package-policy small{
+.package-item.package-seller .package-policy small {
   color: var(--white-cl);
 }
 
-.package-title{
+.package-title {
   font-family: hm;
   color: var(--gray-cl-8);
   padding: 8px 24px;
   background-color: var(--gray-cl-1);
 }
 
-.package-info{
+.package-info {
   list-style: disc;
   padding: 24px 16px 24px 46px;
 }
 
-.package-info li{
+.package-info li {
   color: var(--gray-cl-7);
 }
 
-.package-item.package-seller .package-info li{
+.package-item.package-seller .package-info li {
   color: var(--white-cl);
 }
 
 .package-support .package-info li,
-.package-security .package-info li{
+.package-security .package-info li {
   color: var(--gray-cl-6);
 }
 
-@media (max-width: 1399.98px){
-  .package-item.package-seller{
+@media (max-width: 1399.98px) {
+  .package-item.package-seller {
     height: 1440px;
   }
 
-  .package-service{
+  .package-service {
     height: 304px;
   }
 
-  .package-policy{
+  .package-policy {
     height: 276px;
   }
 }
 
-@media (max-width: 1199.98px){
-  .package-list{
+@media (max-width: 1199.98px) {
+  .package-list {
     --package-count: 2;
     row-gap: 36px;
   }
 
-  .package-item.package-seller{
+  .package-item.package-seller {
     height: 1135px;
   }
 
-  .package-service{
+  .package-service {
     height: 214px;
   }
 
-  .package-policy{
+  .package-policy {
     height: 216px;
   }
 }
 
-@media (max-width: 991.98px){
-  .package-item.package-seller{
+@media (max-width: 991.98px) {
+  .package-item.package-seller {
     height: 1338px;
   }
 
-  .package-service{
+  .package-service {
     height: 274px;
   }
 
-  .package-policy{
+  .package-policy {
     height: 246px;
   }
 }
 
-@media (max-width: 767.98px){
-  .package-list{
+@media (max-width: 767.98px) {
+  .package-list {
     row-gap: 40px;
   }
 
-  .package-item{
+  .package-item {
     --w-item: 100%;
     width: var(--w-item);
   }
 
   .package-item.package-seller,
   .package-service,
-  .package-policy{
+  .package-policy {
     height: auto;
   }
 }
 
-@media (max-width: 575.98px){
-
+@media (max-width: 575.98px) {
 }

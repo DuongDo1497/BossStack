@@ -107,7 +107,7 @@
                   @endforeach
                 </select>
               </div> --}}
-              <div class="form-group">
+              {{-- <div class="form-group">
                 <label class="form-label" for="typereport">Thông tin sản phẩm <span>*</span></label>
                 <select class="form-select" id="typereport" name="typereport" onchange='onChangeSelect();' required>
                   @foreach ($service_product as $item)
@@ -150,9 +150,9 @@
                     @endif
                   @endforeach
                 </select>
-              </div>
-              <div class="form-group">Số tiền thanh toán: <span id="amountlabel"></span> đồng.
-              </div>
+              </div> --}}
+              {{-- <div class="form-group">Số tiền thanh toán: <span id="amountlabel"></span> đồng.
+              </div> --}}
             </div>
           </div>
 

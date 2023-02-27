@@ -110,9 +110,10 @@
               <div class="package-control">
                 <div class="package-price">
                   <div class="info">
-                    <small class="user-type"></small>
+                    {{-- <small class="user-type"></small>
                     <h5 class="amount">899.000</h5>
-                    <small class="unit">VND/tháng</small>
+                    <small class="unit">VND/tháng</small> --}}
+                    <p>Vui lòng liên hệ để biết thêm chi tiết.</p>
                   </div>
                   <small class="note">1 admin + 5 users</small>
                 </div>
@@ -165,9 +166,10 @@
               <div class="package-control">
                 <div class="package-price">
                   <div class="info">
-                    <small class="user-type"></small>
+                    {{-- <small class="user-type"></small>
                     <h5 class="amount">1.699.000</h5>
-                    <small class="unit">VND/tháng</small>
+                    <small class="unit">VND/tháng</small> --}}
+                    <p>Vui lòng liên hệ để biết thêm chi tiết.</p>
                   </div>
                   <small class="note">1 admin + 15 users</small>
                 </div>
@@ -218,9 +220,10 @@
               <div class="package-control">
                 <div class="package-price">
                   <div class="info">
-                    <small class="user-type"></small>
+                    {{-- <small class="user-type"></small>
                     <h5 class="amount">2.899.000</h5>
-                    <small class="unit">VND/tháng</small>
+                    <small class="unit">VND/tháng</small> --}}
+                    <p>Vui lòng liên hệ để biết thêm chi tiết.</p>
                   </div>
                   <small class="note">1 admin + 30 users</small>
                 </div>

@@ -1,6 +1,6 @@
 /* Contract package */
 
-.package-list{
+.package-list {
   --package-count: 3;
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +8,7 @@
   justify-content: space-between;
 }
 
-.package-item{
+.package-item {
   --w-item: calc(100% / var(--package-count));
   position: relative;
   z-index: 2;
@@ -18,7 +18,7 @@
   box-shadow: 0px 5px 10px rgba(53, 99, 172, 0.3);
 }
 
-.package-item.package-seller{
+.package-item.package-seller {
   z-index: 1;
   background-color: var(--primary-cl-4);
   box-shadow: 0px 0px 45px rgba(53, 99, 172, 0.8);
@@ -27,14 +27,14 @@
 .package-item .package-control,
 .package-control .package-price,
 .package-control .package-price .info,
-.package-control .package-option{
+.package-control .package-option {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.package-item:first-child .package-name{
+.package-item:first-child .package-name {
   background-color: var(--primary-cl-2);
 }
 
@@ -42,15 +42,15 @@
   background-color: var(--primary-cl-3);
 } */
 
-.package-item.package-seller .package-name{
+.package-item.package-seller .package-name {
   background-color: var(--primary-cl-6);
 }
 
-.package-item:last-child .package-name{
+.package-item:last-child .package-name {
   background-color: var(--primary-cl);
 }
 
-.package-item .package-name{
+.package-item .package-name {
   padding: 10px;
   margin: 0;
   text-align: center;
@@ -61,31 +61,35 @@
   background-color: var(--primary-cl);
 }
 
-.package-item .package-name .seller{
+.package-item .package-name .seller {
   position: absolute;
   top: -22px;
   right: -16px;
 }
 
-.package-item .package-control{
+.package-item .package-control {
   height: 315px;
   padding: 24px 14px;
 }
 
-.package-control .package-price{
+.package-control .package-price {
   width: 100%;
   height: 135px;
   padding: 16px 0;
   margin-bottom: 24px;
 }
 
-.package-item.package-seller .package-price .info{
+.package-item.package-seller .package-price .info {
   align-items: flex-end;
   flex-direction: row;
   column-gap: 4px;
 }
 
-.package-price .amount{
+.package-control .package-price .info p {
+  color: var(--gray-cl-7);
+}
+
+.package-price .amount {
   font-size: 30px;
   color: var(--gray-cl-7);
   line-height: 42px;
@@ -94,73 +98,74 @@
 
 .package-price .user-type,
 .package-price .unit,
-.package-price .note{
+.package-price .note {
   font-size: 15px;
   line-height: 25px;
 }
 
 .package-price .user-type,
-.package-price .unit{
+.package-price .unit {
   color: var(--gray-cl-5);
 }
 
-.package-price .note{
+.package-price .note {
   text-align: center;
   color: var(--gray-cl-7);
 }
 
+.package-item.package-seller .package-price .info p,
 .package-item.package-seller .package-price .user-type,
 .package-item.package-seller .package-price .amount,
 .package-item.package-seller .package-price .unit,
-.package-item.package-seller .package-price .note{
+.package-item.package-seller .package-price .note {
   color: var(--white-cl);
 }
 
 .package-option,
-.package-option .form-select{
+.package-option .form-select {
   width: 100%;
 }
 
-.package-option .select2-container--default{
+.package-option .select2-container--default {
   margin-bottom: 16px;
 }
 
-.package-option .select2-container--default .select2-selection--single{
+.package-option .select2-container--default .select2-selection--single {
   color: var(--gray-cl-7);
   border-radius: 4px;
   border: 1px solid var(--gray-cl-3);
   background-color: var(--gray-cl-1);
 }
 
-.package-option .btn{
+.package-option .btn {
   font-size: 24px;
   line-height: 36px;
   border-radius: 8px;
   color: var(--primary-cl);
 }
 
-.package-option .btn.btn-buy{
+.package-option .btn.btn-buy {
   width: 100%;
   background-color: var(--second-cl);
 }
 
-.package-item.package-seller .package-option .btn-buy{
+.package-item.package-seller .package-option .btn-buy {
   color: #121314;
 }
 
-.package-service{
+.package-service {
   height: 252px;
 }
 
-.package-policy{
+.package-policy {
   height: 246px;
 }
 
-.package-policy .package-info{
+.package-policy .package-info {
   padding-bottom: 8px;
 }
 
-.package-policy small{
+.package-policy small {
   font-family: hri;
   font-size: 13px;
   padding: 0 16px;
@@ -170,53 +175,53 @@
   margin-bottom: 24px;
 }
 
-.package-item.package-seller .package-policy small{
+.package-item.package-seller .package-policy small {
   color: var(--white-cl);
 }
 
-.package-title{
+.package-title {
   font-family: hm;
   color: var(--gray-cl-8);
   padding: 8px 24px;
   background-color: var(--gray-cl-1);
 }
 
-.package-info{
+.package-info {
   list-style: disc;
   padding: 24px 16px 24px 46px;
 }
 
-.package-info li{
+.package-info li {
   color: var(--gray-cl-7);
 }
 
-.package-item.package-seller .package-info li{
+.package-item.package-seller .package-info li {
   color: var(--white-cl);
 }
 
 .package-support .package-info li,
-.package-security .package-info li{
+.package-security .package-info li {
   color: var(--gray-cl-6);
 }
 
-@media (max-width: 1199.98px){
-  .package-list{
+@media (max-width: 1199.98px) {
+  .package-list {
     --package-count: 2;
     row-gap: 28px;
   }
 }
 
-@media (max-width: 767.98px){
-  .package-list{
+@media (max-width: 767.98px) {
+  .package-list {
     flex-wrap: wrap;
     row-gap: 40px;
   }
 
-  .package-item{
+  .package-item {
     width: 100%;
   }
 
-  .package-item div{
+  .package-item div {
     height: auto;
   }
 }
@@ -224,47 +229,47 @@
 /* Mua dich vu */
 
 .btn-pay,
-.btn-home{
+.btn-home {
   margin-top: 16px;
   margin-left: auto;
   margin-right: 32px;
 }
 
-.btn-home{
+.btn-home {
   width: 123px;
   height: 36px;
 }
 
-.contract-detail .box-form .form-group:first-child .form-text{
+.contract-detail .box-form .form-group:first-child .form-text {
   color: var(--gray-cl-6);
 }
 
 .contract-add .service-info__table,
-.contract-detail .service-info__table{
+.contract-detail .service-info__table {
   padding: 16px 24px;
   border-radius: 8px;
   background-color: var(--gray-cl-1);
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
 }
 
-.contract-add .service-info__table{
+.contract-add .service-info__table {
   max-width: 706px;
 }
 
 .contract-add .service-info__list,
-.contract-detail .service-info__list{
+.contract-detail .service-info__list {
   display: none;
 }
 
 .contract-add .service-info__table table,
-.contract-detail .service-info__table table{
+.contract-detail .service-info__table table {
   margin-bottom: 0;
 }
 
 .contract-add .service-info__table th,
 .contract-add .service-info__table td,
 .contract-detail .service-info__table th,
-.contract-detail .service-info__table td{
+.contract-detail .service-info__table td {
   text-align: center;
   vertical-align: middle;
   border-bottom: 1px solid var(--gray-cl-3);
@@ -273,67 +278,67 @@
 .contract-add .service-info__table th,
 .contract-add .service-info__table tfoot td,
 .contract-detail .service-info__table th,
-.contract-detail .service-info__table tfoot td{
+.contract-detail .service-info__table tfoot td {
   font-size: 18px;
 }
 
 .contract-add .service-info__table th:first-child,
 .contract-add .service-info__table td:first-child,
 .contract-detail .service-info__table th:first-child,
-.contract-detail .service-info__table td:first-child{
+.contract-detail .service-info__table td:first-child {
   text-align: left;
 }
 
 .contract-add .service-info__table td:last-child,
-.contract-detail .service-info__table td:last-child{
+.contract-detail .service-info__table td:last-child {
   text-align: right;
 }
 
 .contract-add .service-info__table tfoot td,
-.contract-detail .service-info__table tfoot td{
+.contract-detail .service-info__table tfoot td {
   padding-top: 36px;
   border-bottom: 0;
 }
 
-.contract-detail .service-info__table tfoot td:last-child{
+.contract-detail .service-info__table tfoot td:last-child {
   text-align: right;
 }
 
-@media (max-width: 991.98px){
-  .btn-pay, 
-  .btn-home{
+@media (max-width: 991.98px) {
+  .btn-pay,
+  .btn-home {
     width: 95%;
     margin-left: auto;
     margin-right: auto;
   }
 
   .contract-add .service-info__table,
-  .contract-detail .service-info__table{
+  .contract-detail .service-info__table {
     display: none;
   }
 
   .contract-add .service-info__list,
-  .contract-detail .service-info__list{
+  .contract-detail .service-info__list {
     display: block;
   }
 
   .contract-add .service-info__list .form-group,
-  .contract-detail .service-info__list .form-group{
+  .contract-detail .service-info__list .form-group {
     --w-label: 35%;
     justify-content: space-between;
   }
 
-  .service-info__list .box-form:first-child label{
+  .service-info__list .box-form:first-child label {
     color: var(--gray-cl-6);
   }
 
-  .service-info__list .form-group:first-child label{
+  .service-info__list .form-group:first-child label {
     font-family: hb;
     color: var(--gray-cl-7);
   }
 
   .contract-add .service-info__list .line,
-  .contract-detail .service-info__list .line{
+  .contract-detail .service-info__list .line {
     width: 100%;
     height: 1px;
     margin: 8px 0;
@@ -343,7 +348,7 @@
 
 /* Payment option */
 
-.payment-option .payment-option__item{
+.payment-option .payment-option__item {
   overflow: hidden;
   margin-bottom: 24px;
   border-radius: 16px;
@@ -351,22 +356,22 @@
   background-color: var(--white-cl);
 }
 
-.payment-option__item .payment-option__header{
+.payment-option__item .payment-option__header {
   display: flex;
   align-items: center;
   padding: 16px;
   column-gap: 16px;
 }
 
-.payment-option__header .form-group{
+.payment-option__header .form-group {
   margin-bottom: 0;
 }
 
-.payment-option__header .form-check-input{
+.payment-option__header .form-check-input {
   display: none;
 }
 
-.payment-option__header .form-check-label{
+.payment-option__header .form-check-label {
   width: 16px;
   height: 16px;
   padding: 2px;
@@ -377,8 +382,8 @@
   background-color: var(--white-cl);
 }
 
-.payment-option__header .form-check-label::before{
-  content: '';
+.payment-option__header .form-check-label::before {
+  content: "";
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -388,67 +393,67 @@
   transition: all 0.25s linear;
 }
 
-.payment-option__header .form-check-input:checked + .form-check-label::before{
+.payment-option__header .form-check-input:checked + .form-check-label::before {
   opacity: 1;
 }
 
-.payment-option__header .text{
+.payment-option__header .text {
   font-family: hm;
   font-size: 16px;
   color: var(--gray-cl-7);
   margin-bottom: 0;
 }
 
-.payment-option__item:first-child .payment-option__body p{
+.payment-option__item:first-child .payment-option__body p {
   display: flex;
 }
 
-.payment-option__body .content{
+.payment-option__body .content {
   min-height: auto;
   padding: 0 48px 16px;
 }
 
 .payment-direct__title,
 .payment-direct__body .item span,
-.payment-option__text{
+.payment-option__text {
   color: var(--gray-cl-7);
 }
 
-.payment-direct__title{
+.payment-direct__title {
   font-family: hb;
   font-size: 20px;
 }
 
-.payment-direct__body .item{
+.payment-direct__body .item {
   display: flex;
   column-gap: 10px;
   margin-bottom: 8px;
 }
 
-.payment-direct__body .item:last-child{
+.payment-direct__body .item:last-child {
   margin-bottom: 0;
 }
 
-.payment-direct__body .item span{
+.payment-direct__body .item span {
   width: auto;
   font-size: 16px;
 }
 
-.payment-direct__body .item .title{
+.payment-direct__body .item .title {
   font-family: hb;
   white-space: nowrap;
 }
 
-.payment-option__text{
+.payment-option__text {
   font-size: 16px;
 }
 
-.payment-option__text a{
+.payment-option__text a {
   text-decoration: underline;
   color: var(--primary-cl-4);
 }
 
-.contract-result p:last-child{
+.contract-result p:last-child {
   color: var(--gray-cl-6);
 }
 
@@ -456,59 +461,59 @@
 .listContractQueue tbody td .text-success,
 .listContractQueue tbody td .status-new,
 .listContractQueue tbody td .status-error,
-.listContractQueue tbody td .status-success{
+.listContractQueue tbody td .status-success {
   font-size: 14px;
 }
 
 .listContractQueue tbody td .text-error,
-.listContractQueue tbody td .text-success{
+.listContractQueue tbody td .text-success {
   font-family: hm;
 }
 
-@media (max-width: 1199.98px){
-  .listContractQueue .table-wrap .table-content{
-    width: calc(100% - 236px); 
+@media (max-width: 1199.98px) {
+  .listContractQueue .table-wrap .table-content {
+    width: calc(100% - 236px);
     margin-left: 236px;
     margin-right: 0;
   }
 
-  .listContractQueue .table-wrap{
+  .listContractQueue .table-wrap {
     --w-fixed-col: 165px;
   }
 
-  .listContractQueue .table-wrap table th.fixed{
+  .listContractQueue .table-wrap table th.fixed {
     height: 40px;
   }
 
-  .listContractQueue .table-wrap table th:nth-child(4){
+  .listContractQueue .table-wrap table th:nth-child(4) {
     width: 225px;
   }
 
-  .listContractQueue .table-wrap table td{
+  .listContractQueue .table-wrap table td {
     height: 150px;
   }
 
-  .listContractQueue .table-wrap table td:not(.fixed){
+  .listContractQueue .table-wrap table td:not(.fixed) {
     background-color: var(--gray-cl-3);
   }
 
-  .listContractQueue .table-wrap table .fixed:first-child{
+  .listContractQueue .table-wrap table .fixed:first-child {
     width: 32px;
   }
 
-  .listContractQueue .table-wrap table .fixed:nth-child(2){
+  .listContractQueue .table-wrap table .fixed:nth-child(2) {
     width: 39px;
   }
 
   .listContractQueue .table-wrap table .fixed-2 {
-    left: 32px; 
+    left: 32px;
   }
 
   .listContractQueue .table-wrap table .fixed-3 {
-    left: 71px; 
+    left: 71px;
   }
 
-  .listContractQueue .table-wrap table td ul{
+  .listContractQueue .table-wrap table td ul {
     padding-left: 18px;
   }
 }
