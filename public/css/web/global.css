@@ -2,63 +2,72 @@
   --white-cl: #ffffff;
   --black-cl: #121314;
 
-  --primary-cl: #3563AC;
-  --primary-cl-1: #B6CAE9;
-  --primary-cl-2: #92AFDD;
-  --primary-cl-3: #6E94D2;
-  --primary-cl-4: #497AC7;
+  --primary-cl: #3563ac;
+  --primary-cl-1: #b6cae9;
+  --primary-cl-2: #92afdd;
+  --primary-cl-3: #6e94d2;
+  --primary-cl-4: #497ac7;
   --primary-cl-6: #234273;
 
-  --second-cl: #FBC540;
-  --text-btn-cl: #FBC540;
+  --second-cl: #fbc540;
+  --text-btn-cl: #fbc540;
 
-  --gray-cl-1: #F4F5F7;
-  --gray-cl-2: #E7EAED;
-  --gray-cl-3: #D1D8DC;
-  --gray-cl-4: #B0BBBE;
-  --gray-cl-5: #84939A;
-  --gray-cl-6: #6F818C;
-  --gray-cl-7: #3C4248;
+  --gray-cl-1: #f4f5f7;
+  --gray-cl-2: #e7eaed;
+  --gray-cl-3: #d1d8dc;
+  --gray-cl-4: #b0bbbe;
+  --gray-cl-5: #84939a;
+  --gray-cl-6: #6f818c;
+  --gray-cl-7: #3c4248;
   --gray-cl-8: #122139;
 
-  --bg-yellow-cl: #FDF9EE;
+  --bg-yellow-cl: #fdf9ee;
 
-  --bg-purple-cl: #FBF5FD;
+  --bg-purple-cl: #fbf5fd;
 
-  --bg-cyan-cl: #EEF2FD;
-  --bg-cyan-cl-2: #E4F1F7;
-  --bg-cyan-cl-3: #D6EAF3;
+  --bg-cyan-cl: #eef2fd;
+  --bg-cyan-cl-2: #e4f1f7;
+  --bg-cyan-cl-3: #d6eaf3;
 
-  --bg-green-cl: #F2FDEE;
+  --bg-green-cl: #f2fdee;
 }
 
 * {
-  user-select: none;
+  /* user-select: none; */
 }
 
 html {
   font-size: 20px;
 }
 
-body{
+body {
   font-family: hr;
   color: var(--gray-cl-5);
   position: relative;
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   text-align: center;
   line-height: 1.5;
   color: var(--primary-cl);
 }
 
-h1, h2{
+h1,
+h2 {
   font-family: mm;
 }
 
-h3, h4, h5, h6{
+h3,
+h4,
+h5,
+h6 {
   font-family: hm;
 }
 
@@ -86,35 +95,35 @@ h6 {
   font-size: 24px;
 }
 
-small, 
+small,
 .text_small {
   font-size: 18px;
 }
 
-p{
+p {
   margin-bottom: 0;
 }
 
-ul{
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-textarea{
+textarea {
   resize: none;
 }
 
-.main{
+.main {
   overflow: hidden;
   position: relative;
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 991.98px) {
   h3 {
     font-size: 42px;
   }
